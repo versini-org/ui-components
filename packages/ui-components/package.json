@@ -16,7 +16,7 @@
 		"test:watch": "vitest"
 	},
 	"dependencies": {
-		"@floating-ui/react": "0.26.0",
+		"@floating-ui/react": "0.26.1",
 		"@tailwindcss/typography": "0.5.10",
 		"autoprefixer": "10.4.16",
 		"clsx": "2.0.0",
