@@ -1,10 +1,8 @@
 /// <reference types="vitest" />
 
-import { extname, relative, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { resolve } from "node:path";
 
 import fs from "fs-extra";
-import { glob } from "glob";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
@@ -29,19 +27,17 @@ export default defineConfig({
 		lib: {
 			entry: resolve(__dirname, "src/components/index.ts"),
 			formats: ["es"],
+			name: "UIComponents",
+			fileName: (format) => `index.${format}.js`,
 		},
 		rollupOptions: {
-			external: ["react", "react/jsx-runtime", "@floating-ui/react"],
-			// input: Object.fromEntries(
-			// 	glob.sync("src/components/**/*.{ts,tsx}").map((file) => [
-			// 		// The name of the entry point
-			// 		// src/nested/foo.ts becomes nested/foo
-			// 		relative("src", file.slice(0, file.length - extname(file).length)),
-			// 		// The absolute path to the entry file
-			// 		// src/nested/foo.ts becomes /project/lib/nested/foo.ts
-			// 		fileURLToPath(new URL(file, import.meta.url)),
-			// 	]),
-			// ),
+			external: [
+				"@floating-ui/react",
+				"@tailwindcss/typography",
+				"react",
+				"react/jsx-runtime",
+				"tailwindcss",
+			],
 
 			output: {
 				assetFileNames: "assets/[name][extname]",
@@ -71,7 +67,11 @@ export default defineConfig({
 		"import.meta.env.BUILDVERSION": JSON.stringify(packageJson.version),
 	},
 	plugins: [
-		// dts({ include: ["src"], exclude: ["**/__tests__/**/*"] }),
+		dts({
+			include: ["src"],
+			exclude: ["**/__tests__/**/*"],
+			rollupTypes: true,
+		}),
 		libInjectCss({
 			entry: {
 				index: "./src/components/index.ts",

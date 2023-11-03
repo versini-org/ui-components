@@ -1,9 +1,14 @@
 {
 	"name": "@versini/ui-components",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"license": "MIT",
 	"author": "Arno Versini",
 	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"clean": "rimraf dist",
 		"dev": "vite --host",
@@ -15,15 +20,25 @@
 		"test:coverage:ui": "vitest --coverage --ui",
 		"test:watch": "vitest"
 	},
-	"dependencies": {
-		"@floating-ui/react": "0.26.0",
+	"peerDependencies": {
+		"@floating-ui/react": "^0.26.0",
 		"@tailwindcss/typography": "0.5.10",
-		"autoprefixer": "10.4.16",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"tailwindcss": "3.3.3"
+	},
+	"devDependencies": {
+		"@floating-ui/react": "^0.26.0",
+		"@tailwindcss/typography": "0.5.10",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"tailwindcss": "3.3.3"
+	},
+	"dependencies": {
 		"clsx": "2.0.0",
-		"postcss": "8.4.31",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"tailwindcss": "3.3.3",
 		"uuid": "9.0.1"
-	}
+	},
+	"sideEffects": [
+		"**/*.css"
+	]
 }
