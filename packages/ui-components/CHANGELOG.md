@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/aversini/ui-components/compare/ui-components-v0.0.3...ui-components-v0.0.4) (2023-11-03)
+
+
+### Bug Fixes
+
+* re-adding prod dependencies ([e1e0a8f](https://github.com/aversini/ui-components/commit/e1e0a8ff16970d530226f43b1922c19255cad997))
+
 ## [0.0.3](https://github.com/aversini/ui-components/compare/ui-components-v0.0.2...ui-components-v0.0.3) (2023-11-03)
 
 
