@@ -25,22 +25,24 @@ const buildTime = new Date()
 
 export default defineConfig({
 	build: {
+		copyPublicDir: false,
 		lib: {
 			entry: resolve(__dirname, "src/components/index.ts"),
 			formats: ["es"],
 		},
 		rollupOptions: {
-			external: ["react", "react/jsx-runtime"],
-			input: Object.fromEntries(
-				glob.sync("src/components/**/*.{ts,tsx}").map((file) => [
-					// The name of the entry point
-					// src/nested/foo.ts becomes nested/foo
-					relative("src", file.slice(0, file.length - extname(file).length)),
-					// The absolute path to the entry file
-					// src/nested/foo.ts becomes /project/lib/nested/foo.ts
-					fileURLToPath(new URL(file, import.meta.url)),
-				]),
-			),
+			external: ["react", "react/jsx-runtime", "@floating-ui/react"],
+			// input: Object.fromEntries(
+			// 	glob.sync("src/components/**/*.{ts,tsx}").map((file) => [
+			// 		// The name of the entry point
+			// 		// src/nested/foo.ts becomes nested/foo
+			// 		relative("src", file.slice(0, file.length - extname(file).length)),
+			// 		// The absolute path to the entry file
+			// 		// src/nested/foo.ts becomes /project/lib/nested/foo.ts
+			// 		fileURLToPath(new URL(file, import.meta.url)),
+			// 	]),
+			// ),
+
 			output: {
 				assetFileNames: "assets/[name][extname]",
 				entryFileNames: "[name].js",
@@ -69,7 +71,14 @@ export default defineConfig({
 		"import.meta.env.BUILDVERSION": JSON.stringify(packageJson.version),
 	},
 	plugins: [
-		dts({ include: ["src"], exclude: ["**/__tests__/**/*"] }),
-		libInjectCss(),
+		// dts({ include: ["src"], exclude: ["**/__tests__/**/*"] }),
+		libInjectCss({
+			entry: {
+				index: "./src/components/index.ts",
+				Button: "./src/components/Button/Button.tsx",
+				ButtonIcon: "./src/components/Button/ButtonIcon.tsx",
+				Footer: "./src/components/Footer/Footer.tsx",
+			},
+		}),
 	],
 });
