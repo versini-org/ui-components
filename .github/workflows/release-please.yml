@@ -50,6 +50,6 @@ jobs:
         with:
           node-version: 20.x
           registry-url: https://registry.npmjs.org/
-      - run: npx lerna publish from-package --no-push --no-private --yes --loglevel debug
+      - run: npx lerna publish from-package --no-push --no-private --ignore-scripts --yes --loglevel debug
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH_TOKEN}}
