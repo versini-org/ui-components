@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2](https://github.com/aversini/ui-components/compare/ui-components-v0.0.1...ui-components-v0.0.2) (2023-11-03)
+
+
+### Bug Fixes
+
+* release scoped package as public ([8f79430](https://github.com/aversini/ui-components/commit/8f794301e8366535349d9979d3d7d2e53842a7d2))
+
 ## 0.0.1 (2023-11-03)
 
 
