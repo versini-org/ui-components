@@ -1,0 +1,28 @@
+{
+	"name": "@versini/documentation",
+	"version": "1.0.0",
+	"license": "MIT",
+	"author": "Arno Versini",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"clean": "rimraf dist",
+		"dev": "vite --host",
+		"build": "yarn run clean && tsc && vite build",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
+		"start": "static-server dist --port 5173",
+		"test": "echo \"WARNING: no test specified\" && exit 0",
+		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
+	},
+	"dependencies": {
+		"@versini/ui-components": "0.0.4",
+		"autoprefixer": "10.4.16",
+		"clsx": "2.0.0",
+		"json5": "2.2.3",
+		"postcss": "8.4.31",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"tailwindcss": "3.3.3",
+		"uuid": "9.0.1"
+	}
+}
