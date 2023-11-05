@@ -1,5 +1,4 @@
-import { Button, Footer } from "@versini/ui-components";
-import { ButtonLink } from "@versini/ui-components";
+import { Button, ButtonLink, Footer } from "@versini/ui-components";
 import { useEffect } from "react";
 
 function App() {
