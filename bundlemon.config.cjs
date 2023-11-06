@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 module.exports = {
 	reportOutput: ["github"],
 	baseDir: "./packages/documentation/dist",
