@@ -12,7 +12,7 @@ describe("ButtonLink modifiers", () => {
 	it("should render a default anchor", async () => {
 		render(<ButtonLink link="toto">hello</ButtonLink>);
 		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-2");
+		expect(button.className).toContain("py-1");
 	});
 
 	it("should render a slim anchor", async () => {
@@ -66,7 +66,7 @@ describe("ButtonLink modifiers", () => {
 			</ButtonLink>,
 		);
 		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-2");
+		expect(button.className).toContain("py-1");
 		const label = await screen.findByText("hello...");
 		expect(label).toBeDefined();
 	});
@@ -78,7 +78,7 @@ describe("ButtonLink modifiers", () => {
 			</ButtonLink>,
 		);
 		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-2");
+		expect(button.className).toContain("py-1");
 		const label = await screen.findByText("hello world");
 		expect(label).toBeDefined();
 	});

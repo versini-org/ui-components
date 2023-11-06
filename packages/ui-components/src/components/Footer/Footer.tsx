@@ -4,11 +4,15 @@ import clsx from "clsx";
 
 import type { FooterProps } from "./FooterTypes";
 
-export const Footer = ({ className, row1, row2 }: FooterProps) => {
-	const footerClass = clsx(
-		"mb-[100px] text-center text-xs text-slate-300",
-		className,
-	);
+export const Footer = ({
+	className,
+	row1,
+	row2,
+	noPaddings = false,
+}: FooterProps) => {
+	const footerClass = clsx("text-center text-xs text-slate-300", className, {
+		"mb-[100px] ": !noPaddings,
+	});
 
 	return (
 		<footer className={footerClass}>
