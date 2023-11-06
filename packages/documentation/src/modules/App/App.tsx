@@ -1,5 +1,39 @@
-import { Button, ButtonLink, Footer } from "@versini/ui-components";
+import {
+	Button,
+	ButtonIcon,
+	ButtonLink,
+	Footer,
+	IconAssistant,
+	IconClose,
+	IconCopied,
+	IconCopy,
+	IconDelete,
+	IconDog,
+	IconRestore,
+	IconSettings,
+	IconUser,
+} from "@versini/ui-components";
+import clsx from "clsx";
 import { useEffect } from "react";
+
+const Section = ({
+	children,
+	className,
+	kind = "dark",
+	raw = false,
+}: {
+	kind?: string;
+	raw?: boolean;
+	className?: string;
+	children: React.ReactNode;
+}) => {
+	const generatedClassName = clsx(className, {
+		"mb-5 flex items-center gap-x-2 p-5": !raw,
+		"bg-slate-900": kind === "dark",
+		"bg-slate-500": kind === "light",
+	});
+	return <div className={generatedClassName}>{children}</div>;
+};
 
 function App() {
 	useEffect(() => {
@@ -9,41 +43,35 @@ function App() {
 	return (
 		<>
 			<main className="mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl">
-				<h1>UI Components</h1>
+				<h1 className="text-center font-bold">UI Components</h1>
 				<section>
 					<h2>Buttons</h2>
-					<div className="my-5 bg-slate-500 p-5">
-						<Button className="mr-2">Default Button</Button>
-						<Button className="mr-2" slim>
-							Slim Button
-						</Button>
-						<ButtonLink className="mr-2" link="#">
-							Link as a Button
-						</ButtonLink>
-						<ButtonLink className="mr-2" slim link="#">
-							Link as a Slim Button
-						</ButtonLink>
-					</div>
+					<Section kind="light">
+						<ButtonIcon label="Settings">
+							<IconSettings />
+						</ButtonIcon>
+						<Button>Default Button</Button>
+						<Button slim>Slim Button</Button>
+						<ButtonLink link="#">Link as a Button</ButtonLink>
+					</Section>
 
-					<div className="my-5 bg-slate-900 p-5">
-						<Button className="mr-2" kind="light">
-							Default Button
-						</Button>
-						<Button className="mr-2" slim kind="light">
+					<Section>
+						<ButtonIcon label="Settings" kind="light">
+							<IconSettings />
+						</ButtonIcon>
+						<Button kind="light">Default Button</Button>
+						<Button slim kind="light">
 							Slim Button
 						</Button>
-						<ButtonLink className="mr-2" link="#" kind="light">
+						<ButtonLink link="#" kind="light">
 							Link as a Button
 						</ButtonLink>
-						<ButtonLink className="mr-2" slim link="#" kind="light">
-							Link as a Slim Button
-						</ButtonLink>
-					</div>
+					</Section>
 				</section>
 
 				<section>
 					<h2>Footer</h2>
-					<div className="my-5 bg-slate-500 p-5">
+					<Section raw className="grid">
 						<Footer
 							row1={
 								<div>
@@ -55,7 +83,38 @@ function App() {
 								<div>&copy; {new Date().getFullYear()} something something</div>
 							}
 						/>
-					</div>
+					</Section>
+					<Section raw className="mb-5 mt-1 grid">
+						<Footer
+							noPaddings
+							row1={
+								<div>
+									App Name v{import.meta.env.BUILDVERSION} -{" "}
+									{import.meta.env.BUILDTIME}
+								</div>
+							}
+							row2={
+								<div>&copy; {new Date().getFullYear()} something something</div>
+							}
+						/>
+					</Section>
+				</section>
+
+				<section>
+					<h2>Icons</h2>
+					<Section kind="light">
+						<IconDog className={"h-9 w-9"} />
+					</Section>
+					<Section kind="light">
+						<IconAssistant />
+						<IconClose />
+						<IconCopied />
+						<IconCopy />
+						<IconDelete />
+						<IconRestore />
+						<IconSettings />
+						<IconUser />
+					</Section>
 				</section>
 			</main>
 		</>
