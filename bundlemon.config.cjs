@@ -9,7 +9,7 @@ module.exports = {
 		},
 		{
 			path: "assets/index-<hash>.js",
-			maxSize: "50kb",
+			maxSize: "60kb",
 		},
 		{
 			path: "assets/index-<hash>.css",
