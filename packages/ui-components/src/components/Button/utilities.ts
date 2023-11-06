@@ -40,9 +40,9 @@ export const getButtonClasses = ({
 			"bg-slate-500 text-slate-200": kind === "light" && disabled && !raw,
 			"w-full": fullWidth,
 			"px-0 py-1 sm:px-4":
-				slim && !raw && (type === TYPE_BUTTON || type === TYPE_LINK),
-			"px-4 py-2":
-				!slim && !raw && (type === TYPE_BUTTON || type === TYPE_LINK),
+				(slim && !raw && (type === TYPE_BUTTON || type === TYPE_LINK)) ||
+				(!slim && !raw && type === TYPE_LINK),
+			"px-4 py-2": !slim && !raw && type === TYPE_BUTTON,
 			"disabled:cursor-not-allowed disabled:opacity-50": disabled,
 			"max-h-8": type === TYPE_LINK,
 		},
