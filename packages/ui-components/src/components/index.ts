@@ -8,6 +8,7 @@ import { IconCopied } from "./Icons/IconCopied";
 import { IconCopy } from "./Icons/IconCopy";
 import { IconDelete } from "./Icons/IconDelete";
 import { IconDog } from "./Icons/IconDog";
+import { IconEdit } from "./Icons/IconEdit";
 import { IconRestore } from "./Icons/IconRestore";
 import { IconSettings } from "./Icons/IconSettings";
 import { IconUser } from "./Icons/IconUser";
@@ -23,6 +24,7 @@ export {
 	IconCopy,
 	IconDelete,
 	IconDog,
+	IconEdit,
 	IconRestore,
 	IconSettings,
 	IconUser,
