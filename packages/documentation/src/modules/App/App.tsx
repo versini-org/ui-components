@@ -57,6 +57,15 @@ function App() {
 						<Button slim>Slim Button</Button>
 						<ButtonLink link="#">Link as a Button</ButtonLink>
 					</Section>
+					<Section kind="light">
+						<ButtonIcon label="Settings" disabled>
+							<IconSettings />
+						</ButtonIcon>
+						<Button disabled>Default Button</Button>
+						<Button slim disabled>
+							Slim Button
+						</Button>
+					</Section>
 
 					<Section>
 						<ButtonIcon label="Settings" kind="light">
@@ -69,6 +78,17 @@ function App() {
 						<ButtonLink link="#" kind="light">
 							Link as a Button
 						</ButtonLink>
+					</Section>
+					<Section>
+						<ButtonIcon label="Settings" kind="light" disabled>
+							<IconSettings />
+						</ButtonIcon>
+						<Button kind="light" disabled>
+							Default Button
+						</Button>
+						<Button slim kind="light" disabled>
+							Slim Button
+						</Button>
 					</Section>
 				</section>
 

@@ -1,13 +1,13 @@
+import { SvgIcon } from "../private/SvgIcon/SvgIcon";
 import type { IconsProps } from "./IconsTypes";
 
-export const IconDog = ({ className }: IconsProps) => {
-	const generatedClassName = className ? className : "w-full";
+export const IconDog = ({ className, viewBox }: IconsProps) => {
 	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			viewBox="0 0 1200 500"
-			className={generatedClassName}
+		<SvgIcon
+			defaultViewBox="0 0 1200 500"
+			defaultClassName={"w-full"}
+			viewBox={viewBox}
+			className={className}
 		>
 			<g transform="matrix(11.9092 0 0 11.9092 470.0017 250.0009)" id="879221">
 				<path
@@ -17,6 +17,6 @@ export const IconDog = ({ className }: IconsProps) => {
 					strokeLinecap="round"
 				/>
 			</g>
-		</svg>
+		</SvgIcon>
 	);
 };
