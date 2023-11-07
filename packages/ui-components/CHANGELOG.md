@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.0](https://github.com/aversini/ui-components/compare/ui-components-v0.0.4...ui-components-v0.1.0) (2023-11-07)
+
+
+### Features
+
+* add noPadding prop to Footer ([54e0515](https://github.com/aversini/ui-components/commit/54e051581ce7d32e252f8be6cf31af633d7b7c47))
+* adding Icons ([7648fdf](https://github.com/aversini/ui-components/commit/7648fdfa302a6637034849116ca6a0d507eef734))
+
+
+### Bug Fixes
+
+* bump non-breaking prod dependencies ([32e0626](https://github.com/aversini/ui-components/commit/32e06265a9b3516671c84955dbd32ceae0fcd0c4))
+* ButtonLink slim should be the same as default ([8a217b4](https://github.com/aversini/ui-components/commit/8a217b4834f7ea4f493c8d296e2232f066b85bdc))
+
 ## [0.0.4](https://github.com/aversini/ui-components/compare/ui-components-v0.0.3...ui-components-v0.0.4) (2023-11-03)
 
 
