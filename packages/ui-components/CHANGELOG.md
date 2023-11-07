@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/aversini/ui-components/compare/ui-components-v0.2.0...ui-components-v0.2.1) (2023-11-07)
+
+
+### Bug Fixes
+
+* icon size cannot be changed ([eea0252](https://github.com/aversini/ui-components/commit/eea02524f6de1433f78dc1f8e6aa3aa1eca07cb2))
+* renamed IconAssistant into IconDogInShield ([eea0252](https://github.com/aversini/ui-components/commit/eea02524f6de1433f78dc1f8e6aa3aa1eca07cb2))
+
 ## [0.2.0](https://github.com/aversini/ui-components/compare/ui-components-v0.1.0...ui-components-v0.2.0) (2023-11-07)
 
 
