@@ -16,7 +16,7 @@
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
 	},
 	"dependencies": {
-		"@versini/ui-components": "0.0.4",
+		"@versini/ui-components": "*",
 		"autoprefixer": "10.4.16",
 		"clsx": "2.0.0",
 		"json5": "2.2.3",
