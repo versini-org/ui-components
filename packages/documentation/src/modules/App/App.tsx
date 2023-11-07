@@ -106,7 +106,7 @@ function App() {
 				<section>
 					<h2>Icons</h2>
 					<Section kind="light">
-						<IconDog className={"h-9 w-9"} />
+						<IconDog className={"h-9 w-full"} />
 					</Section>
 					<Section kind="light">
 						<IconDogInShield />
