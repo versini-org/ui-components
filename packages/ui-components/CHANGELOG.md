@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.2](https://github.com/aversini/ui-components/compare/ui-components-v0.2.1...ui-components-v0.2.2) (2023-11-07)
+
+
+### Bug Fixes
+
+* Icons are now wrapped in accessible SvgIcon ([41bc81e](https://github.com/aversini/ui-components/commit/41bc81e758aa7697a1ee0c30b198844b7cb2d496))
+
+
+### Performance Improvements
+
+* simplify ButtonIcon since there is no tooltip support ([527e44d](https://github.com/aversini/ui-components/commit/527e44d614d9c72ebed066df7d44f8e923949fdc))
+
 ## [0.2.1](https://github.com/aversini/ui-components/compare/ui-components-v0.2.0...ui-components-v0.2.1) (2023-11-07)
 
 
