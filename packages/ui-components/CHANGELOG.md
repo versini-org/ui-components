@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/aversini/ui-components/compare/ui-components-v0.1.0...ui-components-v0.2.0) (2023-11-07)
+
+
+### Features
+
+* adding IconEdit ([24b8fbc](https://github.com/aversini/ui-components/commit/24b8fbc3fa8bf8b1fe764c2eb75861b587451551))
+
 ## [0.1.0](https://github.com/aversini/ui-components/compare/ui-components-v0.0.4...ui-components-v0.1.0) (2023-11-07)
 
 
