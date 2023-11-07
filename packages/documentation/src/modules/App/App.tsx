@@ -1,4 +1,8 @@
-import {
+import * as UI from "@versini/ui-components";
+import clsx from "clsx";
+import { useEffect } from "react";
+
+const {
 	Button,
 	ButtonIcon,
 	ButtonLink,
@@ -9,12 +13,11 @@ import {
 	IconCopy,
 	IconDelete,
 	IconDog,
+	IconEdit,
 	IconRestore,
 	IconSettings,
 	IconUser,
-} from "@versini/ui-components";
-import clsx from "clsx";
-import { useEffect } from "react";
+} = UI;
 
 const Section = ({
 	children,
@@ -111,6 +114,7 @@ function App() {
 						<IconCopied />
 						<IconCopy />
 						<IconDelete />
+						<IconEdit />
 						<IconRestore />
 						<IconSettings />
 						<IconUser />
