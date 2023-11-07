@@ -7,7 +7,7 @@ const {
 	ButtonIcon,
 	ButtonLink,
 	Footer,
-	IconAssistant,
+	IconDogInShield,
 	IconClose,
 	IconCopied,
 	IconCopy,
@@ -109,7 +109,7 @@ function App() {
 						<IconDog className={"h-9 w-9"} />
 					</Section>
 					<Section kind="light">
-						<IconAssistant />
+						<IconDogInShield />
 						<IconClose />
 						<IconCopied />
 						<IconCopy />

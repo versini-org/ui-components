@@ -1,9 +1,8 @@
-import clsx from "clsx";
-
+import { defaultIconSize } from "./constants";
 import type { IconsProps } from "./IconsTypes";
 
-export const IconAssistant = ({ className }: IconsProps) => {
-	const generatedClassName = clsx("h-5 w-5", className);
+export const IconDogInShield = ({ className }: IconsProps) => {
+	const generatedClassName = className ? className : defaultIconSize;
 
 	return (
 		<svg

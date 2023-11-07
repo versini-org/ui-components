@@ -1,9 +1,7 @@
-import clsx from "clsx";
-
 import type { IconsProps } from "./IconsTypes";
 
 export const IconDog = ({ className }: IconsProps) => {
-	const generatedClassName = clsx("w-full", className);
+	const generatedClassName = className ? className : "w-full";
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
