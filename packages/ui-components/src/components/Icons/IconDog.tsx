@@ -1,13 +1,20 @@
 import { SvgIcon } from "../private/SvgIcon/SvgIcon";
 import type { IconsProps } from "./IconsTypes";
 
-export const IconDog = ({ className, viewBox }: IconsProps) => {
+export const IconDog = ({
+	className,
+	viewBox,
+	spacing,
+	...rest
+}: IconsProps) => {
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 1200 500"
 			defaultClassName={"w-full"}
 			viewBox={viewBox}
 			className={className}
+			spacing={spacing}
+			{...rest}
 		>
 			<g transform="matrix(11.9092 0 0 11.9092 470.0017 250.0009)" id="879221">
 				<path
