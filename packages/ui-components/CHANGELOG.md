@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/aversini/ui-components/compare/ui-components-v0.3.0...ui-components-v1.0.0) (2023-11-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* externalizing styles
+
+### Features
+
+* externalizing styles ([46029e9](https://github.com/aversini/ui-components/commit/46029e9df8d797915bff2f7c8775920bf17962fe))
+
 ## [0.3.0](https://github.com/aversini/ui-components/compare/ui-components-v0.2.2...ui-components-v0.3.0) (2023-11-08)
 
 
