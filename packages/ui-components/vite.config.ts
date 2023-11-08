@@ -1,11 +1,8 @@
-/// <reference types="vitest" />
-
 import { resolve } from "node:path";
 
 import fs from "fs-extra";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
-import { libInjectCss } from "vite-plugin-lib-inject-css";
 
 const packageJson = fs.readJSONSync("package.json");
 
@@ -38,9 +35,8 @@ export default defineConfig({
 				"react/jsx-runtime",
 				"tailwindcss",
 			],
-
 			output: {
-				assetFileNames: "assets/[name][extname]",
+				assetFileNames: "style[extname]",
 				entryFileNames: "[name].js",
 			},
 		},
@@ -59,14 +55,6 @@ export default defineConfig({
 			include: ["src"],
 			exclude: ["**/__tests__/**/*"],
 			rollupTypes: true,
-		}),
-		libInjectCss({
-			entry: {
-				index: "./src/components/index.ts",
-				Button: "./src/components/Button/Button.tsx",
-				ButtonIcon: "./src/components/Button/ButtonIcon.tsx",
-				Footer: "./src/components/Footer/Footer.tsx",
-			},
 		}),
 	],
 });
