@@ -1,3 +1,5 @@
+import "@versini/ui-components/dist/style.css";
+
 import * as UI from "@versini/ui-components";
 import clsx from "clsx";
 import { useEffect } from "react";

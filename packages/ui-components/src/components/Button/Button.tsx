@@ -1,5 +1,3 @@
-import "./button.css";
-
 import React from "react";
 
 import type { ButtonProps } from "./ButtonTypes";

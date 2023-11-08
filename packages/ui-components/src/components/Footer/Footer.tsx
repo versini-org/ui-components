@@ -1,5 +1,3 @@
-import "./footer.css";
-
 import clsx from "clsx";
 
 import type { FooterProps } from "./FooterTypes";
