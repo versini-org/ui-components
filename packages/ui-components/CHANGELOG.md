@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/aversini/ui-components/compare/ui-components-v0.2.2...ui-components-v0.3.0) (2023-11-08)
+
+
+### Features
+
+* adding spacing prop to Icons ([36b9a67](https://github.com/aversini/ui-components/commit/36b9a677f379357c4c41f057ce0319427f6903a2))
+
 ## [0.2.2](https://github.com/aversini/ui-components/compare/ui-components-v0.2.1...ui-components-v0.2.2) (2023-11-07)
 
 
