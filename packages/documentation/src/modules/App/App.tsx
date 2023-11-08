@@ -130,7 +130,7 @@ function App() {
 					</Section>
 					<Section kind="light">
 						<IconDogInShield />
-						<IconClose />
+						<IconClose spacing={{ t: 1, l: 5 }} />
 						<IconCopied />
 						<IconCopy />
 						<IconDelete />

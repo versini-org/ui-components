@@ -1,3 +1,5 @@
+import type { SpacingType } from "../../../common/commonTypes";
+
 export type SvgIconProps = {
 	children: React.ReactNode;
 	defaultViewBox: string;
@@ -6,6 +8,7 @@ export type SvgIconProps = {
 	className?: string;
 	defaultClassName?: string;
 	viewBox?: string;
+	spacing?: SpacingType;
 };
 
 // & React.SVGAttributes<SVGElement>;
