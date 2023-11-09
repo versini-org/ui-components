@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/aversini/ui-components/compare/ui-components-v1.0.0...ui-components-v1.0.1) (2023-11-09)
+
+
+### Bug Fixes
+
+* types are not exported correctly ([00cedc9](https://github.com/aversini/ui-components/commit/00cedc9b38d3aa6c782ae615ced695e8562c09fa))
+
 ## [1.0.0](https://github.com/aversini/ui-components/compare/ui-components-v0.3.0...ui-components-v1.0.0) (2023-11-08)
 
 
