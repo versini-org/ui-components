@@ -53,8 +53,7 @@ export default defineConfig({
 	plugins: [
 		dts({
 			include: ["src"],
-			exclude: ["**/__tests__/**/*"],
-			rollupTypes: true,
+			exclude: ["**/__tests__/**/*", "vite-env.d.ts"],
 		}),
 	],
 });

@@ -15,7 +15,8 @@
 	"scripts": {
 		"clean": "rimraf dist",
 		"dev": "yarn run clean && vite build --watch --mode development",
-		"build": "yarn run clean && tsc && vite build",
+		"build": "yarn run clean && tsc && vite build && yarn run build:types",
+		"build:types": "barrelsby --delete --directory dist --pattern \"**/*.d.ts\" --name \"index.d\"",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
 		"start": "static-server dist --port 5173",
 		"test": "vitest run",
