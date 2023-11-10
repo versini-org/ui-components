@@ -24,8 +24,7 @@
 		"test:coverage:ui": "vitest --coverage --ui",
 		"test:coverage": "vitest run --coverage",
 		"test:watch": "vitest",
-		"test": "vitest run",
-		"types1": "yarn run clean && tsc"
+		"test": "vitest run"
 	},
 	"peerDependencies": {
 		"react": "^18.2.0",
