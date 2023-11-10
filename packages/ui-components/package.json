@@ -13,16 +13,18 @@
 		"dist"
 	],
 	"scripts": {
+		"build:check": "tsc",
+		"build:js": "vite build",
+		"build:types": "tsup",
+		"build": "npm-run-all --serial clean build:check build:js build:types",
 		"clean": "rimraf dist",
 		"dev": "yarn run clean && vite build --watch --mode development",
-		"build": "yarn run clean && tsc && vite build && yarn run build:types",
-		"build:types": "barrelsby --delete --directory dist --pattern \"**/*.d.ts\" --name \"index.d\"",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
 		"start": "static-server dist --port 5173",
-		"test": "vitest run",
-		"test:coverage": "vitest run --coverage",
 		"test:coverage:ui": "vitest --coverage --ui",
-		"test:watch": "vitest"
+		"test:coverage": "vitest run --coverage",
+		"test:watch": "vitest",
+		"test": "vitest run"
 	},
 	"peerDependencies": {
 		"react": "^18.2.0",

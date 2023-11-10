@@ -1,4 +1,4 @@
-import type { SpacingType } from "../../../common/commonTypes";
+import type { SpacingType } from "../../../common";
 
 export type SvgIconProps = {
 	children: React.ReactNode;

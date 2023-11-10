@@ -1,24 +1,29 @@
-export type ButtonProps = {
-	onClick?: React.MouseEventHandler<HTMLButtonElement>;
-	disabled?: boolean;
+export type CommonButtonProps = {
 	kind?: "dark" | "light";
 	fullWidth?: boolean;
 	className?: string;
 	slim?: boolean;
-	type?: "button" | "submit" | "reset";
 	raw?: boolean;
-} & {
-	children?: React.ReactNode;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+};
+
+export type ButtonProps = {
+	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	disabled?: boolean;
+	type?: "button" | "submit" | "reset";
+} & CommonButtonProps & {
+		children?: React.ReactNode;
+	} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type ButtonIconProps = {
 	label?: string;
 	children: React.ReactNode;
-} & ButtonProps;
+} & CommonButtonProps &
+	React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type ButtonLinkProps = {
 	children?: React.ReactNode;
 	link?: string;
 	target?: string;
 	maxLabelLength?: number;
-} & ButtonProps;
+} & ButtonProps &
+	React.AnchorHTMLAttributes<HTMLAnchorElement>;

@@ -2,7 +2,6 @@ import { resolve } from "node:path";
 
 import fs from "fs-extra";
 import { defineConfig } from "vite";
-import dts from "vite-plugin-dts";
 
 const packageJson = fs.readJSONSync("package.json");
 
@@ -50,10 +49,5 @@ export default defineConfig({
 		"import.meta.env.BUILDTIME": JSON.stringify(buildTime),
 		"import.meta.env.BUILDVERSION": JSON.stringify(packageJson.version),
 	},
-	plugins: [
-		dts({
-			include: ["src"],
-			exclude: ["**/__tests__/**/*", "vite-env.d.ts"],
-		}),
-	],
+	plugins: [],
 });

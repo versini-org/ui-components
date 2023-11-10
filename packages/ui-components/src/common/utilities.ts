@@ -1,4 +1,4 @@
-import type { SpacingType } from "./commonTypes";
+import type { SpacingType } from ".";
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 const toString = Object.prototype.toString;
