@@ -1,4 +1,4 @@
-import { SpacingType } from "../../common/commonTypes";
+import { SpacingType } from "../../common";
 
 export type IconsProps = {
 	className?: string;

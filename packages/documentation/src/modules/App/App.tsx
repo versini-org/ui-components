@@ -52,7 +52,7 @@ function App() {
 				<section>
 					<h2>Buttons</h2>
 					<Section kind="light">
-						<ButtonIcon label="Settings">
+						<ButtonIcon label="Settings" toto="1">
 							<IconSettings />
 						</ButtonIcon>
 						<Button>Default Button</Button>
