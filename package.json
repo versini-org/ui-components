@@ -13,5 +13,6 @@
 	},
 	"devDependencies": {
 		"@versini/dev-dependencies-client": "1.1.1"
-	}
+	},
+	"packageManager": "yarn@4.0.1"
 }
