@@ -10,7 +10,7 @@ module.exports = {
 		"../../configuration/eslint-rules/possible-errors.cjs",
 		"../../configuration/eslint-rules/variables.cjs",
 	],
-	ignorePatterns: ["dist", ".eslintrc.cjs"],
+	ignorePatterns: ["dist", ".eslintrc.cjs", ".storybook"],
 	parser: "@typescript-eslint/parser",
 	plugins: ["react-refresh", "simple-import-sort"],
 	rules: {

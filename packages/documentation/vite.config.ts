@@ -1,5 +1,3 @@
-/// <reference types="vitest" />
-
 import fs from "fs-extra";
 import { defineConfig } from "vite";
 
@@ -21,18 +19,6 @@ export default defineConfig({
 	esbuild: {
 		supported: {
 			"top-level-await": true, //browsers can handle top-level-await features
-		},
-	},
-	test: {
-		globals: true,
-		setupFiles: ["./vitest.setup.ts"],
-		environment: "jsdom",
-		coverage: {
-			provider: "v8",
-			lines: 55,
-			functions: 30,
-			branches: 70,
-			statements: 55,
 		},
 	},
 	define: {

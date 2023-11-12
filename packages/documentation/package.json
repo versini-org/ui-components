@@ -6,14 +6,15 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
+		"build:storybook": "storybook build -o dist",
+		"build": "npm-run-all --serial clean build:storybook",
 		"bundlesize": "bundlemon",
 		"clean": "rimraf dist",
-		"dev": "vite --host",
-		"build": "yarn run clean && vite build",
-		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
+		"dev": "storybook dev -p 6006 --no-open",
+		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
 		"start": "static-server dist --port 5173",
-		"test": "echo \"WARNING: no test specified\" && exit 0",
-		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
+		"test:coverage": "echo \"WARNING: no test specified\" && exit 0",
+		"test": "echo \"WARNING: no test specified\" && exit 0"
 	},
 	"dependencies": {
 		"@versini/ui-components": "*",
@@ -23,7 +24,17 @@
 		"postcss": "8.4.31",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"tailwindcss": "3.3.3",
+		"tailwindcss": "3.3.5",
 		"uuid": "9.0.1"
+	},
+	"devDependencies": {
+		"@storybook/addon-a11y": "7.5.3",
+		"@storybook/addon-essentials": "7.5.3",
+		"@storybook/blocks": "7.5.3",
+		"@storybook/react": "7.5.3",
+		"@storybook/react-vite": "7.5.3",
+		"@storybook/testing-library": "0.2.2",
+		"prop-types": "15.8.1",
+		"storybook": "7.5.3"
 	}
 }
