@@ -69,6 +69,13 @@ describe("Button modifiers", () => {
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("w-full");
 	});
+
+	it("should render a raw button with no styling", async () => {
+		render(<Button raw>hello</Button>);
+		const button = await screen.findByRole("button");
+		expect(button.className).toContain("av-button");
+		expect(button.className).not.toContain("py-2");
+	});
 });
 
 describe("Button methods", () => {
