@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/aversini/ui-components/compare/ui-components-v1.0.1...ui-components-v1.0.2) (2023-11-12)
+
+
+### Bug Fixes
+
+* raw button should not have any CSS styles ([2786993](https://github.com/aversini/ui-components/commit/278699336cc18ca3a79a7914415b26ae82965bad))
+
 ## [1.0.1](https://github.com/aversini/ui-components/compare/ui-components-v1.0.0...ui-components-v1.0.1) (2023-11-09)
 
 
