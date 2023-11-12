@@ -29,8 +29,6 @@ const getButtonClassesByType = (type: string, slim?: boolean) => {
 			});
 		case TYPE_ICON:
 			return "p-2";
-		default:
-			return "";
 	}
 };
 
