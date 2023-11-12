@@ -16,6 +16,37 @@ type getButtonClassesProps = {
 	slim?: boolean;
 };
 
+const getButtonClassesByType = (type: string, slim?: boolean) => {
+	switch (type) {
+		case TYPE_BUTTON:
+			return clsx("text-sm font-medium sm:text-base", {
+				"px-4 py-2": !slim,
+				"px-0 py-1 sm:px-4": slim,
+			});
+		case TYPE_LINK:
+			return clsx("max-h-8 px-0 py-1 text-center text-sm sm:px-4", {
+				"px-0 py-1 sm:px-4": !slim,
+			});
+		case TYPE_ICON:
+			return "p-2";
+		default:
+			return "";
+	}
+};
+
+const getButtonClassesByKind = (kind: string, disabled: boolean) => {
+	const baseClasses =
+		kind === "dark"
+			? "bg-slate-900 text-slate-200"
+			: "bg-slate-500 text-slate-200";
+	const hoverClasses = disabled
+		? ""
+		: kind === "dark"
+		? "hover:bg-slate-800 active:bg-slate-700 active:text-slate-300"
+		: "hover:bg-slate-600 active:bg-slate-700 active:text-slate-300";
+	return clsx(baseClasses, hoverClasses);
+};
+
 export const getButtonClasses = ({
 	type,
 	className,
@@ -31,23 +62,11 @@ export const getButtonClasses = ({
 				BUTTON_CLASSNAME,
 				className,
 				"rounded-full focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-0",
+				getButtonClassesByType(type, slim),
+				getButtonClassesByKind(kind, disabled),
 				{
-					"text-sm font-medium sm:text-base": type === TYPE_BUTTON,
-					"text-center text-sm": type === TYPE_LINK,
-					"p-2": type === TYPE_ICON,
-					"bg-slate-900 text-slate-200 hover:bg-slate-800 active:bg-slate-700 active:text-slate-300":
-						kind === "dark" && !disabled,
-					"bg-slate-900 text-slate-200": kind === "dark" && disabled,
-					"bg-slate-500 text-slate-200 hover:bg-slate-600 active:bg-slate-700 active:text-slate-300":
-						kind === "light" && !disabled,
-					"bg-slate-500 text-slate-200": kind === "light" && disabled,
 					"w-full": fullWidth,
-					"px-0 py-1 sm:px-4":
-						(slim && (type === TYPE_BUTTON || type === TYPE_LINK)) ||
-						(!slim && type === TYPE_LINK),
-					"px-4 py-2": !slim && type === TYPE_BUTTON,
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
-					"max-h-8": type === TYPE_LINK,
 				},
 		  );
 };
