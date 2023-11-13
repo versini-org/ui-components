@@ -10,6 +10,7 @@ const meta: Meta<typeof ButtonLink> = {
 		fullWidth: false,
 		kind: "dark",
 		raw: false,
+		link: "https://www.google.com",
 	},
 	argTypes: {
 		className: {
