@@ -12,10 +12,10 @@
 		"test": "lerna run test"
 	},
 	"devDependencies": {
-		"@versini/dev-dependencies-client": "1.1.2"
+		"@versini/dev-dependencies-client": "1.2.1"
 	},
 	"resolutions": {
-		"prettier": "3.0.3"
+		"prettier": ">=3.0.3"
 	},
 	"packageManager": "yarn@4.0.1"
 }
