@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/aversini/ui-components/compare/ui-components-v1.0.2...ui-components-v1.0.3) (2023-11-14)
+
+
+### Bug Fixes
+
+* invalid icon types ([63a4da3](https://github.com/aversini/ui-components/commit/63a4da36fa365419040a6f9bb487203f7740173b))
+
 ## [1.0.2](https://github.com/aversini/ui-components/compare/ui-components-v1.0.1...ui-components-v1.0.2) (2023-11-12)
 
 
