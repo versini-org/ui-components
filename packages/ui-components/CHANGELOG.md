@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/aversini/ui-components/compare/ui-components-v1.0.3...ui-components-v1.0.4) (2023-11-14)
+
+
+### Bug Fixes
+
+* missing dynamic tailwind margins in the CSS bundle ([bc343e3](https://github.com/aversini/ui-components/commit/bc343e389ffcc35ce7337d1e7938ce6080c318a0))
+
 ## [1.0.3](https://github.com/aversini/ui-components/compare/ui-components-v1.0.2...ui-components-v1.0.3) (2023-11-14)
 
 
