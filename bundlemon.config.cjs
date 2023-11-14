@@ -1,6 +1,6 @@
 module.exports = {
 	reportOutput: ["github"],
-	baseDir: "./packages/documentation/dist",
+	baseDir: "./packages/bundlesize/dist",
 	defaultCompression: "gzip",
 	files: [
 		{
@@ -8,11 +8,11 @@ module.exports = {
 			maxSize: "2kb",
 		},
 		{
-			path: "assets/index-<hash>.js",
+			path: "assets/index.js",
 			maxSize: "60kb",
 		},
 		{
-			path: "assets/index-<hash>.css",
+			path: "assets/style.css",
 			maxSize: "3kb",
 		},
 		{
