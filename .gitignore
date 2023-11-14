@@ -75,4 +75,3 @@ types
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-.yarn/install-state.gz
