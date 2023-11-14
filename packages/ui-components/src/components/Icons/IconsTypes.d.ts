@@ -1,7 +1,6 @@
 import { SpacingType } from "../../common";
 
-export type IconsProps = {
-	className?: string;
-	viewBox?: string;
+export interface IconsProps
+	extends Omit<React.SVGAttributes<SVGElement>, "spacing"> {
 	spacing?: SpacingType;
-} & React.SVGAttributes<SVGElement>;
+}
