@@ -5225,6 +5225,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@versini/bundlesize@workspace:packages/bundlesize":
+  version: 0.0.0-use.local
+  resolution: "@versini/bundlesize@workspace:packages/bundlesize"
+  dependencies:
+    "@versini/ui-components": "npm:*"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+  languageName: unknown
+  linkType: soft
+
 "@versini/dev-dependencies-client@npm:1.2.1":
   version: 1.2.1
   resolution: "@versini/dev-dependencies-client@npm:1.2.1"
