@@ -8,7 +8,6 @@
 	"scripts": {
 		"build:storybook": "storybook build -o dist",
 		"build": "npm-run-all --serial clean build:storybook",
-		"bundlesize": "bundlemon",
 		"clean": "rimraf dist",
 		"dev": "storybook dev -p 6006 --no-open",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
