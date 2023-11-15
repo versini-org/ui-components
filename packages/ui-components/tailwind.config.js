@@ -22,25 +22,8 @@ const generateDynamicMargins = () => {
 	return margins;
 };
 
-import typography from "@tailwindcss/typography";
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	safelist: generateDynamicMargins(),
-	theme: {
-		extend: {
-			typography: {
-				DEFAULT: {
-					css: {
-						blockquote: {
-							borderLeftColor: "var(--tw-prose-blockquote-border-color)",
-						},
-						"ul > li::marker": {
-							color: "var(--tw-prose-counter)",
-						},
-					},
-				},
-			},
-		},
-	},
-	plugins: [typography],
+	plugins: [],
 };
