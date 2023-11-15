@@ -14,6 +14,7 @@ import { IconEdit } from "./Icons/IconEdit";
 import { IconRestore } from "./Icons/IconRestore";
 import { IconSettings } from "./Icons/IconSettings";
 import { IconUser } from "./Icons/IconUser";
+import { Main } from "./Main/Main";
 
 export {
 	Button,
@@ -30,4 +31,5 @@ export {
 	IconRestore,
 	IconSettings,
 	IconUser,
+	Main,
 };

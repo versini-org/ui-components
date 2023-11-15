@@ -112,3 +112,13 @@ export const getSpacing = (spacing: SpacingType): string => {
 
 	return spacingClass;
 };
+
+export const expectToHaveClasses = (
+	element: HTMLElement,
+	classes: string[],
+) => {
+	const elementClasses = element.className.split(" ").sort();
+	classes.forEach((expectedClass) => {
+		expect(elementClasses).toContain(expectedClass);
+	});
+};
