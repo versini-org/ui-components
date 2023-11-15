@@ -35,7 +35,7 @@ const getButtonClassesByType = (type: string, slim?: boolean) => {
 const getButtonClassesByKind = (kind: string, disabled: boolean) => {
 	const baseClasses =
 		kind === "dark"
-			? "bg-slate-900 text-slate-200"
+			? "text-slate-200 bg-accent-900"
 			: "bg-slate-500 text-slate-200";
 	const hoverClasses = disabled
 		? ""

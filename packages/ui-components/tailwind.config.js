@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
+import colors from "tailwindcss/colors";
+
+import { dynamicTwClasses } from "./lib/twPlugin";
+
 /**
  * This function generates all the dynamic margins that are
  * potentially used with the "spacing" prop.
@@ -22,8 +26,19 @@ const generateDynamicMargins = () => {
 	return margins;
 };
 
+console.log("==> ", dynamicTwClasses("accent", 40));
+
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	safelist: generateDynamicMargins(),
 	plugins: [],
+	theme: {
+		extend: {
+			colors: {
+				accent: dynamicTwClasses("accent", 40),
+				danger: colors.red,
+				success: colors.green,
+			},
+		},
+	},
 };
