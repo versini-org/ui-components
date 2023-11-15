@@ -5,6 +5,13 @@ import userEvent from "@testing-library/user-event";
 
 import { Button } from "../..";
 
+const expectToHaveClasses = (element: HTMLElement, classes: string[]) => {
+	const elementClasses = element.className.split(" ").sort();
+	classes.forEach((expectedClass) => {
+		expect(elementClasses).toContain(expectedClass);
+	});
+};
+
 describe("Button (exceptions)", () => {
 	it("should be able to require/import from root", () => {
 		expect(Button).toBeDefined();
@@ -15,13 +22,31 @@ describe("Button modifiers", () => {
 	it("should render a default button", async () => {
 		render(<Button>hello</Button>);
 		const button = await screen.findByRole("button");
-		expect(button.className).toContain("py-2");
+		expectToHaveClasses(button, [
+			"av-button",
+			"px-4",
+			"py-2",
+			"text-sm",
+			"font-medium",
+			"sm:text-base",
+			"bg-slate-900",
+			"text-slate-200",
+			"hover:bg-slate-800",
+			"active:bg-slate-700",
+			"rounded-full",
+			"focus:outline-none",
+			"focus:ring-2",
+			"focus:ring-slate-300",
+			"focus:ring-offset-0",
+		]);
 	});
 
 	it("should render a slim button", async () => {
 		render(<Button slim>hello</Button>);
 		const button = await screen.findByRole("button");
+		expect(button.className).toContain("px-2");
 		expect(button.className).toContain("py-1");
+		expect(button.className).toContain("sm:px-4");
 	});
 
 	it("should render a dark button", async () => {
