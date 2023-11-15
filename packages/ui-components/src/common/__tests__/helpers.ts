@@ -11,8 +11,8 @@ export const expectToHaveClasses = (
 	element: HTMLElement,
 	classes: string[],
 ) => {
-	const elementClasses = element.className.split(" ").sort();
-	classes.forEach((expectedClass) => {
-		expect(elementClasses).toContain(expectedClass);
+	const elementClasses = new Set(element.className.split(" "));
+	classes.sort().forEach((expectedClass) => {
+		expect(Array.from(elementClasses)).toContain(expectedClass);
 	});
 };
