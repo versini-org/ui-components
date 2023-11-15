@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/aversini/ui-components/compare/ui-components-v1.0.4...ui-components-v1.0.5) (2023-11-15)
+
+
+### Bug Fixes
+
+* slim button label not visible at lower breakpoint ([5ddd80e](https://github.com/aversini/ui-components/commit/5ddd80e9f8b52463cfd7d30758731f3dcdae72a9))
+
 ## [1.0.4](https://github.com/aversini/ui-components/compare/ui-components-v1.0.3...ui-components-v1.0.4) (2023-11-14)
 
 
