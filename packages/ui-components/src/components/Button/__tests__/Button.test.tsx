@@ -44,25 +44,19 @@ describe("Button modifiers", () => {
 	it("should render a slim button", async () => {
 		render(<Button slim>hello</Button>);
 		const button = await screen.findByRole("button");
-		expect(button.className).toContain("px-2");
-		expect(button.className).toContain("py-1");
-		expect(button.className).toContain("sm:px-4");
+		expectToHaveClasses(button, ["px-2", "py-1", "sm:px-4"]);
 	});
 
 	it("should render a dark button", async () => {
 		render(<Button kind="dark">hello</Button>);
 		const button = await screen.findByRole("button");
-		const buttonClass = button.className;
-		expect(buttonClass).toContain("text-slate-200");
-		expect(buttonClass).toContain("bg-slate-900");
+		expectToHaveClasses(button, ["bg-slate-900", "text-slate-200"]);
 	});
 
 	it("should render a light button", async () => {
 		render(<Button kind="light">hello</Button>);
 		const button = await screen.findByRole("button");
-		const buttonClass = button.className;
-		expect(buttonClass).toContain("text-slate-200");
-		expect(buttonClass).toContain("bg-slate-500");
+		expectToHaveClasses(button, ["bg-slate-500", "text-slate-200"]);
 	});
 
 	it("should render a disabled dark button", async () => {
@@ -72,9 +66,10 @@ describe("Button modifiers", () => {
 			</Button>,
 		);
 		const button = await screen.findByRole("button");
-		const buttonClass = button.className;
-		expect(buttonClass).toContain("disabled:opacity-50");
-		expect(buttonClass).toContain("disabled:cursor-not-allowed");
+		expectToHaveClasses(button, [
+			"disabled:opacity-50",
+			"disabled:cursor-not-allowed",
+		]);
 	});
 
 	it("should render a disabled light button", async () => {
@@ -84,9 +79,10 @@ describe("Button modifiers", () => {
 			</Button>,
 		);
 		const button = await screen.findByRole("button");
-		const buttonClass = button.className;
-		expect(buttonClass).toContain("disabled:opacity-50");
-		expect(buttonClass).toContain("disabled:cursor-not-allowed");
+		expectToHaveClasses(button, [
+			"disabled:opacity-50",
+			"disabled:cursor-not-allowed",
+		]);
 	});
 
 	it("should render a fullWidth button", async () => {
