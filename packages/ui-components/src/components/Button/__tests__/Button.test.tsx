@@ -3,7 +3,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { expectToHaveClasses } from "../../../common/utilities";
+import { expectToHaveClasses } from "../../../common/__tests__/helpers";
 import { Button } from "../..";
 
 describe("Button (exceptions)", () => {
