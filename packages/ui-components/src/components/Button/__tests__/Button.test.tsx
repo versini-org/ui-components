@@ -3,14 +3,8 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
+import { expectToHaveClasses } from "../../../common/__tests__/helpers";
 import { Button } from "../..";
-
-const expectToHaveClasses = (element: HTMLElement, classes: string[]) => {
-	const elementClasses = element.className.split(" ").sort();
-	classes.forEach((expectedClass) => {
-		expect(elementClasses).toContain(expectedClass);
-	});
-};
 
 describe("Button (exceptions)", () => {
 	it("should be able to require/import from root", () => {
