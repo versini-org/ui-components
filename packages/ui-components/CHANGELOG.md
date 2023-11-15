@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/aversini/ui-components/compare/ui-components-v1.0.5...ui-components-v1.1.0) (2023-11-15)
+
+
+### Features
+
+* introducing Main component ([f01d185](https://github.com/aversini/ui-components/commit/f01d1854e84468b769a685d14f0886d5fe56f63c))
+
 ## [1.0.5](https://github.com/aversini/ui-components/compare/ui-components-v1.0.4...ui-components-v1.0.5) (2023-11-15)
 
 
