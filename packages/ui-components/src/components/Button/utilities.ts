@@ -21,7 +21,7 @@ const getButtonClassesByType = (type: string, slim?: boolean) => {
 		case TYPE_BUTTON:
 			return clsx("text-sm font-medium sm:text-base", {
 				"px-4 py-2": !slim,
-				"px-0 py-1 sm:px-4": slim,
+				"px-2 py-1 sm:px-4": slim,
 			});
 		case TYPE_LINK:
 			return clsx("max-h-8 px-0 py-1 text-center text-sm sm:px-4", {
