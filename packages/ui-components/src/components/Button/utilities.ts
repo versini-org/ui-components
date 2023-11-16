@@ -35,13 +35,13 @@ const getButtonClassesByType = (type: string, slim?: boolean) => {
 const getButtonClassesByKind = (kind: string, disabled: boolean) => {
 	const baseClasses =
 		kind === "dark"
-			? "text-slate-200 bg-accent-900"
-			: "bg-slate-500 text-slate-200";
+			? "text-copy-primary bg-action-primary border-border-primary border-2"
+			: "text-copy-secondary bg-action-secondary border-border-secondary border-2";
 	const hoverClasses = disabled
 		? ""
 		: kind === "dark"
-		  ? "hover:bg-slate-800 active:bg-slate-700 active:text-slate-300"
-		  : "hover:bg-slate-600 active:bg-slate-700 active:text-slate-300";
+		? "hover:bg-primary-700 active:bg-primary-600"
+		: "hover:bg-primary-600 active:bg-primary-700";
 	return clsx(baseClasses, hoverClasses);
 };
 

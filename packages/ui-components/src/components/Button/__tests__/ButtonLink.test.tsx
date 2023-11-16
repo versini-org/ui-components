@@ -33,8 +33,8 @@ describe("ButtonLink modifiers", () => {
 		);
 		const button = await screen.findByRole("link");
 		const buttonClass = button.className;
-		expect(buttonClass).toContain("text-slate-200");
-		expect(buttonClass).toContain("bg-slate-900");
+		expect(buttonClass).toContain("text-primary-200");
+		expect(buttonClass).toContain("bg-primary-900");
 	});
 
 	it("should render a light anchor", async () => {
@@ -45,8 +45,8 @@ describe("ButtonLink modifiers", () => {
 		);
 		const button = await screen.findByRole("link");
 		const buttonClass = button.className;
-		expect(buttonClass).toContain("text-slate-200");
-		expect(buttonClass).toContain("bg-slate-500");
+		expect(buttonClass).toContain("text-primary-200");
+		expect(buttonClass).toContain("bg-primary-500");
 	});
 
 	it("should render a fullWidth link", async () => {

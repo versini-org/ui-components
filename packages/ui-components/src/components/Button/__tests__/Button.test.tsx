@@ -23,14 +23,14 @@ describe("Button modifiers", () => {
 			"text-sm",
 			"font-medium",
 			"sm:text-base",
-			"bg-slate-900",
-			"text-slate-200",
-			"hover:bg-slate-800",
-			"active:bg-slate-700",
+			"bg-primary-900",
+			"text-primary-200",
+			"hover:bg-primary-800",
+			"active:bg-primary-700",
 			"rounded-full",
 			"focus:outline-none",
 			"focus:ring-2",
-			"focus:ring-slate-300",
+			"focus:ring-primary-300",
 			"focus:ring-offset-0",
 		]);
 	});
@@ -44,13 +44,13 @@ describe("Button modifiers", () => {
 	it("should render a dark button", async () => {
 		render(<Button kind="dark">hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["bg-slate-900", "text-slate-200"]);
+		expectToHaveClasses(button, ["bg-primary-900", "text-primary-200"]);
 	});
 
 	it("should render a light button", async () => {
 		render(<Button kind="light">hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["bg-slate-500", "text-slate-200"]);
+		expectToHaveClasses(button, ["bg-primary-500", "text-primary-200"]);
 	});
 
 	it("should render a disabled dark button", async () => {
