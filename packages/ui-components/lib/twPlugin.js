@@ -4,8 +4,6 @@ import { consistentChroma } from "./runtime";
 export function dynamicTwClasses(baseName, baseHue) {
 	return Object.fromEntries(
 		shades.map((shade, i) => {
-			console.log("==> i: ", i);
-
 			const color = consistentChroma(i, baseHue);
 
 			return [

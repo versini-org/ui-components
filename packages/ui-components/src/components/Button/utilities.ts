@@ -40,8 +40,8 @@ const getButtonClassesByKind = (kind: string, disabled: boolean) => {
 	const hoverClasses = disabled
 		? ""
 		: kind === "dark"
-		? "hover:bg-slate-800 active:bg-slate-700 active:text-slate-300"
-		: "hover:bg-slate-600 active:bg-slate-700 active:text-slate-300";
+		  ? "hover:bg-slate-800 active:bg-slate-700 active:text-slate-300"
+		  : "hover:bg-slate-600 active:bg-slate-700 active:text-slate-300";
 	return clsx(baseClasses, hoverClasses);
 };
 
