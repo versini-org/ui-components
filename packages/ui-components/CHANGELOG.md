@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://github.com/aversini/ui-components/compare/ui-components-v1.1.0...ui-components-v2.0.0) (2023-11-18)
+
+
+### Features
+
+* final commit ([cbf3850](https://github.com/aversini/ui-components/commit/cbf3850a60c50b50e83e0920a2bdf76c7d2597c8))
+
+
+### Bug Fixes
+
+* remove unused tailwind typography plugin ([4e4179c](https://github.com/aversini/ui-components/commit/4e4179c1a66ee61fbaaa1c725d745bacf907d878))
+
+
+### Miscellaneous Chores
+
+* release 2.0.0 ([d3bddaa](https://github.com/aversini/ui-components/commit/d3bddaa527928c60971d0b6d4b95ea5f61e9314e))
+
 ## [1.1.0](https://github.com/aversini/ui-components/compare/ui-components-v1.0.5...ui-components-v1.1.0) (2023-11-15)
 
 
