@@ -9,10 +9,12 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 		{
 			children,
 			kind = "dark",
+			focus = "light",
 			fullWidth = false,
 			className,
 			slim = false,
 			raw = false,
+			noBorder = false,
 			"aria-label": ariaLabel,
 			link,
 			target,
@@ -23,11 +25,13 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 		const buttonClass = getButtonClasses({
 			type: TYPE_LINK,
 			kind,
+			focus,
 			fullWidth,
 			disabled: false,
 			raw,
 			className,
 			slim,
+			noBorder,
 		});
 
 		const formattedLabel =

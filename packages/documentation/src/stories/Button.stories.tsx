@@ -10,9 +10,11 @@ const meta: Meta<typeof Button> = {
 		disabled: false,
 		fullWidth: false,
 		kind: "dark",
+		focus: "light",
 		slim: false,
 		type: "button",
 		raw: false,
+		noBorder: false,
 	},
 	argTypes: {
 		className: {
@@ -21,6 +23,13 @@ const meta: Meta<typeof Button> = {
 		kind: {
 			options: ["dark", "light"],
 			control: { type: "radio" },
+		},
+		focus: {
+			options: ["dark", "light"],
+			control: { type: "radio" },
+		},
+		noBorder: {
+			control: "boolean",
 		},
 		slim: {
 			control: "boolean",

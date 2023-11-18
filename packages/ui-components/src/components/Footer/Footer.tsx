@@ -4,12 +4,15 @@ import type { FooterProps } from "./FooterTypes";
 
 export const Footer = ({
 	className,
+	kind = "dark",
 	row1,
 	row2,
 	noPaddings = false,
 }: FooterProps) => {
-	const footerClass = clsx("text-center text-xs text-slate-300", className, {
+	const footerClass = clsx("text-center text-xs", className, {
 		"mb-[100px] ": !noPaddings,
+		"text-copy-dark": kind === "dark",
+		"text-copy-light": kind === "light",
 	});
 
 	return (

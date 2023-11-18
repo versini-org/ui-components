@@ -4,13 +4,16 @@ import { ButtonLink } from "@versini/ui-components";
 const meta: Meta<typeof ButtonLink> = {
 	component: ButtonLink,
 	parameters: {
-		controls: { exclude: ["spacing", "slim"], sort: "requiredFirst" },
+		controls: { exclude: ["spacing"], sort: "requiredFirst" },
 	},
 	args: {
 		fullWidth: false,
 		kind: "dark",
+		focus: "light",
 		raw: false,
 		link: "https://www.google.com",
+		noBorder: false,
+		slim: false,
 	},
 	argTypes: {
 		className: {
@@ -20,10 +23,20 @@ const meta: Meta<typeof ButtonLink> = {
 			options: ["dark", "light"],
 			control: { type: "radio" },
 		},
+		focus: {
+			options: ["dark", "light"],
+			control: { type: "radio" },
+		},
+		noBorder: {
+			control: "boolean",
+		},
 		fullWidth: {
 			control: "boolean",
 		},
 		raw: {
+			control: "boolean",
+		},
+		slim: {
 			control: "boolean",
 		},
 	},

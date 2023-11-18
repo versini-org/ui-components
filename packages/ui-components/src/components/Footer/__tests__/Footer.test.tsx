@@ -15,6 +15,18 @@ describe("Footer modifiers", () => {
 		expect(footer.className).toContain("text-center");
 	});
 
+	it("should render a dark footer", async () => {
+		render(<Footer kind="dark" />);
+		const footer = await screen.findByRole("contentinfo");
+		expect(footer.className).toContain("text-copy-dark");
+	});
+
+	it("should render a light footer", async () => {
+		render(<Footer kind="light" />);
+		const footer = await screen.findByRole("contentinfo");
+		expect(footer.className).toContain("text-copy-light");
+	});
+
 	it("should render a footer with a custom class", async () => {
 		render(<Footer className="toto" />);
 		const footer = await screen.findByRole("contentinfo");

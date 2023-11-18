@@ -1,9 +1,11 @@
 export type CommonButtonProps = {
 	kind?: "dark" | "light";
+	focus?: "dark" | "light";
 	fullWidth?: boolean;
 	className?: string;
 	slim?: boolean;
 	raw?: boolean;
+	noBorder?: boolean;
 };
 
 export type ButtonProps = {

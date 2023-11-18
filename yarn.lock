@@ -5316,6 +5316,7 @@ __metadata:
   dependencies:
     "@floating-ui/react": "npm:0.26.2"
     clsx: "npm:2.0.0"
+    culori: "npm:3.2.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     tailwindcss: "npm:3.3.5"
@@ -7225,6 +7226,13 @@ __metadata:
   version: 3.1.2
   resolution: "csstype@npm:3.1.2"
   checksum: 32c038af259897c807ac738d9eab16b3d86747c72b09d5c740978e06f067f9b7b1737e1b75e407c7ab1fe1543dc95f20e202b4786aeb1b8d3bdf5d5ce655e6c6
+  languageName: node
+  linkType: hard
+
+"culori@npm:3.2.0":
+  version: 3.2.0
+  resolution: "culori@npm:3.2.0"
+  checksum: c6c9189c7c4b5aa8db8697174e77fd86543fac55d85be2fdee613d22c85ed62147099b5011a58e8ccd16e39fcf58085ea28e073a0b93ec3d623c7701cc20e2e9
   languageName: node
   linkType: hard
 
