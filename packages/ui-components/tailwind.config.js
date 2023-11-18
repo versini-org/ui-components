@@ -6,7 +6,7 @@ import { dynamicTwColors } from "./lib/twPlugin";
  * This function generates all the dynamic margins that are
  * potentially used with the "spacing" prop.
  * This is needed because tailwindcss doesn't support dynamic
- * margins out of the box -> if a mergin is not specifically
+ * margins out of the box -> if a margin is not specifically
  * used, it will not be included in the final css file. This function,
  * used in conjunction with the safelist below, ensures that all
  * dynamic margins are included in the final css file.
