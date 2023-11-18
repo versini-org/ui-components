@@ -22,7 +22,7 @@ describe("ButtonLink modifiers", () => {
 			</ButtonLink>,
 		);
 		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-1");
+		expect(button.className).toContain("py-0");
 	});
 
 	it("should render a dark link", async () => {
@@ -33,8 +33,8 @@ describe("ButtonLink modifiers", () => {
 		);
 		const button = await screen.findByRole("link");
 		const buttonClass = button.className;
-		expect(buttonClass).toContain("text-primary-200");
-		expect(buttonClass).toContain("bg-primary-900");
+		expect(buttonClass).toContain("text-copy-light");
+		expect(buttonClass).toContain("bg-action-primary");
 	});
 
 	it("should render a light anchor", async () => {
@@ -45,8 +45,8 @@ describe("ButtonLink modifiers", () => {
 		);
 		const button = await screen.findByRole("link");
 		const buttonClass = button.className;
-		expect(buttonClass).toContain("text-primary-200");
-		expect(buttonClass).toContain("bg-primary-500");
+		expect(buttonClass).toContain("text-copy-light");
+		expect(buttonClass).toContain("bg-action-secondary");
 	});
 
 	it("should render a fullWidth link", async () => {

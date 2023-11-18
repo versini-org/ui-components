@@ -8,10 +8,15 @@ const meta: Meta<typeof Footer> = {
 	},
 	args: {
 		noPaddings: false,
+		kind: "dark",
 	},
 	argTypes: {
 		className: {
 			control: "text",
+		},
+		kind: {
+			control: "radio",
+			options: ["dark", "light"],
 		},
 	},
 };

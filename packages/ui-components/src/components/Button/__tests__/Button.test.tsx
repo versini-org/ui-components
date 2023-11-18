@@ -19,18 +19,18 @@ describe("Button modifiers", () => {
 		expectToHaveClasses(button, [
 			"av-button",
 			"px-4",
-			"py-2",
+			"py-1",
 			"text-sm",
 			"font-medium",
 			"sm:text-base",
-			"bg-primary-900",
-			"text-primary-200",
-			"hover:bg-primary-800",
-			"active:bg-primary-700",
+			"bg-action-primary",
+			"text-copy-light",
+			"hover:bg-action-primary-hover",
+			"active:bg-action-primary-active",
 			"rounded-full",
 			"focus:outline-none",
 			"focus:ring-2",
-			"focus:ring-primary-300",
+			"focus:ring-focus-light",
 			"focus:ring-offset-0",
 		]);
 	});
@@ -38,19 +38,19 @@ describe("Button modifiers", () => {
 	it("should render a slim button", async () => {
 		render(<Button slim>hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["px-2", "py-1", "sm:px-4"]);
+		expectToHaveClasses(button, ["px-2", "py-0", "sm:px-4"]);
 	});
 
 	it("should render a dark button", async () => {
 		render(<Button kind="dark">hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["bg-primary-900", "text-primary-200"]);
+		expectToHaveClasses(button, ["bg-action-primary", "text-copy-light"]);
 	});
 
 	it("should render a light button", async () => {
 		render(<Button kind="light">hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["bg-primary-500", "text-primary-200"]);
+		expectToHaveClasses(button, ["bg-action-secondary", "text-copy-light"]);
 	});
 
 	it("should render a disabled dark button", async () => {

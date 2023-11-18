@@ -10,11 +10,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			onClick,
 			disabled = false,
 			kind = "dark",
+			focus = "light",
 			fullWidth = false,
 			className,
 			slim = false,
 			type = "button",
 			raw = false,
+			noBorder = false,
 			"aria-label": ariaLabel,
 		},
 		ref,
@@ -22,11 +24,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 		const buttonClass = getButtonClasses({
 			type: TYPE_BUTTON,
 			kind,
+			focus,
 			fullWidth,
 			disabled,
 			raw,
 			className,
 			slim,
+			noBorder,
 		});
 
 		return (

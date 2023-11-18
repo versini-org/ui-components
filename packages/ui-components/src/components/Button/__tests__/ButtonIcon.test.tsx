@@ -27,8 +27,8 @@ describe("ButtonIcon modifiers", () => {
 		);
 		const button = await screen.findByRole("button");
 		const buttonClass = button.className;
-		expect(buttonClass).toContain("text-primary-200");
-		expect(buttonClass).toContain("bg-primary-900");
+		expect(buttonClass).toContain("text-copy-light");
+		expect(buttonClass).toContain("bg-action-primary");
 	});
 
 	it("should render a light button", async () => {
@@ -39,8 +39,8 @@ describe("ButtonIcon modifiers", () => {
 		);
 		const button = await screen.findByRole("button");
 		const buttonClass = button.className;
-		expect(buttonClass).toContain("text-primary-200");
-		expect(buttonClass).toContain("bg-primary-500");
+		expect(buttonClass).toContain("text-copy-light");
+		expect(buttonClass).toContain("bg-action-secondary");
 	});
 
 	it("should render a disabled dark button", async () => {
