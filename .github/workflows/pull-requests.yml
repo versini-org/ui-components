@@ -21,6 +21,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - run: corepack enable
+      - run: yarn set version berry
       - run: yarn install
       - run: npx lerna run build
       - name: Get Bundle Size
@@ -39,6 +40,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - run: corepack enable
+      - run: yarn set version berry
       - run: yarn install
       - run: npx lerna run build
       - run: npx lerna run lint
