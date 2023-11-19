@@ -9,10 +9,8 @@ export const Footer = ({
 	row2,
 	noPaddings = false,
 }: FooterProps) => {
-	const footerClass = clsx("text-center text-xs", className, {
-		"mb-[100px] ": !noPaddings,
-		"text-copy-dark": kind === "dark",
-		"text-copy-light": kind === "light",
+	const footerClass = clsx(`text-center text-xs text-copy-${kind}`, className, {
+		"mb-[100px]": !noPaddings,
 	});
 
 	return (

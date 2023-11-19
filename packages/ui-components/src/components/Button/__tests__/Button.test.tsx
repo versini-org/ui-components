@@ -23,15 +23,17 @@ describe("Button modifiers", () => {
 			"text-sm",
 			"font-medium",
 			"sm:text-base",
-			"bg-action-primary",
+			"bg-action-dark",
 			"text-copy-light",
-			"hover:bg-action-primary-hover",
-			"active:bg-action-primary-active",
+			"hover:bg-action-dark-hover",
+			"active:bg-action-dark-active",
 			"rounded-full",
 			"focus:outline-none",
 			"focus:ring-2",
 			"focus:ring-focus-light",
 			"focus:ring-offset-0",
+			"border-2",
+			"border-border-dark/100",
 		]);
 	});
 
@@ -44,13 +46,13 @@ describe("Button modifiers", () => {
 	it("should render a dark button", async () => {
 		render(<Button kind="dark">hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["bg-action-primary", "text-copy-light"]);
+		expectToHaveClasses(button, ["bg-action-dark", "text-copy-light"]);
 	});
 
 	it("should render a light button", async () => {
 		render(<Button kind="light">hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["bg-action-secondary", "text-copy-light"]);
+		expectToHaveClasses(button, ["bg-action-light", "text-copy-light"]);
 	});
 
 	it("should render a disabled dark button", async () => {
@@ -83,6 +85,12 @@ describe("Button modifiers", () => {
 		render(<Button fullWidth>hello</Button>);
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("w-full");
+	});
+
+	it("should render a button with no borders", async () => {
+		render(<Button noBorder>hello</Button>);
+		const button = await screen.findByRole("button");
+		expect(button.className).toContain("border-border-dark/0");
 	});
 
 	it("should render a raw button with no styling", async () => {
