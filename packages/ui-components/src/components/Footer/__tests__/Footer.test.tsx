@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
+import { FOOTER_CLASSNAME } from "../../../common/constants";
 import { Footer } from "../..";
 
 describe("Footer (exceptions)", () => {
@@ -13,6 +14,7 @@ describe("Footer modifiers", () => {
 		render(<Footer />);
 		const footer = await screen.findByRole("contentinfo");
 		expect(footer.className).toContain("text-center");
+		expect(footer.className).toContain(FOOTER_CLASSNAME);
 	});
 
 	it("should render a dark footer", async () => {
