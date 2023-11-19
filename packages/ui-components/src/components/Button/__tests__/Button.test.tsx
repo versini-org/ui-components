@@ -63,6 +63,8 @@ describe("Button modifiers", () => {
 		);
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, [
+			"bg-action-dark",
+			"text-copy-light",
 			"disabled:opacity-50",
 			"disabled:cursor-not-allowed",
 		]);
@@ -76,6 +78,8 @@ describe("Button modifiers", () => {
 		);
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, [
+			"bg-action-light",
+			"text-copy-light",
 			"disabled:opacity-50",
 			"disabled:cursor-not-allowed",
 		]);
