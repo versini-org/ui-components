@@ -18,7 +18,7 @@ type getButtonClassesProps = {
 	noBorder: boolean;
 };
 
-const getButtonClassesByType = (type: string, slim?: boolean) => {
+const getButtonSizesClasses = (type: string, slim?: boolean) => {
 	switch (type) {
 		case TYPE_BUTTON:
 			return clsx("text-sm font-medium sm:text-base", {
@@ -35,34 +35,27 @@ const getButtonClassesByType = (type: string, slim?: boolean) => {
 	}
 };
 
-const getButtonClassesByKind = (
-	kind: string,
-	disabled: boolean,
-	noBorder: boolean,
-) => {
-	const hoverClasses = disabled
-		? ""
-		: kind === "dark"
-		? "hover:bg-action-primary-hover active:bg-action-primary-active"
-		: "hover:bg-action-secondary-hover active:bg-action-secondary-active";
-
-	return clsx("border-2", hoverClasses, {
-		"border-border-dark/100": kind === "dark" && !noBorder,
-		"border-border-dark/0": kind === "dark" && noBorder,
-		"border-border-light/100": kind === "light" && !noBorder,
-		"border-border-light/0": kind === "light" && noBorder,
-		"bg-action-primary text-copy-light": kind === "dark",
-		"bg-action-secondary text-copy-light": kind === "light",
-	});
+const getButtonBaseClasses = (kind: string) => {
+	return `rounded-full bg-action-${kind} text-copy-light`;
 };
 
-const getButtonClassesByFocus = (focus: string) => {
-	const baseClasses = "focus:ring-2 focus:ring-offset-0 focus:outline-none";
+const getButtonHoverClasses = (kind: string, disabled: boolean) => {
+	return disabled ? "" : `hover:bg-action-${kind}-hover`;
+};
 
-	return clsx(baseClasses, {
-		"focus:ring-focus-dark": focus === "dark",
-		"focus:ring-focus-light": focus === "light",
-	});
+const getButtonActiveClasses = (kind: string, disabled: boolean) => {
+	return disabled
+		? ""
+		: `active:bg-action-${kind}-active active:text-copy-medium`;
+};
+
+const getButtonBorderClasses = (kind: string, noBorder: boolean) => {
+	const borderOpacity = noBorder ? "0" : "100";
+	return `border-2 border-border-${kind}/${borderOpacity}`;
+};
+
+const getButtonFocusClasses = (focus: string) => {
+	return `focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-focus-${focus}`;
 };
 
 export const getButtonClasses = ({
@@ -81,10 +74,12 @@ export const getButtonClasses = ({
 		: clsx(
 				BUTTON_CLASSNAME,
 				className,
-				"rounded-full",
-				getButtonClassesByFocus(focus),
-				getButtonClassesByType(type, slim),
-				getButtonClassesByKind(kind, disabled, noBorder),
+				getButtonBaseClasses(kind),
+				getButtonSizesClasses(type, slim),
+				getButtonBorderClasses(kind, noBorder),
+				getButtonFocusClasses(focus),
+				getButtonHoverClasses(kind, disabled),
+				getButtonActiveClasses(kind, disabled),
 				{
 					"w-full": fullWidth,
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
