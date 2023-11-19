@@ -112,3 +112,23 @@ export const getSpacing = (spacing: SpacingType): string => {
 
 	return spacingClass;
 };
+
+/**
+ * Generate a random number to append to an `id` string.
+ * Example: av-panel-4237412347184
+ *
+ * WARNING: Do not use this method directly in a functional
+ * component, use the `useUniqueId` hook which is specifically
+ * made for none class components and uses this method behind
+ * the scenes.
+ *
+ * @param {String} prefix - When a prefix is provided, the
+ *    function will return a random number appended to
+ *    the provided prefix.
+ * Example: __uniqueID("av-checkbox-")
+ * @returns {String} - Returns a string with random numbers.
+ */
+export function __uniqueID(prefix = "$av$") {
+	const randomNumber = `${Math.random()}`.slice(2);
+	return `${prefix}${randomNumber}`;
+}

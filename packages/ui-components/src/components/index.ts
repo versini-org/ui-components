@@ -15,6 +15,7 @@ import { IconRestore } from "./Icons/IconRestore";
 import { IconSettings } from "./Icons/IconSettings";
 import { IconUser } from "./Icons/IconUser";
 import { Main } from "./Main/Main";
+import { TextInput } from "./TextInput/TextInput";
 
 export {
 	Button,
@@ -32,4 +33,5 @@ export {
 	IconSettings,
 	IconUser,
 	Main,
+	TextInput,
 };
