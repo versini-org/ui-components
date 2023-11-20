@@ -12,7 +12,7 @@ import { useRef } from "react";
  *    - id: if this is a number or a string, it will be returned as is
  *    - prefix: prefix to prepend to the generated id.
  *
- * @param {string | object} options
+ * @param {string | number | object} options
  * @returns a unique id
  *
  * @examples
