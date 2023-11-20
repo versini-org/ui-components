@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.av-text-input-wrapper label {
+		position: absolute;
+		cursor: text;
+
+		display: flex;
+
+		transition: all 0.2s ease-in;
+		transform: translateY(-36px);
+		color: rgb(156, 163, 175);
+		left: 30px;
+	}
+
+	.av-text-input:focus + label,
+	.av-text-input:not(:placeholder-shown) + label {
+		transform-origin: "left";
+	}
+
+	.av-text-input::not(focus) + label {
+		transform-origin: "left";
+	}
+}
