@@ -58,7 +58,6 @@ export const TextInput = ({
 				<label
 					aria-hidden
 					htmlFor={inputId}
-					id={labelId}
 					className={textInputClassName.bottomLabel}
 				>
 					{label}
