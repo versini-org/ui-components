@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/aversini/ui-components/compare/ui-components-v2.0.0...ui-components-v2.1.0) (2023-11-20)
+
+
+### Features
+
+* introducing TextInput component ([20cb982](https://github.com/aversini/ui-components/commit/20cb9823f9e38e92c248b33aaea8f00131e93868))
+
+
+### Bug Fixes
+
+* button height is not limited ([9d28b5e](https://github.com/aversini/ui-components/commit/9d28b5e016dc5b7418d3a5e32032e62a9ebb0a71))
+
 ## [2.0.0](https://github.com/aversini/ui-components/compare/ui-components-v1.1.0...ui-components-v2.0.0) (2023-11-18)
 
 ### Features
