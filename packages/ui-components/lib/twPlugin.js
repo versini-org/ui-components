@@ -42,6 +42,9 @@ export const dynamicColorsClasses = () => {
 			result.push(`hover:bg-${name}`);
 			result.push(`active:bg-${name}`);
 		}
+		if (name.startsWith("surface-")) {
+			result.push(`bg-${name}`);
+		}
 		if (name.startsWith("copy-")) {
 			result.push(`text-${name}`);
 			result.push(`hover:text-${name}`);
