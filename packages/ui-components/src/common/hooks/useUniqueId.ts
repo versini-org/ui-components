@@ -30,6 +30,7 @@ import { __uniqueID } from "../utilities";
 
 export type UseUniqueIdOptions =
 	| string
+	| number
 	| {
 			id?: string | number;
 			prefix?: string;
