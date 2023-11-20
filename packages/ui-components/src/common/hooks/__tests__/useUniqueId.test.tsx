@@ -7,12 +7,13 @@ describe("useUniqueId tests", () => {
 		const res1 = renderHook(() => useUniqueId());
 		const res2 = renderHook(() => useUniqueId());
 		expect(res1.result.current).not.toEqual(res2.result.current);
+		expect(res1.result.current).toMatch(/[\w]{10,}/);
 	});
 
 	it("should return two prefixed, unique random numbers", () => {
 		const randomString1 = renderHook(() => useUniqueId("av-"));
 		const randomString2 = renderHook(() => useUniqueId("av-"));
-		expect(randomString1.result.current).toMatch(/av-[\w]{10,}/);
+		expect(randomString1.result.current).toMatch(/av-[\w-]{10,}/);
 		expect(randomString1.result.current).not.toEqual(
 			randomString2.result.current,
 		);
@@ -27,7 +28,13 @@ describe("useUniqueId tests", () => {
 	});
 
 	it("should use the prefix that was given via object", () => {
-		const res1 = renderHook(() => useUniqueId({ prefix: "hello" }));
+		const res1 = renderHook(() => useUniqueId({ prefix: "hello-" }));
 		expect(res1.result.current).toContain("hello");
+		expect(res1.result.current).toMatch(/hello-[\w-]{10,}/);
+	});
+
+	it("should use the id and prefix that were given via object", () => {
+		const res1 = renderHook(() => useUniqueId({ id: 42, prefix: "hello-" }));
+		expect(res1.result.current).toBe("hello-42");
 	});
 });

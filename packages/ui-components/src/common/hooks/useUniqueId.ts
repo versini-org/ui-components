@@ -7,7 +7,7 @@ import { useRef } from "react";
  *
  * The parameters are either
  * - nothing: a unique id will simply be generated with no prefix.
- * - a string: a prefix to prepend to the generated id.
+ * - a string or a number: a prefix to prepend to the generated id.
  * - an object with the following props:
  *    - id: if this is a number or a string, it will be returned as is
  *    - prefix: prefix to prepend to the generated id.
@@ -15,15 +15,21 @@ import { useRef } from "react";
  * @param {string | object} options
  * @returns a unique id
  *
- * @example
+ * @examples
  *
- * const myId = "42";
- * const errorId = useUniqueId("pnr-text-input-error-");
- * const inputId = useUniqueId({ id: myId, prefix: "pnr-text-input-" });
+ * const someId = useUniqueId();
+ * // -> someId = "1j3h4f5"
+ *
+ * const errorId = useUniqueId("av-text-input-error-");
+ * // -> errorId = "av-text-input-error-1j3h4f5"
+ *
+ * const inputId = useUniqueId({ id: 42, prefix: "av-text-input-" });
+ * // -> inputId = "av-text-input-42"
+ *
  * const inputHintId = useUniqueId({
  *   prefix: "pnr-text-input-hint-",
- *
  * });
+ * // -> inputHintId = "pnr-text-input-hint-1j3h4f5"
  *
  */
 
@@ -50,7 +56,7 @@ function useUniqueId(options?: UseUniqueIdOptions) {
 		const { id, prefix = "" } = options;
 
 		if (typeof id === "number" || typeof id === "string") {
-			return `${id}`;
+			return `${prefix}${id}`;
 		}
 		return `${prefix}${generatedId}`;
 	}
