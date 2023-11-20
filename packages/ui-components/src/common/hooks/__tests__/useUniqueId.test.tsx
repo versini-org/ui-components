@@ -12,7 +12,7 @@ describe("useUniqueId tests", () => {
 	it("should return two prefixed, unique random numbers", () => {
 		const randomString1 = renderHook(() => useUniqueId("av-"));
 		const randomString2 = renderHook(() => useUniqueId("av-"));
-		expect(randomString1.result.current).toMatch(/av-[0-9]{10,}/);
+		expect(randomString1.result.current).toMatch(/av-[\w]{10,}/);
 		expect(randomString1.result.current).not.toEqual(
 			randomString2.result.current,
 		);

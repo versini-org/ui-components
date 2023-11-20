@@ -1,6 +1,5 @@
+import { nanoid } from "nanoid";
 import { useRef } from "react";
-
-import { __uniqueID } from "../utilities";
 
 /**
  * Hook that generates a unique id that will retain its value
@@ -37,7 +36,7 @@ export type UseUniqueIdOptions =
 	  };
 
 function useUniqueId(options?: UseUniqueIdOptions) {
-	const generatedId = useRef(__uniqueID("")).current;
+	const generatedId = useRef(nanoid(10)).current;
 
 	if (!options) {
 		return generatedId;
