@@ -56,7 +56,7 @@ export const TextInput = ({
 			/>
 			{!raw && (
 				<label
-					aria-hidden
+					aria-hidden={true}
 					htmlFor={inputId}
 					className={textInputClassName.bottomLabel}
 				>
