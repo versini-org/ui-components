@@ -45,7 +45,7 @@
 	 * pseudo-class to detect when the placeholder is
 	 * shown. When it is not shown, we move the label
 	 * back down.
-	 * Therefore, insted of using focus-within on the label
+	 * Therefore, instead of using focus-within on the label
 	 * itself, we use +label on the input. It also means
 	 * that in the DOM, the label must be placed after the
 	 * input.
