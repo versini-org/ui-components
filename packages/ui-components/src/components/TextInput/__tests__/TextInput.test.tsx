@@ -53,7 +53,7 @@ describe("TextInput methods", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should honor the onClick prop", async () => {
+	it("should honor the onChange prop", async () => {
 		const events = {
 			onChange: () => {},
 		};
