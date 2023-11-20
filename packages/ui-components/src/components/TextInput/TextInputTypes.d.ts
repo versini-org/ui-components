@@ -6,4 +6,8 @@ export type TextInputProps = {
 	error?: boolean;
 	kind?: "dark" | "light";
 	focus?: "dark" | "light";
+	border?: "dark" | "light";
+	raw?: boolean;
+	fullWidth?: boolean;
+	noBorder?: boolean;
 } & React.InputHTMLAttributes<HTMLInputElement>;

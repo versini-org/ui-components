@@ -52,7 +52,7 @@ function useUniqueId(options?: UseUniqueIdOptions) {
 		if (typeof id === "number" || typeof id === "string") {
 			return `${id}`;
 		}
-		return prefix ? `${prefix}${generatedId}` : `${generatedId}`;
+		return `${prefix}${generatedId}`;
 	}
 }
 

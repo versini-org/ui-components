@@ -1,11 +1,20 @@
 import useUniqueId from "../../common/hooks/useUniqueId";
 import type { TextInputProps } from "./TextInputTypes";
+import { getTextInputClasses } from "./utilities";
 
 export const TextInput = ({
 	id,
 	name,
 	label,
-	error,
+	error = false,
+	raw = false,
+	className,
+	kind = "dark",
+	focus = "light",
+	border = "dark",
+	fullWidth,
+	disabled = false,
+	noBorder = false,
 
 	labelId,
 	type = "text",
@@ -15,21 +24,50 @@ export const TextInput = ({
 	...extraProps
 }: TextInputProps) => {
 	const inputId = useUniqueId({ id, prefix: "av-text-input-" });
+	const textInputClassName = getTextInputClasses({
+		className,
+		error,
+		raw,
+		kind,
+		focus,
+		fullWidth,
+		disabled,
+		noBorder,
+		border,
+	});
 
 	return (
-		<span className="av-text-input-wrapper">
+		<span className={textInputClassName.wrapper}>
+			<label
+				htmlFor={inputId}
+				id={labelId}
+				className={textInputClassName.topLabel}
+			>
+				{label}
+			</label>
 			<input
 				{...extraProps}
 				id={inputId}
 				name={name}
 				type={type}
-				placeholder=" "
-				className="av-text-input block w-full resize-none rounded-md border-none bg-slate-900 px-4 py-3 text-base text-slate-200 placeholder-slate-400 caret-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-0 sm:text-base"
+				placeholder={!raw ? " " : undefined}
+				disabled={disabled}
+				className={textInputClassName.input}
 			/>
-			<label htmlFor={inputId} id={labelId}>
-				{label}
-			</label>
-			{helperText && <p>{helperText}</p>}
+			{!raw && (
+				<label
+					aria-hidden
+					htmlFor={inputId}
+					id={labelId}
+					className={textInputClassName.bottomLabel}
+				>
+					{label}
+				</label>
+			)}
+
+			{helperText && (
+				<div className={textInputClassName.helperText}>{helperText}</div>
+			)}
 		</span>
 	);
 };

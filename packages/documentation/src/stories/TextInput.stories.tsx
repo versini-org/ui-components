@@ -8,10 +8,16 @@ const meta: Meta<typeof TextInput> = {
 	},
 	args: {
 		type: "text",
-		label: "Username",
+		label: "Type your question here",
 		name: "username",
 		disabled: false,
 		helperText: "",
+		raw: false,
+		kind: "dark",
+		focus: "light",
+		border: "dark",
+		fullWidth: false,
+		error: false,
 	},
 	argTypes: {
 		className: {
@@ -26,6 +32,27 @@ const meta: Meta<typeof TextInput> = {
 		helperText: {
 			control: "text",
 		},
+		raw: {
+			control: "boolean",
+		},
+		fullWidth: {
+			control: "boolean",
+		},
+		error: {
+			control: "boolean",
+		},
+		kind: {
+			options: ["dark", "light"],
+			control: { type: "radio" },
+		},
+		focus: {
+			options: ["dark", "light"],
+			control: { type: "radio" },
+		},
+		border: {
+			options: ["dark", "light"],
+			control: { type: "radio" },
+		},
 	},
 };
 
@@ -38,16 +65,6 @@ export const Basic: Story = {
 		<form noValidate>
 			<div className="flex gap-2">
 				<TextInput {...args} />
-			</div>
-		</form>
-	),
-};
-
-export const Error: Story = {
-	render: (args) => (
-		<form noValidate>
-			<div className="flex gap-2">
-				<TextInput {...args} error />
 			</div>
 		</form>
 	),

@@ -2,25 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.av-visually-hidden {
+		border: -0;
+		clip-path: inset(50%);
+		font-size: 1px;
+		height: 0;
+		left: 0;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		white-space: nowrap;
+		width: 0;
+	}
+}
+
 @layer components {
+	.av-text-input-wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
 	.av-text-input-wrapper label {
 		position: absolute;
-		cursor: text;
-
-		display: flex;
-
-		transition: all 0.2s ease-in;
-		transform: translateY(-36px);
-		color: rgb(156, 163, 175);
-		left: 30px;
+		/* move the label inline */
+		transform: translate(18px, 18px) scale(1);
+		transform-origin: top left;
+		transition: all 0.2s ease-out;
 	}
 
+	/**
+   * Focus is trapped at the input field level, and we
+	 * want to move the label when this happens.
+	 * We could use focus-within, but it would only help
+	 * moving the label up. Next we need to move it back
+	 * when the focus is lost, but only if there is not
+	 * entered text. To achieve this, we use a trick with
+	 * the placeholder. The placeholder is always set to
+	 * " " (a space), and we use the :placeholder-shown
+	 * pseudo-class to detect when the placeholder is
+	 * shown. When it is not shown, we move the label
+	 * back down.
+	 * Therefore, insted of using focus-within on the label
+	 * itself, we use +label on the input. It also means
+	 * that in the DOM, the label must be placed after the
+	 * input.
+   */
 	.av-text-input:focus + label,
 	.av-text-input:not(:placeholder-shown) + label {
-		transform-origin: "left";
+		/* move the label up */
+		transform: translate(18px, 2px) scale(0.65);
 	}
 
-	.av-text-input::not(focus) + label {
-		transform-origin: "left";
+	.av-text-input-helper-text {
+		position: absolute;
+		transform: translate(18px, 61px) scale(1);
+		transform-origin: top left;
+		transition: all 0.2s ease-out;
 	}
 }
