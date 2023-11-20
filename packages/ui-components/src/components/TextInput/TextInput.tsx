@@ -52,6 +52,7 @@ export const TextInput = ({
 				type={type}
 				placeholder={!raw ? " " : undefined}
 				disabled={disabled}
+				{...(helperText && { "aria-describedby": `${inputId}-helper` })}
 				className={textInputClassName.input}
 			/>
 			{!raw && (
@@ -65,7 +66,9 @@ export const TextInput = ({
 			)}
 
 			{helperText && (
-				<div className={textInputClassName.helperText}>{helperText}</div>
+				<div id={`${inputId}-helper`} className={textInputClassName.helperText}>
+					{helperText}
+				</div>
 			)}
 		</span>
 	);
