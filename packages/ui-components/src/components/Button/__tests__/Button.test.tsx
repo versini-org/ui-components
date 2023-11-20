@@ -20,6 +20,7 @@ describe("Button modifiers", () => {
 			"av-button",
 			"px-4",
 			"py-1",
+			"max-h-8",
 			"text-sm",
 			"font-medium",
 			"sm:text-base",
@@ -40,7 +41,7 @@ describe("Button modifiers", () => {
 	it("should render a slim button", async () => {
 		render(<Button slim>hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["px-2", "py-0", "sm:px-4"]);
+		expectToHaveClasses(button, ["px-2", "py-0", "sm:px-4", "max-h-6"]);
 	});
 
 	it("should render a dark button", async () => {
