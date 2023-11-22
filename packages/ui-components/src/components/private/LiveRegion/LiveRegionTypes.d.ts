@@ -1,5 +1,9 @@
 import { ROLES } from "./constants";
 
+export type PolitenessByRole = {
+	[key: string]: any;
+};
+
 export type ClearAnnouncementProps = {
 	liveRegionRef: React.RefObject<HTMLElement | undefined>;
 	onAnnouncementClear?: () => void;

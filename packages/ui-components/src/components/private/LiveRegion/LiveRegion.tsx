@@ -34,9 +34,7 @@ export function LiveRegion({
 	 * and we want to honor when the user supplies `null`.
 	 */
 	if (typeof politeness === "undefined") {
-		politeness = role
-			? (DEFAULT_POLITENESS_BY_ROLE[role] as "polite" | "assertive")
-			: "assertive";
+		politeness = role ? DEFAULT_POLITENESS_BY_ROLE[role] : "assertive";
 	}
 
 	useEffect(() => {

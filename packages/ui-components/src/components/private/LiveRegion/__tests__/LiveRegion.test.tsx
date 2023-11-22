@@ -1,4 +1,4 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 
 import { VISUALLY_HIDDEN_CLASSNAME } from "../../../../common/constants";
@@ -27,12 +27,13 @@ const content2 = "Biz buzz";
  * and test the behavior of the LiveRegion as it would be used in an application.
  */
 interface LiveRegionProps {
-	children: React.ReactNode;
-	children2: React.ReactNode;
-	politeness: "polite" | "assertive" | null | undefined;
-	politeness2: "polite" | "assertive" | null | undefined;
-	toggleChildrenButtonLabel: string;
-	togglePolitenessButtonLabel: string;
+	children?: React.ReactNode;
+	children2?: React.ReactNode;
+	politeness?: "polite" | "assertive" | null | undefined;
+	politeness2?: "polite" | "assertive" | null | undefined;
+	toggleChildrenButtonLabel?: string;
+	togglePolitenessButtonLabel?: string;
+	role?: string;
 }
 class LiveRegionPropChanger extends React.PureComponent<LiveRegionProps> {
 	static defaultProps = {
@@ -193,22 +194,22 @@ describe(`The LiveRegion Component`, () => {
 					);
 				});
 
-				it.skip(`Then it honors the supplied politeness`, () => {
+				it(`Then it honors the supplied politeness`, () => {
 					expect(getPoliteness(renderResult)).toEqual(politeness);
 				});
 
-				it.skip(`Then it honors the supplied role`, () => {
+				it(`Then it honors the supplied role`, () => {
 					expect(getRole(renderResult)).toEqual(role);
 				});
 
-				it.skip(`Then it renders the provided children`, () => {
+				it(`Then it renders the provided children`, () => {
 					expect(renderResult.getByText(content)).toBeInTheDocument();
 				});
 			});
 
-			describe.skip(`When the LiveRegion renders with a null politeness`, () => {
+			describe(`When the LiveRegion renders with a null politeness`, () => {
 				const politeness = null;
-				let renderResult;
+				let renderResult: any;
 				beforeEach(() => {
 					renderResult = render(
 						<LiveRegion politeness={politeness} role={role}>
@@ -231,15 +232,15 @@ describe(`The LiveRegion Component`, () => {
 			});
 		});
 	});
-	describe.skip(`When the "visible" prop is set to true`, () => {
+	describe(`When the "visible" prop is set to true`, () => {
 		it("Then the content should be visible in the DOM", () => {
 			const { container } = render(<LiveRegion visible>Foo</LiveRegion>);
 
-			expect(container.firstChild).not.toHaveClass("wf-u-visually-hidden");
+			expect(container.firstChild).not.toHaveClass(VISUALLY_HIDDEN_CLASSNAME);
 		});
 	});
 
-	describe.skip.each`
+	describe.each`
 		type                           | children              | children2
 		${"string"}                    | ${content}            | ${content2}
 		${"React Element"}             | ${(<p>{content}</p>)} | ${(<div>{content2}</div>)}
@@ -261,7 +262,7 @@ describe(`The LiveRegion Component`, () => {
 				`And the role is "$role"`,
 				({ role, expectedPoliteness, politeness2 }) => {
 					describe(`When it renders`, () => {
-						let renderResult;
+						let renderResult: any;
 						beforeEach(() => {
 							renderResult = render(
 								<LiveRegionPropChanger
@@ -294,7 +295,10 @@ describe(`The LiveRegion Component`, () => {
 
 						describe(`And the "children" prop changes`, () => {
 							beforeEach(() => {
-								// Click the toggle children button to update `children` to `children2`.
+								/**
+								 * Click the toggle children button to update
+								 *  `children` to `children2`.
+								 */
 								fireEvent.click(
 									renderResult.getByText(
 										LiveRegionPropChanger.defaultProps

@@ -1,9 +1,11 @@
+import { PolitenessByRole } from "./LiveRegionTypes";
+
 /**
  * The default politeness value for each role.
  *
  * @enum {String}
  */
-export const DEFAULT_POLITENESS_BY_ROLE = {
+export const DEFAULT_POLITENESS_BY_ROLE: PolitenessByRole = {
 	alert: null,
 	alertdialog: null,
 	log: "polite",
