@@ -27,9 +27,9 @@ import { useRef } from "react";
  * // -> inputId = "av-text-input-42"
  *
  * const inputHintId = useUniqueId({
- *   prefix: "pnr-text-input-hint-",
+ *   prefix: "av-text-input-hint-",
  * });
- * // -> inputHintId = "pnr-text-input-hint-1j3h4f5"
+ * // -> inputHintId = "av-text-input-hint-1j3h4f5"
  *
  */
 
