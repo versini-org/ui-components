@@ -17,7 +17,10 @@ const clearAnnouncement = ({
 	if (liveRegionRef.current) {
 		liveRegionRef.current.innerHTML = "";
 	}
-	onAnnouncementClear && onAnnouncementClear();
+
+	if (typeof onAnnouncementClear === "function") {
+		onAnnouncementClear();
+	}
 };
 
 /**
