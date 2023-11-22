@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.2.0](https://github.com/aversini/ui-components/compare/ui-components-v2.1.0...ui-components-v2.2.0) (2023-11-22)
+
+
+### Features
+
+* adding aria-live region on error ([0f46050](https://github.com/aversini/ui-components/commit/0f46050ff05c81989b852fdce94919292d93c1e3))
+* introducing LiveRegion component ([b286d17](https://github.com/aversini/ui-components/commit/b286d17222b80e805f2e840175b77c6bf5095d8b))
+
+
+### Bug Fixes
+
+* bundlesize incorrect values ([9341605](https://github.com/aversini/ui-components/commit/9341605ae63e4fd37df9b31c1348c98622b634d6))
+
 ## [2.1.0](https://github.com/aversini/ui-components/compare/ui-components-v2.0.0...ui-components-v2.1.0) (2023-11-20)
 
 
