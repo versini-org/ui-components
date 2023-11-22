@@ -32,6 +32,8 @@ export default defineConfig({
 				"@tailwindcss/typography",
 				"react",
 				"react/jsx-runtime",
+				"react-dom",
+				"react-dom/server",
 				"tailwindcss",
 			],
 			output: {
