@@ -44,7 +44,7 @@ describe("TextInput modifiers", () => {
 	it("should render a raw text input with no styling", async () => {
 		render(<TextInput label="toto" name="toto" raw data-testid="txtnpt-1" />);
 		const input = await screen.findByTestId("txtnpt-1");
-		expect(input.className).toBe("av-raw");
+		expect(input.className).toBe("");
 	});
 });
 

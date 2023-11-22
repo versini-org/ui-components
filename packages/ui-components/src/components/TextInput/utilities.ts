@@ -1,7 +1,6 @@
 import clsx from "clsx";
 
 import {
-	RAW_CLASSNAME,
 	TEXT_INPUT_CLASSNAME,
 	TEXT_INPUT_HELPER_TEXT_CLASSNAME,
 	TEXT_INPUT_WRAPPER_CLASSNAME,
@@ -67,11 +66,13 @@ const getTextInputLabelClasses = (
 		  });
 };
 
-const getTextInputHelperTextClasses = (error: boolean) => {
-	return clsx(TEXT_INPUT_HELPER_TEXT_CLASSNAME, "text-xs", {
-		"text-copy-error-dark": error,
-		"text-copy-medium": !error,
-	});
+const getTextInputHelperTextClasses = (error: boolean, raw: boolean) => {
+	return raw
+		? undefined
+		: clsx(TEXT_INPUT_HELPER_TEXT_CLASSNAME, "text-xs", {
+				"text-copy-error-dark": error,
+				"text-copy-medium": !error,
+		  });
 };
 
 export const getTextInputClasses = ({
@@ -86,13 +87,13 @@ export const getTextInputClasses = ({
 	error,
 }: getTextInputClassesProps) => {
 	const wrapper = raw
-		? clsx(RAW_CLASSNAME)
+		? undefined
 		: clsx(TEXT_INPUT_WRAPPER_CLASSNAME, {
 				"w-full": fullWidth,
 		  });
 
 	const input = raw
-		? clsx(RAW_CLASSNAME, className)
+		? className
 		: clsx(
 				TEXT_INPUT_CLASSNAME,
 				className,
@@ -106,11 +107,11 @@ export const getTextInputClasses = ({
 				},
 		  );
 
-	const topLabel = raw ? "" : VISUALLY_HIDDEN_CLASSNAME;
+	const topLabel = raw ? undefined : VISUALLY_HIDDEN_CLASSNAME;
 
 	const bottomLabel = getTextInputLabelClasses(kind, disabled, raw);
 
-	const helperText = getTextInputHelperTextClasses(error);
+	const helperText = getTextInputHelperTextClasses(error, raw);
 
 	return {
 		wrapper,
