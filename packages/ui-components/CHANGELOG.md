@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/aversini/ui-components/compare/ui-components-v2.2.0...ui-components-v2.2.1) (2023-11-22)
+
+
+### Bug Fixes
+
+* buttons are all squashed ([f46ce8d](https://github.com/aversini/ui-components/commit/f46ce8d0443f088833041e6175e11be72b2377d0))
+
 ## [2.2.0](https://github.com/aversini/ui-components/compare/ui-components-v2.1.0...ui-components-v2.2.0) (2023-11-22)
 
 
