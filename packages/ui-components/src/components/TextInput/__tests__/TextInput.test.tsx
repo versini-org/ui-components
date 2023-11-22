@@ -44,7 +44,7 @@ describe("TextInput modifiers", () => {
 	it("should render a raw text input with no styling", async () => {
 		render(<TextInput label="toto" name="toto" raw data-testid="txtnpt-1" />);
 		const input = await screen.findByTestId("txtnpt-1");
-		expect(input.className).toBe("av-raw");
+		expect(input.className).toBe("");
 	});
 });
 
@@ -72,5 +72,44 @@ describe("TextInput methods", () => {
 		await user.type(input, "aa");
 
 		expect(spyOnChange).toHaveBeenCalledTimes(2);
+	});
+});
+
+describe("TextInput accessibility", () => {
+	it("should render a text input with an error message", async () => {
+		render(
+			<TextInput
+				error
+				helperText="error message"
+				label="hello world"
+				name="toto"
+			/>,
+		);
+		const errorMessage = await screen.findByText("error message");
+		expect(errorMessage.className).toContain("text-copy-error-dark");
+
+		const input = await screen.findByLabelText("hello world");
+		expect(input.getAttribute("aria-invalid")).toBe("true");
+		expect(input.getAttribute("aria-describedby")).toContain("av-text-input-");
+		expect(input.getAttribute("aria-describedby")).toContain("-helper");
+	});
+
+	it("should render a text input with a live region update", () => {
+		vi.useFakeTimers();
+		const clearTimeout = 500;
+
+		render(
+			<TextInput
+				error
+				helperText="error message"
+				label="hello world"
+				name="toto"
+			/>,
+		);
+		const liveRegion = screen.getByText("toto error, error message");
+		expect(liveRegion.getAttribute("aria-live")).toBe("polite");
+		expect(liveRegion.textContent).toBe("toto error, error message");
+		vi.advanceTimersByTime(clearTimeout);
+		expect(liveRegion.textContent).toBe("");
 	});
 });

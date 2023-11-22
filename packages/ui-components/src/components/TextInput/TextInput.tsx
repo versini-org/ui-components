@@ -1,4 +1,5 @@
 import useUniqueId from "../../common/hooks/useUniqueId";
+import { LiveRegion } from "../private/LiveRegion/LiveRegion";
 import type { TextInputProps } from "./TextInputTypes";
 import { getTextInputClasses } from "./utilities";
 
@@ -24,6 +25,7 @@ export const TextInput = ({
 	...extraProps
 }: TextInputProps) => {
 	const inputId = useUniqueId({ id, prefix: "av-text-input-" });
+	const liveErrorMessage = `${name} error, ${helperText}`;
 	const textInputClassName = getTextInputClasses({
 		className,
 		error,
@@ -53,6 +55,7 @@ export const TextInput = ({
 				placeholder={!raw ? " " : undefined}
 				disabled={disabled}
 				{...(helperText && { "aria-describedby": `${inputId}-helper` })}
+				{...(error && { "aria-invalid": "true" })}
 				className={textInputClassName.input}
 			/>
 			{!raw && (
@@ -69,6 +72,11 @@ export const TextInput = ({
 				<div id={`${inputId}-helper`} className={textInputClassName.helperText}>
 					{helperText}
 				</div>
+			)}
+			{error && helperText && (
+				<LiveRegion politeness="polite" clearAnnouncementDelay={500}>
+					{liveErrorMessage}
+				</LiveRegion>
 			)}
 		</span>
 	);

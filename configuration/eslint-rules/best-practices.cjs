@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 module.exports = {
 	rules: {
 		// enforce return statements in callbacks of array methods

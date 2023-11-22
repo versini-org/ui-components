@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 module.exports = {
 	rules: {
 		// disallow assignment operators in conditional expressions

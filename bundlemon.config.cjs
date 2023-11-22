@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 module.exports = {
 	reportOutput: ["github"],
 	baseDir: "./packages/bundlesize/dist",
@@ -9,7 +11,7 @@ module.exports = {
 		},
 		{
 			path: "assets/index.js",
-			maxSize: "60kb",
+			maxSize: "10kb",
 		},
 		{
 			path: "assets/style.css",

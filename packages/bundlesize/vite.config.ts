@@ -1,6 +1,8 @@
 import fs from "fs-extra";
 import { defineConfig } from "vite";
 
+import { externalDependencies } from "../../configuration/vite.common";
+
 const packageJson = fs.readJSONSync("package.json");
 
 const buildTime = new Date()
@@ -23,14 +25,7 @@ export default defineConfig({
 	},
 	build: {
 		rollupOptions: {
-			external: [
-				"@floating-ui/react",
-				"@tailwindcss/typography",
-				"react",
-				"react/jsx-runtime",
-				"react-dom",
-				"tailwindcss",
-			],
+			external: externalDependencies,
 			output: {
 				assetFileNames: "assets/style[extname]",
 				entryFileNames: "assets/[name].js",
