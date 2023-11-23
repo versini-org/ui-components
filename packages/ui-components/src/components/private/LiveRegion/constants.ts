@@ -1,5 +1,8 @@
 import { PolitenessByRole } from "./LiveRegionTypes";
 
+export const ACTION_SET_ANNOUNCEMENT = "SET_ANNOUNCEMENT";
+export const ACTION_CLEAR_ANNOUNCEMENT = "CLEAR_ANNOUNCEMENT";
+
 /**
  * The default politeness value for each role.
  *

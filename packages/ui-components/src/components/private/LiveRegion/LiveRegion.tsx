@@ -1,9 +1,10 @@
 import clsx from "clsx";
-import { useEffect, useRef } from "react";
+import { useEffect, useReducer, useRef } from "react";
 
 import { VISUALLY_HIDDEN_CLASSNAME } from "../../../common/constants";
 import { DEFAULT_POLITENESS_BY_ROLE } from "./constants";
 import type { LiveRegionProps } from "./LiveRegionTypes";
+import { reducer } from "./reducer";
 import { conditionallyDelayAnnouncement } from "./utilities";
 
 /**
@@ -24,9 +25,12 @@ export function LiveRegion({
 
 	...otherProps
 }: LiveRegionProps) {
-	const liveRegionRef = useRef<HTMLDivElement>(null);
 	const announcementTimeoutRef = useRef();
 	const clearAnnouncementTimeoutRef = useRef();
+
+	const [state, dispatch] = useReducer(reducer, {
+		announcement: null,
+	});
 
 	let politeness = politenessProp;
 	/**
@@ -42,10 +46,10 @@ export function LiveRegion({
 			announcementTimeoutRef,
 			announcementDelay,
 			children,
-			liveRegionRef,
 			clearAnnouncementDelay,
 			clearAnnouncementTimeoutRef,
 			onAnnouncementClear,
+			dispatch,
 		});
 	}, [
 		children,
@@ -60,11 +64,12 @@ export function LiveRegion({
 
 	return (
 		<div
-			ref={liveRegionRef}
 			aria-live={politeness as "polite" | "assertive" | "off" | undefined}
 			{...(role && { role: role })}
 			className={generatedClassName}
 			{...otherProps}
-		/>
+		>
+			{state.announcement}
+		</div>
 	);
 }

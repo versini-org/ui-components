@@ -1,6 +1,7 @@
-import React from "react";
-import { renderToString } from "react-dom/server";
-
+import {
+	ACTION_CLEAR_ANNOUNCEMENT,
+	ACTION_SET_ANNOUNCEMENT,
+} from "./constants";
 import type {
 	announceProps,
 	ClearAnnouncementProps,
@@ -11,12 +12,12 @@ import type {
  * Removes the content from the live region.
  */
 const clearAnnouncement = ({
-	liveRegionRef,
 	onAnnouncementClear,
+	dispatch,
 }: ClearAnnouncementProps) => {
-	if (liveRegionRef.current) {
-		liveRegionRef.current.innerHTML = "";
-	}
+	dispatch({
+		type: ACTION_CLEAR_ANNOUNCEMENT,
+	});
 
 	if (typeof onAnnouncementClear === "function") {
 		onAnnouncementClear();
@@ -28,27 +29,28 @@ const clearAnnouncement = ({
  */
 export const announce = ({
 	children,
-	liveRegionRef,
 	clearAnnouncementDelay,
 	clearAnnouncementTimeoutRef,
 	onAnnouncementClear,
+	dispatch,
 }: announceProps) => {
 	if (clearAnnouncementTimeoutRef?.current !== null) {
 		clearTimeout(clearAnnouncementTimeoutRef.current as unknown as number);
 	}
 
-	if (children !== null && liveRegionRef.current) {
-		liveRegionRef.current.innerHTML = renderToString(
-			children as React.ReactElement,
-		);
+	if (children !== null) {
+		dispatch({
+			type: ACTION_SET_ANNOUNCEMENT,
+			payload: children,
+		});
 	}
 
 	if (clearAnnouncementDelay) {
 		clearAnnouncementTimeoutRef.current = setTimeout(
 			() =>
 				clearAnnouncement({
-					liveRegionRef,
 					onAnnouncementClear,
+					dispatch,
 				}),
 			clearAnnouncementDelay,
 		);
@@ -62,30 +64,30 @@ export const announce = ({
  */
 export const conditionallyDelayAnnouncement = ({
 	children,
-	liveRegionRef,
 	announcementTimeoutRef,
 	announcementDelay,
 	clearAnnouncementDelay,
 	clearAnnouncementTimeoutRef,
 	onAnnouncementClear,
+	dispatch,
 }: conditionallyDelayAnnouncementProps) => {
 	clearTimeout(announcementTimeoutRef.current as unknown as number);
 
 	if (announcementDelay) {
 		announcementTimeoutRef.current = setTimeout(announce, announcementDelay, {
 			children,
-			liveRegionRef,
 			clearAnnouncementDelay,
 			clearAnnouncementTimeoutRef,
 			onAnnouncementClear,
+			dispatch,
 		});
 	} else {
 		announce({
 			children,
-			liveRegionRef,
 			clearAnnouncementDelay,
 			clearAnnouncementTimeoutRef,
 			onAnnouncementClear,
+			dispatch,
 		});
 	}
 };

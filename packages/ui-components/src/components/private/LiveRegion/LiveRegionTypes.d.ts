@@ -1,27 +1,41 @@
-import { ROLES } from "./constants";
+import {
+	ACTION_CLEAR_ANNOUNCEMENT,
+	ACTION_SET_ANNOUNCEMENT,
+	ROLES,
+} from "./constants";
+
+export type ActionProps =
+	| Record<string, never>
+	| {
+			type: typeof ACTION_SET_ANNOUNCEMENT | typeof ACTION_CLEAR_ANNOUNCEMENT;
+			payload?: string | React.ReactNode;
+	  };
+
+export type StateProps = {
+	announcement: string | React.ReactNode;
+};
 
 export type PolitenessByRole = {
 	[key: string]: any;
 };
 
 export type ClearAnnouncementProps = {
-	liveRegionRef: React.RefObject<HTMLElement | undefined>;
 	onAnnouncementClear?: () => void;
+	dispatch: React.Dispatch<ActionProps>;
 };
 
 export type announceProps = {
 	children: React.ReactNode;
-	liveRegionRef: React.RefObject<HTMLElement | undefined>;
 	clearAnnouncementDelay?: number;
 	clearAnnouncementTimeoutRef: React.MutableRefObject<
 		NodeJS.Timeout | number | null | undefined
 	>;
 	onAnnouncementClear?: () => void;
+	dispatch: React.Dispatch<ActionProps>;
 };
 
 export type conditionallyDelayAnnouncementProps = {
 	children: React.ReactNode;
-	liveRegionRef: React.RefObject<HTMLElement | undefined>;
 	announcementTimeoutRef: React.MutableRefObject<
 		NodeJS.Timeout | null | undefined
 	>;
@@ -31,6 +45,7 @@ export type conditionallyDelayAnnouncementProps = {
 		NodeJS.Timeout | number | null | undefined
 	>;
 	onAnnouncementClear?: () => void;
+	dispatch: React.Dispatch<ActionProps>;
 };
 
 export type LiveRegionProps = {

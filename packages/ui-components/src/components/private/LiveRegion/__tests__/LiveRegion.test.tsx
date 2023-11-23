@@ -1,9 +1,14 @@
-import { fireEvent, render } from "@testing-library/react";
+import { act, fireEvent, render } from "@testing-library/react";
 import React from "react";
 
 import { VISUALLY_HIDDEN_CLASSNAME } from "../../../../common/constants";
-import { ROLES } from "../constants";
+import {
+	ACTION_CLEAR_ANNOUNCEMENT,
+	ACTION_SET_ANNOUNCEMENT,
+	ROLES,
+} from "../constants";
 import { LiveRegion } from "../LiveRegion";
+import { reducer } from "../reducer";
 
 const getContent = (renderResult: any) =>
 	renderResult.container.firstChild.textContent;
@@ -13,7 +18,7 @@ const getRole = (renderResult: any) =>
 	renderResult.container.firstChild.getAttribute("role");
 
 const content = "Foo Bar Baz";
-const content2 = "Biz buzz";
+const content2 = "Biz Buzz";
 
 /**
  * This is a helper component that renders a LiveRegion and a button. It accepts all of LiveRegion's
@@ -90,6 +95,46 @@ class LiveRegionPropChanger extends React.PureComponent<LiveRegionProps> {
 }
 
 describe(`The LiveRegion Component`, () => {
+	describe("reducer tests", () => {
+		it("should return the initial state", () => {
+			const state = {
+				announcement: "foo",
+			};
+			expect(
+				reducer(state, {
+					type: "UNKNOWN_ACTION" as any,
+				}),
+			).toEqual(state);
+		});
+
+		it("should update the data state on action", () => {
+			const previousState = {
+				announcement: "foo",
+			};
+			const actionPayload = <p>hello world</p>;
+			expect(
+				reducer(previousState, {
+					type: ACTION_SET_ANNOUNCEMENT,
+					payload: actionPayload,
+				}),
+			).toEqual({
+				announcement: actionPayload,
+			});
+		});
+
+		it("should clear the data state on action", () => {
+			const previousState = {
+				announcement: "foo",
+			};
+			expect(
+				reducer(previousState, {
+					type: ACTION_CLEAR_ANNOUNCEMENT,
+				}),
+			).toEqual({
+				announcement: null,
+			});
+		});
+	});
 	describe(`When it renders without any props`, () => {
 		let renderResult: any;
 		beforeEach(() => {
@@ -117,8 +162,10 @@ describe(`The LiveRegion Component`, () => {
 				<LiveRegion announcementDelay={timeout}>{content}</LiveRegion>,
 			);
 			expect(getContent(renderResult)).toEqual("");
-			vi.advanceTimersByTime(timeout + 1000);
-			expect(getContent(renderResult)).toEqual("Foo Bar Baz");
+			act(() => {
+				vi.advanceTimersByTime(timeout);
+			});
+			expect(getContent(renderResult)).toEqual(content);
 		});
 
 		it(`and with children as React Component Then it should render with some delay`, () => {
@@ -129,53 +176,57 @@ describe(`The LiveRegion Component`, () => {
 				<LiveRegion announcementDelay={timeout}>{children}</LiveRegion>,
 			);
 			expect(renderResult.queryByText(content)).toBeNull();
-			vi.advanceTimersByTime(timeout);
+			act(() => {
+				vi.advanceTimersByTime(timeout);
+			});
 			expect(renderResult.getByText(content)).toBeInTheDocument();
 		});
 	});
 	describe(`When clearAnnouncementDelay is supplied`, () => {
 		it(`Then it should clear the content with some delay`, () => {
 			vi.useFakeTimers();
-			const clearTimeout = 3000;
+			const timeout = 3000;
 			const renderResult = render(
-				<LiveRegion clearAnnouncementDelay={clearTimeout}>
-					{content}
-				</LiveRegion>,
+				<LiveRegion clearAnnouncementDelay={timeout}>{content}</LiveRegion>,
 			);
-			expect(getContent(renderResult)).toEqual("Foo Bar Baz");
-			vi.advanceTimersByTime(clearTimeout);
-			expect(getContent(renderResult)).toEqual("");
+			expect(getContent(renderResult)).toEqual(content);
+			act(() => {
+				vi.advanceTimersByTime(timeout);
+			});
+			expect(getContent(renderResult)).toBe("");
 		});
 
 		it(`and with children as React Component Then it should render with some delay`, () => {
 			vi.useFakeTimers();
-			const clearTimeout = 3000;
+			const timeout = 3000;
 			const children = <p>{content}</p>;
 			const renderResult = render(
-				<LiveRegion clearAnnouncementDelay={clearTimeout}>
-					{children}
-				</LiveRegion>,
+				<LiveRegion clearAnnouncementDelay={timeout}>{children}</LiveRegion>,
 			);
 			expect(renderResult.getByText(content)).toBeInTheDocument();
-			vi.advanceTimersByTime(clearTimeout);
+			act(() => {
+				vi.advanceTimersByTime(timeout);
+			});
 			expect(renderResult.queryByText(content)).toBeNull();
 		});
 	});
 	describe(`When onAnnouncementClear is supplied`, () => {
 		it(`Then it should call the callback function after clearing the timeout`, () => {
 			vi.useFakeTimers();
-			const clearTimeout = 3000;
+			const timeout = 3000;
 			const onAnnouncementClearMock = vi.fn();
 			render(
 				<LiveRegion
-					clearAnnouncementDelay={clearTimeout}
+					clearAnnouncementDelay={timeout}
 					onAnnouncementClear={onAnnouncementClearMock}
 				>
 					{content}
 				</LiveRegion>,
 			);
 			expect(onAnnouncementClearMock).toHaveBeenCalledTimes(0);
-			vi.advanceTimersByTime(clearTimeout);
+			act(() => {
+				vi.advanceTimersByTime(timeout);
+			});
 			expect(onAnnouncementClearMock).toHaveBeenCalledTimes(1);
 		});
 	});
