@@ -12,7 +12,7 @@ export type ActionProps =
 	  };
 
 export type StateProps = {
-	announcement: any;
+	announcement: string | React.ReactNode;
 };
 
 export type PolitenessByRole = {
