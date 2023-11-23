@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/aversini/ui-components/compare/ui-components-v3.0.1...ui-components-v3.1.0) (2023-11-23)
+
+
+### Features
+
+* **TextInput:** adding support for wrapper and input classes ([968f312](https://github.com/aversini/ui-components/commit/968f312ae60408909f289821e4ed8bd57bacced6))
+
 ## [3.0.1](https://github.com/aversini/ui-components/compare/ui-components-v3.0.0...ui-components-v3.0.1) (2023-11-23)
 
 
