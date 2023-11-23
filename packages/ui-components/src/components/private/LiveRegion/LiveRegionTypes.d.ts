@@ -8,7 +8,7 @@ export type ActionProps =
 	| Record<string, never>
 	| {
 			type: typeof ACTION_SET_ANNOUNCEMENT | typeof ACTION_CLEAR_ANNOUNCEMENT;
-			payload?: any;
+			payload?: string | React.ReactNode;
 	  };
 
 export type StateProps = {
