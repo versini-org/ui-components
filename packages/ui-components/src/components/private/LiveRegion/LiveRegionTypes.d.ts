@@ -21,7 +21,7 @@ export type PolitenessByRole = {
 
 export type ClearAnnouncementProps = {
 	onAnnouncementClear?: () => void;
-	dispatch: React.Dispatch<any>;
+	dispatch: React.Dispatch<ActionProps>;
 };
 
 export type announceProps = {
@@ -31,7 +31,7 @@ export type announceProps = {
 		NodeJS.Timeout | number | null | undefined
 	>;
 	onAnnouncementClear?: () => void;
-	dispatch: React.Dispatch<any>;
+	dispatch: React.Dispatch<ActionProps>;
 };
 
 export type conditionallyDelayAnnouncementProps = {
@@ -45,7 +45,7 @@ export type conditionallyDelayAnnouncementProps = {
 		NodeJS.Timeout | number | null | undefined
 	>;
 	onAnnouncementClear?: () => void;
-	dispatch: React.Dispatch<any>;
+	dispatch: React.Dispatch<ActionProps>;
 };
 
 export type LiveRegionProps = {
