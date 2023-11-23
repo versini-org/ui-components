@@ -10,67 +10,94 @@ import {
 type getTextInputClassesProps = {
 	className?: string;
 	raw: boolean;
-	kind: string;
-	focus: string;
-	border: string;
+	focusKind: string;
+	borderKind: string;
+	errorKind: string;
 	disabled: boolean;
-	fullWidth?: boolean;
 	slim?: boolean;
 	noBorder: boolean;
 	error: boolean;
 };
 
 const getTextInputBaseClasses = () => {
-	return "rounded-md text-base";
+	return "rounded-md text-base h-20";
 };
 
 const getTextInputSizesClasses = () => {
-	return "px-4 py-4";
+	return "px-4";
 };
 
-const getTextInputColorClasses = (kind: string) => {
-	return `bg-surface-${kind} text-copy-light caret-slate-100`;
+const getTextInputColorClasses = () => {
+	return `bg-surface-dark text-copy-light caret-slate-100`;
 };
 
-const getTextInputFocusClasses = (focus: string, error: boolean) => {
+const getTextInputFocusClasses = ({
+	focusKind,
+	error,
+	errorKind,
+}: {
+	focusKind: string;
+	error: boolean;
+	errorKind: string;
+}) => {
 	return clsx("focus:outline-none focus:ring-offset-0", {
 		"focus:ring-2": !error,
 		"focus:ring-1": error,
-		[`focus:ring-focus-${focus}`]: !error,
-		[`focus:ring-focus-error-${focus}`]: error,
+		[`focus:ring-focus-${focusKind}`]: !error,
+		[`focus:ring-focus-error-${errorKind}`]: error,
 	});
 };
 
-const getTextInputBorderClasses = (
-	noBorder: boolean,
-	error: boolean,
-	border: string,
-) => {
+const getTextInputBorderClasses = ({
+	noBorder,
+	error,
+	borderKind,
+	errorKind,
+}: {
+	noBorder: boolean;
+	error: boolean;
+	borderKind: string;
+	errorKind: string;
+}) => {
 	const borderOpacity = noBorder ? "0" : "100";
 	return error
-		? "border-2 border-border-error-dark"
-		: `border-2 border-border-${border}/${borderOpacity}`;
+		? `border-2 border-border-error-${errorKind}`
+		: `border-2 border-border-${borderKind}/${borderOpacity}`;
 };
 
-const getTextInputLabelClasses = (
-	kind: string,
-	disabled: boolean,
-	raw: boolean,
-) => {
+const getTextInputLabelClasses = ({
+	disabled,
+	raw,
+	error,
+	errorKind,
+}: {
+	disabled: boolean;
+	raw: boolean;
+	error: boolean;
+	errorKind: string;
+}) => {
 	return raw
 		? ""
-		: clsx("cursor-text", {
-				"text-copy-medium": kind === "dark",
-				"text-copy-light": kind === "light",
+		: clsx("cursor-text font-medium", {
+				[`text-copy-error-${errorKind}`]: error,
+				"text-copy-medium": !error,
 				"cursor-not-allowed opacity-50": disabled,
 		  });
 };
 
-const getTextInputHelperTextClasses = (error: boolean, raw: boolean) => {
+const getTextInputHelperTextClasses = ({
+	error,
+	raw,
+	errorKind,
+}: {
+	error: boolean;
+	raw: boolean;
+	errorKind: string;
+}) => {
 	return raw
 		? undefined
-		: clsx(TEXT_INPUT_HELPER_TEXT_CLASSNAME, "text-xs", {
-				"text-copy-error-dark": error,
+		: clsx(TEXT_INPUT_HELPER_TEXT_CLASSNAME, "font-medium", {
+				[`text-copy-error-${errorKind}`]: error,
 				"text-copy-medium": !error,
 		  });
 };
@@ -78,30 +105,25 @@ const getTextInputHelperTextClasses = (error: boolean, raw: boolean) => {
 export const getTextInputClasses = ({
 	className,
 	raw,
-	kind,
-	focus,
-	border,
+	focusKind,
+	borderKind,
+	errorKind,
 	disabled,
-	fullWidth,
 	noBorder,
 	error,
 }: getTextInputClassesProps) => {
-	const wrapper = raw
-		? undefined
-		: clsx(TEXT_INPUT_WRAPPER_CLASSNAME, {
-				"w-full": fullWidth,
-		  });
+	const wrapper = raw ? undefined : `${TEXT_INPUT_WRAPPER_CLASSNAME} w-full`;
 
 	const input = raw
 		? className
 		: clsx(
 				TEXT_INPUT_CLASSNAME,
 				className,
-				getTextInputFocusClasses(focus, error),
 				getTextInputBaseClasses(),
 				getTextInputSizesClasses(),
-				getTextInputColorClasses(kind),
-				getTextInputBorderClasses(noBorder, error, border),
+				getTextInputColorClasses(),
+				getTextInputFocusClasses({ focusKind, error, errorKind }),
+				getTextInputBorderClasses({ noBorder, error, borderKind, errorKind }),
 				{
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
 				},
@@ -109,9 +131,18 @@ export const getTextInputClasses = ({
 
 	const topLabel = raw ? undefined : VISUALLY_HIDDEN_CLASSNAME;
 
-	const bottomLabel = getTextInputLabelClasses(kind, disabled, raw);
+	const bottomLabel = getTextInputLabelClasses({
+		disabled,
+		raw,
+		error,
+		errorKind,
+	});
 
-	const helperText = getTextInputHelperTextClasses(error, raw);
+	const helperText = getTextInputHelperTextClasses({
+		error,
+		raw,
+		errorKind,
+	});
 
 	return {
 		wrapper,
