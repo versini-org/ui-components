@@ -25,7 +25,6 @@ export function LiveRegion({
 
 	...otherProps
 }: LiveRegionProps) {
-	const liveRegionRef = useRef<HTMLDivElement>(null);
 	const announcementTimeoutRef = useRef();
 	const clearAnnouncementTimeoutRef = useRef();
 
@@ -47,7 +46,6 @@ export function LiveRegion({
 			announcementTimeoutRef,
 			announcementDelay,
 			children,
-			liveRegionRef,
 			clearAnnouncementDelay,
 			clearAnnouncementTimeoutRef,
 			onAnnouncementClear,
@@ -66,7 +64,6 @@ export function LiveRegion({
 
 	return (
 		<div
-			ref={liveRegionRef}
 			aria-live={politeness as "polite" | "assertive" | "off" | undefined}
 			{...(role && { role: role })}
 			className={generatedClassName}

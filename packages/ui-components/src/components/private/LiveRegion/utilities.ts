@@ -12,15 +12,12 @@ import type {
  * Removes the content from the live region.
  */
 const clearAnnouncement = ({
-	liveRegionRef,
 	onAnnouncementClear,
 	dispatch,
 }: ClearAnnouncementProps) => {
-	if (liveRegionRef.current) {
-		dispatch({
-			type: ACTION_CLEAR_ANNOUNCEMENT,
-		});
-	}
+	dispatch({
+		type: ACTION_CLEAR_ANNOUNCEMENT,
+	});
 
 	if (typeof onAnnouncementClear === "function") {
 		onAnnouncementClear();
@@ -32,7 +29,6 @@ const clearAnnouncement = ({
  */
 export const announce = ({
 	children,
-	liveRegionRef,
 	clearAnnouncementDelay,
 	clearAnnouncementTimeoutRef,
 	onAnnouncementClear,
@@ -42,7 +38,7 @@ export const announce = ({
 		clearTimeout(clearAnnouncementTimeoutRef.current as unknown as number);
 	}
 
-	if (children !== null && liveRegionRef.current) {
+	if (children !== null) {
 		dispatch({
 			type: ACTION_SET_ANNOUNCEMENT,
 			payload: children,
@@ -53,7 +49,6 @@ export const announce = ({
 		clearAnnouncementTimeoutRef.current = setTimeout(
 			() =>
 				clearAnnouncement({
-					liveRegionRef,
 					onAnnouncementClear,
 					dispatch,
 				}),
@@ -69,7 +64,6 @@ export const announce = ({
  */
 export const conditionallyDelayAnnouncement = ({
 	children,
-	liveRegionRef,
 	announcementTimeoutRef,
 	announcementDelay,
 	clearAnnouncementDelay,
@@ -82,7 +76,6 @@ export const conditionallyDelayAnnouncement = ({
 	if (announcementDelay) {
 		announcementTimeoutRef.current = setTimeout(announce, announcementDelay, {
 			children,
-			liveRegionRef,
 			clearAnnouncementDelay,
 			clearAnnouncementTimeoutRef,
 			onAnnouncementClear,
@@ -91,7 +84,6 @@ export const conditionallyDelayAnnouncement = ({
 	} else {
 		announce({
 			children,
-			liveRegionRef,
 			clearAnnouncementDelay,
 			clearAnnouncementTimeoutRef,
 			onAnnouncementClear,

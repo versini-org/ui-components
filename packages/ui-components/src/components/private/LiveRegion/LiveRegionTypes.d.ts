@@ -20,14 +20,12 @@ export type PolitenessByRole = {
 };
 
 export type ClearAnnouncementProps = {
-	liveRegionRef: React.RefObject<HTMLElement | undefined>;
 	onAnnouncementClear?: () => void;
 	dispatch: React.Dispatch<any>;
 };
 
 export type announceProps = {
 	children: React.ReactNode;
-	liveRegionRef: React.RefObject<HTMLElement | undefined>;
 	clearAnnouncementDelay?: number;
 	clearAnnouncementTimeoutRef: React.MutableRefObject<
 		NodeJS.Timeout | number | null | undefined
@@ -38,7 +36,6 @@ export type announceProps = {
 
 export type conditionallyDelayAnnouncementProps = {
 	children: React.ReactNode;
-	liveRegionRef: React.RefObject<HTMLElement | undefined>;
 	announcementTimeoutRef: React.MutableRefObject<
 		NodeJS.Timeout | null | undefined
 	>;
