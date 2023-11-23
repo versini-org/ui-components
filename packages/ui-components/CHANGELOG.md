@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/aversini/ui-components/compare/ui-components-v3.0.0...ui-components-v3.0.1) (2023-11-23)
+
+
+### Bug Fixes
+
+* refactoring LiveRegion to drop react dom server usage ([8a4016d](https://github.com/aversini/ui-components/commit/8a4016db6b36ee377dbfb5c0e80aec5e86b1aceb))
+
 ## [3.0.0](https://github.com/aversini/ui-components/compare/ui-components-v2.2.1...ui-components-v3.0.0) (2023-11-23)
 
 
