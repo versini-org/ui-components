@@ -2,7 +2,11 @@ import { act, fireEvent, render } from "@testing-library/react";
 import React from "react";
 
 import { VISUALLY_HIDDEN_CLASSNAME } from "../../../../common/constants";
-import { ROLES } from "../constants";
+import {
+	ACTION_CLEAR_ANNOUNCEMENT,
+	ACTION_SET_ANNOUNCEMENT,
+	ROLES,
+} from "../constants";
 import { LiveRegion } from "../LiveRegion";
 import { reducer } from "../reducer";
 
@@ -101,6 +105,34 @@ describe(`The LiveRegion Component`, () => {
 					type: "UNKNOWN_ACTION" as any,
 				}),
 			).toEqual(state);
+		});
+
+		it("should update the data state on action", () => {
+			const previousState = {
+				announcement: "foo",
+			};
+			const actionPayload = <p>hello world</p>;
+			expect(
+				reducer(previousState, {
+					type: ACTION_SET_ANNOUNCEMENT,
+					payload: actionPayload,
+				}),
+			).toEqual({
+				announcement: actionPayload,
+			});
+		});
+
+		it("should clear the data state on action", () => {
+			const previousState = {
+				announcement: "foo",
+			};
+			expect(
+				reducer(previousState, {
+					type: ACTION_CLEAR_ANNOUNCEMENT,
+				}),
+			).toEqual({
+				announcement: null,
+			});
 		});
 	});
 	describe(`When it renders without any props`, () => {
