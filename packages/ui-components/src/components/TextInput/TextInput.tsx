@@ -10,6 +10,7 @@ export const TextInput = ({
 	error = false,
 	raw = false,
 	className,
+	inputClassName,
 	focusKind = "light",
 	borderKind = "dark",
 	errorKind = "light",
@@ -28,6 +29,7 @@ export const TextInput = ({
 	const liveErrorMessage = `${name} error, ${helperText}`;
 	const textInputClassName = getTextInputClasses({
 		className,
+		inputClassName,
 		error,
 		raw,
 		focusKind,

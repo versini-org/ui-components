@@ -9,6 +9,7 @@ import {
 
 type getTextInputClassesProps = {
 	className?: string;
+	inputClassName?: string;
 	raw: boolean;
 	focusKind: string;
 	borderKind: string;
@@ -104,6 +105,7 @@ const getTextInputHelperTextClasses = ({
 
 export const getTextInputClasses = ({
 	className,
+	inputClassName,
 	raw,
 	focusKind,
 	borderKind,
@@ -112,13 +114,15 @@ export const getTextInputClasses = ({
 	noBorder,
 	error,
 }: getTextInputClassesProps) => {
-	const wrapper = raw ? undefined : `${TEXT_INPUT_WRAPPER_CLASSNAME} w-full`;
+	const wrapper = raw
+		? className
+		: `${TEXT_INPUT_WRAPPER_CLASSNAME} w-full ${className}`;
 
 	const input = raw
-		? className
+		? inputClassName
 		: clsx(
 				TEXT_INPUT_CLASSNAME,
-				className,
+				inputClassName,
 				getTextInputBaseClasses(),
 				getTextInputSizesClasses(),
 				getTextInputColorClasses(),
