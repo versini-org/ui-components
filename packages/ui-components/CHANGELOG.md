@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/aversini/ui-components/compare/ui-components-v2.2.1...ui-components-v3.0.0) (2023-11-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* Refactor TextInput for better accessibility
+
+### Features
+
+* Refactor TextInput for better accessibility ([887d9bf](https://github.com/aversini/ui-components/commit/887d9bf712044904b16543ac67522f240477a1e0))
+
 ## [2.2.1](https://github.com/aversini/ui-components/compare/ui-components-v2.2.0...ui-components-v2.2.1) (2023-11-22)
 
 
