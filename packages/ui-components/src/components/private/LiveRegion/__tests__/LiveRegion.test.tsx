@@ -14,7 +14,7 @@ const getRole = (renderResult: any) =>
 	renderResult.container.firstChild.getAttribute("role");
 
 const content = "Foo Bar Baz";
-const content2 = "Biz buzz";
+const content2 = "Biz Buzz";
 
 /**
  * This is a helper component that renders a LiveRegion and a button. It accepts all of LiveRegion's
@@ -133,7 +133,7 @@ describe(`The LiveRegion Component`, () => {
 			act(() => {
 				vi.advanceTimersByTime(timeout);
 			});
-			expect(getContent(renderResult)).toEqual("Foo Bar Baz");
+			expect(getContent(renderResult)).toEqual(content);
 		});
 
 		it(`and with children as React Component Then it should render with some delay`, () => {
@@ -157,7 +157,7 @@ describe(`The LiveRegion Component`, () => {
 			const renderResult = render(
 				<LiveRegion clearAnnouncementDelay={timeout}>{content}</LiveRegion>,
 			);
-			expect(getContent(renderResult)).toEqual("Foo Bar Baz");
+			expect(getContent(renderResult)).toEqual(content);
 			act(() => {
 				vi.advanceTimersByTime(timeout);
 			});
