@@ -46,6 +46,34 @@ describe("TextInput modifiers", () => {
 		const input = await screen.findByTestId("txtnpt-1");
 		expect(input.className).toBe("");
 	});
+
+	it("should render a text input with a wrapper class", async () => {
+		render(
+			<TextInput
+				label="toto"
+				name="toto"
+				className="toto"
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const input = await screen.findByTestId("txtnpt-1");
+		expect(input.className).not.toContain("toto");
+		expect(input.parentElement?.className).toContain("toto");
+	});
+
+	it("should render a text input with an input class", async () => {
+		render(
+			<TextInput
+				label="toto"
+				name="toto"
+				inputClassName="toto"
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const input = await screen.findByTestId("txtnpt-1");
+		expect(input.className).toContain("toto");
+		expect(input.parentElement?.className).not.toContain("toto");
+	});
 });
 
 describe("TextInput methods", () => {

@@ -17,9 +17,14 @@ const meta: Meta<typeof TextInput> = {
 		borderKind: "dark",
 		errorKind: "light",
 		error: false,
+		inputClassName: "",
+		className: "",
 	},
 	argTypes: {
 		className: {
+			control: "text",
+		},
+		inputClassName: {
 			control: "text",
 		},
 		labelId: {

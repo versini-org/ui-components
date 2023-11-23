@@ -9,4 +9,5 @@ export type TextInputProps = {
 	errorKind?: "dark" | "light";
 	raw?: boolean;
 	noBorder?: boolean;
+	inputClassName?: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
