@@ -1,9 +1,10 @@
 import clsx from "clsx";
-import { useEffect, useRef } from "react";
+import { useEffect, useReducer, useRef } from "react";
 
 import { VISUALLY_HIDDEN_CLASSNAME } from "../../../common/constants";
 import { DEFAULT_POLITENESS_BY_ROLE } from "./constants";
 import type { LiveRegionProps } from "./LiveRegionTypes";
+import { reducer } from "./reducer";
 import { conditionallyDelayAnnouncement } from "./utilities";
 
 /**
@@ -28,6 +29,10 @@ export function LiveRegion({
 	const announcementTimeoutRef = useRef();
 	const clearAnnouncementTimeoutRef = useRef();
 
+	const [state, dispatch] = useReducer(reducer, {
+		announcement: null,
+	});
+
 	let politeness = politenessProp;
 	/**
 	 * We check `undefined` since it is our default,
@@ -46,6 +51,7 @@ export function LiveRegion({
 			clearAnnouncementDelay,
 			clearAnnouncementTimeoutRef,
 			onAnnouncementClear,
+			dispatch,
 		});
 	}, [
 		children,
@@ -65,6 +71,8 @@ export function LiveRegion({
 			{...(role && { role: role })}
 			className={generatedClassName}
 			{...otherProps}
-		/>
+		>
+			{state.announcement}
+		</div>
 	);
 }

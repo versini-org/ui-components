@@ -1,4 +1,17 @@
-import { ROLES } from "./constants";
+import {
+	ACTION_CLEAR_ANNOUNCEMENT,
+	ACTION_SET_ANNOUNCEMENT,
+	ROLES,
+} from "./constants";
+
+export type ActionProps = {
+	type: typeof ACTION_SET_ANNOUNCEMENT | typeof ACTION_CLEAR_ANNOUNCEMENT;
+	payload?: any;
+};
+
+export type StateProps = {
+	announcement: any;
+};
 
 export type PolitenessByRole = {
 	[key: string]: any;
@@ -7,6 +20,7 @@ export type PolitenessByRole = {
 export type ClearAnnouncementProps = {
 	liveRegionRef: React.RefObject<HTMLElement | undefined>;
 	onAnnouncementClear?: () => void;
+	dispatch: React.Dispatch<any>;
 };
 
 export type announceProps = {
@@ -17,6 +31,7 @@ export type announceProps = {
 		NodeJS.Timeout | number | null | undefined
 	>;
 	onAnnouncementClear?: () => void;
+	dispatch: React.Dispatch<any>;
 };
 
 export type conditionallyDelayAnnouncementProps = {
@@ -31,6 +46,7 @@ export type conditionallyDelayAnnouncementProps = {
 		NodeJS.Timeout | number | null | undefined
 	>;
 	onAnnouncementClear?: () => void;
+	dispatch: React.Dispatch<any>;
 };
 
 export type LiveRegionProps = {

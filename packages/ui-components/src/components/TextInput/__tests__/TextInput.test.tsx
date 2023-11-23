@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
@@ -109,7 +109,9 @@ describe("TextInput accessibility", () => {
 		const liveRegion = screen.getByText("toto error, error message");
 		expect(liveRegion.getAttribute("aria-live")).toBe("polite");
 		expect(liveRegion.textContent).toBe("toto error, error message");
-		vi.advanceTimersByTime(clearTimeout);
+		act(() => {
+			vi.advanceTimersByTime(clearTimeout);
+		});
 		expect(liveRegion.textContent).toBe("");
 	});
 });
