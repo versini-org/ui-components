@@ -13,10 +13,9 @@ const meta: Meta<typeof TextInput> = {
 		disabled: false,
 		helperText: "",
 		raw: false,
-		kind: "dark",
-		focus: "light",
-		border: "dark",
-		fullWidth: false,
+		focusKind: "light",
+		borderKind: "dark",
+		errorKind: "light",
 		error: false,
 	},
 	argTypes: {
@@ -35,21 +34,18 @@ const meta: Meta<typeof TextInput> = {
 		raw: {
 			control: "boolean",
 		},
-		fullWidth: {
-			control: "boolean",
-		},
 		error: {
 			control: "boolean",
 		},
-		kind: {
+		focusKind: {
 			options: ["dark", "light"],
 			control: { type: "radio" },
 		},
-		focus: {
+		borderKind: {
 			options: ["dark", "light"],
 			control: { type: "radio" },
 		},
-		border: {
+		errorKind: {
 			options: ["dark", "light"],
 			control: { type: "radio" },
 		},
@@ -62,10 +58,12 @@ type Story = StoryObj<typeof TextInput>;
 
 export const Basic: Story = {
 	render: (args) => (
-		<form noValidate>
-			<div className="flex gap-2">
-				<TextInput {...args} />
-			</div>
-		</form>
+		<div className="min-h-10 bg-slate-500 p-11">
+			<form noValidate>
+				<div className="flex gap-2">
+					<TextInput {...args} />
+				</div>
+			</form>
+		</div>
 	),
 };

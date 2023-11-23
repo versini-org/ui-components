@@ -30,7 +30,7 @@ describe("TextInput modifiers", () => {
 			/>,
 		);
 		const errorMessage = await screen.findByText("error message");
-		expect(errorMessage.className).toContain("text-copy-error-dark");
+		expect(errorMessage.className).toContain("text-copy-error-light");
 	});
 
 	it("should render a text input with no borders", async () => {
@@ -86,7 +86,7 @@ describe("TextInput accessibility", () => {
 			/>,
 		);
 		const errorMessage = await screen.findByText("error message");
-		expect(errorMessage.className).toContain("text-copy-error-dark");
+		expect(errorMessage.className).toContain("text-copy-error-light");
 
 		const input = await screen.findByLabelText("hello world");
 		expect(input.getAttribute("aria-invalid")).toBe("true");

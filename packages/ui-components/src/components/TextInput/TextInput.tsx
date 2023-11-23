@@ -10,10 +10,10 @@ export const TextInput = ({
 	error = false,
 	raw = false,
 	className,
-	kind = "dark",
-	focus = "light",
-	border = "dark",
-	fullWidth,
+	focusKind = "light",
+	borderKind = "dark",
+	errorKind = "light",
+
 	disabled = false,
 	noBorder = false,
 
@@ -30,12 +30,11 @@ export const TextInput = ({
 		className,
 		error,
 		raw,
-		kind,
-		focus,
-		fullWidth,
+		focusKind,
 		disabled,
 		noBorder,
-		border,
+		borderKind,
+		errorKind,
 	});
 
 	return (

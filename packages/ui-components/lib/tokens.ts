@@ -1,6 +1,7 @@
 import colors from "tailwindcss/colors";
 
 const errorColorDark = "#d80000";
+const errorColorLight = "#ff3f3f";
 
 export const tokens = {
 	colors: {
@@ -28,7 +29,7 @@ export const tokens = {
 		"copy-medium": colors.slate[400],
 		"copy-light": colors.slate[200],
 		"copy-error-dark": errorColorDark,
-		"copy-error-light": colors.slate[200],
+		"copy-error-light": errorColorLight,
 
 		/**
 		 * Border tokens.
@@ -36,7 +37,7 @@ export const tokens = {
 		"border-dark": colors.slate[900],
 		"border-light": colors.slate[300],
 		"border-error-dark": errorColorDark,
-		"border-error-light": errorColorDark,
+		"border-error-light": errorColorLight,
 
 		/**
 		 * Focus tokens.
@@ -44,6 +45,6 @@ export const tokens = {
 		"focus-dark": colors.slate[900],
 		"focus-light": colors.slate[300],
 		"focus-error-dark": errorColorDark,
-		"focus-error-light": errorColorDark,
+		"focus-error-light": errorColorLight,
 	},
 };

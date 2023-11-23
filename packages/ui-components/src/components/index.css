@@ -28,7 +28,7 @@
 	.av-text-input-wrapper label {
 		position: absolute;
 		/* move the label inline */
-		transform: translate(18px, 18px) scale(1);
+		transform: translate(18px, 28px) scale(1);
 		transform-origin: top left;
 		transition: all 0.2s ease-out;
 	}
@@ -53,12 +53,12 @@
 	.av-text-input:focus + label,
 	.av-text-input:not(:placeholder-shown) + label {
 		/* move the label up */
-		transform: translate(18px, 2px) scale(0.65);
+		transform: translate(18px, 2px) scale(0.75);
 	}
 
 	.av-text-input-helper-text {
 		position: absolute;
-		transform: translate(18px, 61px) scale(1);
+		transform: translate(18px, 59px) scale(0.75);
 		transform-origin: top left;
 		transition: all 0.2s ease-out;
 	}
