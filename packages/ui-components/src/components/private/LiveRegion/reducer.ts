@@ -4,7 +4,7 @@ import {
 } from "./constants";
 import type { ActionProps, StateProps } from "./LiveRegionTypes";
 
-export const reducer = (state: StateProps, action?: ActionProps) => {
+export const reducer = (state: StateProps, action: ActionProps) => {
 	switch (action?.type) {
 		case ACTION_SET_ANNOUNCEMENT:
 			return {

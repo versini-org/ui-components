@@ -4,10 +4,12 @@ import {
 	ROLES,
 } from "./constants";
 
-export type ActionProps = {
-	type: typeof ACTION_SET_ANNOUNCEMENT | typeof ACTION_CLEAR_ANNOUNCEMENT;
-	payload?: any;
-};
+export type ActionProps =
+	| Record<string, never>
+	| {
+			type: typeof ACTION_SET_ANNOUNCEMENT | typeof ACTION_CLEAR_ANNOUNCEMENT;
+			payload?: any;
+	  };
 
 export type StateProps = {
 	announcement: any;

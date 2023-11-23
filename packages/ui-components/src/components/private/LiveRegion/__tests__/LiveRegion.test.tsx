@@ -96,7 +96,7 @@ describe(`The LiveRegion Component`, () => {
 			const state = {
 				announcement: "foo",
 			};
-			expect(reducer(state)).toEqual(state);
+			expect(reducer(state, {})).toEqual(state);
 		});
 	});
 	describe(`When it renders without any props`, () => {
