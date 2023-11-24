@@ -35,7 +35,7 @@ describe("Flexgrid default rules", () => {
 });
 
 describe("Flexgrid props", () => {
-	it("should add margins to compensate for a column gap (with ratio)", async () => {
+	it("should add margins to compensate for a custom column gap", async () => {
 		render(
 			<Flexgrid columnGap={2} data-testid="grid-1">
 				hello
