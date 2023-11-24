@@ -16,3 +16,13 @@ export const expectToHaveClasses = (
 		expect(Array.from(elementClasses)).toContain(expectedClass);
 	});
 };
+
+export const expectToHaveStyles = (
+	element: HTMLElement,
+	styles: Record<string, string>,
+) => {
+	const elementStyles = getComputedStyle(element);
+	Object.entries(styles).forEach(([property, value]) => {
+		expect(elementStyles.getPropertyValue(property)).toBe(value);
+	});
+};
