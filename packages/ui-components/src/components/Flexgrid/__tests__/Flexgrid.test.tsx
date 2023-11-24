@@ -24,7 +24,7 @@ describe("Flexgrid default rules", () => {
 		expectToHaveClasses(gridRoot, ["box-border", "flex", "flex-wrap"]);
 	});
 
-	it("should add margins to compensate for a column gap", async () => {
+	it("should add margins to compensate for the default column gap", async () => {
 		render(<Flexgrid data-testid="grid-1">hello</Flexgrid>);
 		const gridRoot = await screen.findByTestId("grid-1");
 		expectToHaveStyles(gridRoot, {
