@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.2](https://github.com/aversini/ui-components/compare/ui-components-v3.2.1...ui-components-v3.2.2) (2023-11-25)
+
+
+### Bug Fixes
+
+* **TextInput:** wrapper class contains "undefined" in some cases ([2e8c6f1](https://github.com/aversini/ui-components/commit/2e8c6f19662bbd3d803bd31a560a3520526b79da))
+
 ## [3.2.1](https://github.com/aversini/ui-components/compare/ui-components-v3.2.0...ui-components-v3.2.1) (2023-11-25)
 
 
