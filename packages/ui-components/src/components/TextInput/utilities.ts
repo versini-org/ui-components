@@ -116,7 +116,7 @@ export const getTextInputClasses = ({
 }: getTextInputClassesProps) => {
 	const wrapper = raw
 		? className
-		: `${TEXT_INPUT_WRAPPER_CLASSNAME} w-full ${className}`;
+		: clsx(`${TEXT_INPUT_WRAPPER_CLASSNAME} w-full`, className);
 
 	const input = raw
 		? inputClassName
