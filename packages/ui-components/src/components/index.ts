@@ -3,6 +3,8 @@ import "./index.css";
 import { Button } from "./Button/Button";
 import { ButtonIcon } from "./Button/ButtonIcon";
 import { ButtonLink } from "./Button/ButtonLink";
+import { Flexgrid } from "./Flexgrid/Flexgrid";
+import { FlexgridItem } from "./Flexgrid/FlexgridItem";
 import { Footer } from "./Footer/Footer";
 import { IconClose } from "./Icons/IconClose";
 import { IconCopied } from "./Icons/IconCopied";
@@ -21,6 +23,8 @@ export {
 	Button,
 	ButtonIcon,
 	ButtonLink,
+	Flexgrid,
+	FlexgridItem,
 	Footer,
 	IconClose,
 	IconCopied,
