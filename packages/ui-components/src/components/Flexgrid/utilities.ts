@@ -1,59 +1,27 @@
-import clsx from "clsx";
+import { FLEXGRID_MAX_COLUMNS } from "../../common/constants";
 
-const tailwindDirectionMap: { [key: string]: string } = {
-	row: "row",
-	column: "col",
-	"row-reverse": "row-reverse",
-	"column-reverse": "col-reverse",
-};
+export const getBasis = (span?: number | "auto") => {
+	const flexBasis = "auto";
 
-const tailwindJustifyMap: { [key: string]: string } = {
-	"flex-start": "justify-start",
-	center: "justify-center",
-	"flex-end": "justify-end",
-	"space-between": "justify-between",
-	"space-around": "justify-around",
-	"space-evenly": "justify-evenly",
-};
+	if (!span) {
+		return {
+			flexBasis,
+		};
+	}
 
-const tailwindAlignMap: { [key: string]: string } = {
-	"flex-start": "items-start",
-	center: "items-center",
-	"flex-end": "items-end",
-	stretch: "items-stretch",
-	baseline: "items-baseline",
-};
+	if (span === "auto") {
+		return {
+			flexBasis,
+			flexGrow: 1,
+			maxWidth: "100%",
+		};
+	}
 
-export const getFlexgridClasses = ({
-	className,
-	columnGap,
-	rowGap,
-	direction,
-	alignHorizontal,
-	alignVertical,
-	height,
-	width,
-}: {
-	className?: string;
-	columnGap: number;
-	rowGap: number;
-	direction: string;
-	alignHorizontal: string;
-	alignVertical: string;
-	height: string;
-	width: string;
-}) => {
-	return clsx(
-		className,
-		"box-border flex flex-wrap",
-		`flex-${tailwindDirectionMap[direction]}`,
-		`${tailwindJustifyMap[alignHorizontal]}`,
-		`${tailwindAlignMap[alignVertical]}`,
-		{
-			[`h-[${height}]`]: height,
-			[`w-[${width}]`]: width,
-			[`gap-x-${columnGap}`]: columnGap,
-			[`gap-y-${rowGap}`]: rowGap,
-		},
-	);
+	if (typeof span === "number") {
+		const basis = `${(span * 100) / FLEXGRID_MAX_COLUMNS}%`;
+		return {
+			flexBasis: `${basis}`,
+			maxWidth: `${basis}`,
+		};
+	}
 };
