@@ -10,6 +10,20 @@ describe("FlexgridItem (exceptions)", () => {
 	it("should be able to require/import from root", () => {
 		expect(FlexgridItem).toBeDefined();
 	});
+
+	it("should render default content even without a Flexgrid parent", () => {
+		const { getByTestId } = render(
+			<FlexgridItem data-testid="gridcell-1">
+				<Button>item 1</Button>
+			</FlexgridItem>,
+		);
+		const gridCellRoot = getByTestId("gridcell-1");
+		expect(gridCellRoot).toHaveTextContent("item 1");
+		expectToHaveStyles(gridCellRoot, {
+			"padding-left": "0rem",
+			"padding-top": "0rem",
+		});
+	});
 });
 
 describe("FlexgridItem default rules", () => {
