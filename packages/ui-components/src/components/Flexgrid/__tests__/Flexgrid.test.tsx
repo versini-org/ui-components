@@ -18,8 +18,8 @@ describe("Flexgrid default rules", () => {
 		const gridRoot = await screen.findByTestId("grid-1");
 		expectToHaveStyles(gridRoot, {
 			"flex-direction": "row",
-			"justify-content": "flex-start",
-			"align-items": "flex-start",
+			"justify-content": "normal",
+			"align-items": "normal",
 		});
 		expectToHaveClasses(gridRoot, ["box-border", "flex", "flex-wrap"]);
 	});

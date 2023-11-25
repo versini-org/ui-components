@@ -9,6 +9,7 @@ export type FlexgridProps = {
 	 * the alignment along the main axis (horizontal).
 	 */
 	alignHorizontal?:
+		| "normal"
 		| "flex-start"
 		| "center"
 		| "flex-end"
@@ -20,7 +21,13 @@ export type FlexgridProps = {
 	 * Equivalent to "align-items" in flexbox, this prop defines
 	 * the alignment along the cross axis (vertical).
 	 */
-	alignVertical?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
+	alignVertical?:
+		| "normal"
+		| "flex-start"
+		| "center"
+		| "flex-end"
+		| "stretch"
+		| "baseline";
 
 	/**
 	 * The class name of the Flexgrid.
