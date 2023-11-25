@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.1](https://github.com/aversini/ui-components/compare/ui-components-v3.2.0...ui-components-v3.2.1) (2023-11-25)
+
+
+### Bug Fixes
+
+* **Flexgrid:** align-items and justify-content should support "normal" ([7ffc27e](https://github.com/aversini/ui-components/commit/7ffc27e9d7a9b47c5d92d8cfd2f5631cc118efa4))
+
 ## [3.2.0](https://github.com/aversini/ui-components/compare/ui-components-v3.1.0...ui-components-v3.2.0) (2023-11-25)
 
 
