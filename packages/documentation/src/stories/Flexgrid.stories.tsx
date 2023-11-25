@@ -1,5 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Flexgrid, FlexgridItem } from "@versini/ui-components";
+import {
+	Button,
+	Flexgrid,
+	FlexgridItem,
+	Main,
+	TextInput,
+} from "@versini/ui-components";
 
 const meta: Meta<typeof Flexgrid> = {
 	component: Flexgrid,
@@ -10,8 +16,8 @@ const meta: Meta<typeof Flexgrid> = {
 		className: "",
 		rowGap: 1,
 		columnGap: 1,
-		alignHorizontal: "flex-start",
-		alignVertical: "flex-start",
+		alignHorizontal: "normal",
+		alignVertical: "normal",
 		direction: "row",
 	},
 	argTypes: {
@@ -31,6 +37,7 @@ const meta: Meta<typeof Flexgrid> = {
 		alignHorizontal: {
 			control: "radio",
 			options: [
+				"normal",
 				"flex-start",
 				"center",
 				"flex-end",
@@ -41,7 +48,14 @@ const meta: Meta<typeof Flexgrid> = {
 		},
 		alignVertical: {
 			control: "radio",
-			options: ["flex-start", "center", "flex-end", "stretch", "baseline"],
+			options: [
+				"normal",
+				"flex-start",
+				"center",
+				"flex-end",
+				"stretch",
+				"baseline",
+			],
 		},
 	},
 };
@@ -144,8 +158,6 @@ export const Basic: Story = {
 
 export const Interactive: Story = {
 	args: {
-		alignHorizontal: "flex-start",
-		alignVertical: "flex-start",
 		height: "auto",
 	},
 	render: (args) => (
@@ -189,5 +201,34 @@ export const Interactive: Story = {
 				</FlexgridItem>
 			</Flexgrid>
 		</>
+	),
+};
+
+export const WithLoginForm: Story = {
+	render: (args) => (
+		<Main>
+			<form
+			//className="mx-auto flex w-96 flex-col flex-wrap"
+			>
+				<Flexgrid
+					{...args}
+					// direction="column" className="mx-auto w-96"
+				>
+					<FlexgridItem>
+						<TextInput
+							type="password"
+							name="password"
+							label="Enter your password here"
+						/>
+					</FlexgridItem>
+
+					<FlexgridItem>
+						<Button noBorder type="submit" className="mb-4 mt-6">
+							Log in
+						</Button>
+					</FlexgridItem>
+				</Flexgrid>
+			</form>
+		</Main>
 	),
 };

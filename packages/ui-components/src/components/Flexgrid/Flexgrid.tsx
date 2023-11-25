@@ -13,8 +13,8 @@ export const Flexgrid = ({
 	width = "auto",
 
 	direction = "row",
-	alignHorizontal = "flex-start",
-	alignVertical = "flex-start",
+	alignHorizontal = "normal",
+	alignVertical = "normal",
 
 	...otherProps
 }: FlexgridProps) => {
