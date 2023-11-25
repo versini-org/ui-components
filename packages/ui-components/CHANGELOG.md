@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/aversini/ui-components/compare/ui-components-v3.1.0...ui-components-v3.2.0) (2023-11-25)
+
+
+### Features
+
+* adding Flexgrid and FlexgridItem components ([33a4af8](https://github.com/aversini/ui-components/commit/33a4af8b87a6d5cb992c599899abe9d013dccc7e))
+
 ## [3.1.0](https://github.com/aversini/ui-components/compare/ui-components-v3.0.1...ui-components-v3.1.0) (2023-11-23)
 
 
