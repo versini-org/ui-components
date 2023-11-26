@@ -93,7 +93,7 @@ describe("ButtonIcon modifiers", () => {
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["w-6", "p-0"]);
+		expectToHaveClasses(button, ["h-6", "w-6", "p-0"]);
 	});
 
 	it("should render a size medium button", async () => {
@@ -103,7 +103,7 @@ describe("ButtonIcon modifiers", () => {
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["w-8", "p-1"]);
+		expectToHaveClasses(button, ["h-8", "w-8", "p-1"]);
 	});
 
 	it("should render a size large button", async () => {
@@ -113,6 +113,6 @@ describe("ButtonIcon modifiers", () => {
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["w-10", "p-2"]);
+		expectToHaveClasses(button, ["h-10", "w-10", "p-2"]);
 	});
 });
