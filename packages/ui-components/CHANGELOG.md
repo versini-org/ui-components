@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.0.0](https://github.com/aversini/ui-components/compare/ui-components-v3.2.2...ui-components-v4.0.0) (2023-11-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* introducing Buttons size prop and refactor
+
+### Features
+
+* introducing Buttons size prop and refactor ([27613b2](https://github.com/aversini/ui-components/commit/27613b22a8437d96a88bc987dd9857962592f1f4))
+
+
+### Bug Fixes
+
+* **Button:** children is not an optional prop ([65860ac](https://github.com/aversini/ui-components/commit/65860ac9b9122e3edfc264399081d3f23be8ef74))
+
 ## [3.2.2](https://github.com/aversini/ui-components/compare/ui-components-v3.2.1...ui-components-v3.2.2) (2023-11-25)
 
 
