@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/aversini/ui-components/compare/ui-components-v4.0.0...ui-components-v4.0.1) (2023-11-26)
+
+
+### Bug Fixes
+
+* **ButtonIcon:** default display should not be block ([f7ce436](https://github.com/aversini/ui-components/commit/f7ce4368107da970197d4bedf56294e6220d7c1a))
+
 ## [4.0.0](https://github.com/aversini/ui-components/compare/ui-components-v3.2.2...ui-components-v4.0.0) (2023-11-26)
 
 
