@@ -89,8 +89,10 @@ const getButtonBorderClasses = ({
 	kind: string;
 	noBorder: boolean;
 }) => {
-	const borderOpacity = noBorder ? "0" : "100";
-	return `border-2 border-border-${kind}/${borderOpacity}`;
+	return clsx("border-2", {
+		[`border-border-${kind}`]: !noBorder,
+		"border-transparent": noBorder,
+	});
 };
 
 const getButtonFocusClasses = ({ focus }: { focus: string }) => {

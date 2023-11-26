@@ -9,7 +9,7 @@ const parse = converter("rgb");
  * exposed in our tokens. It creates an entry for each color
  * in the tokens, with the following format:
  *
- * rgb(var(--av-<color-name>, <fallback-value>) / <alpha-value>)
+ * var(--av-<color-name>, rgb(<fallback-value>) / <alpha-value>))
  */
 export const dynamicColors = () => {
 	const result = {};
@@ -18,7 +18,7 @@ export const dynamicColors = () => {
 		const variable = `--av-${name}`;
 		const fallbackValue = `${rgb.r * 255} ${rgb.g * 255} ${rgb.b * 255}`;
 
-		result[name] = `rgb(var(${variable}, ${fallbackValue}) / <alpha-value>)`;
+		result[name] = `var(${variable}, rgb(${fallbackValue} / <alpha-value>))`;
 	});
 
 	return result;
@@ -52,8 +52,6 @@ export const dynamicColorsClasses = () => {
 		}
 		if (name.startsWith("border-")) {
 			result.push(`border-${name}`);
-			result.push(`border-${name}/0`);
-			result.push(`border-${name}/100`);
 		}
 		if (name.startsWith("focus-")) {
 			result.push(`ring-${name}`);
