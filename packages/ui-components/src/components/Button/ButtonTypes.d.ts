@@ -1,4 +1,5 @@
 export type CommonButtonProps = {
+	children: React.ReactNode;
 	kind?: "dark" | "light";
 	focus?: "dark" | "light";
 	fullWidth?: boolean;
@@ -13,9 +14,8 @@ export type ButtonProps = {
 	type?: "button" | "submit" | "reset";
 	slim?: boolean;
 	size?: "small" | "medium" | "large";
-} & CommonButtonProps & {
-		children?: React.ReactNode;
-	} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+} & CommonButtonProps &
+	React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type ButtonLinkProps = {
 	children?: React.ReactNode;
