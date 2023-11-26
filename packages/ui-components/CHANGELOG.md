@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.2](https://github.com/aversini/ui-components/compare/ui-components-v4.0.1...ui-components-v4.0.2) (2023-11-26)
+
+
+### Bug Fixes
+
+* **ButtonIcon:** width and height are not always identical ([dd99b6a](https://github.com/aversini/ui-components/commit/dd99b6a6d641b658a645b7e9bd8d3cb767c6d5c4))
+
 ## [4.0.1](https://github.com/aversini/ui-components/compare/ui-components-v4.0.0...ui-components-v4.0.1) (2023-11-26)
 
 
