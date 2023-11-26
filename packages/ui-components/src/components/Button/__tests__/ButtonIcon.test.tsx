@@ -19,7 +19,7 @@ describe("ButtonIcon modifiers", () => {
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("p-1");
 		expectToHaveClasses(button, [
-			"flex",
+			"inline-flex",
 			"items-center",
 			"justify-center",
 			"rounded-full",
