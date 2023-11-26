@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
+import { expectToHaveClasses } from "../../../common/__tests__/helpers";
 import { ButtonLink } from "../..";
 
 describe("ButtonLink (exceptions)", () => {
@@ -12,10 +13,10 @@ describe("ButtonLink modifiers", () => {
 	it("should render a default anchor", async () => {
 		render(<ButtonLink link="toto">hello</ButtonLink>);
 		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-1");
+		expect(button.className).toContain("py-0");
 	});
 
-	it("should render a slim anchor", async () => {
+	it("should render a slim (legacy) anchor", async () => {
 		render(
 			<ButtonLink slim link="toto">
 				hello
@@ -23,6 +24,36 @@ describe("ButtonLink modifiers", () => {
 		);
 		const button = await screen.findByRole("link");
 		expect(button.className).toContain("py-0");
+	});
+
+	it("should render a size small anchor", async () => {
+		render(
+			<ButtonLink size="small" link="toto">
+				hello
+			</ButtonLink>,
+		);
+		const button = await screen.findByRole("link");
+		expectToHaveClasses(button, ["px-4", "py-0", "max-h-8"]);
+	});
+
+	it("should render a size medium anchor", async () => {
+		render(
+			<ButtonLink size="medium" link="toto">
+				hello
+			</ButtonLink>,
+		);
+		const button = await screen.findByRole("link");
+		expectToHaveClasses(button, ["px-4", "py-1", "max-h-9"]);
+	});
+
+	it("should render a size large anchor", async () => {
+		render(
+			<ButtonLink size="large" link="toto">
+				hello
+			</ButtonLink>,
+		);
+		const button = await screen.findByRole("link");
+		expectToHaveClasses(button, ["px-4", "py-2", "max-h-12"]);
 	});
 
 	it("should render a dark link", async () => {
@@ -66,7 +97,7 @@ describe("ButtonLink modifiers", () => {
 			</ButtonLink>,
 		);
 		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-1");
+		expect(button.className).toContain("py-0");
 		const label = await screen.findByText("hello...");
 		expect(label).toBeDefined();
 	});
@@ -78,7 +109,7 @@ describe("ButtonLink modifiers", () => {
 			</ButtonLink>,
 		);
 		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-1");
+		expect(button.className).toContain("py-0");
 		const label = await screen.findByText("hello world");
 		expect(label).toBeDefined();
 	});

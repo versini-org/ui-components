@@ -12,6 +12,7 @@ const meta: Meta<typeof Button> = {
 		kind: "dark",
 		focus: "light",
 		slim: false,
+		size: "medium",
 		type: "button",
 		raw: false,
 		noBorder: false,
@@ -30,6 +31,10 @@ const meta: Meta<typeof Button> = {
 		},
 		noBorder: {
 			control: "boolean",
+		},
+		size: {
+			options: ["small", "medium", "large"],
+			control: { type: "radio" },
 		},
 		slim: {
 			control: "boolean",
@@ -52,7 +57,7 @@ type Story = StoryObj<typeof Button>;
 
 export const Basic: Story = {
 	render: (args) => (
-		<div className="flex gap-2">
+		<div className="flex flex-wrap gap-2">
 			<Button {...args}>Button</Button>
 			<Button {...args}>Button</Button>
 			<Button {...args}>Button</Button>

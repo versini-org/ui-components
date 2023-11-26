@@ -14,6 +14,7 @@ const meta: Meta<typeof ButtonLink> = {
 		link: "https://www.google.com",
 		noBorder: false,
 		slim: false,
+		size: "small",
 	},
 	argTypes: {
 		className: {
@@ -39,6 +40,13 @@ const meta: Meta<typeof ButtonLink> = {
 		slim: {
 			control: "boolean",
 		},
+		size: {
+			options: ["small", "medium", "large"],
+			control: { type: "radio" },
+		},
+		maxLabelLength: {
+			control: "number",
+		},
 	},
 };
 
@@ -48,11 +56,13 @@ type Story = StoryObj<typeof ButtonLink>;
 
 export const Basic: Story = {
 	render: (args) => (
-		<div className="flex gap-2">
+		<div className="flex flex-wrap gap-2">
 			<ButtonLink {...args}>Button as a link</ButtonLink>
-			<ButtonLink {...args}>Button as a link</ButtonLink>
-			<ButtonLink {...args}>Button as a link</ButtonLink>
-			<ButtonLink {...args}>Button as a link</ButtonLink>
+			<ButtonLink {...args}>Button as a link lorem ipsum</ButtonLink>
+			<ButtonLink {...args}>Button as a link lorem ipsum dolor</ButtonLink>
+			<ButtonLink {...args}>
+				Button as a link lorem ipsum dolor sit amet
+			</ButtonLink>
 		</div>
 	),
 };

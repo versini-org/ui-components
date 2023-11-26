@@ -21,9 +21,8 @@ describe("Button modifiers", () => {
 			"px-4",
 			"py-1",
 			"max-h-9",
-			"text-sm",
+			"text-base",
 			"font-medium",
-			"sm:text-base",
 			"bg-action-dark",
 			"text-copy-light",
 			"hover:bg-action-dark-hover",
@@ -38,10 +37,28 @@ describe("Button modifiers", () => {
 		]);
 	});
 
-	it("should render a slim button", async () => {
+	it("should render a slim (legacy) button", async () => {
 		render(<Button slim>hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["px-2", "py-0", "sm:px-4", "max-h-8"]);
+		expectToHaveClasses(button, ["px-4", "py-0", "max-h-8"]);
+	});
+
+	it("should render a size small button", async () => {
+		render(<Button size="small">hello</Button>);
+		const button = await screen.findByRole("button");
+		expectToHaveClasses(button, ["px-4", "py-0", "max-h-8"]);
+	});
+
+	it("should render a size medium button", async () => {
+		render(<Button size="medium">hello</Button>);
+		const button = await screen.findByRole("button");
+		expectToHaveClasses(button, ["px-4", "py-1", "max-h-9"]);
+	});
+
+	it("should render a size large button", async () => {
+		render(<Button size="large">hello</Button>);
+		const button = await screen.findByRole("button");
+		expectToHaveClasses(button, ["px-4", "py-2", "max-h-12"]);
 	});
 
 	it("should render a dark button", async () => {

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ButtonIcon, IconSettings } from "@versini/ui-components";
+import { ButtonIcon, IconEdit, IconSettings } from "@versini/ui-components";
 
 const meta: Meta<typeof ButtonIcon> = {
 	component: ButtonIcon,
@@ -14,6 +14,7 @@ const meta: Meta<typeof ButtonIcon> = {
 		type: "button",
 		raw: false,
 		noBorder: false,
+		size: "medium",
 	},
 	argTypes: {
 		className: {
@@ -39,6 +40,10 @@ const meta: Meta<typeof ButtonIcon> = {
 		raw: {
 			control: "boolean",
 		},
+		size: {
+			options: ["small", "medium", "large"],
+			control: { type: "radio" },
+		},
 	},
 };
 
@@ -48,7 +53,7 @@ type Story = StoryObj<typeof ButtonIcon>;
 
 export const Basic: Story = {
 	render: (args) => (
-		<div className="flex gap-2">
+		<div className="flex flex-wrap gap-2">
 			<ButtonIcon {...args}>
 				<IconSettings />
 			</ButtonIcon>
@@ -56,10 +61,10 @@ export const Basic: Story = {
 				<IconSettings />
 			</ButtonIcon>
 			<ButtonIcon {...args}>
-				<IconSettings />
+				<IconEdit className="h-3 w-3" />
 			</ButtonIcon>
 			<ButtonIcon {...args}>
-				<IconSettings />
+				<IconEdit />
 			</ButtonIcon>
 		</div>
 	),
