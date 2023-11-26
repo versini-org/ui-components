@@ -14,6 +14,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			fullWidth = false,
 			className,
 			slim = false,
+			size = "medium",
 			type = "button",
 			raw = false,
 			noBorder = false,
@@ -30,6 +31,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			raw,
 			className,
 			slim,
+			size,
 			noBorder,
 		});
 

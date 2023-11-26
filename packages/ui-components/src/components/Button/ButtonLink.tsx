@@ -13,6 +13,7 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 			fullWidth = false,
 			className,
 			slim = false,
+			size = "small",
 			raw = false,
 			noBorder = false,
 			"aria-label": ariaLabel,
@@ -31,6 +32,7 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 			raw,
 			className,
 			slim,
+			size,
 			noBorder,
 		});
 

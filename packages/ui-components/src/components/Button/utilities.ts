@@ -15,46 +15,85 @@ type getButtonClassesProps = {
 	disabled: boolean;
 	fullWidth: boolean;
 	slim?: boolean;
+	size: string;
 	noBorder: boolean;
 };
 
-const getButtonSizesClasses = (type: string, slim?: boolean) => {
+const getButtonSizesClasses = ({
+	type,
+	slim,
+	size,
+}: {
+	type: string;
+	slim?: boolean;
+	size: string;
+}) => {
+	const smallClasses = "text-sm font-medium max-h-8 py-0";
+	const mediumClasses = "text-base font-medium max-h-9 py-1";
+	const largeClasses = "text-lg font-medium max-h-12 py-2";
+
 	switch (type) {
 		case TYPE_BUTTON:
-			return clsx("text-sm font-medium sm:text-base", {
-				"max-h-9 px-4 py-1": !slim,
-				"max-h-8 px-2 py-0 sm:px-4": slim,
+			return clsx("px-4", {
+				[smallClasses]: size === "small" || slim,
+				[mediumClasses]: size === "medium" && !slim,
+				[largeClasses]: size === "large" && !slim,
 			});
+
 		case TYPE_LINK:
-			return clsx("max-h-8 text-center text-sm", {
-				"px-4 py-1": !slim,
-				"px-2 py-0 sm:px-4": slim,
+			return clsx("px-4 text-center", {
+				[smallClasses]: size === "small" || slim,
+				[mediumClasses]: size === "medium" && !slim,
+				[largeClasses]: size === "large" && !slim,
 			});
+
 		case TYPE_ICON:
-			return "p-2";
+			return clsx("flex items-center justify-center", {
+				"w-6 p-0": size === "small" || slim,
+				"w-8 p-1": size === "medium" && !slim,
+				"w-10 p-2": size === "large" && !slim,
+			});
 	}
 };
 
-const getButtonBaseClasses = (kind: string) => {
+const getButtonBaseClasses = ({ kind }: { kind: string }) => {
 	return `rounded-full bg-action-${kind} text-copy-light`;
 };
 
-const getButtonHoverClasses = (kind: string, disabled: boolean) => {
+const getButtonHoverClasses = ({
+	kind,
+	disabled,
+}: {
+	kind: string;
+	disabled: boolean;
+}) => {
 	return disabled ? "" : `hover:bg-action-${kind}-hover`;
 };
 
-const getButtonActiveClasses = (kind: string, disabled: boolean) => {
+const getButtonActiveClasses = ({
+	kind,
+	disabled,
+}: {
+	kind: string;
+	disabled: boolean;
+}) => {
 	return disabled
 		? ""
 		: `active:bg-action-${kind}-active active:text-copy-medium`;
 };
 
-const getButtonBorderClasses = (kind: string, noBorder: boolean) => {
+const getButtonBorderClasses = ({
+	kind,
+	noBorder,
+}: {
+	kind: string;
+	noBorder: boolean;
+}) => {
 	const borderOpacity = noBorder ? "0" : "100";
 	return `border-2 border-border-${kind}/${borderOpacity}`;
 };
 
-const getButtonFocusClasses = (focus: string) => {
+const getButtonFocusClasses = ({ focus }: { focus: string }) => {
 	return `focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-focus-${focus}`;
 };
 
@@ -67,6 +106,7 @@ export const getButtonClasses = ({
 	disabled,
 	fullWidth,
 	slim,
+	size,
 	noBorder,
 }: getButtonClassesProps) => {
 	return raw
@@ -74,12 +114,12 @@ export const getButtonClasses = ({
 		: clsx(
 				BUTTON_CLASSNAME,
 				className,
-				getButtonBaseClasses(kind),
-				getButtonSizesClasses(type, slim),
-				getButtonBorderClasses(kind, noBorder),
-				getButtonFocusClasses(focus),
-				getButtonHoverClasses(kind, disabled),
-				getButtonActiveClasses(kind, disabled),
+				getButtonBaseClasses({ kind }),
+				getButtonSizesClasses({ type, slim, size }),
+				getButtonBorderClasses({ kind, noBorder }),
+				getButtonFocusClasses({ focus }),
+				getButtonHoverClasses({ kind, disabled }),
+				getButtonActiveClasses({ kind, disabled }),
 				{
 					"w-full": fullWidth,
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,

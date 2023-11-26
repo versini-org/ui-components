@@ -3,7 +3,6 @@ export type CommonButtonProps = {
 	focus?: "dark" | "light";
 	fullWidth?: boolean;
 	className?: string;
-	slim?: boolean;
 	raw?: boolean;
 	noBorder?: boolean;
 };
@@ -12,20 +11,25 @@ export type ButtonProps = {
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 	disabled?: boolean;
 	type?: "button" | "submit" | "reset";
+	slim?: boolean;
+	size?: "small" | "medium" | "large";
 } & CommonButtonProps & {
 		children?: React.ReactNode;
 	} & React.ButtonHTMLAttributes<HTMLButtonElement>;
-
-export type ButtonIconProps = {
-	label?: string;
-	children: React.ReactNode;
-} & CommonButtonProps &
-	React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type ButtonLinkProps = {
 	children?: React.ReactNode;
 	link?: string;
 	target?: string;
 	maxLabelLength?: number;
+	slim?: boolean;
+	size?: "small" | "medium" | "large";
 } & ButtonProps &
 	React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export type ButtonIconProps = {
+	label?: string;
+	children: React.ReactNode;
+	size?: "small" | "medium" | "large";
+} & CommonButtonProps &
+	React.ButtonHTMLAttributes<HTMLButtonElement>;
