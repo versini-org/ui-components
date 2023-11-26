@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.3](https://github.com/aversini/ui-components/compare/ui-components-v4.0.2...ui-components-v4.0.3) (2023-11-26)
+
+
+### Bug Fixes
+
+* CSS variables should allow simple HEX value ([88a49f5](https://github.com/aversini/ui-components/commit/88a49f5c95ca1aaf7856a82ad5aaf50032582728))
+
 ## [4.0.2](https://github.com/aversini/ui-components/compare/ui-components-v4.0.1...ui-components-v4.0.2) (2023-11-26)
 
 
