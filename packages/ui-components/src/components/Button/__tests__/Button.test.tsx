@@ -33,7 +33,7 @@ describe("Button modifiers", () => {
 			"focus:ring-focus-light",
 			"focus:ring-offset-0",
 			"border-2",
-			"border-border-dark/100",
+			"border-border-dark",
 		]);
 	});
 
@@ -112,7 +112,8 @@ describe("Button modifiers", () => {
 	it("should render a button with no borders", async () => {
 		render(<Button noBorder>hello</Button>);
 		const button = await screen.findByRole("button");
-		expect(button.className).toContain("border-border-dark/0");
+		expect(button.className).not.toContain("border-border-dark");
+		expect(button.className).toContain("border-transparent");
 	});
 
 	it("should render a raw button with no styling", async () => {
