@@ -48,7 +48,7 @@ const getButtonSizesClasses = ({
 			});
 
 		case TYPE_ICON:
-			return clsx("flex items-center justify-center", {
+			return clsx("inline-flex items-center justify-center", {
 				"w-6 p-0": size === "small" || slim,
 				"w-8 p-1": size === "medium" && !slim,
 				"w-10 p-2": size === "large" && !slim,
