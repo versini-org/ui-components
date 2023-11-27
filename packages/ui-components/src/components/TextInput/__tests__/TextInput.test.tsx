@@ -38,7 +38,7 @@ describe("TextInput modifiers", () => {
 			<TextInput label="toto" name="toto" noBorder data-testid="txtnpt-1" />,
 		);
 		const input = await screen.findByTestId("txtnpt-1");
-		expect(input.className).toContain("border-border-dark/0");
+		expect(input.className).toContain("border-transparent");
 	});
 
 	it("should render a raw text input with no styling", async () => {
