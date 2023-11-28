@@ -74,6 +74,19 @@ describe("TextInput modifiers", () => {
 		expect(input.className).toContain("toto");
 		expect(input.parentElement?.className).not.toContain("toto");
 	});
+
+	it("should render a text input with a right element", async () => {
+		render(
+			<TextInput
+				label="toto"
+				name="toto"
+				rightElement={<div>right element</div>}
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const input = await screen.findByTestId("txtnpt-1");
+		expect(input.parentElement?.lastChild?.textContent).toBe("right element");
+	});
 });
 
 describe("TextInput methods", () => {

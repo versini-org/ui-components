@@ -10,4 +10,5 @@ export type TextInputProps = {
 	raw?: boolean;
 	noBorder?: boolean;
 	inputClassName?: string;
+	rightElement?: React.ReactElement;
 } & React.InputHTMLAttributes<HTMLInputElement>;
