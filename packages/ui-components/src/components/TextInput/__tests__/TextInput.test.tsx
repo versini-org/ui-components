@@ -58,7 +58,13 @@ describe("TextInput modifiers", () => {
 		);
 		const input = await screen.findByTestId("txtnpt-1");
 		expect(input.className).not.toContain("toto");
-		expect(input.parentElement?.className).toContain("toto");
+		if (input.parentElement) {
+			expectToHaveClasses(input.parentElement, [
+				"toto",
+				"w-full",
+				"justify-center",
+			]);
+		}
 	});
 
 	it("should render a text input with an input class", async () => {
