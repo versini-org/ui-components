@@ -60,10 +60,11 @@ const getTextInputBorderClasses = ({
 	borderKind: string;
 	errorKind: string;
 }) => {
-	const borderOpacity = noBorder ? "0" : "100";
-	return error
-		? `border-2 border-border-error-${errorKind}`
-		: `border-2 border-border-${borderKind}/${borderOpacity}`;
+	return clsx("border-2", {
+		[`border-border-${borderKind}`]: !noBorder,
+		"border-transparent": noBorder,
+		[`border-border-error-${errorKind}`]: error,
+	});
 };
 
 const getTextInputLabelClasses = ({
