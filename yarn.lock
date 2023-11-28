@@ -5211,32 +5211,34 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@versini/dev-dependencies-client@npm:1.2.4":
-  version: 1.2.4
-  resolution: "@versini/dev-dependencies-client@npm:1.2.4"
+"@versini/dev-dependencies-client@npm:1.2.5":
+  version: 1.2.5
+  resolution: "@versini/dev-dependencies-client@npm:1.2.5"
   dependencies:
     "@testing-library/dom": "npm:9.3.3"
     "@testing-library/jest-dom": "npm:6.1.4"
     "@testing-library/react": "npm:14.1.2"
     "@testing-library/user-event": "npm:14.5.1"
-    "@versini/dev-dependencies-common": "npm:1.2.0"
+    "@versini/dev-dependencies-common": "npm:2.0.0"
     "@vitejs/plugin-react-swc": "npm:3.5.0"
     "@vitest/coverage-v8": "npm:0.34.6"
     "@vitest/ui": "npm:0.34.6"
     autoprefixer: "npm:10.4.16"
+    eslint-plugin-react-hooks: "npm:4.6.0"
+    eslint-plugin-react-refresh: "npm:0.4.4"
     postcss: "npm:8.4.31"
     tailwindcss: "npm:3.3.5"
     vite: "npm:4.5.0"
     vite-plugin-dts: "npm:3.6.3"
     vite-plugin-lib-inject-css: "npm:1.3.0"
     vitest: "npm:0.34.6"
-  checksum: d10355cf72bb438c13de56c47d409ed7b1471c065e791d9c33b8f5084fdca3dcdb6ebe147674fd97cd062ad04ff017346595a982ccf51017ab5e6b6d7d3dceec
+  checksum: e0b9debd1d6ed0fe9d99a89053b0ecbf02415923f68597f7aac693ef4765f603be24f83749b3f83f11dcf2c171f5c1f99a11cad9f0a89670a4819d60934b72fd
   languageName: node
   linkType: hard
 
-"@versini/dev-dependencies-common@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@versini/dev-dependencies-common@npm:1.2.0"
+"@versini/dev-dependencies-common@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@versini/dev-dependencies-common@npm:2.0.0"
   dependencies:
     "@types/fs-extra": "npm:11.0.4"
     "@types/jest": "npm:29.5.10"
@@ -5256,11 +5258,8 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.54.0"
     eslint-config-prettier: "npm:9.0.0"
-    eslint-plugin-react-hooks: "npm:4.6.0"
-    eslint-plugin-react-refresh: "npm:0.4.4"
     eslint-plugin-simple-import-sort: "npm:10.0.0"
     eslint-plugin-sort-keys-fix: "npm:1.1.2"
-    eslint-plugin-tailwindcss: "npm:3.13.0"
     eslint-plugin-unicorn: "npm:49.0.0"
     husky: "npm:8.0.3"
     jsdom: "npm:23.0.0"
@@ -5272,7 +5271,7 @@ __metadata:
     rimraf: "npm:5.0.5"
     tsup: "npm:8.0.1"
     typescript: "npm:5.3.2"
-  checksum: 886110a6f1342c6f88729b4ad4154239313fa86a8ca556c330f765faa82f0d48a0bb96d65396472b79d6f913e2fbcd1ea3ac659a7ae68d9d86a53cd1d91a4c32
+  checksum: d332c09cc8936a44a00b70eb97f409fd22ffe1dc989694d525de40bdd440939c7df314f3eeccc5cbb329cf28f025d6f9b7c5622e990273df1a78e6c6384805e3
   languageName: node
   linkType: hard
 
@@ -8101,18 +8100,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-tailwindcss@npm:3.13.0":
-  version: 3.13.0
-  resolution: "eslint-plugin-tailwindcss@npm:3.13.0"
-  dependencies:
-    fast-glob: "npm:^3.2.5"
-    postcss: "npm:^8.4.4"
-  peerDependencies:
-    tailwindcss: ^3.3.2
-  checksum: 37ec12cf70c465c296272ec79fe07ba059423a162adff0c0bbf2b114738454ec537681e8ec30cc0ac3cdd95df0c85eb07fab95c19bbad6d6acc175f27eabb31d
-  languageName: node
-  linkType: hard
-
 "eslint-plugin-unicorn@npm:49.0.0":
   version: 49.0.0
   resolution: "eslint-plugin-unicorn@npm:49.0.0"
@@ -8450,7 +8437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.5, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0":
+"fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0":
   version: 3.3.2
   resolution: "fast-glob@npm:3.3.2"
   dependencies:
@@ -12926,7 +12913,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.31, postcss@npm:^8.4.23, postcss@npm:^8.4.27, postcss@npm:^8.4.31, postcss@npm:^8.4.4":
+"postcss@npm:8.4.31, postcss@npm:^8.4.23, postcss@npm:^8.4.27, postcss@npm:^8.4.31":
   version: 8.4.31
   resolution: "postcss@npm:8.4.31"
   dependencies:
@@ -12944,21 +12931,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.1.0":
+"prettier@npm:>=3.1.0":
   version: 3.1.0
   resolution: "prettier@npm:3.1.0"
   bin:
     prettier: bin/prettier.cjs
   checksum: a45ea70aa97fde162ea4c4aba3dfc7859aa6a732a1db34458d9535dc3c2c16d3bc3fb5689e6cd76aa835562555303b02d9449fd2e15af3b73c8053557e25c5b6
-  languageName: node
-  linkType: hard
-
-"prettier@npm:^2.8.0":
-  version: 2.8.8
-  resolution: "prettier@npm:2.8.8"
-  bin:
-    prettier: bin-prettier.js
-  checksum: 463ea8f9a0946cd5b828d8cf27bd8b567345cf02f56562d5ecde198b91f47a76b7ac9eae0facd247ace70e927143af6135e8cf411986b8cb8478784a4d6d724a
   languageName: node
   linkType: hard
 
@@ -13939,7 +13917,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root@workspace:."
   dependencies:
-    "@versini/dev-dependencies-client": "npm:1.2.4"
+    "@versini/dev-dependencies-client": "npm:1.2.5"
   languageName: unknown
   linkType: soft
 
