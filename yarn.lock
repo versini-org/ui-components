@@ -5211,9 +5211,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@versini/dev-dependencies-client@npm:1.2.5":
-  version: 1.2.5
-  resolution: "@versini/dev-dependencies-client@npm:1.2.5"
+"@versini/dev-dependencies-client@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@versini/dev-dependencies-client@npm:1.3.0"
   dependencies:
     "@testing-library/dom": "npm:9.3.3"
     "@testing-library/jest-dom": "npm:6.1.4"
@@ -5227,12 +5227,13 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.6.0"
     eslint-plugin-react-refresh: "npm:0.4.4"
     postcss: "npm:8.4.31"
+    prettier-plugin-tailwindcss: "npm:0.5.7"
     tailwindcss: "npm:3.3.5"
     vite: "npm:4.5.0"
     vite-plugin-dts: "npm:3.6.3"
     vite-plugin-lib-inject-css: "npm:1.3.0"
     vitest: "npm:0.34.6"
-  checksum: e0b9debd1d6ed0fe9d99a89053b0ecbf02415923f68597f7aac693ef4765f603be24f83749b3f83f11dcf2c171f5c1f99a11cad9f0a89670a4819d60934b72fd
+  checksum: 9bbd4d422c71090e89ea1c07b4e94fd4d10d510c076190adbf73ccd8b163ae2925c650eacaf604c5ea6bde66c47faa30bd99ceabce91cf7ff959c2f1c05e4a29
   languageName: node
   linkType: hard
 
@@ -12931,6 +12932,59 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier-plugin-tailwindcss@npm:0.5.7":
+  version: 0.5.7
+  resolution: "prettier-plugin-tailwindcss@npm:0.5.7"
+  peerDependencies:
+    "@ianvs/prettier-plugin-sort-imports": "*"
+    "@prettier/plugin-pug": "*"
+    "@shopify/prettier-plugin-liquid": "*"
+    "@shufo/prettier-plugin-blade": "*"
+    "@trivago/prettier-plugin-sort-imports": "*"
+    prettier: ^3.0
+    prettier-plugin-astro: "*"
+    prettier-plugin-css-order: "*"
+    prettier-plugin-import-sort: "*"
+    prettier-plugin-jsdoc: "*"
+    prettier-plugin-organize-attributes: "*"
+    prettier-plugin-organize-imports: "*"
+    prettier-plugin-style-order: "*"
+    prettier-plugin-svelte: "*"
+  peerDependenciesMeta:
+    "@ianvs/prettier-plugin-sort-imports":
+      optional: true
+    "@prettier/plugin-pug":
+      optional: true
+    "@shopify/prettier-plugin-liquid":
+      optional: true
+    "@shufo/prettier-plugin-blade":
+      optional: true
+    "@trivago/prettier-plugin-sort-imports":
+      optional: true
+    prettier-plugin-astro:
+      optional: true
+    prettier-plugin-css-order:
+      optional: true
+    prettier-plugin-import-sort:
+      optional: true
+    prettier-plugin-jsdoc:
+      optional: true
+    prettier-plugin-marko:
+      optional: true
+    prettier-plugin-organize-attributes:
+      optional: true
+    prettier-plugin-organize-imports:
+      optional: true
+    prettier-plugin-style-order:
+      optional: true
+    prettier-plugin-svelte:
+      optional: true
+    prettier-plugin-twig-melody:
+      optional: true
+  checksum: 581820b6b7c9a3dee623b8ad720f1e0b3be36d97e5bb5d51d8734edd31271d763a33e285205f397633ff03a27c82e48aed40103c7d326bce44f47fdf94958deb
+  languageName: node
+  linkType: hard
+
 "prettier@npm:>=3.1.0":
   version: 3.1.0
   resolution: "prettier@npm:3.1.0"
@@ -13917,7 +13971,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root@workspace:."
   dependencies:
-    "@versini/dev-dependencies-client": "npm:1.2.5"
+    "@versini/dev-dependencies-client": "npm:1.3.0"
   languageName: unknown
   linkType: soft
 
