@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.1.0](https://github.com/aversini/ui-components/compare/ui-components-v4.0.4...ui-components-v4.1.0) (2023-11-28)
+
+
+### Features
+
+* **TextInput:** adding support for a right element ([de51662](https://github.com/aversini/ui-components/commit/de5166299fb39384537936a78ad71acaaf584276))
+
+
+### Bug Fixes
+
+* **TextInput:** broken border color due to HEX change ([69de513](https://github.com/aversini/ui-components/commit/69de51351ead9cc3b51a0e6dd4487115e59b968e))
+
 ## [4.0.4](https://github.com/aversini/ui-components/compare/ui-components-v4.0.3...ui-components-v4.0.4) (2023-11-27)
 
 
