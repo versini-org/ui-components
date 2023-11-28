@@ -23,6 +23,8 @@ export const TextInput = ({
 
 	helperText = "",
 
+	rightElement,
+
 	...extraProps
 }: TextInputProps) => {
 	const inputId = useUniqueId({ id, prefix: "av-text-input-" });
@@ -74,6 +76,11 @@ export const TextInput = ({
 					{helperText}
 				</div>
 			)}
+
+			{rightElement && (
+				<span className="av-text-input__control--right">{rightElement}</span>
+			)}
+
 			{error && helperText && (
 				<LiveRegion politeness="polite" clearAnnouncementDelay={500}>
 					{liveErrorMessage}

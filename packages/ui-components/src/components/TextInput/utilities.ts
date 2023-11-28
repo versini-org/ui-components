@@ -117,7 +117,7 @@ export const getTextInputClasses = ({
 }: getTextInputClassesProps) => {
 	const wrapper = raw
 		? className
-		: clsx(`${TEXT_INPUT_WRAPPER_CLASSNAME} w-full`, className);
+		: clsx(`${TEXT_INPUT_WRAPPER_CLASSNAME} w-full justify-center`, className);
 
 	const input = raw
 		? inputClassName
