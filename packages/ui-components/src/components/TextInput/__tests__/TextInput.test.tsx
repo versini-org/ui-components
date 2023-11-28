@@ -84,8 +84,10 @@ describe("TextInput modifiers", () => {
 				data-testid="txtnpt-1"
 			/>,
 		);
-		const input = await screen.findByTestId("txtnpt-1");
-		expect(input.parentElement?.lastChild?.textContent).toBe("right element");
+		const rightElement = await screen.findByText("right element");
+		expect(rightElement?.parentElement?.className).toContain(
+			"av-text-input__control--right",
+		);
 	});
 });
 

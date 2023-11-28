@@ -78,9 +78,7 @@ export const TextInput = ({
 			)}
 
 			{rightElement && (
-				<span className="av-text-input__control av-text-input__control--right">
-					{rightElement}
-				</span>
+				<span className="av-text-input__control--right">{rightElement}</span>
 			)}
 
 			{error && helperText && (
