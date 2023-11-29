@@ -1,3 +1,5 @@
+import { useLayoutEffect, useRef, useState } from "react";
+
 import useUniqueId from "../../common/hooks/useUniqueId";
 import { LiveRegion } from "../private/LiveRegion/LiveRegion";
 import type { TextInputProps } from "./TextInputTypes";
@@ -27,6 +29,8 @@ export const TextInput = ({
 
 	...extraProps
 }: TextInputProps) => {
+	const rightElementRef = useRef<HTMLSpanElement>(null);
+	const [inputPaddingRight, setInputPaddingRight] = useState(0);
 	const inputId = useUniqueId({ id, prefix: "av-text-input-" });
 	const liveErrorMessage = `${name} error, ${helperText}`;
 	const textInputClassName = getTextInputClasses({
@@ -40,6 +44,12 @@ export const TextInput = ({
 		borderKind,
 		errorKind,
 	});
+
+	useLayoutEffect(() => {
+		if (rightElementRef.current) {
+			setInputPaddingRight(rightElementRef.current.offsetWidth + 18 + 10);
+		}
+	}, [rightElement]);
 
 	return (
 		<span className={textInputClassName.wrapper}>
@@ -60,6 +70,7 @@ export const TextInput = ({
 				{...(helperText && { "aria-describedby": `${inputId}-helper` })}
 				{...(error && { "aria-invalid": "true" })}
 				className={textInputClassName.input}
+				{...(rightElement && { style: { paddingRight: inputPaddingRight } })}
 			/>
 			{!raw && (
 				<label
@@ -78,7 +89,9 @@ export const TextInput = ({
 			)}
 
 			{rightElement && (
-				<span className="av-text-input__control--right">{rightElement}</span>
+				<span ref={rightElementRef} className="av-text-input__control--right">
+					{rightElement}
+				</span>
 			)}
 
 			{error && helperText && (
