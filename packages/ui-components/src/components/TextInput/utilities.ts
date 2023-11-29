@@ -81,7 +81,7 @@ const getTextInputLabelClasses = ({
 }) => {
 	return raw
 		? ""
-		: clsx("cursor-text font-medium", {
+		: clsx("absolute cursor-text font-medium", {
 				[`text-copy-error-${errorKind}`]: error,
 				"text-copy-medium": !error,
 				"cursor-not-allowed opacity-50": disabled,
@@ -99,7 +99,7 @@ const getTextInputHelperTextClasses = ({
 }) => {
 	return raw
 		? undefined
-		: clsx(TEXT_INPUT_HELPER_TEXT_CLASSNAME, "font-medium", {
+		: clsx(TEXT_INPUT_HELPER_TEXT_CLASSNAME, "absolute font-medium", {
 				[`text-copy-error-${errorKind}`]: error,
 				"text-copy-medium": !error,
 		  });
@@ -118,7 +118,11 @@ export const getTextInputClasses = ({
 }: getTextInputClassesProps) => {
 	const wrapper = raw
 		? className
-		: clsx(`${TEXT_INPUT_WRAPPER_CLASSNAME} w-full justify-center`, className);
+		: clsx(
+				"relative flex w-full flex-col justify-center",
+				TEXT_INPUT_WRAPPER_CLASSNAME,
+				className,
+		  );
 
 	const input = raw
 		? clsx(inputClassName)
@@ -135,9 +139,9 @@ export const getTextInputClasses = ({
 				},
 		  );
 
-	const topLabel = raw ? undefined : VISUALLY_HIDDEN_CLASSNAME;
+	const accessibleLabel = raw ? undefined : VISUALLY_HIDDEN_CLASSNAME;
 
-	const bottomLabel = getTextInputLabelClasses({
+	const visibleLabel = getTextInputLabelClasses({
 		disabled,
 		raw,
 		error,
@@ -150,13 +154,15 @@ export const getTextInputClasses = ({
 		errorKind,
 	});
 
-	const rightElement = raw ? undefined : TEXT_INPUT_CONTROL_RIGHT_CLASSNAME;
+	const rightElement = raw
+		? undefined
+		: clsx(TEXT_INPUT_CONTROL_RIGHT_CLASSNAME, "absolute");
 
 	return {
 		wrapper,
 		input,
-		topLabel,
-		bottomLabel,
+		accessibleLabel,
+		visibleLabel,
 		helperText,
 		rightElement,
 	};
