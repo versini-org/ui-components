@@ -4,6 +4,7 @@ import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import { TEXT_INPUT_CONTROL_RIGHT_CLASSNAME } from "../../../common/constants";
 import { TextInput } from "../..";
 
 describe("TextInput (exceptions)", () => {
@@ -92,7 +93,7 @@ describe("TextInput modifiers", () => {
 		);
 		const rightElement = await screen.findByText("right element");
 		expect(rightElement?.parentElement?.className).toContain(
-			"av-text-input__control--right",
+			TEXT_INPUT_CONTROL_RIGHT_CLASSNAME,
 		);
 	});
 });

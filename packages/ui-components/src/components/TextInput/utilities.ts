@@ -2,6 +2,7 @@ import clsx from "clsx";
 
 import {
 	TEXT_INPUT_CLASSNAME,
+	TEXT_INPUT_CONTROL_RIGHT_CLASSNAME,
 	TEXT_INPUT_HELPER_TEXT_CLASSNAME,
 	TEXT_INPUT_WRAPPER_CLASSNAME,
 	VISUALLY_HIDDEN_CLASSNAME,
@@ -120,7 +121,7 @@ export const getTextInputClasses = ({
 		: clsx(`${TEXT_INPUT_WRAPPER_CLASSNAME} w-full justify-center`, className);
 
 	const input = raw
-		? inputClassName
+		? clsx(inputClassName)
 		: clsx(
 				TEXT_INPUT_CLASSNAME,
 				inputClassName,
@@ -149,11 +150,14 @@ export const getTextInputClasses = ({
 		errorKind,
 	});
 
+	const rightElement = raw ? undefined : TEXT_INPUT_CONTROL_RIGHT_CLASSNAME;
+
 	return {
 		wrapper,
 		input,
 		topLabel,
 		bottomLabel,
 		helperText,
+		rightElement,
 	};
 };
