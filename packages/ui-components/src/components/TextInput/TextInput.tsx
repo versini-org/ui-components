@@ -53,11 +53,11 @@ export const TextInput = ({
 	}, [rightElement]);
 
 	return (
-		<span className={textInputClassName.wrapper}>
+		<div className={textInputClassName.wrapper}>
 			<label
 				htmlFor={inputId}
 				id={labelId}
-				className={textInputClassName.topLabel}
+				className={textInputClassName.accessibleLabel}
 			>
 				{label}
 			</label>
@@ -78,7 +78,7 @@ export const TextInput = ({
 				<label
 					aria-hidden={true}
 					htmlFor={inputId}
-					className={textInputClassName.bottomLabel}
+					className={textInputClassName.visibleLabel}
 				>
 					{label}
 				</label>
@@ -101,6 +101,6 @@ export const TextInput = ({
 					{liveErrorMessage}
 				</LiveRegion>
 			)}
-		</span>
+		</div>
 	);
 };

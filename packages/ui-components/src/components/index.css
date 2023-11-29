@@ -20,13 +20,19 @@
 }
 
 @layer components {
-	.av-text-input-wrapper {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-	}
-	.av-text-input-wrapper label {
-		position: absolute;
+	/**
+	 * There are 2 labels, one visible and one
+	 * hidden for accessibility.
+	 *
+	 * - The hidden label is used to describe the input
+	 *   field for screen readers.
+	 * - The visible label is used for the animation.
+	 *
+	 * Here we want to apply animation to the visible label.
+	 * It's the one that has the aria-hidden attribute set
+	 * to true.
+	 */
+	.av-text-input-wrapper label[aria-hidden="true"] {
 		/* move the label inline */
 		transform: translate(18px, 0) scale(1);
 		transform-origin: top left;
@@ -57,14 +63,12 @@
 	}
 
 	.av-text-input-helper-text {
-		position: absolute;
 		transform: translate(18px, 30px) scale(0.75);
 		transform-origin: top left;
 		transition: all 0.2s ease-out;
 	}
 
 	.av-text-input__control--right {
-		position: absolute;
 		right: 18px;
 	}
 }
