@@ -29,7 +29,7 @@ export const SvgIcon = ({
 				viewBox={viewBox ? viewBox : defaultViewBox}
 				fill={fill ? fill : "currentColor"}
 				role="img"
-				aria-hidden
+				aria-hidden={decorative}
 				focusable={false}
 				{...rest}
 			>
