@@ -34,11 +34,11 @@ type Story = StoryObj<typeof IconDogInShield>;
 export const Basic: Story = {
 	render: (args) => (
 		<div className="flex flex-wrap gap-2">
-			<IconDogInShield {...args} />
 			<IconClose {...args} />
 			<IconCopied {...args} />
 			<IconCopy {...args} />
 			<IconDelete {...args} />
+			<IconDogInShield {...args} />
 			<IconEdit {...args} />
 			<IconRestore {...args} />
 			<IconSettings {...args} />

@@ -1,17 +1,37 @@
+/* global process */
+
 import path from "node:path";
 import util from "node:util";
 
 import fs from "fs-extra";
 
-const iconTemplate = ({ name, viewBox, svgData }) => `/**
+const config = JSON.parse(
+	await fs.readFile(path.join(process.cwd(), "lib", "icons", "config.json")),
+);
+
+const iconTemplate = ({
+	name,
+	originalName,
+	title,
+	viewBox,
+	svgData,
+	copyright,
+}) => `/**
  * This file was automatically generated.
  * Please do not edit manually.
+ *
+ * To update this file, run \`yarn build:icons\`.
+ *
+ * Original name: ${originalName}.svg
+ *
+ * ${copyright}
+ *
  */
 
 import { SvgIcon } from "../private/SvgIcon/SvgIcon";
 import type { IconsProps } from "./IconsTypes";
 
-export const Icon${name} = ({
+export const ${name} = ({
 	className,
 	viewBox,
 	spacing,
@@ -24,7 +44,7 @@ export const Icon${name} = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="${name}"
+			title="${title}"
 			{...rest}
 		>
 			${svgData}
@@ -42,24 +62,41 @@ const generateIcons = async () => {
 
 	const svgFolder = path.join(process.cwd(), "lib", "icons", "svg");
 	const icons = await readdir(svgFolder);
-	// const iconsNames = icons.map((icon) => upperFirst(icon.replace(".svg", "")));
-	// console.log("==> ", iconsNames);
 
-	const iconsData = await Promise.all(
+	await Promise.all(
 		icons.map(async (icon) => {
-			// need to extract the content of the svg file between the <svg> tags
+			const originalName = icon.replace(".svg", "");
+			const title = config[originalName]?.title || originalName;
+			const iconName =
+				config[originalName]?.name || "Icon" + upperFirst(originalName);
+
 			const svg = await readFile(path.join(svgFolder, `${icon}`), "utf8");
+
+			/** Need to extract the comments from the svg file, including the
+			 * opening and closing tags
+			 */
+			const comments = svg.match(/<!--[^>]*-->/g).join("");
+
+			/** Need to extract the viewBox from the svg file */
+			const viewBox = svg.match(/viewBox="([^"]*)"/)[1];
+
+			/** Need to extract the content of the svg file between the <svg> tags,
+			 * remove any comments, extra white space and fix the closing tags.
+			 */
 			const svgData = svg
 				.match(/<svg[^>]*>(.*)<\/svg>/s)[1]
-				.replace("<!--", "{/* ")
-				.replace("-->", "*/}\n\t\t\t");
+				.replace(comments, "")
+				.replace('"/>', '" />')
+				.trimStart()
+				.trimEnd();
 
-			const viewBox = svg.match(/viewBox="([^"]*)"/)[1];
-			const iconName = upperFirst(icon.replace(".svg", ""));
 			const iconFile = iconTemplate({
 				name: iconName,
+				originalName,
+				title,
 				viewBox,
 				svgData,
+				copyright: comments.replace("<!--", "").replace("-->", ""),
 			});
 			return fs.outputFile(
 				path.join(
@@ -67,7 +104,7 @@ const generateIcons = async () => {
 					"src",
 					"components",
 					"Icons",
-					`Icon${iconName}.tsx`,
+					`${iconName}.tsx`,
 				),
 				iconFile,
 				"utf8",

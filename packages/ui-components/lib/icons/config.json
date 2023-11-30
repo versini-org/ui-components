@@ -1,0 +1,38 @@
+{
+	"clone": {
+		"name": "IconCopy",
+		"title": "Copy"
+	},
+	"ellipsis": {
+		"name": "IconSettings",
+		"title": "Settings"
+	},
+	"face-smile": {
+		"name": "IconUser",
+		"title": "User"
+	},
+	"pen-to-square": {
+		"name": "IconEdit",
+		"title": "Edit"
+	},
+	"shield-dog": {
+		"name": "IconDogInShield",
+		"title": "Dog"
+	},
+	"square-check": {
+		"name": "IconCopied",
+		"title": "Copied"
+	},
+	"trash-can": {
+		"name": "IconDelete",
+		"title": "Delete"
+	},
+	"window-restore": {
+		"name": "IconRestore",
+		"title": "Restore"
+	},
+	"xmark": {
+		"name": "IconClose",
+		"title": "Close"
+	}
+}
