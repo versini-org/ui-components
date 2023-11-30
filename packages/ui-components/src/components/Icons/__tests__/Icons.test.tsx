@@ -1,16 +1,20 @@
 import { render, screen } from "@testing-library/react";
 
+import {
+	IconClose,
+	IconCopied,
+	IconCopy,
+	IconDelete,
+	IconDog,
+	IconDogInShield,
+	IconEdit,
+	IconHide,
+	IconRestore,
+	IconSettings,
+	IconShow,
+	IconUser,
+} from "../..";
 import { defaultIconSize } from "../constants";
-import { IconClose } from "../IconClose";
-import { IconCopied } from "../IconCopied";
-import { IconCopy } from "../IconCopy";
-import { IconDelete } from "../IconDelete";
-import { IconDog } from "../IconDog";
-import { IconDogInShield } from "../IconDogInShield";
-import { IconEdit } from "../IconEdit";
-import { IconRestore } from "../IconRestore";
-import { IconSettings } from "../IconSettings";
-import { IconUser } from "../IconUser";
 
 const renderExpected = async ({
 	dataTestId,
@@ -118,6 +122,20 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
+					<IconHide
+						data-testid="icon-hide"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
+					<IconShow
+						data-testid="icon-show"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 				</>,
 			);
 
@@ -131,6 +149,8 @@ describe("Generic Icons prop tests", () => {
 				"icon-restore",
 				"icon-settings",
 				"icon-user",
+				"icon-hide",
+				"icon-show",
 			].forEach(async (dataTestId) => {
 				await renderExpected({
 					dataTestId,
