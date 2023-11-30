@@ -6,8 +6,10 @@ import {
 	IconDelete,
 	IconDogInShield,
 	IconEdit,
+	IconHide,
 	IconRestore,
 	IconSettings,
+	IconShow,
 	IconUser,
 } from "@versini/ui-components";
 
@@ -40,8 +42,10 @@ export const Basic: Story = {
 			<IconDelete {...args} />
 			<IconDogInShield {...args} />
 			<IconEdit {...args} />
+			<IconHide {...args} />
 			<IconRestore {...args} />
 			<IconSettings {...args} />
+			<IconShow {...args} />
 			<IconUser {...args} />
 		</div>
 	),

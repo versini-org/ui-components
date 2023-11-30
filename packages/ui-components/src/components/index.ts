@@ -13,8 +13,10 @@ import { IconDelete } from "./Icons/IconDelete";
 import { IconDog } from "./Icons/IconDog";
 import { IconDogInShield } from "./Icons/IconDogInShield";
 import { IconEdit } from "./Icons/IconEdit";
+import { IconHide } from "./Icons/IconHide";
 import { IconRestore } from "./Icons/IconRestore";
 import { IconSettings } from "./Icons/IconSettings";
+import { IconShow } from "./Icons/IconShow";
 import { IconUser } from "./Icons/IconUser";
 import { Main } from "./Main/Main";
 import { TextInput } from "./TextInput/TextInput";
@@ -33,8 +35,10 @@ export {
 	IconDog,
 	IconDogInShield,
 	IconEdit,
+	IconHide,
 	IconRestore,
 	IconSettings,
+	IconShow,
 	IconUser,
 	Main,
 	TextInput,
