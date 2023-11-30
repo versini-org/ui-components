@@ -14,6 +14,7 @@ export const IconDog = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
+			title="Sassy Dog"
 			{...rest}
 		>
 			<g transform="matrix(11.9092 0 0 11.9092 470.0017 250.0009)" id="879221">
