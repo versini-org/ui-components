@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/aversini/ui-components/compare/ui-components-v4.1.1...ui-components-v4.2.0) (2023-11-30)
+
+
+### Features
+
+* **Icons:** adding IconHide and IconShow ([d36d58d](https://github.com/aversini/ui-components/commit/d36d58dcc97436729d6dd5a6cdff1c5235f21c16))
+
 ## [4.1.1](https://github.com/aversini/ui-components/compare/ui-components-v4.1.0...ui-components-v4.1.1) (2023-11-30)
 
 
