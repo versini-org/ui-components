@@ -7,6 +7,14 @@
 		"name": "IconSettings",
 		"title": "Settings"
 	},
+	"eye": {
+		"name": "IconShow",
+		"title": "Show"
+	},
+	"eye-slash": {
+		"name": "IconHide",
+		"title": "Hide"
+	},
 	"face-smile": {
 		"name": "IconUser",
 		"title": "User"
