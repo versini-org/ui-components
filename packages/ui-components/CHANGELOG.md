@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.1.1](https://github.com/aversini/ui-components/compare/ui-components-v4.1.0...ui-components-v4.1.1) (2023-11-30)
+
+
+### Bug Fixes
+
+* refactor all icons for accessibility and consistency ([baf285e](https://github.com/aversini/ui-components/commit/baf285e013a3e5ecc26c38ed874b8fddaf410c8f))
+* **TextInput:** missing paddings around right element ([6a8c6cd](https://github.com/aversini/ui-components/commit/6a8c6cd36d3c8ca06b6545f72066997a6d1b6bc1))
+
 ## [4.1.0](https://github.com/aversini/ui-components/compare/ui-components-v4.0.4...ui-components-v4.1.0) (2023-11-28)
 
 
