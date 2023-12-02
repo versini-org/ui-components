@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { mergeRefs } from "../../common/utilities";
 import { ButtonIcon, IconHide, IconShow, TextInput } from "..";
@@ -112,6 +112,12 @@ export const TextInputMask = React.forwardRef<
 			restartAutoMaskTimer();
 			onChange && onChange(e);
 		};
+
+		useEffect(() => {
+			return () => {
+				clearTimeout(automaskTimerRef.current);
+			};
+		}, []);
 
 		/**
 		 * TextInputMask rules.
