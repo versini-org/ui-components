@@ -19,6 +19,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			raw = false,
 			noBorder = false,
 			"aria-label": ariaLabel,
+
+			...otherProps
 		},
 		ref,
 	) => {
@@ -43,6 +45,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				disabled={disabled}
 				type={type}
 				aria-label={ariaLabel}
+				{...otherProps}
 			>
 				{children}
 			</button>

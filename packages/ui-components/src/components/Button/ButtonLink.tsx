@@ -20,6 +20,8 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 			link,
 			target,
 			maxLabelLength,
+
+			...otherProps
 		},
 		ref,
 	) => {
@@ -44,6 +46,7 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 		const extraProps = {
 			target,
 			rel: target === "_blank" ? "noopener noreferrer" : undefined,
+			...otherProps,
 		};
 
 		return (
