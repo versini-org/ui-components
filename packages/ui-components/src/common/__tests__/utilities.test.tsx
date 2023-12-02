@@ -72,7 +72,7 @@ describe("Non-DOM tests", () => {
 
 describe("DOM tests", () => {
 	describe("when testing for mergeRefs", () => {
-		test("mergeRefs", () => {
+		it("should combine multiple refs of different types", () => {
 			const Dummy = React.forwardRef(function Dummy(_, ref) {
 				React.useImperativeHandle(ref, () => "refValue");
 				return null;
@@ -88,6 +88,7 @@ describe("DOM tests", () => {
 			expect(refAsFunc).toHaveBeenCalledTimes(1);
 			expect(refAsFunc).toHaveBeenCalledWith("refValue");
 			expect(refAsObj.current).toBe("refValue");
+
 			rerender(<Example visible={false} />);
 			expect(refAsFunc).toHaveBeenCalledTimes(2);
 			expect(refAsFunc).toHaveBeenCalledWith(null);
