@@ -63,7 +63,9 @@ export const TextInputMask = React.forwardRef<
 			}
 		};
 
-		const handleShowMaskButtonClick = (e: any) => {
+		const handleShowMaskButtonClick = (
+			e: React.SyntheticEvent<Element, Event>,
+		) => {
 			e.preventDefault();
 			const newHiddenState = !isMaskedRef.current;
 			isMaskedRef.current = newHiddenState;
@@ -82,7 +84,9 @@ export const TextInputMask = React.forwardRef<
 			onMaskChange && onMaskChange({ e, masked: newHiddenState });
 		};
 
-		const handleTextInputMaskBlur = (e: any) => {
+		const handleTextInputMaskBlur = (
+			e: React.FocusEvent<HTMLInputElement | HTMLButtonElement, Element>,
+		) => {
 			const { relatedTarget } = e;
 			/**
 			 * If the related target is not a child of the input,
@@ -97,18 +101,22 @@ export const TextInputMask = React.forwardRef<
 			}
 		};
 
-		const handleFieldBlur = (e: any) => {
+		const handleFieldBlur = (
+			e: React.FocusEvent<HTMLInputElement, Element>,
+		) => {
 			restartAutoMaskTimer();
 			onBlur && onBlur(e);
 			handleTextInputMaskBlur(e);
 		};
 
-		const handleFieldFocus = (e: any) => {
+		const handleFieldFocus = (
+			e: React.FocusEvent<HTMLInputElement, Element>,
+		) => {
 			restartAutoMaskTimer();
 			onFocus && onFocus(e);
 		};
 
-		const handleChange = (e: any) => {
+		const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 			restartAutoMaskTimer();
 			onChange && onChange(e);
 		};
