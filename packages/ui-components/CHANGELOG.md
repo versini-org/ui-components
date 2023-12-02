@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.0](https://github.com/aversini/ui-components/compare/ui-components-v4.2.0...ui-components-v4.3.0) (2023-12-02)
+
+
+### Features
+
+* adding TextInputMask component ([045e2f2](https://github.com/aversini/ui-components/commit/045e2f25a5bc6917c21dc8413c558973481817ec))
+
 ## [4.2.0](https://github.com/aversini/ui-components/compare/ui-components-v4.1.1...ui-components-v4.2.0) (2023-11-30)
 
 
