@@ -66,7 +66,6 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 					{label}
 				</label>
 				<input
-					{...extraProps}
 					ref={ref}
 					id={inputId}
 					name={name}
@@ -78,6 +77,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 					{...(error && { "aria-invalid": "true" })}
 					{...(rightElement &&
 						!raw && { style: { paddingRight: inputPaddingRight } })}
+					{...extraProps}
 				/>
 				{!raw && (
 					<label

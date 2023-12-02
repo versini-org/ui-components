@@ -135,7 +135,6 @@ export const TextInputMask = React.forwardRef<
 		return (
 			<>
 				<TextInput
-					{...otherProps}
 					ref={mergedInputRef}
 					name={name}
 					label={label}
@@ -154,6 +153,7 @@ export const TextInputMask = React.forwardRef<
 							{masked ? <IconShow /> : <IconHide />}
 						</ButtonIcon>
 					}
+					{...otherProps}
 				/>
 
 				<LiveRegion
