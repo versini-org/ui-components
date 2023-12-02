@@ -34,7 +34,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		},
 		ref,
 	) => {
-		const rightElementRef = useRef<HTMLSpanElement>(null);
+		const rightElementRef = useRef<HTMLDivElement>(null);
 		const [inputPaddingRight, setInputPaddingRight] = useState(0);
 		const inputId = useUniqueId({ id, prefix: `${TEXT_INPUT_CLASSNAME}-` });
 		const liveErrorMessage = `${name} error, ${helperText}`;
@@ -99,12 +99,12 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 				)}
 
 				{rightElement && (
-					<span
+					<div
 						ref={rightElementRef}
 						className={textInputClassName.rightElement}
 					>
 						{rightElement}
-					</span>
+					</div>
 				)}
 
 				{error && helperText && (
