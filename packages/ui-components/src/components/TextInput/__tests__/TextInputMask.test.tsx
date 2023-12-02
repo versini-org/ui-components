@@ -6,6 +6,13 @@ import userEvent from "@testing-library/user-event";
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
 import { TextInputMask } from "../..";
 
+function renderWithUserEvent(jsx: JSX.Element) {
+	return {
+		user: userEvent.setup(),
+		...render(jsx),
+	};
+}
+
 describe("TextInputMask (exceptions)", () => {
 	it("should be able to require/import from root", () => {
 		expect(TextInputMask).toBeDefined();
@@ -87,223 +94,6 @@ describe("TextInputMask modifiers", () => {
 		expect(input.className).toContain("toto");
 		expect(input.parentElement?.className).not.toContain("toto");
 	});
-
-	it.skip("should call the `onMaskChange` function with correct parameters on Show/Hide button click", async () => {
-		const user = userEvent.setup();
-		const onMaskChangeHandler = jest.fn();
-		await act(async () => {
-			render(
-				<ThemeProvider>
-					<TextInputMask
-						name="hello"
-						label="hello world"
-						onMaskChange={onMaskChangeHandler}
-					/>
-				</ThemeProvider>,
-			);
-		});
-		const button = screen.getByRole("button");
-		await user.click(button);
-		expect(onMaskChangeHandler).toHaveBeenCalledWith({
-			e: expect.anything(),
-			masked: false,
-		});
-		await user.click(button);
-		expect(onMaskChangeHandler).toHaveBeenCalledWith({
-			e: expect.anything(),
-			masked: true,
-		});
-	});
-	it.skip("should handle the onTextInputMaskBlur blur event when focus moves from the input outside the component", async () => {
-		const user = userEvent.setup();
-		const onTextInputMaskBlurMock = jest.fn();
-		await act(async () => {
-			render(
-				<ThemeProvider>
-					<TextInputMask
-						name="hello"
-						label="hello world"
-						data-testid="txtnptmsk-1"
-						onTextInputMaskBlur={onTextInputMaskBlurMock}
-					/>
-				</ThemeProvider>,
-			);
-		});
-
-		const input = screen.getByTestId("txtnptmsk-1");
-
-		await user.clear(input);
-		await user.tab({ shift: true });
-
-		expect(document.body).toHaveFocus();
-		expect(onTextInputMaskBlurMock).toHaveBeenCalledTimes(1);
-	});
-	it.skip("should handle the onTextInputMaskBlur blur event when focus moves from the Show/Hide button outside the component", async () => {
-		const user = userEvent.setup();
-		const onTextInputMaskBlurMock = jest.fn();
-		await act(async () => {
-			render(
-				<ThemeProvider>
-					<TextInputMask
-						name="hello"
-						label="hello world"
-						data-testid="txtnptmsk-1"
-						onTextInputMaskBlur={onTextInputMaskBlurMock}
-					/>
-				</ThemeProvider>,
-			);
-		});
-
-		const input = screen.getByTestId("txtnptmsk-1");
-		const button = screen.getByRole("button");
-
-		await user.clear(input);
-		await user.tab();
-
-		expect(button).toHaveFocus();
-
-		await user.tab();
-
-		expect(document.body).toHaveFocus();
-		expect(onTextInputMaskBlurMock).toHaveBeenCalledTimes(1);
-	});
-	it.skip("should not handle the onTextInputMaskBlur blur event when focus moves from the input to the Show/Hide button", async () => {
-		const user = userEvent.setup();
-		const onTextInputMaskBlurMock = jest.fn();
-		await act(async () => {
-			render(
-				<ThemeProvider>
-					<TextInputMask
-						name="hello"
-						label="hello world"
-						data-testid="txtnptmsk-1"
-						onTextInputMaskBlur={onTextInputMaskBlurMock}
-					/>
-				</ThemeProvider>,
-			);
-		});
-
-		const input = screen.getByTestId("txtnptmsk-1");
-		const button = screen.getByRole("button");
-
-		await user.clear(input);
-		await user.tab();
-
-		expect(button).toHaveFocus();
-
-		expect(onTextInputMaskBlurMock).not.toHaveBeenCalled();
-	});
-	it.skip("should not handle the onTextInputMaskBlur blur event when focus moves from the Show/Hide button to the input", async () => {
-		const user = userEvent.setup();
-		const onTextInputMaskBlurMock = jest.fn();
-		await act(async () => {
-			render(
-				<ThemeProvider>
-					<TextInputMask
-						name="hello"
-						label="hello world"
-						data-testid="txtnptmsk-1"
-						onTextInputMaskBlur={onTextInputMaskBlurMock}
-					/>
-				</ThemeProvider>,
-			);
-		});
-
-		const input = screen.getByTestId("txtnptmsk-1");
-		const button = screen.getByRole("button");
-
-		await user.clear(input);
-		await user.tab();
-
-		expect(button).toHaveFocus();
-
-		await user.tab({ shift: true });
-
-		expect(input).toHaveFocus();
-		expect(onTextInputMaskBlurMock).not.toHaveBeenCalled();
-	});
-	it.skip("should handle the onBlur blur event when focus moves from the input", async () => {
-		const user = userEvent.setup();
-		const onBlurMock = jest.fn();
-		await act(async () => {
-			render(
-				<ThemeProvider>
-					<TextInputMask
-						name="hello"
-						label="hello world"
-						data-testid="txtnptmsk-1"
-						onBlur={onBlurMock}
-					/>
-				</ThemeProvider>,
-			);
-		});
-
-		const input = screen.getByTestId("txtnptmsk-1");
-		await user.clear(input);
-		await user.tab();
-
-		expect(onBlurMock).toHaveBeenCalled();
-	});
-	it.skip("should call the onValueChange handler when field value is changed", async () => {
-		const user = userEvent.setup();
-		let result = null;
-		const handleSubmit = jest.fn();
-		const handleOnValueChange = (values) => {
-			result = values;
-		};
-
-		await act(async () => {
-			render(
-				<ThemeProvider>
-					<Form onSubmit={handleSubmit}>
-						<TextInputMask
-							name="hello"
-							label="hello world"
-							data-testid="txtnptmsk-1"
-							onValueChange={handleOnValueChange}
-						/>
-					</Form>
-				</ThemeProvider>,
-			);
-		});
-
-		const input = screen.getByTestId("txtnptmsk-1");
-		await user.type(input, "a");
-		const { e, value, name, id, type } = result;
-		expect(value).toBe("a");
-		expect(name).toBe("hello");
-		expect(type).toBe("password");
-		expect(typeof id).toBe("string");
-		expect(typeof e).toBe("object");
-	});
-	it.skip("should receive focus when a form is submitted with an empty required field", async () => {
-		const user = userEvent.setup();
-		const handleSubmit = jest.fn();
-
-		await act(async () => {
-			render(
-				<ThemeProvider>
-					<Form onSubmit={handleSubmit}>
-						<TextInputMask
-							name="hello"
-							label="hello world"
-							data-testid="txtnptmsk-1"
-							required
-						/>
-						<Button type="submit">Submit</Button>
-					</Form>
-				</ThemeProvider>,
-			);
-		});
-
-		const input = screen.getByTestId("txtnptmsk-1");
-		const button = screen.getByText("Submit").parentElement;
-		await user.click(button);
-		expect(handleSubmit.mock.calls).toHaveLength(0);
-		const errorNode = await screen.findAllByText("Enter hello world");
-		expect(errorNode[0]).toHaveAttribute("aria-hidden", "true");
-		expect(input).toHaveFocus();
-	});
 });
 
 describe("TextInputMask methods", () => {
@@ -354,6 +144,134 @@ describe("TextInputMask methods", () => {
 			e: expect.anything(),
 			masked: true,
 		});
+	});
+
+	it("should call the `onTextInputMaskBlur` callback when focus moves from the input outside the component", async () => {
+		const onTextInputMaskBlurMock = vi.fn();
+
+		const { user } = renderWithUserEvent(
+			<TextInputMask
+				name="hello"
+				label="hello world"
+				data-testid="txtnptmsk-1"
+				onTextInputMaskBlur={onTextInputMaskBlurMock}
+			/>,
+		);
+
+		const input = screen.getByTestId("txtnptmsk-1");
+
+		await user.type(input, "aa");
+		expect(input).toHaveFocus();
+
+		await user.clear(input);
+		await user.tab({ shift: true });
+		expect(document.body).toHaveFocus();
+		expect(onTextInputMaskBlurMock).toHaveBeenCalledTimes(1);
+	});
+
+	it("should call the `onTextInputMaskBlur` callback when focus moves from the Show/Hide button outside the component", async () => {
+		const onTextInputMaskBlurMock = vi.fn();
+
+		const { user } = renderWithUserEvent(
+			<TextInputMask
+				name="hello"
+				label="hello world"
+				data-testid="txtnptmsk-1"
+				onTextInputMaskBlur={onTextInputMaskBlurMock}
+			/>,
+		);
+
+		const input = screen.getByTestId("txtnptmsk-1");
+		const button = screen.getByRole("button");
+
+		await user.clear(input);
+		await user.tab();
+		expect(button).toHaveFocus();
+
+		await user.tab();
+		expect(document.body).toHaveFocus();
+		expect(onTextInputMaskBlurMock).toHaveBeenCalledTimes(1);
+	});
+
+	it("should not call the `onTextInputMaskBlur` callback when focus moves from the input to the Show/Hide button", async () => {
+		const onTextInputMaskBlurMock = vi.fn();
+
+		const { user } = renderWithUserEvent(
+			<TextInputMask
+				name="hello"
+				label="hello world"
+				data-testid="txtnptmsk-1"
+				onTextInputMaskBlur={onTextInputMaskBlurMock}
+			/>,
+		);
+
+		const input = screen.getByTestId("txtnptmsk-1");
+		const button = screen.getByRole("button");
+
+		await user.clear(input);
+		await user.tab();
+
+		expect(button).toHaveFocus();
+		expect(onTextInputMaskBlurMock).not.toHaveBeenCalled();
+	});
+
+	it("should not call the `onTextInputMaskBlur` callback when focus moves from the Show/Hide button back to the input", async () => {
+		const onTextInputMaskBlurMock = vi.fn();
+
+		const { user } = renderWithUserEvent(
+			<TextInputMask
+				name="hello"
+				label="hello world"
+				data-testid="txtnptmsk-1"
+				onTextInputMaskBlur={onTextInputMaskBlurMock}
+			/>,
+		);
+
+		const input = screen.getByTestId("txtnptmsk-1");
+		const button = screen.getByRole("button");
+
+		await user.clear(input);
+		await user.tab();
+		expect(button).toHaveFocus();
+
+		await user.tab({ shift: true });
+		expect(input).toHaveFocus();
+		expect(onTextInputMaskBlurMock).not.toHaveBeenCalled();
+	});
+
+	it("should call the `onBlur` callback when focus moves from the input", async () => {
+		const onBlurMock = vi.fn();
+		const { user } = renderWithUserEvent(
+			<TextInputMask
+				name="hello"
+				label="hello world"
+				data-testid="txtnptmsk-1"
+				onBlur={onBlurMock}
+			/>,
+		);
+
+		const input = screen.getByTestId("txtnptmsk-1");
+		await user.clear(input);
+		await user.tab();
+
+		expect(onBlurMock).toHaveBeenCalled();
+	});
+
+	it("should call the `onFocus` callback when focus moves into the input", async () => {
+		const onFocusMock = vi.fn();
+		const { user } = renderWithUserEvent(
+			<TextInputMask
+				name="hello"
+				label="hello world"
+				data-testid="txtnptmsk-1"
+				onFocus={onFocusMock}
+			/>,
+		);
+
+		const input = screen.getByTestId("txtnptmsk-1");
+		await user.clear(input);
+
+		expect(onFocusMock).toHaveBeenCalled();
 	});
 });
 

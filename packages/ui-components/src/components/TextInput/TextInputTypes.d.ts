@@ -19,10 +19,10 @@ export type TextInputProps = {
 
 export type TextInputMaskProps = {
 	onMaskChange?: ({
-		event,
+		e,
 		masked,
 	}: {
-		event: React.SyntheticEvent;
+		e: React.SyntheticEvent;
 		masked: boolean;
 	}) => void;
 	onTextInputMaskBlur?: () => void;

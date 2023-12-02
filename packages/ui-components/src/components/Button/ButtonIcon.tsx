@@ -19,6 +19,8 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			"aria-label": ariaLabel,
 			label,
 			size = "medium",
+
+			...otherProps
 		},
 		ref,
 	) => {
@@ -37,6 +39,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 		return (
 			<>
 				<button
+					{...otherProps}
 					ref={ref}
 					className={buttonClass}
 					onClick={onClick}

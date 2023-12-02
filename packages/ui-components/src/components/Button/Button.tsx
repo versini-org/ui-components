@@ -19,6 +19,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			raw = false,
 			noBorder = false,
 			"aria-label": ariaLabel,
+
+			...otherProps
 		},
 		ref,
 	) => {
@@ -37,6 +39,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
 		return (
 			<button
+				{...otherProps}
 				ref={ref}
 				className={buttonClass}
 				onClick={onClick}
