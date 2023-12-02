@@ -1,4 +1,4 @@
-export type TextInputProps = {
+export type CommonTextInputProps = {
 	label: string;
 	name: string;
 	labelId?: string;
@@ -10,5 +10,21 @@ export type TextInputProps = {
 	raw?: boolean;
 	noBorder?: boolean;
 	inputClassName?: string;
-	rightElement?: React.ReactElement;
 } & React.InputHTMLAttributes<HTMLInputElement>;
+
+export type TextInputProps = {
+	rightElement?: React.ReactElement;
+} & CommonTextInputProps &
+	React.InputHTMLAttributes<HTMLInputElement>;
+
+export type TextInputMaskProps = {
+	onMaskChange?: ({
+		event,
+		masked,
+	}: {
+		event: React.SyntheticEvent;
+		masked: boolean;
+	}) => void;
+	onTextInputMaskBlur?: () => void;
+} & CommonTextInputProps &
+	React.InputHTMLAttributes<HTMLInputElement>;

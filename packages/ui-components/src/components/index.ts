@@ -20,7 +20,7 @@ import { IconShow } from "./Icons/IconShow";
 import { IconUser } from "./Icons/IconUser";
 import { Main } from "./Main/Main";
 import { TextInput } from "./TextInput/TextInput";
-import { TextInputMask } from "./TextInputMask/TextInputMask";
+import { TextInputMask } from "./TextInput/TextInputMask";
 
 export {
 	Button,

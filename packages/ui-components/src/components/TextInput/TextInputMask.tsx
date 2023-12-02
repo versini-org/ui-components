@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 
 import { ButtonIcon, IconHide, IconShow, TextInput } from "..";
 import { LiveRegion } from "../private/LiveRegion/LiveRegion";
-import type { TextInputMaskProps } from "./TextInputMaskTypes";
+import type { TextInputMaskProps } from "./TextInputTypes";
 
 const CLEAR_ANNOUNCEMENT_TIMEOUT = 500;
 const AUTO_HIDE_CLEAR_ANNOUNCEMENT_TIMEOUT = 5000;
@@ -67,7 +67,9 @@ export const TextInputMask = ({
 			message: newHiddenState ? "Characters hidden" : "Characters showing",
 		});
 
-		/** callback that can be used by apps to generate show/hide analytics */
+		/**
+		 * Callback that can be used to generate show/hide analytics.
+		 */
 		onMaskChange && onMaskChange({ event: e, masked: newHiddenState });
 	};
 
@@ -105,16 +107,18 @@ export const TextInputMask = ({
 	};
 
 	/**
-	 * LiveRegion rules.
+	 * TextInputMask rules.
 	 *
-	 * If button label is Show, then characters must be masked.
-	 *    - For password fields, toggle type to password e.g. <input type="password">.
-	 *    - Once activated, toggle the input text to show characters and live region
-	 *      (aria-live="assertive") should announce, "showing characters" or similar.
-	 *  If button label is Hide, then characters must be unmasked.
-	 *    - For password fields, toggle type to text e.g. <input type="text">.
-	 *    - Once activated toggle the input text to hide characters and live region
-	 *      (aria-live="assertive") should announce, "hiding characters" or similar.
+	 *  If button label is "Show", then characters must be masked.
+	 *    - Type is set to password e.g. <input type="password">.
+	 *    - Once button is clicked, toggle the input text to show characters
+	 *      (type="text") and live region (aria-live="assertive") should
+	 *      announce, "showing characters" or similar.
+	 *  If button label is "Hide", then characters must be unmasked.
+	 *     Type is set to password e.g. <input type="text">.
+	 *    - Once button is clicked, toggle the input text to hide characters
+	 *      (type="password") and live region (aria-live="assertive") should
+	 *      announce, "hiding characters" or similar.
 	 *  If 20 seconds have passed and text input mask field has no focus-in nor
 	 *  keystrokes while text input mask characters are shown, then hide characters,
 	 *  toggle control label back to "Show", and use aria-live="polite" to announce
