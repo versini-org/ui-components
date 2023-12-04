@@ -11,4 +11,4 @@ export type TextAreaProps = {
 	noBorder?: boolean;
 	textAreaClassName?: string;
 	rightElement?: React.ReactElement;
-} & React.TextAreaHTMLAttributes<HTMLTextAreaElement>;
+} & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
