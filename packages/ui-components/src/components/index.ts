@@ -19,6 +19,7 @@ import { IconSettings } from "./Icons/IconSettings";
 import { IconShow } from "./Icons/IconShow";
 import { IconUser } from "./Icons/IconUser";
 import { Main } from "./Main/Main";
+import { TextArea } from "./TextArea/TextArea";
 import { TextInput } from "./TextInput/TextInput";
 import { TextInputMask } from "./TextInput/TextInputMask";
 
@@ -42,6 +43,7 @@ export {
 	IconShow,
 	IconUser,
 	Main,
+	TextArea,
 	TextInput,
 	TextInputMask,
 };

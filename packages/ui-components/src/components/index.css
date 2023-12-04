@@ -32,11 +32,12 @@
 	 * It's the one that has the aria-hidden attribute set
 	 * to true.
 	 */
-	.av-text-input-wrapper label[aria-hidden="true"] {
+	.av-text-input-wrapper label[aria-hidden="true"],
+	.av-text-area-wrapper label[aria-hidden="true"] {
 		/* move the label inline */
 		transform: translate(18px, 0) scale(1);
 		transform-origin: top left;
-		transition: all 0.2s ease-out;
+		transition: var(--av-text-area-wrapper-transition, all 0.2s ease-out);
 	}
 
 	/**
@@ -57,18 +58,22 @@
 	 * input.
    */
 	.av-text-input:focus + label[aria-hidden="true"],
-	.av-text-input:not(:placeholder-shown) + label[aria-hidden="true"] {
+	.av-text-input:not(:placeholder-shown) + label[aria-hidden="true"],
+	.av-text-area:focus + label[aria-hidden="true"],
+	.av-text-area:not(:placeholder-shown) + label[aria-hidden="true"] {
 		/* move the label up */
-		transform: translate(18px, -25px) scale(0.75);
+		transform: translate(18px, var(--av-text-area-label, -25px)) scale(0.75);
 	}
 
-	.av-text-input-helper-text {
-		transform: translate(18px, 30px) scale(0.75);
+	.av-text-input-helper-text,
+	.av-text-area-helper-text {
+		transform: translate(18px, var(--av-text-area-helper-text, 30px))
+			scale(0.75);
 		transform-origin: top left;
-		transition: all 0.2s ease-out;
 	}
 
-	.av-text-input__control--right {
+	.av-text-input__control--right,
+	.av-text-area__control--right {
 		right: 18px;
 	}
 }
