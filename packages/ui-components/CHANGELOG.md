@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.5.0](https://github.com/aversini/ui-components/compare/ui-components-v4.4.1...ui-components-v4.5.0) (2023-12-04)
+
+
+### Features
+
+* adding sourcemaps to production builds ([0076580](https://github.com/aversini/ui-components/commit/007658092716034dea48a7ddb11c0163c55ee782))
+
 ## [4.4.1](https://github.com/aversini/ui-components/compare/ui-components-v4.4.0...ui-components-v4.4.1) (2023-12-04)
 
 
