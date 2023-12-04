@@ -7,7 +7,6 @@ const meta: Meta<typeof TextArea> = {
 		controls: { exclude: ["spacing", "rightElement"], sort: "requiredFirst" },
 	},
 	args: {
-		type: "text",
 		label: "Type your question here",
 		name: "username",
 		disabled: false,
@@ -17,14 +16,14 @@ const meta: Meta<typeof TextArea> = {
 		borderKind: "dark",
 		errorKind: "light",
 		error: false,
-		inputClassName: "",
+		textAreaClassName: "",
 		className: "",
 	},
 	argTypes: {
 		className: {
 			control: "text",
 		},
-		inputClassName: {
+		textAreaClassName: {
 			control: "text",
 		},
 		labelId: {

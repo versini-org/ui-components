@@ -5,7 +5,7 @@ import useUniqueId from "../../common/hooks/useUniqueId";
 import { mergeRefs } from "../../common/utilities";
 import { LiveRegion } from "../private/LiveRegion/LiveRegion";
 import type { TextAreaProps } from "./TextAreaTypes";
-import { getTextInputClasses } from "./utilities";
+import { getTextAreaClasses } from "./utilities";
 
 const TRANSLATION_OFFSET = 12;
 const ROW_HEIGHT = 24;
@@ -19,7 +19,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			error = false,
 			raw = false,
 			className,
-			inputClassName,
+			textAreaClassName,
 			focusKind = "light",
 			borderKind = "dark",
 			errorKind = "light",
@@ -38,7 +38,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		ref,
 	) => {
 		const textAreaRef = useRef<HTMLTextAreaElement>(null);
-		const mergedInputRef = mergeRefs([ref, textAreaRef]);
+		const mergedTextAreaRef = mergeRefs([ref, textAreaRef]);
 		const rightElementRef = useRef<HTMLDivElement>(null);
 		const textAreaHeightRef = useRef<number>(80);
 		const labelOffsetRef = useRef<number>(-25);
@@ -46,15 +46,15 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		const helperTextOffsetRef = useRef<number>(30);
 		const helperTextRef = useRef<HTMLDivElement>(null);
 
-		const inputId = useUniqueId({ id, prefix: `${TEXT_AREA_CLASSNAME}-` });
+		const textAreaId = useUniqueId({ id, prefix: `${TEXT_AREA_CLASSNAME}-` });
 
-		const [inputPaddingRight, setInputPaddingRight] = useState(0);
-		const [userInput, setUserInput] = useState("");
+		const [textAreaPaddingRight, setTextAreaPaddingRight] = useState(0);
+		const [userInput, setUserTextArea] = useState("");
 
 		const liveErrorMessage = `${name} error, ${helperText}`;
-		const textInputClassName = getTextInputClasses({
+		const textTextAreaClassName = getTextAreaClasses({
 			className,
-			inputClassName,
+			textAreaClassName,
 			error,
 			raw,
 			focusKind,
@@ -66,7 +66,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
 		useLayoutEffect(() => {
 			if (rightElementRef.current) {
-				setInputPaddingRight(rightElementRef.current.offsetWidth + 18 + 10);
+				setTextAreaPaddingRight(rightElementRef.current.offsetWidth + 18 + 10);
 			}
 		}, [rightElement]);
 
@@ -139,36 +139,36 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		}, [userInput]);
 
 		return (
-			<div className={textInputClassName.wrapper}>
+			<div className={textTextAreaClassName.wrapper}>
 				<label
-					htmlFor={inputId}
+					htmlFor={textAreaId}
 					id={labelId}
-					className={textInputClassName.accessibleLabel}
+					className={textTextAreaClassName.accessibleLabel}
 				>
 					{label}
 				</label>
 				<textarea
-					ref={mergedInputRef}
-					id={inputId}
+					ref={mergedTextAreaRef}
+					id={textAreaId}
 					name={name}
 					disabled={disabled}
 					placeholder={!raw ? " " : undefined}
-					className={textInputClassName.input}
+					className={textTextAreaClassName.textArea}
 					rows={1}
-					{...(helperText && { "aria-describedby": `${inputId}-helper` })}
+					{...(helperText && { "aria-describedby": `${textAreaId}-helper` })}
 					{...(error && { "aria-invalid": "true" })}
 					{...(rightElement &&
-						!raw && { style: { paddingRight: inputPaddingRight } })}
+						!raw && { style: { paddingRight: textAreaPaddingRight } })}
 					value={userInput}
-					onChange={(e) => setUserInput(e.target.value)}
+					onChange={(e) => setUserTextArea(e.target.value)}
 					{...extraProps}
 				/>
 				{!raw && (
 					<label
 						ref={labelRef}
 						aria-hidden={true}
-						htmlFor={inputId}
-						className={textInputClassName.visibleLabel}
+						htmlFor={textAreaId}
+						className={textTextAreaClassName.visibleLabel}
 					>
 						{label}
 					</label>
@@ -177,8 +177,8 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 				{helperText && (
 					<div
 						ref={helperTextRef}
-						id={`${inputId}-helper`}
-						className={textInputClassName.helperText}
+						id={`${textAreaId}-helper`}
+						className={textTextAreaClassName.helperText}
 					>
 						{helperText}
 					</div>
@@ -187,7 +187,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 				{rightElement && (
 					<div
 						ref={rightElementRef}
-						className={textInputClassName.rightElement}
+						className={textTextAreaClassName.rightElement}
 					>
 						{rightElement}
 					</div>

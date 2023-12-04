@@ -8,32 +8,31 @@ import {
 	VISUALLY_HIDDEN_CLASSNAME,
 } from "../../common/constants";
 
-type getTextInputClassesProps = {
+type getTextAreaClassesProps = {
 	className?: string;
-	inputClassName?: string;
+	textAreaClassName?: string;
 	raw: boolean;
 	focusKind: string;
 	borderKind: string;
 	errorKind: string;
 	disabled: boolean;
-	slim?: boolean;
 	noBorder: boolean;
 	error: boolean;
 };
 
-const getTextInputBaseClasses = () => {
+const getTextAreaBaseClasses = () => {
 	return "rounded-md text-base h-20 min-h-[80px] resize-none";
 };
 
-const getTextInputSizesClasses = () => {
+const getTextAreaSizesClasses = () => {
 	return "px-4 py-7";
 };
 
-const getTextInputColorClasses = () => {
+const getTextAreaColorClasses = () => {
 	return `bg-surface-dark text-copy-light caret-slate-100`;
 };
 
-const getTextInputFocusClasses = ({
+const getTextAreaFocusClasses = ({
 	focusKind,
 	error,
 	errorKind,
@@ -50,7 +49,7 @@ const getTextInputFocusClasses = ({
 	});
 };
 
-const getTextInputBorderClasses = ({
+const getTextAreaBorderClasses = ({
 	noBorder,
 	error,
 	borderKind,
@@ -68,7 +67,7 @@ const getTextInputBorderClasses = ({
 	});
 };
 
-const getTextInputLabelClasses = ({
+const getTextAreaLabelClasses = ({
 	disabled,
 	raw,
 	error,
@@ -88,7 +87,7 @@ const getTextInputLabelClasses = ({
 		  });
 };
 
-const getTextInputHelperTextClasses = ({
+const getTextAreaHelperTextClasses = ({
 	error,
 	raw,
 	errorKind,
@@ -105,9 +104,9 @@ const getTextInputHelperTextClasses = ({
 		  });
 };
 
-export const getTextInputClasses = ({
+export const getTextAreaClasses = ({
 	className,
-	inputClassName,
+	textAreaClassName,
 	raw,
 	focusKind,
 	borderKind,
@@ -115,7 +114,7 @@ export const getTextInputClasses = ({
 	disabled,
 	noBorder,
 	error,
-}: getTextInputClassesProps) => {
+}: getTextAreaClassesProps) => {
 	const wrapper = raw
 		? className
 		: clsx(
@@ -124,16 +123,21 @@ export const getTextInputClasses = ({
 				className,
 		  );
 
-	const input = raw
-		? clsx(inputClassName)
+	const textArea = raw
+		? clsx(textAreaClassName)
 		: clsx(
 				TEXT_AREA_CLASSNAME,
-				inputClassName,
-				getTextInputBaseClasses(),
-				getTextInputSizesClasses(),
-				getTextInputColorClasses(),
-				getTextInputFocusClasses({ focusKind, error, errorKind }),
-				getTextInputBorderClasses({ noBorder, error, borderKind, errorKind }),
+				textAreaClassName,
+				getTextAreaBaseClasses(),
+				getTextAreaSizesClasses(),
+				getTextAreaColorClasses(),
+				getTextAreaFocusClasses({ focusKind, error, errorKind }),
+				getTextAreaBorderClasses({
+					noBorder,
+					error,
+					borderKind,
+					errorKind,
+				}),
 				{
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
 				},
@@ -141,14 +145,14 @@ export const getTextInputClasses = ({
 
 	const accessibleLabel = raw ? undefined : VISUALLY_HIDDEN_CLASSNAME;
 
-	const visibleLabel = getTextInputLabelClasses({
+	const visibleLabel = getTextAreaLabelClasses({
 		disabled,
 		raw,
 		error,
 		errorKind,
 	});
 
-	const helperText = getTextInputHelperTextClasses({
+	const helperText = getTextAreaHelperTextClasses({
 		error,
 		raw,
 		errorKind,
@@ -160,7 +164,7 @@ export const getTextInputClasses = ({
 
 	return {
 		wrapper,
-		input,
+		textArea,
 		accessibleLabel,
 		visibleLabel,
 		helperText,

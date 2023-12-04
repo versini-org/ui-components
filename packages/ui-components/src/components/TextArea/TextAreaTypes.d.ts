@@ -9,7 +9,6 @@ export type TextAreaProps = {
 	errorKind?: "dark" | "light";
 	raw?: boolean;
 	noBorder?: boolean;
-	inputClassName?: string;
+	textAreaClassName?: string;
 	rightElement?: React.ReactElement;
-} & CommonTextInputProps &
-	React.TextAreaHTMLAttributes<HTMLTextAreaElement>;
+} & React.TextAreaHTMLAttributes<HTMLTextAreaElement>;
