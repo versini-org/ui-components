@@ -5,10 +5,7 @@ import useUniqueId from "../../common/hooks/useUniqueId";
 import { mergeRefs } from "../../common/utilities";
 import { LiveRegion } from "../private/LiveRegion/LiveRegion";
 import type { TextAreaProps } from "./TextAreaTypes";
-import { getTextAreaClasses } from "./utilities";
-
-const TRANSLATION_OFFSET = 12;
-const ROW_HEIGHT = 24;
+import { adjustLabelAndHelperText, getTextAreaClasses } from "./utilities";
 
 export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 	(
@@ -65,6 +62,11 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			errorKind,
 		});
 
+		const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+			setUserTextArea(e.target.value);
+			onChange && onChange(e);
+		};
+
 		useLayoutEffect(() => {
 			if (!raw && rightElementRef.current) {
 				setTextAreaPaddingRight(rightElementRef.current.offsetWidth + 18 + 10);
@@ -92,42 +94,15 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 				 * This is done by calculating the difference in height and
 				 * then adjusting the label and helper text by that amount.
 				 */
-				if (textAreaHeightRef.current !== textAreaRef.current.scrollHeight) {
-					const diff =
-						textAreaRef.current.scrollHeight - textAreaHeightRef.current;
-					const totalRows = Math.abs(diff / ROW_HEIGHT);
-
-					/**
-					 * The label and helper text are moved by the same amount
-					 * as the textarea. This is done by multiplying the
-					 * difference by the number of rows that have been added
-					 * or removed.
-					 * The label is moved in the opposite direction of the
-					 * textarea, so that it appears to be moving up as the
-					 * textarea grows.
-					 * The helper text is moved in the same direction as the
-					 * textarea, so that it appears to be moving down as the
-					 * textarea grows.
-					 */
-					labelOffsetRef.current =
-						labelOffsetRef.current +
-						-1 * Math.sign(diff) * (TRANSLATION_OFFSET * totalRows);
-
-					helperTextOffsetRef.current =
-						helperTextOffsetRef.current +
-						Math.sign(diff) * (TRANSLATION_OFFSET * totalRows);
-
-					labelRef?.current?.style.setProperty(
-						"--av-text-area-label",
-						`${labelOffsetRef.current}px`,
-					);
-					helperTextRef?.current?.style.setProperty(
-						"--av-text-area-helper-text",
-						`${helperTextOffsetRef.current}px`,
-					);
-
-					textAreaHeightRef.current = textAreaRef.current.scrollHeight;
-				}
+				/* v8 ignore next 1 */
+				adjustLabelAndHelperText({
+					textAreaRef,
+					textAreaHeightRef,
+					labelOffsetRef,
+					labelRef,
+					helperTextOffsetRef,
+					helperTextRef,
+				});
 			}
 
 			/**
@@ -141,11 +116,6 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 				userInput ? "none" : "all 0.2s ease-out",
 			);
 		}, [userInput, raw]);
-
-		const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-			setUserTextArea(e.target.value);
-			onChange && onChange(e);
-		};
 
 		return (
 			<div className={textTextAreaClassName.wrapper}>
