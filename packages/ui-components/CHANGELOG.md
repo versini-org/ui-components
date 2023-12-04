@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.4.0](https://github.com/aversini/ui-components/compare/ui-components-v4.3.0...ui-components-v4.4.0) (2023-12-04)
+
+
+### Features
+
+* adding TextArea component ([849987b](https://github.com/aversini/ui-components/commit/849987b1a8b54374b76491662f75cd1ec843880c))
+
+
+### Bug Fixes
+
+* **TextInput:** right element should not be enclosed in span ([a7dff91](https://github.com/aversini/ui-components/commit/a7dff918786f835f46e352c42e10269d5cd2d57b))
+
 ## [4.3.0](https://github.com/aversini/ui-components/compare/ui-components-v4.2.0...ui-components-v4.3.0) (2023-12-02)
 
 
