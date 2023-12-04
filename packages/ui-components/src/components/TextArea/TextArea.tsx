@@ -32,6 +32,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			helperText = "",
 
 			rightElement,
+			onChange,
 
 			...extraProps
 		},
@@ -65,10 +66,10 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		});
 
 		useLayoutEffect(() => {
-			if (rightElementRef.current) {
+			if (!raw && rightElementRef.current) {
 				setTextAreaPaddingRight(rightElementRef.current.offsetWidth + 18 + 10);
 			}
-		}, [rightElement]);
+		}, [rightElement, raw]);
 
 		/**
 		 * This effect is used to resize the textarea based
@@ -76,6 +77,9 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		 * content they have typed.
 		 */
 		useLayoutEffect(() => {
+			if (raw) {
+				return;
+			}
 			if (textAreaRef && textAreaRef.current) {
 				textAreaRef.current.style.height = "inherit";
 				// Set the height to match the content
@@ -136,7 +140,12 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 				"--av-text-area-wrapper-transition",
 				userInput ? "none" : "all 0.2s ease-out",
 			);
-		}, [userInput]);
+		}, [userInput, raw]);
+
+		const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+			setUserTextArea(e.target.value);
+			onChange && onChange(e);
+		};
 
 		return (
 			<div className={textTextAreaClassName.wrapper}>
@@ -160,7 +169,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 					{...(rightElement &&
 						!raw && { style: { paddingRight: textAreaPaddingRight } })}
 					value={userInput}
-					onChange={(e) => setUserTextArea(e.target.value)}
+					onChange={handleChange}
 					{...extraProps}
 				/>
 				{!raw && (
