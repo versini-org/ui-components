@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.1](https://github.com/aversini/ui-components/compare/ui-components-v4.4.0...ui-components-v4.4.1) (2023-12-04)
+
+
+### Bug Fixes
+
+* **TextArea:** corrupted exported types ([a98d8a0](https://github.com/aversini/ui-components/commit/a98d8a0660e67c40a8384848309c72cdee6bf9c1))
+
 ## [4.4.0](https://github.com/aversini/ui-components/compare/ui-components-v4.3.0...ui-components-v4.4.0) (2023-12-04)
 
 
