@@ -20,9 +20,6 @@ type getTextAreaClassesProps = {
 	error: boolean;
 };
 
-const TRANSLATION_OFFSET = 12;
-const ROW_HEIGHT = 24;
-
 const getTextAreaBaseClasses = () => {
 	return "rounded-md text-base h-20 min-h-[80px] resize-none";
 };
@@ -176,57 +173,34 @@ export const getTextAreaClasses = ({
 };
 
 export const adjustLabelAndHelperText = ({
-	textAreaRef,
-	textAreaHeightRef,
-	labelOffsetRef,
-	labelRef,
-	helperTextOffsetRef,
-	helperTextRef,
+	scrollHeight,
+	currentHeight,
+	currentLabelOffset = 0,
+	currentHelperTextOffset = 0,
 }: {
-	textAreaRef: React.MutableRefObject<HTMLTextAreaElement | null>;
-	textAreaHeightRef: React.MutableRefObject<number>;
-	labelOffsetRef: React.MutableRefObject<number>;
-	labelRef: React.MutableRefObject<HTMLLabelElement | null>;
-	helperTextOffsetRef: React.MutableRefObject<number>;
-	helperTextRef: React.MutableRefObject<HTMLDivElement | null>;
+	scrollHeight: number;
+	currentHeight: number;
+	currentLabelOffset: number;
+	currentHelperTextOffset: number;
 }) => {
-	if (
-		textAreaRef.current &&
-		textAreaRef.current.scrollHeight > 0 &&
-		textAreaHeightRef.current !== textAreaRef.current.scrollHeight
-	) {
-		const diff = textAreaRef.current.scrollHeight - textAreaHeightRef.current;
+	const TRANSLATION_OFFSET = 12;
+	const ROW_HEIGHT = 24;
+	let labelOffset, helperTextOffset;
+
+	if (scrollHeight > 0 && scrollHeight !== currentHeight) {
+		const diff = scrollHeight - currentHeight;
 		const totalRows = Math.abs(diff / ROW_HEIGHT);
 
-		/**
-		 * The label and helper text are moved by the same amount
-		 * as the textarea. This is done by multiplying the
-		 * difference by the number of rows that have been added
-		 * or removed.
-		 * The label is moved in the opposite direction of the
-		 * textarea, so that it appears to be moving up as the
-		 * textarea grows.
-		 * The helper text is moved in the same direction as the
-		 * textarea, so that it appears to be moving down as the
-		 * textarea grows.
-		 */
-		labelOffsetRef.current =
-			labelOffsetRef.current +
+		labelOffset =
+			currentLabelOffset +
 			-1 * Math.sign(diff) * (TRANSLATION_OFFSET * totalRows);
-
-		helperTextOffsetRef.current =
-			helperTextOffsetRef.current +
+		helperTextOffset =
+			currentHelperTextOffset +
 			Math.sign(diff) * (TRANSLATION_OFFSET * totalRows);
-
-		labelRef?.current?.style.setProperty(
-			"--av-text-area-label",
-			`${labelOffsetRef.current}px`,
-		);
-		helperTextRef?.current?.style.setProperty(
-			"--av-text-area-helper-text",
-			`${helperTextOffsetRef.current}px`,
-		);
-
-		textAreaHeightRef.current = textAreaRef.current.scrollHeight;
 	}
+	return {
+		labelOffset,
+		helperTextOffset,
+		scrollHeight,
+	};
 };
