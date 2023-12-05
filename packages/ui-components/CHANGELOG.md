@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.5.1](https://github.com/aversini/ui-components/compare/ui-components-v4.5.0...ui-components-v4.5.1) (2023-12-05)
+
+
+### Bug Fixes
+
+* **TextArea:** broken animation when scrollHeight is 0 ([0d25970](https://github.com/aversini/ui-components/commit/0d25970d3665e7bed243cacaba7cd6a4c5392400))
+
 ## [4.5.0](https://github.com/aversini/ui-components/compare/ui-components-v4.4.1...ui-components-v4.5.0) (2023-12-04)
 
 
