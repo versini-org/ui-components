@@ -171,3 +171,36 @@ export const getTextAreaClasses = ({
 		rightElement,
 	};
 };
+
+export const adjustLabelAndHelperText = ({
+	scrollHeight,
+	currentHeight,
+	currentLabelOffset = 0,
+	currentHelperTextOffset = 0,
+}: {
+	scrollHeight: number;
+	currentHeight: number;
+	currentLabelOffset: number;
+	currentHelperTextOffset: number;
+}) => {
+	const TRANSLATION_OFFSET = 12;
+	const ROW_HEIGHT = 24;
+	let labelOffset, helperTextOffset;
+
+	if (scrollHeight > 0 && scrollHeight !== currentHeight) {
+		const diff = scrollHeight - currentHeight;
+		const totalRows = Math.abs(diff / ROW_HEIGHT);
+
+		labelOffset =
+			currentLabelOffset +
+			-1 * Math.sign(diff) * (TRANSLATION_OFFSET * totalRows);
+		helperTextOffset =
+			currentHelperTextOffset +
+			Math.sign(diff) * (TRANSLATION_OFFSET * totalRows);
+	}
+	return {
+		labelOffset,
+		helperTextOffset,
+		scrollHeight,
+	};
+};
