@@ -67,7 +67,7 @@
 
 	.av-text-input-helper-text,
 	.av-text-area-helper-text {
-		transform: translate(18px, var(--av-text-area-helper-text, 30px))
+		transform: translate(18px, var(--av-text-area-helper-text, 32px))
 			scale(0.75);
 		transform-origin: top left;
 	}
