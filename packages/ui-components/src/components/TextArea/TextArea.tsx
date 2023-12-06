@@ -64,23 +64,21 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			errorKind,
 		});
 
-		const internalChangeHandler = (value: any) => {
-			const e: any = {
-				target: {
-					value,
-				},
-			};
-			onChange && onChange(e);
-		};
-
 		/**
-		 * useUncontrolled hook returns the getter and setter
-		 * methods for updating the prop value.
+		 * useUncontrolled hook is used to make the textarea
+		 * both controlled and uncontrolled.
 		 */
 		const [userInput, setValue] = useUncontrolled({
 			value,
 			defaultValue,
-			onChange: internalChangeHandler,
+			onChange: (value: any) => {
+				const e: any = {
+					target: {
+						value,
+					},
+				};
+				onChange && onChange(e);
+			},
 		});
 
 		const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
