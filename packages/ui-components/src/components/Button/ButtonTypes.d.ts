@@ -24,6 +24,7 @@ export type ButtonLinkProps = {
 	maxLabelLength?: number;
 	slim?: boolean;
 	size?: "small" | "medium" | "large";
+	noTruncate?: boolean;
 } & ButtonProps &
 	React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
