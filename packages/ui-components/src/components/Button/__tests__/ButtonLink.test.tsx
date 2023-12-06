@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import { TRUNCATE_CLASSNAME } from "../../../common/constants";
 import { ButtonLink } from "../..";
 
 describe("ButtonLink (exceptions)", () => {
@@ -122,5 +123,27 @@ describe("ButtonLink modifiers", () => {
 		);
 		const button = await screen.findByRole("link");
 		expect(button).toHaveAttribute("rel", "noopener noreferrer");
+	});
+
+	it("should render an anchor with full text but with truncated class", async () => {
+		render(<ButtonLink link="toto">hello world</ButtonLink>);
+		const button = await screen.findByRole("link");
+		expect(button.className).toContain("py-0");
+		const label = await screen.findByText("hello world");
+		expect(label).toBeDefined();
+		expect(label.className).toContain(TRUNCATE_CLASSNAME);
+	});
+
+	it("should render an anchor with full text without a truncated class", async () => {
+		render(
+			<ButtonLink link="toto" noTruncate>
+				hello world
+			</ButtonLink>,
+		);
+		const button = await screen.findByRole("link");
+		expect(button.className).toContain("py-0");
+		const label = await screen.findByText("hello world");
+		expect(label).toBeDefined();
+		expect(label.className).not.toContain(TRUNCATE_CLASSNAME);
 	});
 });

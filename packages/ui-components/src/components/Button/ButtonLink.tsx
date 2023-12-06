@@ -1,5 +1,6 @@
 import React from "react";
 
+import { TRUNCATE_CLASSNAME } from "../../common/constants";
 import { truncate } from "../../common/utilities";
 import type { ButtonLinkProps } from "./ButtonTypes";
 import { getButtonClasses, TYPE_LINK } from "./utilities";
@@ -20,6 +21,7 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 			link,
 			target,
 			maxLabelLength,
+			noTruncate = false,
 
 			...otherProps
 		},
@@ -58,7 +60,9 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 					href={link}
 					{...extraProps}
 				>
-					{formattedLabel?.truncatedString || children}
+					<div {...(!noTruncate && { className: TRUNCATE_CLASSNAME })}>
+						{formattedLabel?.truncatedString || children}
+					</div>
 				</a>
 			</>
 		);

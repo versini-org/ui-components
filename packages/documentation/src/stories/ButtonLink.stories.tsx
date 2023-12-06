@@ -15,6 +15,7 @@ const meta: Meta<typeof ButtonLink> = {
 		noBorder: false,
 		slim: false,
 		size: "small",
+		noTruncate: false,
 	},
 	argTypes: {
 		className: {
@@ -46,6 +47,9 @@ const meta: Meta<typeof ButtonLink> = {
 		},
 		maxLabelLength: {
 			control: "number",
+		},
+		noTruncate: {
+			control: "boolean",
 		},
 	},
 };
