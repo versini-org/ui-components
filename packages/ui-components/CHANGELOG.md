@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.6.1](https://github.com/aversini/ui-components/compare/ui-components-v4.6.0...ui-components-v4.6.1) (2023-12-06)
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies ([974e441](https://github.com/aversini/ui-components/commit/974e441c425cf0b300c11ebb4f73c39fe2851efc))
+* **TextArea:** helper text is a bit too high ([2fcbe12](https://github.com/aversini/ui-components/commit/2fcbe12a70b5fb990b4007d711895c4330f13779))
+
 ## [4.6.0](https://github.com/aversini/ui-components/compare/ui-components-v4.5.1...ui-components-v4.6.0) (2023-12-06)
 
 
