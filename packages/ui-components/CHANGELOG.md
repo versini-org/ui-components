@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.6.0](https://github.com/aversini/ui-components/compare/ui-components-v4.5.1...ui-components-v4.6.0) (2023-12-06)
+
+
+### Features
+
+* **TextArea:** component is now hybrid - controlled and uncontrolled ([f9983e6](https://github.com/aversini/ui-components/commit/f9983e6f3a3164c5269aa15ec386b94a83e122c8))
+
 ## [4.5.1](https://github.com/aversini/ui-components/compare/ui-components-v4.5.0...ui-components-v4.5.1) (2023-12-05)
 
 
