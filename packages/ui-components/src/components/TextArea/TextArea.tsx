@@ -199,7 +199,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 					{...(error && { "aria-invalid": "true" })}
 					{...(rightElement &&
 						!raw && { style: { paddingRight: textAreaPaddingRight } })}
-					value={value}
+					value={userInput}
 					onChange={handleChange}
 					{...extraProps}
 				/>
