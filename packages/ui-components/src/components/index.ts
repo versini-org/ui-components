@@ -4,6 +4,7 @@ import { Anchor } from "./Anchor/Anchor";
 import { Button } from "./Button/Button";
 import { ButtonIcon } from "./Button/ButtonIcon";
 import { ButtonLink } from "./Button/ButtonLink";
+import { Card } from "./Card/Card";
 import { Flexgrid } from "./Flexgrid/Flexgrid";
 import { FlexgridItem } from "./Flexgrid/FlexgridItem";
 import { Footer } from "./Footer/Footer";
@@ -29,6 +30,7 @@ export {
 	Button,
 	ButtonIcon,
 	ButtonLink,
+	Card,
 	Flexgrid,
 	FlexgridItem,
 	Footer,

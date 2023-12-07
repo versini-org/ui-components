@@ -8,7 +8,7 @@
  * @param {string[]} classes - An array of class names that the element is expected to have.
  **/
 export const expectToHaveClasses = (
-	element: HTMLElement,
+	element: HTMLElement | Element,
 	classes: string[],
 ) => {
 	const elementClasses = new Set(element.className.split(" "));
