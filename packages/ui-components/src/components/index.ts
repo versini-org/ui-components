@@ -1,5 +1,6 @@
 import "./index.css";
 
+import { Anchor } from "./Anchor/Anchor";
 import { Button } from "./Button/Button";
 import { ButtonIcon } from "./Button/ButtonIcon";
 import { ButtonLink } from "./Button/ButtonLink";
@@ -24,6 +25,7 @@ import { TextInput } from "./TextInput/TextInput";
 import { TextInputMask } from "./TextInput/TextInputMask";
 
 export {
+	Anchor,
 	Button,
 	ButtonIcon,
 	ButtonLink,
