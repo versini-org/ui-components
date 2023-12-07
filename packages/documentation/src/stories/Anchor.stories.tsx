@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ButtonLink } from "@versini/ui-components";
+import { Anchor } from "@versini/ui-components";
 
-const meta: Meta<typeof ButtonLink> = {
-	component: ButtonLink,
+const meta: Meta<typeof Anchor> = {
+	component: Anchor,
 	parameters: {
 		controls: { exclude: ["spacing"], sort: "requiredFirst" },
 	},
@@ -56,17 +56,15 @@ const meta: Meta<typeof ButtonLink> = {
 
 export default meta;
 
-type Story = StoryObj<typeof ButtonLink>;
+type Story = StoryObj<typeof Anchor>;
 
 export const Basic: Story = {
 	render: (args) => (
 		<div className="flex flex-wrap gap-2">
-			<ButtonLink {...args}>Button as a link</ButtonLink>
-			<ButtonLink {...args}>Button as a link lorem ipsum</ButtonLink>
-			<ButtonLink {...args}>Button as a link lorem ipsum dolor</ButtonLink>
-			<ButtonLink {...args}>
-				Button as a link lorem ipsum dolor sit amet
-			</ButtonLink>
+			<Anchor {...args}>Anchor as a button</Anchor>
+			<Anchor {...args}>Anchor as a button lorem ipsum</Anchor>
+			<Anchor {...args}>Anchor as a button lorem ipsum dolor</Anchor>
+			<Anchor {...args}>Anchor as a button lorem ipsum dolor sit amet</Anchor>
 		</div>
 	),
 };
