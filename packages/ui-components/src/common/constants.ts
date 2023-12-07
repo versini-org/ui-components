@@ -16,6 +16,8 @@ export const TEXT_AREA_CONTROL_RIGHT_CLASSNAME = "av-text-area__control--right";
 export const FLEXGRID_CLASSNAME = "av-flexgrid";
 export const FLEXGRID_ITEM_CLASSNAME = "av-flexgrid-item";
 
+export const CARD_CLASSNAME = "av-card";
+
 export const VISUALLY_HIDDEN_CLASSNAME = "av-visually-hidden";
 export const TRUNCATE_CLASSNAME = "av-truncate-text";
 
