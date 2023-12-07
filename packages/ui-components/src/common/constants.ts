@@ -17,6 +17,7 @@ export const FLEXGRID_CLASSNAME = "av-flexgrid";
 export const FLEXGRID_ITEM_CLASSNAME = "av-flexgrid-item";
 
 export const CARD_CLASSNAME = "av-card";
+export const SPINNER_CLASSNAME = "av-spinner";
 
 export const VISUALLY_HIDDEN_CLASSNAME = "av-visually-hidden";
 export const TRUNCATE_CLASSNAME = "av-truncate-text";
