@@ -69,7 +69,9 @@ describe("Card modifiers", () => {
 		expect(header).toBeDefined();
 		expectToHaveClasses(header, [
 			`${CARD_CLASSNAME}__header`,
-			"pb-2",
+			"mb-4",
+			"border-b-2",
+			"border-slate-200",
 			"text-lg",
 			"font-bold",
 		]);
