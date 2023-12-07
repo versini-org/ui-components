@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.9.0](https://github.com/aversini/ui-components/compare/ui-components-v4.8.1...ui-components-v4.9.0) (2023-12-07)
+
+
+### Features
+
+* adding Spinner component ([b9c2a3a](https://github.com/aversini/ui-components/commit/b9c2a3ab0a39780ef09777ed29946a0e6d015d6d))
+
 ## [4.8.1](https://github.com/aversini/ui-components/compare/ui-components-v4.8.0...ui-components-v4.8.1) (2023-12-07)
 
 
