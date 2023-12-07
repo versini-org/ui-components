@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.7.0](https://github.com/aversini/ui-components/compare/ui-components-v4.6.1...ui-components-v4.7.0) (2023-12-06)
+
+
+### Features
+
+* **ButtonLink:** adding noTruncate prop and auto truncate by default ([7c27dcd](https://github.com/aversini/ui-components/commit/7c27dcd01d02cb047a07ed1fd5e51f6df35db6b2))
+
 ## [4.6.1](https://github.com/aversini/ui-components/compare/ui-components-v4.6.0...ui-components-v4.6.1) (2023-12-06)
 
 
