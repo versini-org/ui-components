@@ -22,7 +22,9 @@ export const getCardClasses = ({
 		  });
 	const header = headerClassName
 		? headerClassName
-		: clsx(`${CARD_CLASSNAME}__header pb-2 text-lg font-bold`);
+		: clsx(
+				`${CARD_CLASSNAME}__header mb-4 border-b-2 border-slate-200 text-lg font-bold`,
+		  );
 
 	const footer = footerClassName
 		? footerClassName
