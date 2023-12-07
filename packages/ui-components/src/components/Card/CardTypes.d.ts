@@ -12,6 +12,6 @@ export type CardProps = {
 export type CardHeaderProps = {
 	id?: string;
 	content: React.ReactNode;
-	userAriaLabelledby: string | undefined;
+	userAriaLabelledby?: string;
 	className: string;
 };
