@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.8.0](https://github.com/aversini/ui-components/compare/ui-components-v4.7.0...ui-components-v4.8.0) (2023-12-07)
+
+
+### Features
+
+* adding Card component ([e472ccb](https://github.com/aversini/ui-components/commit/e472ccb6e4ba623b7a50e3b9e5ca3a6709087f3a))
+* **Anchor:** deprecating ButtonLink for Anchor ([b63309b](https://github.com/aversini/ui-components/commit/b63309b4708579fd6ddd09f917dab709485b4257))
+
 ## [4.7.0](https://github.com/aversini/ui-components/compare/ui-components-v4.6.1...ui-components-v4.7.0) (2023-12-06)
 
 
