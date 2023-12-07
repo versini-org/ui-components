@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.8.1](https://github.com/aversini/ui-components/compare/ui-components-v4.8.0...ui-components-v4.8.1) (2023-12-07)
+
+
+### Bug Fixes
+
+* **Card:** adding header separator for better readability ([dde5273](https://github.com/aversini/ui-components/commit/dde5273228df3bfa794ab15e6246ad09909cbcff))
+
 ## [4.8.0](https://github.com/aversini/ui-components/compare/ui-components-v4.7.0...ui-components-v4.8.0) (2023-12-07)
 
 
