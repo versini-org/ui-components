@@ -19,5 +19,7 @@ export const FLEXGRID_ITEM_CLASSNAME = "av-flexgrid-item";
 export const CARD_CLASSNAME = "av-card";
 export const SPINNER_CLASSNAME = "av-spinner";
 
+export const TOGGLE_CLASSNAME = "av-toggle";
+
 export const FLEXGRID_MAX_COLUMNS = 12;
 export const FLEXGRID_GAP_RATIO = 0.25;
