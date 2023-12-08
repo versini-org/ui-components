@@ -30,7 +30,7 @@ const getTextInputSizesClasses = () => {
 };
 
 const getTextInputColorClasses = () => {
-	return `bg-surface-dark text-copy-light caret-slate-100`;
+	return `bg-surface-dark text-copy-light caret-copy-light`;
 };
 
 const getTextInputFocusClasses = ({
