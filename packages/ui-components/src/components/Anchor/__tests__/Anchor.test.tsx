@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
-import { TRUNCATE_CLASSNAME } from "../../../common/constants";
 import { Anchor } from "../..";
 
 describe("Anchor (exceptions)", () => {
@@ -131,7 +130,7 @@ describe("Anchor modifiers", () => {
 		expect(button.className).toContain("py-0");
 		const label = await screen.findByText("hello world");
 		expect(label).toBeDefined();
-		expect(label.className).toContain(TRUNCATE_CLASSNAME);
+		expect(label.className).toContain("truncate");
 	});
 
 	it("should render an anchor with full text without a truncated class", async () => {
@@ -144,6 +143,6 @@ describe("Anchor modifiers", () => {
 		expect(button.className).toContain("py-0");
 		const label = await screen.findByText("hello world");
 		expect(label).toBeDefined();
-		expect(label.className).not.toContain(TRUNCATE_CLASSNAME);
+		expect(label.className).not.toContain("truncate");
 	});
 });

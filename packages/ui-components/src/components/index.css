@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-	.av-truncate-text {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		word-wrap: normal;
-	}
-}
-
 @layer components {
 	/**
 	 * There are 2 labels, one visible and one
