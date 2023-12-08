@@ -5,7 +5,6 @@ import {
 	TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
 	TEXT_AREA_HELPER_TEXT_CLASSNAME,
 	TEXT_AREA_WRAPPER_CLASSNAME,
-	VISUALLY_HIDDEN_CLASSNAME,
 } from "../../common/constants";
 
 type getTextAreaClassesProps = {
@@ -143,7 +142,7 @@ export const getTextAreaClasses = ({
 				},
 		  );
 
-	const accessibleLabel = raw ? undefined : VISUALLY_HIDDEN_CLASSNAME;
+	const accessibleLabel = raw ? undefined : "sr-only";
 
 	const visibleLabel = getTextAreaLabelClasses({
 		disabled,

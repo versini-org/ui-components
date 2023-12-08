@@ -1,6 +1,5 @@
 import clsx from "clsx";
 
-import { VISUALLY_HIDDEN_CLASSNAME } from "../../../common/constants";
 import { getSpacing } from "../../../common/utilities";
 import type { SvgIconProps } from "./SvgIconTypes";
 
@@ -35,9 +34,7 @@ export const SvgIcon = ({
 			>
 				{children}
 			</svg>
-			{title && !decorative && (
-				<span className={VISUALLY_HIDDEN_CLASSNAME}>{title}</span>
-			)}
+			{title && !decorative && <span className="sr-only">{title}</span>}
 		</>
 	);
 };

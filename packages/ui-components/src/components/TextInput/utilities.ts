@@ -5,7 +5,6 @@ import {
 	TEXT_INPUT_CONTROL_RIGHT_CLASSNAME,
 	TEXT_INPUT_HELPER_TEXT_CLASSNAME,
 	TEXT_INPUT_WRAPPER_CLASSNAME,
-	VISUALLY_HIDDEN_CLASSNAME,
 } from "../../common/constants";
 
 type getTextInputClassesProps = {
@@ -139,7 +138,7 @@ export const getTextInputClasses = ({
 				},
 		  );
 
-	const accessibleLabel = raw ? undefined : VISUALLY_HIDDEN_CLASSNAME;
+	const accessibleLabel = raw ? undefined : "sr-only";
 
 	const visibleLabel = getTextInputLabelClasses({
 		disabled,
