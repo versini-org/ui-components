@@ -20,17 +20,21 @@ describe("Card modifiers", () => {
 			CARD_CLASSNAME,
 			"p-4",
 			"rounded-md",
-			"text-slate-200",
+			"text-copy-light",
 			"border-2",
-			"border-slate-900",
-			"bg-slate-900",
+			"border-border-dark",
+			"bg-surface-dark",
 		]);
 	});
 
 	it("should render a card with no background color", async () => {
 		const { container } = render(<Card noBackground>{cardContent}</Card>);
 		const card = container.children[0];
-		expectToHaveClasses(card, [CARD_CLASSNAME, "rounded-md", "text-slate-200"]);
+		expectToHaveClasses(card, [
+			CARD_CLASSNAME,
+			"rounded-md",
+			"text-copy-light",
+		]);
 	});
 
 	it("should render a default card with a custom class", async () => {
@@ -71,7 +75,7 @@ describe("Card modifiers", () => {
 			`${CARD_CLASSNAME}__header`,
 			"mb-4",
 			"border-b-2",
-			"border-slate-200",
+			"border-border-light",
 			"text-lg",
 			"font-bold",
 		]);
