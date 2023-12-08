@@ -3854,16 +3854,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/client-api@npm:7.6.3":
-  version: 7.6.3
-  resolution: "@storybook/client-api@npm:7.6.3"
-  dependencies:
-    "@storybook/client-logger": "npm:7.6.3"
-    "@storybook/preview-api": "npm:7.6.3"
-  checksum: e564bddbcf92080ff0298f94149ad649750d81374b37ae0ea933b5ac61f5cb39da3f99c3ac5e865ac5266f670c4ce1e3bbb727c9697da774db667757ae82a654
-  languageName: node
-  linkType: hard
-
 "@storybook/client-logger@npm:7.6.3":
   version: 7.6.3
   resolution: "@storybook/client-logger@npm:7.6.3"
@@ -5234,7 +5224,6 @@ __metadata:
     "@storybook/addon-a11y": "npm:7.6.3"
     "@storybook/addon-essentials": "npm:7.6.3"
     "@storybook/blocks": "npm:7.6.3"
-    "@storybook/client-api": "npm:7.6.3"
     "@storybook/react": "npm:7.6.3"
     "@storybook/react-vite": "npm:7.6.3"
     "@storybook/testing-library": "npm:0.2.2"
