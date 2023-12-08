@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.9.2](https://github.com/aversini/ui-components/compare/ui-components-v4.9.1...ui-components-v4.9.2) (2023-12-08)
+
+
+### Bug Fixes
+
+* replacing ellipsis class with truncate from Tailwind ([6264f84](https://github.com/aversini/ui-components/commit/6264f8474b082be6162105e1f83d31833716deb1))
+* replacing visually-hidden class with sr-only from Tailwind ([063d59e](https://github.com/aversini/ui-components/commit/063d59eb177732f632ac26c5723378eb3f8027b3))
+
 ## [4.9.1](https://github.com/aversini/ui-components/compare/ui-components-v4.9.0...ui-components-v4.9.1) (2023-12-08)
 
 
