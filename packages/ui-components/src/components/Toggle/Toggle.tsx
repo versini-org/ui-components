@@ -17,7 +17,7 @@ export const Toggle = ({
 				defaultChecked={checked}
 				type="checkbox"
 				className={toggleClasses.input}
-				onChange={(e) => onChange && onChange(e.target.checked)}
+				onChange={(e) => onChange?.(e.target.checked)}
 			/>
 
 			<div className={toggleClasses.toggle}></div>
