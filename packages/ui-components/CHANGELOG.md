@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.9.1](https://github.com/aversini/ui-components/compare/ui-components-v4.9.0...ui-components-v4.9.1) (2023-12-08)
+
+
+### Bug Fixes
+
+* unable to customize some colors ([53e5023](https://github.com/aversini/ui-components/commit/53e5023258b16138d8f46025c8295101c0b622be))
+
 ## [4.9.0](https://github.com/aversini/ui-components/compare/ui-components-v4.8.1...ui-components-v4.9.0) (2023-12-07)
 
 
