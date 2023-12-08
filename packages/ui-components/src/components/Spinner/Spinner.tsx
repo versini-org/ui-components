@@ -1,9 +1,6 @@
 import clsx from "clsx";
 
-import {
-	SPINNER_CLASSNAME,
-	VISUALLY_HIDDEN_CLASSNAME,
-} from "../../common/constants";
+import { SPINNER_CLASSNAME } from "../../common/constants";
 import type { SpinnerProps } from "./SpinnerTypes";
 
 export const Spinner = ({ spinnerRef, kind = "dark" }: SpinnerProps) => {
@@ -17,7 +14,7 @@ export const Spinner = ({ spinnerRef, kind = "dark" }: SpinnerProps) => {
 	);
 	return (
 		<div ref={spinnerRef} className={spinnerClassName} role="status">
-			<span className={VISUALLY_HIDDEN_CLASSNAME}>Loading...</span>
+			<span className="sr-only">Loading...</span>
 		</div>
 	);
 };

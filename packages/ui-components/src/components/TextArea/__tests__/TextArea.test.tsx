@@ -17,7 +17,7 @@ describe("TextArea modifiers", () => {
 	it("should render a default text area", async () => {
 		render(<TextArea label="hello world" name="toto" />);
 		const input = await screen.findAllByText("hello world");
-		expect(input[0].className).toContain("av-visually-hidden");
+		expect(input[0].className).toContain("sr-only");
 		expectToHaveClasses(input[1], ["cursor-text", "text-copy-medium"]);
 	});
 

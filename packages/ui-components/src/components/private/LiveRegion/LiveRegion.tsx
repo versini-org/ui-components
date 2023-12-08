@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { useEffect, useReducer, useRef } from "react";
 
-import { VISUALLY_HIDDEN_CLASSNAME } from "../../../common/constants";
 import { DEFAULT_POLITENESS_BY_ROLE } from "./constants";
 import type { LiveRegionProps } from "./LiveRegionTypes";
 import { reducer } from "./reducer";
@@ -59,7 +58,7 @@ export function LiveRegion({
 	]);
 
 	const generatedClassName = clsx(className, {
-		[VISUALLY_HIDDEN_CLASSNAME]: !visible,
+		"sr-only": !visible,
 	});
 
 	return (

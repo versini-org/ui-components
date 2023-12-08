@@ -1,7 +1,6 @@
 import { act, fireEvent, render } from "@testing-library/react";
 import React from "react";
 
-import { VISUALLY_HIDDEN_CLASSNAME } from "../../../../common/constants";
 import {
 	ACTION_CLEAR_ANNOUNCEMENT,
 	ACTION_SET_ANNOUNCEMENT,
@@ -287,7 +286,7 @@ describe(`The LiveRegion Component`, () => {
 		it("Then the content should be visible in the DOM", () => {
 			const { container } = render(<LiveRegion visible>Foo</LiveRegion>);
 
-			expect(container.firstChild).not.toHaveClass(VISUALLY_HIDDEN_CLASSNAME);
+			expect(container.firstChild).not.toHaveClass("sr-only");
 		});
 	});
 
@@ -339,9 +338,7 @@ describe(`The LiveRegion Component`, () => {
 						});
 
 						it(`Then the content is visually hidden`, () => {
-							expect(renderResult.container.firstChild).toHaveClass(
-								VISUALLY_HIDDEN_CLASSNAME,
-							);
+							expect(renderResult.container.firstChild).toHaveClass("sr-only");
 						});
 
 						describe(`And the "children" prop changes`, () => {
