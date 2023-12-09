@@ -25,6 +25,7 @@ import { Spinner } from "./Spinner/Spinner";
 import { TextArea } from "./TextArea/TextArea";
 import { TextInput } from "./TextInput/TextInput";
 import { TextInputMask } from "./TextInput/TextInputMask";
+import { Toggle } from "./Toggle/Toggle";
 
 export {
 	Anchor,
@@ -52,4 +53,5 @@ export {
 	TextArea,
 	TextInput,
 	TextInputMask,
+	Toggle,
 };
