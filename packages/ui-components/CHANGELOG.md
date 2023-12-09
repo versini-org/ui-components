@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.10.0](https://github.com/aversini/ui-components/compare/ui-components-v4.9.2...ui-components-v4.10.0) (2023-12-09)
+
+
+### Features
+
+* adding Toggle component ([aaa4a87](https://github.com/aversini/ui-components/commit/aaa4a873a62d7bbe8439f2bf64ef8d415b6f0a1a))
+
 ## [4.9.2](https://github.com/aversini/ui-components/compare/ui-components-v4.9.1...ui-components-v4.9.2) (2023-12-08)
 
 
