@@ -35,6 +35,7 @@ export const tokens = {
 		 * Border tokens.
 		 */
 		"border-dark": colors.slate[900],
+		"border-medium": colors.slate[400],
 		"border-light": colors.slate[300],
 		"border-error-dark": errorColorDark,
 		"border-error-light": errorColorLight,
