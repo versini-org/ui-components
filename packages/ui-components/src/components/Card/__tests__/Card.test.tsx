@@ -75,7 +75,7 @@ describe("Card modifiers", () => {
 			`${CARD_CLASSNAME}__header`,
 			"mb-4",
 			"border-b-2",
-			"border-border-light",
+			"border-border-medium",
 			"text-lg",
 			"font-bold",
 		]);
