@@ -67,7 +67,6 @@
 	}
 	.av-spinner__dot {
 		animation: 1s blink infinite;
-		fill: grey;
 	}
 	.av-spinner__dot:nth-child(2) {
 		animation-delay: 250ms;
