@@ -12,7 +12,10 @@ export const Spinner = ({
 		type === "circle"
 			? clsx(
 					SPINNER_CLASSNAME,
-					"inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]",
+					"h-8 w-8",
+					"align-[-0.125em]",
+					"border-4",
+					"inline-block animate-spin rounded-full border-solid border-current border-r-transparent motion-reduce:animate-[spin_1.5s_linear_infinite]",
 					{
 						"text-copy-dark": kind === "dark",
 						"text-copy-light": kind === "light",
@@ -29,9 +32,9 @@ export const Spinner = ({
 		<div ref={spinnerRef} className={spinnerClassName} role="status">
 			{type === "dots" && (
 				<svg className="h-8 w-8">
-					<circle className={dotClassName} cx="10" cy="50%" r="3" />
-					<circle className={dotClassName} cx="18" cy="50%" r="3" />
-					<circle className={dotClassName} cx="26" cy="50%" r="3" />
+					<circle className={dotClassName} cx="20%" cy="50%" r="3" />
+					<circle className={dotClassName} cx="50%" cy="50%" r="3" />
+					<circle className={dotClassName} cx="80%" cy="50%" r="3" />
 				</svg>
 			)}
 			<span className="sr-only">Loading...</span>
