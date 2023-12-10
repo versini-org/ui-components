@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.11.2](https://github.com/aversini/ui-components/compare/ui-components-v4.11.1...ui-components-v4.11.2) (2023-12-10)
+
+
+### Bug Fixes
+
+* **TextArea:** unexpected visible scrollbar ([478e728](https://github.com/aversini/ui-components/commit/478e72818f95a651421e2426e04198156fdaebb0))
+
 ## [4.11.1](https://github.com/aversini/ui-components/compare/ui-components-v4.11.0...ui-components-v4.11.1) (2023-12-10)
 
 
