@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.11.1](https://github.com/aversini/ui-components/compare/ui-components-v4.11.0...ui-components-v4.11.1) (2023-12-10)
+
+
+### Bug Fixes
+
+* **Spinner:** minor glitch on first dot ([1be0378](https://github.com/aversini/ui-components/commit/1be03788ad329282313cb1ea2a4539afd4971bc4))
+
 ## [4.11.0](https://github.com/aversini/ui-components/compare/ui-components-v4.10.0...ui-components-v4.11.0) (2023-12-10)
 
 
