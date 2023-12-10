@@ -20,6 +20,12 @@ type getTextAreaClassesProps = {
 };
 
 const getTextAreaBaseClasses = () => {
+	/**
+	 * overflow-hidden is needed to prevent the text area from
+	 * showing a scrollbar. We automatically expand the text area
+	 * when the user types more than one line, so there is no need
+	 * for a scrollbar.
+	 */
 	return "rounded-md text-base h-20 min-h-[80px] resize-none overflow-hidden";
 };
 
