@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.11.0](https://github.com/aversini/ui-components/compare/ui-components-v4.10.0...ui-components-v4.11.0) (2023-12-10)
+
+
+### Features
+
+* adding type dots to Spinner component ([ab614d8](https://github.com/aversini/ui-components/commit/ab614d859538a5187fee9e11abcecdca9434c286))
+* **Card:** lighter bottom border for header ([f6802ab](https://github.com/aversini/ui-components/commit/f6802ab73b0b1ece7a57ec6c17bc42800a6eaf25))
+
 ## [4.10.0](https://github.com/aversini/ui-components/compare/ui-components-v4.9.2...ui-components-v4.10.0) (2023-12-09)
 
 
