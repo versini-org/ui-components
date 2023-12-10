@@ -32,7 +32,7 @@ export const Spinner = ({
 		<div ref={spinnerRef} className={spinnerClassName} role="status">
 			{type === "dots" && (
 				<svg className="h-8 w-8">
-					<circle className={dotClassName} cx="20%" cy="50%" r="3" />
+					<circle className={dotClassName} cx="6" cy="50%" r="3" />
 					<circle className={dotClassName} cx="50%" cy="50%" r="3" />
 					<circle className={dotClassName} cx="80%" cy="50%" r="3" />
 				</svg>
