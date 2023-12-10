@@ -20,7 +20,7 @@ type getTextAreaClassesProps = {
 };
 
 const getTextAreaBaseClasses = () => {
-	return "rounded-md text-base h-20 min-h-[80px] resize-none";
+	return "rounded-md text-base h-20 min-h-[80px] resize-none overflow-hidden";
 };
 
 const getTextAreaSizesClasses = () => {
