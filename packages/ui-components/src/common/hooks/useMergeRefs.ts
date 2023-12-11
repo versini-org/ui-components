@@ -11,7 +11,7 @@
  *
  * const Example = React.forwardRef(function Example(props, ref) {
  *   const localRef = React.useRef();
- *   const mergedRef = useMergeRefs([localRef, ref]);
+ *   const mergedRefs = useMergeRefs([localRef, ref]);
  *
  *   return <div ref={mergedRefs} />;
  * });
