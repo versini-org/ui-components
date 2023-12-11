@@ -2,8 +2,7 @@ import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TEXT_AREA_CLASSNAME } from "../../common/constants";
 import { useUncontrolled } from "../../common/hooks/useUncontrolled";
-import useUniqueId from "../../common/hooks/useUniqueId";
-import { mergeRefs } from "../../common/utilities";
+import { useMergeRefs, useUniqueId } from "..";
 import { LiveRegion } from "../private/LiveRegion/LiveRegion";
 import type { TextAreaProps } from "./TextAreaTypes";
 import { adjustLabelAndHelperText, getTextAreaClasses } from "./utilities";
@@ -39,7 +38,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		ref,
 	) => {
 		const textAreaRef = useRef<HTMLTextAreaElement>(null);
-		const mergedTextAreaRef = mergeRefs([ref, textAreaRef]);
+		const mergedTextAreaRef = useMergeRefs([ref, textAreaRef]);
 		const rightElementRef = useRef<HTMLDivElement>(null);
 		const textAreaHeightRef = useRef<number>(80);
 		const labelOffsetRef = useRef<number>(-25);

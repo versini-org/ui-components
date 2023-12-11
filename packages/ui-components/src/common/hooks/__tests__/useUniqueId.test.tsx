@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react";
 
-import useUniqueId from "../useUniqueId";
+import { useUniqueId } from "../../../components";
 
 const regex = /[\w-_:]/;
 

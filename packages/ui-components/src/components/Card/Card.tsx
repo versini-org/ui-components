@@ -1,5 +1,5 @@
 import { CARD_CLASSNAME } from "../../common/constants";
-import useUniqueId from "../../common/hooks/useUniqueId";
+import { useUniqueId } from "..";
 import type { CardHeaderProps, CardProps } from "./CardTypes";
 import { getCardClasses } from "./utilities";
 

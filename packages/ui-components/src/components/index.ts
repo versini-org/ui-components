@@ -1,5 +1,7 @@
 import "./index.css";
 
+import { useMergeRefs } from "../common/hooks/useMergeRefs";
+import { useUniqueId } from "../common/hooks/useUniqueId";
 import { Anchor } from "./Anchor/Anchor";
 import { Button } from "./Button/Button";
 import { ButtonIcon } from "./Button/ButtonIcon";
@@ -54,4 +56,6 @@ export {
 	TextInput,
 	TextInputMask,
 	Toggle,
+	useMergeRefs,
+	useUniqueId,
 };
