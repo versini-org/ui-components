@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TEXT_INPUT_CLASSNAME } from "../../common/constants";
-import useUniqueId from "../../common/hooks/useUniqueId";
+import { useUniqueId } from "../";
 import { LiveRegion } from "../private/LiveRegion/LiveRegion";
 import type { TextInputProps } from "./TextInputTypes";
 import { getTextInputClasses } from "./utilities";

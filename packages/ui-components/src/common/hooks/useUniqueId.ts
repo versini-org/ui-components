@@ -40,7 +40,7 @@ export type UseUniqueIdOptions =
 			prefix?: string;
 	  };
 
-function useUniqueId(options?: UseUniqueIdOptions) {
+export function useUniqueId(options?: UseUniqueIdOptions) {
 	const generatedId = useId();
 
 	if (!options) {
@@ -60,5 +60,3 @@ function useUniqueId(options?: UseUniqueIdOptions) {
 		return `${prefix}${generatedId}`;
 	}
 }
-
-export default useUniqueId;

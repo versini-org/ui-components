@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import { mergeRefs } from "../../common/utilities";
-import { ButtonIcon, IconHide, IconShow, TextInput } from "..";
+import { ButtonIcon, IconHide, IconShow, TextInput, useMergeRefs } from "..";
 import { LiveRegion } from "../private/LiveRegion/LiveRegion";
 import type { TextInputMaskProps } from "./TextInputTypes";
 
@@ -44,7 +43,7 @@ export const TextInputMask = React.forwardRef<
 		const isMaskedRef = useRef(true);
 		const automaskTimerRef = useRef<number>();
 		const inputRef = useRef<HTMLInputElement>(null);
-		const mergedInputRef = mergeRefs([ref, inputRef]);
+		const mergedInputRef = useMergeRefs([ref, inputRef]);
 
 		const buttonLabel = masked ? "Show" : "Hide";
 

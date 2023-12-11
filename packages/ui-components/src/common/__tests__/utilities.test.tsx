@@ -1,8 +1,6 @@
-import { render } from "@testing-library/react";
-import * as React from "react";
 import { describe, expect, it } from "vitest";
 
-import { getSpacing, isEmpty, mergeRefs, truncate } from "../utilities";
+import { getSpacing, isEmpty, truncate } from "../utilities";
 
 describe("Non-DOM tests", () => {
 	describe("getSpacing", () => {
@@ -66,33 +64,6 @@ describe("Non-DOM tests", () => {
 			expect(isEmpty(set)).toBe(true);
 			set.add(42);
 			expect(isEmpty(set)).toBe(false);
-		});
-	});
-});
-
-describe("DOM tests", () => {
-	describe("when testing for mergeRefs", () => {
-		it("should combine multiple refs of different types", () => {
-			const Dummy = React.forwardRef(function Dummy(_, ref) {
-				React.useImperativeHandle(ref, () => "refValue");
-				return null;
-			});
-			const refAsFunc = vi.fn();
-			const refAsObj = { current: undefined };
-			const Example: React.FC<{ visible: boolean }> = ({ visible }) => {
-				return visible ? (
-					<Dummy ref={mergeRefs([refAsObj, refAsFunc])} />
-				) : null;
-			};
-			const { rerender } = render(<Example visible />);
-			expect(refAsFunc).toHaveBeenCalledTimes(1);
-			expect(refAsFunc).toHaveBeenCalledWith("refValue");
-			expect(refAsObj.current).toBe("refValue");
-
-			rerender(<Example visible={false} />);
-			expect(refAsFunc).toHaveBeenCalledTimes(2);
-			expect(refAsFunc).toHaveBeenCalledWith(null);
-			expect(refAsObj.current).toBe(null);
 		});
 	});
 });
