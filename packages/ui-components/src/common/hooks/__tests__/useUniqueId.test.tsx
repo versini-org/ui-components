@@ -2,7 +2,7 @@ import { renderHook } from "@testing-library/react";
 
 import { useUniqueId } from "../../../components";
 
-const regex = /[\w-_:]/;
+const regex = /^[\w-_:]+$/;
 
 describe("useUniqueId tests", () => {
 	it("should return two unique random numbers", () => {
@@ -32,7 +32,7 @@ describe("useUniqueId tests", () => {
 	it("should use the prefix that was given via object", () => {
 		const res1 = renderHook(() => useUniqueId({ prefix: "hello-" }));
 		expect(res1.result.current).toContain("hello");
-		expect(res1.result.current).toMatch(/hello-[\w-_:]/);
+		expect(res1.result.current).toMatch(/hello-[\w-_:]+$/);
 	});
 
 	it("should use the id and prefix that were given via object", () => {
