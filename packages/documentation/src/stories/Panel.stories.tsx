@@ -1,30 +1,45 @@
-import type { Meta } from "@storybook/react";
-import { Button, Panel } from "@versini/ui-components";
-import { useState } from "react";
+import { useArgs } from "@storybook/preview-api";
+import type { Meta, StoryObj } from "@storybook/react";
+import { Panel } from "@versini/ui-components";
 
 const meta: Meta<typeof Panel> = {
 	component: Panel,
 	parameters: {
 		controls: { exclude: ["spacing"], sort: "requiredFirst" },
 	},
-	args: {},
-	argTypes: {},
+	args: {
+		open: false,
+		title: "Panel Title",
+		children: "Panel Content",
+		borderKind: "light",
+	},
+	argTypes: {
+		borderKind: {
+			options: ["dark", "light"],
+			control: { type: "radio" },
+		},
+	},
 };
 
 export default meta;
+type Story = StoryObj<typeof Panel>;
 
-export const Basic = () => {
-	const [showPanel, setShowPanel] = useState(false);
-
-	const openPanel = () => {
-		setShowPanel(!showPanel);
-	};
-	return (
-		<>
-			<Panel open={showPanel} onOpenChange={setShowPanel} />
-			<div className="flex flex-wrap gap-2">
-				<Button onClick={() => openPanel()}>Open Panel</Button>
-			</div>
-		</>
-	);
+export const Basic: Story = {
+	args: {
+		open: false,
+		title: "Panel Title",
+		children: "Panel Content",
+	},
+	/**
+	 * Note for StoryBook: to avoid linting issues, it is recommended
+	 * to use a function with a capitalized name. If you are not concerned
+	 * with linting, you may use an arrow function.
+	 */
+	render: function Render(args) {
+		const [{ open }, updateArgs] = useArgs();
+		const onOpenChange = () => {
+			updateArgs({ open: !open });
+		};
+		return <Panel open={open} onOpenChange={onOpenChange} {...args} />;
+	},
 };

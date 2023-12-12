@@ -3,4 +3,5 @@ export type PanelProps = {
 	onOpenChange: (open: boolean) => void;
 	title: string;
 	children: React.ReactNode;
+	borderKind?: "dark" | "light";
 };
