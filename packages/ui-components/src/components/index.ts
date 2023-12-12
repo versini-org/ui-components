@@ -23,6 +23,7 @@ import { IconSettings } from "./Icons/IconSettings";
 import { IconShow } from "./Icons/IconShow";
 import { IconUser } from "./Icons/IconUser";
 import { Main } from "./Main/Main";
+import { Panel } from "./Panel/Panel";
 import { Spinner } from "./Spinner/Spinner";
 import { TextArea } from "./TextArea/TextArea";
 import { TextInput } from "./TextInput/TextInput";
@@ -51,6 +52,7 @@ export {
 	IconShow,
 	IconUser,
 	Main,
+	Panel,
 	Spinner,
 	TextArea,
 	TextInput,
