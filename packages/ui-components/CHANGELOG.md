@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.12.0](https://github.com/aversini/ui-components/compare/ui-components-v4.11.2...ui-components-v4.12.0) (2023-12-12)
+
+
+### Features
+
+* adding Panel component ([05253f9](https://github.com/aversini/ui-components/commit/05253f9d8420d7d77de80e96f61f11f38519fc8e))
+
+
+### Bug Fixes
+
+* use React own useId instead of nanoid ([3808a8a](https://github.com/aversini/ui-components/commit/3808a8a44576c8c460823a4595c6146e6aa05f83))
+
 ## [4.11.2](https://github.com/aversini/ui-components/compare/ui-components-v4.11.1...ui-components-v4.11.2) (2023-12-10)
 
 
