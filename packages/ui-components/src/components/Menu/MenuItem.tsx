@@ -19,7 +19,7 @@ export const MenuItem = React.forwardRef<
 			ref={useMergeRefs([item.ref, forwardedRef])}
 			type="button"
 			role="menuitem"
-			className="m-0 flex w-full items-center justify-between rounded-md border-none bg-none px-3 py-2 text-left text-base outline-none focus:bg-slate-200 focus:underline disabled:cursor-not-allowed disabled:text-slate-500 sm:py-1"
+			className="m-0 flex w-full items-center justify-between rounded-md border-none bg-none px-3 py-2 text-left text-base outline-none focus:bg-surface-lighter focus:underline disabled:cursor-not-allowed disabled:text-copy-medium sm:py-1"
 			tabIndex={isActive ? 0 : -1}
 			disabled={disabled}
 			{...menu.getItemProps({

@@ -21,6 +21,7 @@ export const tokens = {
 		 */
 		"surface-dark": colors.slate[900],
 		"surface-light": colors.slate[500],
+		"surface-lighter": colors.slate[200],
 
 		/**
 		 * Typography tokens.

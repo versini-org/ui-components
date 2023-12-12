@@ -18,12 +18,14 @@ export const Basic: Story = {
 
 	render: function Render(args) {
 		return (
-			<Menu icon={<IconSettings />} {...args}>
-				<MenuItem label="Profile" />
-				<MenuItem label="Chat details" disabled />
-				<MenuItem label="History" />
-				<MenuItem label="About" />
-			</Menu>
+			<>
+				<Menu icon={<IconSettings />} {...args}>
+					<MenuItem label="Profile" />
+					<MenuItem label="Chat details" disabled />
+					<MenuItem label="History" />
+					<MenuItem label="About" />
+				</Menu>
+			</>
 		);
 	},
 };
