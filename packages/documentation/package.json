@@ -28,7 +28,7 @@
 	},
 	"devDependencies": {
 		"@storybook/addon-a11y": "7.6.3",
-		"@storybook/addon-essentials": "7.6.3",
+		"@storybook/addon-essentials": "7.6.4",
 		"@storybook/blocks": "7.6.3",
 		"@storybook/react": "7.6.3",
 		"@storybook/react-vite": "7.6.3",
