@@ -110,6 +110,7 @@ export const ModalClose = React.forwardRef<
 >(function ModalClose(props, ref) {
 	const { setOpen } = useModalContext();
 	const { children, ...rest } = props;
+	const handleClose = React.useCallback(() => setOpen(false), [setOpen]);
 	return (
 		<ButtonIcon
 			noBorder
@@ -117,7 +118,7 @@ export const ModalClose = React.forwardRef<
 			type="button"
 			{...rest}
 			ref={ref}
-			onClick={() => setOpen(false)}
+			onClick={handleClose}
 		>
 			{children}
 		</ButtonIcon>
