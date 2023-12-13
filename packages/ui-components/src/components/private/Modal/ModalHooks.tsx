@@ -21,6 +21,7 @@ export function useModal({
 		string | undefined
 	>();
 
+	/* v8 ignore next 2 */
 	const open = controlledOpen ?? uncontrolledOpen;
 	const setOpen = setControlledOpen ?? setUncontrolledOpen;
 
@@ -60,6 +61,7 @@ export function useModal({
 export const useModalContext = () => {
 	const context = React.useContext(ModalContext);
 
+	/* v8 ignore next 3 */
 	if (context == null) {
 		throw new Error("Modal components must be wrapped in <Modal />");
 	}
