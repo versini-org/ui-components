@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
 import { Toggle } from "../..";
@@ -67,7 +66,6 @@ describe("Toggle methods", () => {
 			onChange: () => {},
 		};
 		const spyOnChange = vi.spyOn(events, "onChange");
-		const user = userEvent.setup();
 		render(
 			<Toggle
 				// @ts-ignore
@@ -80,7 +78,7 @@ describe("Toggle methods", () => {
 			/>,
 		);
 		const node = screen.getByText("toto");
-		await user.click(node);
+		fireEvent.click(node);
 
 		expect(spyOnChange).toHaveBeenCalledTimes(1);
 	});

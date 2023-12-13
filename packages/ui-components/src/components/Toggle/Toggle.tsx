@@ -10,6 +10,9 @@ export const Toggle = ({
 	kind = "dark",
 }: ToggleProps) => {
 	const toggleClasses = getToggleClasses({ kind, labelHidden });
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		onChange?.(e.target.checked);
+	};
 	return (
 		<label className={toggleClasses.wrapper}>
 			<input
@@ -17,7 +20,7 @@ export const Toggle = ({
 				defaultChecked={checked}
 				type="checkbox"
 				className={toggleClasses.input}
-				onChange={(e) => onChange?.(e.target.checked)}
+				onChange={handleChange}
 			/>
 
 			<div className={toggleClasses.toggle}></div>

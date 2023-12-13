@@ -20,8 +20,8 @@ describe("FlexgridItem (exceptions)", () => {
 		const gridCellRoot = getByTestId("gridcell-1");
 		expect(gridCellRoot).toHaveTextContent("item 1");
 		expectToHaveStyles(gridCellRoot, {
-			"padding-left": "0rem",
-			"padding-top": "0rem",
+			"padding-left": "0px",
+			"padding-top": "0px",
 		});
 	});
 });
@@ -38,8 +38,8 @@ describe("FlexgridItem default rules", () => {
 		const gridCellRoot = getByTestId("gridcell-1");
 		expectToHaveStyles(gridCellRoot, {
 			"flex-basis": "auto",
-			"padding-left": "0.25rem",
-			"padding-top": "0rem",
+			"padding-left": "4px",
+			"padding-top": "0px",
 		});
 		expectToHaveClasses(gridCellRoot, ["box-border"]);
 	});
