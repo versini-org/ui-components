@@ -1,8 +1,25 @@
 import { render } from "@testing-library/react";
-import * as React from "react";
+import React, { createRef, useRef } from "react";
 import { describe, expect, it, vi } from "vitest";
 
 import { useMergeRefs } from "../../../components";
+
+function TestComponent({
+	refs,
+}: {
+	refs: React.ForwardedRef<HTMLButtonElement>[];
+}) {
+	const ref = useRef<HTMLButtonElement>(null);
+	return <button ref={useMergeRefs([...refs, ref])} type="button" />;
+}
+
+function TestComponentWithNoRef({
+	refs,
+}: {
+	refs: React.ForwardedRef<HTMLButtonElement>[];
+}) {
+	return <button ref={useMergeRefs([...refs])} type="button" />;
+}
 
 describe("useMergeRefs tests", () => {
 	it("should combine multiple refs of different types", () => {
@@ -25,5 +42,22 @@ describe("useMergeRefs tests", () => {
 		expect(refAsFunc).toHaveBeenCalledTimes(2);
 		expect(refAsFunc).toHaveBeenCalledWith(null);
 		expect(refAsObj.current).toBe(null);
+	});
+
+	it("assigns refs to all given arguments", () => {
+		const objectRef = createRef<HTMLButtonElement | null>();
+		let fnRefValue: HTMLButtonElement | null = null;
+		const fnRef = (node: HTMLButtonElement | null) => {
+			fnRefValue = node;
+		};
+
+		render(<TestComponent refs={[objectRef, fnRef]} />);
+		expect(fnRefValue! instanceof HTMLButtonElement).toBe(true);
+		expect(objectRef.current instanceof HTMLButtonElement).toBe(true);
+	});
+
+	it("does return null if no refs are passed", () => {
+		const { container } = render(<TestComponentWithNoRef refs={[]} />);
+		expect(container.firstChild).not.toBe(null);
 	});
 });
