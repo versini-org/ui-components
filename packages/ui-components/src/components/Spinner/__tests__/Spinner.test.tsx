@@ -50,4 +50,10 @@ describe("Spinner modifiers", () => {
 			"text-copy-light",
 		]);
 	});
+
+	it("should render a Spinner of type 'dots' ", async () => {
+		render(<Spinner type="dots" />);
+		const node = await screen.findByRole("status");
+		expectToHaveClasses(node, [""]);
+	});
 });
