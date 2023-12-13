@@ -28,8 +28,8 @@ describe("Flexgrid default rules", () => {
 		render(<Flexgrid data-testid="grid-1">hello</Flexgrid>);
 		const gridRoot = await screen.findByTestId("grid-1");
 		expectToHaveStyles(gridRoot, {
-			"margin-left": "-0.25rem",
-			"margin-top": "0rem",
+			"margin-left": "-4px",
+			"margin-top": "0px",
 		});
 	});
 });
@@ -43,8 +43,8 @@ describe("Flexgrid props", () => {
 		);
 		const gridRoot = await screen.findByTestId("grid-1");
 		expectToHaveStyles(gridRoot, {
-			"margin-left": "-0.5rem",
-			"margin-top": "0rem",
+			"margin-left": "-8px",
+			"margin-top": "0px",
 		});
 	});
 
