@@ -39,7 +39,7 @@ const getToggleKnobOffClasses = () => {
 
 const getToggleColorClasses = ({ kind }: { kind: string }) => {
 	return clsx({
-		"border-border-dark bg-surface-light": kind === "light",
+		"bg-surface-medium border-border-dark": kind === "light",
 		"border-border-light bg-surface-dark": kind === "dark",
 	});
 };

@@ -26,7 +26,7 @@ import { ButtonIcon } from "..";
 import { MenuContext } from "./MenuContext";
 import type { MenuProps } from "./MenuTypes";
 
-export const Menu = forwardRef<
+export const MenuComponent = forwardRef<
 	HTMLButtonElement,
 	MenuProps & React.HTMLProps<HTMLButtonElement>
 >(({ children, label, icon, ...props }, userRef) => {
@@ -79,7 +79,9 @@ export const Menu = forwardRef<
 	// This effect closes all menus when an item gets clicked anywhere
 	// in the tree.
 	useEffect(() => {
-		if (!tree) return;
+		if (!tree) {
+			return;
+		}
 
 		function handleTreeClick() {
 			setIsOpen(false);
@@ -107,61 +109,70 @@ export const Menu = forwardRef<
 	}, [tree, isOpen, nodeId]);
 
 	return (
-		<FloatingTree>
-			<FloatingNode id={nodeId}>
-				<ButtonIcon
-					noBorder
-					label={label || "Open menu"}
-					ref={useMergeRefs([refs.setReference, item.ref, userRef])}
-					data-open={isOpen ? "" : undefined}
-					data-focus-inside={hasFocusInside ? "" : undefined}
-					{...getReferenceProps(
-						parent.getItemProps({
-							...props,
-							onFocus(event: React.FocusEvent<HTMLButtonElement>) {
-								props.onFocus?.(event);
-								setHasFocusInside(false);
-								parent.setHasFocusInside(true);
-							},
-						}),
-					)}
-				>
-					{label}
-					{icon}
-				</ButtonIcon>
+		<FloatingNode id={nodeId}>
+			<ButtonIcon
+				noBorder
+				label={label || "Open menu"}
+				ref={useMergeRefs([refs.setReference, item.ref, userRef])}
+				data-open={isOpen ? "" : undefined}
+				data-focus-inside={hasFocusInside ? "" : undefined}
+				{...getReferenceProps(
+					parent.getItemProps({
+						...props,
+						onFocus(event: React.FocusEvent<HTMLButtonElement>) {
+							props.onFocus?.(event);
+							setHasFocusInside(false);
+							parent.setHasFocusInside(true);
+						},
+					}),
+				)}
+			>
+				{label}
+				{icon}
+			</ButtonIcon>
 
-				<MenuContext.Provider
-					value={{
-						activeIndex,
-						setActiveIndex,
-						getItemProps,
-						setHasFocusInside,
-						isOpen,
-					}}
-				>
-					<FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
-						{isOpen && (
-							<FloatingPortal>
-								<FloatingFocusManager
-									context={context}
-									modal={false}
-									initialFocus={0}
-									returnFocus
+			<MenuContext.Provider
+				value={{
+					activeIndex,
+					setActiveIndex,
+					getItemProps,
+					setHasFocusInside,
+					isOpen,
+				}}
+			>
+				<FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
+					{isOpen && (
+						<FloatingPortal>
+							<FloatingFocusManager
+								context={context}
+								modal={false}
+								initialFocus={0}
+								returnFocus
+							>
+								<div
+									ref={refs.setFloating}
+									className="rounded-md bg-surface-light p-4 outline-none sm:p-2"
+									style={floatingStyles}
+									{...getFloatingProps()}
 								>
-									<div
-										ref={refs.setFloating}
-										className="rounded-md bg-slate-300 p-4 outline-none sm:p-2"
-										style={floatingStyles}
-										{...getFloatingProps()}
-									>
-										{children}
-									</div>
-								</FloatingFocusManager>
-							</FloatingPortal>
-						)}
-					</FloatingList>
-				</MenuContext.Provider>
-			</FloatingNode>
+									{children}
+								</div>
+							</FloatingFocusManager>
+						</FloatingPortal>
+					)}
+				</FloatingList>
+			</MenuContext.Provider>
+		</FloatingNode>
+	);
+});
+
+export const Menu = forwardRef<
+	HTMLButtonElement,
+	MenuProps & React.HTMLProps<HTMLButtonElement>
+>((props, ref) => {
+	return (
+		<FloatingTree>
+			<MenuComponent {...props} ref={ref} />
 		</FloatingTree>
 	);
 });

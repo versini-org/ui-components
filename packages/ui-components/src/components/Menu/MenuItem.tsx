@@ -11,7 +11,6 @@ export const MenuItem = React.forwardRef<
 	const menu = React.useContext(MenuContext);
 	const item = useListItem({ label: disabled ? null : label });
 	const tree = useFloatingTree();
-	const isActive = item.index === menu.activeIndex;
 
 	return (
 		<button
@@ -19,8 +18,8 @@ export const MenuItem = React.forwardRef<
 			ref={useMergeRefs([item.ref, forwardedRef])}
 			type="button"
 			role="menuitem"
-			className="m-0 flex w-full items-center justify-between rounded-md border-none bg-none px-3 py-2 text-left text-base outline-none focus:bg-surface-lighter focus:underline disabled:cursor-not-allowed disabled:text-copy-medium sm:py-1"
-			tabIndex={isActive ? 0 : -1}
+			className="m-0 flex w-full items-center justify-between rounded-md border border-transparent bg-none px-3 py-2 text-left text-base outline-none focus:border focus:border-border-medium focus:bg-surface-lighter focus:underline disabled:cursor-not-allowed disabled:text-copy-medium sm:py-1"
+			tabIndex={0}
 			disabled={disabled}
 			{...menu.getItemProps({
 				onClick(event: React.MouseEvent<HTMLButtonElement>) {
