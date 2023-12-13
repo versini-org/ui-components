@@ -4,14 +4,20 @@ import userEvent from "@testing-library/user-event";
 
 import { Menu, MenuItem } from "../..";
 
-// const SimpleMenu = ({ ...props }) => (
-// 	<Menu icon={<IconSettings />}>
-// 		<MenuItem label="Profile" />
-// 		<MenuItem label="Chat details" disabled />
-// 		<MenuItem label="History" />
-// 		<MenuItem label="About" />
-// 	</Menu>
-// );
+const MENU_TRIGGER_LABEL = "Click Me";
+const FIRST_MENU_ITEM = "Menu 1";
+const SECOND_MENU_ITEM = "Menu 2";
+const THIRD_MENU_ITEM = "Menu 3";
+const FOURTH_MENU_ITEM = "Menu 4";
+
+const SimpleMenu = ({ ...props }) => (
+	<Menu {...props}>
+		<MenuItem label={FIRST_MENU_ITEM} />
+		<MenuItem label={SECOND_MENU_ITEM} />
+		<MenuItem label={THIRD_MENU_ITEM} disabled />
+		<MenuItem label={FOURTH_MENU_ITEM} />
+	</Menu>
+);
 
 function renderWithUserEvent(jsx: JSX.Element) {
 	return {
@@ -27,65 +33,97 @@ describe("Menu (exceptions)", () => {
 	});
 });
 
-describe("MenuButton behaviors", () => {
-	it("should focus next MenuItem when Down key pressed", async () => {
-		// vi.useFakeTimers();
+describe("Menu rendering", () => {
+	it("should render a menu with a trigger", () => {
+		render(<SimpleMenu />);
+		const trigger = screen.getByLabelText("Open menu");
+		expect(trigger).toBeInTheDocument();
+	});
+});
+
+describe("Menu behaviors", () => {
+	it("should move focus on the first menuitem when menu is opened", async () => {
 		const { user } = renderWithUserEvent(
-			<Menu label="Click Me">
-				<MenuItem label="Profile" />
-				<MenuItem label="Chat details" disabled />
-				<MenuItem label="History" />
-				<MenuItem label="About" />
-			</Menu>,
+			<SimpleMenu label={MENU_TRIGGER_LABEL} />,
 		);
-
-		const trigger = screen.getByLabelText("Click Me");
-		// open the menu
-		// await act(async () => {
+		const trigger = screen.getByLabelText(MENU_TRIGGER_LABEL);
 		await user.click(trigger);
-
-		// screen.debug();
-		// });
-		// fireEvent.click(trigger);
-		// make sure the menu is indeed opened
-		// await screen.findByRole("menu");
-		// await user.keyboard("ArrowDown");
-		// await user.keyboard("ArrowDown");
-		// await user.tab();
-
-		// act(() => {
-		// vi.advanceTimersByTime(1000);
-		// });
-
-		// await user.tab();
-
 		const firstMenuItem = screen.getByRole("menuitem", {
-			name: "Profile",
+			name: FIRST_MENU_ITEM,
+		});
+
+		expect(firstMenuItem).toHaveFocus();
+		expect(document.activeElement).toBe(firstMenuItem);
+	});
+
+	it("should move focus on the next menuitem when tab is pressed", async () => {
+		const { user } = renderWithUserEvent(
+			<SimpleMenu label={MENU_TRIGGER_LABEL} />,
+		);
+		const trigger = screen.getByLabelText(MENU_TRIGGER_LABEL);
+		await user.click(trigger);
+		const firstMenuItem = screen.getByRole("menuitem", {
+			name: FIRST_MENU_ITEM,
 		});
 		const secondMenuItem = screen.getByRole("menuitem", {
-			name: "History",
+			name: SECOND_MENU_ITEM,
 		});
+		const fourthMenuItem = screen.getByRole("menuitem", {
+			name: FOURTH_MENU_ITEM,
+		});
+
 		expect(firstMenuItem).toHaveFocus();
-		// expect(secondMenuItem).toHaveFocus();
+		await user.tab();
+		expect(secondMenuItem).toHaveFocus();
+		await user.tab();
+		expect(fourthMenuItem).toHaveFocus();
+		expect(document.activeElement).toBe(fourthMenuItem);
+	});
 
-		// screen.debug(firstMenuItem);
-		// expect(document.activeElement).toBe(firstMenuItem);
+	it("should move focus on the previous menuitem when shirt+tab is pressed", async () => {
+		const { user } = renderWithUserEvent(
+			<SimpleMenu label={MENU_TRIGGER_LABEL} />,
+		);
+		const trigger = screen.getByLabelText(MENU_TRIGGER_LABEL);
+		await user.click(trigger);
+		const firstMenuItem = screen.getByRole("menuitem", {
+			name: FIRST_MENU_ITEM,
+		});
+		const secondMenuItem = screen.getByRole("menuitem", {
+			name: SECOND_MENU_ITEM,
+		});
+		const fourthMenuItem = screen.getByRole("menuitem", {
+			name: FOURTH_MENU_ITEM,
+		});
 
-		// await act(() => {
-		//   fireEvent.click(trigger);
-		// });
-		// const menuBalloon = await getMenuBalloon();
-		// await act(() => {
-		//   fireEvent.keyDown(
-		//     menuBalloon.querySelectorAll(".pnr-menu-item button")[0],
-		//     {
-		//       key: KEYBOARD_KEYS.DOWN,
-		//     }
-		//   );
-		// });
-		// const secondMenuItem = menuBalloon.querySelectorAll(
-		//   ".pnr-menu-item button"
-		// )[1];
-		// expect(document.activeElement).toBe(secondMenuItem);
+		expect(firstMenuItem).toHaveFocus();
+		await user.tab();
+		expect(secondMenuItem).toHaveFocus();
+		await user.tab();
+		expect(fourthMenuItem).toHaveFocus();
+
+		await user.tab({ shift: true });
+		expect(secondMenuItem).toHaveFocus();
+		await user.tab({ shift: true });
+		expect(firstMenuItem).toHaveFocus();
+		expect(document.activeElement).toBe(firstMenuItem);
+	});
+
+	it("should close the menu when ESC is pressed", async () => {
+		const { user } = renderWithUserEvent(
+			<SimpleMenu label={MENU_TRIGGER_LABEL} />,
+		);
+		const trigger = screen.getByLabelText(MENU_TRIGGER_LABEL);
+		await user.click(trigger);
+		const firstMenuItem = screen.getByRole("menuitem", {
+			name: FIRST_MENU_ITEM,
+		});
+
+		expect(firstMenuItem).toHaveFocus();
+		expect(document.activeElement).toBe(firstMenuItem);
+
+		// await user.keyboard("{esc}");
+		fireEvent.keyDown(document.activeElement!, { key: "Escape" });
+		expect(trigger).toHaveFocus();
 	});
 });
