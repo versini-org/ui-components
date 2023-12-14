@@ -1,11 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import {
-	Button,
-	ButtonIcon,
-	IconSettings,
-	Menu,
-	MenuItem,
-} from "@versini/ui-components";
+import { Button, IconSettings, Menu, MenuItem } from "@versini/ui-components";
 
 const meta: Meta<typeof Menu> = {
 	component: Menu,
