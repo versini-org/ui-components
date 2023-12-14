@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.13.0](https://github.com/aversini/ui-components/compare/ui-components-v4.12.0...ui-components-v4.13.0) (2023-12-14)
+
+
+### Features
+
+* adding Menu component ([e2ce226](https://github.com/aversini/ui-components/commit/e2ce226118dc778906f81fcca949e76379cfd201))
+
 ## [4.12.0](https://github.com/aversini/ui-components/compare/ui-components-v4.11.2...ui-components-v4.12.0) (2023-12-12)
 
 
