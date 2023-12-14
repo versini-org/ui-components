@@ -79,6 +79,7 @@ export const MenuComponent = forwardRef<
 	// This effect closes all menus when an item gets clicked anywhere
 	// in the tree.
 	useEffect(() => {
+		/* v8 ignore next 3 */
 		if (!tree) {
 			return;
 		}
@@ -87,18 +88,10 @@ export const MenuComponent = forwardRef<
 			setIsOpen(false);
 		}
 
-		function onSubMenuOpen(event: { nodeId: string; parentId: string }) {
-			if (event.nodeId !== nodeId && event.parentId === null) {
-				setIsOpen(false);
-			}
-		}
-
 		tree.events.on("click", handleTreeClick);
-		tree.events.on("menuopen", onSubMenuOpen);
 
 		return () => {
 			tree.events.off("click", handleTreeClick);
-			tree.events.off("menuopen", onSubMenuOpen);
 		};
 	}, [tree, nodeId]);
 
@@ -119,11 +112,6 @@ export const MenuComponent = forwardRef<
 				{...getReferenceProps(
 					parent.getItemProps({
 						...props,
-						onFocus(event: React.FocusEvent<HTMLButtonElement>) {
-							props.onFocus?.(event);
-							setHasFocusInside(false);
-							parent.setHasFocusInside(true);
-						},
 					}),
 				)}
 			>

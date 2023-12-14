@@ -1,5 +1,4 @@
-// import { expectToHaveClasses } from "../../../common/__tests__/helpers";
-import { act, fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { Menu, MenuItem } from "../..";
@@ -109,7 +108,7 @@ describe("Menu behaviors", () => {
 		expect(document.activeElement).toBe(firstMenuItem);
 	});
 
-	it("should close the menu when ESC is pressed", async () => {
+	it("should close the menu when a menuitem is selected", async () => {
 		const { user } = renderWithUserEvent(
 			<SimpleMenu label={MENU_TRIGGER_LABEL} />,
 		);
@@ -121,9 +120,51 @@ describe("Menu behaviors", () => {
 
 		expect(firstMenuItem).toHaveFocus();
 		expect(document.activeElement).toBe(firstMenuItem);
-
-		// await user.keyboard("{esc}");
-		fireEvent.keyDown(document.activeElement!, { key: "Escape" });
+		await user.click(firstMenuItem);
 		expect(trigger).toHaveFocus();
+	});
+
+	it("should trigger the MenuItem onClick callback when a menuitem is selected", async () => {
+		const onClick = vi.fn();
+		const { user } = renderWithUserEvent(
+			<Menu label={MENU_TRIGGER_LABEL}>
+				<MenuItem label={FIRST_MENU_ITEM} onClick={onClick} />
+				<MenuItem label={SECOND_MENU_ITEM} />
+				<MenuItem label={THIRD_MENU_ITEM} disabled />
+				<MenuItem label={FOURTH_MENU_ITEM} />
+			</Menu>,
+		);
+		const trigger = screen.getByLabelText(MENU_TRIGGER_LABEL);
+		await user.click(trigger);
+		const firstMenuItem = screen.getByRole("menuitem", {
+			name: FIRST_MENU_ITEM,
+		});
+
+		expect(firstMenuItem).toHaveFocus();
+		expect(document.activeElement).toBe(firstMenuItem);
+		await user.click(firstMenuItem);
+		expect(onClick).toHaveBeenCalled();
+	});
+
+	it("should trigger the MenuItem onFocus callback when a menuitem is selected", async () => {
+		const onFocus = vi.fn();
+		const { user } = renderWithUserEvent(
+			<Menu label={MENU_TRIGGER_LABEL}>
+				<MenuItem label={FIRST_MENU_ITEM} onFocus={onFocus} />
+				<MenuItem label={SECOND_MENU_ITEM} />
+				<MenuItem label={THIRD_MENU_ITEM} disabled />
+				<MenuItem label={FOURTH_MENU_ITEM} />
+			</Menu>,
+		);
+		const trigger = screen.getByLabelText(MENU_TRIGGER_LABEL);
+		await user.click(trigger);
+		const firstMenuItem = screen.getByRole("menuitem", {
+			name: FIRST_MENU_ITEM,
+		});
+
+		expect(firstMenuItem).toHaveFocus();
+		expect(document.activeElement).toBe(firstMenuItem);
+		await user.click(firstMenuItem);
+		expect(onFocus).toHaveBeenCalled();
 	});
 });
