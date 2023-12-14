@@ -20,7 +20,7 @@ export const Panel = ({
 }: PanelProps) => {
 	const originalTitleRef = useRef("");
 	const mainClass = clsx(
-		"flex h-full min-h-[95%] w-full flex-col bg-surface-light sm:h-auto sm:min-h-[10rem] sm:w-[95%] sm:rounded-lg md:max-w-2xl",
+		"bg-surface-medium flex h-full min-h-[95%] w-full flex-col sm:h-auto sm:min-h-[10rem] sm:w-[95%] sm:rounded-lg md:max-w-2xl",
 		{
 			"sm:border-2 sm:border-border-dark": borderKind === "dark",
 			"sm:border-2 sm:border-border-light": borderKind === "light",

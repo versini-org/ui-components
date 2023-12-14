@@ -28,7 +28,7 @@ describe("Panel modifiers", () => {
 			"min-h-[95%]",
 			"w-full",
 			"flex-col",
-			"bg-surface-light",
+			"bg-surface-medium",
 			"sm:h-auto",
 			"sm:min-h-[10rem]",
 			"sm:w-[95%]",
