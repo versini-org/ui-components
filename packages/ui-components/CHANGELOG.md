@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.14.0](https://github.com/aversini/ui-components/compare/ui-components-v4.13.2...ui-components-v4.14.0) (2023-12-15)
+
+
+### Features
+
+* **Menu:** adding prop to change the default placement ([6970a4f](https://github.com/aversini/ui-components/commit/6970a4f04ad6a91ec740f38da04e06c95618d472))
+
 ## [4.13.2](https://github.com/aversini/ui-components/compare/ui-components-v4.13.1...ui-components-v4.13.2) (2023-12-15)
 
 
