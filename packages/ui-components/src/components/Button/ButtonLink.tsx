@@ -51,19 +51,19 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 		};
 
 		return (
-			<>
-				<a
-					ref={ref}
-					aria-label={ariaLabel || formattedLabel?.fullString}
-					className={buttonClass}
-					href={link}
-					{...extraProps}
-				>
-					<div {...(!noTruncate && { className: "truncate" })}>
-						{formattedLabel?.truncatedString || children}
-					</div>
-				</a>
-			</>
+			<a
+				ref={ref}
+				aria-label={ariaLabel || formattedLabel?.fullString}
+				className={buttonClass}
+				href={link}
+				{...extraProps}
+			>
+				<div {...(!noTruncate && { className: "truncate" })}>
+					{formattedLabel?.truncatedString || children}
+				</div>
+			</a>
 		);
 	},
 );
+
+ButtonLink.displayName = "ButtonLink";

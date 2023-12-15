@@ -37,19 +37,19 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 		});
 
 		return (
-			<>
-				<button
-					ref={ref}
-					className={buttonClass}
-					onClick={onClick}
-					disabled={disabled}
-					type={type}
-					aria-label={ariaLabel || label}
-					{...otherProps}
-				>
-					{children}
-				</button>
-			</>
+			<button
+				ref={ref}
+				className={buttonClass}
+				onClick={onClick}
+				disabled={disabled}
+				type={type}
+				aria-label={ariaLabel || label}
+				{...otherProps}
+			>
+				{children}
+			</button>
 		);
 	},
 );
+
+ButtonIcon.displayName = "ButtonIcon";

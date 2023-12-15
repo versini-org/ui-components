@@ -36,3 +36,5 @@ export const MenuItem = React.forwardRef<
 		</button>
 	);
 });
+
+MenuItem.displayName = "MenuItem";
