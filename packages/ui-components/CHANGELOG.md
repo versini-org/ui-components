@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.13.2](https://github.com/aversini/ui-components/compare/ui-components-v4.13.1...ui-components-v4.13.2) (2023-12-15)
+
+
+### Bug Fixes
+
+* **Menu:** trying to fix incorrect menu placement on iPad ([a7044e8](https://github.com/aversini/ui-components/commit/a7044e827c7cbe4e9ce7a8e83ca0a1dabb52016c))
+
 ## [4.13.1](https://github.com/aversini/ui-components/compare/ui-components-v4.13.0...ui-components-v4.13.1) (2023-12-15)
 
 
