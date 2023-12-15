@@ -164,3 +164,6 @@ export const Menu = forwardRef<
 		</FloatingTree>
 	);
 });
+
+Menu.displayName = "Menu";
+MenuComponent.displayName = "MenuComponent";

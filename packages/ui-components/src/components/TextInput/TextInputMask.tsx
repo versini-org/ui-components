@@ -180,3 +180,5 @@ export const TextInputMask = React.forwardRef<
 		);
 	},
 );
+
+TextInputMask.displayName = "TextInputMask";

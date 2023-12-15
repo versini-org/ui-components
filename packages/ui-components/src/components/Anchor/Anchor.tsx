@@ -8,3 +8,5 @@ export const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(
 		return <ButtonLink ref={ref} {...otherProps} />;
 	},
 );
+
+Anchor.displayName = "Anchor";

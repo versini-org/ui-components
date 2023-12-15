@@ -21,8 +21,8 @@ export const Footer = ({
 
 	return (
 		<footer className={footerClass}>
-			{row1 && <>{row1}</>}
-			{row2 && <>{row2}</>}
+			{row1 && <div className="inline-block">{row1}</div>}
+			{row2 && <div className="inline-block">{row2}</div>}
 		</footer>
 	);
 };
