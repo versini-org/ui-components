@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.13.1](https://github.com/aversini/ui-components/compare/ui-components-v4.13.0...ui-components-v4.13.1) (2023-12-15)
+
+
+### Bug Fixes
+
+* minor lint errors ([1259558](https://github.com/aversini/ui-components/commit/125955816a2a3fbf5a39ef207d7d240304ce879f))
+
 ## [4.13.0](https://github.com/aversini/ui-components/compare/ui-components-v4.12.0...ui-components-v4.13.0) (2023-12-14)
 
 
