@@ -47,7 +47,8 @@ export const MenuComponent = forwardRef<
 		open: isOpen,
 		onOpenChange: setIsOpen,
 		placement: "bottom-start",
-		middleware: [offset({ mainAxis: 4, alignmentAxis: 0 }), flip(), shift()],
+		strategy: "fixed",
+		middleware: [offset({ mainAxis: 10 }), flip(), shift()],
 		whileElementsMounted: autoUpdate,
 	});
 
