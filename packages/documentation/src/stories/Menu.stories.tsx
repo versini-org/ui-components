@@ -6,8 +6,28 @@ const meta: Meta<typeof Menu> = {
 	parameters: {
 		controls: { exclude: ["spacing"], sort: "requiredFirst" },
 	},
-	args: {},
-	argTypes: {},
+	args: {
+		defaultPlacement: "bottom-start",
+	},
+	argTypes: {
+		defaultPlacement: {
+			control: "select",
+			options: [
+				"top-start",
+				"top",
+				"top-end",
+				"right-start",
+				"right",
+				"right-end",
+				"bottom-start",
+				"bottom",
+				"bottom-end",
+				"left-start",
+				"left",
+				"left-end",
+			],
+		},
+	},
 };
 
 export default meta;
