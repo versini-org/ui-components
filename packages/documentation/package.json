@@ -15,16 +15,9 @@
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0",
 		"test": "echo \"WARNING: no test specified\" && exit 0"
 	},
-	"dependencies": {
-		"@versini/ui-components": "*",
-		"autoprefixer": "10.4.16",
-		"clsx": "2.0.0",
-		"json5": "2.2.3",
-		"postcss": "8.4.32",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"tailwindcss": "3.3.6",
-		"uuid": "9.0.1"
+	"peerDependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@storybook/addon-a11y": "7.6.4",
@@ -35,5 +28,14 @@
 		"@storybook/testing-library": "0.2.2",
 		"prop-types": "15.8.1",
 		"storybook": "7.6.4"
+	},
+	"dependencies": {
+		"@versini/ui-components": "*",
+		"autoprefixer": "10.4.16",
+		"clsx": "2.0.0",
+		"json5": "2.2.3",
+		"postcss": "8.4.32",
+		"tailwindcss": "3.3.6",
+		"uuid": "9.0.1"
 	}
 }
