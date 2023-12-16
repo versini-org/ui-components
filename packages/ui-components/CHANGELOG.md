@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.14.1](https://github.com/aversini/ui-components/compare/ui-components-v4.14.0...ui-components-v4.14.1) (2023-12-15)
+
+
+### Bug Fixes
+
+* **Footer:** row1 and row2 should not be inline ([750a56e](https://github.com/aversini/ui-components/commit/750a56e3921385cb6053f5ef336611744d4ad0a2))
+
 ## [4.14.0](https://github.com/aversini/ui-components/compare/ui-components-v4.13.2...ui-components-v4.14.0) (2023-12-15)
 
 
