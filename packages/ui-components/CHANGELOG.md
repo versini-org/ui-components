@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.15.0](https://github.com/aversini/ui-components/compare/ui-components-v4.14.1...ui-components-v4.15.0) (2023-12-16)
+
+
+### Features
+
+* **TextArea:** adding "helperTextOnFocus" prop ([66b75f6](https://github.com/aversini/ui-components/commit/66b75f6677a32662d8e05894711a06e7ffe37eb1))
+
 ## [4.14.1](https://github.com/aversini/ui-components/compare/ui-components-v4.14.0...ui-components-v4.14.1) (2023-12-15)
 
 
