@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
-import { act, render, screen } from "@testing-library/react";
+import { act, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
@@ -96,6 +96,45 @@ describe("TextArea modifiers", () => {
 			TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
 		);
 	});
+
+	it("should render a text area with a helper text", async () => {
+		render(
+			<TextArea
+				label="toto"
+				name="toto"
+				helperText="helper text"
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const helperText = await screen.findByText("helper text");
+		expect(helperText.className).toContain("av-text-area-helper-text");
+	});
+
+	it("should render a text area with a helper text on focus only", async () => {
+		const user = userEvent.setup();
+		render(
+			<TextArea
+				label="toto"
+				name="toto"
+				helperText="helper text"
+				helperTextOnFocus
+				data-testid="txtnpt-1"
+			/>,
+		);
+
+		await waitFor(() => {
+			expect(screen.queryByText("helper text")).not.toBeInTheDocument();
+		});
+		const input = await screen.findByTestId("txtnpt-1");
+		await user.type(input, "aa");
+		expect(screen.queryByText("helper text")).toBeInTheDocument();
+
+		await user.clear(input);
+		await user.tab();
+		await waitFor(() => {
+			expect(screen.queryByText("helper text")).not.toBeInTheDocument();
+		});
+	});
 });
 
 describe("TextArea methods", () => {
@@ -122,6 +161,49 @@ describe("TextArea methods", () => {
 		await user.type(input, "aa");
 
 		expect(spyOnChange).toHaveBeenCalledTimes(2);
+	});
+
+	it("should honor the onFocus prop", async () => {
+		const events = {
+			onFocus: () => {},
+		};
+		const spyOnFocus = vi.spyOn(events, "onFocus");
+		const user = userEvent.setup();
+		render(
+			<TextArea
+				// @ts-ignore
+				onFocus={spyOnFocus}
+				label="hello world"
+				name="toto"
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const input = await screen.findByTestId("txtnpt-1");
+		await user.type(input, "aa");
+
+		expect(spyOnFocus).toHaveBeenCalledTimes(1);
+	});
+
+	it("should honor the onBlur prop", async () => {
+		const events = {
+			onBlur: () => {},
+		};
+		const spyOnBlur = vi.spyOn(events, "onBlur");
+		const user = userEvent.setup();
+		render(
+			<TextArea
+				// @ts-ignore
+				onBlur={spyOnBlur}
+				label="hello world"
+				name="toto"
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const input = await screen.findByTestId("txtnpt-1");
+		await user.type(input, "aa");
+		await user.tab();
+
+		expect(spyOnBlur).toHaveBeenCalledTimes(1);
 	});
 });
 

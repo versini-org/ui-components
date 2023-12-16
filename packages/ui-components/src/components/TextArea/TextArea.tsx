@@ -29,9 +29,12 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			labelId,
 
 			helperText = "",
+			helperTextOnFocus = false,
 
 			rightElement,
 			onChange,
+			onFocus,
+			onBlur,
 
 			...extraProps
 		},
@@ -49,6 +52,9 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		const textAreaId = useUniqueId({ id, prefix: `${TEXT_AREA_CLASSNAME}-` });
 
 		const [textAreaPaddingRight, setTextAreaPaddingRight] = useState(0);
+		const [showHelperText, setShowHelperText] = useState(
+			Boolean(!helperTextOnFocus && helperText),
+		);
 
 		const liveErrorMessage = `${name} error, ${helperText}`;
 		const textTextAreaClassName = getTextAreaClasses({
@@ -82,6 +88,20 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
 		const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
 			setValue(e.target.value);
+		};
+
+		const handleFocus = (e: React.FocusEvent<HTMLTextAreaElement, Element>) => {
+			if (helperTextOnFocus && helperText) {
+				setShowHelperText(true);
+			}
+			onFocus && onFocus(e);
+		};
+
+		const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement, Element>) => {
+			if (helperTextOnFocus && helperText && !userInput) {
+				setShowHelperText(false);
+			}
+			onBlur && onBlur(e);
 		};
 
 		/**
@@ -200,6 +220,8 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 						!raw && { style: { paddingRight: textAreaPaddingRight } })}
 					value={userInput}
 					onChange={handleChange}
+					onFocus={handleFocus}
+					onBlur={handleBlur}
 					{...extraProps}
 				/>
 				{!raw && (
@@ -213,7 +235,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 					</label>
 				)}
 
-				{helperText && (
+				{showHelperText && (
 					<div
 						ref={helperTextRef}
 						id={`${textAreaId}-helper`}

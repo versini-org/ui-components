@@ -70,6 +70,7 @@ export const Basic: Story = {
 				<div className="flex flex-wrap gap-2">
 					<TextArea {...args} />
 					<TextArea {...args} />
+					<TextArea {...args} helperTextOnFocus />
 				</div>
 			</form>
 		</div>

@@ -3,6 +3,7 @@ export type TextAreaProps = {
 	name: string;
 	labelId?: string;
 	helperText?: string;
+	helperTextOnFocus?: boolean;
 	error?: boolean;
 	focusKind?: "dark" | "light";
 	borderKind?: "dark" | "light";
