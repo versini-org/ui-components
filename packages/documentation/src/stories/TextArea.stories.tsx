@@ -119,15 +119,13 @@ export const CustomTheme: Story = {
 			parentStyle?.setProperty("--av-focus-light", "#3e7d0e");
 		}, []);
 		return (
-			<>
-				<div ref={parentRef} className="min-h-1 p-11">
-					<form noValidate>
-						<div className="flex gap-2">
-							<TextArea {...args} />
-						</div>
-					</form>
-				</div>
-			</>
+			<div ref={parentRef} className="min-h-1 p-11">
+				<form noValidate>
+					<div className="flex gap-2">
+						<TextArea {...args} />
+					</div>
+				</form>
+			</div>
 		);
 	},
 };
