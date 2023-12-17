@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.15.1](https://github.com/aversini/ui-components/compare/ui-components-v4.15.0...ui-components-v4.15.1) (2023-12-17)
+
+
+### Bug Fixes
+
+* **Button:** smaller border ([a06c47c](https://github.com/aversini/ui-components/commit/a06c47cc94dfe24addd99c0ff78c2e8d71d71727))
+
 ## [4.15.0](https://github.com/aversini/ui-components/compare/ui-components-v4.14.1...ui-components-v4.15.0) (2023-12-16)
 
 
