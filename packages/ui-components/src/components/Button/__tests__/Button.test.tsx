@@ -32,7 +32,8 @@ describe("Button modifiers", () => {
 			"focus:ring-2",
 			"focus:ring-focus-light",
 			"focus:ring-offset-0",
-			"border-2",
+			"focus:border-white",
+			"border",
 			"border-border-dark",
 		]);
 	});

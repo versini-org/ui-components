@@ -28,8 +28,17 @@ export const tokens = {
 		 * Typography tokens.
 		 */
 		"copy-dark": colors.slate[900],
+		"copy-dark-hover": colors.slate[900],
+		"copy-dark-active": colors.slate[900],
+
 		"copy-medium": colors.slate[400],
+		"copy-medium-hover": colors.slate[400],
+		"copy-medium-active": colors.slate[400],
+
 		"copy-light": colors.slate[200],
+		"copy-light-hover": colors.slate[200],
+		"copy-light-active": colors.slate[400],
+
 		"copy-error-dark": errorColorDark,
 		"copy-error-light": errorColorLight,
 
@@ -39,6 +48,7 @@ export const tokens = {
 		"border-dark": colors.slate[900],
 		"border-medium": colors.slate[400],
 		"border-light": colors.slate[300],
+		"border-white": "#ffffff",
 		"border-error-dark": errorColorDark,
 		"border-error-light": errorColorLight,
 
