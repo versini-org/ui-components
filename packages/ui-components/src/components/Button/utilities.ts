@@ -67,7 +67,9 @@ const getButtonHoverClasses = ({
 	kind: string;
 	disabled: boolean;
 }) => {
-	return disabled ? "" : `hover:bg-action-${kind}-hover`;
+	return disabled
+		? ""
+		: `hover:bg-action-${kind}-hover hover:text-copy-light-hover`;
 };
 
 const getButtonActiveClasses = ({
@@ -79,7 +81,7 @@ const getButtonActiveClasses = ({
 }) => {
 	return disabled
 		? ""
-		: `active:bg-action-${kind}-active active:text-copy-medium`;
+		: `active:bg-action-${kind}-active active:text-copy-light-active`;
 };
 
 const getButtonBorderClasses = ({
@@ -89,9 +91,10 @@ const getButtonBorderClasses = ({
 	kind: string;
 	noBorder: boolean;
 }) => {
-	return clsx("border-2", {
+	return clsx("border", {
 		[`border-border-${kind}`]: !noBorder,
 		"border-transparent": noBorder,
+		"focus:border-white": !noBorder,
 	});
 };
 
@@ -126,5 +129,5 @@ export const getButtonClasses = ({
 					"w-full": fullWidth,
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
 				},
-		  );
+			);
 };

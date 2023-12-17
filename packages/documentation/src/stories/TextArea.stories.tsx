@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button, TextArea } from "@versini/ui-components";
+import { useEffect, useRef } from "react";
 
 const meta: Meta<typeof TextArea> = {
 	component: TextArea,
@@ -95,4 +96,36 @@ export const RightElement: Story = {
 			</form>
 		</div>
 	),
+};
+
+export const CustomTheme: Story = {
+	args: {
+		rightElement: <Button kind="light">Send</Button>,
+		helperText: "Powered by the sun",
+	},
+	render: function Render(args) {
+		const parentRef = useRef<HTMLDivElement>(null);
+		useEffect(() => {
+			const parentStyle = parentRef?.current?.style;
+			parentStyle?.setProperty("--av-copy-light", "#403c3a");
+			parentStyle?.setProperty("--av-copy-light-hover", "white");
+			parentStyle?.setProperty("--av-copy-light-active", "white");
+			parentStyle?.setProperty("--av-copy-medium", "#403c3a");
+			parentStyle?.setProperty("--av-surface-dark", "white");
+			parentStyle?.setProperty("--av-action-light", "#ffcd41");
+			parentStyle?.setProperty("--av-action-light-hover", "#403c3a");
+			parentStyle?.setProperty("--av-action-light-active", "black");
+			parentStyle?.setProperty("--av-border-light", "#403c3a");
+			parentStyle?.setProperty("--av-focus-light", "#3e7d0e");
+		}, []);
+		return (
+			<div ref={parentRef} className="min-h-1 p-11">
+				<form noValidate>
+					<div className="flex gap-2">
+						<TextArea {...args} />
+					</div>
+				</form>
+			</div>
+		);
+	},
 };
