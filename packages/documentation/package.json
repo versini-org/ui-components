@@ -27,7 +27,7 @@
 		"@storybook/react-vite": "7.6.4",
 		"@storybook/testing-library": "0.2.2",
 		"prop-types": "15.8.1",
-		"storybook": "7.6.4"
+		"storybook": "7.6.6"
 	},
 	"dependencies": {
 		"@versini/ui-components": "*",
