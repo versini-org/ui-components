@@ -27,6 +27,13 @@ import { Menu } from "./Menu/Menu";
 import { MenuItem } from "./Menu/MenuItem";
 import { Panel } from "./Panel/Panel";
 import { Spinner } from "./Spinner/Spinner";
+import {
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableRow,
+} from "./Table/Table";
 import { TextArea } from "./TextArea/TextArea";
 import { TextInput } from "./TextInput/TextInput";
 import { TextInputMask } from "./TextInput/TextInputMask";
@@ -58,6 +65,11 @@ export {
 	MenuItem,
 	Panel,
 	Spinner,
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableRow,
 	TextArea,
 	TextInput,
 	TextInputMask,
