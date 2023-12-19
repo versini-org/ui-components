@@ -5123,17 +5123,10 @@ __metadata:
     "@storybook/react-vite": "npm:7.6.6"
     "@storybook/testing-library": "npm:0.2.2"
     "@versini/ui-components": "npm:*"
-    autoprefixer: "npm:10.4.16"
-    clsx: "npm:2.0.0"
     json5: "npm:2.2.3"
-    postcss: "npm:8.4.32"
     prop-types: "npm:15.8.1"
     storybook: "npm:7.6.6"
-    tailwindcss: "npm:3.3.6"
     uuid: "npm:9.0.1"
-  peerDependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
   languageName: unknown
   linkType: soft
 
