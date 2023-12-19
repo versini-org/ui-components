@@ -6,6 +6,7 @@ import { defineConfig } from "vite";
 import { externalDependencies } from "../../configuration/vite.common";
 
 const packageJson = fs.readJSONSync("package.json");
+const copyrightYear = new Date(Date.now()).getFullYear();
 
 const buildTime = new Date()
 	.toLocaleString("en-US", {
@@ -34,6 +35,23 @@ export default defineConfig({
 			output: {
 				assetFileNames: "style[extname]",
 				entryFileNames: "[name].js",
+				banner: `/*!
+  ${packageJson.name} v${packageJson.version}
+  © ${copyrightYear} gizmette.com
+*/
+try {
+  if (!window.__VERSINI_UI_GLOBAL__) {
+    window.__VERSINI_UI_GLOBAL__ = {
+      version: "${packageJson.version}",
+			buildTime: "${buildTime}",
+			homepage: "${packageJson.homepage}",
+			license: "${packageJson.license}",
+    };
+  }
+} catch (error) {
+  // nothing to declare officer
+}
+`,
 			},
 		},
 	},
