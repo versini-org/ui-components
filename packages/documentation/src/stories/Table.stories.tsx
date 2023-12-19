@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {
 	ButtonIcon,
+	IconDelete,
+	IconRestore,
 	Table,
 	TableBody,
 	TableCell,
 	TableHead,
 	TableRow,
 } from "@versini/ui-components";
-import { IconDelete } from "@versini/ui-components";
-import { IconRestore } from "@versini/ui-components";
 
 const meta: Meta<typeof Table> = {
 	component: Table,
