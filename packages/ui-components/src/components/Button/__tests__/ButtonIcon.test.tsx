@@ -96,6 +96,24 @@ describe("ButtonIcon modifiers", () => {
 		expectToHaveClasses(button, ["h-6", "w-6", "p-0"]);
 	});
 
+	it("should render a size small button with a label on the right", async () => {
+		render(
+			<ButtonIcon size="small" labelRight="Settings">
+				<IconSettings decorative />
+			</ButtonIcon>,
+		);
+		const button = await screen.findByRole("button");
+		const label = await screen.findByText("Settings");
+		expect(label).toBeDefined();
+		expectToHaveClasses(button, [
+			"h-6",
+			"pl-2",
+			"pr-4",
+			"text-sm",
+			"font-medium",
+		]);
+	});
+
 	it("should render a size medium button", async () => {
 		render(
 			<ButtonIcon size="medium">
@@ -106,6 +124,24 @@ describe("ButtonIcon modifiers", () => {
 		expectToHaveClasses(button, ["h-8", "w-8", "p-1"]);
 	});
 
+	it("should render a size medium button with a label on the right", async () => {
+		render(
+			<ButtonIcon size="medium" labelRight="Settings">
+				<IconSettings decorative />
+			</ButtonIcon>,
+		);
+		const button = await screen.findByRole("button");
+		const label = await screen.findByText("Settings");
+		expect(label).toBeDefined();
+		expectToHaveClasses(button, [
+			"h-8",
+			"pl-2",
+			"pr-4",
+			"text-base",
+			"font-medium",
+		]);
+	});
+
 	it("should render a size large button", async () => {
 		render(
 			<ButtonIcon size="large">
@@ -113,6 +149,24 @@ describe("ButtonIcon modifiers", () => {
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["h-10", "w-10", "p-2"]);
+		expectToHaveClasses(button, ["h-12", "w-12", "p-2"]);
+	});
+
+	it("should render a size large button with a label on the right", async () => {
+		render(
+			<ButtonIcon size="large" labelRight="Settings">
+				<IconSettings decorative />
+			</ButtonIcon>,
+		);
+		const button = await screen.findByRole("button");
+		const label = await screen.findByText("Settings");
+		expect(label).toBeDefined();
+		expectToHaveClasses(button, [
+			"h-12",
+			"pl-2",
+			"pr-4",
+			"text-lg",
+			"font-medium",
+		]);
 	});
 });

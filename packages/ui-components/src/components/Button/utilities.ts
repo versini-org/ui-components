@@ -8,25 +8,29 @@ export const TYPE_LINK = "link";
 
 type getButtonClassesProps = {
 	type: typeof TYPE_BUTTON | typeof TYPE_ICON | typeof TYPE_LINK;
-	className?: string;
 	raw: boolean;
 	kind: string;
 	focus: string;
 	disabled: boolean;
 	fullWidth: boolean;
-	slim?: boolean;
 	size: string;
 	noBorder: boolean;
+
+	className?: string;
+	slim?: boolean;
+	labelRight?: string;
 };
 
 const getButtonSizesClasses = ({
 	type,
 	slim,
 	size,
+	labelRight,
 }: {
 	type: string;
-	slim?: boolean;
 	size: string;
+	slim?: boolean;
+	labelRight?: string;
 }) => {
 	const smallClasses = "text-sm font-medium max-h-8 py-0";
 	const mediumClasses = "text-base font-medium max-h-9 py-1";
@@ -49,9 +53,17 @@ const getButtonSizesClasses = ({
 
 		case TYPE_ICON:
 			return clsx("inline-flex items-center justify-center", {
-				"h-6 w-6 p-0": size === "small" || slim,
-				"h-8 w-8 p-1": size === "medium" && !slim,
-				"h-10 w-10 p-2": size === "large" && !slim,
+				"h-6 w-6 p-0": (size === "small" || slim) && !labelRight,
+				"h-6 pl-2 pr-4 text-sm font-medium":
+					(size === "small" || slim) && labelRight,
+
+				"h-8 w-8 p-1": size === "medium" && !slim && !labelRight,
+				"h-8 pl-2 pr-4 text-base font-medium":
+					size === "medium" && !slim && labelRight,
+
+				"h-12 w-12 p-2": size === "large" && !slim && !labelRight,
+				"h-12 pl-2 pr-4 text-lg font-medium":
+					size === "large" && !slim && labelRight,
 			});
 	}
 };
@@ -113,6 +125,7 @@ export const getButtonClasses = ({
 	slim,
 	size,
 	noBorder,
+	labelRight,
 }: getButtonClassesProps) => {
 	return raw
 		? clsx(BUTTON_CLASSNAME, className)
@@ -120,7 +133,7 @@ export const getButtonClasses = ({
 				BUTTON_CLASSNAME,
 				className,
 				getButtonBaseClasses({ kind }),
-				getButtonSizesClasses({ type, slim, size }),
+				getButtonSizesClasses({ type, slim, size, labelRight }),
 				getButtonBorderClasses({ kind, noBorder }),
 				getButtonFocusClasses({ focus }),
 				getButtonHoverClasses({ kind, disabled }),
