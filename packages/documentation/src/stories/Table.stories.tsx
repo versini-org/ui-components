@@ -156,3 +156,110 @@ export const WithAction: Story = {
 		);
 	},
 };
+
+export const WithStickyHeader: Story = {
+	render: function Render(args) {
+		const data = [
+			{
+				id: 1,
+				timestamp: "10/16/2023 08:46 PM EDT",
+				character: "Who plays Paul Atreides?",
+				actor: "Timothée Chalamet",
+			},
+			{
+				id: 2,
+				timestamp: "10/16/2023 08:55 PM EDT",
+				character: "What about Lady Jessica?",
+				actor: "Rebecca Ferguson",
+			},
+			{
+				id: 3,
+				timestamp: "10/16/2023 08:59 PM EDT",
+				character: "And Duncan Idaho?",
+				actor: "Jason Momoa",
+			},
+			{
+				id: 4,
+				timestamp: "10/16/2023 08:59 PM EDT",
+				character: "And Duncan Idaho?",
+				actor: "Jason Momoa",
+			},
+			{
+				id: 5,
+				timestamp: "10/16/2023 08:59 PM EDT",
+				character: "And Duncan Idaho?",
+				actor: "Jason Momoa",
+			},
+			{
+				id: 6,
+				timestamp: "10/16/2023 08:59 PM EDT",
+				character: "And Duncan Idaho?",
+				actor: "Jason Momoa",
+			},
+			{
+				id: 7,
+				timestamp: "10/16/2023 08:59 PM EDT",
+				character: "And Duncan Idaho?",
+				actor: "Jason Momoa",
+			},
+		];
+
+		return (
+			<div className="min-h-10 bgg-slate-500 p-11">
+				<div className="flex flex-wrap gap-2">
+					<Table maxHeight="250px" stickyHeader {...args}>
+						<TableHead className="uppercase">
+							<TableRow>
+								<TableCell scope="col">Date</TableCell>
+								<TableCell scope="col">First message</TableCell>
+								<TableCell className="text-right" scope="col">
+									Actions
+								</TableCell>
+							</TableRow>
+						</TableHead>
+
+						<TableBody>
+							{data.map((row, idx) => {
+								return (
+									<TableRow key={`${row.id}-${idx}`}>
+										<TableCell
+											component="th"
+											scope="row"
+											className="text-gray-400"
+										>
+											{row.timestamp}
+										</TableCell>
+										<TableCell>{row.character}</TableCell>
+
+										<TableCell>
+											<div className="flex justify-end gap-2">
+												<ButtonIcon
+													noBorder
+													label="Restore chat"
+													kind="light"
+													onClick={() => {}}
+												>
+													<IconRestore className="h-3 w-3" />
+												</ButtonIcon>
+												<ButtonIcon
+													noBorder
+													label="Delete chat"
+													kind="light"
+													onClick={() => {}}
+												>
+													<div className="text-red-400">
+														<IconDelete className="h-3 w-3" />
+													</div>
+												</ButtonIcon>
+											</div>
+										</TableCell>
+									</TableRow>
+								);
+							})}
+						</TableBody>
+					</Table>
+				</div>
+			</div>
+		);
+	},
+};

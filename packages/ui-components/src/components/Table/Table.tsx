@@ -13,6 +13,7 @@ import {
 	CELL_WRAPPER_HEAD,
 	getTableCellClasses,
 	getTableClasses,
+	getTableHeadClasses,
 	getTableRowClasses,
 } from "./utilities";
 
@@ -22,12 +23,24 @@ export const Table = ({
 	caption,
 	summary,
 	className,
+	maxHeight,
+	stickyHeader,
 	...otherProps
 }: TableProps) => {
-	const tableClass = getTableClasses({ kind, className });
+	const tableClass = getTableClasses({
+		kind,
+		className,
+		stickyHeader,
+		maxHeight,
+	});
 	return (
-		<TableContext.Provider value={{ kind }}>
-			<div className={tableClass.wrapper}>
+		<TableContext.Provider value={{ kind, stickyHeader }}>
+			<div
+				className={tableClass.wrapper}
+				{...(maxHeight && {
+					style: { maxHeight },
+				})}
+			>
 				<table className={tableClass.table} summary={summary} {...otherProps}>
 					{caption && (
 						<caption className={tableClass.caption}>{caption}</caption>
@@ -39,10 +52,22 @@ export const Table = ({
 	);
 };
 
-export const TableHead = ({ children, ...otherProps }: TableHeadProps) => {
+export const TableHead = ({
+	children,
+	className,
+	...otherProps
+}: TableHeadProps) => {
 	const context = useContext(TableContext);
 	context.cellWrapper = CELL_WRAPPER_HEAD;
-	return <thead {...otherProps}>{children}</thead>;
+	const tableHeadClass = getTableHeadClasses({
+		className,
+		stickyHeader: context.stickyHeader,
+	});
+	return (
+		<thead className={tableHeadClass} {...otherProps}>
+			{children}
+		</thead>
+	);
 };
 
 export const TableBody = ({ children, ...otherProps }: TableBodyProps) => {
