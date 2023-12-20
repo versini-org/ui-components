@@ -31,7 +31,6 @@ export const Table = ({
 		kind,
 		className,
 		stickyHeader,
-		maxHeight,
 	});
 	return (
 		<TableContext.Provider value={{ kind, stickyHeader }}>

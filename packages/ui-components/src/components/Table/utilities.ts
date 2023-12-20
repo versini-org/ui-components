@@ -7,16 +7,13 @@ export const getTableClasses = ({
 	kind,
 	className,
 	stickyHeader,
-	maxHeight,
 }: {
 	kind: string;
 	className?: string;
 	stickyHeader?: boolean;
-	maxHeight?: string;
 }) => {
 	return {
 		wrapper: clsx("relative w-full rounded-lg shadow-md", {
-			[`max-h-[${maxHeight}]`]: maxHeight,
 			"overflow-x-auto": !stickyHeader,
 			"overflow-y-scroll": stickyHeader,
 			"bg-surface-dark text-copy-light": kind === "dark",
