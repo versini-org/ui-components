@@ -48,6 +48,7 @@ export const tokens = {
 		"border-dark": colors.slate[900],
 		"border-medium": colors.slate[400],
 		"border-light": colors.slate[300],
+
 		"border-white": "#ffffff",
 		"border-error-dark": errorColorDark,
 		"border-error-light": errorColorLight,
@@ -59,5 +60,15 @@ export const tokens = {
 		"focus-light": colors.slate[300],
 		"focus-error-dark": errorColorDark,
 		"focus-error-light": errorColorLight,
+
+		/**
+		 * Table tokens
+		 */
+		"table-dark": colors.gray[700],
+		"table-dark-odd": colors.gray[800],
+		"table-dark-even": colors.gray[900],
+		"table-light": colors.gray[100],
+		"table-light-odd": colors.gray[200],
+		"table-light-even": colors.gray[300],
 	},
 };

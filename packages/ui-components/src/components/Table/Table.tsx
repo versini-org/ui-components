@@ -1,0 +1,90 @@
+import { useContext } from "react";
+
+import { TableContext } from "./TableContext";
+import type {
+	TableBodyProps,
+	TableCellProps,
+	TableHeadProps,
+	TableProps,
+	TableRowProps,
+} from "./TableTypes";
+import {
+	CELL_WRAPPER_BODY,
+	CELL_WRAPPER_HEAD,
+	getTableCellClasses,
+	getTableClasses,
+	getTableRowClasses,
+} from "./utilities";
+
+export const Table = ({
+	children,
+	kind = "dark",
+	caption,
+	summary,
+	className,
+	...otherProps
+}: TableProps) => {
+	const tableClass = getTableClasses({ kind, className });
+	return (
+		<TableContext.Provider value={{ kind }}>
+			<div className={tableClass.wrapper}>
+				<table className={tableClass.table} summary={summary} {...otherProps}>
+					{caption && (
+						<caption className={tableClass.caption}>{caption}</caption>
+					)}
+					{children}
+				</table>
+			</div>
+		</TableContext.Provider>
+	);
+};
+
+export const TableHead = ({ children, ...otherProps }: TableHeadProps) => {
+	const context = useContext(TableContext);
+	context.cellWrapper = CELL_WRAPPER_HEAD;
+	return <thead {...otherProps}>{children}</thead>;
+};
+
+export const TableBody = ({ children, ...otherProps }: TableBodyProps) => {
+	const context = useContext(TableContext);
+	context.cellWrapper = CELL_WRAPPER_BODY;
+	return <tbody {...otherProps}>{children}</tbody>;
+};
+
+export const TableRow = ({
+	children,
+	className,
+	...otherProps
+}: TableRowProps) => {
+	const context = useContext(TableContext);
+	const rowClass = getTableRowClasses({
+		kind: context.kind,
+		cellWrapper: context.cellWrapper,
+		className,
+	});
+	return (
+		<tr className={rowClass} {...otherProps}>
+			{children}
+		</tr>
+	);
+};
+
+export const TableCell = ({
+	children,
+	component,
+	className,
+	...otherProps
+}: TableCellProps) => {
+	const context = useContext(TableContext);
+	const Component =
+		component || (context.cellWrapper === CELL_WRAPPER_HEAD ? "th" : "td");
+	const cellClass = getTableCellClasses({
+		cellWrapper: context.cellWrapper,
+		className,
+	});
+	return (
+		<Component className={cellClass} {...otherProps}>
+			{children}
+		</Component>
+	);
+};
