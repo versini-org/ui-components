@@ -69,3 +69,22 @@ export const Basic: Story = {
 		</div>
 	),
 };
+
+export const WithLabel: Story = {
+	render: (args) => (
+		<div className="flex flex-wrap gap-2">
+			<ButtonIcon labelRight="Settings" {...args}>
+				<IconSettings decorative />
+			</ButtonIcon>
+			<ButtonIcon labelRight="Settings" {...args}>
+				<IconSettings decorative />
+			</ButtonIcon>
+			<ButtonIcon labelRight="Edit" {...args}>
+				<IconEdit decorative className="h-3 w-3" />
+			</ButtonIcon>
+			<ButtonIcon labelRight="Edit" {...args}>
+				<IconEdit decorative />
+			</ButtonIcon>
+		</div>
+	),
+};
