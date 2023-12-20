@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.17.0](https://github.com/aversini/ui-components/compare/ui-components-v4.16.0...ui-components-v4.17.0) (2023-12-20)
+
+
+### Features
+
+* **Table:** adding sticky header support ([e5edee4](https://github.com/aversini/ui-components/commit/e5edee4b9750b1d218200d57cc789716673755e1))
+
 ## [4.16.0](https://github.com/aversini/ui-components/compare/ui-components-v4.15.1...ui-components-v4.16.0) (2023-12-20)
 
 
