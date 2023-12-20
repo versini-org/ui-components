@@ -39,10 +39,10 @@ export const getTableRowClasses = ({
 		"border-table-dark": kind === "dark",
 		"bg-table-dark": cellWrapper === CELL_WRAPPER_HEAD && kind === "dark",
 		"odd:bg-table-dark-odd even:bg-table-dark-even":
-			cellWrapper === "tbody" && kind === "dark",
+			cellWrapper === CELL_WRAPPER_BODY && kind === "dark",
 		"bg-table-light": cellWrapper === CELL_WRAPPER_HEAD && kind === "light",
 		"odd:bg-table-light-odd even:bg-table-light-even":
-			cellWrapper === "tbody" && kind === "light",
+			cellWrapper === CELL_WRAPPER_BODY && kind === "light",
 	});
 };
 
