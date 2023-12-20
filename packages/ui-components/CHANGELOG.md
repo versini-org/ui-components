@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.18.0](https://github.com/aversini/ui-components/compare/ui-components-v4.17.0...ui-components-v4.18.0) (2023-12-20)
+
+
+### Features
+
+* **ButtonIcon:** adding support for label on the right ([e3d9b63](https://github.com/aversini/ui-components/commit/e3d9b63ba733b7746d8cb131624ea74dde6c8260))
+
+
+### Bug Fixes
+
+* **Icon:** missing "decorative" prop from Icons types ([ed2907b](https://github.com/aversini/ui-components/commit/ed2907bd683e71699fe8d980412dc7e6bf08a063))
+
 ## [4.17.0](https://github.com/aversini/ui-components/compare/ui-components-v4.16.0...ui-components-v4.17.0) (2023-12-20)
 
 
