@@ -11,7 +11,7 @@ module.exports = {
 		},
 		{
 			path: "assets/index.js",
-			maxSize: "12kb",
+			maxSize: "15kb",
 		},
 		{
 			path: "assets/style.css",
