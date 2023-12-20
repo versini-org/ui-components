@@ -6,12 +6,16 @@ export const CELL_WRAPPER_BODY = "tbody";
 export const getTableClasses = ({
 	kind,
 	className,
+	stickyHeader,
 }: {
 	kind: string;
 	className?: string;
+	stickyHeader?: boolean;
 }) => {
 	return {
-		wrapper: clsx("relative w-full overflow-x-auto rounded-lg shadow-md", {
+		wrapper: clsx("relative w-full rounded-lg shadow-md", {
+			"overflow-x-auto": !stickyHeader,
+			"overflow-y-scroll": stickyHeader,
 			"bg-surface-dark text-copy-light": kind === "dark",
 			"bg-surface-light text-copy-dark": kind === "light",
 		}),
@@ -24,6 +28,18 @@ export const getTableClasses = ({
 			"text-copy-dark": kind === "light",
 		}),
 	};
+};
+
+export const getTableHeadClasses = ({
+	className,
+	stickyHeader,
+}: {
+	className?: string;
+	stickyHeader?: boolean;
+}) => {
+	return clsx(className, {
+		"sticky top-0 z-10": stickyHeader,
+	});
 };
 
 export const getTableRowClasses = ({

@@ -12,6 +12,18 @@ export type TableProps = {
 	 * read out loud by screen readers to represent the table.
 	 */
 	summary?: string;
+	/**
+	 * The max height of the table. It follows the CSS max-height property.
+	 * Note: It is required to configure 'maxHeight' prop for the prop
+	 * 'stickyHeader' to work.
+	 */
+	maxHeight?: string;
+	/**
+	 * If true, the table header will be sticky.
+	 * Note: It is required to configure 'maxHeight' prop for the prop
+	 * 'stickyHeader' to work.
+	 */
+	stickyHeader?: boolean;
 } & React.HTMLAttributes<HTMLTableElement>;
 
 export type TableRowProps = React.HTMLAttributes<HTMLTableRowElement>;

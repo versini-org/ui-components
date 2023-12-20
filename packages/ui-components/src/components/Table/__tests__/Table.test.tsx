@@ -1,6 +1,9 @@
 import { render, screen } from "@testing-library/react";
 
-import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import {
+	expectToHaveClasses,
+	expectToHaveStyles,
+} from "../../../common/__tests__/helpers";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "../..";
 
 describe("Table (exceptions)", () => {
@@ -154,6 +157,92 @@ describe("Table classes", () => {
 				"last:border-0",
 				"odd:bg-table-light-odd",
 				"even:bg-table-light-even",
+			]);
+		}
+		if (tableCellHead) {
+			expectToHaveClasses(tableCellHead, ["px-4", "py-3"]);
+		}
+		if (tableCellBody) {
+			expectToHaveClasses(tableCellBody, ["p-4"]);
+		}
+	});
+
+	it("should render a table with a sticky header", async () => {
+		render(
+			<Table
+				data-testid="table"
+				caption="the caption"
+				maxHeight="100px"
+				stickyHeader
+			>
+				<TableHead data-testid="table-head">
+					<TableRow data-testid="table-row-head">
+						<TableCell data-testid="table-cell-head">the header</TableCell>
+					</TableRow>
+				</TableHead>
+				<TableBody>
+					<TableRow data-testid="table-row-body">
+						<TableCell data-testid="table-cell-body">the body</TableCell>
+					</TableRow>
+				</TableBody>
+			</Table>,
+		);
+		const table = await screen.findByTestId("table");
+		const wrapper = table.parentElement;
+		const caption = table.querySelector("caption");
+		const tableHead = await screen.findByTestId("table-head");
+		const tableRowHead = await screen.findByTestId("table-row-head");
+		const tableRowBody = await screen.findByTestId("table-row-body");
+		const tableCellHead = await screen.findByTestId("table-cell-head");
+		const tableCellBody = await screen.findByTestId("table-cell-body");
+
+		expect(table).toBeInTheDocument();
+		expect(table.tagName).toBe("TABLE");
+
+		expectToHaveClasses(table, [
+			"w-full",
+			"text-left",
+			"text-sm",
+			"text-copy-light",
+		]);
+		if (wrapper) {
+			expectToHaveClasses(wrapper, [
+				"relative",
+				"w-full",
+				"overflow-y-scroll",
+				"rounded-lg",
+				"shadow-md",
+				"bg-surface-dark",
+				"text-copy-light",
+			]);
+			expectToHaveStyles(wrapper, { "max-height": "100px" });
+		}
+		if (caption) {
+			expectToHaveClasses(caption, [
+				"py-2",
+				"text-sm",
+				"font-bold",
+				"text-copy-light",
+			]);
+		}
+		if (tableHead) {
+			expectToHaveClasses(tableHead, ["sticky", "top-0", "z-10"]);
+		}
+		if (tableRowHead) {
+			expectToHaveClasses(tableRowHead, [
+				"border-b",
+				"last:border-0",
+				"border-table-dark",
+				"bg-table-dark",
+			]);
+		}
+		if (tableRowBody) {
+			expectToHaveClasses(tableRowBody, [
+				"border-b",
+				"last:border-0",
+				"border-table-dark",
+				"odd:bg-table-dark-odd",
+				"even:bg-table-dark-even",
 			]);
 		}
 		if (tableCellHead) {
