@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.16.0](https://github.com/aversini/ui-components/compare/ui-components-v4.15.1...ui-components-v4.16.0) (2023-12-20)
+
+
+### Features
+
+* adding Table component ([c759fa2](https://github.com/aversini/ui-components/commit/c759fa20db7f33401b572494b2d4e9519ce22cfc))
+
 ## [4.15.1](https://github.com/aversini/ui-components/compare/ui-components-v4.15.0...ui-components-v4.15.1) (2023-12-17)
 
 
