@@ -4,7 +4,7 @@
  *
  * To update this file, run `yarn build:icons`.
  *
- * Original name: clone.svg
+ * Original name: circle-info.svg
  *
  * !Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.
  *
@@ -13,16 +13,14 @@
 import { SvgIcon } from "../private/SvgIcon/SvgIcon";
 import type { IconsProps } from "./IconsTypes";
 
-export const IconCopy = ({
+export const IconInfo = ({
 	className,
 	viewBox,
 	spacing,
-
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	monotone,
 	...rest
 }: IconsProps) => {
-	/* v8 ignore next 1 */
-	const opacity = monotone ? "1" : "0.4";
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 512 512"
@@ -30,17 +28,17 @@ export const IconCopy = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Copy"
+			title="Info"
 			{...rest}
 		>
 			<path
 				className="fa-secondary"
-				opacity={opacity}
-				d="M288 448H64V224h96V160H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V352H288v96z"
+				opacity="0.4"
+				d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
 			/>
 			<path
 				className="fa-primary"
-				d="M160 288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224c-35.3 0-64 28.7-64 64V288z"
+				d="M256 128a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM192 248c0-13.3 10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h24V272H216c-13.3 0-24-10.7-24-24z"
 			/>
 		</SvgIcon>
 	);
