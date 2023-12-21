@@ -1,9 +1,10 @@
 import { useFloatingTree, useListItem, useMergeRefs } from "@floating-ui/react";
+import clsx from "clsx";
 import * as React from "react";
 
 import { ButtonIcon } from "..";
 import { MenuContext } from "./MenuContext";
-import type { MenuItemProps } from "./MenuTypes";
+import type { MenuItemProps, MenuSeparatorProps } from "./MenuTypes";
 
 export const MenuItem = React.forwardRef<
 	HTMLButtonElement,
@@ -41,3 +42,8 @@ export const MenuItem = React.forwardRef<
 });
 
 MenuItem.displayName = "MenuItem";
+
+export const MenuSeparator = ({ className, ...props }: MenuSeparatorProps) => {
+	const separatorClass = clsx(className, "my-1 border-t border-border-medium");
+	return <div className={separatorClass} {...props} />;
+};

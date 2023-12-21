@@ -143,7 +143,7 @@ export const MenuComponent = forwardRef<
 								>
 									<div
 										ref={refs.setFloating}
-										className="rounded-md bg-surface-light p-4 outline-none sm:p-2"
+										className="rounded-md bg-surface-light p-4 shadow-sm shadow-border-dark outline-none sm:p-2"
 										style={floatingStyles}
 										{...getFloatingProps()}
 									>
