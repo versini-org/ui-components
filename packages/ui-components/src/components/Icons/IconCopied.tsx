@@ -17,6 +17,7 @@ export const IconCopied = ({
 	className,
 	viewBox,
 	spacing,
+	title,
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	monotone,
 	...rest
@@ -28,7 +29,7 @@ export const IconCopied = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Copied"
+			title={title || "Copied"}
 			{...rest}
 		>
 			<path

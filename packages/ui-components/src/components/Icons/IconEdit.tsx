@@ -17,6 +17,7 @@ export const IconEdit = ({
 	className,
 	viewBox,
 	spacing,
+	title,
 
 	monotone,
 	...rest
@@ -30,7 +31,7 @@ export const IconEdit = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Edit"
+			title={title || "Edit"}
 			{...rest}
 		>
 			<path

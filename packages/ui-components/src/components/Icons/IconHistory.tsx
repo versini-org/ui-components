@@ -17,6 +17,7 @@ export const IconHistory = ({
 	className,
 	viewBox,
 	spacing,
+	title,
 
 	monotone,
 	...rest
@@ -30,7 +31,7 @@ export const IconHistory = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="History"
+			title={title || "History"}
 			{...rest}
 		>
 			<path

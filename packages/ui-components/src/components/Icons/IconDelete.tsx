@@ -17,6 +17,7 @@ export const IconDelete = ({
 	className,
 	viewBox,
 	spacing,
+	title,
 
 	monotone,
 	...rest
@@ -30,7 +31,7 @@ export const IconDelete = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Delete"
+			title={title || "Delete"}
 			{...rest}
 		>
 			<path

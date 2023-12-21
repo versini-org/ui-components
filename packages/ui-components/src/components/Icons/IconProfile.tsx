@@ -17,6 +17,7 @@ export const IconProfile = ({
 	className,
 	viewBox,
 	spacing,
+	title,
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	monotone,
 	...rest
@@ -28,7 +29,7 @@ export const IconProfile = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Profile"
+			title={title || "Profile"}
 			{...rest}
 		>
 			<path

@@ -5,4 +5,5 @@ export interface IconsProps
 	spacing?: SpacingType;
 	decorative?: boolean;
 	monotone?: boolean;
+	title?: string;
 }

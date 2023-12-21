@@ -68,8 +68,8 @@
 		"title": "Info"
 	},
 	"arrow-up-left-from-circle": {
-		"name": "IconLogout",
-		"title": "Logout",
+		"name": "IconBack",
+		"title": "Back",
 		"monotone": true
 	}
 }

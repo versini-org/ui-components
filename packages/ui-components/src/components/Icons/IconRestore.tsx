@@ -17,6 +17,7 @@ export const IconRestore = ({
 	className,
 	viewBox,
 	spacing,
+	title,
 
 	monotone,
 	...rest
@@ -30,7 +31,7 @@ export const IconRestore = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Restore"
+			title={title || "Restore"}
 			{...rest}
 		>
 			<path
