@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.19.0](https://github.com/aversini/ui-components/compare/ui-components-v4.18.0...ui-components-v4.19.0) (2023-12-21)
+
+
+### Features
+
+* **Icon:** adding duotone icons ([3984eed](https://github.com/aversini/ui-components/commit/3984eede3b310fa9d0274a7987e773bb241f6b47))
+* **Menu:** adding icon prop to MenuItem ([27c949b](https://github.com/aversini/ui-components/commit/27c949bd88f0947cdcb26b042e07df70d851e4a4))
+
 ## [4.18.0](https://github.com/aversini/ui-components/compare/ui-components-v4.17.0...ui-components-v4.18.0) (2023-12-20)
 
 
