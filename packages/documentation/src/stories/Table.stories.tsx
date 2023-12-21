@@ -207,7 +207,7 @@ export const WithStickyHeader: Story = {
 		return (
 			<div className="min-h-10 bgg-slate-500 p-11">
 				<div className="flex flex-wrap gap-2">
-					<Table maxHeight="250px" stickyHeader {...args}>
+					<Table maxHeight="238px" stickyHeader {...args}>
 						<TableHead className="uppercase">
 							<TableRow>
 								<TableCell scope="col">Date</TableCell>
@@ -248,7 +248,7 @@ export const WithStickyHeader: Story = {
 													onClick={() => {}}
 												>
 													<div className="text-red-400">
-														<IconDelete className="h-3 w-3" />
+														<IconDelete className="h-3 w-3" monotone />
 													</div>
 												</ButtonIcon>
 											</div>
