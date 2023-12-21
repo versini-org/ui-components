@@ -45,6 +45,7 @@ export const ${name} = ({
 	className,
 	viewBox,
 	spacing,
+	title,
 	${monotoneProp}
 	monotone,
 	...rest
@@ -56,7 +57,7 @@ export const ${name} = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="${title}"
+			title={title || "${title}"}
 			{...rest}
 		>
 			${svgData}

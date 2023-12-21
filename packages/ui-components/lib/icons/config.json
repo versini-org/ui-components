@@ -66,5 +66,10 @@
 	"circle-info": {
 		"name": "IconInfo",
 		"title": "Info"
+	},
+	"arrow-up-left-from-circle": {
+		"name": "IconBack",
+		"title": "Back",
+		"monotone": true
 	}
 }

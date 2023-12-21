@@ -17,6 +17,7 @@ export const IconChart = ({
 	className,
 	viewBox,
 	spacing,
+	title,
 
 	monotone,
 	...rest
@@ -30,7 +31,7 @@ export const IconChart = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Chart"
+			title={title || "Chart"}
 			{...rest}
 		>
 			<path

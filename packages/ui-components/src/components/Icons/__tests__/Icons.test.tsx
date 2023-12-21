@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 
 import {
+	IconBack,
 	IconChart,
 	IconClose,
 	IconCopied,
@@ -168,10 +169,18 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
+					<IconBack
+						data-testid="icon-back"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 				</>,
 			);
 
 			[
+				"icon-back",
 				"icon-chart",
 				"icon-history",
 				"icon-info",

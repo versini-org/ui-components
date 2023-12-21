@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {
+	IconBack,
 	IconChart,
 	IconClose,
 	IconCopied,
@@ -49,6 +50,7 @@ type Story = StoryObj<typeof IconDogInShield>;
 export const Basic: Story = {
 	render: (args) => (
 		<div className="flex flex-wrap gap-2">
+			<IconBack {...args} />
 			<IconChart {...args} />
 			<IconClose {...args} />
 			<IconCopied {...args} />

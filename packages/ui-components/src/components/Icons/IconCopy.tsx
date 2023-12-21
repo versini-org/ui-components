@@ -17,6 +17,7 @@ export const IconCopy = ({
 	className,
 	viewBox,
 	spacing,
+	title,
 
 	monotone,
 	...rest
@@ -30,7 +31,7 @@ export const IconCopy = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Copy"
+			title={title || "Copy"}
 			{...rest}
 		>
 			<path

@@ -17,6 +17,7 @@ export const IconHide = ({
 	className,
 	viewBox,
 	spacing,
+	title,
 
 	monotone,
 	...rest
@@ -30,7 +31,7 @@ export const IconHide = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Hide"
+			title={title || "Hide"}
 			{...rest}
 		>
 			<path
