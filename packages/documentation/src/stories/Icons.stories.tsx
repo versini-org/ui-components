@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {
+	IconChart,
 	IconClose,
 	IconCopied,
 	IconCopy,
@@ -7,6 +8,9 @@ import {
 	IconDogInShield,
 	IconEdit,
 	IconHide,
+	IconHistory,
+	IconInfo,
+	IconProfile,
 	IconRestore,
 	IconSettings,
 	IconShow,
@@ -18,13 +22,22 @@ const meta: Meta<typeof IconDogInShield> = {
 	parameters: {
 		controls: { exclude: ["spacing"], sort: "requiredFirst" },
 	},
-	args: {},
+	args: {
+		monotone: false,
+		decorative: false,
+	},
 	argTypes: {
 		className: {
 			control: "text",
 		},
 		fill: {
 			control: "color",
+		},
+		monotone: {
+			control: "boolean",
+		},
+		decorative: {
+			control: "boolean",
 		},
 	},
 };
@@ -36,6 +49,7 @@ type Story = StoryObj<typeof IconDogInShield>;
 export const Basic: Story = {
 	render: (args) => (
 		<div className="flex flex-wrap gap-2">
+			<IconChart {...args} />
 			<IconClose {...args} />
 			<IconCopied {...args} />
 			<IconCopy {...args} />
@@ -43,6 +57,9 @@ export const Basic: Story = {
 			<IconDogInShield {...args} />
 			<IconEdit {...args} />
 			<IconHide {...args} />
+			<IconHistory {...args} />
+			<IconInfo {...args} />
+			<IconProfile {...args} />
 			<IconRestore {...args} />
 			<IconSettings {...args} />
 			<IconShow {...args} />

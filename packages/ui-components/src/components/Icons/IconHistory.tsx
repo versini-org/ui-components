@@ -4,7 +4,7 @@
  *
  * To update this file, run `yarn build:icons`.
  *
- * Original name: clone.svg
+ * Original name: clock-rotate-left.svg
  *
  * !Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.
  *
@@ -13,7 +13,7 @@
 import { SvgIcon } from "../private/SvgIcon/SvgIcon";
 import type { IconsProps } from "./IconsTypes";
 
-export const IconCopy = ({
+export const IconHistory = ({
 	className,
 	viewBox,
 	spacing,
@@ -30,17 +30,17 @@ export const IconCopy = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Copy"
+			title="History"
 			{...rest}
 		>
 			<path
 				className="fa-secondary"
 				opacity={opacity}
-				d="M288 448H64V224h96V160H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V352H288v96z"
+				d="M120.2 120.2C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8z"
 			/>
 			<path
 				className="fa-primary"
-				d="M160 288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224c-35.3 0-64 28.7-64 64V288z"
+				d="M256 128c13.3 0 24 10.7 24 24v94.1l65 65c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-72-72c-4.5-4.5-7-10.6-7-17V152c0-13.3 10.7-24 24-24z"
 			/>
 		</SvgIcon>
 	);

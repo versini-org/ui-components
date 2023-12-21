@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 
 import {
+	IconChart,
 	IconClose,
 	IconCopied,
 	IconCopy,
@@ -9,6 +10,9 @@ import {
 	IconDogInShield,
 	IconEdit,
 	IconHide,
+	IconHistory,
+	IconInfo,
+	IconProfile,
 	IconRestore,
 	IconSettings,
 	IconShow,
@@ -59,6 +63,34 @@ describe("Generic Icons prop tests", () => {
 		async ({ fill, viewBox, className, spacing }) => {
 			render(
 				<>
+					<IconChart
+						data-testid="icon-chart"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
+					<IconHistory
+						data-testid="icon-history"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
+					<IconInfo
+						data-testid="icon-info"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
+					<IconProfile
+						data-testid="icon-profile"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 					<IconClose
 						data-testid="icon-close"
 						className={className}
@@ -140,6 +172,10 @@ describe("Generic Icons prop tests", () => {
 			);
 
 			[
+				"icon-chart",
+				"icon-history",
+				"icon-info",
+				"icon-profile",
 				"icon-close",
 				"icon-copied",
 				"icon-copy",

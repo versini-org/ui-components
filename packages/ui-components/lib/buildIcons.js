@@ -16,7 +16,17 @@ const iconTemplate = ({
 	viewBox,
 	svgData,
 	copyright,
-}) => `/**
+	monotone,
+}) => {
+	const monotoneProp = monotone
+		? ""
+		: "// eslint-disable-next-line @typescript-eslint/no-unused-vars";
+	const opacityLine1 = monotone ? "\n\t/* v8 ignore next 1 */" : "";
+	const opacityLine2 = monotone
+		? `\n\tconst opacity = monotone ? "1" : "0.4";`
+		: "";
+
+	return `/**
  * This file was automatically generated.
  * Please do not edit manually.
  *
@@ -35,8 +45,10 @@ export const ${name} = ({
 	className,
 	viewBox,
 	spacing,
+	${monotoneProp}
+	monotone,
 	...rest
-}: IconsProps) => {
+}: IconsProps) => {${opacityLine1}${opacityLine2}
 	return (
 		<SvgIcon
 			defaultViewBox="${viewBox}"
@@ -52,6 +64,7 @@ export const ${name} = ({
 	);
 };
 `;
+};
 
 export const upperFirst = (string_) =>
 	string_[0].toUpperCase() + string_.slice(1);
@@ -67,6 +80,7 @@ const generateIcons = async () => {
 		icons.map(async (icon) => {
 			const originalName = icon.replace(".svg", "");
 			const title = config[originalName]?.title || originalName;
+			const monotone = config[originalName]?.monotone || false;
 			const iconName =
 				config[originalName]?.name || "Icon" + upperFirst(originalName);
 
@@ -86,6 +100,11 @@ const generateIcons = async () => {
 			const svgData = svg
 				.match(/<svg[^>]*>(.*)<\/svg>/s)[1]
 				.replace(comments, "")
+				.replace(/class="/g, 'className="')
+				.replace(
+					/opacity=".4"/g,
+					monotone ? "opacity={opacity}" : 'opacity="0.4"',
+				)
 				.replace('"/>', '" />')
 				.trimStart()
 				.trimEnd();
@@ -97,6 +116,7 @@ const generateIcons = async () => {
 				viewBox,
 				svgData,
 				copyright: comments.replace("<!--", "").replace("-->", ""),
+				monotone,
 			});
 			return fs.outputFile(
 				path.join(
