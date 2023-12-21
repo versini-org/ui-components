@@ -20,8 +20,12 @@ const iconTemplate = ({
 }) => {
 	const monotoneProp = monotone
 		? ""
-		: "// eslint-disable-next-line @typescript-eslint/no-unused-vars\n";
-	const opacityLine = monotone ? `const opacity = monotone ? "1" : "0.4";` : "";
+		: "// eslint-disable-next-line @typescript-eslint/no-unused-vars";
+	const opacityLine1 = monotone ? "\n\t/* v8 ignore next 1 */" : "";
+	const opacityLine2 = monotone
+		? `\n\tconst opacity = monotone ? "1" : "0.4";`
+		: "";
+
 	return `/**
  * This file was automatically generated.
  * Please do not edit manually.
@@ -41,10 +45,10 @@ export const ${name} = ({
 	className,
 	viewBox,
 	spacing,
-	${monotoneProp}monotone,
+	${monotoneProp}
+	monotone,
 	...rest
-}: IconsProps) => {
-	${opacityLine}
+}: IconsProps) => {${opacityLine1}${opacityLine2}
 	return (
 		<SvgIcon
 			defaultViewBox="${viewBox}"

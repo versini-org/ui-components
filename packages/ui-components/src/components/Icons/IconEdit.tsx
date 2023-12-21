@@ -17,9 +17,11 @@ export const IconEdit = ({
 	className,
 	viewBox,
 	spacing,
+
 	monotone,
 	...rest
 }: IconsProps) => {
+	/* v8 ignore next 1 */
 	const opacity = monotone ? "1" : "0.4";
 	return (
 		<SvgIcon
