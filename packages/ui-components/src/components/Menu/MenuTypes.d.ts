@@ -10,4 +10,5 @@ export interface MenuProps {
 export interface MenuItemProps {
 	label: string;
 	disabled?: boolean;
+	icon?: React.ReactNode;
 }

@@ -7,7 +7,6 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 	(
 		{
 			children,
-			onClick,
 			disabled = false,
 			kind = "dark",
 			focus = "light",
@@ -42,7 +41,6 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			<button
 				ref={ref}
 				className={buttonClass}
-				onClick={onClick}
 				disabled={disabled}
 				type={type}
 				aria-label={ariaLabel || label}

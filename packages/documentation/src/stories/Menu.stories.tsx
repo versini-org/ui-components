@@ -1,5 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button, IconSettings, Menu, MenuItem } from "@versini/ui-components";
+import {
+	Button,
+	IconChart,
+	IconHistory,
+	IconInfo,
+	IconProfile,
+	IconSettings,
+	Menu,
+	MenuItem,
+} from "@versini/ui-components";
 
 const meta: Meta<typeof Menu> = {
 	component: Menu,
@@ -42,9 +51,28 @@ export const Basic: Story = {
 				<Button size="small">Button</Button>
 				<Menu icon={<IconSettings />} {...args}>
 					<MenuItem label="Profile" />
-					<MenuItem label="Chat details" disabled />
+					<MenuItem label="Statistics" />
 					<MenuItem label="History" />
 					<MenuItem label="About" />
+				</Menu>
+				<Button size="small">Button</Button>
+			</div>
+		);
+	},
+};
+
+export const WithIcons: Story = {
+	args: {},
+
+	render: function Render(args) {
+		return (
+			<div className="min-h-10 flex flex-wrap gap-2 bg-slate-500 p-11">
+				<Button size="small">Button</Button>
+				<Menu icon={<IconSettings />} {...args}>
+					<MenuItem label="Profile" icon={<IconProfile decorative />} />
+					<MenuItem label="Statistics" icon={<IconChart decorative />} />
+					<MenuItem label="History" icon={<IconHistory decorative />} />
+					<MenuItem label="About" icon={<IconInfo decorative />} />
 				</Menu>
 				<Button size="small">Button</Button>
 			</div>
