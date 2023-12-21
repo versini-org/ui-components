@@ -10,6 +10,7 @@ import { Card } from "./Card/Card";
 import { Flexgrid } from "./Flexgrid/Flexgrid";
 import { FlexgridItem } from "./Flexgrid/FlexgridItem";
 import { Footer } from "./Footer/Footer";
+import { IconChart } from "./Icons/IconChart";
 import { IconClose } from "./Icons/IconClose";
 import { IconCopied } from "./Icons/IconCopied";
 import { IconCopy } from "./Icons/IconCopy";
@@ -18,6 +19,9 @@ import { IconDog } from "./Icons/IconDog";
 import { IconDogInShield } from "./Icons/IconDogInShield";
 import { IconEdit } from "./Icons/IconEdit";
 import { IconHide } from "./Icons/IconHide";
+import { IconHistory } from "./Icons/IconHistory";
+import { IconInfo } from "./Icons/IconInfo";
+import { IconProfile } from "./Icons/IconProfile";
 import { IconRestore } from "./Icons/IconRestore";
 import { IconSettings } from "./Icons/IconSettings";
 import { IconShow } from "./Icons/IconShow";
@@ -48,6 +52,7 @@ export {
 	Flexgrid,
 	FlexgridItem,
 	Footer,
+	IconChart,
 	IconClose,
 	IconCopied,
 	IconCopy,
@@ -56,6 +61,9 @@ export {
 	IconDogInShield,
 	IconEdit,
 	IconHide,
+	IconHistory,
+	IconInfo,
+	IconProfile,
 	IconRestore,
 	IconSettings,
 	IconShow,

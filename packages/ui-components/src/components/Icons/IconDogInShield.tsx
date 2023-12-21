@@ -17,6 +17,8 @@ export const IconDogInShield = ({
 	className,
 	viewBox,
 	spacing,
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	monotone,
 	...rest
 }: IconsProps) => {
 	return (

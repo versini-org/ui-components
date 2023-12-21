@@ -4,7 +4,7 @@
  *
  * To update this file, run `yarn build:icons`.
  *
- * Original name: pen-to-square.svg
+ * Original name: clock-rotate-left.svg
  *
  * !Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.
  *
@@ -13,7 +13,7 @@
 import { SvgIcon } from "../private/SvgIcon/SvgIcon";
 import type { IconsProps } from "./IconsTypes";
 
-export const IconEdit = ({
+export const IconHistory = ({
 	className,
 	viewBox,
 	spacing,
@@ -28,17 +28,17 @@ export const IconEdit = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title="Edit"
+			title="History"
 			{...rest}
 		>
 			<path
 				className="fa-secondary"
 				opacity={opacity}
-				d="M0 160c0-53 43-96 96-96h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32 14.3-32 32V416c0 17.7 14.3 32 32 32H352c17.7 0 32-14.3 32-32V320c0-17.7 14.3-32 32-32s32 14.3 32 32v96c0 53-43 96-96 96H96c-53 0-96-43-96-96V160z"
+				d="M120.2 120.2C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8z"
 			/>
 			<path
 				className="fa-primary"
-				d="M392.4 21.7L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0zM339.7 74.3L172.4 241.7c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3z"
+				d="M256 128c13.3 0 24 10.7 24 24v94.1l65 65c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-72-72c-4.5-4.5-7-10.6-7-17V152c0-13.3 10.7-24 24-24z"
 			/>
 		</SvgIcon>
 	);
