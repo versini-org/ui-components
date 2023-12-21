@@ -15,6 +15,7 @@ export const MenuItem = React.forwardRef<
 
 	return (
 		<ButtonIcon
+			{...props} // this needs to be first to allow override
 			raw
 			ref={useMergeRefs([item.ref, forwardedRef])}
 			type="button"
@@ -33,7 +34,6 @@ export const MenuItem = React.forwardRef<
 				},
 			})}
 			labelRight={label}
-			{...props}
 		>
 			{icon}
 		</ButtonIcon>
