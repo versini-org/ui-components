@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.20.0](https://github.com/aversini/ui-components/compare/ui-components-v4.19.0...ui-components-v4.20.0) (2023-12-21)
+
+
+### Features
+
+* adding IconBack ([5f29e01](https://github.com/aversini/ui-components/commit/5f29e01c5c223553c959d4ad61e4680a8c7c781e))
+* **Menu:** adding MenuSeparator ([c05cdeb](https://github.com/aversini/ui-components/commit/c05cdeb778b0789890761582ff1409a6067e637f))
+
 ## [4.19.0](https://github.com/aversini/ui-components/compare/ui-components-v4.18.0...ui-components-v4.19.0) (2023-12-21)
 
 
