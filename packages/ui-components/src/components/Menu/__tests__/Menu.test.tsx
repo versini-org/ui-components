@@ -1,13 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { Menu, MenuItem } from "../..";
+import { Menu, MenuItem, MenuSeparator } from "../..";
 
 const MENU_TRIGGER_LABEL = "Click Me";
 const FIRST_MENU_ITEM = "Menu 1";
 const SECOND_MENU_ITEM = "Menu 2";
 const THIRD_MENU_ITEM = "Menu 3";
 const FOURTH_MENU_ITEM = "Menu 4";
+const FIFTH_MENU_ITEM = "Menu 5";
 
 const SimpleMenu = ({ ...props }) => (
 	<Menu {...props}>
@@ -15,6 +16,8 @@ const SimpleMenu = ({ ...props }) => (
 		<MenuItem label={SECOND_MENU_ITEM} />
 		<MenuItem label={THIRD_MENU_ITEM} disabled />
 		<MenuItem label={FOURTH_MENU_ITEM} />
+		<MenuSeparator data-testid="menu-separator" />
+		<MenuItem label={FIFTH_MENU_ITEM} />
 	</Menu>
 );
 
@@ -29,6 +32,7 @@ describe("Menu (exceptions)", () => {
 	it("should be able to require/import from root", () => {
 		expect(Menu).toBeDefined();
 		expect(MenuItem).toBeDefined();
+		expect(MenuSeparator).toBeDefined();
 	});
 });
 
@@ -166,5 +170,22 @@ describe("Menu behaviors", () => {
 		expect(document.activeElement).toBe(firstMenuItem);
 		await user.click(firstMenuItem);
 		expect(onFocus).toHaveBeenCalled();
+	});
+
+	it("should a menu separator when menu is opened", async () => {
+		const { user } = renderWithUserEvent(
+			<SimpleMenu label={MENU_TRIGGER_LABEL} />,
+		);
+		const trigger = screen.getByLabelText(MENU_TRIGGER_LABEL);
+		await user.click(trigger);
+		const firstMenuItem = screen.getByRole("menuitem", {
+			name: FIRST_MENU_ITEM,
+		});
+
+		expect(firstMenuItem).toHaveFocus();
+		expect(document.activeElement).toBe(firstMenuItem);
+
+		const separator = screen.getByTestId("menu-separator");
+		expect(separator).toBeInTheDocument();
 	});
 });

@@ -12,3 +12,5 @@ export interface MenuItemProps {
 	disabled?: boolean;
 	icon?: React.ReactNode;
 }
+
+export type MenuSeparatorProps = React.HTMLAttributes<HTMLDivElement>;
