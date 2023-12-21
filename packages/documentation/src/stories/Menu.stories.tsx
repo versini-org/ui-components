@@ -50,6 +50,25 @@ export const Basic: Story = {
 			<div className="min-h-10 flex flex-wrap gap-2 bg-slate-500 p-11">
 				<Button size="small">Button</Button>
 				<Menu icon={<IconSettings />} {...args}>
+					<MenuItem label="Profile" />
+					<MenuItem label="Statistics" />
+					<MenuItem label="History" />
+					<MenuItem label="About" />
+				</Menu>
+				<Button size="small">Button</Button>
+			</div>
+		);
+	},
+};
+
+export const WithIcons: Story = {
+	args: {},
+
+	render: function Render(args) {
+		return (
+			<div className="min-h-10 flex flex-wrap gap-2 bg-slate-500 p-11">
+				<Button size="small">Button</Button>
+				<Menu icon={<IconSettings />} {...args}>
 					<MenuItem label="Profile" icon={<IconProfile decorative />} />
 					<MenuItem label="Statistics" icon={<IconChart decorative />} />
 					<MenuItem label="History" icon={<IconHistory decorative />} />
