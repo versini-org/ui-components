@@ -1,6 +1,10 @@
 import { render, screen } from "@testing-library/react";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import {
+	MESSSAGEBOX_CLASSNAME,
+	PANEL_CLASSNAME,
+} from "../../../common/constants";
 import { Panel } from "../..";
 
 const PANEL_CONTENT = "Panel Content Lorem";
@@ -23,6 +27,7 @@ describe("Panel modifiers", () => {
 		const panel = screen.getByRole("dialog");
 
 		expectToHaveClasses(panel, [
+			PANEL_CLASSNAME,
 			"flex",
 			"h-full",
 			"min-h-[95%]",
@@ -36,6 +41,56 @@ describe("Panel modifiers", () => {
 			"sm:border-2",
 			"sm:border-border-light",
 			"md:max-w-2xl",
+		]);
+	});
+
+	it("should render a responsive panel with dark borders", async () => {
+		render(<SimplePanel borderKind="dark" />);
+		const panel = screen.getByRole("dialog");
+
+		expectToHaveClasses(panel, [
+			PANEL_CLASSNAME,
+			"flex",
+			"h-full",
+			"min-h-[95%]",
+			"w-full",
+			"flex-col",
+			"bg-surface-medium",
+			"sm:h-auto",
+			"sm:min-h-[10rem]",
+			"sm:w-[95%]",
+			"sm:rounded-lg",
+			"sm:border-2",
+			"sm:border-border-dark",
+			"md:max-w-2xl",
+		]);
+	});
+
+	it("should render a responsive messagebox", async () => {
+		render(<SimplePanel kind="messagebox" />);
+		const panel = screen.getByRole("dialog");
+
+		expectToHaveClasses(panel, [
+			MESSSAGEBOX_CLASSNAME,
+			"w-[95%]",
+			"rounded-lg",
+			"sm:w-[50%]",
+			"border-2",
+			"border-border-light",
+		]);
+	});
+
+	it("should render a responsive messagebox wit dark borders", async () => {
+		render(<SimplePanel kind="messagebox" borderKind="dark" />);
+		const panel = screen.getByRole("dialog");
+
+		expectToHaveClasses(panel, [
+			MESSSAGEBOX_CLASSNAME,
+			"w-[95%]",
+			"rounded-lg",
+			"sm:w-[50%]",
+			"border-2",
+			"border-border-dark",
 		]);
 	});
 
@@ -56,5 +111,15 @@ describe("Panel modifiers", () => {
 		expect(document.title).toBe("Panel Header 2");
 		rerender(<SimplePanel title="Panel Header 1" open />);
 		expect(document.title).toBe("Panel Header 1");
+	});
+
+	it("should render the panel content", () => {
+		render(<SimplePanel />);
+		expect(screen.getByText(PANEL_CONTENT)).toBeInTheDocument();
+	});
+
+	it("should render the panel footer", () => {
+		render(<SimplePanel footer={<span>Footer</span>} />);
+		expect(screen.getByText("Footer")).toBeInTheDocument();
 	});
 });
