@@ -6,7 +6,6 @@ import {
 	IconCopied,
 	IconCopy,
 	IconDelete,
-	IconDogInShield,
 	IconEdit,
 	IconHide,
 	IconHistory,
@@ -18,8 +17,8 @@ import {
 	IconUser,
 } from "@versini/ui-components";
 
-const meta: Meta<typeof IconDogInShield> = {
-	component: IconDogInShield,
+const meta: Meta<typeof IconBack> = {
+	component: IconBack,
 	parameters: {
 		controls: { exclude: ["spacing"], sort: "requiredFirst" },
 	},
@@ -45,7 +44,7 @@ const meta: Meta<typeof IconDogInShield> = {
 
 export default meta;
 
-type Story = StoryObj<typeof IconDogInShield>;
+type Story = StoryObj<typeof IconBack>;
 
 export const Basic: Story = {
 	render: (args) => (
@@ -56,7 +55,6 @@ export const Basic: Story = {
 			<IconCopied {...args} />
 			<IconCopy {...args} />
 			<IconDelete {...args} />
-			<IconDogInShield {...args} />
 			<IconEdit {...args} />
 			<IconHide {...args} />
 			<IconHistory {...args} />
