@@ -8,7 +8,6 @@ import {
 	IconCopy,
 	IconDelete,
 	IconDog,
-	IconDogInShield,
 	IconEdit,
 	IconHide,
 	IconHistory,
@@ -19,7 +18,8 @@ import {
 	IconShow,
 	IconUser,
 } from "../..";
-import { defaultIconSize } from "../constants";
+
+const defaultIconSize = "h-5 w-5";
 
 const renderExpected = async ({
 	dataTestId,
@@ -120,13 +120,6 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
-					<IconDogInShield
-						data-testid="icon-dog"
-						className={className}
-						fill={fill}
-						viewBox={viewBox}
-						spacing={spacing}
-					/>
 					<IconEdit
 						data-testid="icon-edit"
 						className={className}
@@ -189,7 +182,6 @@ describe("Generic Icons prop tests", () => {
 				"icon-copied",
 				"icon-copy",
 				"icon-delete",
-				"icon-dog-in-shield",
 				"icon-edit",
 				"icon-restore",
 				"icon-settings",

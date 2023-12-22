@@ -27,10 +27,6 @@
 		"title": "Edit",
 		"monotone": true
 	},
-	"shield-dog": {
-		"name": "IconDogInShield",
-		"title": "Dog"
-	},
 	"square-check": {
 		"name": "IconCopied",
 		"title": "Copied"

@@ -17,7 +17,6 @@ import { IconCopied } from "./Icons/IconCopied";
 import { IconCopy } from "./Icons/IconCopy";
 import { IconDelete } from "./Icons/IconDelete";
 import { IconDog } from "./Icons/IconDog";
-import { IconDogInShield } from "./Icons/IconDogInShield";
 import { IconEdit } from "./Icons/IconEdit";
 import { IconHide } from "./Icons/IconHide";
 import { IconHistory } from "./Icons/IconHistory";
@@ -61,7 +60,6 @@ export {
 	IconCopy,
 	IconDelete,
 	IconDog,
-	IconDogInShield,
 	IconEdit,
 	IconHide,
 	IconHistory,
