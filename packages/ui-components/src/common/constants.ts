@@ -23,7 +23,7 @@ export const SPINNER_CLASSNAME = "av-spinner";
 export const TOGGLE_CLASSNAME = "av-toggle";
 
 export const PANEL_CLASSNAME = "av-panel";
-export const MESSSAGEBOX_CLASSNAME = "av-messagebox";
+export const MESSAGEBOX_CLASSNAME = "av-messagebox";
 
 export const FLEXGRID_MAX_COLUMNS = 12;
 export const FLEXGRID_GAP_RATIO = 0.25;

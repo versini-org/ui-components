@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
 import {
-	MESSSAGEBOX_CLASSNAME,
+	MESSAGEBOX_CLASSNAME,
 	PANEL_CLASSNAME,
 } from "../../../common/constants";
 import { Panel } from "../..";
@@ -71,7 +71,7 @@ describe("Panel modifiers", () => {
 		const panel = screen.getByRole("dialog");
 
 		expectToHaveClasses(panel, [
-			MESSSAGEBOX_CLASSNAME,
+			MESSAGEBOX_CLASSNAME,
 			"w-[95%]",
 			"rounded-lg",
 			"sm:w-[50%]",
@@ -85,7 +85,7 @@ describe("Panel modifiers", () => {
 		const panel = screen.getByRole("dialog");
 
 		expectToHaveClasses(panel, [
-			MESSSAGEBOX_CLASSNAME,
+			MESSAGEBOX_CLASSNAME,
 			"w-[95%]",
 			"rounded-lg",
 			"sm:w-[50%]",
