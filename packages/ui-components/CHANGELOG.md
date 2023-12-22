@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.21.0](https://github.com/aversini/ui-components/compare/ui-components-v4.20.0...ui-components-v4.21.0) (2023-12-22)
+
+
+### Features
+
+* **Panel:** adding support for "footer" prop and "messagebox" kind ([3bdf264](https://github.com/aversini/ui-components/commit/3bdf2648a0ef8a0aa344b8cf8fe589d22e5338de))
+
+
+### Bug Fixes
+
+* remove IconDogInShield ([af086bb](https://github.com/aversini/ui-components/commit/af086bb4c13134a533cb5277d25aa374896dd85a))
+
 ## [4.20.0](https://github.com/aversini/ui-components/compare/ui-components-v4.19.0...ui-components-v4.20.0) (2023-12-21)
 
 
