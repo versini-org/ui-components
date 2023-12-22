@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { useEffect, useRef } from "react";
 
 import { IconClose } from "../";
@@ -10,22 +9,19 @@ import {
 	ModalHeading,
 } from "../private/Modal/Modal";
 import type { PanelProps } from "./PanelTypes";
+import { getPanelClassName, TYPE_PANEL } from "./utilities";
 
 export const Panel = ({
 	open,
 	onOpenChange,
 	title,
 	children,
+	footer,
 	borderKind = "light",
+	kind = TYPE_PANEL,
 }: PanelProps) => {
 	const originalTitleRef = useRef("");
-	const mainClass = clsx(
-		"bg-surface-medium flex h-full min-h-[95%] w-full flex-col sm:h-auto sm:min-h-[10rem] sm:w-[95%] sm:rounded-lg md:max-w-2xl",
-		{
-			"sm:border-2 sm:border-border-dark": borderKind === "dark",
-			"sm:border-2 sm:border-border-light": borderKind === "light",
-		},
-	);
+	const panelClassName = getPanelClassName({ kind, borderKind });
 
 	/**
 	 * If the panel is opened, set the document
@@ -46,7 +42,7 @@ export const Panel = ({
 
 	return (
 		<Modal open={open} onOpenChange={onOpenChange}>
-			<ModalContent className={mainClass}>
+			<ModalContent className={panelClassName.main}>
 				<ModalHeading className="flex flex-row-reverse justify-between p-4 text-xl font-bold">
 					<ModalClose>
 						<IconClose />
@@ -54,9 +50,11 @@ export const Panel = ({
 					<div>{title}</div>
 				</ModalHeading>
 
-				<ModalDescription className="flex flex-grow flex-col p-2 sm:p-4">
+				<ModalDescription className={panelClassName.content}>
 					{children}
 				</ModalDescription>
+
+				{footer && <div className={panelClassName.content}>{footer}</div>}
 			</ModalContent>
 		</Modal>
 	);

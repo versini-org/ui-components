@@ -1,6 +1,6 @@
 import { useArgs } from "@storybook/preview-api";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Panel } from "@versini/ui-components";
+import { Button, Panel } from "@versini/ui-components";
 
 const meta: Meta<typeof Panel> = {
 	component: Panel,
@@ -12,10 +12,15 @@ const meta: Meta<typeof Panel> = {
 		title: "Panel Title",
 		children: "Panel Content",
 		borderKind: "light",
+		kind: "panel",
 	},
 	argTypes: {
 		borderKind: {
 			options: ["dark", "light"],
+			control: { type: "radio" },
+		},
+		kind: {
+			options: ["panel", "messagebox"],
 			control: { type: "radio" },
 		},
 	},
@@ -40,6 +45,18 @@ export const Basic: Story = {
 		const onOpenChange = () => {
 			updateArgs({ open: !open });
 		};
-		return <Panel open={open} onOpenChange={onOpenChange} {...args} />;
+		return (
+			<Panel
+				open={open}
+				onOpenChange={onOpenChange}
+				footer={
+					<div className="flex flex-row-reverse gap-2">
+						<Button noBorder>Log out</Button>
+						<Button kind="light">Cancel</Button>
+					</div>
+				}
+				{...args}
+			/>
+		);
 	},
 };

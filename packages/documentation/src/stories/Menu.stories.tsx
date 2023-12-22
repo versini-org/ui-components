@@ -10,7 +10,9 @@ import {
 	Menu,
 	MenuItem,
 	MenuSeparator,
+	Panel,
 } from "@versini/ui-components";
+import { useState } from "react";
 
 const meta: Meta<typeof Menu> = {
 	component: Menu,
@@ -79,18 +81,68 @@ export const WithIcons: Story = {
 					<MenuItem label="Statistics" icon={<IconChart decorative />} />
 					<MenuItem label="History" icon={<IconHistory decorative />} />
 					<MenuItem label="About" icon={<IconInfo decorative />} />
-					<MenuSeparator />
-					<MenuItem
-						label="Log out"
-						icon={
-							<div className="text-red-700">
-								<IconBack decorative monotone />
-							</div>
-						}
-					/>
 				</Menu>
 				<Button size="small">Button</Button>
 			</div>
+		);
+	},
+};
+
+export const WithMessageBox: Story = {
+	args: {},
+
+	render: function Render(args) {
+		const [showMessage, setShowMessage] = useState(false);
+		const handleMenuLogout = () => {
+			setShowMessage(!showMessage);
+		};
+		const onLogout = () => {
+			// console.log("==> logout!");
+			setShowMessage(!showMessage);
+		};
+		const onCancel = () => {
+			// console.log("==> cancel logout...");
+			setShowMessage(!showMessage);
+		};
+		return (
+			<>
+				<Panel
+					kind="messagebox"
+					open={showMessage}
+					onOpenChange={setShowMessage}
+					title="Log out"
+					footer={
+						<div className="flex flex-row-reverse gap-2">
+							<Button onClick={onLogout}>Log out</Button>
+							<Button kind="light" onClick={onCancel}>
+								Cancel
+							</Button>
+						</div>
+					}
+				>
+					<p>Are you sure you want to log out?</p>
+				</Panel>
+				<div className="min-h-10 flex flex-wrap gap-2 bg-slate-500 p-11">
+					<Button size="small">Button</Button>
+					<Menu icon={<IconSettings />} {...args}>
+						<MenuItem label="Profile" icon={<IconProfile decorative />} />
+						<MenuItem label="Statistics" icon={<IconChart decorative />} />
+						<MenuItem label="History" icon={<IconHistory decorative />} />
+						<MenuItem label="About" icon={<IconInfo decorative />} />
+						<MenuSeparator />
+						<MenuItem
+							onClick={handleMenuLogout}
+							label="Log out"
+							icon={
+								<div className="text-red-700">
+									<IconBack decorative monotone />
+								</div>
+							}
+						/>
+					</Menu>
+					<Button size="small">Button</Button>
+				</div>
+			</>
 		);
 	},
 };
