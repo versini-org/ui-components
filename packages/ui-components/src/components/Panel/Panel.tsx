@@ -31,7 +31,7 @@ export const Panel = ({
 	useEffect(() => {
 		if (open) {
 			originalTitleRef.current = document.title;
-			document.title = title;
+			document.title = `${title} | ${originalTitleRef.current}`;
 		}
 		return () => {
 			if (open) {
