@@ -94,25 +94,6 @@ describe("Panel modifiers", () => {
 		]);
 	});
 
-	it("should reflect the panel title props in the browser title", () => {
-		render(<SimplePanel title="Panel Header" open />);
-		expect(document.title).toBe("Panel Header");
-	});
-
-	it("should return the document title to what it was before the panel opened", () => {
-		const docTitle = document.title;
-		const { unmount } = render(<SimplePanel title="Panel Header" open />);
-		unmount();
-		expect(document.title).toBe(docTitle);
-	});
-
-	it('Should set the document title to the Panel title after the "title" prop change', () => {
-		const { rerender } = render(<SimplePanel title="Panel Header 2" open />);
-		expect(document.title).toBe("Panel Header 2");
-		rerender(<SimplePanel title="Panel Header 1" open />);
-		expect(document.title).toBe("Panel Header 1");
-	});
-
 	it("should render the panel content", () => {
 		render(<SimplePanel />);
 		expect(screen.getByText(PANEL_CONTENT)).toBeInTheDocument();
@@ -121,5 +102,29 @@ describe("Panel modifiers", () => {
 	it("should render the panel footer", () => {
 		render(<SimplePanel footer={<span>Footer</span>} />);
 		expect(screen.getByText("Footer")).toBeInTheDocument();
+	});
+});
+
+describe("Page and Panel titles", () => {
+	it("should reflect the panel title props in the browser title", () => {
+		document.title = "My page";
+		render(<SimplePanel title="Panel Header" open />);
+		expect(document.title).toBe("Panel Header | My page");
+	});
+
+	it("should return the document title to what it was before the panel opened", () => {
+		document.title = "My page";
+		const docTitle = document.title;
+		const { unmount } = render(<SimplePanel title="Panel Header" open />);
+		unmount();
+		expect(document.title).toBe(docTitle);
+	});
+
+	it('Should set the document title to the Panel title after the "title" prop change', () => {
+		document.title = "My page";
+		const { rerender } = render(<SimplePanel title="Panel Header 2" open />);
+		expect(document.title).toBe("Panel Header 2 | My page");
+		rerender(<SimplePanel title="Panel Header 1" open />);
+		expect(document.title).toBe("Panel Header 1 | My page");
 	});
 });
