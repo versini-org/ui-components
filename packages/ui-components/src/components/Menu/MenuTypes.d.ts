@@ -5,6 +5,7 @@ export interface MenuProps {
 	label?: string;
 	children?: React.ReactNode;
 	defaultPlacement?: Placement;
+	onOpenChange?: (open: boolean) => void;
 }
 
 export interface MenuItemProps {
