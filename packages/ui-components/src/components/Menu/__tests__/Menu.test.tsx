@@ -128,6 +128,31 @@ describe("Menu behaviors", () => {
 		expect(trigger).toHaveFocus();
 	});
 
+	it("should trigger the Menu onOpenChange callback when opened and closed", async () => {
+		const onOpenChange = vi.fn();
+		const { user } = renderWithUserEvent(
+			<Menu label={MENU_TRIGGER_LABEL} onOpenChange={onOpenChange}>
+				<MenuItem label={FIRST_MENU_ITEM} />
+				<MenuItem label={SECOND_MENU_ITEM} />
+				<MenuItem label={THIRD_MENU_ITEM} disabled />
+				<MenuItem label={FOURTH_MENU_ITEM} />
+			</Menu>,
+		);
+		const trigger = screen.getByLabelText(MENU_TRIGGER_LABEL);
+		await user.click(trigger);
+		expect(onOpenChange).toHaveBeenCalledWith(true);
+
+		const firstMenuItem = screen.getByRole("menuitem", {
+			name: FIRST_MENU_ITEM,
+		});
+
+		expect(firstMenuItem).toHaveFocus();
+		expect(document.activeElement).toBe(firstMenuItem);
+		await user.click(firstMenuItem);
+
+		expect(onOpenChange).toHaveBeenCalledWith(false);
+	});
+
 	it("should trigger the MenuItem onClick callback when a menuitem is selected", async () => {
 		const onClick = vi.fn();
 		const { user } = renderWithUserEvent(
@@ -172,7 +197,7 @@ describe("Menu behaviors", () => {
 		expect(onFocus).toHaveBeenCalled();
 	});
 
-	it("should a menu separator when menu is opened", async () => {
+	it("should have a menu separator when menu is opened", async () => {
 		const { user } = renderWithUserEvent(
 			<SimpleMenu label={MENU_TRIGGER_LABEL} />,
 		);

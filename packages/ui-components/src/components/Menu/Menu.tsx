@@ -31,7 +31,14 @@ export const MenuComponent = forwardRef<
 	MenuProps & React.HTMLProps<HTMLButtonElement>
 >(
 	(
-		{ children, label, icon, defaultPlacement = "bottom-start", ...props },
+		{
+			children,
+			label,
+			icon,
+			defaultPlacement = "bottom-start",
+			onOpenChange,
+			...props
+		},
 		userRef,
 	) => {
 		const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +56,10 @@ export const MenuComponent = forwardRef<
 		const { floatingStyles, refs, context } = useFloating<HTMLButtonElement>({
 			nodeId,
 			open: isOpen,
-			onOpenChange: setIsOpen,
+			onOpenChange: (args) => {
+				setIsOpen(args);
+				onOpenChange?.(args);
+			},
 			placement: defaultPlacement,
 			strategy: "fixed",
 			middleware: [offset({ mainAxis: 10 }), flip(), shift()],
@@ -90,6 +100,7 @@ export const MenuComponent = forwardRef<
 
 			function handleTreeClick() {
 				setIsOpen(false);
+				onOpenChange?.(false);
 			}
 
 			tree.events.on("click", handleTreeClick);
@@ -97,7 +108,7 @@ export const MenuComponent = forwardRef<
 			return () => {
 				tree.events.off("click", handleTreeClick);
 			};
-		}, [tree, nodeId]);
+		}, [tree, nodeId, onOpenChange]);
 
 		useEffect(() => {
 			if (isOpen && tree) {
