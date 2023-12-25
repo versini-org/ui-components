@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.22.0](https://github.com/aversini/ui-components/compare/ui-components-v4.21.0...ui-components-v4.22.0) (2023-12-25)
+
+
+### Features
+
+* **Menu:** adding onOpenChange callback ([dd0bc12](https://github.com/aversini/ui-components/commit/dd0bc12dc8274917e579652a7aa266fe6c627684))
+
+
+### Bug Fixes
+
+* **Panel:** original page title is unknown when opened ([5b544b3](https://github.com/aversini/ui-components/commit/5b544b3340c81bf2feb3796c2d6c6821de5df14a))
+
 ## [4.21.0](https://github.com/aversini/ui-components/compare/ui-components-v4.20.0...ui-components-v4.21.0) (2023-12-22)
 
 
