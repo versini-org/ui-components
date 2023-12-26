@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.22.1](https://github.com/aversini/ui-components/compare/ui-components-v4.22.0...ui-components-v4.22.1) (2023-12-26)
+
+
+### Bug Fixes
+
+* dependencies cleanup ([328f73a](https://github.com/aversini/ui-components/commit/328f73a2535d7c088178e178a794c8e884e9f0bc))
+
 ## [4.22.0](https://github.com/aversini/ui-components/compare/ui-components-v4.21.0...ui-components-v4.22.0) (2023-12-25)
 
 
