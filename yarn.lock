@@ -5140,7 +5140,6 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     tailwindcss: "npm:3.3.7"
-    uuid: "npm:9.0.1"
   peerDependencies:
     react: ^18.2.0
     react-dom: ^18.2.0
