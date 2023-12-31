@@ -23,6 +23,8 @@ export const getPanelClassName = ({
 			"border-border-dark": borderKind === "dark" && kind === TYPE_MESSAGEBOX,
 			"border-border-light": borderKind === "light" && kind === TYPE_MESSAGEBOX,
 		}),
-		content: "flex flex-grow flex-col p-2 sm:p-4",
+		content: "flex flex-grow flex-col py-2 sm:py-4 px-4",
+		footer: "flex flex-grow flex-col p-4",
+		header: "flex flex-row-reverse justify-between p-4 text-xl font-bold",
 	};
 };

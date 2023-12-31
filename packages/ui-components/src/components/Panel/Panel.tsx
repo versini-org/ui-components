@@ -43,7 +43,7 @@ export const Panel = ({
 	return (
 		<Modal open={open} onOpenChange={onOpenChange}>
 			<ModalContent className={panelClassName.main}>
-				<ModalHeading className="flex flex-row-reverse justify-between p-4 text-xl font-bold">
+				<ModalHeading className={panelClassName.header}>
 					<ModalClose>
 						<IconClose />
 					</ModalClose>
@@ -54,7 +54,7 @@ export const Panel = ({
 					{children}
 				</ModalDescription>
 
-				{footer && <div className={panelClassName.content}>{footer}</div>}
+				{footer && <div className={panelClassName.footer}>{footer}</div>}
 			</ModalContent>
 		</Modal>
 	);
