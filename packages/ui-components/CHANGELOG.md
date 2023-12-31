@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.22.2](https://github.com/aversini/ui-components/compare/ui-components-v4.22.1...ui-components-v4.22.2) (2023-12-31)
+
+
+### Bug Fixes
+
+* **Panel:** better section styling - header, content and footer ([7665026](https://github.com/aversini/ui-components/commit/7665026bd16273b7e1f1c3d7971706af4d321d4d))
+
 ## [4.22.1](https://github.com/aversini/ui-components/compare/ui-components-v4.22.0...ui-components-v4.22.1) (2023-12-26)
 
 
