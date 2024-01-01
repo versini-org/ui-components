@@ -16,7 +16,7 @@
 		"test": "echo \"WARNING: no test specified\" && exit 0"
 	},
 	"devDependencies": {
-		"@storybook/addon-a11y": "7.6.6",
+		"@storybook/addon-a11y": "7.6.7",
 		"@storybook/addon-essentials": "7.6.6",
 		"@storybook/blocks": "7.6.6",
 		"@storybook/react": "7.6.6",

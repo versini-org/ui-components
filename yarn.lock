@@ -3428,13 +3428,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-a11y@npm:7.6.6":
-  version: 7.6.6
-  resolution: "@storybook/addon-a11y@npm:7.6.6"
+"@storybook/addon-a11y@npm:7.6.7":
+  version: 7.6.7
+  resolution: "@storybook/addon-a11y@npm:7.6.7"
   dependencies:
-    "@storybook/addon-highlight": "npm:7.6.6"
+    "@storybook/addon-highlight": "npm:7.6.7"
     axe-core: "npm:^4.2.0"
-  checksum: b6adc0c90a49909c03bb288f376ba9560f55928f7a4a5441bc1965bbe95a5a7d29ade323743698ec1ca03271dbf07d818aba79100ab300642bf07c5f75e033d9
+  checksum: cd396fa4f7dd75df7694f322586bd340e991188e46bfc6d4e8eb220258edbd752a01efd4c56fd2c050aca5df8c849e849a86cbfe5960890f1009539c53c89760
   languageName: node
   linkType: hard
 
@@ -3535,6 +3535,15 @@ __metadata:
   dependencies:
     "@storybook/global": "npm:^5.0.0"
   checksum: fc526ae81476dca1b0d4e1f062af41ba534a06a762bd1197a5c30e10d68cb94ab3d42454171609de32cc2283adee37f0d29c84704c436a02b9bd1fa03b97c8d7
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-highlight@npm:7.6.7":
+  version: 7.6.7
+  resolution: "@storybook/addon-highlight@npm:7.6.7"
+  dependencies:
+    "@storybook/global": "npm:^5.0.0"
+  checksum: efe8b7ff074db5b67705af9a033069e26b730425f112b5c748086f0a526352ee721c087a41324a90049b9800c2b9c47f9cab85b33ecb7aae58b3eb7d54e7e1b6
   languageName: node
   linkType: hard
 
@@ -5123,7 +5132,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@versini/documentation@workspace:packages/documentation"
   dependencies:
-    "@storybook/addon-a11y": "npm:7.6.6"
+    "@storybook/addon-a11y": "npm:7.6.7"
     "@storybook/addon-essentials": "npm:7.6.6"
     "@storybook/blocks": "npm:7.6.6"
     "@storybook/react": "npm:7.6.6"
