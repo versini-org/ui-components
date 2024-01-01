@@ -27,7 +27,7 @@
 		"@versini/ui-components": "*",
 		"json5": "2.2.3",
 		"prop-types": "15.8.1",
-		"storybook": "7.6.6",
+		"storybook": "7.6.7",
 		"uuid": "9.0.1"
 	}
 }
