@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import { ButtonIcon, IconHide, IconShow, TextInput, useMergeRefs } from "..";
+import { ButtonIcon, IconHide, IconShow, useMergeRefs } from "..";
 import { LiveRegion } from "../private/LiveRegion/LiveRegion";
+import { TextInput } from "./TextInput";
 import type { TextInputMaskProps } from "./TextInputTypes";
 
 const CLEAR_ANNOUNCEMENT_TIMEOUT = 500;
