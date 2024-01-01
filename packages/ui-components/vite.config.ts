@@ -37,14 +37,7 @@ try {
 `;
 
 export default defineConfig({
-	optimizeDeps: {
-		disabled: false,
-	},
 	build: {
-		// commonjsOptions: {
-		// 	include: [],
-		// },
-		// sourcemap: true,
 		copyPublicDir: false,
 		lib: {
 			entry: resolve(__dirname, "src/components/index.ts"),
