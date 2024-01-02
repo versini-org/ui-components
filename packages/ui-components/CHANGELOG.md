@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.22.3](https://github.com/aversini/ui-components/compare/ui-components-v4.22.2...ui-components-v4.22.3) (2024-01-02)
+
+
+### Bug Fixes
+
+* enabling tree-shaking ([8f3af10](https://github.com/aversini/ui-components/commit/8f3af10727678c20c0ba528d211e56fdfe9529fb))
+
 ## [4.22.2](https://github.com/aversini/ui-components/compare/ui-components-v4.22.1...ui-components-v4.22.2) (2023-12-31)
 
 
