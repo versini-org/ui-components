@@ -1,5 +1,3 @@
-import "./index.css";
-
 import { useMergeRefs } from "../common/hooks/useMergeRefs";
 import { useUniqueId } from "../common/hooks/useUniqueId";
 import { Anchor } from "./Anchor/Anchor";
