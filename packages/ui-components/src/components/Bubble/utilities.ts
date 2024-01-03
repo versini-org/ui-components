@@ -7,7 +7,7 @@ const getBubbleSizesClasses = () => {
 };
 
 const getBubbleColorClasses = ({ kind }: { kind: string }) => {
-	return clsx("p-4 sm:max-w-md md:max-w-2xl", {
+	return clsx({
 		"bg-surface-lighter text-copy-dark": kind === "left",
 		"bg-surface-accent text-copy-lighter": kind === "right",
 	});
