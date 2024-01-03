@@ -87,9 +87,7 @@ export default defineConfig(({ mode }) => {
 					style: resolve(__dirname, "src/style.ts"),
 					...input,
 				},
-				// treeshake: true,
-				// treeshake: "smallest",
-				// treeshake: false,
+				treeshake: "smallest",
 				external: externalDependencies,
 				output: {
 					compact: true,
