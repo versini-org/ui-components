@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.22.4](https://github.com/aversini/ui-components/compare/ui-components-v4.22.3...ui-components-v4.22.4) (2024-01-03)
+
+
+### Bug Fixes
+
+* re-enable tree-shaking for TextInputMask ([b3d9ee4](https://github.com/aversini/ui-components/commit/b3d9ee44cf5d58de0b416b3559524aaa0b7d7689))
+
 ## [4.22.3](https://github.com/aversini/ui-components/compare/ui-components-v4.22.2...ui-components-v4.22.3) (2024-01-02)
 
 
