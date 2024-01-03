@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import fs from "fs-extra";
-import { globSync } from "glob";
+import glob from "glob";
 import { defineConfig } from "vite";
 
 import { externalDependencies } from "../../configuration/vite.common";
@@ -49,7 +49,8 @@ export default defineConfig(({ mode }) => {
 	const input = isDev
 		? {}
 		: Object.fromEntries(
-				globSync("src/**/*.{ts,tsx}")
+				glob
+					.sync("src/**/*.{ts,tsx}")
 					.filter((file) => {
 						return file.match(
 							/src\/components\/[A-Z][a-zA-Z]*\/[A-Z][a-zA-Z]*\.tsx/,
