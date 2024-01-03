@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.23.0](https://github.com/aversini/ui-components/compare/ui-components-v4.22.4...ui-components-v4.23.0) (2024-01-03)
+
+
+### Features
+
+* adding bare minimum Bubble component ([631d227](https://github.com/aversini/ui-components/commit/631d2275075b74bfd15ea291a5153ebf5f2acc50))
+
 ## [4.22.4](https://github.com/aversini/ui-components/compare/ui-components-v4.22.3...ui-components-v4.22.4) (2024-01-03)
 
 
