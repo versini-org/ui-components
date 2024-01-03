@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+import typography from "@tailwindcss/typography";
+
 import {
 	dynamicColors,
 	dynamicColorsClasses,
@@ -9,10 +11,22 @@ import {
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	safelist: [...dynamicMargins(), ...dynamicColorsClasses()],
-	plugins: [],
+	plugins: [typography],
 	theme: {
 		extend: {
 			colors: dynamicColors(),
+			typography: {
+				DEFAULT: {
+					css: {
+						blockquote: {
+							borderLeftColor: "var(--tw-prose-blockquote-border-color)",
+						},
+						"ul > li::marker": {
+							color: "var(--tw-prose-counter)",
+						},
+					},
+				},
+			},
 		},
 	},
 };

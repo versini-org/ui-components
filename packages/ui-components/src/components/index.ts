@@ -1,6 +1,7 @@
 import { useMergeRefs } from "../common/hooks/useMergeRefs";
 import { useUniqueId } from "../common/hooks/useUniqueId";
 import { Anchor } from "./Anchor/Anchor";
+import { Bubble } from "./Bubble/Bubble";
 import { Button } from "./Button/Button";
 import { ButtonIcon } from "./Button/ButtonIcon";
 import { ButtonLink } from "./Button/ButtonLink";
@@ -44,6 +45,7 @@ import { Toggle } from "./Toggle/Toggle";
 
 export {
 	Anchor,
+	Bubble,
 	Button,
 	ButtonIcon,
 	ButtonLink,
