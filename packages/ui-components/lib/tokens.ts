@@ -23,6 +23,7 @@ export const tokens = {
 		"surface-medium": colors.slate[500],
 		"surface-light": colors.slate[300],
 		"surface-lighter": colors.slate[200],
+		"surface-accent": "#0B93F6",
 
 		/**
 		 * Typography tokens.
@@ -38,6 +39,10 @@ export const tokens = {
 		"copy-light": colors.slate[200],
 		"copy-light-hover": colors.slate[200],
 		"copy-light-active": colors.slate[400],
+
+		"copy-lighter": "#ffffff",
+		"copy-lighter-hover": "#ffffff",
+		"copy-lighter-active": "#ffffff",
 
 		"copy-error-dark": errorColorDark,
 		"copy-error-light": errorColorLight,
