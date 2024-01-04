@@ -14,10 +14,14 @@ export const Bubble = ({
 }: BubbleProps) => {
 	const [copied, setCopied] = useState(false);
 	const bubbleClasses = getBubbleClasses({ kind, className });
+	const isCopyToClipboardEnabled =
+		Boolean(copyToClipboard) &&
+		(typeof copyToClipboard === "function" || typeof children === "string");
 
 	// copy to clipboard function
 	const handleCopyToClipboard = () => {
 		setCopied(true);
+
 		if (typeof copyToClipboard === "function") {
 			copyToClipboard(children);
 		} else if (typeof children === "string") {
@@ -51,19 +55,17 @@ export const Bubble = ({
 				{rawFooter && rawFooter}
 			</div>
 
-			{copyToClipboard &&
-				(typeof children === "string" ||
-					typeof copyToClipboard === "function") && (
-					<div className={bubbleClasses.copyButton}>
-						<ButtonIcon
-							noBorder
-							onClick={handleCopyToClipboard}
-							disabled={copied}
-						>
-							{copied ? <IconCopied /> : <IconCopy />}
-						</ButtonIcon>
-					</div>
-				)}
+			{isCopyToClipboardEnabled && (
+				<div className={bubbleClasses.copyButton}>
+					<ButtonIcon
+						noBorder
+						onClick={handleCopyToClipboard}
+						disabled={copied}
+					>
+						{copied ? <IconCopied /> : <IconCopy />}
+					</ButtonIcon>
+				</div>
+			)}
 		</div>
 	);
 };
