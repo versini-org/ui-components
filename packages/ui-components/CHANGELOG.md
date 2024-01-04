@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.24.0](https://github.com/aversini/ui-components/compare/ui-components-v4.23.0...ui-components-v4.24.0) (2024-01-04)
+
+
+### Features
+
+* **Bubble:** adding footer and rawFooter props ([e04c5c1](https://github.com/aversini/ui-components/commit/e04c5c1300dc7c253e9b2ecd86b7ab2d9b8f6816))
+
 ## [4.23.0](https://github.com/aversini/ui-components/compare/ui-components-v4.22.4...ui-components-v4.23.0) (2024-01-03)
 
 
