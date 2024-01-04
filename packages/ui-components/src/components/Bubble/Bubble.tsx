@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+
+import { ButtonIcon, IconCopied, IconCopy } from "..";
 import { BubbleProps } from "./BubbleTypes";
 import { getBubbleClasses } from "./utilities";
 
@@ -7,8 +10,37 @@ export const Bubble = ({
 	className,
 	footer,
 	rawFooter,
+	copyToClipboard,
 }: BubbleProps) => {
+	const [copied, setCopied] = useState(false);
 	const bubbleClasses = getBubbleClasses({ kind, className });
+	const isCopyToClipboardEnabled =
+		Boolean(copyToClipboard) &&
+		(typeof copyToClipboard === "function" || typeof children === "string");
+
+	// copy to clipboard function
+	const handleCopyToClipboard = () => {
+		setCopied(true);
+
+		if (typeof copyToClipboard === "function") {
+			copyToClipboard(children);
+		} else if (typeof children === "string") {
+			navigator.clipboard.writeText(children);
+		}
+	};
+
+	// after 3 seconds, reset the copied state
+	useEffect(() => {
+		let timeoutId: number;
+		if (copied) {
+			timeoutId = window.setTimeout(() => {
+				setCopied(false);
+			}, 3000);
+		}
+		return () => {
+			clearTimeout(timeoutId);
+		};
+	}, [copied]);
 
 	return (
 		<div className={bubbleClasses.wrapper}>
@@ -26,6 +58,18 @@ export const Bubble = ({
 					})}
 				{rawFooter && rawFooter}
 			</div>
+
+			{isCopyToClipboardEnabled && (
+				<div className={bubbleClasses.copyButton}>
+					<ButtonIcon
+						noBorder
+						onClick={handleCopyToClipboard}
+						disabled={copied}
+					>
+						{copied ? <IconCopied /> : <IconCopy />}
+					</ButtonIcon>
+				</div>
+			)}
 		</div>
 	);
 };

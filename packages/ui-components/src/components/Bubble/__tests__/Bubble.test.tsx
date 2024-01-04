@@ -1,4 +1,7 @@
-import { render, screen } from "@testing-library/react";
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
+import { act, fireEvent, render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
 import { BUBBLE_CLASSNAME } from "../../../common/constants";
@@ -195,5 +198,81 @@ describe("Bubble modifiers", () => {
 			"text-xs",
 			"text-red-500",
 		]);
+	});
+});
+
+describe("Bubble methods", () => {
+	afterEach(() => {
+		vi.restoreAllMocks();
+	});
+
+	it("should honor the copyToClipboard prop as a function", async () => {
+		const events = {
+			onClick: () => {},
+		};
+		const spyOnCopyToClipboard = vi.spyOn(events, "onClick");
+		const user = userEvent.setup();
+
+		render(
+			// @ts-ignore
+			<Bubble kind="left" copyToClipboard={spyOnCopyToClipboard}>
+				<p>hello</p>
+			</Bubble>,
+		);
+		await screen.findByText("hello");
+		await screen.findByText("Copy");
+		const button = await screen.findByRole("button");
+		await user.click(button);
+		await screen.findByText("Copied");
+
+		expect(spyOnCopyToClipboard).toHaveBeenCalledTimes(1);
+	});
+
+	it("should honor the copyToClipboard prop as a boolean", async () => {
+		const user = userEvent.setup();
+
+		Object.defineProperty(navigator, "clipboard", {
+			value: {
+				writeText: async () => {},
+			},
+		});
+
+		render(
+			// @ts-ignore
+			<Bubble kind="left" copyToClipboard>
+				hello
+			</Bubble>,
+		);
+		await screen.findByText("hello");
+		await screen.findByText("Copy");
+		const button = await screen.findByRole("button");
+		await user.click(button);
+		await screen.findByText("Copied");
+	});
+});
+
+describe("Bubble copy clipboard timer", () => {
+	afterEach(() => {
+		vi.restoreAllMocks();
+		vi.clearAllTimers();
+	});
+	it("should revert to copy icon after 3 seconds", async () => {
+		vi.useFakeTimers();
+		render(
+			<Bubble kind="left" copyToClipboard>
+				hello
+			</Bubble>,
+		);
+		const button = screen.getByRole("button");
+		screen.getByText("hello");
+		screen.getByText("Copy");
+		fireEvent.click(button);
+		screen.getByText("Copied");
+
+		act(() => {
+			vi.advanceTimersByTime(3000);
+		});
+
+		screen.getByText("Copy");
 	});
 });
