@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
 import { BUBBLE_CLASSNAME } from "../../../common/constants";
@@ -195,5 +198,32 @@ describe("Bubble modifiers", () => {
 			"text-xs",
 			"text-red-500",
 		]);
+	});
+});
+
+describe("Bubble methods", () => {
+	afterEach(() => {
+		vi.restoreAllMocks();
+	});
+
+	it("should honor the copyToClipboard prop", async () => {
+		const events = {
+			onClick: () => {},
+		};
+		const spyOnCopyToClipboard = vi.spyOn(events, "onClick");
+		const user = userEvent.setup();
+
+		render(
+			// @ts-ignore
+			<Bubble kind="left" copyToClipboard={spyOnCopyToClipboard}>
+				hello
+			</Bubble>,
+		);
+		await screen.findByText("hello");
+		const button = await screen.findByRole("button");
+		await user.click(button);
+		await user.click(button);
+
+		expect(spyOnCopyToClipboard).toHaveBeenCalledTimes(1);
 	});
 });

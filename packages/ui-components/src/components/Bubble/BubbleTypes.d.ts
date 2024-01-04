@@ -6,4 +6,5 @@ export type BubbleProps = {
 		[key: string]: string | number | undefined | null;
 	};
 	rawFooter?: React.ReactNode;
+	copyToClipboard?: boolean | ((text: any) => void);
 };

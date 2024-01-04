@@ -170,3 +170,35 @@ export const WithRawFooter: Story = {
 		);
 	},
 };
+
+export const Copy: Story = {
+	args: {},
+
+	render: function Render(args) {
+		return (
+			<div className="h-96 min-h-10 bg-slate-900 p-11">
+				<Bubble kind="right" className="mb-4" copyToClipboard {...args}>
+					Right bubble...
+				</Bubble>
+
+				<Bubble kind="left" className="mb-4" copyToClipboard {...args}>
+					Pure string with boolean
+				</Bubble>
+
+				<Bubble kind="left" className="mb-4" copyToClipboard {...args}>
+					<div>DOM element with boolean</div>
+				</Bubble>
+
+				<Bubble
+					kind="left"
+					copyToClipboard={() => {
+						navigator.clipboard.writeText("DOM element with function");
+					}}
+					{...args}
+				>
+					<div>DOM element with function</div>
+				</Bubble>
+			</div>
+		);
+	},
+};
