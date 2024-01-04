@@ -16,13 +16,13 @@ export const Bubble = ({
 				<div className={bubbleClasses.main}>{children}</div>
 				{footer &&
 					Object.keys(footer).map((key) => {
-						return (
+						return footer[key] ? (
 							<div key={`-${key}`}>
 								<p className={bubbleClasses.footer}>
 									{key}: {footer[key]}
 								</p>
 							</div>
-						);
+						) : null;
 					})}
 				{rawFooter && rawFooter}
 			</div>

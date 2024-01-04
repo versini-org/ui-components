@@ -119,6 +119,7 @@ describe("Bubble modifiers", () => {
 				footer={{
 					Model: "gpt-4-1106-preview",
 					Plugin: "OpenAI",
+					ThisShouldNotBeRendered: null,
 					["Processing time"]: "1234ms",
 				}}
 			>
@@ -128,6 +129,8 @@ describe("Bubble modifiers", () => {
 		const bubbleFooter1 = await screen.findByText("Model: gpt-4-1106-preview");
 		const bubbleFooter2 = await screen.findByText("Plugin: OpenAI");
 		const bubbleFooter3 = await screen.findByText("Processing time: 1234ms");
+		const bubbleFooter4 = screen.queryByText("ThisShouldNotBeRendered");
+
 		expectToHaveClasses(bubbleFooter1, [
 			"pr-2",
 			"pt-1",
@@ -149,6 +152,7 @@ describe("Bubble modifiers", () => {
 			"text-xs",
 			"text-copy-light",
 		]);
+		expect(bubbleFooter4).toBeNull();
 	});
 
 	it("should render a right bubble with a raw footer", async () => {

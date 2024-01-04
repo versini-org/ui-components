@@ -3,7 +3,7 @@ export type BubbleProps = {
 	kind?: "left" | "right";
 	className?: string;
 	footer?: {
-		[key: string]: string | number | undefined;
+		[key: string]: string | number | undefined | null;
 	};
 	rawFooter?: React.ReactNode;
 };
