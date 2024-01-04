@@ -253,6 +253,7 @@ describe("Bubble methods", () => {
 
 describe("Bubble copy clipboard timer", () => {
 	afterEach(() => {
+		vi.restoreAllMocks();
 		vi.clearAllTimers();
 	});
 	it("should revert to copy icon after 3 seconds", async () => {
