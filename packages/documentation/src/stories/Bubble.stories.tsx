@@ -101,3 +101,72 @@ export const LongText: Story = {
 		);
 	},
 };
+
+export const WithFooter: Story = {
+	args: {},
+
+	render: function Render(args) {
+		return (
+			<div className="h-96 min-h-10 bg-slate-900 p-11">
+				<Bubble
+					kind="right"
+					className="mb-4"
+					footer={{
+						Model: "gpt-4-1106-preview",
+					}}
+					{...args}
+				>
+					What is your name and what can you do for me?
+				</Bubble>
+
+				<Bubble
+					kind="left"
+					footer={{
+						Model: "gpt-4-1106-preview",
+						Plugin: "OpenAI",
+						["Processing time"]: "1234ms",
+					}}
+					{...args}
+				>
+					Hi, my name is UI, ask me anything!
+				</Bubble>
+			</div>
+		);
+	},
+};
+
+export const WithRawFooter: Story = {
+	args: {},
+
+	render: function Render(args) {
+		const rawFooterClasses = "pl-2 pt-1 text-start text-xs text-red-500";
+		return (
+			<div className="h-96 min-h-10 bg-slate-900 p-11">
+				<Bubble
+					kind="right"
+					className="mb-4"
+					rawFooter={
+						<p className={rawFooterClasses}>Model: gpt-4-1106-preview</p>
+					}
+					{...args}
+				>
+					What is your name and what can you do for me?
+				</Bubble>
+
+				<Bubble
+					kind="left"
+					rawFooter={
+						<>
+							<p className={rawFooterClasses}>Model: gpt-4-1106-preview</p>
+							<p className={rawFooterClasses}>Plugin: OpenAI</p>
+							<p className={rawFooterClasses}>Processing time: 1234ms</p>
+						</>
+					}
+					{...args}
+				>
+					Hi, my name is UI, ask me anything!
+				</Bubble>
+			</div>
+		);
+	},
+};

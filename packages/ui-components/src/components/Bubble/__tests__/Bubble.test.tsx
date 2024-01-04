@@ -35,8 +35,8 @@ describe("Bubble modifiers", () => {
 			"rounded-b-xl",
 			"rounded-tr-xl",
 		]);
-		if (bubble.parentElement) {
-			expectToHaveClasses(bubble.parentElement, [
+		if (bubble.parentElement?.parentElement) {
+			expectToHaveClasses(bubble.parentElement.parentElement, [
 				BUBBLE_CLASSNAME,
 				"flex",
 				"items-start",
@@ -68,8 +68,8 @@ describe("Bubble modifiers", () => {
 			"rounded-b-xl",
 			"rounded-tl-xl",
 		]);
-		if (bubble.parentElement) {
-			expectToHaveClasses(bubble.parentElement, [
+		if (bubble.parentElement?.parentElement) {
+			expectToHaveClasses(bubble.parentElement.parentElement, [
 				BUBBLE_CLASSNAME,
 				"flex",
 				"items-start",
@@ -85,8 +85,8 @@ describe("Bubble modifiers", () => {
 			</Bubble>,
 		);
 		const bubble = await screen.findByText("hello");
-		if (bubble.parentElement) {
-			expectToHaveClasses(bubble.parentElement, [
+		if (bubble.parentElement?.parentElement) {
+			expectToHaveClasses(bubble.parentElement.parentElement, [
 				BUBBLE_CLASSNAME,
 				"flex",
 				"items-start",
@@ -102,13 +102,98 @@ describe("Bubble modifiers", () => {
 			</Bubble>,
 		);
 		const bubble = await screen.findByText("hello");
-		if (bubble.parentElement) {
-			expectToHaveClasses(bubble.parentElement, [
+		if (bubble.parentElement?.parentElement) {
+			expectToHaveClasses(bubble.parentElement.parentElement, [
 				BUBBLE_CLASSNAME,
 				"flex",
 				"items-start",
 				"custom-class",
 			]);
 		}
+	});
+
+	it("should render a right bubble with a standard footer", async () => {
+		render(
+			<Bubble
+				kind="right"
+				footer={{
+					Model: "gpt-4-1106-preview",
+					Plugin: "OpenAI",
+					ThisShouldNotBeRendered: null,
+					["Processing time"]: "1234ms",
+				}}
+			>
+				hello
+			</Bubble>,
+		);
+		const bubbleFooter1 = await screen.findByText("Model: gpt-4-1106-preview");
+		const bubbleFooter2 = await screen.findByText("Plugin: OpenAI");
+		const bubbleFooter3 = await screen.findByText("Processing time: 1234ms");
+		const bubbleFooter4 = screen.queryByText("ThisShouldNotBeRendered");
+
+		expectToHaveClasses(bubbleFooter1, [
+			"pr-2",
+			"pt-1",
+			"text-end",
+			"text-xs",
+			"text-copy-light",
+		]);
+		expectToHaveClasses(bubbleFooter2, [
+			"pr-2",
+			"pt-1",
+			"text-end",
+			"text-xs",
+			"text-copy-light",
+		]);
+		expectToHaveClasses(bubbleFooter3, [
+			"pr-2",
+			"pt-1",
+			"text-end",
+			"text-xs",
+			"text-copy-light",
+		]);
+		expect(bubbleFooter4).toBeNull();
+	});
+
+	it("should render a right bubble with a raw footer", async () => {
+		const rawFooterClasses = "pl-2 pt-1 text-start text-xs text-red-500";
+		render(
+			<Bubble
+				kind="right"
+				rawFooter={
+					<>
+						<p className={rawFooterClasses}>Model: gpt-4-1106-preview</p>
+						<p className={rawFooterClasses}>Plugin: OpenAI</p>
+						<p className={rawFooterClasses}>Processing time: 1234ms</p>
+					</>
+				}
+			>
+				hello
+			</Bubble>,
+		);
+		const bubbleFooter1 = await screen.findByText("Model: gpt-4-1106-preview");
+		const bubbleFooter2 = await screen.findByText("Plugin: OpenAI");
+		const bubbleFooter3 = await screen.findByText("Processing time: 1234ms");
+		expectToHaveClasses(bubbleFooter1, [
+			"pl-2",
+			"pt-1",
+			"text-start",
+			"text-xs",
+			"text-red-500",
+		]);
+		expectToHaveClasses(bubbleFooter2, [
+			"pl-2",
+			"pt-1",
+			"text-start",
+			"text-xs",
+			"text-red-500",
+		]);
+		expectToHaveClasses(bubbleFooter3, [
+			"pl-2",
+			"pt-1",
+			"text-start",
+			"text-xs",
+			"text-red-500",
+		]);
 	});
 });

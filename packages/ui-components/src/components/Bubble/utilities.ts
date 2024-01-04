@@ -41,9 +41,11 @@ export const getBubbleClasses = ({
 		getBubbleColorClasses({ kind }),
 		getBubbleBorderClasses({ kind }),
 	);
+	const footer = "pr-2 pt-1 text-end text-xs text-copy-light";
 
 	return {
 		wrapper,
 		main,
+		footer,
 	};
 };
