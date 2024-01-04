@@ -31,11 +31,15 @@ export const Bubble = ({
 
 	// after 3 seconds, reset the copied state
 	useEffect(() => {
+		let timeoutId: number;
 		if (copied) {
-			setTimeout(() => {
+			timeoutId = window.setTimeout(() => {
 				setCopied(false);
 			}, 3000);
 		}
+		return () => {
+			clearTimeout(timeoutId);
+		};
 	}, [copied]);
 
 	return (
