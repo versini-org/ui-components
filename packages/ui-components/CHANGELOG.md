@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.25.0](https://github.com/aversini/ui-components/compare/ui-components-v4.24.0...ui-components-v4.25.0) (2024-01-04)
+
+
+### Features
+
+* **Bubble:** adding copyToClipboard prop ([c7d5a26](https://github.com/aversini/ui-components/commit/c7d5a268df7746b14a6e95f705df72cca4ed9774))
+
 ## [4.24.0](https://github.com/aversini/ui-components/compare/ui-components-v4.23.0...ui-components-v4.24.0) (2024-01-04)
 
 
