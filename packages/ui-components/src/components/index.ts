@@ -1,5 +1,5 @@
-import { useMergeRefs } from "../common/hooks/useMergeRefs";
-import { useUniqueId } from "../common/hooks/useUniqueId";
+import { useMergeRefs, useUncontrolled, useUniqueId } from "@versini/ui-hooks";
+
 import { Anchor } from "./Anchor/Anchor";
 import { Bubble } from "./Bubble/Bubble";
 import { Button } from "./Button/Button";
@@ -85,5 +85,6 @@ export {
 	TextInputMask,
 	Toggle,
 	useMergeRefs,
+	useUncontrolled,
 	useUniqueId,
 };

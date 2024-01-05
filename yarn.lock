@@ -5165,6 +5165,7 @@ __metadata:
   dependencies:
     "@floating-ui/react": "npm:0.26.4"
     "@tailwindcss/typography": "npm:0.5.10"
+    "@versini/ui-hooks": "npm:2.0.0"
     clsx: "npm:2.1.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -5175,7 +5176,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@versini/ui-hooks@workspace:packages/ui-hooks":
+"@versini/ui-hooks@npm:2.0.0, @versini/ui-hooks@workspace:packages/ui-hooks":
   version: 0.0.0-use.local
   resolution: "@versini/ui-hooks@workspace:packages/ui-hooks"
   dependencies:

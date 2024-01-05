@@ -1,8 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TEXT_AREA_CLASSNAME } from "../../common/constants";
-import { useUncontrolled } from "../../common/hooks/useUncontrolled";
-import { useMergeRefs, useUniqueId } from "..";
+import { useMergeRefs, useUncontrolled, useUniqueId } from "..";
 import { LiveRegion } from "../private/LiveRegion/LiveRegion";
 import type { TextAreaProps } from "./TextAreaTypes";
 import { adjustLabelAndHelperText, getTextAreaClasses } from "./utilities";
