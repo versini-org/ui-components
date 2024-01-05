@@ -25,18 +25,6 @@ const banner = `/*!
   ${packageJson.name} v${packageJson.version}
   © ${copyrightYear} gizmette.com
 */
-try {
-  if (!window.__VERSINI_UI_GLOBAL__) {
-    window.__VERSINI_UI_GLOBAL__ = {
-      version: "${packageJson.version}",
-			buildTime: "${buildTime}",
-			homepage: "${packageJson.homepage}",
-			license: "${packageJson.license}",
-    };
-  }
-} catch (error) {
-  // nothing to declare officer
-}
 `;
 
 export default defineConfig(({ mode }) => {
@@ -77,7 +65,7 @@ export default defineConfig(({ mode }) => {
 			lib: {
 				entry: resolve(__dirname, "src/hooks/index.ts"),
 				formats: ["es"],
-				name: "UIComponents",
+				name: "UIHooks",
 			},
 			rollupOptions: {
 				input: {
