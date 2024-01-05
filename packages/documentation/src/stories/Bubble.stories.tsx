@@ -175,8 +175,9 @@ export const Copy: Story = {
 	args: {},
 
 	render: function Render(args) {
+		const string = "DOM element with string";
 		return (
-			<div className="h-96 min-h-10 bg-slate-900 p-11">
+			<div className="h-full min-h-10 bg-slate-900 p-11">
 				<Bubble kind="right" className="mb-4" copyToClipboard {...args}>
 					Right bubble...
 				</Bubble>
@@ -191,12 +192,17 @@ export const Copy: Story = {
 
 				<Bubble
 					kind="left"
+					className="mb-4"
 					copyToClipboard={() => {
 						navigator.clipboard.writeText("DOM element with function");
 					}}
 					{...args}
 				>
 					<div>DOM element with function</div>
+				</Bubble>
+
+				<Bubble kind="left" copyToClipboard={string} {...args}>
+					<div>{string}</div>
 				</Bubble>
 			</div>
 		);

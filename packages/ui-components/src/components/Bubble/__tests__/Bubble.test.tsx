@@ -249,6 +249,28 @@ describe("Bubble methods", () => {
 		await user.click(button);
 		await screen.findByText("Copied");
 	});
+
+	it("should honor the copyToClipboard prop as a string", async () => {
+		const user = userEvent.setup();
+
+		Object.defineProperty(navigator, "clipboard", {
+			value: {
+				writeText: async () => {},
+			},
+		});
+
+		render(
+			// @ts-ignore
+			<Bubble kind="left" copyToClipboard="a string to copy">
+				<div>hello</div>
+			</Bubble>,
+		);
+		await screen.findByText("hello");
+		await screen.findByText("Copy");
+		const button = await screen.findByRole("button");
+		await user.click(button);
+		await screen.findByText("Copied");
+	});
 });
 
 describe("Bubble copy clipboard timer", () => {
