@@ -5175,6 +5175,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@versini/ui-hooks@workspace:packages/ui-hooks":
+  version: 0.0.0-use.local
+  resolution: "@versini/ui-hooks@workspace:packages/ui-hooks"
+  dependencies:
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+  peerDependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  languageName: unknown
+  linkType: soft
+
 "@vitejs/plugin-react-swc@npm:3.5.0":
   version: 3.5.0
   resolution: "@vitejs/plugin-react-swc@npm:3.5.0"
