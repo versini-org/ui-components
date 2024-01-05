@@ -16,7 +16,9 @@ export const Bubble = ({
 	const bubbleClasses = getBubbleClasses({ kind, className });
 	const isCopyToClipboardEnabled =
 		Boolean(copyToClipboard) &&
-		(typeof copyToClipboard === "function" || typeof children === "string");
+		(typeof copyToClipboard === "function" ||
+			typeof copyToClipboard === "string" ||
+			typeof children === "string");
 
 	// copy to clipboard function
 	const handleCopyToClipboard = () => {
@@ -24,6 +26,8 @@ export const Bubble = ({
 
 		if (typeof copyToClipboard === "function") {
 			copyToClipboard(children);
+		} else if (typeof copyToClipboard === "string") {
+			navigator.clipboard.writeText(copyToClipboard);
 		} else if (typeof children === "string") {
 			navigator.clipboard.writeText(children);
 		}
