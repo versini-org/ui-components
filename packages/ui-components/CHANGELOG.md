@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.26.0](https://github.com/aversini/ui-components/compare/ui-components-v4.25.0...ui-components-v4.26.0) (2024-01-05)
+
+
+### Features
+
+* **Bubble:** extending copyToClipboard to allow a string ([98f8611](https://github.com/aversini/ui-components/commit/98f86114a4572ef306434e5a27ce891f5bbf7cb1))
+
 ## [4.25.0](https://github.com/aversini/ui-components/compare/ui-components-v4.24.0...ui-components-v4.25.0) (2024-01-04)
 
 
