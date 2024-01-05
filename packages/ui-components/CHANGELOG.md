@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.26.1](https://github.com/aversini/ui-components/compare/ui-components-v4.26.0...ui-components-v4.26.1) (2024-01-05)
+
+
+### Bug Fixes
+
+* import and export custom hooks from new package ([09dd460](https://github.com/aversini/ui-components/commit/09dd460c6a0321b45dc9b48c413275b105e7f8e9))
+
 ## [4.26.0](https://github.com/aversini/ui-components/compare/ui-components-v4.25.0...ui-components-v4.26.0) (2024-01-05)
 
 
