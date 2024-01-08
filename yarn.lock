@@ -5176,7 +5176,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@versini/ui-hooks@npm:2.0.0, @versini/ui-hooks@workspace:packages/ui-hooks":
+"@versini/ui-hooks@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@versini/ui-hooks@npm:2.0.0"
+  peerDependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: efadbeb1ca6630b20929684cd363cb6eef7a29c9339c656b9f66e4e4bd245a62ff61e6cc7384a2f7906b10d8404b313b461702f338cccf6376f00f11f6f286a1
+  languageName: node
+  linkType: hard
+
+"@versini/ui-hooks@workspace:packages/ui-hooks":
   version: 0.0.0-use.local
   resolution: "@versini/ui-hooks@workspace:packages/ui-hooks"
   dependencies:
