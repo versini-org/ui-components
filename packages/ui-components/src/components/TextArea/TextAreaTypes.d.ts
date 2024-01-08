@@ -1,3 +1,5 @@
+import type { SpacingType } from "../../common";
+
 export type TextAreaProps = {
 	label: string;
 	name: string;
@@ -12,4 +14,5 @@ export type TextAreaProps = {
 	noBorder?: boolean;
 	textAreaClassName?: string;
 	rightElement?: React.ReactElement;
+	spacing?: SpacingType;
 } & React.TextareaHTMLAttributes<HTMLTextAreaElement>;

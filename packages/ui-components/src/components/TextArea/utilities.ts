@@ -1,11 +1,13 @@
 import clsx from "clsx";
 
+import type { SpacingType } from "../../common";
 import {
 	TEXT_AREA_CLASSNAME,
 	TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
 	TEXT_AREA_HELPER_TEXT_CLASSNAME,
 	TEXT_AREA_WRAPPER_CLASSNAME,
 } from "../../common/constants";
+import { getSpacing } from "../../common/utilities";
 
 type getTextAreaClassesProps = {
 	className?: string;
@@ -17,6 +19,7 @@ type getTextAreaClassesProps = {
 	disabled: boolean;
 	noBorder: boolean;
 	error: boolean;
+	spacing?: SpacingType;
 };
 
 const getTextAreaBaseClasses = () => {
@@ -89,7 +92,7 @@ const getTextAreaLabelClasses = ({
 				[`text-copy-error-${errorKind}`]: error,
 				"text-copy-medium": !error,
 				"cursor-not-allowed opacity-50": disabled,
-		  });
+			});
 };
 
 const getTextAreaHelperTextClasses = ({
@@ -106,7 +109,7 @@ const getTextAreaHelperTextClasses = ({
 		: clsx(TEXT_AREA_HELPER_TEXT_CLASSNAME, "absolute font-medium", {
 				[`text-copy-error-${errorKind}`]: error,
 				"text-copy-medium": !error,
-		  });
+			});
 };
 
 export const getTextAreaClasses = ({
@@ -119,6 +122,7 @@ export const getTextAreaClasses = ({
 	disabled,
 	noBorder,
 	error,
+	spacing,
 }: getTextAreaClassesProps) => {
 	const wrapper = raw
 		? className
@@ -126,7 +130,8 @@ export const getTextAreaClasses = ({
 				"relative flex w-full flex-col justify-center",
 				TEXT_AREA_WRAPPER_CLASSNAME,
 				className,
-		  );
+				getSpacing(spacing),
+			);
 
 	const textArea = raw
 		? clsx(textAreaClassName)
@@ -146,7 +151,7 @@ export const getTextAreaClasses = ({
 				{
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
 				},
-		  );
+			);
 
 	const accessibleLabel = raw ? undefined : "sr-only";
 

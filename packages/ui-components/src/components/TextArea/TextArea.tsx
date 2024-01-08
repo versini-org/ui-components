@@ -35,6 +35,8 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			onFocus,
 			onBlur,
 
+			spacing,
+
 			...extraProps
 		},
 		ref,
@@ -66,6 +68,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			noBorder,
 			borderKind,
 			errorKind,
+			spacing,
 		});
 
 		/**
