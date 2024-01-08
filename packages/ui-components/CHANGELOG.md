@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.27.0](https://github.com/aversini/ui-components/compare/ui-components-v4.26.2...ui-components-v4.27.0) (2024-01-08)
+
+
+### Features
+
+* adding spacing prop to all public components ([0ca4c89](https://github.com/aversini/ui-components/commit/0ca4c89a2c8dc61e60dffd29dce8f22221d122f2)), closes [#247](https://github.com/aversini/ui-components/issues/247)
+
+
+### Performance Improvements
+
+* memoizing getSpacing ([9b70345](https://github.com/aversini/ui-components/commit/9b70345e9bda842c635b41987394a45c952061a5))
+
 ## [4.26.2](https://github.com/aversini/ui-components/compare/ui-components-v4.26.1...ui-components-v4.26.2) (2024-01-08)
 
 
