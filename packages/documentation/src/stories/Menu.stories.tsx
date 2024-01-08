@@ -51,11 +51,11 @@ export const Basic: Story = {
 
 	render: function Render(args) {
 		return (
-			<div className="min-h-10 flex h-96 flex-wrap gap-2 bg-slate-900 p-11">
-				<Button kind="light" size="small" noBorder>
+			<div className="flex h-96 min-h-10 flex-wrap bg-slate-900 p-11">
+				<Button kind="light" size="small" noBorder spacing={{ r: 2 }}>
 					Button
 				</Button>
-				<Menu icon={<IconSettings />} {...args}>
+				<Menu icon={<IconSettings />} spacing={{ r: 2 }} {...args}>
 					<MenuItem label="Profile" />
 					<MenuItem label="Statistics" />
 					<MenuItem label="History" />
@@ -74,9 +74,11 @@ export const WithIcons: Story = {
 
 	render: function Render(args) {
 		return (
-			<div className="min-h-10 flex flex-wrap gap-2 bg-slate-500 p-11">
-				<Button size="small">Button</Button>
-				<Menu icon={<IconSettings />} {...args}>
+			<div className="flex min-h-10 flex-wrap bg-slate-500 p-11">
+				<Button size="small" spacing={{ r: 2 }}>
+					Button
+				</Button>
+				<Menu icon={<IconSettings />} spacing={{ r: 2 }} {...args}>
 					<MenuItem label="Profile" icon={<IconProfile decorative />} />
 					<MenuItem label="Statistics" icon={<IconChart decorative />} />
 					<MenuItem label="History" icon={<IconHistory decorative />} />
@@ -122,9 +124,11 @@ export const WithMessageBox: Story = {
 				>
 					<p>Are you sure you want to log out?</p>
 				</Panel>
-				<div className="min-h-10 flex flex-wrap gap-2 bg-slate-500 p-11">
-					<Button size="small">Button</Button>
-					<Menu icon={<IconSettings />} {...args}>
+				<div className="flex min-h-10 flex-wrap bg-slate-500 p-11">
+					<Button size="small" spacing={{ r: 2 }}>
+						Button
+					</Button>
+					<Menu icon={<IconSettings />} spacing={{ r: 2 }} {...args}>
 						<MenuItem label="Profile" icon={<IconProfile decorative />} />
 						<MenuItem label="Statistics" icon={<IconChart decorative />} />
 						<MenuItem label="History" icon={<IconHistory decorative />} />
