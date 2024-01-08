@@ -1,6 +1,8 @@
 import clsx from "clsx";
 
+import type { SpacingType } from "../../common";
 import { BUTTON_CLASSNAME } from "../../common/constants";
+import { getSpacing } from "../../common/utilities";
 
 export const TYPE_ICON = "icon";
 export const TYPE_BUTTON = "button";
@@ -19,6 +21,7 @@ type getButtonClassesProps = {
 	className?: string;
 	slim?: boolean;
 	labelRight?: string;
+	spacing?: SpacingType;
 };
 
 const getButtonSizesClasses = ({
@@ -126,12 +129,14 @@ export const getButtonClasses = ({
 	size,
 	noBorder,
 	labelRight,
+	spacing,
 }: getButtonClassesProps) => {
 	return raw
 		? clsx(BUTTON_CLASSNAME, className)
 		: clsx(
 				BUTTON_CLASSNAME,
 				className,
+				getSpacing(spacing),
 				getButtonBaseClasses({ kind }),
 				getButtonSizesClasses({ type, slim, size, labelRight }),
 				getButtonBorderClasses({ kind, noBorder }),

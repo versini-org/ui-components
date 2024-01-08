@@ -16,6 +16,7 @@ const meta: Meta<typeof Button> = {
 		type: "button",
 		raw: false,
 		noBorder: false,
+		spacing: { r: 2 },
 	},
 	argTypes: {
 		className: {
@@ -57,7 +58,7 @@ type Story = StoryObj<typeof Button>;
 
 export const Basic: Story = {
 	render: (args) => (
-		<div className="flex flex-wrap gap-2">
+		<div className="flex flex-wrap">
 			<Button {...args}>Button</Button>
 			<Button {...args}>Button</Button>
 			<Button {...args}>Button</Button>

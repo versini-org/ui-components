@@ -19,6 +19,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			raw = false,
 			noBorder = false,
 			"aria-label": ariaLabel,
+			spacing,
 
 			...otherProps
 		},
@@ -35,6 +36,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			slim,
 			size,
 			noBorder,
+			spacing,
 		});
 
 		return (

@@ -7,6 +7,7 @@ export type CommonButtonProps = {
 	raw?: boolean;
 	noBorder?: boolean;
 	labelRight?: string;
+	spacing?: SpacingType;
 };
 
 export type ButtonProps = {
