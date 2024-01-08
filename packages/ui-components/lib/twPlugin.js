@@ -79,7 +79,9 @@ export const dynamicMargins = () => {
 	];
 	const margins = [];
 	allowed.forEach((num) => {
+		margins.push(`mt-${num}`);
 		margins.push(`mr-${num}`);
+		margins.push(`mb-${num}`);
 		margins.push(`ml-${num}`);
 	});
 	return margins;
