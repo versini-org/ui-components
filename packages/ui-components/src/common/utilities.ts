@@ -1,3 +1,6 @@
+import { deepEqual } from "fast-equals";
+import memoize from "micro-memoize";
+
 import type { SpacingType } from ".";
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -6,6 +9,17 @@ const objectProto = Object.prototype;
 
 export const isProd = process.env.NODE_ENV === "production";
 export const isDev = !isProd;
+
+/**
+ * Memoize function calls with arguments that are
+ * complex objects (hence "deep"). Do not use for
+ * standard types.
+ * @param {Function} fct - the function to optimize.
+ * @returns the optimized function.
+ */
+export function memoizeDeep(fct: any) {
+	return memoize(fct, { isEqual: deepEqual });
+}
 
 /**
  * Checks if `value` is a valid array-like length.
@@ -92,7 +106,7 @@ export const truncate = (fullString: string, maxLength: number) => {
  * { t: 4, r: 1, b: 3, l: 5} => "mt-4 mr-1 mb-3 ml-5"
  *
  */
-export const getSpacing = (spacing: SpacingType): string => {
+export const getSpacing = memoizeDeep((spacing: SpacingType): string => {
 	let spacingClass = "";
 	/**
 	 * In this case, spacing is a number or a string. For example:
@@ -127,4 +141,4 @@ export const getSpacing = (spacing: SpacingType): string => {
 	}
 
 	return spacingClass;
-};
+});
