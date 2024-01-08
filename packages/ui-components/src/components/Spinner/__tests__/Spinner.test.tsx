@@ -54,6 +54,6 @@ describe("Spinner modifiers", () => {
 	it("should render a Spinner of type 'dots' ", async () => {
 		render(<Spinner type="dots" />);
 		const node = await screen.findByRole("status");
-		expectToHaveClasses(node, [""]);
+		expectToHaveClasses(node, [SPINNER_CLASSNAME]);
 	});
 });

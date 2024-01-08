@@ -1,17 +1,20 @@
 import clsx from "clsx";
 
 import { SPINNER_CLASSNAME } from "../../common/constants";
+import { getSpacing } from "../../common/utilities";
 import type { SpinnerProps } from "./SpinnerTypes";
 
 export const Spinner = ({
 	spinnerRef,
 	kind = "dark",
 	type = "circle",
+	spacing,
 }: SpinnerProps) => {
 	const spinnerClassName =
 		type === "circle"
 			? clsx(
 					SPINNER_CLASSNAME,
+					getSpacing(spacing),
 					"h-8 w-8",
 					"align-[-0.125em]",
 					"border-4",
@@ -20,8 +23,8 @@ export const Spinner = ({
 						"text-copy-dark": kind === "dark",
 						"text-copy-light": kind === "light",
 					},
-			  )
-			: "";
+				)
+			: clsx(SPINNER_CLASSNAME, getSpacing(spacing));
 
 	const dotClassName = clsx("av-spinner__dot", {
 		"fill-copy-dark": kind === "dark",
