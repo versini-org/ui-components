@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.26.2](https://github.com/aversini/ui-components/compare/ui-components-v4.26.1...ui-components-v4.26.2) (2024-01-08)
+
+
+### Bug Fixes
+
+* bump latest dependencies and expose useLocalStorage ([d38affa](https://github.com/aversini/ui-components/commit/d38affa0359005cf3d53787413cd7bc87a21d488))
+
 ## [4.26.1](https://github.com/aversini/ui-components/compare/ui-components-v4.26.0...ui-components-v4.26.1) (2024-01-05)
 
 
