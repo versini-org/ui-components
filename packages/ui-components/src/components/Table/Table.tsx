@@ -25,12 +25,14 @@ export const Table = ({
 	className,
 	maxHeight,
 	stickyHeader,
+	spacing,
 	...otherProps
 }: TableProps) => {
 	const tableClass = getTableClasses({
 		kind,
 		className,
 		stickyHeader,
+		spacing,
 	});
 	return (
 		<TableContext.Provider value={{ kind, stickyHeader }}>

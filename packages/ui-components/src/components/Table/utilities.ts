@@ -1,5 +1,8 @@
 import clsx from "clsx";
 
+import type { SpacingType } from "../../common";
+import { getSpacing } from "../../common/utilities";
+
 export const CELL_WRAPPER_HEAD = "thead";
 export const CELL_WRAPPER_BODY = "tbody";
 
@@ -7,13 +10,15 @@ export const getTableClasses = ({
 	kind,
 	className,
 	stickyHeader,
+	spacing,
 }: {
 	kind: string;
 	className?: string;
 	stickyHeader?: boolean;
+	spacing?: SpacingType;
 }) => {
 	return {
-		wrapper: clsx("relative w-full rounded-lg shadow-md", {
+		wrapper: clsx("relative w-full rounded-lg shadow-md", getSpacing(spacing), {
 			"overflow-x-auto": !stickyHeader,
 			"overflow-y-scroll": stickyHeader,
 			"bg-surface-dark text-copy-light": kind === "dark",
