@@ -1,4 +1,9 @@
-import { useMergeRefs, useUncontrolled, useUniqueId } from "@versini/ui-hooks";
+import {
+	useLocalStorage,
+	useMergeRefs,
+	useUncontrolled,
+	useUniqueId,
+} from "@versini/ui-hooks";
 
 import { Anchor } from "./Anchor/Anchor";
 import { Bubble } from "./Bubble/Bubble";
@@ -84,6 +89,7 @@ export {
 	TextInput,
 	TextInputMask,
 	Toggle,
+	useLocalStorage,
 	useMergeRefs,
 	useUncontrolled,
 	useUniqueId,
