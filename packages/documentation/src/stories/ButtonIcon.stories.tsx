@@ -15,6 +15,7 @@ const meta: Meta<typeof ButtonIcon> = {
 		raw: false,
 		noBorder: false,
 		size: "medium",
+		spacing: { r: 2 },
 	},
 	argTypes: {
 		className: {
@@ -53,7 +54,7 @@ type Story = StoryObj<typeof ButtonIcon>;
 
 export const Basic: Story = {
 	render: (args) => (
-		<div className="flex flex-wrap gap-2">
+		<div className="flex flex-wrap">
 			<ButtonIcon {...args}>
 				<IconSettings />
 			</ButtonIcon>
@@ -72,7 +73,7 @@ export const Basic: Story = {
 
 export const WithLabel: Story = {
 	render: (args) => (
-		<div className="flex flex-wrap gap-2">
+		<div className="flex flex-wrap">
 			<ButtonIcon labelRight="Settings" {...args}>
 				<IconSettings decorative />
 			</ButtonIcon>
