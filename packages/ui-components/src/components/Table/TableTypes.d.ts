@@ -1,5 +1,7 @@
 import React from "react";
 
+import type { SpacingType } from "../../common";
+
 export type TableProps = {
 	kind?: "dark" | "light";
 	/**
@@ -24,6 +26,10 @@ export type TableProps = {
 	 * 'stickyHeader' to work.
 	 */
 	stickyHeader?: boolean;
+	/**
+	 * Custom spacing for the component.
+	 */
+	spacing?: SpacingType;
 } & React.HTMLAttributes<HTMLTableElement>;
 
 export type TableRowProps = React.HTMLAttributes<HTMLTableRowElement>;

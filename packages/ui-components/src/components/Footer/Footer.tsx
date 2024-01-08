@@ -1,6 +1,7 @@
 import clsx from "clsx";
 
 import { FOOTER_CLASSNAME } from "../../common/constants";
+import { getSpacing } from "../../common/utilities";
 import type { FooterProps } from "./FooterTypes";
 
 export const Footer = ({
@@ -9,11 +10,13 @@ export const Footer = ({
 	row1,
 	row2,
 	noPaddings = false,
+	spacing,
 }: FooterProps) => {
 	const footerClass = clsx(
 		FOOTER_CLASSNAME,
 		`text-center text-xs text-copy-${kind}`,
 		className,
+		getSpacing(spacing),
 		{
 			"mb-[100px]": !noPaddings,
 		},

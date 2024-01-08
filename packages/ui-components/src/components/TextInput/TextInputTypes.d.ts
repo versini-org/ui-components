@@ -1,3 +1,5 @@
+import type { SpacingType } from "../../common";
+
 export type CommonTextInputProps = {
 	label: string;
 	name: string;
@@ -10,6 +12,7 @@ export type CommonTextInputProps = {
 	raw?: boolean;
 	noBorder?: boolean;
 	inputClassName?: string;
+	spacing?: SpacingType;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 export type TextInputProps = {

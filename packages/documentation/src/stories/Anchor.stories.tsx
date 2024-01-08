@@ -16,6 +16,7 @@ const meta: Meta<typeof Anchor> = {
 		slim: false,
 		size: "small",
 		noTruncate: false,
+		spacing: { r: 2, b: 2 },
 	},
 	argTypes: {
 		className: {
@@ -60,7 +61,7 @@ type Story = StoryObj<typeof Anchor>;
 
 export const Basic: Story = {
 	render: (args) => (
-		<div className="flex flex-wrap gap-2">
+		<div className="flex flex-wrap">
 			<Anchor {...args}>Anchor as a button</Anchor>
 			<Anchor {...args}>Anchor as a button lorem ipsum</Anchor>
 			<Anchor {...args}>Anchor as a button lorem ipsum dolor</Anchor>

@@ -21,6 +21,7 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 			target,
 			maxLabelLength,
 			noTruncate = false,
+			spacing,
 
 			...otherProps
 		},
@@ -37,6 +38,7 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 			slim,
 			size,
 			noBorder,
+			spacing,
 		});
 
 		const formattedLabel =

@@ -19,6 +19,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			label,
 			size = "medium",
 			labelRight,
+			spacing,
 
 			...otherProps
 		},
@@ -35,6 +36,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			noBorder,
 			size,
 			labelRight,
+			spacing,
 		});
 
 		return (

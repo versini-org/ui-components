@@ -1,3 +1,5 @@
+import type { SpacingType } from "../../common";
+
 export type CardProps = {
 	className?: string;
 	header?: React.ReactNode;
@@ -7,6 +9,7 @@ export type CardProps = {
 	children: React.ReactNode;
 	noBackground?: boolean;
 	"aria-labelledby"?: string;
+	spacing?: SpacingType;
 };
 
 export type CardHeaderProps = {

@@ -1,11 +1,13 @@
 import clsx from "clsx";
 
+import type { SpacingType } from "../../common";
 import {
 	TEXT_INPUT_CLASSNAME,
 	TEXT_INPUT_CONTROL_RIGHT_CLASSNAME,
 	TEXT_INPUT_HELPER_TEXT_CLASSNAME,
 	TEXT_INPUT_WRAPPER_CLASSNAME,
 } from "../../common/constants";
+import { getSpacing } from "../../common/utilities";
 
 type getTextInputClassesProps = {
 	className?: string;
@@ -18,6 +20,7 @@ type getTextInputClassesProps = {
 	slim?: boolean;
 	noBorder: boolean;
 	error: boolean;
+	spacing?: SpacingType;
 };
 
 const getTextInputBaseClasses = () => {
@@ -84,7 +87,7 @@ const getTextInputLabelClasses = ({
 				[`text-copy-error-${errorKind}`]: error,
 				"text-copy-medium": !error,
 				"cursor-not-allowed opacity-50": disabled,
-		  });
+			});
 };
 
 const getTextInputHelperTextClasses = ({
@@ -101,7 +104,7 @@ const getTextInputHelperTextClasses = ({
 		: clsx(TEXT_INPUT_HELPER_TEXT_CLASSNAME, "absolute font-medium", {
 				[`text-copy-error-${errorKind}`]: error,
 				"text-copy-medium": !error,
-		  });
+			});
 };
 
 export const getTextInputClasses = ({
@@ -114,6 +117,7 @@ export const getTextInputClasses = ({
 	disabled,
 	noBorder,
 	error,
+	spacing,
 }: getTextInputClassesProps) => {
 	const wrapper = raw
 		? className
@@ -121,7 +125,8 @@ export const getTextInputClasses = ({
 				"relative flex w-full flex-col justify-center",
 				TEXT_INPUT_WRAPPER_CLASSNAME,
 				className,
-		  );
+				getSpacing(spacing),
+			);
 
 	const input = raw
 		? clsx(inputClassName)
@@ -136,7 +141,7 @@ export const getTextInputClasses = ({
 				{
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
 				},
-		  );
+			);
 
 	const accessibleLabel = raw ? undefined : "sr-only";
 

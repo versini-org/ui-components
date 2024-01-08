@@ -1,6 +1,8 @@
 import clsx from "clsx";
 
+import type { SpacingType } from "../../common";
 import { TOGGLE_CLASSNAME } from "../../common/constants";
+import { getSpacing } from "../../common/utilities";
 
 const getToggleBaseClasses = () => {
 	return clsx(TOGGLE_CLASSNAME, "peer h-6 w-11 rounded-full");
@@ -39,7 +41,7 @@ const getToggleKnobOffClasses = () => {
 
 const getToggleColorClasses = ({ kind }: { kind: string }) => {
 	return clsx({
-		"bg-surface-medium border-border-dark": kind === "light",
+		"border-border-dark bg-surface-medium": kind === "light",
 		"border-border-light bg-surface-dark": kind === "dark",
 	});
 };
@@ -56,23 +58,25 @@ const getLabelClasses = ({
 		: clsx("ml-3 text-sm", {
 				"text-copy-medium": kind === "light",
 				"text-copy-light": kind === "dark",
-		  });
+			});
 };
 
 const getInputClasses = () => {
 	return "peer sr-only";
 };
 
-const getWrapperClasses = () => {
-	return "relative flex items-center cursor-pointer";
+const getWrapperClasses = ({ spacing }: { spacing: SpacingType }) => {
+	return clsx("relative flex cursor-pointer items-center", getSpacing(spacing));
 };
 
 export const getToggleClasses = ({
 	kind,
 	labelHidden,
+	spacing,
 }: {
 	kind: string;
 	labelHidden: boolean;
+	spacing: SpacingType;
 }) => {
 	return {
 		toggle: clsx(
@@ -84,6 +88,6 @@ export const getToggleClasses = ({
 		),
 		label: getLabelClasses({ kind, labelHidden }),
 		input: getInputClasses(),
-		wrapper: getWrapperClasses(),
+		wrapper: getWrapperClasses({ spacing }),
 	};
 };

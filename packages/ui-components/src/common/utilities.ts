@@ -80,11 +80,27 @@ export const truncate = (fullString: string, maxLength: number) => {
 	};
 };
 
+/**
+ * This method returns a string that can be used as a tailwind class relying
+ * on margins definitions (m, mt, mb, etc.).
+ * Please refer to: https://tailwindcss.com/docs/margin
+ *
+ * It accepts a number, a string or an object.
+ * If a number is passed, it will be converted to a string and prefixed with "m-".
+ * If a string is passed, it will be prefixed with "m-".
+ * If an object is passed, it will be converted to a string like this:
+ * { t: 4, r: 1, b: 3, l: 5} => "mt-4 mr-1 mb-3 ml-5"
+ *
+ */
 export const getSpacing = (spacing: SpacingType): string => {
 	let spacingClass = "";
-	if (typeof spacing === "number") {
-		spacingClass = "m-" + spacing;
-	} else if (typeof spacing === "string") {
+	/**
+	 * In this case, spacing is a number or a string. For example:
+	 * spacing = 4
+	 * which will be converted to:
+	 * "m-4"
+	 */
+	if (typeof spacing === "number" || typeof spacing === "string") {
 		spacingClass = "m-" + spacing;
 	} else {
 		/**

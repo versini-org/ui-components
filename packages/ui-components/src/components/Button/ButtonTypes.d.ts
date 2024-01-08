@@ -1,3 +1,5 @@
+import type { SpacingType } from "../../common";
+
 export type CommonButtonProps = {
 	children: React.ReactNode;
 	kind?: "dark" | "light";
@@ -7,6 +9,7 @@ export type CommonButtonProps = {
 	raw?: boolean;
 	noBorder?: boolean;
 	labelRight?: string;
+	spacing?: SpacingType;
 };
 
 export type ButtonProps = {
