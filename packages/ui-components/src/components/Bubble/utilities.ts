@@ -1,6 +1,8 @@
 import clsx from "clsx";
 
+import type { SpacingType } from "../../common";
 import { BUBBLE_CLASSNAME } from "../../common/constants";
+import { getSpacing } from "../../common/utilities";
 
 const getBubbleSizesClasses = () => {
 	return "p-4 sm:max-w-md md:max-w-2xl";
@@ -27,13 +29,21 @@ const getBubbleBorderClasses = ({ kind }: { kind: string }) => {
 export const getBubbleClasses = ({
 	kind,
 	className,
+	spacing,
 }: {
 	kind: string;
 	className?: string;
+	spacing?: SpacingType;
 }) => {
-	const wrapper = clsx(className, BUBBLE_CLASSNAME, "flex items-start", {
-		"flex-row-reverse": kind === "right",
-	});
+	const wrapper = clsx(
+		className,
+		BUBBLE_CLASSNAME,
+		"flex items-start",
+		getSpacing(spacing),
+		{
+			"flex-row-reverse": kind === "right",
+		},
+	);
 	const main = clsx(
 		"flex flex-col empty:hidden",
 		getBubbleSizesClasses(),
