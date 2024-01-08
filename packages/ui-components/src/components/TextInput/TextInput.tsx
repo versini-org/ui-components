@@ -29,6 +29,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			helperText = "",
 
 			rightElement,
+			spacing,
 
 			...extraProps
 		},
@@ -48,6 +49,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			noBorder,
 			borderKind,
 			errorKind,
+			spacing,
 		});
 
 		useLayoutEffect(() => {
