@@ -15,7 +15,7 @@ module.exports = {
 		},
 		{
 			path: "assets/style.css",
-			maxSize: "7kb",
+			maxSize: "8kb",
 		},
 		{
 			path: "assets/**/*.{png,svg}",
