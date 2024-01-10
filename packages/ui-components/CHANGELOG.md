@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.28.0](https://github.com/aversini/ui-components/compare/ui-components-v4.27.0...ui-components-v4.28.0) (2024-01-10)
+
+
+### Features
+
+* tailwind plugin POC ([417297f](https://github.com/aversini/ui-components/commit/417297ff891d593081d9006bed3006f3a3d2cc33))
+
 ## [4.27.0](https://github.com/aversini/ui-components/compare/ui-components-v4.26.2...ui-components-v4.27.0) (2024-01-08)
 
 
