@@ -1,10 +1,9 @@
-// import { customCSS, tokens } from "@versini/ui-components/dist/utilities";
 import typography from "@tailwindcss/typography";
 import { converter } from "culori";
 import plugin from "tailwindcss/plugin";
 
-import { customCSS } from "../../../../ui-components/lib/customCSS";
-import { tokens } from "../../../../ui-components/lib/tokens";
+import { customCSS } from "./customCSS";
+import { tokens } from "./tokens";
 
 const parse = converter("rgb");
 
