@@ -1,2 +1,2 @@
-import { uiComponents } from "./tailwind/tailwindPlugin";
-export { uiComponents };
+import { twPlugin } from "./tailwind/tailwindPlugin";
+export { twPlugin };

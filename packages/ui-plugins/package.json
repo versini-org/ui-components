@@ -34,12 +34,12 @@
 		"test": "vitest run"
 	},
 	"peerDependencies": {
+		"@versini/ui-components": ">=4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@types/culori": "2.0.4",
-		"jss-cli": "6.0.2",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
 	},

@@ -1,7 +1,9 @@
+// import { customCSS, tokens } from "@versini/ui-components/dist/utilities";
 import typography from "@tailwindcss/typography";
 import { converter } from "culori";
 import plugin from "tailwindcss/plugin";
 
+import { customCSS } from "../../../../ui-components/lib/customCSS";
 import { tokens } from "../../../../ui-components/lib/tokens";
 
 const parse = converter("rgb");
@@ -82,49 +84,28 @@ const myComponentLibraryConfig = {
 	},
 };
 
-const uiStyles = {
-	[`.av-text-input-wrapper label[aria-hidden="true"],
-		.av-text-area-wrapper label[aria-hidden="true"]`]: {
-		/* move the label inline */
-		transform: "translate(18px, 0) scale(1)",
-		transformOrigin: "top left",
-		transition: "var(--av-text-area-wrapper-transition, all 0.2s ease-out)",
-	},
-	'.av-text-input:focus + label[aria-hidden="true"],\n\t.av-text-input:not(:placeholder-shown) + label[aria-hidden="true"],\n\t.av-text-area:focus + label[aria-hidden="true"],\n\t.av-text-area:not(:placeholder-shown) + label[aria-hidden="true"]':
-		{
-			transform:
-				"translate(18px, var(--av-text-area-label, -25px)) scale(0.75)",
-		},
-	".av-text-input-helper-text,\n\t.av-text-area-helper-text": {
-		transform:
-			"translate(18px, var(--av-text-area-helper-text, 32px))\n\t\t\tscale(0.75)",
-		transformOrigin: "top left",
-	},
-	".av-text-input__control--right,\n\t.av-text-area__control--right": {
-		right: "18px",
-	},
-	"@keyframes blink": { "50%": { fill: "transparent" } },
-	".av-spinner__dot": { animation: "1s blink infinite" },
-	".av-spinner__dot:nth-child(2)": { animationDelay: "250ms" },
-	".av-spinner__dot:nth-child(3)": { animationDelay: "500ms" },
-};
+const tailwindContentPath = [
+	(__dirname + "/**/*.{js,ts,jsx,tsx}").replace("ui-plugins", "ui-components"),
+];
 
-const contentPath = (__dirname + "/**/*.{js,ts,jsx,tsx}").replace(
-	"ui-plugins",
-	"ui-components",
-);
-
-export const uiComponents = {
-	content: contentPath,
-	safelist: [...dynamicMargins(), ...dynamicColorsClasses()],
-	plugin: plugin(function ({ addUtilities }) {
-		addUtilities(uiStyles);
+const tailwindPlugins = [
+	typography,
+	plugin(function ({ addUtilities }) {
+		addUtilities(customCSS);
 	}, myComponentLibraryConfig),
+];
 
-	tailwindMerge: (config: any) => {
-		const safelist = [...dynamicMargins(), ...dynamicColorsClasses()];
-		const content = [contentPath];
-		const plugins = [typography];
+const tailwindSafelist = [...dynamicMargins(), ...dynamicColorsClasses()];
+
+export const twPlugin = {
+	content: tailwindContentPath,
+	safelist: tailwindSafelist,
+	plugins: tailwindPlugins,
+
+	merge: (config: any) => {
+		const safelist = tailwindSafelist;
+		const content = tailwindContentPath;
+		const plugins = tailwindPlugins;
 
 		if (config?.safelist?.length) {
 			config.safelist.push(...safelist);
