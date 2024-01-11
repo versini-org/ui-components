@@ -1,7 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button, TextArea } from "@versini/ui-components";
-import { useEffect, useRef } from "react";
+import { Button, TextArea, ThemeProvider } from "@versini/ui-components";
 
+const customTheme = {
+	"--av-copy-light": "#403c3a",
+	"--av-copy-light-hover": "white",
+	"--av-copy-light-active": "white",
+	"--av-copy-medium": "#403c3a",
+
+	"--av-surface-dark": "white",
+
+	"--av-action-light": "#ffcd41",
+	"--av-action-light-hover": "#403c3a",
+	"--av-action-light-active": "black",
+
+	"--av-border-light": "#403c3a",
+
+	"--av-focus-light": "#3e7d0e",
+};
 const meta: Meta<typeof TextArea> = {
 	component: TextArea,
 	parameters: {
@@ -9,7 +24,7 @@ const meta: Meta<typeof TextArea> = {
 	},
 	args: {
 		label: "Type your question here",
-		name: "username",
+		name: "dude",
 		disabled: false,
 		helperText: "",
 		raw: false,
@@ -66,7 +81,7 @@ export const Basic: Story = {
 		helperText: "Powered by the sun",
 	},
 	render: (args) => (
-		<div className="min-h-10 bg-slate-500 p-11">
+		<div className="h-full bg-slate-500 p-11">
 			<form noValidate>
 				<div className="flex flex-wrap gap-2">
 					<TextArea {...args} />
@@ -88,7 +103,7 @@ export const RightElement: Story = {
 		helperText: "Powered by the sun",
 	},
 	render: (args) => (
-		<div className="min-h-10 bg-slate-500 p-11">
+		<div className="h-full bg-slate-500 p-11">
 			<form noValidate>
 				<div className="flex gap-2">
 					<TextArea {...args} />
@@ -104,27 +119,22 @@ export const CustomTheme: Story = {
 		helperText: "Powered by the sun",
 	},
 	render: function Render(args) {
-		const parentRef = useRef<HTMLDivElement>(null);
-		useEffect(() => {
-			const parentStyle = parentRef?.current?.style;
-			parentStyle?.setProperty("--av-copy-light", "#403c3a");
-			parentStyle?.setProperty("--av-copy-light-hover", "white");
-			parentStyle?.setProperty("--av-copy-light-active", "white");
-			parentStyle?.setProperty("--av-copy-medium", "#403c3a");
-			parentStyle?.setProperty("--av-surface-dark", "white");
-			parentStyle?.setProperty("--av-action-light", "#ffcd41");
-			parentStyle?.setProperty("--av-action-light-hover", "#403c3a");
-			parentStyle?.setProperty("--av-action-light-active", "black");
-			parentStyle?.setProperty("--av-border-light", "#403c3a");
-			parentStyle?.setProperty("--av-focus-light", "#3e7d0e");
-		}, []);
 		return (
-			<div ref={parentRef} className="min-h-1 p-11">
+			<div className="h-full bg-slate-500 p-11">
 				<form noValidate>
 					<div className="flex gap-2">
 						<TextArea {...args} />
 					</div>
 				</form>
+
+				<br />
+				<ThemeProvider customTheme={customTheme}>
+					<form noValidate>
+						<div className="flex gap-2">
+							<TextArea {...args} />
+						</div>
+					</form>
+				</ThemeProvider>
 			</div>
 		);
 	},
