@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/aversini/ui-components/compare/ui-hooks-v2.1.0...ui-hooks-v2.1.1) (2024-01-11)
+
+
+### Bug Fixes
+
+* **hooks:** trying to fix useLocalStorage ([92500da](https://github.com/aversini/ui-components/commit/92500da5f8b00d43fd99a4f6c5cac6bc449fbeeb))
+
 ## [2.1.0](https://github.com/aversini/ui-components/compare/ui-hooks-v2.0.0...ui-hooks-v2.1.0) (2024-01-08)
 
 
