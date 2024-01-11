@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 
+import { useEventCallback } from "./useEventCallback";
 import { useEventListener } from "./useEventListener";
 
 const CUSTOM_EVENT_NAME = "av-local-storage";
@@ -114,40 +115,38 @@ export function useLocalStorage<T = string>({
 			console.warn(`Error reading localStorage key “${key}”:`, error);
 			return actualDefaultValue as T;
 		}
-	}, [actualDefaultValue, deserialize, key, serialize]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [actualDefaultValue, key]);
 
 	const [value, setValue] = useState<T>(readStorageValue());
 
 	/**
 	 * Write value to localStorage and update state.
 	 */
-	const setStorageValue = useCallback(
-		(val: T | ((prevState: T) => T)) => {
-			try {
-				const newValue = val instanceof Function ? val(value) : val;
-				if (newValue === undefined) {
-					return;
-				}
-				window.localStorage.setItem(key, serialize(newValue));
-				setValue(newValue);
-				window.dispatchEvent(new Event(CUSTOM_EVENT_NAME));
-				/* v8 ignore next 3 */
-			} catch (error) {
-				console.warn(`Error setting localStorage key “${key}”:`, error);
+	const setStorageValue = useEventCallback((val: T | ((prevState: T) => T)) => {
+		try {
+			const newValue = val instanceof Function ? val(value) : val;
+			if (newValue === undefined) {
+				return;
 			}
-		},
-		[key, serialize, value],
-	);
+			window.localStorage.setItem(key, serialize(newValue));
+			setValue(newValue);
+			window.dispatchEvent(new Event(CUSTOM_EVENT_NAME));
+			/* v8 ignore next 3 */
+		} catch (error) {
+			console.warn(`Error setting localStorage key “${key}”:`, error);
+		}
+	});
 
 	/**
 	 * Remove value from localStorage and reset state.
 	 */
-	const resetStorageValue = useCallback((): T => {
+	const resetStorageValue = useEventCallback((): T => {
 		window.localStorage.removeItem(key);
 		setValue(readStorageValue());
 		window.dispatchEvent(new Event(CUSTOM_EVENT_NAME));
 		return value;
-	}, [key, readStorageValue, value]);
+	});
 
 	/**
 	 * Listen to storage change events and update state.
