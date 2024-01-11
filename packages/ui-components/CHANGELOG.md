@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.28.1](https://github.com/aversini/ui-components/compare/ui-components-v4.28.0...ui-components-v4.28.1) (2024-01-11)
+
+
+### Bug Fixes
+
+* force ui-components to use the latest ui-hooks ([d112222](https://github.com/aversini/ui-components/commit/d112222b1505e5af2ddf4acfe663aaa50e189c18))
+
 ## [4.28.0](https://github.com/aversini/ui-components/compare/ui-components-v4.27.0...ui-components-v4.28.0) (2024-01-10)
 
 
