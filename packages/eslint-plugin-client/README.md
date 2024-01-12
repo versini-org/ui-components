@@ -1,4 +1,4 @@
-# eslint-plugin-123
+# @versini/eslint-plugin-client
 
 desc
 
