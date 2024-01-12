@@ -1,0 +1,26 @@
+{
+	"name": "@versini/eslint-plugin-client",
+	"version": "0.0.0",
+	"license": "MIT",
+	"description": "ESLint plugin for client side code",
+	"author": "Arno Versini",
+	"publishConfig": {
+		"access": "public"
+	},
+	"homepage": "https://github.com/aversini/ui-components/eslint-plugin-client",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:aversini/ui-components.git"
+	},
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"rules"
+	],
+	"engines": {
+		"node": ">= 18.0.0"
+	},
+	"peerDependencies": {
+		"eslint": ">=8"
+	}
+}

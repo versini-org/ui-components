@@ -161,46 +161,44 @@ export const Interactive: Story = {
 		height: "auto",
 	},
 	render: (args) => (
-		<>
-			<Flexgrid {...args}>
-				<FlexgridItem>
-					<Container aria-label="cell 1">
-						<div
-							style={{
-								padding: "5px",
-								backgroundColor: "#e5f2e9",
-							}}
-						>
-							Cell 1
-						</div>
-					</Container>
-				</FlexgridItem>
-				<FlexgridItem>
-					<Container aria-label="cell 2">
-						<div
-							style={{
-								padding: "10px",
-								backgroundColor: "#e5f2e9",
-							}}
-						>
-							Cell 2
-						</div>
-					</Container>
-				</FlexgridItem>
-				<FlexgridItem>
-					<Container aria-label="cell 3">
-						<div
-							style={{
-								padding: "15px",
-								backgroundColor: "#e5f2e9",
-							}}
-						>
-							Cell 3
-						</div>
-					</Container>
-				</FlexgridItem>
-			</Flexgrid>
-		</>
+		<Flexgrid {...args}>
+			<FlexgridItem>
+				<Container aria-label="cell 1">
+					<div
+						style={{
+							padding: "5px",
+							backgroundColor: "#e5f2e9",
+						}}
+					>
+						Cell 1
+					</div>
+				</Container>
+			</FlexgridItem>
+			<FlexgridItem>
+				<Container aria-label="cell 2">
+					<div
+						style={{
+							padding: "10px",
+							backgroundColor: "#e5f2e9",
+						}}
+					>
+						Cell 2
+					</div>
+				</Container>
+			</FlexgridItem>
+			<FlexgridItem>
+				<Container aria-label="cell 3">
+					<div
+						style={{
+							padding: "15px",
+							backgroundColor: "#e5f2e9",
+						}}
+					>
+						Cell 3
+					</div>
+				</Container>
+			</FlexgridItem>
+		</Flexgrid>
 	),
 };
 

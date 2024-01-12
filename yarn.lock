@@ -5167,6 +5167,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@versini/eslint-plugin-client@npm:*, @versini/eslint-plugin-client@workspace:packages/eslint-plugin-client":
+  version: 0.0.0-use.local
+  resolution: "@versini/eslint-plugin-client@workspace:packages/eslint-plugin-client"
+  peerDependencies:
+    eslint: ">=8"
+  languageName: unknown
+  linkType: soft
+
 "@versini/ui-components@npm:*, @versini/ui-components@workspace:packages/ui-components":
   version: 0.0.0-use.local
   resolution: "@versini/ui-components@workspace:packages/ui-components"
@@ -14109,6 +14117,7 @@ __metadata:
   dependencies:
     "@versini/dev-dependencies-client": "npm:4.1.1"
     "@versini/dev-dependencies-types": "npm:1.1.0"
+    "@versini/eslint-plugin-client": "npm:*"
   languageName: unknown
   linkType: soft
 
