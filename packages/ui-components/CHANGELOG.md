@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.30.0](https://github.com/aversini/ui-components/compare/ui-components-v4.29.0...ui-components-v4.30.0) (2024-01-12)
+
+
+### Features
+
+* adding recommended ESLint configuration as a plugin ([b54bc07](https://github.com/aversini/ui-components/commit/b54bc071c2add09aefada2a807dc4cc148d58539))
+
 ## [4.29.0](https://github.com/aversini/ui-components/compare/ui-components-v4.28.1...ui-components-v4.29.0) (2024-01-12)
 
 
