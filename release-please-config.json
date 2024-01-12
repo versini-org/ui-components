@@ -1,5 +1,6 @@
 {
 	"packages": {
+		"packages/eslint-plugin-client": {},
 		"packages/ui-components": {},
 		"packages/ui-hooks": {}
 	}
