@@ -1,13 +1,13 @@
 import * as React from "react";
 
 export const MenuContext = React.createContext<{
+	activeIndex: number | null;
 	getItemProps: (
 		userProps?: React.HTMLProps<HTMLElement>,
 	) => Record<string, unknown>;
-	activeIndex: number | null;
+	isOpen: boolean;
 	setActiveIndex: React.Dispatch<React.SetStateAction<number | null>>;
 	setHasFocusInside: React.Dispatch<React.SetStateAction<boolean>>;
-	isOpen: boolean;
 }>({
 	getItemProps: () => ({}),
 	activeIndex: null,

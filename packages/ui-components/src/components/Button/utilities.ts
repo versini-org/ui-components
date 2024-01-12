@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import type { SpacingType } from "../../common";
+import type { SpacingProps } from "../../common";
 import { BUTTON_CLASSNAME } from "../../common/constants";
 import { getSpacing } from "../../common/utilities";
 
@@ -9,20 +9,19 @@ export const TYPE_BUTTON = "button";
 export const TYPE_LINK = "link";
 
 type getButtonClassesProps = {
-	type: typeof TYPE_BUTTON | typeof TYPE_ICON | typeof TYPE_LINK;
-	raw: boolean;
-	kind: string;
-	focus: string;
 	disabled: boolean;
+	focus: string;
 	fullWidth: boolean;
-	size: string;
+	kind: string;
 	noBorder: boolean;
+	raw: boolean;
+	size: string;
+	type: typeof TYPE_BUTTON | typeof TYPE_ICON | typeof TYPE_LINK;
 
 	className?: string;
-	slim?: boolean;
 	labelRight?: string;
-	spacing?: SpacingType;
-};
+	slim?: boolean;
+} & SpacingProps;
 
 const getButtonSizesClasses = ({
 	type,
@@ -30,10 +29,10 @@ const getButtonSizesClasses = ({
 	size,
 	labelRight,
 }: {
-	type: string;
 	size: string;
-	slim?: boolean;
+	type: string;
 	labelRight?: string;
+	slim?: boolean;
 }) => {
 	const smallClasses = "text-sm font-medium max-h-8 py-0";
 	const mediumClasses = "text-base font-medium max-h-9 py-1";
@@ -79,8 +78,8 @@ const getButtonHoverClasses = ({
 	kind,
 	disabled,
 }: {
-	kind: string;
 	disabled: boolean;
+	kind: string;
 }) => {
 	return disabled
 		? ""
@@ -91,8 +90,8 @@ const getButtonActiveClasses = ({
 	kind,
 	disabled,
 }: {
-	kind: string;
 	disabled: boolean;
+	kind: string;
 }) => {
 	return disabled
 		? ""

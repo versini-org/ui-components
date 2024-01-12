@@ -20,32 +20,32 @@ export type PolitenessByRole = {
 };
 
 export type ClearAnnouncementProps = {
-	onAnnouncementClear?: () => void;
 	dispatch: React.Dispatch<ActionProps>;
+	onAnnouncementClear?: () => void;
 };
 
 export type announceProps = {
 	children: React.ReactNode;
-	clearAnnouncementDelay?: number;
 	clearAnnouncementTimeoutRef: React.MutableRefObject<
 		NodeJS.Timeout | number | null | undefined
 	>;
-	onAnnouncementClear?: () => void;
 	dispatch: React.Dispatch<ActionProps>;
+	clearAnnouncementDelay?: number;
+	onAnnouncementClear?: () => void;
 };
 
 export type conditionallyDelayAnnouncementProps = {
-	children: React.ReactNode;
 	announcementTimeoutRef: React.MutableRefObject<
 		NodeJS.Timeout | null | undefined
 	>;
-	announcementDelay?: number;
-	clearAnnouncementDelay?: number;
+	children: React.ReactNode;
 	clearAnnouncementTimeoutRef: React.MutableRefObject<
 		NodeJS.Timeout | number | null | undefined
 	>;
-	onAnnouncementClear?: () => void;
 	dispatch: React.Dispatch<ActionProps>;
+	announcementDelay?: number;
+	clearAnnouncementDelay?: number;
+	onAnnouncementClear?: () => void;
 };
 
 export type LiveRegionProps = {
@@ -54,9 +54,21 @@ export type LiveRegionProps = {
 	 */
 	children: React.ReactNode;
 	/**
+	 * The number of milliseconds to wait before announcing the content.
+	 */
+	announcementDelay?: number;
+	/**
 	 * The `className` to apply to the live region.
 	 */
 	className?: string;
+	/**
+	 * The number of milliseconds to wait before clearing the announcement.
+	 */
+	clearAnnouncementDelay?: number;
+	/**
+	 * A callback to be invoked when the announcement is cleared.
+	 */
+	onAnnouncementClear?: () => void;
 	/**
 	 * The `aria-live` politeness level to apply to the live region.
 	 */
@@ -69,16 +81,4 @@ export type LiveRegionProps = {
 	 * Whether or not the live region should be visible.
 	 */
 	visible?: boolean;
-	/**
-	 * The number of milliseconds to wait before announcing the content.
-	 */
-	announcementDelay?: number;
-	/**
-	 * The number of milliseconds to wait before clearing the announcement.
-	 */
-	clearAnnouncementDelay?: number;
-	/**
-	 * A callback to be invoked when the announcement is cleared.
-	 */
-	onAnnouncementClear?: () => void;
 };

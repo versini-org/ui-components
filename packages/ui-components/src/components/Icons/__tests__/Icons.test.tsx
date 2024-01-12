@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
+import { SpacingProps } from "../../../common";
 import {
 	IconBack,
 	IconChart,
@@ -29,11 +30,10 @@ const renderExpected = async ({
 	spacing,
 }: {
 	dataTestId: string;
+	className?: string;
 	fill?: string;
 	viewBox?: string;
-	className?: string;
-	spacing?: string | number | { t: string | number };
-}) => {
+} & SpacingProps) => {
 	const svg = await screen.findByTestId(dataTestId);
 	expect(svg.getAttribute("fill")).toBe(fill ? fill : "currentColor");
 	expect(svg.getAttribute("viewBox")).toContain(viewBox ? viewBox : "0 0 ");

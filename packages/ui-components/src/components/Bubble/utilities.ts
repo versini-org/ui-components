@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import type { SpacingType } from "../../common";
+import type { SpacingProps } from "../../common";
 import { BUBBLE_CLASSNAME } from "../../common/constants";
 import { getSpacing } from "../../common/utilities";
 
@@ -33,8 +33,7 @@ export const getBubbleClasses = ({
 }: {
 	kind: string;
 	className?: string;
-	spacing?: SpacingType;
-}) => {
+} & SpacingProps) => {
 	const wrapper = clsx(
 		className,
 		BUBBLE_CLASSNAME,

@@ -35,9 +35,9 @@ interface LiveRegionProps {
 	children2?: React.ReactNode;
 	politeness?: "polite" | "assertive" | null | undefined;
 	politeness2?: "polite" | "assertive" | null | undefined;
+	role?: string;
 	toggleChildrenButtonLabel?: string;
 	togglePolitenessButtonLabel?: string;
-	role?: string;
 }
 class LiveRegionPropChanger extends React.PureComponent<LiveRegionProps> {
 	static defaultProps = {

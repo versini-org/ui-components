@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import type { SpacingType } from "../../common";
+import type { SpacingProps } from "../../common";
 import { TOGGLE_CLASSNAME } from "../../common/constants";
 import { getSpacing } from "../../common/utilities";
 
@@ -65,7 +65,7 @@ const getInputClasses = () => {
 	return "peer sr-only";
 };
 
-const getWrapperClasses = ({ spacing }: { spacing: SpacingType }) => {
+const getWrapperClasses = ({ spacing }: SpacingProps) => {
 	return clsx("relative flex cursor-pointer items-center", getSpacing(spacing));
 };
 
@@ -76,8 +76,7 @@ export const getToggleClasses = ({
 }: {
 	kind: string;
 	labelHidden: boolean;
-	spacing: SpacingType;
-}) => {
+} & SpacingProps) => {
 	return {
 		toggle: clsx(
 			getToggleBaseClasses(),

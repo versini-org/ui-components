@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import type { SpacingType } from "../../common";
+import type { SpacingProps } from "../../common";
 import {
 	TEXT_INPUT_CLASSNAME,
 	TEXT_INPUT_CONTROL_RIGHT_CLASSNAME,
@@ -10,18 +10,18 @@ import {
 import { getSpacing } from "../../common/utilities";
 
 type getTextInputClassesProps = {
+	borderKind: string;
+	disabled: boolean;
+	error: boolean;
+	errorKind: string;
+	focusKind: string;
+	noBorder: boolean;
+	raw: boolean;
+
 	className?: string;
 	inputClassName?: string;
-	raw: boolean;
-	focusKind: string;
-	borderKind: string;
-	errorKind: string;
-	disabled: boolean;
 	slim?: boolean;
-	noBorder: boolean;
-	error: boolean;
-	spacing?: SpacingType;
-};
+} & SpacingProps;
 
 const getTextInputBaseClasses = () => {
 	return "rounded-md text-base h-20";
@@ -40,9 +40,9 @@ const getTextInputFocusClasses = ({
 	error,
 	errorKind,
 }: {
-	focusKind: string;
 	error: boolean;
 	errorKind: string;
+	focusKind: string;
 }) => {
 	return clsx("focus:outline-none focus:ring-offset-0", {
 		"focus:ring-2": !error,
@@ -58,10 +58,10 @@ const getTextInputBorderClasses = ({
 	borderKind,
 	errorKind,
 }: {
-	noBorder: boolean;
-	error: boolean;
 	borderKind: string;
+	error: boolean;
 	errorKind: string;
+	noBorder: boolean;
 }) => {
 	return clsx("border-2", {
 		[`border-border-${borderKind}`]: !noBorder,
@@ -77,9 +77,9 @@ const getTextInputLabelClasses = ({
 	errorKind,
 }: {
 	disabled: boolean;
-	raw: boolean;
 	error: boolean;
 	errorKind: string;
+	raw: boolean;
 }) => {
 	return raw
 		? ""
@@ -96,8 +96,8 @@ const getTextInputHelperTextClasses = ({
 	errorKind,
 }: {
 	error: boolean;
-	raw: boolean;
 	errorKind: string;
+	raw: boolean;
 }) => {
 	return raw
 		? undefined
