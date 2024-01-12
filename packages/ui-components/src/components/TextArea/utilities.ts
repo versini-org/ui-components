@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import type { SpacingType } from "../../common";
+import type { SpacingProps } from "../../common";
 import {
 	TEXT_AREA_CLASSNAME,
 	TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
@@ -10,17 +10,17 @@ import {
 import { getSpacing } from "../../common/utilities";
 
 type getTextAreaClassesProps = {
+	borderKind: string;
+	disabled: boolean;
+	error: boolean;
+	errorKind: string;
+	focusKind: string;
+	noBorder: boolean;
+	raw: boolean;
+
 	className?: string;
 	textAreaClassName?: string;
-	raw: boolean;
-	focusKind: string;
-	borderKind: string;
-	errorKind: string;
-	disabled: boolean;
-	noBorder: boolean;
-	error: boolean;
-	spacing?: SpacingType;
-};
+} & SpacingProps;
 
 const getTextAreaBaseClasses = () => {
 	/**
@@ -45,9 +45,9 @@ const getTextAreaFocusClasses = ({
 	error,
 	errorKind,
 }: {
-	focusKind: string;
 	error: boolean;
 	errorKind: string;
+	focusKind: string;
 }) => {
 	return clsx("focus:outline-none focus:ring-offset-0", {
 		"focus:ring-2": !error,
@@ -63,10 +63,10 @@ const getTextAreaBorderClasses = ({
 	borderKind,
 	errorKind,
 }: {
-	noBorder: boolean;
-	error: boolean;
 	borderKind: string;
+	error: boolean;
 	errorKind: string;
+	noBorder: boolean;
 }) => {
 	return clsx("border-2", {
 		[`border-border-${borderKind}`]: !noBorder,
@@ -82,9 +82,9 @@ const getTextAreaLabelClasses = ({
 	errorKind,
 }: {
 	disabled: boolean;
-	raw: boolean;
 	error: boolean;
 	errorKind: string;
+	raw: boolean;
 }) => {
 	return raw
 		? ""
@@ -101,8 +101,8 @@ const getTextAreaHelperTextClasses = ({
 	errorKind,
 }: {
 	error: boolean;
-	raw: boolean;
 	errorKind: string;
+	raw: boolean;
 }) => {
 	return raw
 		? undefined
@@ -188,10 +188,10 @@ export const adjustLabelAndHelperText = ({
 	currentLabelOffset = 0,
 	currentHelperTextOffset = 0,
 }: {
-	scrollHeight: number;
 	currentHeight: number;
-	currentLabelOffset: number;
 	currentHelperTextOffset: number;
+	currentLabelOffset: number;
+	scrollHeight: number;
 }) => {
 	const TRANSLATION_OFFSET = 12;
 	const ROW_HEIGHT = 24;

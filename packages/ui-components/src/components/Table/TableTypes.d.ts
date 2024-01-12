@@ -1,19 +1,16 @@
 import React from "react";
 
-import type { SpacingType } from "../../common";
+import type { SpacingProps } from "../../common";
 
 export type TableProps = {
-	kind?: "dark" | "light";
 	/**
 	 * This attribute defines the caption (or title) of a table.
 	 */
 	caption?: React.ReactNode;
 	/**
-	 * This attribute defines an alternative text that summarizes
-	 * the content of the table. It is not visible but will be
-	 * read out loud by screen readers to represent the table.
+	 * The kind of table. It defines the color of the table.
 	 */
-	summary?: string;
+	kind?: "dark" | "light";
 	/**
 	 * The max height of the table. It follows the CSS max-height property.
 	 * Note: It is required to configure 'maxHeight' prop for the prop
@@ -27,16 +24,23 @@ export type TableProps = {
 	 */
 	stickyHeader?: boolean;
 	/**
-	 * Custom spacing for the component.
+	 * This attribute defines an alternative text that summarizes
+	 * the content of the table. It is not visible but will be
+	 * read out loud by screen readers to represent the table.
 	 */
-	spacing?: SpacingType;
-} & React.HTMLAttributes<HTMLTableElement>;
+	summary?: string;
+} & SpacingProps &
+	React.HTMLAttributes<HTMLTableElement>;
 
 export type TableRowProps = React.HTMLAttributes<HTMLTableRowElement>;
 export type TableBodyProps = React.HTMLAttributes<HTMLTableSectionElement>;
 export type TableHeadProps = React.HTMLAttributes<HTMLTableSectionElement>;
 
 export type TableCellProps = {
+	/**
+	 * The type of cell.
+	 * @default "td"
+	 */
 	component?: "td" | "th";
 } & React.ThHTMLAttributes<HTMLTableCellElement> &
 	React.TdHTMLAttributes<HTMLTableCellElement>;

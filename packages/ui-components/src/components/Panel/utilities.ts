@@ -9,8 +9,8 @@ export const getPanelClassName = ({
 	kind,
 	borderKind,
 }: {
-	kind: string;
 	borderKind: string;
+	kind: string;
 }) => {
 	return {
 		main: clsx("flex flex-col bg-surface-medium md:max-w-2xl", {

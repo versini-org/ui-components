@@ -1,19 +1,45 @@
 import type { Placement } from "@floating-ui/react";
 
-import type { SpacingType } from "../../common";
+import type { SpacingProps } from "../../common";
 
-export interface MenuProps {
-	icon?: React.ReactNode;
-	label?: string;
+export interface MenuProps extends SpacingProps {
+	/**
+	 * The children to render.
+	 */
 	children?: React.ReactNode;
+	/**
+	 * The default location of the popup.
+	 * @default "bottom-start"
+	 */
 	defaultPlacement?: Placement;
+	/**
+	 * A React component of type Icon to be placed on the left of the label.
+	 */
+	icon?: React.ReactNode;
+	/**
+	 * The label to use for the menu button.
+	 */
+	label?: string;
+	/**
+	 * Callback fired when the component is opened or closed.
+	 * @param open whether or not the menu is open
+	 */
 	onOpenChange?: (open: boolean) => void;
-	spacing?: SpacingType;
 }
 
 export interface MenuItemProps {
+	/**
+	 * The label to use for the menu item.
+	 */
 	label: string;
+	/**
+	 * Whether or not the menu item is disabled.
+	 * @default false
+	 */
 	disabled?: boolean;
+	/**
+	 * A React component of type Icon to be placed on the left of the label.
+	 */
 	icon?: React.ReactNode;
 }
 

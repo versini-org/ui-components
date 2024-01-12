@@ -1,20 +1,47 @@
-import type { SpacingType } from "../../common";
+import type { SpacingProps } from "../../common";
 
 export type CardProps = {
-	className?: string;
-	header?: React.ReactNode;
-	headerClassName?: string;
-	footer?: React.ReactNode;
-	footerClassName?: string;
+	/**
+	 * The children to render.
+	 */
 	children: React.ReactNode;
-	noBackground?: boolean;
+
+	/**
+	 * If the header prop is not provided, the Card must be
+	 * described via aria-labelledby.
+	 */
 	"aria-labelledby"?: string;
-	spacing?: SpacingType;
-};
+	/**
+	 * CSS class(es) to add to the main component wrapper.
+	 */
+	className?: string;
+	/**
+	 * The content to render in the footer.
+	 */
+	footer?: React.ReactNode;
+	/**
+	 * CSS class(es) to add to the footer.
+	 */
+	footerClassName?: string;
+	/**
+	 * The content to render in the header.
+	 */
+	header?: React.ReactNode;
+	/**
+	 * CSS class(es) to add to the header.
+	 */
+	headerClassName?: string;
+	/**
+	 * Whether or not to render the Card with a border.
+	 * @default false
+	 */
+	noBackground?: boolean;
+} & SpacingProps;
 
 export type CardHeaderProps = {
-	id?: string;
-	content: React.ReactNode;
-	userAriaLabelledby?: string;
 	className: string;
+	content: React.ReactNode;
+
+	id?: string;
+	userAriaLabelledby?: string;
 };

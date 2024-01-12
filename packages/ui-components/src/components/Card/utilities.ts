@@ -1,16 +1,15 @@
 import clsx from "clsx";
 
-import type { SpacingType } from "../../common";
+import type { SpacingProps } from "../../common";
 import { CARD_CLASSNAME } from "../../common/constants";
 import { getSpacing } from "../../common/utilities";
 
 type getCardClassesProps = {
 	className?: string;
-	headerClassName?: string;
 	footerClassName?: string;
+	headerClassName?: string;
 	noBackground?: boolean;
-	spacing?: SpacingType;
-};
+} & SpacingProps;
 
 export const getCardClasses = ({
 	className,
