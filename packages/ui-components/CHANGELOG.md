@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.29.0](https://github.com/aversini/ui-components/compare/ui-components-v4.28.1...ui-components-v4.29.0) (2024-01-12)
+
+
+### Features
+
+* adding ThemeProvider component ([dcb7502](https://github.com/aversini/ui-components/commit/dcb75029353ebfd754ee0f555d3107bd72f2f7e5))
+
 ## [4.28.1](https://github.com/aversini/ui-components/compare/ui-components-v4.28.0...ui-components-v4.28.1) (2024-01-11)
 
 
