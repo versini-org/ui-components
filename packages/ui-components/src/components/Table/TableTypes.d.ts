@@ -7,6 +7,9 @@ export type TableProps = {
 	 * This attribute defines the caption (or title) of a table.
 	 */
 	caption?: React.ReactNode;
+	/**
+	 * The kind of table. It defines the color of the table.
+	 */
 	kind?: "dark" | "light";
 	/**
 	 * The max height of the table. It follows the CSS max-height property.
