@@ -44,6 +44,9 @@ jobs:
       - run: npx lerna run build --scope=@versini/ui-hooks
       - run: npx lerna run build --scope=@versini/ui-components
       - run: npx lerna run build --scope=@versini/bundlesize
+      - run: yarn danger ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   inspect:
     runs-on: ubuntu-latest
