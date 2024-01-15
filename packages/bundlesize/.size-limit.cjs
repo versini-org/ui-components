@@ -1,7 +1,7 @@
 module.exports = [
 	{
 		path: ["dist/assets/index.js"],
-		limit: "40 kB",
+		limit: "4 kB",
 		gzip: true,
 		ignore: ["react", "react-dom"],
 	},
