@@ -6,7 +6,6 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"bundlesize": "bundlemon",
 		"clean": "rimraf dist",
 		"build": "yarn run clean && vite build",
 		"stats": "size-limit --json > stats.json",
