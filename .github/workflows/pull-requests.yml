@@ -44,13 +44,6 @@ jobs:
       - run: npx lerna run build --scope=@versini/ui-hooks
       - run: npx lerna run build --scope=@versini/ui-components
       - run: npx lerna run build --scope=@versini/bundlesize
-      - name: Get Size Limit
-        uses: andresz1/size-limit-action@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          skip_step: install
-          directory: packages/bundlesize
-          package_manager: yarn
 
   inspect:
     runs-on: ubuntu-latest
