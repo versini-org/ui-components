@@ -9,6 +9,7 @@
 		"bundlesize": "bundlemon",
 		"clean": "rimraf dist",
 		"build": "yarn run clean && vite build",
+		"stats": "size-limit --json > stats.json",
 		"test": "echo \"WARNING: no test specified\" && exit 0",
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
 	},

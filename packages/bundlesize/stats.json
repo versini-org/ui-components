@@ -1,0 +1,14 @@
+[
+  {
+    "name": "dist/assets/index.js",
+    "passed": true,
+    "size": 38279,
+    "sizeLimit": 40000
+  },
+  {
+    "name": "dist/assets/style.css",
+    "passed": true,
+    "size": 7160,
+    "sizeLimit": 8000
+  }
+]
