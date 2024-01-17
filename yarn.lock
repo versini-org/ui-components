@@ -15158,6 +15158,7 @@ __metadata:
     "@versini/eslint-plugin-client": "npm:1.0.1"
     bytes: "npm:3.1.2"
     danger: "npm:11.3.1"
+    fs-extra: "npm:11.2.0"
   languageName: unknown
   linkType: soft
 
