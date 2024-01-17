@@ -3,6 +3,10 @@ import { basename } from "node:path";
 import { fail, markdown } from "danger";
 import { readJsonSync } from "fs-extra";
 
+const PR_STATS_JSON = "packages/ui-components/tmp/stats.json";
+const MAIN_STATS_JSON = "packages/ui-components/stats/stats.json";
+const UI_PACKAGE_JSON = "packages/ui-components/package.json";
+
 type BundlesizeStats = {
 	[key: string]: Array<{
 		fileSize: number;
@@ -23,6 +27,13 @@ const map = {
 };
 const formatThousandsRegExp = /\B(?=(\d{3})+(?!\d))/g;
 const formatDecimalsRegExp = /(?:\.0*|(\.[^0]+)0+)$/;
+
+const percentFormatter = new Intl.NumberFormat("en", {
+	style: "percent",
+	signDisplay: "exceptZero",
+	minimumFractionDigits: 2,
+	maximumFractionDigits: 2,
+});
 
 function format(value, options) {
 	if (!Number.isFinite(value)) {
@@ -75,26 +86,36 @@ function format(value, options) {
 }
 
 let limitReached = false;
-const res: BundlesizeStats = readJsonSync(
-	"packages/ui-components/tmp/stats.json",
-);
-const { version } = readJsonSync("packages/ui-components/package.json");
+const currentStats: BundlesizeStats = readJsonSync(PR_STATS_JSON);
+const mainStats: BundlesizeStats = readJsonSync(MAIN_STATS_JSON);
+const { version } = readJsonSync(UI_PACKAGE_JSON);
 const rows = [
 	"| Status | File | Size (Gzip) | Limits |",
 	"| ---- | ---- | ---- | ----- |",
 ];
 
-res[version].forEach((item) => {
-	const name = basename(item.path);
+Object.keys(currentStats[version]).forEach((key) => {
+	const item = currentStats[version][key];
+	const name = basename(key);
 	const passed = item.passed ? "✅" : "🚫";
 	if (!item.passed) {
 		limitReached = true;
 	}
 
+	const diff = mainStats[version][key].fileSizeGzip - item.fileSizeGzip;
+	const diffStr =
+		diff !== 0
+			? ` (${diff > 0 ? "+" : "-"}${format(Math.abs(diff), {
+					unitSeparator: " ",
+				})} ${percentFormatter.format(
+					diff / mainStats[version][key].fileSizeGzip,
+				)})`
+			: "";
+
 	rows.push(
-		`${passed} | ${name} |${format(item.fileSizeGzip, {
+		`${passed} | ${name} | ${format(item.fileSizeGzip, {
 			unitSeparator: " ",
-		})}| ${item.limit}`,
+		})}${diffStr} | ${item.limit}`,
 	);
 });
 
