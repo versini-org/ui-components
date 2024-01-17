@@ -7,30 +7,6 @@ on:
     branches: [main]
 
 jobs:
-  bundlesize:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - run: |
-          corepack enable
-          yarn set version berry
-          yarn install
-          npx lerna run build --scope=@versini/ui-hooks
-          npx lerna run build --scope=@versini/ui-components
-          npx lerna run build --scope=@versini/bundlesize
-          npx lerna run stats:pr --scope=@versini/ui-components
-          yarn danger ci
-        env:
-          GITHUB_TOKEN: ${{ secrets.NODE_CLI }}
-
   inspect:
     runs-on: ubuntu-latest
     strategy:
@@ -42,10 +18,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-
-      - run: corepack enable
-      - run: yarn set version berry
-      - run: yarn install
-      - run: npx lerna run build
-      - run: npx lerna run lint
-      - run: npx lerna run test:coverage
+      # - linting all packages that have a lint script
+      # - building all packages that have a build script
+      # - getting coverage for all packages that have a test:coverage script
+      # - generating a bundlesize report for ui-components package
+      # - running danger to check the results of the bundlesize report
+      - run: |
+          corepack enable
+          yarn set version berry
+          yarn install
+          npx lerna run lint
+          npx lerna run build
+          npx lerna run test:coverage
+          npx lerna run stats:pr --scope=@versini/ui-components
+          yarn danger ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.NODE_CLI }}
