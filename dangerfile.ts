@@ -29,7 +29,7 @@ res[version].forEach((item) => {
 	const name = path.basename(item.path);
 	const passed = item.passed ? "✅" : "🚫";
 	if (!item.passed) {
-		limitReached = false;
+		limitReached = true;
 	}
 
 	rows.push(
