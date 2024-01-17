@@ -19,15 +19,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: corepack enable
-      - run: yarn set version berry
-      - run: yarn install
-      - run: npx lerna run build --scope=@versini/ui-hooks
-      - run: npx lerna run build --scope=@versini/ui-components
-      - run: npx lerna run build --scope=@versini/bundlesize
-      - run: npx lerna run stats:pr --scope=@versini/ui-components
-      - name: Danger
-        uses: danger/danger-js@11.3.1
+      - run: |
+          corepack enable
+          yarn set version berry
+          yarn install
+          npx lerna run build --scope=@versini/ui-hooks
+          npx lerna run build --scope=@versini/ui-components
+          npx lerna run build --scope=@versini/bundlesize
+          npx lerna run stats:pr --scope=@versini/ui-components
+          yarn danger ci
         env:
           GITHUB_TOKEN: ${{ secrets.NODE_CLI }}
 
