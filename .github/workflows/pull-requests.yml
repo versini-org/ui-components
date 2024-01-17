@@ -21,6 +21,7 @@ jobs:
       # - getting coverage for all packages that have a test:coverage script
       # - generating a bundlesize report for ui-components package
       # - running danger to check the results of the bundlesize report
+
       - run: |
           corepack enable
           yarn set version berry
