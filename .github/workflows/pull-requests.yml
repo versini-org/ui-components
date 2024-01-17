@@ -27,7 +27,7 @@ jobs:
       - run: npx lerna run build --scope=@versini/bundlesize
       - run: npx lerna run stats:pr --scope=@versini/ui-components
       - name: Danger
-        uses: danger/danger-js@9.1.6
+        uses: danger/danger-js@11.3.1
         env:
           GITHUB_TOKEN: ${{ secrets.NODE_CLI }}
 
