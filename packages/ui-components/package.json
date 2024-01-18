@@ -23,7 +23,7 @@
 		"build:js": "vite build",
 		"build:types": "tsup",
 		"build": "npm-run-all --serial clean build:check build:js build:types",
-		"clean": "rimraf dist",
+		"clean": "rimraf dist tmp",
 		"dev:js": "vite build --watch --mode development",
 		"dev:types": "tsup --watch src",
 		"dev": "npm-run-all clean --parallel dev:js dev:types",
@@ -46,7 +46,7 @@
 		"react-dom": "18.2.0"
 	},
 	"dependencies": {
-		"@floating-ui/react": "0.26.5",
+		"@floating-ui/react": "0.26.6",
 		"@tailwindcss/typography": "0.5.10",
 		"@versini/ui-hooks": ">=2.1.1",
 		"clsx": "2.1.0",
