@@ -33,7 +33,7 @@ jobs:
           # npx lerna run stats:pr --scope=@versini/ui-components
       - uses: mshick/add-pr-comment@v2
         with:
-          token: ${{ secrets.NODE_CLI }}
+          refresh-message-position: true
           message: |
             **Hello**
             🌏
