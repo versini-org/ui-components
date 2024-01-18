@@ -9,6 +9,7 @@ jobs:
     if: github.head_ref == 'release-please--branches--main'
     runs-on: ubuntu-latest
     permissions:
+      contents: write
       pull-requests: write
     strategy:
       matrix:
