@@ -39,11 +39,6 @@ jobs:
           yarn install
           git checkout yarn.lock
           npx lerna run build
-          npx lerna run stats:release --scope=@versini/ui-components
-
-      - name: Commit Changes
-        if: ${{ steps.release.outputs.releases_created }}
-        uses: stefanzweifel/git-auto-commit-action@v5
 
       # Release Please has already incremented versions
       # and published tags, so we just need to publish
