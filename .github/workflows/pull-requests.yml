@@ -26,6 +26,7 @@ jobs:
           npx lerna run stats:pr --scope=@versini/ui-components
           npm run stats
       - uses: mshick/add-pr-comment@v2
+        if: always()
         with:
           refresh-message-position: true
           message-path: tmp/pr-stats.md
