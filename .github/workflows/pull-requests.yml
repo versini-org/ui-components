@@ -15,7 +15,7 @@ jobs:
         node-version: [20.x]
     steps:
       - name: Branch name
-        run: echo running on branch ${GITHUB_HEAD_REF}
+        run: echo running on branch -> ${GITHUB_HEAD_REF}
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
