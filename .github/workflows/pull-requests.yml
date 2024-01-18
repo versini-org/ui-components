@@ -5,30 +5,6 @@ on:
     branches: [main]
 
 jobs:
-  release-bundlesize:
-    if: github.head_ref == 'release-please--branches--main'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-    strategy:
-      matrix:
-        node-version: [20.x]
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: |
-          corepack enable
-          yarn set version berry
-          yarn install
-          npx lerna run build --ignore @versini/documentation
-          npx lerna run stats:release --scope=@versini/ui-components
-      - name: Commit Release Stats
-        uses: stefanzweifel/git-auto-commit-action@v5
-
   bundlesize:
     runs-on: ubuntu-latest
     permissions:
@@ -73,3 +49,27 @@ jobs:
           npx lerna run lint --ignore @versini/documentation
           npx lerna run build --ignore @versini/documentation
           npx lerna run test:coverage --ignore @versini/documentation
+
+  release-bundlesize:
+    if: github.head_ref == 'release-please--branches--main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    strategy:
+      matrix:
+        node-version: [20.x]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          corepack enable
+          yarn set version berry
+          yarn install
+          npx lerna run build --ignore @versini/documentation
+          npx lerna run stats:release --scope=@versini/ui-components
+      - name: Commit Release Stats
+        uses: stefanzweifel/git-auto-commit-action@v5
