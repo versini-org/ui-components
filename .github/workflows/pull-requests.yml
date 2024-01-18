@@ -27,14 +27,12 @@ jobs:
           corepack enable
           yarn set version berry
           yarn install
-          # npx lerna run lint
-          # npx lerna run build
-          # npx lerna run test:coverage
-          # npx lerna run stats:pr --scope=@versini/ui-components
+          #npx lerna run lint --ignore @versini/documentation
+          npx lerna run build --ignore @versini/documentation
+          # npx lerna run test:coverage --ignore @versini/documentation
+          npx lerna run stats:pr --scope=@versini/ui-components
+          npm run stats
       - uses: mshick/add-pr-comment@v2
         with:
           refresh-message-position: true
-          message: |
-            **Hello**
-            🌏
-            !
+          message-path: tmp/pr-stats.md
