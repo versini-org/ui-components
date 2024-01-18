@@ -15152,7 +15152,6 @@ __metadata:
     "@versini/dev-dependencies-client": "npm:4.1.6"
     "@versini/dev-dependencies-types": "npm:1.1.2"
     "@versini/eslint-plugin-client": "npm:1.0.1"
-    danger: "npm:11.3.1"
   languageName: unknown
   linkType: soft
 
