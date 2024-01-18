@@ -23,7 +23,7 @@
 		"build:js": "vite build",
 		"build:types": "tsup",
 		"build": "npm-run-all --serial clean build:check build:js build:types",
-		"clean": "rimraf dist",
+		"clean": "rimraf dist tmp",
 		"dev:js": "vite build --watch --mode development",
 		"dev:types": "tsup --watch src",
 		"dev": "npm-run-all clean --parallel dev:js dev:types",

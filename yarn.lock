@@ -2312,9 +2312,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@node-cli/bundlesize@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@node-cli/bundlesize@npm:2.1.0"
+"@node-cli/bundlesize@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@node-cli/bundlesize@npm:2.1.1"
   dependencies:
     "@node-cli/logger": "npm:>=1.2.0"
     "@node-cli/parser": "npm:>=2.2.1"
@@ -2324,7 +2324,7 @@ __metadata:
     gzip-size: "npm:7.0.0"
   bin:
     bundlesize: dist/bundlesize.js
-  checksum: b405b80bbe050b1d0bbad4f75754a71382c01e3f4bbbf9556789e612cb0927eda7e585cf3fb6832a8d042cf58f6e6fc0cca3bbf4ea3eef9d0d4525ff8841b066
+  checksum: e05b7098f3988b11aed7fe0a4ca9d9a2116a2c4d98856d7ca3fa8d7dbbb35f54c5d9ff492d4c2a593b9fdc41a92ee186a9a60b3119dcff9b097078208c6cbd96
   languageName: node
   linkType: hard
 
@@ -15148,7 +15148,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root@workspace:."
   dependencies:
-    "@node-cli/bundlesize": "npm:2.1.0"
+    "@node-cli/bundlesize": "npm:2.1.1"
     "@versini/dev-dependencies-client": "npm:4.1.6"
     "@versini/dev-dependencies-types": "npm:1.1.2"
     "@versini/eslint-plugin-client": "npm:1.0.1"
