@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  inspect:
+  bundlesize:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -18,21 +18,33 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      # - linting all packages that have a lint script
-      # - building all packages that have a build script
-      # - getting coverage for all packages that have a test:coverage script
-      # - generating a bundlesize report for ui-components package
-      # - running danger to check the results of the bundlesize report
       - run: |
           corepack enable
           yarn set version berry
           yarn install
-          #npx lerna run lint --ignore @versini/documentation
           npx lerna run build --ignore @versini/documentation
-          # npx lerna run test:coverage --ignore @versini/documentation
           npx lerna run stats:pr --scope=@versini/ui-components
           npm run stats
       - uses: mshick/add-pr-comment@v2
         with:
           refresh-message-position: true
           message-path: tmp/pr-stats.md
+
+  inspect:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          corepack enable
+          yarn set version berry
+          yarn install
+          npx lerna run lint --ignore @versini/documentation
+          npx lerna run build --ignore @versini/documentation
+          npx lerna run test:coverage --ignore @versini/documentation
