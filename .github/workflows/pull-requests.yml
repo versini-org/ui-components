@@ -21,7 +21,6 @@ jobs:
       # - getting coverage for all packages that have a test:coverage script
       # - generating a bundlesize report for ui-components package
       # - running danger to check the results of the bundlesize report
-
       - run: |
           corepack enable
           yarn set version berry
@@ -30,6 +29,9 @@ jobs:
           npx lerna run build
           npx lerna run test:coverage
           npx lerna run stats:pr --scope=@versini/ui-components
-          yarn danger ci
-        env:
-          GITHUB_TOKEN: ${{ secrets.NODE_CLI }}
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            **Hello**
+            🌏
+            !
