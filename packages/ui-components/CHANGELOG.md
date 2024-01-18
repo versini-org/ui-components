@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.30.1](https://github.com/aversini/ui-components/compare/ui-components-v4.30.0...ui-components-v4.30.1) (2024-01-18)
+
+
+### Bug Fixes
+
+* bundle size via @node-cli/bundlesize and Danger.js ([f691663](https://github.com/aversini/ui-components/commit/f6916635e20ca409c7d8067c8533b4a884c70873))
+
 ## [4.30.0](https://github.com/aversini/ui-components/compare/ui-components-v4.29.0...ui-components-v4.30.0) (2024-01-12)
 
 
