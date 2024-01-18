@@ -16,18 +16,18 @@
 		"test": "echo \"WARNING: no test specified\" && exit 0"
 	},
 	"devDependencies": {
-		"@storybook/addon-a11y": "7.6.8",
-		"@storybook/addon-essentials": "7.6.8",
-		"@storybook/blocks": "7.6.8",
-		"@storybook/react": "7.6.8",
-		"@storybook/react-vite": "7.6.8",
+		"@storybook/addon-a11y": "7.6.10",
+		"@storybook/addon-essentials": "7.6.10",
+		"@storybook/blocks": "7.6.10",
+		"@storybook/react": "7.6.10",
+		"@storybook/react-vite": "7.6.10",
 		"@storybook/testing-library": "0.2.2"
 	},
 	"dependencies": {
 		"@versini/ui-components": "*",
 		"json5": "2.2.3",
 		"prop-types": "15.8.1",
-		"storybook": "7.6.8",
+		"storybook": "7.6.10",
 		"uuid": "9.0.1"
 	}
 }
