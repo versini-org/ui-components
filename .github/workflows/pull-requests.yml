@@ -5,8 +5,8 @@ on:
     branches: [main]
 
 jobs:
-  bundlesize:
-    if: github.head_ref != 'release-please--branches--main'
+  release-bundlesize:
+    if: github.head_ref == 'release-please--branches--main'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -14,8 +14,28 @@ jobs:
       matrix:
         node-version: [20.x]
     steps:
-      - name: Branch name
-        run: echo running on branch -> ${GITHUB_HEAD_REF}
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          corepack enable
+          yarn set version berry
+          yarn install
+          npx lerna run build --ignore @versini/documentation
+          npx lerna run stats:release --scope=@versini/ui-components
+      - name: Commit Release Stats
+        uses: stefanzweifel/git-auto-commit-action@v5
+
+  bundlesize:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    strategy:
+      matrix:
+        node-version: [20.x]
+    steps:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
