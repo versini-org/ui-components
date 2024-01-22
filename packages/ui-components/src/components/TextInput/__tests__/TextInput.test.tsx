@@ -21,6 +21,19 @@ describe("TextInput modifiers", () => {
 		expectToHaveClasses(input[1], ["cursor-text", "text-copy-medium"]);
 	});
 
+	it("should render a simple text input", async () => {
+		render(
+			<TextInput
+				label="hello world"
+				name="toto"
+				simple
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const input = await screen.findByTestId("txtnpt-1");
+		expect(input.className).toContain("pt-4");
+	});
+
 	it("should render a text input with an error message", async () => {
 		render(
 			<TextInput

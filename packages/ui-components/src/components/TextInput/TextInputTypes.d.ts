@@ -62,6 +62,12 @@ export type TextInputProps = {
 	 * elements, such a Button.
 	 */
 	rightElement?: React.ReactElement;
+	/**
+	 * Whether or not the TextInput is simple. A simple TextInput is smaller
+	 * in height and does not have helper text support. If the prop "helperText"
+	 * is passed in, it will be ignored.
+	 */
+	simple?: boolean;
 } & CommonTextInputProps &
 	React.InputHTMLAttributes<HTMLInputElement>;
 

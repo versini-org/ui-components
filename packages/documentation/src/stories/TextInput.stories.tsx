@@ -9,7 +9,7 @@ const meta: Meta<typeof TextInput> = {
 	args: {
 		type: "text",
 		label: "Type your question here",
-		name: "username",
+		name: "somebody",
 		disabled: false,
 		helperText: "",
 		raw: false,
@@ -19,6 +19,7 @@ const meta: Meta<typeof TextInput> = {
 		error: false,
 		inputClassName: "",
 		className: "",
+		simple: false,
 	},
 	argTypes: {
 		className: {
@@ -40,6 +41,9 @@ const meta: Meta<typeof TextInput> = {
 			control: "boolean",
 		},
 		error: {
+			control: "boolean",
+		},
+		simple: {
 			control: "boolean",
 		},
 		focusKind: {
