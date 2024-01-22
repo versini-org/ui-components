@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.32.0](https://github.com/aversini/ui-components/compare/ui-components-v4.31.0...ui-components-v4.32.0) (2024-01-22)
+
+
+### Features
+
+* **TextInput:** adding prop "simple" ([9e82780](https://github.com/aversini/ui-components/commit/9e82780ca4767e1bad1a23312c89a6b14148d45e))
+
 ## [4.31.0](https://github.com/aversini/ui-components/compare/ui-components-v4.30.2...ui-components-v4.31.0) (2024-01-22)
 
 
