@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.31.0](https://github.com/aversini/ui-components/compare/ui-components-v4.30.2...ui-components-v4.31.0) (2024-01-22)
+
+
+### Features
+
+* **Table:** adding prop `wrapperClassName` ([4525169](https://github.com/aversini/ui-components/commit/452516985f12dc6c56186a31635d278041cdaa14))
+
 ## [4.30.2](https://github.com/aversini/ui-components/compare/ui-components-v4.30.1...ui-components-v4.30.2) (2024-01-18)
 
 
