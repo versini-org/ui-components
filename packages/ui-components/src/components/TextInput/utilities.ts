@@ -5,6 +5,7 @@ import {
 	TEXT_INPUT_CLASSNAME,
 	TEXT_INPUT_CONTROL_RIGHT_CLASSNAME,
 	TEXT_INPUT_HELPER_TEXT_CLASSNAME,
+	TEXT_INPUT_SIMPLE_CLASSNAME,
 	TEXT_INPUT_WRAPPER_CLASSNAME,
 } from "../../common/constants";
 import { getSpacing } from "../../common/utilities";
@@ -17,18 +18,24 @@ type getTextInputClassesProps = {
 	focusKind: string;
 	noBorder: boolean;
 	raw: boolean;
+	simple: boolean;
 
 	className?: string;
 	inputClassName?: string;
 	slim?: boolean;
 } & SpacingProps;
 
-const getTextInputBaseClasses = () => {
-	return "rounded-md text-base h-20";
+const getTextInputBaseClasses = ({ simple }: { simple: boolean }) => {
+	return clsx("rounded-md text-base", {
+		"h-20": !simple,
+		"h-12": simple,
+	});
 };
 
-const getTextInputSizesClasses = () => {
-	return "px-4";
+const getTextInputSizesClasses = ({ simple }: { simple: boolean }) => {
+	return clsx("px-4", {
+		"pt-4": simple,
+	});
 };
 
 const getTextInputColorClasses = () => {
@@ -118,6 +125,7 @@ export const getTextInputClasses = ({
 	noBorder,
 	error,
 	spacing,
+	simple,
 }: getTextInputClassesProps) => {
 	const wrapper = raw
 		? className
@@ -131,10 +139,10 @@ export const getTextInputClasses = ({
 	const input = raw
 		? clsx(inputClassName)
 		: clsx(
-				TEXT_INPUT_CLASSNAME,
+				simple ? TEXT_INPUT_SIMPLE_CLASSNAME : TEXT_INPUT_CLASSNAME,
 				inputClassName,
-				getTextInputBaseClasses(),
-				getTextInputSizesClasses(),
+				getTextInputBaseClasses({ simple }),
+				getTextInputSizesClasses({ simple }),
 				getTextInputColorClasses(),
 				getTextInputFocusClasses({ focusKind, error, errorKind }),
 				getTextInputBorderClasses({ noBorder, error, borderKind, errorKind }),

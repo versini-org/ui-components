@@ -27,6 +27,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			type = "text",
 
 			helperText = "",
+			simple = false,
 
 			rightElement,
 			spacing,
@@ -38,7 +39,9 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		const rightElementRef = useRef<HTMLDivElement>(null);
 		const [inputPaddingRight, setInputPaddingRight] = useState(0);
 		const inputId = useUniqueId({ id, prefix: `${TEXT_INPUT_CLASSNAME}-` });
-		const liveErrorMessage = `${name} error, ${helperText}`;
+		const liveErrorMessage = simple
+			? `${name} error`
+			: `${name} error, ${helperText}`;
 		const textInputClassName = getTextInputClasses({
 			className,
 			inputClassName,
@@ -50,6 +53,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			borderKind,
 			errorKind,
 			spacing,
+			simple,
 		});
 
 		useLayoutEffect(() => {
@@ -91,7 +95,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 					</label>
 				)}
 
-				{helperText && (
+				{helperText && !simple && (
 					<div
 						id={`${inputId}-helper`}
 						className={textInputClassName.helperText}
@@ -109,7 +113,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 					</div>
 				)}
 
-				{error && helperText && (
+				{error && helperText && !simple && (
 					<LiveRegion politeness="polite" clearAnnouncementDelay={500}>
 						{liveErrorMessage}
 					</LiveRegion>

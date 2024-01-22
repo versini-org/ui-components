@@ -11,6 +11,13 @@ export const customCSS = {
 			transform:
 				"translate(18px, var(--av-text-area-label, -25px)) scale(0.75)",
 		},
+
+	'.av-text-input-simple:focus + label[aria-hidden="true"],\n\t.av-text-input-simple:not(:placeholder-shown) + label[aria-hidden="true"]':
+		{
+			transform:
+				"translate(18px, var(--av-text-area-label, -12px)) scale(0.75)",
+		},
+
 	".av-text-input-helper-text,\n\t.av-text-area-helper-text": {
 		transform:
 			"translate(18px, var(--av-text-area-helper-text, 32px))\n\t\t\tscale(0.75)",
