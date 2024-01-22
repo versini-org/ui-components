@@ -23,6 +23,7 @@ export const Table = ({
 	caption,
 	summary,
 	className,
+	wrapperClassName,
 	maxHeight,
 	stickyHeader,
 	spacing,
@@ -31,6 +32,7 @@ export const Table = ({
 	const tableClass = getTableClasses({
 		kind,
 		className,
+		wrapperClassName,
 		stickyHeader,
 		spacing,
 	});

@@ -29,6 +29,10 @@ export type TableProps = {
 	 * read out loud by screen readers to represent the table.
 	 */
 	summary?: string;
+	/**
+	 * CSS class to apply to the table wrapper.
+	 */
+	wrapperClassName?: string;
 } & SpacingProps &
 	React.HTMLAttributes<HTMLTableElement>;
 
