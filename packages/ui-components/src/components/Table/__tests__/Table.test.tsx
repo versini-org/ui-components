@@ -252,6 +252,88 @@ describe("Table classes", () => {
 			expectToHaveClasses(tableCellBody, ["p-4"]);
 		}
 	});
+
+	it("should render a table with a custom wrapper class", async () => {
+		render(
+			<Table
+				data-testid="table"
+				caption="the caption"
+				wrapperClassName="h-full max-h-[75vh]"
+			>
+				<TableHead>
+					<TableRow data-testid="table-row-head">
+						<TableCell data-testid="table-cell-head">the header</TableCell>
+					</TableRow>
+				</TableHead>
+				<TableBody>
+					<TableRow data-testid="table-row-body">
+						<TableCell data-testid="table-cell-body">the body</TableCell>
+					</TableRow>
+				</TableBody>
+			</Table>,
+		);
+		const table = await screen.findByTestId("table");
+		const wrapper = table.parentElement;
+		const caption = table.querySelector("caption");
+		const tableRowHead = await screen.findByTestId("table-row-head");
+		const tableRowBody = await screen.findByTestId("table-row-body");
+		const tableCellHead = await screen.findByTestId("table-cell-head");
+		const tableCellBody = await screen.findByTestId("table-cell-body");
+
+		expect(table).toBeInTheDocument();
+		expect(table.tagName).toBe("TABLE");
+
+		expectToHaveClasses(table, [
+			"w-full",
+			"text-left",
+			"text-sm",
+			"text-copy-light",
+		]);
+		if (wrapper) {
+			expectToHaveClasses(wrapper, [
+				"relative",
+				"w-full",
+				"overflow-x-auto",
+				"rounded-lg",
+				"shadow-md",
+				"bg-surface-dark",
+				"text-copy-light",
+				"h-full",
+				"max-h-[75vh]",
+			]);
+		}
+		if (caption) {
+			expectToHaveClasses(caption, [
+				"py-2",
+				"text-sm",
+				"font-bold",
+				"text-copy-light",
+			]);
+		}
+		if (tableRowHead) {
+			expectToHaveClasses(tableRowHead, [
+				"border-b",
+				"last:border-0",
+				"border-table-dark",
+				"bg-table-dark",
+			]);
+		}
+		if (tableRowBody) {
+			expectToHaveClasses(tableRowBody, [
+				"border-b",
+				"last:border-0",
+				"border-table-dark",
+				"odd:bg-table-dark-odd",
+				"even:bg-table-dark-even",
+			]);
+		}
+		if (tableCellHead) {
+			expectToHaveClasses(tableCellHead, ["px-4", "py-3"]);
+		}
+		if (tableCellBody) {
+			expectToHaveClasses(tableCellBody, ["p-4"]);
+		}
+	});
 });
 
 describe("Table components", () => {

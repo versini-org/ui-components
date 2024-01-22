@@ -9,20 +9,27 @@ export const CELL_WRAPPER_BODY = "tbody";
 export const getTableClasses = ({
 	kind,
 	className,
+	wrapperClassName,
 	stickyHeader,
 	spacing,
 }: {
 	kind: string;
 	className?: string;
 	stickyHeader?: boolean;
+	wrapperClassName?: string;
 } & SpacingProps) => {
 	return {
-		wrapper: clsx("relative w-full rounded-lg shadow-md", getSpacing(spacing), {
-			"overflow-x-auto": !stickyHeader,
-			"overflow-y-scroll": stickyHeader,
-			"bg-surface-dark text-copy-light": kind === "dark",
-			"bg-surface-light text-copy-dark": kind === "light",
-		}),
+		wrapper: clsx(
+			"relative w-full rounded-lg shadow-md",
+			getSpacing(spacing),
+			{
+				"overflow-x-auto": !stickyHeader,
+				"overflow-y-scroll": stickyHeader,
+				"bg-surface-dark text-copy-light": kind === "dark",
+				"bg-surface-light text-copy-dark": kind === "light",
+			},
+			wrapperClassName,
+		),
 		table: clsx("w-full text-left text-sm", className, {
 			"text-copy-light": kind === "dark",
 			"text-copy-dark": kind === "light",
