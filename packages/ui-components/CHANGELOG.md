@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.32.1](https://github.com/aversini/ui-components/compare/ui-components-v4.32.0...ui-components-v4.32.1) (2024-01-24)
+
+
+### Bug Fixes
+
+* bump to recent bundle size and update configuration ([016c6e6](https://github.com/aversini/ui-components/commit/016c6e615fbd8a3bb8ef69b11e6ad58ff3b36875))
+* using bundlesize to report size in PR ([61133c9](https://github.com/aversini/ui-components/commit/61133c957effc9d0fd5e996e574ba56458a6ca14))
+
 ## [4.32.0](https://github.com/aversini/ui-components/compare/ui-components-v4.31.0...ui-components-v4.32.0) (2024-01-22)
 
 
