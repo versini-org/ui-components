@@ -158,5 +158,31 @@
       "limit": "8 KB",
       "passed": true
     }
+  },
+  "4.32.2": {
+    "../bundlesize/dist/index.html": {
+      "fileSize": 550,
+      "fileSizeGzip": 334,
+      "limit": "2 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/assets/style.css": {
+      "fileSize": 45404,
+      "fileSizeGzip": 7270,
+      "limit": "8 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/assets/index.js": {
+      "fileSize": 53606,
+      "fileSizeGzip": 18124,
+      "limit": "18 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/assets/vendor.js": {
+      "fileSize": 199425,
+      "fileSizeGzip": 66477,
+      "limit": "67 KB",
+      "passed": true
+    }
   }
 }
