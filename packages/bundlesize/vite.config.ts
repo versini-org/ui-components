@@ -1,21 +1,22 @@
 import fs from "fs-extra";
 import { defineConfig } from "vite";
 
-import { externalDependencies } from "../../configuration/vite.common";
-
-const packageJson = fs.readJSONSync("package.json");
-
-const buildTime = new Date()
-	.toLocaleString("en-US", {
-		timeZone: "America/New_York",
-		timeZoneName: "short",
-		year: "numeric",
-		month: "2-digit",
-		day: "2-digit",
-		hour: "2-digit",
-		minute: "2-digit",
-	})
-	.replace(/,/g, "");
+const VENDOR_CHUNK = "vendorChunk";
+const packageJson = fs.readJSONSync("../ui-components/package.json");
+const prodDependencies = Object.keys(packageJson.dependencies).filter(
+	(dependency) =>
+		dependency !== "react" &&
+		dependency !== "react-dom" &&
+		dependency !== "react/jsx-runtime" &&
+		dependency !== "react-dom/server" &&
+		dependency !== "tailwindcss",
+);
+prodDependencies.push(
+	"react-dom",
+	"react-dom/server",
+	"react",
+	"react/jsx-runtime",
+);
 
 export default defineConfig({
 	esbuild: {
@@ -25,16 +26,23 @@ export default defineConfig({
 	},
 	build: {
 		rollupOptions: {
-			external: externalDependencies,
 			output: {
 				assetFileNames: "assets/style[extname]",
 				entryFileNames: "assets/[name].js",
+				/**
+				 * Manually creating chunks for prod dependencies.
+				 */
+				manualChunks: {
+					[VENDOR_CHUNK]: prodDependencies,
+				},
+				chunkFileNames(chunkInfo) {
+					if (chunkInfo.name.includes(VENDOR_CHUNK)) {
+						return "assets/vendor.js";
+					}
+					return "[name]-[hash].js";
+				},
 			},
 		},
-	},
-	define: {
-		"import.meta.env.BUILDTIME": JSON.stringify(buildTime),
-		"import.meta.env.BUILDVERSION": JSON.stringify(packageJson.version),
 	},
 	plugins: [],
 });
