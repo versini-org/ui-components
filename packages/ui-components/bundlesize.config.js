@@ -10,12 +10,16 @@ export default {
 			limit: "2 KB",
 		},
 		{
+			path: `${bundlePath}/assets/style.css`,
+			limit: "8 KB",
+		},
+		{
 			path: `${bundlePath}/assets/index.js`,
 			limit: "18 KB",
 		},
 		{
-			path: `${bundlePath}/assets/style.css`,
-			limit: "8 KB",
+			path: `${bundlePath}/assets/vendor.js`,
+			limit: "67 KB",
 		},
 	],
 };
