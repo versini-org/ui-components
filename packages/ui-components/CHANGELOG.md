@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.32.2](https://github.com/aversini/ui-components/compare/ui-components-v4.32.1...ui-components-v4.32.2) (2024-01-28)
+
+
+### Bug Fixes
+
+* better bundle size dependency list including vendors ([c2d827d](https://github.com/aversini/ui-components/commit/c2d827dd6d2d11908b7861b33b08b98fe76b4944))
+
 ## [4.32.1](https://github.com/aversini/ui-components/compare/ui-components-v4.32.0...ui-components-v4.32.1) (2024-01-24)
 
 
