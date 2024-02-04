@@ -32,9 +32,9 @@ jobs:
       - name: Build Packages
         if: ${{ steps.release.outputs.releases_created }}
         run: |
-          corepack enable
-          yarn set version berry
-          yarn install
+          export COREPACK_ENABLE_STRICT=0
+          corepack enable pnpm
+          pnpm install
           git checkout yarn.lock
           npx lerna run build
 

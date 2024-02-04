@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: |
+          export COREPACK_ENABLE_STRICT=0
           corepack enable pnpn
           pnpm install
           npx lerna run build --ignore @versini/documentation
@@ -46,6 +47,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: |
+          export COREPACK_ENABLE_STRICT=0
           corepack enable pnpm
           pnpm install
           npx lerna run lint --ignore @versini/documentation
@@ -81,6 +83,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: |
+          export COREPACK_ENABLE_STRICT=0
           corepack enable pnpm
           pnpm install
           npx lerna run build --ignore @versini/documentation
