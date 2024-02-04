@@ -37,7 +37,6 @@ jobs:
         run: |
           corepack enable pnpm
           pnpm install
-          git checkout yarn.lock
           npx lerna run build
 
       # Release Please has already incremented versions
