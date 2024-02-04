@@ -22,7 +22,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: |
           export COREPACK_ENABLE_STRICT=0
-          corepack enable pnpn
+          corepack enable pnpm
           pnpm install
           npx lerna run build --ignore @versini/documentation
           npx lerna run stats:pr --scope=@versini/ui-components
