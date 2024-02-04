@@ -7,12 +7,14 @@
 	"private": true,
 	"scripts": {
 		"clean": "rimraf dist",
-		"build": "yarn run clean && vite build",
+		"build:js": "vite build",
+		"build": "npm-run-all --serial clean build:js",
 		"test": "echo \"WARNING: no test specified\" && exit 0",
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
 	},
 	"dependencies": {
 		"@versini/ui-components": "*",
+		"@versini/ui-hooks": "*",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
 	}

@@ -9,6 +9,9 @@ permissions:
   contents: write
   pull-requests: write
 
+env:
+  COREPACK_ENABLE_STRICT: 0
+
 jobs:
   release-please:
     runs-on: ubuntu-latest
@@ -32,9 +35,8 @@ jobs:
       - name: Build Packages
         if: ${{ steps.release.outputs.releases_created }}
         run: |
-          corepack enable
-          yarn set version berry
-          yarn install
+          corepack enable pnpm
+          pnpm install
           git checkout yarn.lock
           npx lerna run build
 
