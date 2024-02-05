@@ -6,10 +6,6 @@ export default {
 	},
 	sizes: [
 		{
-			path: `${bundlePath}/index.html`,
-			limit: "2 KB",
-		},
-		{
 			path: `${bundlePath}/assets/style.css`,
 			limit: "8 KB",
 		},
