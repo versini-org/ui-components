@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.32.4](https://github.com/aversini/ui-components/compare/ui-components-v4.32.3...ui-components-v4.32.4) (2024-02-05)
+
+
+### Bug Fixes
+
+* removing index from bundle size ([f9dd070](https://github.com/aversini/ui-components/commit/f9dd07092703272254119e03417f2dffedabfb97))
+
 ## [4.32.3](https://github.com/aversini/ui-components/compare/ui-components-v4.32.2...ui-components-v4.32.3) (2024-02-04)
 
 
