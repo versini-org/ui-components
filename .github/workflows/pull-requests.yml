@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: |
-          corepack enable pnpm
+          corepack enable
           pnpm install
           npx lerna run build --ignore @versini/documentation
           npx lerna run stats:pr --scope=@versini/ui-components
@@ -49,7 +49,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: |
-          corepack enable pnpm
+          corepack enable
           pnpm install
           npx lerna run lint --ignore @versini/documentation
           npx lerna run build --ignore @versini/documentation
@@ -84,7 +84,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: |
-          corepack enable pnpm
+          corepack enable
           pnpm install
           npx lerna run build --ignore @versini/documentation
           npx lerna run stats:release --scope=@versini/ui-components
