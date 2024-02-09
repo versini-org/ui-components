@@ -30,13 +30,8 @@ export const Basic: Story = {
 		<div className="grid">
 			<Footer
 				{...args}
-				row1={
-					<div>
-						App Name v{import.meta.env.BUILDVERSION} -{" "}
-						{import.meta.env.BUILDTIME}
-					</div>
-				}
-				row2={<div>&copy; {new Date().getFullYear()} something something</div>}
+				row1={<div>App Name v1.0.0</div>}
+				row2={<div>something something</div>}
 			/>
 		</div>
 	),
