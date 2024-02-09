@@ -109,10 +109,6 @@ export default defineConfig(({ mode }) => {
 				"top-level-await": true,
 			},
 		},
-		define: {
-			"import.meta.env.BUILDTIME": JSON.stringify(buildTime),
-			"import.meta.env.BUILDVERSION": JSON.stringify(packageJson.version),
-		},
 		plugins: [],
 	};
 });
