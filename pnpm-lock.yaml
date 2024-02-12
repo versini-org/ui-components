@@ -59,8 +59,8 @@ importers:
         version: 9.0.1
     devDependencies:
       '@storybook/addon-a11y':
-        specifier: 7.6.12
-        version: 7.6.12
+        specifier: 7.6.14
+        version: 7.6.14
       '@storybook/addon-essentials':
         specifier: 7.6.12
         version: 7.6.12(react-dom@18.2.0)(react@18.2.0)
@@ -3313,10 +3313,10 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
-  /@storybook/addon-a11y@7.6.12:
-    resolution: {integrity: sha512-Y4vGTI7VslAt/PSpZZsFieceOkXHLagTsz9Zba4s1cw7Dd8KFB1+NcjkMmo6BhGq7K17JQljosXSbGhOoqrMVg==}
+  /@storybook/addon-a11y@7.6.14:
+    resolution: {integrity: sha512-axGdr6a+6TvSV1fgi4Wbmx9CzY+jav1pR6zDGkoIcIwnu9ly//Ya5UlgMnEH467Rr+e50fPdPdSI22Pw6oPZUA==}
     dependencies:
-      '@storybook/addon-highlight': 7.6.12
+      '@storybook/addon-highlight': 7.6.14
       axe-core: 4.8.3
     dev: true
 
@@ -3419,6 +3419,12 @@ packages:
 
   /@storybook/addon-highlight@7.6.12:
     resolution: {integrity: sha512-rWNEyBhwncXEDd9z7l67BLBIPqn0SRI/CJpZvCSF5KLWrVaoSEDF8INavmbikd1JBMcajJ28Ur6NsGj+eJjJiw==}
+    dependencies:
+      '@storybook/global': 5.0.0
+    dev: true
+
+  /@storybook/addon-highlight@7.6.14:
+    resolution: {integrity: sha512-VQTgLm6jPKN7DOhrx0mY5yrhQxOiidQt4yoazJTgzn+aV7zBFKn+GtF1W38QrnFtq5Mr8VJsEByEdtVCqMcmyw==}
     dependencies:
       '@storybook/global': 5.0.0
     dev: true
@@ -12602,7 +12608,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.18.20
-      postcss: 8.4.33
+      postcss: 8.4.35
       rollup: 4.9.6
     optionalDependencies:
       fsevents: 2.3.3
