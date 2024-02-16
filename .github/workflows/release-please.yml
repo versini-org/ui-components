@@ -76,7 +76,7 @@ jobs:
       - run: |
           corepack enable
           pnpm install
-          npx lerna run build --scope=@versini/documentation
+          npx lerna run build
       - name: Setup Pages
         if: ${{ always() }}
         uses: actions/configure-pages@v4
