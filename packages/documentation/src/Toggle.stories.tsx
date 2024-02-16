@@ -1,17 +1,8 @@
-import type { Meta } from "@storybook/react";
+import type { Story } from "@ladle/react";
 import { Toggle } from "@versini/ui-components";
 import { useState } from "react";
 
-const meta: Meta<typeof Toggle> = {
-	component: Toggle,
-	parameters: {
-		controls: { exclude: ["spacing"], sort: "requiredFirst" },
-	},
-};
-
-export default meta;
-
-export const Basic = () => {
+export const Basic: Story<any> = () => {
 	const [checked, setChecked] = useState(false);
 
 	return (
