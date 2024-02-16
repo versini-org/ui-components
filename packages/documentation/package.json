@@ -5,7 +5,10 @@
 	"author": "Arno Versini",
 	"private": true,
 	"scripts": {
-		"build": "ladle build --outDir dist",
+		"build:ci": "npm-run-all --serial clean build:docs:ci",
+		"build:docs:ci": "ladle build --outDir dist --base /ui-components",
+		"build:docs": "ladle build --outDir dist",
+		"build": "npm-run-all --serial clean build:docs",
 		"clean": "rimraf dist",
 		"dev": "ladle serve",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
