@@ -2,6 +2,10 @@ import type { Story } from "@ladle/react";
 import { Toggle } from "@versini/ui-components";
 import { useState } from "react";
 
+export default {
+	title: "Form components/Toggle",
+};
+
 export const Basic: Story<any> = () => {
 	const [checked, setChecked] = useState(false);
 
@@ -19,7 +23,7 @@ export const Basic: Story<any> = () => {
 				</div>
 			</div>
 
-			<div className="min-h-10 bg-slate-500 p-11">
+			<div className="min-h-10 p-11">
 				<div className="flex flex-wrap gap-2">
 					<Toggle
 						onChange={setChecked}

@@ -8,6 +8,7 @@ import {
 } from "@versini/ui-components";
 
 export default {
+	title: "Components/Flexgrid",
 	args: {
 		className: "",
 		rowGap: 1,
@@ -48,7 +49,7 @@ export default {
 };
 
 const Container = ({ children }: { children: React.ReactNode }) => (
-	<div className="bg-slate-500 p-11">{children}</div>
+	<div className="bg-slate-100 p-11">{children}</div>
 );
 
 export const Basic: Story<any> = (args) => (
@@ -144,7 +145,7 @@ export const Interactive: Story<any> = (args) => (
 				<div
 					style={{
 						padding: "5px",
-						backgroundColor: "#e5f2e9",
+						backgroundColor: "rgb(133 209 156)",
 					}}
 				>
 					Cell 1
@@ -156,7 +157,7 @@ export const Interactive: Story<any> = (args) => (
 				<div
 					style={{
 						padding: "10px",
-						backgroundColor: "#e5f2e9",
+						backgroundColor: "rgb(133 209 156)",
 					}}
 				>
 					Cell 2
@@ -168,7 +169,7 @@ export const Interactive: Story<any> = (args) => (
 				<div
 					style={{
 						padding: "15px",
-						backgroundColor: "#e5f2e9",
+						backgroundColor: "rgb(133 209 156)",
 					}}
 				>
 					Cell 3
@@ -189,7 +190,7 @@ export const WithLoginForm: Story<any> = (args) => (
 					<TextInput
 						type="password"
 						name="password"
-						label="Enter your password here"
+						label="Enter your password"
 					/>
 				</FlexgridItem>
 

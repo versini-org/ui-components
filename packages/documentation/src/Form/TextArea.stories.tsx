@@ -18,6 +18,7 @@ const customTheme = {
 	"--av-focus-light": "#3e7d0e",
 };
 export default {
+	title: "Form components/TextArea",
 	args: {
 		label: "Type your question here",
 		name: "dude",
@@ -48,7 +49,7 @@ export default {
 };
 
 export const Basic: Story<any> = (args) => (
-	<div className="h-full bg-slate-500 p-11">
+	<div className="h-full p-11">
 		<form noValidate>
 			<div className="flex flex-wrap gap-2">
 				<TextArea {...args} />
@@ -63,7 +64,7 @@ Basic.args = {
 };
 
 export const RightElement: Story<any> = (args) => (
-	<div className="h-full bg-slate-500 p-11">
+	<div className="h-full p-11">
 		<form noValidate>
 			<div className="flex gap-2">
 				<TextArea {...args} />
@@ -81,7 +82,7 @@ RightElement.args = {
 };
 
 export const CustomTheme: Story<any> = (args) => (
-	<div className="h-full bg-slate-500 p-11">
+	<div className="h-full p-11">
 		<form noValidate>
 			<div className="flex gap-2">
 				<TextArea {...args} />

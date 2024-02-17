@@ -1,26 +1,32 @@
 import type { Story } from "@ladle/react";
-import { Button } from "@versini/ui-components";
+import { Anchor } from "@versini/ui-components";
+
+export default {
+	title: "Components/Anchor",
+};
 
 export const Basic: Story<any> = (args) => (
 	<div className="flex flex-wrap">
-		<Button {...args}>Button</Button>
-		<Button {...args}>Button</Button>
-		<Button {...args}>Button</Button>
-		<Button {...args}>Button</Button>
+		<Anchor {...args}>Anchor as a button</Anchor>
+		<Anchor {...args}>Anchor as a button lorem ipsum</Anchor>
+		<Anchor {...args}>Anchor as a button lorem ipsum dolor</Anchor>
+		<Anchor {...args}>Anchor as a button lorem ipsum dolor sit amet</Anchor>
 	</div>
 );
 
 Basic.args = {
-	disabled: false,
 	fullWidth: false,
 	kind: "dark",
 	focus: "light",
-	slim: false,
-	size: "medium",
 	raw: false,
+	link: "https://www.google.com",
 	noBorder: false,
-	spacing: { r: 2 },
+	slim: false,
+	size: "small",
+	noTruncate: false,
+	spacing: { r: 2, b: 2 },
 };
+
 Basic.argTypes = {
 	kind: {
 		options: ["dark", "light"],

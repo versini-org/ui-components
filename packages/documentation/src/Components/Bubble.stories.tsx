@@ -1,6 +1,10 @@
 import type { Story } from "@ladle/react";
 import { Bubble } from "@versini/ui-components";
 
+export default {
+	title: "Components/Bubble",
+};
+
 export const Basic: Story<any> = (args) => (
 	<div className="h-96 min-h-10 bg-slate-900 p-11">
 		<Bubble kind="right" spacing={{ b: 4 }} {...args}>

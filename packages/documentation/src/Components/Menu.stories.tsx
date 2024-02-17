@@ -15,6 +15,7 @@ import {
 import { useState } from "react";
 
 export default {
+	title: "Components/Menu",
 	args: {
 		defaultPlacement: "bottom-start",
 	},
@@ -57,7 +58,7 @@ export const Basic: Story<any> = (args) => (
 );
 
 export const WithIcons: Story<any> = (args) => (
-	<div className="flex min-h-10 flex-wrap bg-slate-500 p-11">
+	<div className="flex min-h-10 flex-wrap p-11">
 		<Button size="small" spacing={{ r: 2 }}>
 			Button
 		</Button>
@@ -102,7 +103,7 @@ export const WithMessageBox: Story<any> = (args) => {
 			>
 				<p>Are you sure you want to log out?</p>
 			</Panel>
-			<div className="flex min-h-10 flex-wrap bg-slate-500 p-11">
+			<div className="flex min-h-10 flex-wrap p-11">
 				<Button size="small" spacing={{ r: 2 }}>
 					Button
 				</Button>
