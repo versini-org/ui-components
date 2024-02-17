@@ -3,6 +3,7 @@ import { Button, Panel } from "@versini/ui-components";
 import { useState } from "react";
 
 export default {
+	title: "Components/Panel",
 	args: {
 		open: false,
 		title: "Panel Title",

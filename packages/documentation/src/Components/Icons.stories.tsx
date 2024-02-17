@@ -17,8 +17,12 @@ import {
 	IconUser,
 } from "@versini/ui-components";
 
+export default {
+	title: "Components/Icons",
+};
+
 export const Basic: Story<any> = (args) => (
-	<div className="flex flex-wrap gap-2">
+	<div className="flex flex-wrap gap-2 bg-slate-300 p-10">
 		<IconBack {...args} />
 		<IconChart {...args} />
 		<IconClose {...args} />

@@ -2,6 +2,7 @@ import type { Story } from "@ladle/react";
 import { Footer } from "@versini/ui-components";
 
 export default {
+	title: "Components/Footer",
 	args: {
 		noPaddings: false,
 		kind: "dark",

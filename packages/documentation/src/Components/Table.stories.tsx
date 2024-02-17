@@ -11,6 +11,7 @@ import {
 } from "@versini/ui-components";
 
 export default {
+	title: "Components/Table",
 	args: {
 		kind: "dark",
 		summary: "A table about Dune",
@@ -36,7 +37,7 @@ export const Basic: Story<any> = (args) => {
 		{ id: 3, character: "Duncan Idaho", actor: "Jason Momoa" },
 	];
 	return (
-		<div className="min-h-10 bg-slate-500 p-11">
+		<div className="min-h-10 p-11">
 			<div className="flex flex-wrap gap-2">
 				<Table caption="Dune" {...args}>
 					<TableHead>
@@ -83,7 +84,7 @@ export const WithAction: Story<any> = (args) => {
 	];
 
 	return (
-		<div className="min-h-10 bg-slate-500 p-11">
+		<div className="min-h-10 p-11">
 			<div className="flex flex-wrap gap-2">
 				<Table {...args}>
 					<TableHead className="uppercase">
@@ -188,7 +189,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 	];
 
 	return (
-		<div className="min-h-10 bg-slate-500 p-11">
+		<div className="min-h-10 p-11">
 			<div className="flex flex-wrap gap-2">
 				<Table maxHeight="238px" stickyHeader {...args}>
 					<TableHead className="uppercase">

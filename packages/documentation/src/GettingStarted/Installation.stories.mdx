@@ -1,0 +1,69 @@
+import { Meta } from "@ladle/react";
+import { Button, Card } from "@versini/ui-components";
+
+<Meta title="Getting started/Installation" />
+
+<article className="prose prose-slate">
+
+# UI Components
+
+> UI Components provides a strong, responsive, and accessible library of foundational React components.
+
+## Installation
+
+The <strong>UI-Components</strong> library is available as a npm package.
+
+### Updating your dependencies
+
+```bash
+$ npm install --save @versini/ui-components
+```
+
+**Note**: You also need to install React and React-DOM (at least 18.0.0 or above).
+
+```bash
+$ npm install --save react react-dom
+```
+
+## Usage
+
+```jsx
+import { Button, Card } from "@versini/ui-components";
+
+/**
+ * Now that the required components are
+ * available in the scope, you can use them
+ * in your render method in JSX:
+ */
+function App() {
+	return (
+		<Card
+			header="Welcome to UI Components"
+			footer={
+				<Button kind="light" noBorder>
+					Hooray
+				</Button>
+			}
+		>
+			<p>Hello World</p>
+		</Card>
+	);
+}
+```
+
+If everything works well, this is what you should see in your page:
+
+<div className="not-prose">
+	<Card
+		header="Welcome to UI Components"
+		footer={
+			<Button kind="light" noBorder>
+				Hooray
+			</Button>
+		}
+	>
+		<p>Hello World</p>
+	</Card>
+</div>
+
+</article>
