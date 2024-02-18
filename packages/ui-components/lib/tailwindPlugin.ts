@@ -111,23 +111,9 @@ export const twPlugin = {
 		const content = tailwindContentPath;
 		const plugins = tailwindPlugins;
 
-		if (config?.safelist?.length) {
-			config.safelist.push(...safelist);
-		} else {
-			config.safelist = safelist;
-		}
-
-		if (config?.content?.length) {
-			config.content.push(...content);
-		} else {
-			config.content = content;
-		}
-
-		if (config?.plugins?.length) {
-			config.plugins.push(...plugins);
-		} else {
-			config.plugins = plugins;
-		}
+		config.safelist = [...(config.safelist || []), ...safelist];
+		config.content = [...(config.content || []), ...content];
+		config.plugins = [...(config.plugins || []), ...plugins];
 
 		return config as Config;
 	},
