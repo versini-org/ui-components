@@ -14,6 +14,7 @@ import { Card } from "./Card/Card";
 import { Flexgrid } from "./Flexgrid/Flexgrid";
 import { FlexgridItem } from "./Flexgrid/FlexgridItem";
 import { Footer } from "./Footer/Footer";
+import { Header } from "./Header/Header";
 import { IconBack } from "./Icons/IconBack";
 import { IconChart } from "./Icons/IconChart";
 import { IconClose } from "./Icons/IconClose";
@@ -59,6 +60,7 @@ export {
 	Flexgrid,
 	FlexgridItem,
 	Footer,
+	Header,
 	IconBack,
 	IconChart,
 	IconClose,
