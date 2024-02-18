@@ -1,6 +1,7 @@
 export const BUTTON_CLASSNAME = "av-button";
 export const FOOTER_CLASSNAME = "av-footer";
 export const MAIN_CLASSNAME = "av-main";
+export const HEADER_CLASSNAME = "av-header";
 
 export const TEXT_INPUT_CLASSNAME = "av-text-input";
 export const TEXT_INPUT_SIMPLE_CLASSNAME = "av-text-input-simple";
