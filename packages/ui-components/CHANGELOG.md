@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.33.0](https://github.com/aversini/ui-components/compare/ui-components-v4.32.5...ui-components-v4.33.0) (2024-02-18)
+
+
+### Features
+
+* **Header:** adding Header component to the library ([a76b460](https://github.com/aversini/ui-components/commit/a76b460843da639c7bd54b95d6864b24657f169c))
+* **Icons:** adding IconNext, IconPrevious and IconGitHub ([8fb0099](https://github.com/aversini/ui-components/commit/8fb00997830445eca639d3373c12512b798a62e8))
+
+
+### Bug Fixes
+
+* **Footer:** Footer should follow the same rules at the Main component layout ([895295c](https://github.com/aversini/ui-components/commit/895295c1b4f008597730e91f128ddf39379c571c))
+
 ## [4.32.5](https://github.com/aversini/ui-components/compare/ui-components-v4.32.4...ui-components-v4.32.5) (2024-02-18)
 
 
