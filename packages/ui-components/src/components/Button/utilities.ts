@@ -19,6 +19,7 @@ type getButtonClassesProps = {
 	type: typeof TYPE_BUTTON | typeof TYPE_ICON | typeof TYPE_LINK;
 
 	className?: string;
+	labelLeft?: string;
 	labelRight?: string;
 	slim?: boolean;
 } & SpacingProps;
@@ -28,9 +29,11 @@ const getButtonSizesClasses = ({
 	slim,
 	size,
 	labelRight,
+	labelLeft,
 }: {
 	size: string;
 	type: string;
+	labelLeft?: string;
 	labelRight?: string;
 	slim?: boolean;
 }) => {
@@ -55,17 +58,16 @@ const getButtonSizesClasses = ({
 
 		case TYPE_ICON:
 			return clsx("inline-flex items-center justify-center", {
-				"h-6 w-6 p-0": (size === "small" || slim) && !labelRight,
-				"h-6 pl-2 pr-4 text-sm font-medium":
-					(size === "small" || slim) && labelRight,
-
-				"h-8 w-8 p-1": size === "medium" && !slim && !labelRight,
-				"h-8 pl-2 pr-4 text-base font-medium":
-					size === "medium" && !slim && labelRight,
-
-				"h-12 w-12 p-2": size === "large" && !slim && !labelRight,
-				"h-12 pl-2 pr-4 text-lg font-medium":
-					size === "large" && !slim && labelRight,
+				"h-6 w-6 p-0": (size === "small" || slim) && !(labelRight || labelLeft),
+				"h-6 px-4 text-sm font-medium":
+					(size === "small" || slim) && (labelRight || labelLeft),
+				"h-8 w-8 p-1": size === "medium" && !slim && !(labelRight || labelLeft),
+				"h-8 px-4 text-base font-medium":
+					size === "medium" && !slim && (labelRight || labelLeft),
+				"h-12 w-12 p-2":
+					size === "large" && !slim && !(labelRight || labelLeft),
+				"h-12 px-4 text-lg font-medium":
+					size === "large" && !slim && (labelRight || labelLeft),
 			});
 	}
 };
@@ -128,6 +130,7 @@ export const getButtonClasses = ({
 	size,
 	noBorder,
 	labelRight,
+	labelLeft,
 	spacing,
 }: getButtonClassesProps) => {
 	return raw
@@ -137,7 +140,7 @@ export const getButtonClasses = ({
 				className,
 				getSpacing(spacing),
 				getButtonBaseClasses({ kind }),
-				getButtonSizesClasses({ type, slim, size, labelRight }),
+				getButtonSizesClasses({ type, slim, size, labelRight, labelLeft }),
 				getButtonBorderClasses({ kind, noBorder }),
 				getButtonFocusClasses({ focus }),
 				getButtonHoverClasses({ kind, disabled }),
