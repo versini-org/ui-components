@@ -67,5 +67,19 @@
 		"name": "IconBack",
 		"title": "Back",
 		"monotone": true
+	},
+	"arrow-right": {
+		"name": "IconNext",
+		"title": "Next",
+		"monotone": true
+	},
+	"arrow-left": {
+		"name": "IconPrevious",
+		"title": "Previous",
+		"monotone": true
+	},
+	"github": {
+		"name": "IconGitHub",
+		"title": "GitHub"
 	}
 }

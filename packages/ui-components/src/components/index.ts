@@ -23,9 +23,12 @@ import { IconCopy } from "./Icons/IconCopy";
 import { IconDelete } from "./Icons/IconDelete";
 import { IconDog } from "./Icons/IconDog";
 import { IconEdit } from "./Icons/IconEdit";
+import { IconGitHub } from "./Icons/IconGitHub";
 import { IconHide } from "./Icons/IconHide";
 import { IconHistory } from "./Icons/IconHistory";
 import { IconInfo } from "./Icons/IconInfo";
+import { IconNext } from "./Icons/IconNext";
+import { IconPrevious } from "./Icons/IconPrevious";
 import { IconProfile } from "./Icons/IconProfile";
 import { IconRestore } from "./Icons/IconRestore";
 import { IconSettings } from "./Icons/IconSettings";
@@ -69,9 +72,12 @@ export {
 	IconDelete,
 	IconDog,
 	IconEdit,
+	IconGitHub,
 	IconHide,
 	IconHistory,
 	IconInfo,
+	IconNext,
+	IconPrevious,
 	IconProfile,
 	IconRestore,
 	IconSettings,
