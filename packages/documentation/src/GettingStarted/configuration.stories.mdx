@@ -1,0 +1,72 @@
+import { Meta } from "@ladle/react";
+import { Button, Flexgrid, FlexgridItem } from "@versini/ui-components";
+import { linkTo } from "@ladle/react";
+
+<Meta title="Getting started/Configuration" />
+
+## Configuration
+
+### JavaScript
+
+<div className="prose">
+	<ul>
+		<li>
+			UI Components come un-bundled and un-minified, which means you need to use
+			a bundler such as Webpack, Vite or Rollup to bundle components into your
+			application.
+		</li>
+		<li>
+			UI Components are tree-shakeable, side-effect free and each component
+			style is self-contained.
+		</li>
+		<li>
+			Please refer to each component API documentation (under the Components or
+			Form components menu) to see how they should be imported, what their
+			individual props are as well as many different examples.
+		</li>
+	</ul>
+</div>
+
+### CSS
+
+You can use the <strong>UI-Components</strong> library with or without <strong>TailwindCSS</strong>. Depending on your situation, you can either use the pre-built CSS or the TailwindCSS plugin to build your own styles and take advantage of tree-shaking unused styles.
+
+### Without TailwindCSS
+
+If you are not using TailwindCSS, you can use the pre-built CSS file. Just import it in your entry file:
+
+```javascript
+// index.js
+import "@versini/ui-components/dist/style.css";
+```
+
+### With TailwindCSS
+
+If you are using TailwindCSS, you can use the <strong>UI-Components</strong> library TailwindCSS plugin:
+
+```javascript
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+
+import { twPlugin } from "@versini/ui-components/dist/utilities";
+
+export default twPlugin.merge({
+	// this is an example, you can change the path to your files
+	content: ["./src/**/*.{js,ts,jsx,tsx}"],
+});
+```
+
+<div className="not-av-typography">
+	<Flexgrid alignHorizontal="space-between">
+		<FlexgridItem>
+			<Button noBorder onClick={linkTo("getting-started--installation")}>
+				{"Previous: installation"}
+			</Button>
+		</FlexgridItem>
+		<FlexgridItem>
+			<Button noBorder onClick={linkTo("getting-started--usage")}>
+				{"Next: usage"}
+			</Button>
+		</FlexgridItem>
+	</Flexgrid>
+</div>

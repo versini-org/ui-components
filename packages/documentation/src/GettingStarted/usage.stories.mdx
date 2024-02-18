@@ -1,0 +1,57 @@
+import { Meta } from "@ladle/react";
+import { Button, Card, Flexgrid, FlexgridItem } from "@versini/ui-components";
+import { linkTo } from "@ladle/react";
+
+<Meta title="Getting started/Usage" />
+
+## Usage
+
+```jsx
+// App.jsx
+import { Button, Card } from "@versini/ui-components";
+
+/**
+ * Now that the required components are
+ * available in the scope, you can use them
+ * in your return method in JSX:
+ */
+function App() {
+	return (
+		<Card
+			header="Welcome to UI Components"
+			footer={
+				<Button kind="light" noBorder>
+					Hooray
+				</Button>
+			}
+		>
+			<p>Hello World</p>
+		</Card>
+	);
+}
+```
+
+If everything works well, this is what you should see in your page:
+
+<div className="not-av-typography mt-4">
+	<Card
+		header="Welcome to UI Components"
+		footer={
+			<Button kind="light" noBorder>
+				Hooray
+			</Button>
+		}
+	>
+		<p>Hello World</p>
+	</Card>
+</div>
+
+<div className="not-av-typography mt-8">
+	<Flexgrid alignHorizontal="flex-start">
+		<FlexgridItem>
+			<Button noBorder onClick={linkTo("getting-started--configuration")}>
+				{"Previous: configuration"}
+			</Button>
+		</FlexgridItem>
+	</Flexgrid>
+</div>
