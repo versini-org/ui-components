@@ -89,6 +89,10 @@ export type ButtonIconProps = {
 	 */
 	label?: string;
 	/**
+	 * The label to show to the left of the icon.
+	 */
+	labelLeft?: string;
+	/**
 	 * The label to show to the right of the icon.
 	 */
 	labelRight?: string;

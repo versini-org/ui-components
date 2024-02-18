@@ -19,6 +19,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			label,
 			size = "medium",
 			labelRight,
+			labelLeft,
 			spacing,
 
 			...otherProps
@@ -36,6 +37,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			noBorder,
 			size,
 			labelRight,
+			labelLeft,
 			spacing,
 		});
 
@@ -48,6 +50,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 				aria-label={ariaLabel || label}
 				{...otherProps}
 			>
+				{labelLeft && <span className="pr-2">{labelLeft}</span>}
 				{children}
 				{labelRight && <span className="pl-2">{labelRight}</span>}
 			</button>
