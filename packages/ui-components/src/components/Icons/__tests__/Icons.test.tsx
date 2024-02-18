@@ -10,9 +10,12 @@ import {
 	IconDelete,
 	IconDog,
 	IconEdit,
+	IconGitHub,
 	IconHide,
 	IconHistory,
 	IconInfo,
+	IconNext,
+	IconPrevious,
 	IconProfile,
 	IconRestore,
 	IconSettings,
@@ -169,6 +172,27 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
+					<IconNext
+						data-testid="icon-next"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
+					<IconPrevious
+						data-testid="icon-previous"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
+					<IconGitHub
+						data-testid="icon-github"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 				</>,
 			);
 
@@ -188,6 +212,9 @@ describe("Generic Icons prop tests", () => {
 				"icon-user",
 				"icon-hide",
 				"icon-show",
+				"icon-next",
+				"icon-previous",
+				"icon-github",
 			].forEach(async (dataTestId) => {
 				await renderExpected({
 					dataTestId,

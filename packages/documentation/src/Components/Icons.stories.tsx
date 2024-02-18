@@ -7,9 +7,12 @@ import {
 	IconCopy,
 	IconDelete,
 	IconEdit,
+	IconGitHub,
 	IconHide,
 	IconHistory,
 	IconInfo,
+	IconNext,
+	IconPrevious,
 	IconProfile,
 	IconRestore,
 	IconSettings,
@@ -30,9 +33,12 @@ export const Basic: Story<any> = (args) => (
 		<IconCopy {...args} />
 		<IconDelete {...args} />
 		<IconEdit {...args} />
+		<IconGitHub {...args} />
 		<IconHide {...args} />
 		<IconHistory {...args} />
 		<IconInfo {...args} />
+		<IconNext {...args} />
+		<IconPrevious {...args} />
 		<IconProfile {...args} />
 		<IconRestore {...args} />
 		<IconSettings {...args} />
