@@ -2,13 +2,17 @@
 
 export default {
 	port: 8080,
-	defaultStory: "getting-started--installation",
-	storyOrder: ["getting-started*", "Components*", "Form-components*"],
-	appendToHead: `<style>
-    :root {
-      --ladle-bg-color-primary: rgb(100 116 139);
-    }
-  </style>`,
+	defaultStory: "getting-started--overview",
+	storyOrder: [
+		"getting-started--overview",
+		"getting-started--installation",
+		"getting-started--configuration",
+		"getting-started--usage",
+		"Components*",
+		"Form-components*",
+	],
+	appendToHead:
+		"<style>.ladle-background {background-color:rgb(100 116 139)}</style>",
 
 	hotkeys: {
 		search: ["/", "meta+p"],
