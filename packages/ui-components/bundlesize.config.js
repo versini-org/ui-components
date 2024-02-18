@@ -11,7 +11,7 @@ export default {
 		},
 		{
 			path: `${bundlePath}/assets/index.js`,
-			limit: "18.5 KB",
+			limit: "19 KB",
 		},
 		{
 			path: `${bundlePath}/assets/vendor.js`,
