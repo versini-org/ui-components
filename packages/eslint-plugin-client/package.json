@@ -7,7 +7,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"homepage": "https://github.com/aversini/ui-components/eslint-plugin-client",
+	"homepage": "https://github.com/aversini/ui-components",
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:aversini/ui-components.git"

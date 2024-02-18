@@ -6,7 +6,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"homepage": "https://github.com/aversini/ui-components/packages/ui-hooks",
+	"homepage": "https://github.com/aversini/ui-components",
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:aversini/ui-components.git"
