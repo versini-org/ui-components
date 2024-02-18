@@ -9,18 +9,16 @@ export const Footer = ({
 	kind = "dark",
 	row1,
 	row2,
+	noMargins = false,
 	noPaddings = false,
 	spacing,
+	raw = false,
 }: FooterProps) => {
-	const footerClass = clsx(
-		FOOTER_CLASSNAME,
-		`text-center text-xs text-copy-${kind}`,
-		className,
-		getSpacing(spacing),
-		{
-			"mb-[100px]": !noPaddings,
-		},
-	);
+	const footerClass = clsx(FOOTER_CLASSNAME, className, getSpacing(spacing), {
+		[`text-center text-xs text-copy-${kind}`]: !raw,
+		"mb-[100px]": !noMargins && !noPaddings && !raw,
+		"mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl": !raw,
+	});
 
 	return (
 		<footer className={footerClass}>

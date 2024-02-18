@@ -9,7 +9,8 @@
 		"lint": "lerna run lint",
 		"lint-staged": "lint-staged --config \"./configuration/lint-staged.config.cjs\"",
 		"prepare": "husky",
-		"test": "lerna run test"
+		"test": "lerna run test",
+		"test:coverage": "lerna run test:coverage"
 	},
 	"devDependencies": {
 		"@node-cli/bundlesize": "4.0.1",

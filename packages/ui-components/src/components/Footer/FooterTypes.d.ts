@@ -10,10 +10,21 @@ export type FooterProps = {
 	 */
 	kind?: "dark" | "light";
 	/**
-	 * Whether or not to render the Footer with paddings.
+	 * Whether or not to render the Footer with margins.
 	 * @default false
 	 */
+	noMargins?: boolean;
+	/**
+	 * Deprecated. Please use `noMargins` instead.
+	 * @default false
+	 * @deprecated
+	 */
 	noPaddings?: boolean;
+	/**
+	 * Whether or not to render the Footer component with no styles.
+	 * @default false
+	 */
+	raw?: boolean;
 	/**
 	 * The content to render in the first row.
 	 */
