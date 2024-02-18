@@ -1,9 +1,14 @@
 import typography from "@tailwindcss/typography";
 import { converter } from "culori";
 import plugin from "tailwindcss/plugin";
+import type { Config, OptionalConfig } from "tailwindcss/types/config";
 
 import { customCSS } from "./customCSS";
 import { tokens } from "./tokens";
+
+type TailwindConfig = {
+	content: string[];
+} & OptionalConfig;
 
 const parse = converter("rgb");
 
@@ -101,7 +106,7 @@ export const twPlugin = {
 	safelist: tailwindSafelist,
 	plugins: tailwindPlugins,
 
-	merge: (config: any) => {
+	merge: (config: TailwindConfig) => {
 		const safelist = tailwindSafelist;
 		const content = tailwindContentPath;
 		const plugins = tailwindPlugins;
@@ -124,6 +129,6 @@ export const twPlugin = {
 			config.plugins = plugins;
 		}
 
-		return config;
+		return config as Config;
 	},
 };
