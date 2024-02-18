@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
+import { expectToHaveClasses } from "../../../common/__tests__/helpers";
 import { FOOTER_CLASSNAME } from "../../../common/constants";
 import { Footer } from "../..";
 
@@ -13,27 +14,82 @@ describe("Footer modifiers", () => {
 	it("should render a default footer", async () => {
 		render(<Footer />);
 		const footer = await screen.findByRole("contentinfo");
-		expect(footer.className).toContain("text-center");
-		expect(footer.className).toContain(FOOTER_CLASSNAME);
+		expectToHaveClasses(footer, [
+			FOOTER_CLASSNAME,
+			"text-center",
+			"text-xs",
+			"text-copy-dark",
+			"mb-[100px]",
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"sm:mt-3",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
 	});
 
 	it("should render a dark footer", async () => {
 		render(<Footer kind="dark" />);
 		const footer = await screen.findByRole("contentinfo");
-		expect(footer.className).toContain("text-copy-dark");
+		expectToHaveClasses(footer, [
+			FOOTER_CLASSNAME,
+			"text-center",
+			"text-xs",
+			"text-copy-dark",
+			"mb-[100px]",
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"sm:mt-3",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
 	});
 
 	it("should render a light footer", async () => {
 		render(<Footer kind="light" />);
 		const footer = await screen.findByRole("contentinfo");
-		expect(footer.className).toContain("text-copy-light");
+		expectToHaveClasses(footer, [
+			FOOTER_CLASSNAME,
+			"text-center",
+			"text-xs",
+			"text-copy-light",
+			"mb-[100px]",
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"sm:mt-3",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
 	});
 
 	it("should render a footer with a custom class", async () => {
 		render(<Footer className="toto" />);
 		const footer = await screen.findByRole("contentinfo");
-		expect(footer.className).toContain("text-center");
-		expect(footer.className).toContain("toto");
+		expectToHaveClasses(footer, [
+			FOOTER_CLASSNAME,
+			"text-center",
+			"text-xs",
+			"text-copy-dark",
+			"mb-[100px]",
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"sm:mt-3",
+			"md:mx-auto",
+			"md:max-w-4xl",
+			"toto",
+		]);
 	});
 
 	it("should render a footer with one row (row1)", async () => {
@@ -60,5 +116,63 @@ describe("Footer modifiers", () => {
 		expect(row1).toBeDefined();
 		const row2 = await screen.findByText("row2");
 		expect(row2).toBeDefined();
+	});
+
+	it("should render a footer with no margins", async () => {
+		render(<Footer noMargins />);
+		const footer = await screen.findByRole("contentinfo");
+		expectToHaveClasses(footer, [
+			FOOTER_CLASSNAME,
+			"text-center",
+			"text-xs",
+			"text-copy-dark",
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"sm:mt-3",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+		expect(footer.className).not.toContain("mb-[100px]");
+	});
+
+	it("should render a footer with no margins with deprecated prop", async () => {
+		render(<Footer noPaddings />);
+		const footer = await screen.findByRole("contentinfo");
+		expectToHaveClasses(footer, [
+			FOOTER_CLASSNAME,
+			"text-center",
+			"text-xs",
+			"text-copy-dark",
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"sm:mt-3",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+		expect(footer.className).not.toContain("mb-[100px]");
+	});
+
+	it("should render a raw footer", async () => {
+		render(<Footer raw />);
+		const footer = await screen.findByRole("contentinfo");
+		expect(footer.className).toContain(FOOTER_CLASSNAME);
+		expect(footer.className).not.toContain("text-center");
+		expect(footer.className).not.toContain("text-xs");
+		expect(footer.className).not.toContain("text-copy-dark");
+		expect(footer.className).not.toContain("mt-0");
+		expect(footer.className).not.toContain("flex");
+		expect(footer.className).not.toContain("w-full");
+		expect(footer.className).not.toContain("flex-col");
+		expect(footer.className).not.toContain("p-2");
+		expect(footer.className).not.toContain("sm:mt-3");
+		expect(footer.className).not.toContain("md:mx-auto");
+		expect(footer.className).not.toContain("md:max-w-4xl");
+		expect(footer.className).not.toContain("mb-[100px]");
 	});
 });
