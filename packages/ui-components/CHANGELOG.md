@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.32.5](https://github.com/aversini/ui-components/compare/ui-components-v4.32.4...ui-components-v4.32.5) (2024-02-18)
+
+
+### Bug Fixes
+
+* better types for tailwind plugin ([e5332ac](https://github.com/aversini/ui-components/commit/e5332ac7bdaec9724dcf0df07962884e2de839a3))
+
 ## [4.32.4](https://github.com/aversini/ui-components/compare/ui-components-v4.32.3...ui-components-v4.32.4) (2024-02-05)
 
 

@@ -1,5 +1,5 @@
 {
 	"packages/eslint-plugin-client": "1.0.1",
-	"packages/ui-components": "4.32.4",
+	"packages/ui-components": "4.32.5",
 	"packages/ui-hooks": "2.2.0"
 }
