@@ -3,32 +3,30 @@
 @tailwind utilities;
 
 @layer components {
+	.av-typography strong:not(.not-av-typography strong) {
+		@apply text-copy-lighter;
+	}
+	.av-typography li:not(.not-av-typography li) {
+		@apply text-copy-lighter;
+	}
 	.av-typography p:not(.not-av-typography p) {
-		@apply text-lg leading-7;
+		@apply mb-0 text-lg leading-7 text-copy-lighter;
 	}
 	.av-typography h1:not(.not-av-typography h1) {
-		@apply mb-4 text-4xl font-bold;
+		@apply mb-4 text-4xl font-bold text-copy-light;
+		font-family: "Open Sans";
 	}
 	.av-typography h2:not(.not-av-typography h2) {
-		@apply mb-3 mt-6 text-3xl font-bold;
+		@apply mb-3 mt-6 text-3xl font-bold text-copy-light;
+		font-family: "Open Sans";
 	}
 	.av-typography h3:not(.not-av-typography h3) {
-		@apply mb-3 mt-3 text-2xl font-bold;
+		@apply mb-3 mt-3 text-2xl font-bold text-copy-light;
+		font-family: "Open Sans";
 	}
 	.av-typography blockquote p:not(.not-av-typography p) {
-		@apply mb-0 italic leading-7;
+		@apply mb-0 italic leading-7 text-copy-lighter;
 		font-family: Georgia, serif;
-	}
-	.av-typography code:not(.not-av-typography code) {
-		font-family: monospace;
-		font-size: 95%;
-		border-radius: 3px;
-		padding: 0.2em 0;
-		margin: 0;
-		color: #000;
-	}
-	.av-typography p:not(.not-av-typography p) {
-		@apply mb-1;
 	}
 	.av-typography pre:not(.not-av-typography pre) {
 		@apply my-8 rounded-lg bg-gray-100;

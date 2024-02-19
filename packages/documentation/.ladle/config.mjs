@@ -11,8 +11,10 @@ export default {
 		"Components*",
 		"Form-components*",
 	],
-	appendToHead:
-		"<style>.ladle-background {background-color:rgb(100 116 139)}</style>",
+	appendToHead: `
+		<style>.ladle-background {background-color:rgb(100 116 139)}</style>
+		<link preload="" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
+		`,
 
 	hotkeys: {
 		search: ["/", "meta+p"],

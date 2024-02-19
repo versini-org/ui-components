@@ -25,9 +25,10 @@ export const Provider: GlobalProvider = ({ children, globalState }) => {
 		<>
 			<div className={className}>{children}</div>
 			<Footer
+				kind="light"
 				row1={
 					<Flexgrid alignHorizontal="center" alignVertical="center">
-						<FlexgridItem>
+						<FlexgridItem className="text-copy-lighter">
 							UI Components v{import.meta.env.BUILDVERSION} -
 						</FlexgridItem>
 						<FlexgridItem>
@@ -44,7 +45,7 @@ export const Provider: GlobalProvider = ({ children, globalState }) => {
 					</Flexgrid>
 				}
 				row2={
-					<div>
+					<div className="text-copy-lighter">
 						&copy; {new Date().getFullYear()} {import.meta.env.OWNER}
 					</div>
 				}
