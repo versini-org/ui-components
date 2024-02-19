@@ -3,6 +3,9 @@ import { Footer } from "@versini/ui-components";
 
 export default {
 	title: "Components/Footer",
+	meta: {
+		importName: "Footer",
+	},
 	args: {
 		noMargins: false,
 		kind: "dark",

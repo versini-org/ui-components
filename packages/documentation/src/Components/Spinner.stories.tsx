@@ -3,6 +3,9 @@ import { Spinner } from "@versini/ui-components";
 
 export default {
 	title: "Components/Spinner",
+	meta: {
+		importName: "Spinner",
+	},
 	args: {
 		kind: "dark",
 		type: "circle",

@@ -16,6 +16,9 @@ import { useState } from "react";
 
 export default {
 	title: "Components/Menu",
+	meta: {
+		importName: "Menu, MenuItem, MenuSeparator",
+	},
 	args: {
 		defaultPlacement: "bottom-start",
 	},

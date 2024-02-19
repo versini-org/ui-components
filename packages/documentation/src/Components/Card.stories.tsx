@@ -3,13 +3,16 @@ import { Card } from "@versini/ui-components";
 
 export default {
 	title: "Components/Card",
+	meta: {
+		importName: "Card",
+	},
 	args: {
 		noBackground: false,
 	},
 };
 
 export const Basic: Story<any> = (args) => (
-	<div className="min-h-10 p-11">
+	<div className="min-h-10">
 		<div className="flex flex-wrap gap-2">
 			<Card {...args}>
 				<p>
@@ -34,7 +37,7 @@ Basic.args = {
 };
 
 export const Custom: Story<any> = (args) => (
-	<div className="min-h-10 p-11">
+	<div className="min-h-10">
 		<div className="flex flex-wrap gap-2">
 			<Card {...args}>
 				<p>

@@ -3,6 +3,9 @@ import { Bubble } from "@versini/ui-components";
 
 export default {
 	title: "Components/Bubble",
+	meta: {
+		importName: "Bubble",
+	},
 };
 
 export const Basic: Story<any> = (args) => (

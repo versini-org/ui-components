@@ -9,6 +9,9 @@ import {
 
 export default {
 	title: "Components/Flexgrid",
+	meta: {
+		importName: "Flexgrid, FlexgridItem",
+	},
 	args: {
 		className: "",
 		rowGap: 1,

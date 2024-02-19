@@ -3,6 +3,9 @@ import { TextInputMask } from "@versini/ui-components";
 
 export default {
 	title: "Form components/TextInputMask",
+	meta: {
+		importName: "TextInputMask",
+	},
 	args: {
 		label: "Enter password",
 		name: "password",
@@ -33,7 +36,7 @@ export default {
 };
 
 export const Basic: Story<any> = (args) => (
-	<div className="min-h-10 p-11">
+	<div className="min-h-10">
 		<form noValidate>
 			<div className="flex gap-2">
 				<TextInputMask {...args} />

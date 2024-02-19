@@ -10,16 +10,15 @@ import { linkTo } from "@ladle/react";
 
 <Meta title="Getting started/Configuration" />
 
-## Configuration
+# Configuration
 
-### JavaScript
+## JavaScript
 
 <div className="prose">
 	<ul>
 		<li>
-			UI Components come un-bundled and un-minified, which means you need to use
-			a bundler such as Webpack, Vite or Rollup to bundle components into your
-			application.
+			UI Components come un-bundled, which means you need to use a bundler such
+			as Webpack, Vite or Rollup to bundle components into your application.
 		</li>
 		<li>
 			UI Components are tree-shakeable, side-effect free and each component
@@ -33,11 +32,11 @@ import { linkTo } from "@ladle/react";
 	</ul>
 </div>
 
-### CSS
+## CSS
 
 You can use the <strong>UI-Components</strong> library with or without <strong>TailwindCSS</strong>. Depending on your situation, you can either use the pre-built CSS or the TailwindCSS plugin to build your own styles and take advantage of tree-shaking unused styles.
 
-### Without TailwindCSS
+## Without TailwindCSS
 
 If you are not using TailwindCSS, you can use the pre-built CSS file. Just import it in your entry file:
 
@@ -46,7 +45,7 @@ If you are not using TailwindCSS, you can use the pre-built CSS file. Just impor
 import "@versini/ui-components/dist/style.css";
 ```
 
-### With TailwindCSS
+## With TailwindCSS
 
 If you are using TailwindCSS, you can use the <strong>UI-Components</strong> library TailwindCSS plugin:
 
@@ -62,7 +61,7 @@ export default twPlugin.merge({
 });
 ```
 
-<div className="not-av-typography">
+<div className="not-docs-typography">
 	<Flexgrid alignHorizontal="space-between">
 		<FlexgridItem>
 			<ButtonIcon

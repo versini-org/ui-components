@@ -19,6 +19,9 @@ const customTheme = {
 };
 export default {
 	title: "Form components/TextArea",
+	meta: {
+		importName: "TextArea",
+	},
 	args: {
 		label: "Type your question here",
 		name: "dude",
@@ -49,7 +52,7 @@ export default {
 };
 
 export const Basic: Story<any> = (args) => (
-	<div className="h-full p-11">
+	<div className="h-full">
 		<form noValidate>
 			<div className="flex flex-wrap gap-2">
 				<TextArea {...args} />
@@ -64,7 +67,7 @@ Basic.args = {
 };
 
 export const RightElement: Story<any> = (args) => (
-	<div className="h-full p-11">
+	<div className="h-full">
 		<form noValidate>
 			<div className="flex gap-2">
 				<TextArea {...args} />
@@ -82,7 +85,7 @@ RightElement.args = {
 };
 
 export const CustomTheme: Story<any> = (args) => (
-	<div className="h-full p-11">
+	<div className="h-full">
 		<form noValidate>
 			<div className="flex gap-2">
 				<TextArea {...args} />

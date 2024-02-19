@@ -11,9 +11,12 @@ export default {
 		"Components*",
 		"Form-components*",
 	],
-	appendToHead:
-		"<style>.ladle-background {background-color:rgb(100 116 139)}</style>",
-
+	appendToHead: `
+	<style>.ladle-background {background-color:rgb(100 116 139)}</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	`,
 	hotkeys: {
 		search: ["/", "meta+p"],
 		nextStory: [],
