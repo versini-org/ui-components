@@ -1,5 +1,12 @@
 import { Meta } from "@ladle/react";
-import { Button, Card, Flexgrid, FlexgridItem } from "@versini/ui-components";
+import {
+	Button,
+	ButtonIcon,
+	Card,
+	Flexgrid,
+	FlexgridItem,
+	IconPrevious,
+} from "@versini/ui-components";
 import { linkTo } from "@ladle/react";
 
 <Meta title="Getting started/Usage" />
@@ -49,9 +56,13 @@ If everything works well, this is what you should see in your page:
 <div className="not-av-typography mt-8">
 	<Flexgrid alignHorizontal="flex-start">
 		<FlexgridItem>
-			<Button noBorder onClick={linkTo("getting-started--configuration")}>
-				{"Previous: configuration"}
-			</Button>
+			<ButtonIcon
+				labelRight="Configuration"
+				noBorder
+				onClick={linkTo("getting-started--configuration")}
+			>
+				<IconPrevious decorative monotone />
+			</ButtonIcon>
 		</FlexgridItem>
 	</Flexgrid>
 </div>

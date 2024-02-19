@@ -1,5 +1,11 @@
 import { Meta } from "@ladle/react";
-import { Button, Flexgrid, FlexgridItem } from "@versini/ui-components";
+import {
+	ButtonIcon,
+	Flexgrid,
+	FlexgridItem,
+	IconNext,
+	IconPrevious,
+} from "@versini/ui-components";
 import { linkTo } from "@ladle/react";
 
 <Meta title="Getting started/Installation" />
@@ -21,14 +27,22 @@ $ npm install --save react react-dom
 <div className="not-av-typography">
 	<Flexgrid alignHorizontal="space-between">
 		<FlexgridItem>
-			<Button noBorder onClick={linkTo("getting-started--overview")}>
-				{"Previous: overview"}
-			</Button>
+			<ButtonIcon
+				labelRight="Overview"
+				noBorder
+				onClick={linkTo("getting-started--overview")}
+			>
+				<IconPrevious decorative monotone />
+			</ButtonIcon>
 		</FlexgridItem>
 		<FlexgridItem>
-			<Button noBorder onClick={linkTo("getting-started--configuration")}>
-				{"Next: configuration"}
-			</Button>
+			<ButtonIcon
+				labelLeft="Configuration"
+				noBorder
+				onClick={linkTo("getting-started--configuration")}
+			>
+				<IconNext decorative monotone />
+			</ButtonIcon>
 		</FlexgridItem>
 	</Flexgrid>
 </div>
