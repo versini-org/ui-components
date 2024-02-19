@@ -67,6 +67,9 @@ export const WithLabel: Story<any> = (args) => (
 
 export default {
 	title: "Components/ButtonIcon",
+	meta: {
+		importName: "ButtonIcon",
+	},
 	args: {
 		disabled: false,
 		fullWidth: false,

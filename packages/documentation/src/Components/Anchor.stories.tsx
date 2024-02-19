@@ -3,6 +3,9 @@ import { Anchor } from "@versini/ui-components";
 
 export default {
 	title: "Components/Anchor",
+	meta: {
+		importName: "Anchor",
+	},
 };
 
 export const Basic: Story<any> = (args) => (

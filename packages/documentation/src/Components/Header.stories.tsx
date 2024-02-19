@@ -3,6 +3,9 @@ import { Header } from "@versini/ui-components";
 
 export default {
 	title: "Components/Header",
+	meta: {
+		importName: "Header",
+	},
 };
 
 export const Basic: Story<any> = (args) => (

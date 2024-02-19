@@ -4,6 +4,7 @@ import {
 	Flexgrid,
 	FlexgridItem,
 	IconNext,
+	Card,
 } from "@versini/ui-components";
 import { linkTo } from "@ladle/react";
 
@@ -15,18 +16,46 @@ import { linkTo } from "@ladle/react";
 
 ## Features
 
-- **Strong**: built with TypeScript and provides strong typing for all components.
-- **Responsive**: built with a mobile-first approach and provides responsive components.
-- **Accessible**: built with accessibility in mind from the start.
+<div className="prose">
+	<ul>
+		<li>
+			<strong>Strong</strong>: built-in strong components typing via TypeScript.
+    	</li>
+    	<li>
+    		<strong>Responsive</strong>: built-in responsive components.
+    	</li>
+    	<li>
+    		<strong>Accessible</strong>: built with accessibility in mind from the
+    		start.
+    	</li>
+    </ul>
+
+</div>
 
 ## Extra
 
-- **TailwindCSS**: built with TailwindCSS, allowing you to tree-shake unused styles.
-- **Hooks**: provides a set of hooks to use in your application.
-- **Icons**: provides a set of icons to use in your application.
-- **Theming**: provides a theming system to customize the look and feel of the components.
+<div className="prose">
+	<ul>
+		<li>
+			<strong>TailwindCSS</strong>: built with TailwindCSS, enabling styles
+			tree-shaking.
+		</li>
+		<li>
+			<strong>Hooks</strong>: provides a set of hooks to use in your
+			application.
+		</li>
+		<li>
+			<strong>Icons</strong>: provides a set of icons to use in your
+			application.
+		</li>
+		<li>
+			<strong>Theming</strong>: provides a theming system to customize the look
+			of the components.
+		</li>
+	</ul>
+</div>
 
-<div className="not-av-typography mt-8">
+<div className="not-docs-typography mt-8">
 	<Flexgrid alignHorizontal="flex-end">
 		<FlexgridItem>
 			<ButtonIcon labelLeft="Installation" noBorder onClick={linkTo("getting-started--installation")}>

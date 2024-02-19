@@ -4,6 +4,9 @@ import { useState } from "react";
 
 export default {
 	title: "Components/Panel",
+	meta: {
+		importName: "Panel",
+	},
 	args: {
 		open: false,
 		title: "Panel Title",
@@ -31,8 +34,8 @@ export const Basic: Story<any> = (args) => {
 	return (
 		<>
 			<p>
-				To open or close to Panel, open the controls and select/deselect the
-				open prop.
+				To open or close the Panel, open the controls at the bottom of the
+				screen and select/deselect the open prop.
 			</p>
 			<Panel
 				open={open}

@@ -3,35 +3,35 @@
 @tailwind utilities;
 
 @layer components {
-	.av-typography strong:not(.not-av-typography strong) {
+	.docs-typography strong:not(.not-docs-typography strong) {
 		@apply text-copy-lighter;
 	}
-	.av-typography li:not(.not-av-typography li) {
-		@apply text-copy-lighter;
+	.docs-typography li:not(.not-docs-typography li) {
+		@apply mb-2 text-copy-lighter;
 	}
-	.av-typography p:not(.not-av-typography p) {
-		@apply mb-0 text-lg leading-7 text-copy-lighter;
+	.docs-typography p:not(.not-docs-typography p) {
+		@apply my-0 text-lg leading-7 text-copy-lighter;
 	}
-	.av-typography h1:not(.not-av-typography h1) {
-		@apply mb-4 text-4xl font-bold text-copy-light;
+	.docs-typography h1:not(.not-docs-typography h1) {
+		@apply mb-4 text-4xl text-copy-light;
 		font-family: "Open Sans";
 	}
-	.av-typography h2:not(.not-av-typography h2) {
-		@apply mb-3 mt-6 text-3xl font-bold text-copy-light;
+	.docs-typography h2:not(.not-docs-typography h2) {
+		@apply mb-3 mt-6 text-3xl text-copy-light;
 		font-family: "Open Sans";
 	}
-	.av-typography h3:not(.not-av-typography h3) {
-		@apply mb-3 mt-3 text-2xl font-bold text-copy-light;
+	.docs-typography h3:not(.not-docs-typography h3) {
+		@apply mb-3 mt-3 text-2xl text-copy-light;
 		font-family: "Open Sans";
 	}
-	.av-typography blockquote p:not(.not-av-typography p) {
+	.docs-typography blockquote p:not(.not-docs-typography p) {
 		@apply mb-0 italic leading-7 text-copy-lighter;
 		font-family: Georgia, serif;
 	}
-	.av-typography pre:not(.not-av-typography pre) {
-		@apply my-8 rounded-lg bg-gray-100;
+	.docs-typography pre:not(.not-docs-typography pre) {
+		@apply my-8 rounded-lg bg-gray-100 text-sm;
 	}
-	.av-typography .prism-code:not(.not-av-typography .prism-code) {
+	.docs-typography .prism-code:not(.not-docs-typography .prism-code) {
 		@apply m-1 !important;
 	}
 }

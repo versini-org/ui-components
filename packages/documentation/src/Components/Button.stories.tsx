@@ -3,6 +3,9 @@ import { Button } from "@versini/ui-components";
 
 export default {
 	title: "Components/Button",
+	meta: {
+		importName: "Button",
+	},
 };
 
 export const Basic: Story<any> = (args) => (

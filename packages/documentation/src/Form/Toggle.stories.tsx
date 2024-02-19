@@ -4,6 +4,9 @@ import { useState } from "react";
 
 export default {
 	title: "Form components/Toggle",
+	meta: {
+		importName: "Toggle",
+	},
 };
 
 export const Basic: Story<any> = () => {
@@ -16,8 +19,8 @@ export const Basic: Story<any> = () => {
 					<Toggle
 						onChange={setChecked}
 						checked={checked}
-						label="GPT-4 light"
-						name="GPT-4 light"
+						label="Toggle light"
+						name="Toggle light"
 						kind="light"
 					/>
 				</div>
@@ -28,8 +31,8 @@ export const Basic: Story<any> = () => {
 					<Toggle
 						onChange={setChecked}
 						checked={checked}
-						label="GPT-4 dark"
-						name="GPT-4 dark"
+						label="Toggle dark"
+						name="Toggle dark"
 					/>
 				</div>
 			</div>

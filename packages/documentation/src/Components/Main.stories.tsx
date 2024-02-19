@@ -3,6 +3,9 @@ import { Footer, Header, Main } from "@versini/ui-components";
 
 export default {
 	title: "Components/Main",
+	meta: {
+		importName: "Main",
+	},
 };
 
 export const Basic: Story<any> = (args) => <Main {...args}>hello main </Main>;
