@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.34.0](https://github.com/aversini/ui-components/compare/ui-components-v4.33.0...ui-components-v4.34.0) (2024-02-18)
+
+
+### Features
+
+* **ButtonIcon:** adding support for labelLeft ([29b657e](https://github.com/aversini/ui-components/commit/29b657ef080b834dff0c64982fb3760e3161f61a))
+
 ## [4.33.0](https://github.com/aversini/ui-components/compare/ui-components-v4.32.5...ui-components-v4.33.0) (2024-02-18)
 
 
