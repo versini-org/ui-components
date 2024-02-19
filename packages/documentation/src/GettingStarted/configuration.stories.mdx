@@ -1,5 +1,11 @@
 import { Meta } from "@ladle/react";
-import { Button, Flexgrid, FlexgridItem } from "@versini/ui-components";
+import {
+	ButtonIcon,
+	Flexgrid,
+	FlexgridItem,
+	IconNext,
+	IconPrevious,
+} from "@versini/ui-components";
 import { linkTo } from "@ladle/react";
 
 <Meta title="Getting started/Configuration" />
@@ -59,14 +65,22 @@ export default twPlugin.merge({
 <div className="not-av-typography">
 	<Flexgrid alignHorizontal="space-between">
 		<FlexgridItem>
-			<Button noBorder onClick={linkTo("getting-started--installation")}>
-				{"Previous: installation"}
-			</Button>
+			<ButtonIcon
+				labelRight="Installation"
+				noBorder
+				onClick={linkTo("getting-started--installation")}
+			>
+				<IconPrevious decorative monotone />
+			</ButtonIcon>
 		</FlexgridItem>
 		<FlexgridItem>
-			<Button noBorder onClick={linkTo("getting-started--usage")}>
-				{"Next: usage"}
-			</Button>
+			<ButtonIcon
+				labelLeft="Usage"
+				noBorder
+				onClick={linkTo("getting-started--usage")}
+			>
+				<IconNext decorative monotone />
+			</ButtonIcon>
 		</FlexgridItem>
 	</Flexgrid>
 </div>
