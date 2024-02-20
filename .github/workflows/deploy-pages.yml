@@ -41,7 +41,7 @@ jobs:
           corepack enable
           pnpm install
           npx lerna run build --ignore @versini/documentation
-          npx lerna run build:docs --scope=@versini/documentation --base /ui-components
+          npx lerna run build:docs --scope=@versini/documentation -- --base /ui-components
       - name: Setup Pages
         if: ${{ always() }}
         uses: actions/configure-pages@v4
