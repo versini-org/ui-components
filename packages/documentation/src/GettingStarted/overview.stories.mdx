@@ -11,16 +11,32 @@ import {
 
 # UI Components
 
-> UI Components provides a strong, responsive, and accessible library of foundational React components.
+<Flexgrid alignVertical="center">
+	<FlexgridItem span={6}>
+		> UI Components provides a strong, responsive, and accessible library of
+		foundational React components.
 
-<img
-	className="mt-5"
-	src="hero-13.jpg"
-	alt="An illustration of web page rendered on both desktop and mobile devices."
-	title="Hero image of a web page rendered on both desktop and mobile devices."
-	height={300}
-	width={300}
-/>
+    <ButtonIcon
+    	spacing={{ t: 8 }}
+    	labelLeft="Installation"
+    	noBorder
+    	onClick={linkTo("getting-started--installation")}
+    >
+    	<IconNext decorative monotone />
+    </ButtonIcon>
+
+  </FlexgridItem>
+  <FlexgridItem>
+		<img
+			className="mt-5"
+			src="hero-14.jpg"
+			alt="An illustration of web page rendered on both desktop and mobile devices."
+			title="Hero image of a web page rendered on both desktop and mobile devices."
+			height={400}
+			width={400}
+		/>
+  </FlexgridItem>
+</Flexgrid>
 
 ## Features
 
@@ -61,15 +77,4 @@ import {
 			of the components.
 		</li>
 	</ul>
-</div>
-
-<div className="not-docs-typography mt-8">
-	<Flexgrid alignHorizontal="flex-end">
-		<FlexgridItem>
-			<ButtonIcon labelLeft="Installation" noBorder onClick={linkTo("getting-started--installation")}>
-				<IconNext decorative monotone />
-    		</ButtonIcon>
-    	</FlexgridItem>
-    </Flexgrid>
-
 </div>

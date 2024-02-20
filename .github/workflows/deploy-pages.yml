@@ -41,7 +41,6 @@ jobs:
           pnpm install
           npx lerna run build --ignore @versini/documentation
           npx lerna run build:ci --scope=@versini/documentation
-
       - name: Setup Pages
         if: ${{ always() }}
         uses: actions/configure-pages@v4
