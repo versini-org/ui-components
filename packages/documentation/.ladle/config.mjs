@@ -1,6 +1,7 @@
 /** @type {import('@ladle/react').UserConfig} */
 
 export default {
+	base: "/ui-components/",
 	port: 8080,
 	defaultStory: "getting-started--overview",
 	storyOrder: [
