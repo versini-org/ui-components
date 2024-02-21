@@ -25,34 +25,6 @@ const dynamicColors = () => {
 	return result;
 };
 
-const dynamicColorsClasses = () => {
-	const result: string[] = [];
-	Object.entries(tokens.colors).forEach(([name]) => {
-		if (name.startsWith("action-")) {
-			result.push(`bg-${name}`);
-			result.push(`hover:bg-${name}`);
-			result.push(`active:bg-${name}`);
-		}
-		if (name.startsWith("surface-")) {
-			result.push(`bg-${name}`);
-		}
-		if (name.startsWith("copy-")) {
-			result.push(`text-${name}`);
-			result.push(`hover:text-${name}`);
-			result.push(`active:text-${name}`);
-		}
-		if (name.startsWith("border-")) {
-			result.push(`border-${name}`);
-		}
-		if (name.startsWith("focus-")) {
-			result.push(`ring-${name}`);
-			result.push(`focus:ring-${name}`);
-		}
-	});
-
-	return result;
-};
-
 const dynamicMargins = () => {
 	const allowed = [
 		0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 44,
@@ -99,7 +71,7 @@ const tailwindPlugins = [
 	}, myComponentLibraryConfig),
 ];
 
-const tailwindSafelist = [...dynamicMargins(), ...dynamicColorsClasses()];
+const tailwindSafelist = [...dynamicMargins()];
 
 export const twPlugin = {
 	content: tailwindContentPath,

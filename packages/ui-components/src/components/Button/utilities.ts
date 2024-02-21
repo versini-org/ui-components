@@ -73,7 +73,11 @@ const getButtonSizesClasses = ({
 };
 
 const getButtonBaseClasses = ({ kind }: { kind: string }) => {
-	return `rounded-full bg-action-${kind} text-copy-light`;
+	if (kind === "dark") {
+		return `rounded-full bg-action-dark text-copy-light`;
+	} else {
+		return `rounded-full bg-action-light text-copy-light`;
+	}
 };
 
 const getButtonHoverClasses = ({
@@ -83,9 +87,13 @@ const getButtonHoverClasses = ({
 	disabled: boolean;
 	kind: string;
 }) => {
-	return disabled
-		? ""
-		: `hover:bg-action-${kind}-hover hover:text-copy-light-hover`;
+	if (disabled) {
+		return "";
+	}
+	if (kind === "dark") {
+		return `hover:bg-action-dark-hover hover:text-copy-light-hover`;
+	}
+	return `hover:bg-action-light-hover hover:text-copy-light-hover`;
 };
 
 const getButtonActiveClasses = ({
@@ -95,9 +103,13 @@ const getButtonActiveClasses = ({
 	disabled: boolean;
 	kind: string;
 }) => {
-	return disabled
-		? ""
-		: `active:bg-action-${kind}-active active:text-copy-light-active`;
+	if (disabled) {
+		return "";
+	}
+	if (kind === "dark") {
+		return `active:bg-action-dark-active active:text-copy-light-active`;
+	}
+	return `active:bg-action-light-active active:text-copy-light-active`;
 };
 
 const getButtonBorderClasses = ({
@@ -108,14 +120,18 @@ const getButtonBorderClasses = ({
 	noBorder: boolean;
 }) => {
 	return clsx("border", {
-		[`border-border-${kind}`]: !noBorder,
+		"border-border-dark": !noBorder && kind === "dark",
+		"border-border-light": !noBorder && kind === "light",
 		"border-transparent": noBorder,
 		"focus:border-white": !noBorder,
 	});
 };
 
 const getButtonFocusClasses = ({ focus }: { focus: string }) => {
-	return `focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-focus-${focus}`;
+	return clsx("focus:outline-none focus:ring-2 focus:ring-offset-0", {
+		"focus:ring-focus-light": focus === "light",
+		"focus:ring-focus-dark": focus === "dark",
+	});
 };
 
 export const getButtonClasses = ({
