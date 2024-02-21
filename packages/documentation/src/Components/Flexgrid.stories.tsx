@@ -206,3 +206,11 @@ export const WithLoginForm: Story<any> = (args) => (
 		</form>
 	</Main>
 );
+
+export const Responsive: Story<any> = (args) => (
+	<Flexgrid {...args}>
+		<FlexgridItem span={{ xxs: 12, xs: 12, sm: 6, md: 3 }}>
+			<Button fullWidth>Responsive</Button>
+		</FlexgridItem>
+	</Flexgrid>
+);

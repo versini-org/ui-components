@@ -1,13 +1,9 @@
-import clsx from "clsx";
 import { useContext } from "react";
 
-import {
-	FLEXGRID_GAP_RATIO,
-	FLEXGRID_ITEM_CLASSNAME,
-} from "../../common/constants";
+import { FLEXGRID_GAP_RATIO } from "../../common/constants";
 import { FlexgridContext } from "./FlexgridContext";
 import type { FlexgridItemProps } from "./FlexgridTypes";
-import { getBasis } from "./utilities";
+import { getFlexItemClasses } from "./utilities";
 
 /**
  * FlexgridItem is a child of Flexgrid. It is used to define the width of a
@@ -21,16 +17,15 @@ export const FlexgridItem = ({
 	...otherProps
 }: FlexgridItemProps) => {
 	const { columnGap, rowGap } = useContext(FlexgridContext);
+
 	const cssRoot = {
-		...getBasis(span),
 		paddingLeft: columnGap * FLEXGRID_GAP_RATIO + "rem",
 		paddingTop: rowGap * FLEXGRID_GAP_RATIO + "rem",
 	};
-	const flexgridItemClassName = clsx(
+	const flexgridItemClassName = getFlexItemClasses({
 		className,
-		FLEXGRID_ITEM_CLASSNAME,
-		"box-border",
-	);
+		span,
+	});
 
 	return (
 		<div className={flexgridItemClassName} style={cssRoot} {...otherProps}>

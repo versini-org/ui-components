@@ -1,27 +1,31 @@
-import { FLEXGRID_MAX_COLUMNS } from "../../common/constants";
+import clsx from "clsx";
 
-export const getBasis = (span?: number | "auto") => {
-	const flexBasis = "auto";
+import { FLEXGRID_ITEM_CLASSNAME } from "../../common/constants";
 
-	if (!span) {
-		return {
-			flexBasis,
-		};
-	}
-
-	if (span === "auto") {
-		return {
-			flexBasis,
-			flexGrow: 1,
-			maxWidth: "100%",
-		};
-	}
-
+export const getFlexItemClasses = ({
+	className,
+	span,
+}: {
+	className?: string;
+	span?: number | "auto";
+}) => {
 	if (typeof span === "number") {
-		const basis = `${(span * 100) / FLEXGRID_MAX_COLUMNS}%`;
-		return {
-			flexBasis: `${basis}`,
-			maxWidth: `${basis}`,
-		};
+		return clsx(className, FLEXGRID_ITEM_CLASSNAME, "box-border max-w-full", {
+			"basis-1/12": span === 1,
+			"basis-2/12": span === 2,
+			"basis-3/12": span === 3,
+			"basis-4/12": span === 4,
+			"basis-5/12": span === 5,
+			"basis-6/12": span === 6,
+			"basis-7/12": span === 7,
+			"basis-8/12": span === 8,
+			"basis-9/12": span === 9,
+			"basis-10/12": span === 10,
+			"basis-11/12": span === 11,
+			"basis-12/12": span === 12,
+		});
 	}
+	return clsx(className, FLEXGRID_ITEM_CLASSNAME, "box-border basis-auto", {
+		"max-w-full grow": span === "auto",
+	});
 };
