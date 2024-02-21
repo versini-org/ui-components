@@ -73,7 +73,10 @@ const getButtonSizesClasses = ({
 };
 
 const getButtonBaseClasses = ({ kind }: { kind: string }) => {
-	return `rounded-full bg-action-${kind} text-copy-light`;
+	return clsx("rounded-full text-copy-light", {
+		"bg-action-dark": kind === "dark",
+		"bg-action-light": kind === "light",
+	});
 };
 
 const getButtonHoverClasses = ({
@@ -85,7 +88,10 @@ const getButtonHoverClasses = ({
 }) => {
 	return disabled
 		? ""
-		: `hover:bg-action-${kind}-hover hover:text-copy-light-hover`;
+		: clsx("hover:text-copy-light-hover", {
+				"hover:bg-action-dark-hover": kind === "dark",
+				"hover:bg-action-light-hover": kind === "light",
+			});
 };
 
 const getButtonActiveClasses = ({
@@ -97,7 +103,10 @@ const getButtonActiveClasses = ({
 }) => {
 	return disabled
 		? ""
-		: `active:bg-action-${kind}-active active:text-copy-light-active`;
+		: clsx("active:text-copy-light-active", {
+				"active:bg-action-dark-active": kind === "dark",
+				"active:bg-action-light-active": kind === "light",
+			});
 };
 
 const getButtonBorderClasses = ({
@@ -108,14 +117,18 @@ const getButtonBorderClasses = ({
 	noBorder: boolean;
 }) => {
 	return clsx("border", {
-		[`border-border-${kind}`]: !noBorder,
+		"border-border-dark": !noBorder && kind === "dark",
+		"border-border-light": !noBorder && kind === "light",
 		"border-transparent": noBorder,
 		"focus:border-white": !noBorder,
 	});
 };
 
 const getButtonFocusClasses = ({ focus }: { focus: string }) => {
-	return `focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-focus-${focus}`;
+	return clsx("focus:outline-none focus:ring-2 focus:ring-offset-0", {
+		"focus:ring-focus-light": focus === "light",
+		"focus:ring-focus-dark": focus === "dark",
+	});
 };
 
 export const getButtonClasses = ({

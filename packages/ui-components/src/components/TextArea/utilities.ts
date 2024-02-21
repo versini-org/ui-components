@@ -52,8 +52,10 @@ const getTextAreaFocusClasses = ({
 	return clsx("focus:outline-none focus:ring-offset-0", {
 		"focus:ring-2": !error,
 		"focus:ring-1": error,
-		[`focus:ring-focus-${focusKind}`]: !error,
-		[`focus:ring-focus-error-${errorKind}`]: error,
+		"focus:ring-focus-dark": !error && focusKind === "dark",
+		"focus:ring-focus-light": !error && focusKind === "light",
+		"focus:ring-focus-error-dark": error && errorKind === "dark",
+		"focus:ring-focus-error-light": error && errorKind === "light",
 	});
 };
 
@@ -69,9 +71,11 @@ const getTextAreaBorderClasses = ({
 	noBorder: boolean;
 }) => {
 	return clsx("border-2", {
-		[`border-border-${borderKind}`]: !noBorder,
+		"border-border-dark": !noBorder && borderKind === "dark",
+		"border-border-light": !noBorder && borderKind === "light",
 		"border-transparent": noBorder,
-		[`border-border-error-${errorKind}`]: error,
+		"border-border-error-dark": error && errorKind === "dark",
+		"border-border-error-light": error && errorKind === "light",
 	});
 };
 
@@ -89,7 +93,8 @@ const getTextAreaLabelClasses = ({
 	return raw
 		? ""
 		: clsx("absolute cursor-text font-medium", {
-				[`text-copy-error-${errorKind}`]: error,
+				"text-copy-error-dark": error && errorKind === "dark",
+				"text-copy-error-light": error && errorKind === "light",
 				"text-copy-medium": !error,
 				"cursor-not-allowed opacity-50": disabled,
 			});
@@ -107,7 +112,8 @@ const getTextAreaHelperTextClasses = ({
 	return raw
 		? undefined
 		: clsx(TEXT_AREA_HELPER_TEXT_CLASSNAME, "absolute font-medium", {
-				[`text-copy-error-${errorKind}`]: error,
+				"text-copy-error-dark": error && errorKind === "dark",
+				"text-copy-error-light": error && errorKind === "light",
 				"text-copy-medium": !error,
 			});
 };
