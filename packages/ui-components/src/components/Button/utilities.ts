@@ -73,11 +73,10 @@ const getButtonSizesClasses = ({
 };
 
 const getButtonBaseClasses = ({ kind }: { kind: string }) => {
-	if (kind === "dark") {
-		return `rounded-full bg-action-dark text-copy-light`;
-	} else {
-		return `rounded-full bg-action-light text-copy-light`;
-	}
+	return clsx("rounded-full text-copy-light", {
+		"bg-action-dark": kind === "dark",
+		"bg-action-light": kind === "light",
+	});
 };
 
 const getButtonHoverClasses = ({
@@ -87,13 +86,12 @@ const getButtonHoverClasses = ({
 	disabled: boolean;
 	kind: string;
 }) => {
-	if (disabled) {
-		return "";
-	}
-	if (kind === "dark") {
-		return `hover:bg-action-dark-hover hover:text-copy-light-hover`;
-	}
-	return `hover:bg-action-light-hover hover:text-copy-light-hover`;
+	return disabled
+		? ""
+		: clsx("hover:text-copy-light-hover", {
+				"hover:bg-action-dark-hover": kind === "dark",
+				"hover:bg-action-light-hover": kind === "light",
+			});
 };
 
 const getButtonActiveClasses = ({
@@ -103,13 +101,12 @@ const getButtonActiveClasses = ({
 	disabled: boolean;
 	kind: string;
 }) => {
-	if (disabled) {
-		return "";
-	}
-	if (kind === "dark") {
-		return `active:bg-action-dark-active active:text-copy-light-active`;
-	}
-	return `active:bg-action-light-active active:text-copy-light-active`;
+	return disabled
+		? ""
+		: clsx("active:text-copy-light-active", {
+				"active:bg-action-dark-active": kind === "dark",
+				"active:bg-action-light-active": kind === "light",
+			});
 };
 
 const getButtonBorderClasses = ({
