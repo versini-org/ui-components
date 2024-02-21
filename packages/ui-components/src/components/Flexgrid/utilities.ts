@@ -112,6 +112,10 @@ export const getFlexItemClasses = ({
 				xl?: number;
 		  };
 }) => {
+	if (!span) {
+		return clsx(className, FLEXGRID_ITEM_CLASSNAME, "box-border basis-auto");
+	}
+
 	if (typeof span === "number") {
 		return clsx(className, FLEXGRID_ITEM_CLASSNAME, "box-border max-w-full", {
 			[`${getBasisClass(span)}`]: true,
