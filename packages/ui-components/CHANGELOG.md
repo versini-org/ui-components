@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.35.0](https://github.com/aversini/ui-components/compare/ui-components-v4.34.0...ui-components-v4.35.0) (2024-02-21)
+
+
+### Features
+
+* **Flexgrid:** adding responsive capabilities ([6c80765](https://github.com/aversini/ui-components/commit/6c807653ed1382e4cd817aa20cab9a3cd8646f32))
+
+
+### Bug Fixes
+
+* refactor all Tailwind class to make them static ([89c59bf](https://github.com/aversini/ui-components/commit/89c59bfc6c26f0b129d577fd2b816541cd1e8bc0))
+
 ## [4.34.0](https://github.com/aversini/ui-components/compare/ui-components-v4.33.0...ui-components-v4.34.0) (2024-02-18)
 
 
