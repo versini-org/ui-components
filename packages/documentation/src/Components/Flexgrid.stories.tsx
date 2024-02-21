@@ -199,7 +199,7 @@ export const Responsive: Story<any> = (args) => {
 	];
 	const intro = `FlexgridItem span prop can be configured with multiple breakpoints. Instead of using a single number, an object can be passed with the following keys:`;
 
-	const example = `For example, { fallback: 12, sm: 6, md: 8 } sizes a component to occupy half of the viewport width (6 columns) when viewport width is between 641 and 769 pixels. Above 769 pixels, it occupies a 2 third of the viewport (8 columns). For smaller viewports (fallback), the component fills all 12 available columns.`;
+	const example = `For example, { fallback: 12, sm: 6, md: 8 } sizes a component to occupy half of its container width (6 columns) when viewport width is between 641 and 769 pixels. Above 769 pixels, it occupies a 2 third of its container (8 columns). For smaller viewports (fallback), the component fills all 12 available columns.`;
 	return (
 		<>
 			<p className="text-copy-lighter">{intro}</p>
