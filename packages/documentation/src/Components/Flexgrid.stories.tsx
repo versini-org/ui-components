@@ -1,10 +1,13 @@
 import type { Story } from "@ladle/react";
 import {
-	Button,
+	Card,
 	Flexgrid,
 	FlexgridItem,
-	Main,
-	TextInput,
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableRow,
 } from "@versini/ui-components";
 
 export default {
@@ -120,12 +123,12 @@ export const Basic: Story<any> = (args) => (
 				</div>
 			</Container>
 		</FlexgridItem>
-		<FlexgridItem span={2} />
-		<FlexgridItem span={3}>
+		<FlexgridItem span={1} />
+		<FlexgridItem span={4}>
 			<Container aria-label="item 8">
 				item 8
 				<div>
-					<small>(starts col 10, spans 3 cols)</small>
+					<small>(starts col 9, spans 4 cols)</small>
 				</div>
 			</Container>
 		</FlexgridItem>
@@ -185,24 +188,46 @@ Interactive.args = {
 	height: "auto",
 };
 
-export const WithLoginForm: Story<any> = (args) => (
-	<Main>
-		<form className="mx-auto flex w-96 flex-col flex-wrap">
-			<Flexgrid {...args} direction="column" className="mx-auto w-96">
-				<FlexgridItem>
-					<TextInput
-						type="password"
-						name="password"
-						label="Enter your password"
-					/>
-				</FlexgridItem>
+export const Responsive: Story<any> = (args) => {
+	const data = [
+		{ id: 0, prefix: "fallback", minwidth: "0px" },
+		{ id: 1, prefix: "sm", minwidth: "640px" },
+		{ id: 2, prefix: "md", minwidth: "768px" },
+		{ id: 3, prefix: "lg", minwidth: "1024px" },
+		{ id: 4, prefix: "xl", minwidth: "1280px" },
+		{ id: 5, prefix: "s2xlm", minwidth: "1536px" },
+	];
+	const intro = `FlexgridItem span prop can be configured with multiple breakpoints. Instead of using a single number, an object can be passed with the following keys:`;
 
-				<FlexgridItem>
-					<Button noBorder type="submit" className="mb-4 mt-6">
-						Log in
-					</Button>
+	const example = `For example, { fallback: 12, sm: 6, md: 8 } sizes a component to occupy half of its container width (6 columns) when viewport width is between 641 and 769 pixels. Above 769 pixels, it occupies a 2 third of its container (8 columns). For smaller viewports (fallback), the component fills all 12 available columns.`;
+	return (
+		<>
+			<p className="text-copy-lighter">{intro}</p>
+			<Table kind="light" spacing={{ t: 2, b: 2 }}>
+				<TableHead>
+					<TableRow>
+						<TableCell>Breakpoint prefix</TableCell>
+						<TableCell>Minimum width</TableCell>
+					</TableRow>
+				</TableHead>
+
+				<TableBody>
+					{data.map((row) => (
+						<TableRow key={row.id}>
+							<TableCell>{row.prefix}</TableCell>
+							<TableCell>{row.minwidth}</TableCell>
+						</TableRow>
+					))}
+				</TableBody>
+			</Table>
+			<p className="text-copy-lighter">{example}</p>
+			<Flexgrid {...args}>
+				<FlexgridItem span={{ fallback: 12, sm: 6, md: 8 }}>
+					<Card spacing={{ t: 2 }}>
+						<p className="text-center">Responsive Card</p>
+					</Card>
 				</FlexgridItem>
 			</Flexgrid>
-		</form>
-	</Main>
-);
+		</>
+	);
+};
