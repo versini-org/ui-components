@@ -21,7 +21,7 @@ import {
 } from "@versini/ui-components";
 
 export default {
-	title: "Components/Icons",
+	title: "System/Icons",
 };
 
 export const Basic: Story<any> = (args) => (

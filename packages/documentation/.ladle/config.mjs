@@ -9,6 +9,7 @@ export default {
 		"getting-started--usage",
 		"Components*",
 		"Form-components*",
+		"System*",
 	],
 	appendToHead: `
 	<style>html, body, .ladle-background {background-color:rgb(100 116 139)}</style>

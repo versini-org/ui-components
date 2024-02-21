@@ -11,7 +11,7 @@ import {
 } from "@versini/ui-components";
 
 export default {
-	title: "Components/Flexgrid",
+	title: "System/Flexgrid",
 	meta: {
 		importName: "Flexgrid, FlexgridItem",
 	},
