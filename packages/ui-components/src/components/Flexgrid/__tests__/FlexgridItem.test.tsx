@@ -23,6 +23,7 @@ describe("FlexgridItem (exceptions)", () => {
 			"padding-left": "0px",
 			"padding-top": "0px",
 		});
+		expectToHaveClasses(gridCellRoot, ["box-border", "basis-auto"]);
 	});
 });
 
@@ -37,16 +38,15 @@ describe("FlexgridItem default rules", () => {
 		);
 		const gridCellRoot = getByTestId("gridcell-1");
 		expectToHaveStyles(gridCellRoot, {
-			"flex-basis": "auto",
 			"padding-left": "4px",
 			"padding-top": "0px",
 		});
-		expectToHaveClasses(gridCellRoot, ["box-border"]);
+		expectToHaveClasses(gridCellRoot, ["box-border", "basis-auto"]);
 	});
 });
 
 describe("FlexgridItem props", () => {
-	it("should have attributes to span across 4 columns", () => {
+	it("should render basis rules if span is a number", () => {
 		const { getByTestId } = render(
 			<Flexgrid>
 				<FlexgridItem data-testid="gridcell-1" span={4}>
@@ -55,10 +55,14 @@ describe("FlexgridItem props", () => {
 			</Flexgrid>,
 		);
 		const gridCellRoot = getByTestId("gridcell-1");
-		expect(gridCellRoot).toHaveStyle("flex-basis: 33.333333333333336%");
+		expectToHaveClasses(gridCellRoot, [
+			"box-border",
+			"basis-4/12",
+			"max-w-full",
+		]);
 	});
 
-	it("should have attributes to span across the full space", () => {
+	it("should render basis rules if span is a string set to 'auto'", () => {
 		const { getByTestId } = render(
 			<Flexgrid>
 				<FlexgridItem data-testid="gridcell-1" span="auto">
@@ -67,8 +71,65 @@ describe("FlexgridItem props", () => {
 			</Flexgrid>,
 		);
 		const gridCellRoot = getByTestId("gridcell-1");
-		expect(gridCellRoot).toHaveStyle("flex-basis: auto");
-		expect(gridCellRoot).toHaveStyle("flex-grow: 1");
-		expect(gridCellRoot).toHaveStyle("max-width: 100%");
+		expectToHaveClasses(gridCellRoot, [
+			"box-border",
+			"basis-auto",
+			"max-w-full",
+			"grow",
+		]);
+	});
+
+	describe.each`
+		span
+		${1}
+		${2}
+		${3}
+		${4}
+		${5}
+		${6}
+		${7}
+		${8}
+		${9}
+		${10}
+		${11}
+		${12}
+	`("should render responsive rules if span is $span", ({ span }) => {
+		it.each`
+			breakpoint
+			${"fallback"}
+			${"sm"}
+			${"md"}
+			${"lg"}
+			${"xl"}
+			${"2xl"}
+		`("and the breakpoint is $breakpoint", ({ breakpoint }) => {
+			const { getByTestId } = render(
+				<Flexgrid>
+					<FlexgridItem data-testid="gridcell-1" span={{ [breakpoint]: span }}>
+						<Button>item 1</Button>
+					</FlexgridItem>
+				</Flexgrid>,
+			);
+			const gridCellRoot = getByTestId("gridcell-1");
+			if (breakpoint === "fallback") {
+				if (span < 12) {
+					expectToHaveClasses(gridCellRoot, ["box-border", `basis-${span}/12`]);
+				} else {
+					expectToHaveClasses(gridCellRoot, ["box-border", "basis-full"]);
+				}
+			} else if (typeof breakpoint === "string") {
+				if (span < 12) {
+					expectToHaveClasses(gridCellRoot, [
+						"box-border",
+						`${breakpoint}:basis-${span}/12`,
+					]);
+				} else {
+					expectToHaveClasses(gridCellRoot, [
+						"box-border",
+						`${breakpoint}:basis-full`,
+					]);
+				}
+			}
+		});
 	});
 });
