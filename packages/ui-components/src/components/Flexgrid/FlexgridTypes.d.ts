@@ -80,5 +80,14 @@ export type FlexgridItemProps = {
 	className?: string;
 
 	/** The item will span across the provided number of grid tracks. */
-	span?: number | "auto";
+	span?:
+		| number
+		| "auto"
+		| {
+				fallback?: number;
+				lg?: number;
+				md?: number;
+				sm?: number;
+				xl?: number;
+		  };
 };
