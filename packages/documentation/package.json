@@ -10,9 +10,9 @@
 		"build:docs": "ladle build --outDir dist",
 		"build": "npm-run-all --serial clean build:docs",
 		"clean": "rimraf dist",
-		"dev": "ladle serve",
+		"dev": "nodemon",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
-		"start": "static-server dist --port 5173",
+		"start": "ladle serve --noWatch",
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0",
 		"test": "echo \"WARNING: no test specified\" && exit 0"
 	},

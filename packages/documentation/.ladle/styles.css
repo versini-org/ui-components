@@ -12,18 +12,7 @@
 	.docs-typography p:not(.not-docs-typography p) {
 		@apply my-0 text-lg leading-7 text-copy-lighter;
 	}
-	.docs-typography h1:not(.not-docs-typography h1) {
-		@apply mb-4 text-4xl text-copy-light;
-		font-family: "Open Sans";
-	}
-	.docs-typography h2:not(.not-docs-typography h2) {
-		@apply mb-3 mt-6 text-3xl text-copy-light;
-		font-family: "Open Sans";
-	}
-	.docs-typography h3:not(.not-docs-typography h3) {
-		@apply mb-3 mt-3 text-2xl text-copy-light;
-		font-family: "Open Sans";
-	}
+
 	.docs-typography blockquote p:not(.not-docs-typography p) {
 		@apply mb-0 italic leading-7 text-copy-lighter;
 		font-family: Georgia, serif;

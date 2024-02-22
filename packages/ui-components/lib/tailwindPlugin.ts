@@ -44,17 +44,23 @@ const myComponentLibraryConfig = {
 	theme: {
 		extend: {
 			colors: dynamicColors(),
+			// typography: ({ theme }: { theme: any }) => ({
 			typography: {
 				DEFAULT: {
 					css: {
+						"h1, h2, h3, h4, h5, h6": {
+							color: tokens.colors["copy-light"],
+							fontFamily: "Open Sans",
+						},
 						blockquote: {
-							borderLeftColor: "var(--tw-prose-blockquote-border-color)",
+							borderLeftColor: tokens.colors["border-dark"],
 						},
 						"ul > li::marker": {
-							color: "var(--tw-prose-counter)",
+							color: "var(--tw-prose-counters)",
 						},
 					},
 				},
+				// }),
 			},
 		},
 	},
