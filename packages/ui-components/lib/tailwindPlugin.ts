@@ -49,14 +49,9 @@ const myComponentLibraryConfig = {
 				DEFAULT: {
 					css: {
 						"h1, h2, h3, h4, h5, h6": {
-							fontFamily: "Open Sans",
+							fontFamily: "Open Sans, ui-sans-serif, system-ui, sans-serif",
 						},
-						p: {
-							marginTop: 0,
-							marginBottom: 0,
-							fontSize: "1rem",
-							lineHeight: "1.75rem",
-						},
+
 						blockquote: {
 							borderLeftWidth: "6px",
 						},
@@ -69,7 +64,6 @@ const myComponentLibraryConfig = {
 						pre: {
 							marginTop: "2rem",
 							marginBottom: "2rem",
-							borderRadius: "0.5rem",
 							fontSize: "0.875rem",
 							lineHeight: "1.25rem",
 						},
@@ -81,7 +75,7 @@ const myComponentLibraryConfig = {
 				},
 				light: {
 					css: {
-						"--tw-prose-body": tokens.colors["copy-light"],
+						"--tw-prose-body": tokens.colors["copy-lighter"],
 						"--tw-prose-headings": tokens.colors["copy-light"],
 						"--tw-prose-lead": tokens.colors["copy-lighter"],
 						"--tw-prose-links": tokens.colors["copy-lighter"],
@@ -95,6 +89,7 @@ const myComponentLibraryConfig = {
 						"--tw-prose-code": tokens.colors["copy-lighter"],
 						"--tw-prose-pre-code": tokens.colors["copy-light"],
 						"--tw-prose-pre-bg": tokens.colors["surface-dark"],
+						"--tw-prose-kbd": tokens.colors["copy-lighter"],
 						li: {
 							color: tokens.colors["copy-lighter"],
 						},
@@ -116,58 +111,12 @@ const myComponentLibraryConfig = {
 						"--tw-prose-code": theme("colors.slate[900]"),
 						"--tw-prose-pre-code": theme("colors.slate[100]"),
 						"--tw-prose-pre-bg": theme("colors.slate[900]"),
+						"--tw-prose-kbd": theme("colors.slate[800]"),
 						li: {
 							color: tokens.colors["copy-dark"],
 						},
 					},
 				},
-				// light: {
-				// 	css: {
-				// 		"h1, h2, h3, h4, h5, h6": {
-				// 			color: tokens.colors["copy-light"],
-				// 			fontFamily: "Open Sans",
-				// 		},
-				// 		strong: {
-				// 			color: tokens.colors["copy-lighter"],
-				// 		},
-				// 		p: {
-				// 			color: tokens.colors["copy-lighter"],
-				// 			marginTop: 0,
-				// 			marginBottom: 0,
-				// 			fontSize: "1.125rem",
-				// 			lineHeight: "1.75rem",
-				// 		},
-				// 		blockquote: {
-				// 			borderLeftColor: tokens.colors["border-light"],
-				// 			borderLeftWidth: "6px",
-				// 		},
-				// 		"blockquote p": {
-				// 			fontFamily: "Georgia, Cambria, Times New Roman, Times, serif",
-				// 		},
-				// 		li: {
-				// 			color: tokens.colors["copy-lighter"],
-				// 			fontSize: "1.125rem",
-				// 		},
-				// 		"ul > li::marker": {
-				// 			color: tokens.colors["copy-lighter"],
-				// 		},
-				// 		pre: {
-				// 			color: tokens.colors["copy-light"],
-				// 			backgroundColor: tokens.colors["surface-dark"],
-				// 			marginTop: "2rem",
-				// 			marginBottom: "2rem",
-				// 			borderRadius: "0.5rem",
-				// 			fontSize: "0.875rem",
-				// 			lineHeight: "1.25rem",
-				// 		},
-				// 		code: {
-				// 			color: tokens.colors["copy-light"],
-				// 			fontFamily:
-				// 				'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-				// 		},
-				// 	},
-				// 	// },
-				// },
 			}),
 		},
 	},
