@@ -73,7 +73,7 @@ const getButtonSizesClasses = ({
 };
 
 const getButtonBaseClasses = ({ kind }: { kind: string }) => {
-	return clsx("rounded-full text-copy-light", {
+	return clsx("not-prose rounded-full text-copy-light", {
 		"bg-action-dark": kind === "dark",
 		"bg-action-light": kind === "light",
 	});

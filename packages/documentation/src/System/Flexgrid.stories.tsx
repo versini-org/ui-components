@@ -62,33 +62,41 @@ export const Basic: Story<any> = (args) => (
 	<Flexgrid {...args}>
 		<FlexgridItem span={4}>
 			<Container aria-label="item 1">
-				item 1
-				<div>
-					<small>(starts col 1, spans 4 cols)</small>
+				<div className="bg-slate-500 p-1">
+					item 1
+					<div>
+						<small>(starts col 1, spans 4 cols)</small>
+					</div>
 				</div>
 			</Container>
 		</FlexgridItem>
 		<FlexgridItem span={4}>
 			<Container aria-label="item 2">
-				item 2
-				<div>
-					<small>(starts col 5, spans 4 cols)</small>
+				<div className="bg-slate-500 p-1">
+					item 2
+					<div>
+						<small>(starts col 5, spans 4 cols)</small>
+					</div>
 				</div>
 			</Container>
 		</FlexgridItem>
 		<FlexgridItem span={4}>
 			<Container aria-label="item 3">
-				item 3
-				<div>
-					<small>(starts col 9, spans 4 cols)</small>
+				<div className="bg-slate-500 p-1">
+					item 3
+					<div>
+						<small>(starts col 9, spans 4 cols)</small>
+					</div>
 				</div>
 			</Container>
 		</FlexgridItem>
 		<FlexgridItem span={4}>
 			<Container aria-label="item 4">
-				item 4
-				<div>
-					<small>(starts col 1, spans 4 cols)</small>
+				<div className="bg-slate-500 p-1">
+					item 4
+					<div>
+						<small>(starts col 1, spans 4 cols)</small>
+					</div>
 				</div>
 			</Container>
 		</FlexgridItem>
@@ -97,18 +105,22 @@ export const Basic: Story<any> = (args) => (
 
 		<FlexgridItem span="auto">
 			<Container aria-label="item 5">
-				item 5
-				<div>
-					<small>(starts col 7, spans across the remaining space)</small>
+				<div className="bg-slate-500 p-1">
+					item 5
+					<div>
+						<small>(starts col 7, spans across the remaining space)</small>
+					</div>
 				</div>
 			</Container>
 		</FlexgridItem>
 
 		<FlexgridItem span={6}>
 			<Container aria-label="item 6">
-				item 6
-				<div>
-					<small>(starts col 1, spans 6 cols)</small>
+				<div className="bg-slate-500 p-1">
+					item 6
+					<div>
+						<small>(starts col 1, spans 6 cols)</small>
+					</div>
 				</div>
 			</Container>
 		</FlexgridItem>
@@ -117,27 +129,33 @@ export const Basic: Story<any> = (args) => (
 
 		<FlexgridItem span={7}>
 			<Container aria-label="item 7">
-				item 7
-				<div>
-					<small>(starts col 1, spans 7 cols)</small>
+				<div className="bg-slate-500 p-1">
+					item 7
+					<div>
+						<small>(starts col 1, spans 7 cols)</small>
+					</div>
 				</div>
 			</Container>
 		</FlexgridItem>
 		<FlexgridItem span={1} />
 		<FlexgridItem span={4}>
 			<Container aria-label="item 8">
-				item 8
-				<div>
-					<small>(starts col 9, spans 4 cols)</small>
+				<div className="bg-slate-500 p-1">
+					item 8
+					<div>
+						<small>(starts col 9, spans 4 cols)</small>
+					</div>
 				</div>
 			</Container>
 		</FlexgridItem>
 
 		<FlexgridItem span={12}>
 			<Container aria-label="item 9">
-				item 9
-				<div>
-					<small>(starts col 1, spans 12 cols)</small>
+				<div className="bg-slate-500 p-1">
+					item 9
+					<div>
+						<small>(starts col 1, spans 12 cols)</small>
+					</div>
 				</div>
 			</Container>
 		</FlexgridItem>
@@ -148,38 +166,17 @@ export const Interactive: Story<any> = (args) => (
 	<Flexgrid {...args}>
 		<FlexgridItem>
 			<Container aria-label="cell 1">
-				<div
-					style={{
-						padding: "5px",
-						backgroundColor: "rgb(133 209 156)",
-					}}
-				>
-					Cell 1
-				</div>
+				<div className="bg-slate-500 p-1">Cell 1</div>
 			</Container>
 		</FlexgridItem>
 		<FlexgridItem>
 			<Container aria-label="cell 2">
-				<div
-					style={{
-						padding: "10px",
-						backgroundColor: "rgb(133 209 156)",
-					}}
-				>
-					Cell 2
-				</div>
+				<div className="bg-slate-500 p-2">Cell 2</div>
 			</Container>
 		</FlexgridItem>
 		<FlexgridItem>
 			<Container aria-label="cell 3">
-				<div
-					style={{
-						padding: "15px",
-						backgroundColor: "rgb(133 209 156)",
-					}}
-				>
-					Cell 3
-				</div>
+				<div className="bg-slate-500 p-3">Cell 3</div>
 			</Container>
 		</FlexgridItem>
 	</Flexgrid>

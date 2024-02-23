@@ -16,7 +16,7 @@ const getBubbleColorClasses = ({ kind }: { kind: string }) => {
 };
 
 const getBubbleTypographyClasses = () => {
-	return "prose prose-p:my-3 prose-blockquote:my-3 prose-ol:my-3 prose-ul:my-3 prose-ul:prose-li:marker:text-black";
+	return "prose prose-dark prose-p:my-3 prose-blockquote:my-3 prose-ol:my-3 prose-ul:my-3 prose-ul:prose-li:marker:text-black";
 };
 
 const getBubbleBorderClasses = ({ kind }: { kind: string }) => {

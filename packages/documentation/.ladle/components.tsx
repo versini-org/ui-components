@@ -7,38 +7,18 @@ import clsx from "clsx";
 
 const renderImportLine = (importName: string) => {
 	return (
-		<div className="docs-typography">
+		<div className="mb-6 max-w-none">
 			<h1>{importName}</h1>
-			<pre className="ladle-markdown">
-				<div
-					className="prism-code language-bash"
-					style={{
-						color: "rgb(57, 58, 52)",
-						backgroundColor: "var(--ladle-bg-color-secondary)",
-						textAlign: "left",
-						margin: "0.5em 0px 1em",
-						padding: "1em",
-					}}
-				>
-					<div>
-						<span className="token plain">{`import { ${importName} } from "@versini/ui-components";`}</span>
-					</div>
-				</div>
+			<pre>
+				<code>{`import { ${importName} } from "@versini/ui-components";`}</code>
 			</pre>
 		</div>
 	);
 };
 
-export const Provider: GlobalProvider = ({
-	children,
-	globalState,
-	storyMeta,
-}) => {
+export const Provider: GlobalProvider = ({ children, storyMeta }) => {
 	const className = clsx(
-		"mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl",
-		{
-			"docs-typography": globalState.story.startsWith("getting-started--"),
-		},
+		"prose prose-light mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl",
 	);
 	const handleOnClickGitHub = () => {
 		window.open(import.meta.env.REPOSITORY, "_blank", "noopener,noreferrer");

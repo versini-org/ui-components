@@ -1,0 +1,7 @@
+{
+	"watch": [
+		".ladle/*.*",
+		"src/**/*.*",
+		"../ui-components/src/**/*.*",
+		"../ui-components/lib/**/*.*"]
+}

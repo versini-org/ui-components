@@ -109,6 +109,7 @@ export const TableCell = ({
 	const cellClass = getTableCellClasses({
 		cellWrapper: context.cellWrapper,
 		className,
+		kind: context.kind,
 	});
 	return (
 		<Component className={cellClass} {...otherProps}>
