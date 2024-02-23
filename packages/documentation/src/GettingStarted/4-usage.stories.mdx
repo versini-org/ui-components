@@ -10,7 +10,9 @@ import {
 
 <Meta title="Getting started/Usage" />
 
-# Usage
+<div className="prose-light prose mb-6">
+	<h1>Usage</h1>
+</div>
 
 ```jsx
 // App.jsx
@@ -37,22 +39,22 @@ function App() {
 }
 ```
 
-If everything works well, this is what you should see in your page:
+<div className="prose prose-light max-w-none">
+	<p className="mb-4">If everything works well, this is what you should see in your page:</p>
 
-<div className="not-docs-typography mt-4">
-	<Card
-		header="Welcome to UI Components"
-		footer={
-			<Button kind="light" noBorder>
-				Hooray
-			</Button>
-		}
-	>
-		<p>Hello World</p>
-	</Card>
+<Card
+	header="Welcome to UI Components"
+	footer={
+		<Button kind="light" noBorder>
+			Hooray
+		</Button>
+	}
+>
+	<p>Hello World</p>
+</Card>
 </div>
 
-<div className="not-docs-typography mt-8">
+<div className="mt-8">
 	<Flexgrid alignHorizontal="flex-start">
 		<FlexgridItem>
 			<ButtonIcon

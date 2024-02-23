@@ -104,11 +104,7 @@ export const WithAction: Story<any> = (args) => {
 						{data.map((row, idx) => {
 							return (
 								<TableRow key={`${row.id}-${idx}`}>
-									<TableCell
-										component="th"
-										scope="row"
-										className="text-gray-400"
-									>
+									<TableCell component="th" scope="row">
 										{row.timestamp}
 									</TableCell>
 									<TableCell>{row.character}</TableCell>
@@ -209,11 +205,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 						{data.map((row, idx) => {
 							return (
 								<TableRow key={`${row.id}-${idx}`}>
-									<TableCell
-										component="th"
-										scope="row"
-										className="text-gray-400"
-									>
+									<TableCell component="th" scope="row">
 										{row.timestamp}
 									</TableCell>
 									<TableCell>{row.character}</TableCell>

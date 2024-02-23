@@ -30,7 +30,7 @@ export const getTableClasses = ({
 			},
 			wrapperClassName,
 		),
-		table: clsx("w-full text-left text-sm", className, {
+		table: clsx("my-0 w-full text-left text-sm", className, {
 			"text-copy-light": kind === "dark",
 			"text-copy-dark": kind === "light",
 		}),
@@ -76,11 +76,15 @@ export const getTableRowClasses = ({
 export const getTableCellClasses = ({
 	cellWrapper,
 	className,
+	kind,
 }: {
+	kind: string;
 	cellWrapper?: string;
 	className?: string;
 }) => {
 	return clsx(className, {
+		"text-copy-light": kind === "dark",
+		"text-copy-dark": kind === "light",
 		"px-4 py-3": cellWrapper === CELL_WRAPPER_HEAD,
 		"p-4": cellWrapper === CELL_WRAPPER_BODY,
 	});

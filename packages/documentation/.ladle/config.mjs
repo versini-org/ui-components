@@ -1,7 +1,7 @@
 /** @type {import('@ladle/react').UserConfig} */
 
 export default {
-	// defaultStory: "getting-started--overview",
+	defaultStory: "getting-started--overview",
 	storyOrder: [
 		"getting-started--overview",
 		"getting-started--installation",

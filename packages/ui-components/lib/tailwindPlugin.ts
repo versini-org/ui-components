@@ -44,24 +44,131 @@ const myComponentLibraryConfig = {
 	theme: {
 		extend: {
 			colors: dynamicColors(),
-			// typography: ({ theme }: { theme: any }) => ({
-			typography: {
+			// typography: {
+			typography: ({ theme }: { theme: (arg0: string) => any }) => ({
 				DEFAULT: {
 					css: {
 						"h1, h2, h3, h4, h5, h6": {
-							color: tokens.colors["copy-light"],
 							fontFamily: "Open Sans",
 						},
-						blockquote: {
-							borderLeftColor: tokens.colors["border-dark"],
+						p: {
+							marginTop: 0,
+							marginBottom: 0,
+							fontSize: "1rem",
+							lineHeight: "1.75rem",
 						},
-						"ul > li::marker": {
-							color: "var(--tw-prose-counters)",
+						blockquote: {
+							borderLeftWidth: "6px",
+						},
+						"blockquote p": {
+							fontFamily: "Georgia, Cambria, Times New Roman, Times, serif",
+						},
+						li: {
+							fontSize: "1rem",
+						},
+						pre: {
+							marginTop: "2rem",
+							marginBottom: "2rem",
+							borderRadius: "0.5rem",
+							fontSize: "0.875rem",
+							lineHeight: "1.25rem",
+						},
+						code: {
+							fontFamily:
+								'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
 						},
 					},
 				},
-				// }),
-			},
+				light: {
+					css: {
+						"--tw-prose-body": tokens.colors["copy-light"],
+						"--tw-prose-headings": tokens.colors["copy-light"],
+						"--tw-prose-lead": tokens.colors["copy-lighter"],
+						"--tw-prose-links": tokens.colors["copy-lighter"],
+						"--tw-prose-bold": tokens.colors["copy-lighter"],
+						"--tw-prose-counters": tokens.colors["copy-light"],
+						"--tw-prose-bullets": tokens.colors["copy-light"],
+						"--tw-prose-hr": tokens.colors["copy-light"],
+						"--tw-prose-quotes": tokens.colors["copy-lighter"],
+						"--tw-prose-quote-borders": tokens.colors["copy-lighter"],
+						"--tw-prose-captions": tokens.colors["copy-lighter"],
+						"--tw-prose-code": tokens.colors["copy-lighter"],
+						"--tw-prose-pre-code": tokens.colors["copy-light"],
+						"--tw-prose-pre-bg": tokens.colors["surface-dark"],
+						li: {
+							color: tokens.colors["copy-lighter"],
+						},
+					},
+				},
+				dark: {
+					css: {
+						"--tw-prose-body": theme("colors.slate[800]"),
+						"--tw-prose-headings": theme("colors.slate[900]"),
+						"--tw-prose-lead": theme("colors.slate[700]"),
+						"--tw-prose-links": theme("colors.slate[900]"),
+						"--tw-prose-bold": theme("colors.slate[900]"),
+						"--tw-prose-counters": theme("colors.slate[600]"),
+						"--tw-prose-bullets": theme("colors.slate[400]"),
+						"--tw-prose-hr": theme("colors.slate[300]"),
+						"--tw-prose-quotes": theme("colors.slate[900]"),
+						"--tw-prose-quote-borders": theme("colors.slate[300]"),
+						"--tw-prose-captions": theme("colors.slate[700]"),
+						"--tw-prose-code": theme("colors.slate[900]"),
+						"--tw-prose-pre-code": theme("colors.slate[100]"),
+						"--tw-prose-pre-bg": theme("colors.slate[900]"),
+						li: {
+							color: tokens.colors["copy-dark"],
+						},
+					},
+				},
+				// light: {
+				// 	css: {
+				// 		"h1, h2, h3, h4, h5, h6": {
+				// 			color: tokens.colors["copy-light"],
+				// 			fontFamily: "Open Sans",
+				// 		},
+				// 		strong: {
+				// 			color: tokens.colors["copy-lighter"],
+				// 		},
+				// 		p: {
+				// 			color: tokens.colors["copy-lighter"],
+				// 			marginTop: 0,
+				// 			marginBottom: 0,
+				// 			fontSize: "1.125rem",
+				// 			lineHeight: "1.75rem",
+				// 		},
+				// 		blockquote: {
+				// 			borderLeftColor: tokens.colors["border-light"],
+				// 			borderLeftWidth: "6px",
+				// 		},
+				// 		"blockquote p": {
+				// 			fontFamily: "Georgia, Cambria, Times New Roman, Times, serif",
+				// 		},
+				// 		li: {
+				// 			color: tokens.colors["copy-lighter"],
+				// 			fontSize: "1.125rem",
+				// 		},
+				// 		"ul > li::marker": {
+				// 			color: tokens.colors["copy-lighter"],
+				// 		},
+				// 		pre: {
+				// 			color: tokens.colors["copy-light"],
+				// 			backgroundColor: tokens.colors["surface-dark"],
+				// 			marginTop: "2rem",
+				// 			marginBottom: "2rem",
+				// 			borderRadius: "0.5rem",
+				// 			fontSize: "0.875rem",
+				// 			lineHeight: "1.25rem",
+				// 		},
+				// 		code: {
+				// 			color: tokens.colors["copy-light"],
+				// 			fontFamily:
+				// 				'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+				// 		},
+				// 	},
+				// 	// },
+				// },
+			}),
 		},
 	},
 };

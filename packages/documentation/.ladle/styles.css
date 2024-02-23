@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+/* @layer components {
 	.docs-typography strong:not(.not-docs-typography strong) {
 		@apply text-copy-lighter;
 	}
@@ -23,4 +23,4 @@
 	.docs-typography .prism-code:not(.not-docs-typography .prism-code) {
 		@apply m-1 !important;
 	}
-}
+} */
