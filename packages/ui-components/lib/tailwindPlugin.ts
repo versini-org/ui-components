@@ -44,7 +44,6 @@ const myComponentLibraryConfig = {
 	theme: {
 		extend: {
 			colors: dynamicColors(),
-			// typography: {
 			typography: ({ theme }: { theme: (arg0: string) => any }) => ({
 				DEFAULT: {
 					css: {
