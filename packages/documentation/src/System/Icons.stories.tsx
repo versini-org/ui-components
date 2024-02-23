@@ -32,7 +32,7 @@ export const Basic: Story<any> = (args) => (
 				<code>{`import { IconXYZ } from "@versini/ui-components";`}</code>
 			</pre>
 		</div>
-		<div className="flex flex-wrap gap-2 bg-slate-900 p-10">
+		<div className="prose prose-dark flex max-w-none flex-wrap gap-2 bg-slate-300 p-10">
 			<IconBack {...args} />
 			<IconChart {...args} />
 			<IconClose {...args} />
