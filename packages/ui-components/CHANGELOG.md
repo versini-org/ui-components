@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.36.0](https://github.com/aversini/ui-components/compare/ui-components-v4.35.0...ui-components-v4.36.0) (2024-02-23)
+
+
+### Features
+
+* adding typography classes prose-light and prose-dark ([c317e9d](https://github.com/aversini/ui-components/commit/c317e9db457f9d0fbaafc8630a7e4a920df42737))
+
 ## [4.35.0](https://github.com/aversini/ui-components/compare/ui-components-v4.34.0...ui-components-v4.35.0) (2024-02-21)
 
 
