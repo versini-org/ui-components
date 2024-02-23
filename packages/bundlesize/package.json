@@ -13,8 +13,8 @@
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
 	},
 	"dependencies": {
-		"@versini/ui-components": "*",
-		"@versini/ui-hooks": "*",
+		"@versini/ui-components": "workspace:../ui-components",
+		"@versini/ui-hooks": "workspace:../ui-hooks",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
 	}
