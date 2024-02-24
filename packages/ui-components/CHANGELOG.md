@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.37.0](https://github.com/aversini/ui-components/compare/ui-components-v4.36.0...ui-components-v4.37.0) (2024-02-24)
+
+
+### Features
+
+* splitting typography prose light into lighter and light ([bb8909e](https://github.com/aversini/ui-components/commit/bb8909e7c75bdc4bc6d7138656912d0a4b55d88f))
+
 ## [4.36.0](https://github.com/aversini/ui-components/compare/ui-components-v4.35.0...ui-components-v4.36.0) (2024-02-23)
 
 
