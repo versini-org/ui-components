@@ -9,7 +9,7 @@ const CommonTemplate = ({
 	type,
 }: {
 	intro: any;
-	type: "light" | "dark";
+	type: "light" | "lighter" | "dark";
 }) => {
 	return (
 		<>
@@ -215,15 +215,32 @@ const CommonTemplate = ({
 };
 
 export const Light: Story<any> = () => (
-	<div className="p-11">
+	<div className="bg-slate-900 p-11">
 		<div className="prose prose-light max-w-none">
 			<h1>Light</h1>
 			<CommonTemplate
 				type={"light"}
 				intro={
 					<p className="lead">
-						The "light" typography style is designed to be used on dark
+						The "light" typography style is designed to be used on very dark
 						backgrounds.
+					</p>
+				}
+			/>
+		</div>
+	</div>
+);
+
+export const Lighter: Story<any> = () => (
+	<div className="bg-slate-500 p-11">
+		<div className="prose prose-lighter max-w-none">
+			<h1>Lighter</h1>
+			<CommonTemplate
+				type={"lighter"}
+				intro={
+					<p className="lead">
+						The "lighter" typography style is designed to be used on slightly
+						dark backgrounds.
 					</p>
 				}
 			/>

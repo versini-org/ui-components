@@ -12,7 +12,7 @@ export default {
 };
 
 export const Installation: Story<any> = () => (
-	<div className="prose prose-light max-w-none">
+	<div className="prose prose-lighter max-w-none">
 		<h1>Installation</h1>
 		<p>
 			The <strong>UI-Components</strong> library is available as a npm package.
