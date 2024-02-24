@@ -18,7 +18,7 @@ const renderImportLine = (importName: string) => {
 
 export const Provider: GlobalProvider = ({ children, storyMeta }) => {
 	const className = clsx(
-		"prose prose-light mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl",
+		"prose prose-lighter mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl",
 	);
 	const handleOnClickGitHub = () => {
 		window.open(import.meta.env.REPOSITORY, "_blank", "noopener,noreferrer");

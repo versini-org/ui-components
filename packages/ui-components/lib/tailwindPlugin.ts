@@ -74,6 +74,28 @@ const myComponentLibraryConfig = {
 				},
 				light: {
 					css: {
+						"--tw-prose-body": tokens.colors["copy-light"],
+						"--tw-prose-headings": tokens.colors["copy-medium"],
+						"--tw-prose-lead": tokens.colors["copy-light"],
+						"--tw-prose-links": tokens.colors["copy-light"],
+						"--tw-prose-bold": tokens.colors["copy-light"],
+						"--tw-prose-counters": tokens.colors["copy-medium"],
+						"--tw-prose-bullets": tokens.colors["copy-medium"],
+						"--tw-prose-hr": tokens.colors["copy-medium"],
+						"--tw-prose-quotes": tokens.colors["copy-light"],
+						"--tw-prose-quote-borders": tokens.colors["copy-light"],
+						"--tw-prose-captions": tokens.colors["copy-light"],
+						"--tw-prose-code": tokens.colors["copy-light"],
+						"--tw-prose-pre-code": tokens.colors["copy-medium"],
+						"--tw-prose-pre-bg": tokens.colors["surface-dark"],
+						"--tw-prose-kbd": tokens.colors["copy-light"],
+						li: {
+							color: tokens.colors["copy-light"],
+						},
+					},
+				},
+				lighter: {
+					css: {
 						"--tw-prose-body": tokens.colors["copy-lighter"],
 						"--tw-prose-headings": tokens.colors["copy-light"],
 						"--tw-prose-lead": tokens.colors["copy-lighter"],
