@@ -12,6 +12,7 @@ permissions:
 
 env:
   COREPACK_ENABLE_STRICT: 0
+  PR_TITLE: ${{ github.event.pull_request.title }}
 
 # Allow only one concurrent deployment, skipping runs queued between
 # the run in-progress and latest queued.
