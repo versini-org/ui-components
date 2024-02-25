@@ -23,6 +23,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: ${{ false }} # Disable the job until v5.0.0 is released
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

@@ -7,6 +7,7 @@ export default {
 		"getting-started--installation",
 		"getting-started--configuration",
 		"getting-started--usage",
+		"getting-started--release-tags",
 		"Components*",
 		"Form-components*",
 		"System*",

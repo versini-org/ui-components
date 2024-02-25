@@ -5,12 +5,13 @@ import {
 	Card,
 	Flexgrid,
 	FlexgridItem,
+	IconNext,
 	IconPrevious,
 } from "@versini/ui-components";
 
 <Meta title="Getting started/Usage" />
 
-<div className="prose-lighter prose mb-6">
+<div className="prose prose-lighter mb-6">
 	<h1>Usage</h1>
 </div>
 
@@ -55,7 +56,7 @@ function App() {
 </div>
 
 <div className="mt-8">
-	<Flexgrid alignHorizontal="flex-start">
+	<Flexgrid alignHorizontal="space-between">
 		<FlexgridItem>
 			<ButtonIcon
 				labelRight="Configuration"
@@ -63,6 +64,15 @@ function App() {
 				onClick={linkTo("getting-started--configuration")}
 			>
 				<IconPrevious decorative monotone />
+			</ButtonIcon>
+		</FlexgridItem>
+		<FlexgridItem>
+			<ButtonIcon
+				labelLeft="Release Tags"
+				noBorder
+				onClick={linkTo("getting-started--release-tags")}
+			>
+				<IconNext decorative monotone />
 			</ButtonIcon>
 		</FlexgridItem>
 	</Flexgrid>

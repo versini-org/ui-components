@@ -7,6 +7,9 @@ const packageJson = fs.readJSONSync(
 );
 
 export default {
+	server: {
+		open: false,
+	},
 	define: {
 		"import.meta.env.OWNER": JSON.stringify("gizmette.com"),
 		"import.meta.env.REPOSITORY": JSON.stringify(packageJson.homepage),

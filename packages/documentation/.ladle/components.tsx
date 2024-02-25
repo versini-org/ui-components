@@ -1,15 +1,30 @@
 import "./styles.css";
 
-import { ButtonIcon, Footer, IconGitHub } from "@versini/ui-components";
+import {
+	ButtonIcon,
+	Flexgrid,
+	FlexgridItem,
+	Footer,
+	IconGitHub,
+} from "@versini/ui-components";
 
 import type { GlobalProvider } from "@ladle/react";
 import clsx from "clsx";
 
-const renderImportLine = (importName: string) => {
+const renderImportLine = (importName: string, stage?: string) => {
+	const releaseTag = stage ? stage : "alpha";
 	return (
-		<div className="mb-6 max-w-none">
-			<h1>{importName}</h1>
-			<pre>
+		<div className="mb-6">
+			<Flexgrid alignVertical="flex-end" className="mb-2">
+				<FlexgridItem>
+					<h1 className="m-0">{importName}</h1>
+				</FlexgridItem>
+				<FlexgridItem>
+					<p className="m-0 pl-2">stage: {releaseTag}</p>
+				</FlexgridItem>
+			</Flexgrid>
+
+			<pre className="mt-0">
 				<code>{`import { ${importName} } from "@versini/ui-components";`}</code>
 			</pre>
 		</div>
@@ -26,7 +41,9 @@ export const Provider: GlobalProvider = ({ children, storyMeta }) => {
 	return (
 		<>
 			<div className={className}>
-				{storyMeta?.importName ? renderImportLine(storyMeta.importName) : null}
+				{storyMeta?.importName
+					? renderImportLine(storyMeta.importName, storyMeta?.stage)
+					: null}
 				{children}
 			</div>
 			<Footer
