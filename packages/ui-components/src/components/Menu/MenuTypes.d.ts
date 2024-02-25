@@ -17,6 +17,10 @@ export interface MenuProps extends SpacingProps {
 	 */
 	icon?: React.ReactNode;
 	/**
+	 * The type of Button trigger. This will change the color of the Button.
+	 */
+	kind?: "dark" | "light" | "system";
+	/**
 	 * The label to use for the menu button.
 	 */
 	label?: string;

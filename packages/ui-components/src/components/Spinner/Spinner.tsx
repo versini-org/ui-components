@@ -22,6 +22,8 @@ export const Spinner = ({
 					{
 						"text-copy-dark": kind === "dark",
 						"text-copy-light": kind === "light",
+						"text-copy-dark dark:text-copy-light": kind === "system",
+						"text-copy-light dark:text-copy-dark": kind === "alt-system",
 					},
 				)
 			: clsx(SPINNER_CLASSNAME, getSpacing(spacing));
@@ -29,6 +31,8 @@ export const Spinner = ({
 	const dotClassName = clsx("av-spinner__dot", {
 		"fill-copy-dark": kind === "dark",
 		"fill-copy-light": kind === "light",
+		"fill-copy-dark dark:fill-copy-light": kind === "system",
+		"fill-copy-light dark:fill-copy-dark": kind === "alt-system",
 	});
 
 	return (

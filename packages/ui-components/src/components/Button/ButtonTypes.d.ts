@@ -18,7 +18,7 @@ export type CommonButtonProps = {
 	/**
 	 * The type of Button. This will change the color of the Button.
 	 */
-	kind?: "dark" | "light";
+	kind?: "dark" | "light" | "system";
 	/**
 	 * Whether or not to render the Button with a border.
 	 * @default false

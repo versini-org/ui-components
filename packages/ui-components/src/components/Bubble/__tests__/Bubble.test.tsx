@@ -67,7 +67,7 @@ describe("Bubble modifiers", () => {
 			"sm:max-w-md",
 			"md:max-w-2xl",
 			"bg-surface-accent",
-			"text-copy-lighter",
+			"text-copy-dark",
 			"rounded-b-xl",
 			"rounded-tl-xl",
 		]);
@@ -220,10 +220,10 @@ describe("Bubble methods", () => {
 			</Bubble>,
 		);
 		await screen.findByText("hello");
-		await screen.findByText("Copy");
+		await screen.findByLabelText("Copy to clipboard");
 		const button = await screen.findByRole("button");
 		await user.click(button);
-		await screen.findByText("Copied");
+		await screen.findByLabelText("Copied to clipboard");
 
 		expect(spyOnCopyToClipboard).toHaveBeenCalledTimes(1);
 	});
@@ -244,10 +244,10 @@ describe("Bubble methods", () => {
 			</Bubble>,
 		);
 		await screen.findByText("hello");
-		await screen.findByText("Copy");
+		await screen.findByLabelText("Copy to clipboard");
 		const button = await screen.findByRole("button");
 		await user.click(button);
-		await screen.findByText("Copied");
+		await screen.findByLabelText("Copied to clipboard");
 	});
 
 	it("should honor the copyToClipboard prop as a string", async () => {
@@ -266,10 +266,10 @@ describe("Bubble methods", () => {
 			</Bubble>,
 		);
 		await screen.findByText("hello");
-		await screen.findByText("Copy");
+		await screen.findByLabelText("Copy to clipboard");
 		const button = await screen.findByRole("button");
 		await user.click(button);
-		await screen.findByText("Copied");
+		await screen.findByLabelText("Copied to clipboard");
 	});
 });
 
@@ -287,14 +287,14 @@ describe("Bubble copy clipboard timer", () => {
 		);
 		const button = screen.getByRole("button");
 		screen.getByText("hello");
-		screen.getByText("Copy");
+		screen.getByLabelText("Copy to clipboard");
 		fireEvent.click(button);
-		screen.getByText("Copied");
+		screen.getByLabelText("Copied to clipboard");
 
 		act(() => {
 			vi.advanceTimersByTime(3000);
 		});
 
-		screen.getByText("Copy");
+		screen.getByLabelText("Copy to clipboard");
 	});
 });

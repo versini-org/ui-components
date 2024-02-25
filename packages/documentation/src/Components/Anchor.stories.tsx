@@ -32,7 +32,7 @@ Basic.args = {
 
 Basic.argTypes = {
 	kind: {
-		options: ["dark", "light"],
+		options: ["dark", "light", "system"],
 		control: { type: "radio" },
 	},
 	focus: {

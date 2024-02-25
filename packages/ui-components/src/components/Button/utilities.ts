@@ -12,7 +12,7 @@ type getButtonClassesProps = {
 	disabled: boolean;
 	focus: string;
 	fullWidth: boolean;
-	kind: string;
+	kind: "dark" | "light" | "system";
 	noBorder: boolean;
 	raw: boolean;
 	size: string;
@@ -73,9 +73,11 @@ const getButtonSizesClasses = ({
 };
 
 const getButtonBaseClasses = ({ kind }: { kind: string }) => {
-	return clsx("not-prose rounded-full text-copy-light", {
-		"bg-action-dark": kind === "dark",
-		"bg-action-light": kind === "light",
+	return clsx("not-prose rounded-full", {
+		"bg-action-dark text-copy-light": kind === "dark",
+		"bg-action-light text-copy-lighter": kind === "light",
+		"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
+			kind === "system",
 	});
 };
 
@@ -91,6 +93,8 @@ const getButtonHoverClasses = ({
 		: clsx("hover:text-copy-light-hover", {
 				"hover:bg-action-dark-hover": kind === "dark",
 				"hover:bg-action-light-hover": kind === "light",
+				"hover:bg-action-dark-hover dark:hover:bg-action-light-hover":
+					kind === "system",
 			});
 };
 
@@ -106,6 +110,8 @@ const getButtonActiveClasses = ({
 		: clsx("active:text-copy-light-active", {
 				"active:bg-action-dark-active": kind === "dark",
 				"active:bg-action-light-active": kind === "light",
+				"active:bg-action-dark-active dark:active:bg-action-light-active":
+					kind === "system",
 			});
 };
 
@@ -119,6 +125,8 @@ const getButtonBorderClasses = ({
 	return clsx("border", {
 		"border-border-dark": !noBorder && kind === "dark",
 		"border-border-light": !noBorder && kind === "light",
+		"border-border-dark dark:border-border-light":
+			!noBorder && kind === "system",
 		"border-transparent": noBorder,
 		"focus:border-white": !noBorder,
 	});

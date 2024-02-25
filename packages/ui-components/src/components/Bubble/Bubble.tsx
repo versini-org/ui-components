@@ -54,7 +54,7 @@ export const Bubble = ({
 				{footer &&
 					Object.keys(footer).map((key) => {
 						return footer[key] ? (
-							<div key={`-${key}`}>
+							<div key={`-${key}`} className="prose-p:m-0">
 								<p className={bubbleClasses.footer}>
 									{key}: {footer[key]}
 								</p>
@@ -67,11 +67,12 @@ export const Bubble = ({
 			{isCopyToClipboardEnabled && (
 				<div className={bubbleClasses.copyButton}>
 					<ButtonIcon
+						label={copied ? "Copied to clipboard" : "Copy to clipboard"}
 						noBorder
 						onClick={handleCopyToClipboard}
 						disabled={copied}
 					>
-						{copied ? <IconCopied /> : <IconCopy />}
+						{copied ? <IconCopied decorative /> : <IconCopy decorative />}
 					</ButtonIcon>
 				</div>
 			)}

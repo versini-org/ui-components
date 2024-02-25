@@ -1,7 +1,7 @@
 import React from "react";
 
 export const TableContext = React.createContext<{
-	kind: "light" | "dark";
+	kind: "light" | "dark" | "system";
 	cellWrapper?: "thead" | "tbody";
 	stickyHeader?: boolean;
 }>({

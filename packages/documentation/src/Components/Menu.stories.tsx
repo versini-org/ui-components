@@ -20,9 +20,14 @@ export default {
 		importName: "Menu, MenuItem, MenuSeparator",
 	},
 	args: {
+		kind: "dark",
 		defaultPlacement: "bottom-start",
 	},
 	argTypes: {
+		kind: {
+			control: { type: "radio" },
+			options: ["dark", "light", "system"],
+		},
 		defaultPlacement: {
 			control: { type: "select" },
 			options: [

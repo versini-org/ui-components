@@ -14,7 +14,7 @@ export default {
 	argTypes: {
 		kind: {
 			control: { type: "radio" },
-			options: ["dark", "light"],
+			options: ["dark", "light", "system"],
 		},
 	},
 };

@@ -1,7 +1,9 @@
 {
 	"watch": [
+		"tailwind.config.js",
 		".ladle/*.*",
 		"src/**/*.*",
 		"../ui-components/src/**/*.*",
-		"../ui-components/lib/**/*.*"]
+		"../ui-components/lib/**/*.*"
+	]
 }

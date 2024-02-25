@@ -9,7 +9,7 @@ export default {
 };
 
 export const Basic: Story<any> = (args) => (
-	<div className="flex flex-wrap">
+	<div className="flex flex-wrap bg-slate-50 p-11">
 		<Button {...args}>Button</Button>
 		<Button {...args}>Button</Button>
 		<Button {...args}>Button</Button>
@@ -30,7 +30,7 @@ Basic.args = {
 };
 Basic.argTypes = {
 	kind: {
-		options: ["dark", "light"],
+		options: ["dark", "light", "system"],
 		control: { type: "radio" },
 	},
 	focus: {

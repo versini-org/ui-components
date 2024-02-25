@@ -71,7 +71,7 @@ describe("Button modifiers", () => {
 	it("should render a light button", async () => {
 		render(<Button kind="light">hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["bg-action-light", "text-copy-light"]);
+		expectToHaveClasses(button, ["bg-action-light", "text-copy-lighter"]);
 	});
 
 	it("should render a disabled dark button", async () => {
@@ -98,7 +98,7 @@ describe("Button modifiers", () => {
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, [
 			"bg-action-light",
-			"text-copy-light",
+			"text-copy-lighter",
 			"disabled:opacity-50",
 			"disabled:cursor-not-allowed",
 		]);
