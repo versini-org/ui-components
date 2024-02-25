@@ -12,7 +12,7 @@ export default {
 
 export const Overview: Story<any> = () => (
 	<div className="prose prose-lighter max-w-none">
-		<h1 className="mb-0">yo - UI Components</h1>
+		<h1 className="mb-0">UI Components</h1>
 
 		<Flexgrid alignVertical="center">
 			<FlexgridItem span={{ fallback: 12, lg: 6 }}>
