@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   deploy:
-    if: $${{ !contains(env.PR_TITLE, 'no-deploy') }}
+    if: ${{ !contains(env.PR_TITLE, 'no-deploy') }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
