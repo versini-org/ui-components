@@ -17,7 +17,7 @@ export const Overview: Story<any> = () => (
 		<Flexgrid alignVertical="center">
 			<FlexgridItem span={{ fallback: 12, lg: 6 }}>
 				<blockquote>
-					<p>
+					<p className="lead">
 						UI Components provides a strong, responsive, and accessible library
 						of foundational React components.
 					</p>

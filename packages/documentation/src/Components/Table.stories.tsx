@@ -27,7 +27,7 @@ export default {
 			control: { type: "text" },
 		},
 		kind: {
-			options: ["dark", "light"],
+			options: ["dark", "light", "system"],
 			control: { type: "radio" },
 		},
 	},

@@ -4,7 +4,7 @@ export type SpinnerProps = {
 	/**
 	 * The kind of spinner to render. This will change the color of the spinner.
 	 */
-	kind?: "dark" | "light";
+	kind?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * A ref to the spinner element.
 	 */

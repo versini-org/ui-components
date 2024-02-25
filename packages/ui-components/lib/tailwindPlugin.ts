@@ -47,10 +47,10 @@ const myComponentLibraryConfig = {
 			typography: ({ theme }: { theme: (arg0: string) => any }) => ({
 				DEFAULT: {
 					css: {
+						maxWidth: "inherit",
 						"h1, h2, h3, h4, h5, h6": {
 							fontFamily: "Open Sans, ui-sans-serif, system-ui, sans-serif",
 						},
-
 						blockquote: {
 							borderLeftWidth: "6px",
 						},
@@ -86,8 +86,8 @@ const myComponentLibraryConfig = {
 						"--tw-prose-quote-borders": tokens.colors["copy-light"],
 						"--tw-prose-captions": tokens.colors["copy-light"],
 						"--tw-prose-code": tokens.colors["copy-light"],
-						"--tw-prose-pre-code": tokens.colors["copy-medium"],
-						"--tw-prose-pre-bg": tokens.colors["surface-dark"],
+						"--tw-prose-pre-code": tokens.colors["copy-lighter"],
+						"--tw-prose-pre-bg": tokens.colors["surface-medium"],
 						"--tw-prose-kbd": tokens.colors["copy-light"],
 						li: {
 							color: tokens.colors["copy-light"],
@@ -108,7 +108,7 @@ const myComponentLibraryConfig = {
 						"--tw-prose-quote-borders": tokens.colors["copy-lighter"],
 						"--tw-prose-captions": tokens.colors["copy-lighter"],
 						"--tw-prose-code": tokens.colors["copy-lighter"],
-						"--tw-prose-pre-code": tokens.colors["copy-light"],
+						"--tw-prose-pre-code": tokens.colors["copy-lighter"],
 						"--tw-prose-pre-bg": tokens.colors["surface-dark"],
 						"--tw-prose-kbd": tokens.colors["copy-lighter"],
 						li: {
@@ -130,8 +130,13 @@ const myComponentLibraryConfig = {
 						"--tw-prose-quote-borders": theme("colors.slate[300]"),
 						"--tw-prose-captions": theme("colors.slate[700]"),
 						"--tw-prose-code": theme("colors.slate[900]"),
-						"--tw-prose-pre-code": theme("colors.slate[100]"),
-						"--tw-prose-pre-bg": theme("colors.slate[900]"),
+
+						"--tw-prose-pre-code": tokens.colors["copy-lighter"],
+						"--tw-prose-pre-bg": tokens.colors["surface-medium"],
+
+						// "--tw-prose-pre-code": theme("colors.slate[100]"),
+						// "--tw-prose-pre-bg": theme("colors.slate[900]"),
+
 						"--tw-prose-kbd": theme("colors.slate[800]"),
 						li: {
 							color: tokens.colors["copy-dark"],

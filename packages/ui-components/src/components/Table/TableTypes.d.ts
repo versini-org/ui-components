@@ -10,7 +10,7 @@ export type TableProps = {
 	/**
 	 * The kind of table. It defines the color of the table.
 	 */
-	kind?: "dark" | "light";
+	kind?: "dark" | "light" | "system";
 	/**
 	 * The max height of the table. It follows the CSS max-height property.
 	 * Note: It is required to configure 'maxHeight' prop for the prop
