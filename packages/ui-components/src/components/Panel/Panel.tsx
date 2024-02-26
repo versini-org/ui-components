@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-import { IconClose } from "../";
+import { ButtonIcon, IconClose } from "../";
 import {
 	Modal,
 	ModalClose,
@@ -44,9 +44,13 @@ export const Panel = ({
 		<Modal open={open} onOpenChange={onOpenChange}>
 			<ModalContent className={panelClassName.main}>
 				<ModalHeading className={panelClassName.header}>
-					<ModalClose>
-						<IconClose />
-					</ModalClose>
+					<ModalClose
+						trigger={
+							<ButtonIcon noBorder label="Close">
+								<IconClose />
+							</ButtonIcon>
+						}
+					></ModalClose>
 					<div>{title}</div>
 				</ModalHeading>
 
