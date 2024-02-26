@@ -79,7 +79,7 @@ export default defineConfig(({ mode }) => {
 			lib: {
 				entry: resolve(__dirname, "src/components/index.ts"),
 				formats: ["es"],
-				name: "UIComponents",
+				name: "UISystem",
 			},
 			rollupOptions: {
 				input: {
