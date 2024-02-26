@@ -57,5 +57,5 @@ export const Basic: Story<any> = (args) => (
 
 Basic.args = {
 	monotone: false,
-	decorative: true,
+	semantic: false,
 };

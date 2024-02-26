@@ -73,7 +73,7 @@ export const Bubble = ({
 						onClick={handleCopyToClipboard}
 						disabled={copied}
 					>
-						{copied ? <IconCopied decorative /> : <IconCopy decorative />}
+						{copied ? <IconCopied /> : <IconCopy />}
 					</ButtonIcon>
 				</div>
 			)}
