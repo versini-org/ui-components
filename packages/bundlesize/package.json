@@ -7,8 +7,8 @@
 	"private": true,
 	"scripts": {
 		"clean": "rimraf dist",
-		"build:components": "vite build -c vite.components.config.js",
-		"build:system": "vite build -c vite.system.config.js",
+		"build:components": "cross-env-shell VITE_UI_TARGET=components vite build",
+		"build:system": "cross-env-shell VITE_UI_TARGET=system vite build",
 		"build": "npm-run-all --serial clean build:components build:system",
 		"test": "echo \"WARNING: no test specified\" && exit 0",
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
