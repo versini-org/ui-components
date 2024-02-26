@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.0](https://github.com/aversini/ui-components/compare/ui-components-v5.0.0...ui-components-v5.1.0) (2024-02-26)
+
+
+### Features
+
+* moving flexbox and themeprovider to ui-system ([a8ec60f](https://github.com/aversini/ui-components/commit/a8ec60f561ee4ffdb7ddd3ae491bd99131d2fe89))
+
 ## [5.0.0](https://github.com/aversini/ui-components/compare/ui-components-v4.37.0...ui-components-v5.0.0) (2024-02-25)
 
 
