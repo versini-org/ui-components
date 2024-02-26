@@ -1,1 +1,22 @@
-{}
+{
+  "1.0.0": {
+    "../bundlesize/dist/system/assets/style.css": {
+      "fileSize": 13888,
+      "fileSizeGzip": 3006,
+      "limit": "4 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/system/assets/index.js": {
+      "fileSize": 5050,
+      "fileSizeGzip": 1779,
+      "limit": "3 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/system/assets/vendor.js": {
+      "fileSize": 142166,
+      "fileSizeGzip": 45561,
+      "limit": "46 KB",
+      "passed": true
+    }
+  }
+}
