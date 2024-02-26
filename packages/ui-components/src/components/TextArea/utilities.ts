@@ -1,13 +1,13 @@
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
-import type { SpacingProps } from "../../common";
 import {
 	TEXT_AREA_CLASSNAME,
 	TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
 	TEXT_AREA_HELPER_TEXT_CLASSNAME,
 	TEXT_AREA_WRAPPER_CLASSNAME,
 } from "../../common/constants";
-import { getSpacing } from "../../common/utilities";
 
 type getTextAreaClassesProps = {
 	borderKind: string;

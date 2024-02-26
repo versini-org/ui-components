@@ -1,8 +1,8 @@
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
-import type { SpacingProps } from "../../common";
 import { CARD_CLASSNAME } from "../../common/constants";
-import { getSpacing } from "../../common/utilities";
 
 type getCardClassesProps = {
 	className?: string;

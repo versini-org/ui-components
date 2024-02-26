@@ -3,6 +3,7 @@
 		"packages/eslint-plugin-client": {},
 		"packages/ui-components": {},
 		"packages/ui-hooks": {},
-		"packages/ui-system": {}
+		"packages/ui-system": {},
+		"packages/ui-private": {}
 	}
 }

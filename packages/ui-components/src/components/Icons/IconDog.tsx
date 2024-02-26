@@ -1,4 +1,5 @@
-import { SvgIcon } from "../private/SvgIcon/SvgIcon";
+import { SvgIcon } from "@versini/ui-private";
+
 import type { IconsProps } from "./IconsTypes";
 
 export const IconDog = ({

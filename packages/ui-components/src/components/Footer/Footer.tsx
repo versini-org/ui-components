@@ -1,7 +1,7 @@
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
 import { FOOTER_CLASSNAME } from "../../common/constants";
-import { getSpacing } from "../../common/utilities";
 import type { FooterProps } from "./FooterTypes";
 
 export const Footer = ({

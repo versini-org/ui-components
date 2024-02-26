@@ -1,6 +1,7 @@
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
-import type { SpacingProps } from "../../common";
 import {
 	TEXT_INPUT_CLASSNAME,
 	TEXT_INPUT_CONTROL_RIGHT_CLASSNAME,
@@ -8,7 +9,6 @@ import {
 	TEXT_INPUT_SIMPLE_CLASSNAME,
 	TEXT_INPUT_WRAPPER_CLASSNAME,
 } from "../../common/constants";
-import { getSpacing } from "../../common/utilities";
 
 type getTextInputClassesProps = {
 	borderKind: string;

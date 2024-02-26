@@ -1,8 +1,8 @@
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
-import type { SpacingProps } from "../../common";
 import { BUBBLE_CLASSNAME } from "../../common/constants";
-import { getSpacing } from "../../common/utilities";
 
 const getBubbleSizesClasses = () => {
 	return "p-4 sm:max-w-md md:max-w-2xl";

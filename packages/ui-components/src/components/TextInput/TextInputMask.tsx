@@ -1,7 +1,7 @@
+import { LiveRegion } from "@versini/ui-private";
 import React, { useEffect, useRef, useState } from "react";
 
 import { ButtonIcon, IconHide, IconShow, useMergeRefs } from "..";
-import { LiveRegion } from "../private/LiveRegion/LiveRegion";
 import { TextInput } from "./TextInput";
 import type { TextInputMaskProps } from "./TextInputTypes";
 

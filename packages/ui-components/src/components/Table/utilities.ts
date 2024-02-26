@@ -1,7 +1,6 @@
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
-
-import type { SpacingProps } from "../../common";
-import { getSpacing } from "../../common/utilities";
 
 export const CELL_WRAPPER_HEAD = "thead";
 export const CELL_WRAPPER_BODY = "tbody";

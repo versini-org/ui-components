@@ -1,6 +1,5 @@
 import type { Placement } from "@floating-ui/react";
-
-import type { SpacingProps } from "../../common";
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
 
 export interface MenuProps extends SpacingProps {
 	/**

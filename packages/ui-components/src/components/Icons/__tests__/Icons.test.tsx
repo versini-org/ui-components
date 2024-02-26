@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
+import { SpacingProps } from "@versini/ui-private/dist/utilities";
 
-import { SpacingProps } from "../../../common";
 import {
 	IconBack,
 	IconChart,
