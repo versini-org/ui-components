@@ -1,6 +1,7 @@
+import { IconCopied, IconCopy } from "@versini/ui-icons";
 import { useEffect, useState } from "react";
 
-import { ButtonIcon, IconCopied, IconCopy } from "..";
+import { ButtonIcon } from "..";
 import { BubbleProps } from "./BubbleTypes";
 import { getBubbleClasses } from "./utilities";
 
