@@ -26,7 +26,7 @@ export const Overview: Story<any> = () => (
 					noBorder
 					onClick={linkTo("getting-started--installation")}
 				>
-					<IconNext decorative monotone />
+					<IconNext monotone />
 				</ButtonIcon>
 			</FlexgridItem>
 			<FlexgridItem span={{ fallback: 12, lg: 6 }}>

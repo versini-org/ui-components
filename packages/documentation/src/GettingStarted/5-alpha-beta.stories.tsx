@@ -76,7 +76,7 @@ export const ReleaseTags: Story<any> = () => (
 						noBorder
 						onClick={linkTo("getting-started--usage")}
 					>
-						<IconPrevious decorative monotone />
+						<IconPrevious monotone />
 					</ButtonIcon>
 				</FlexgridItem>
 			</Flexgrid>

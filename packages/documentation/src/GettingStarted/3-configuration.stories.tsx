@@ -87,7 +87,7 @@ export default twPlugin.merge({
 					noBorder
 					onClick={linkTo("getting-started--installation")}
 				>
-					<IconPrevious decorative monotone />
+					<IconPrevious monotone />
 				</ButtonIcon>
 			</FlexgridItem>
 			<FlexgridItem>
@@ -96,7 +96,7 @@ export default twPlugin.merge({
 					noBorder
 					onClick={linkTo("getting-started--usage")}
 				>
-					<IconNext decorative monotone />
+					<IconNext monotone />
 				</ButtonIcon>
 			</FlexgridItem>
 		</Flexgrid>

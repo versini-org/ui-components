@@ -28,38 +28,38 @@ export const WithLabel: Story<any> = (args) => (
 	<>
 		<div className="flex flex-wrap">
 			<ButtonIcon labelRight="Settings" {...args}>
-				<IconSettings decorative />
+				<IconSettings />
 			</ButtonIcon>
 			<ButtonIcon labelRight="Settings" {...args}>
-				<IconSettings decorative />
+				<IconSettings />
 			</ButtonIcon>
 			<ButtonIcon labelRight="Edit" {...args}>
-				<IconEdit decorative className="h-3 w-3" />
+				<IconEdit className="h-3 w-3" />
 			</ButtonIcon>
 			<ButtonIcon labelRight="Edit" {...args}>
-				<IconEdit decorative />
+				<IconEdit />
 			</ButtonIcon>
 		</div>
 		<div className="mt-2 flex flex-wrap">
 			<ButtonIcon labelLeft="Settings" {...args}>
-				<IconSettings decorative />
+				<IconSettings />
 			</ButtonIcon>
 			<ButtonIcon labelLeft="Settings" {...args}>
-				<IconSettings decorative />
+				<IconSettings />
 			</ButtonIcon>
 			<ButtonIcon labelLeft="Edit" {...args}>
-				<IconEdit decorative className="h-3 w-3" />
+				<IconEdit className="h-3 w-3" />
 			</ButtonIcon>
 			<ButtonIcon labelLeft="Edit" {...args}>
-				<IconEdit decorative />
+				<IconEdit />
 			</ButtonIcon>
 		</div>
 		<div className="mt-2 flex flex-wrap">
 			<ButtonIcon labelRight="Previous page" {...args}>
-				<IconPrevious decorative monotone />
+				<IconPrevious monotone />
 			</ButtonIcon>
 			<ButtonIcon labelLeft="Next page" {...args}>
-				<IconNext decorative monotone />
+				<IconNext monotone />
 			</ButtonIcon>
 		</div>
 	</>
