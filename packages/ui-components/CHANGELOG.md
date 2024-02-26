@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.2.0](https://github.com/aversini/ui-components/compare/ui-components-v5.1.0...ui-components-v5.2.0) (2024-02-26)
+
+
+### Features
+
+* moving private components to ui-private ([52c8939](https://github.com/aversini/ui-components/commit/52c893907c1b91d816cd7957a7510bbf4e7f9fca))
+* remove private Modal dependency on ButtonIcon ([e3ccd6d](https://github.com/aversini/ui-components/commit/e3ccd6d2651a3017c2541e3f377c30ea83895c63))
+
 ## [5.1.0](https://github.com/aversini/ui-components/compare/ui-components-v5.0.0...ui-components-v5.1.0) (2024-02-26)
 
 
