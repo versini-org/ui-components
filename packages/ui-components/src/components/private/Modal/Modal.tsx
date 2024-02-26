@@ -7,7 +7,7 @@ import {
 import clsx from "clsx";
 import * as React from "react";
 
-import { ButtonIcon, useUniqueId } from "../..";
+import { useUniqueId } from "../..";
 import { ModalContext } from "./ModalContext";
 import { useModal, useModalContext } from "./ModalHooks";
 import type { ModalOptions } from "./ModalTypes";
@@ -106,22 +106,19 @@ export const ModalDescription = React.forwardRef<
 export const ModalClose = React.forwardRef<
 	HTMLButtonElement,
 	{
-		children?: React.ReactNode;
+		trigger: React.ReactElement;
 	}
 >(function ModalClose(props, ref) {
 	const { setOpen } = useModalContext();
-	const { children, ...rest } = props;
+	const { trigger, ...rest } = props;
 	const handleClose = React.useCallback(() => setOpen(false), [setOpen]);
 	return (
-		<ButtonIcon
-			noBorder
-			label="Close"
-			type="button"
-			{...rest}
-			ref={ref}
-			onClick={handleClose}
-		>
-			{children}
-		</ButtonIcon>
+		<>
+			{React.cloneElement(trigger, {
+				ref,
+				onClick: handleClose,
+				...rest,
+			})}
+		</>
 	);
 });
