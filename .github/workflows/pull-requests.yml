@@ -33,12 +33,9 @@ jobs:
         if: always()
         with:
           refresh-message-position: true
-          message-path: packages/ui-components/tmp/pr-stats.md
-      - uses: mshick/add-pr-comment@v2
-        if: always()
-        with:
-          refresh-message-position: true
-          message-path: packages/ui-system/tmp/pr-stats.md
+          message-path: |
+            packages/ui-components/tmp/pr-stats.md
+            packages/ui-system/tmp/pr-stats.md
 
   inspect:
     if: ${{ always() }}
