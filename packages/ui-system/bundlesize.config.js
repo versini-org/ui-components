@@ -12,11 +12,11 @@ export default {
 		},
 		{
 			path: `${bundlePath}/assets/index.js`,
-			limit: "20 KB",
+			limit: "3 KB",
 		},
 		{
 			path: `${bundlePath}/assets/vendor.js`,
-			limit: "67 KB",
+			limit: "46 KB",
 		},
 	],
 };
