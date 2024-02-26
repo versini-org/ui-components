@@ -1,5 +1,6 @@
 import { linkTo, Story } from "@ladle/react";
-import { ButtonIcon, IconNext } from "@versini/ui-components";
+import { ButtonIcon } from "@versini/ui-components";
+import { IconNext } from "@versini/ui-icons";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 
 export default {

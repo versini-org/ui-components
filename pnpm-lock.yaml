@@ -54,6 +54,9 @@ importers:
       '@versini/ui-components':
         specifier: workspace:../ui-components
         version: link:../ui-components
+      '@versini/ui-icons':
+        specifier: workspace:../ui-icons
+        version: link:../ui-icons
       '@versini/ui-system':
         specifier: workspace:../ui-system
         version: link:../ui-system

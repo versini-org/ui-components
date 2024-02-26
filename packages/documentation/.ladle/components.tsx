@@ -1,9 +1,10 @@
 import "./styles.css";
 
-import { ButtonIcon, Footer, IconGitHub } from "@versini/ui-components";
+import { ButtonIcon, Footer } from "@versini/ui-components";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 
 import type { GlobalProvider } from "@ladle/react";
+import { IconGitHub } from "@versini/ui-icons";
 import clsx from "clsx";
 
 const renderImportLine = (importName: string, stage?: string) => {

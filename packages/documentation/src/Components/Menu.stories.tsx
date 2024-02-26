@@ -1,17 +1,19 @@
 import type { Story } from "@ladle/react";
 import {
 	Button,
+	Menu,
+	MenuItem,
+	MenuSeparator,
+	Panel,
+} from "@versini/ui-components";
+import {
 	IconBack,
 	IconChart,
 	IconHistory,
 	IconInfo,
 	IconProfile,
 	IconSettings,
-	Menu,
-	MenuItem,
-	MenuSeparator,
-	Panel,
-} from "@versini/ui-components";
+} from "@versini/ui-icons";
 import { useState } from "react";
 
 export default {
