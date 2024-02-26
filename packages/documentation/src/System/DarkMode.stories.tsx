@@ -93,11 +93,11 @@ module.exports = {
 				</Anchor>
 			</div>
 			<div className="mb-2 flex flex-wrap justify-end gap-1">
-				<Menu icon={<IconSettings decorative />} kind="system">
-					<MenuItem label="Profile" icon={<IconProfile decorative />} />
-					<MenuItem label="Statistics" icon={<IconChart decorative />} />
-					<MenuItem label="History" icon={<IconHistory decorative />} />
-					<MenuItem label="About" icon={<IconInfo decorative />} />
+				<Menu icon={<IconSettings />} kind="system">
+					<MenuItem label="Profile" icon={<IconProfile />} />
+					<MenuItem label="Statistics" icon={<IconChart />} />
+					<MenuItem label="History" icon={<IconHistory />} />
+					<MenuItem label="About" icon={<IconInfo />} />
 				</Menu>
 			</div>
 			<form noValidate>
@@ -147,7 +147,7 @@ module.exports = {
 												kind="light"
 												onClick={() => {}}
 											>
-												<IconRestore decorative className="h-3 w-3" />
+												<IconRestore className="h-3 w-3" />
 											</ButtonIcon>
 											<ButtonIcon
 												noBorder
@@ -156,7 +156,7 @@ module.exports = {
 												onClick={() => {}}
 											>
 												<div className="text-red-400">
-													<IconDelete decorative className="h-3 w-3" monotone />
+													<IconDelete className="h-3 w-3" monotone />
 												</div>
 											</ButtonIcon>
 										</div>

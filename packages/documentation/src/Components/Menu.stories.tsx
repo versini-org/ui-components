@@ -73,10 +73,10 @@ export const WithIcons: Story<any> = (args) => (
 			Button
 		</Button>
 		<Menu icon={<IconSettings />} spacing={{ r: 2 }} {...args}>
-			<MenuItem label="Profile" icon={<IconProfile decorative />} />
-			<MenuItem label="Statistics" icon={<IconChart decorative />} />
-			<MenuItem label="History" icon={<IconHistory decorative />} />
-			<MenuItem label="About" icon={<IconInfo decorative />} />
+			<MenuItem label="Profile" icon={<IconProfile />} />
+			<MenuItem label="Statistics" icon={<IconChart />} />
+			<MenuItem label="History" icon={<IconHistory />} />
+			<MenuItem label="About" icon={<IconInfo />} />
 		</Menu>
 		<Button size="small">Button</Button>
 	</div>
@@ -118,17 +118,17 @@ export const WithMessageBox: Story<any> = (args) => {
 					Button
 				</Button>
 				<Menu icon={<IconSettings />} spacing={{ r: 2 }} {...args}>
-					<MenuItem label="Profile" icon={<IconProfile decorative />} />
-					<MenuItem label="Statistics" icon={<IconChart decorative />} />
-					<MenuItem label="History" icon={<IconHistory decorative />} />
-					<MenuItem label="About" icon={<IconInfo decorative />} />
+					<MenuItem label="Profile" icon={<IconProfile />} />
+					<MenuItem label="Statistics" icon={<IconChart />} />
+					<MenuItem label="History" icon={<IconHistory />} />
+					<MenuItem label="About" icon={<IconInfo />} />
 					<MenuSeparator />
 					<MenuItem
 						onClick={handleMenuLogout}
 						label="Log out"
 						icon={
 							<div className="text-red-700">
-								<IconBack decorative monotone />
+								<IconBack monotone />
 							</div>
 						}
 					/>

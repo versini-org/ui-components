@@ -29,7 +29,7 @@ export const Installation: Story<any> = () => (
 					noBorder
 					onClick={linkTo("getting-started--overview")}
 				>
-					<IconPrevious decorative monotone />
+					<IconPrevious monotone />
 				</ButtonIcon>
 			</FlexgridItem>
 			<FlexgridItem>
@@ -38,7 +38,7 @@ export const Installation: Story<any> = () => (
 					noBorder
 					onClick={linkTo("getting-started--configuration")}
 				>
-					<IconNext decorative monotone />
+					<IconNext monotone />
 				</ButtonIcon>
 			</FlexgridItem>
 		</Flexgrid>
