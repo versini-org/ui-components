@@ -6,7 +6,7 @@ import fs from "fs-extra";
 import { defineConfig } from "vite";
 
 const VENDOR_CHUNK = "vendorChunk";
-const packageJson = fs.readJSONSync("../ui-components/package.json");
+const packageJson = fs.readJSONSync("../ui-system/package.json");
 const prodDependencies = Object.keys(packageJson.dependencies).filter(
 	(dependency) =>
 		dependency !== "react" &&
@@ -29,11 +29,11 @@ export default defineConfig({
 		},
 	},
 	build: {
-		outDir: "dist/components",
+		outDir: "dist/system",
 		emptyOutDir: false,
 		rollupOptions: {
 			input: {
-				index: resolve(__dirname, "ui-components", "index.html"),
+				index: resolve(__dirname, "ui-system", "index.html"),
 			},
 			output: {
 				assetFileNames: "assets/style[extname]",
