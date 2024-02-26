@@ -29,6 +29,9 @@ importers:
       '@versini/ui-hooks':
         specifier: workspace:../ui-hooks
         version: link:../ui-hooks
+      '@versini/ui-icons':
+        specifier: workspace:../ui-icons
+        version: link:../ui-icons
       '@versini/ui-system':
         specifier: workspace:../ui-system
         version: link:../ui-system
@@ -39,9 +42,6 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
-      '@versini/ui-icons':
-        specifier: workspace:../ui-icons
-        version: link:../ui-icons
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private

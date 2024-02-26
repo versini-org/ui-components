@@ -20,6 +20,7 @@
 	"dependencies": {
 		"@versini/ui-components": "workspace:../ui-components",
 		"@versini/ui-hooks": "workspace:../ui-hooks",
+		"@versini/ui-icons": "workspace:../ui-icons",
 		"@versini/ui-system": "workspace:../ui-system",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
