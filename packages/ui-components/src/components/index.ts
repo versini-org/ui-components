@@ -11,8 +11,6 @@ import { Button } from "./Button/Button";
 import { ButtonIcon } from "./Button/ButtonIcon";
 import { ButtonLink } from "./Button/ButtonLink";
 import { Card } from "./Card/Card";
-import { Flexgrid } from "./Flexgrid/Flexgrid";
-import { FlexgridItem } from "./Flexgrid/FlexgridItem";
 import { Footer } from "./Footer/Footer";
 import { Header } from "./Header/Header";
 import { IconBack } from "./Icons/IconBack";
@@ -50,7 +48,6 @@ import {
 import { TextArea } from "./TextArea/TextArea";
 import { TextInput } from "./TextInput/TextInput";
 import { TextInputMask } from "./TextInput/TextInputMask";
-import { ThemeProvider } from "./ThemeProvider/ThemeProvider";
 import { Toggle } from "./Toggle/Toggle";
 
 export {
@@ -60,8 +57,6 @@ export {
 	ButtonIcon,
 	ButtonLink,
 	Card,
-	Flexgrid,
-	FlexgridItem,
 	Footer,
 	Header,
 	IconBack,
@@ -97,7 +92,6 @@ export {
 	TextArea,
 	TextInput,
 	TextInputMask,
-	ThemeProvider,
 	Toggle,
 	useLocalStorage,
 	useMergeRefs,

@@ -1,12 +1,7 @@
 import "./styles.css";
 
-import {
-	ButtonIcon,
-	Flexgrid,
-	FlexgridItem,
-	Footer,
-	IconGitHub,
-} from "@versini/ui-components";
+import { ButtonIcon, Footer, IconGitHub } from "@versini/ui-components";
+import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 
 import type { GlobalProvider } from "@ladle/react";
 import clsx from "clsx";

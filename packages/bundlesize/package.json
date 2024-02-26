@@ -7,14 +7,16 @@
 	"private": true,
 	"scripts": {
 		"clean": "rimraf dist",
-		"build:js": "vite build",
-		"build": "npm-run-all --serial clean build:js",
+		"build:components": "cross-env-shell VITE_UI_TARGET=components vite build",
+		"build:system": "cross-env-shell VITE_UI_TARGET=system vite build",
+		"build": "npm-run-all --serial clean build:components build:system",
 		"test": "echo \"WARNING: no test specified\" && exit 0",
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
 	},
 	"dependencies": {
 		"@versini/ui-components": "workspace:../ui-components",
 		"@versini/ui-hooks": "workspace:../ui-hooks",
+		"@versini/ui-system": "workspace:../ui-system",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
 	}

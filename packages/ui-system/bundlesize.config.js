@@ -1,22 +1,22 @@
-const bundlePath = "../bundlesize/dist/components";
+const bundlePath = "../bundlesize/dist/system";
 export default {
 	report: {
-		header: "## Bundle Size (components)",
+		header: "## Bundle Size (system)",
 		previous: "stats/stats.json",
 		current: "tmp/stats.json",
 	},
 	sizes: [
 		{
 			path: `${bundlePath}/assets/style.css`,
-			limit: "8 KB",
+			limit: "4 KB",
 		},
 		{
 			path: `${bundlePath}/assets/index.js`,
-			limit: "20 KB",
+			limit: "3 KB",
 		},
 		{
 			path: `${bundlePath}/assets/vendor.js`,
-			limit: "67 KB",
+			limit: "46 KB",
 		},
 	],
 };
