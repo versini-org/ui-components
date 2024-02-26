@@ -1,4 +1,4 @@
-import type { SpacingProps } from "../../../common";
+import type { SpacingProps } from "../../common";
 
 export type SvgIconProps = {
 	/**

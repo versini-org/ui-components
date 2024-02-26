@@ -1,4 +1,4 @@
-import { SpacingProps } from "../../common";
+import { SpacingProps } from "@versini/ui-private/dist/utilities";
 
 export interface IconsProps
 	extends Omit<React.SVGAttributes<SVGElement>, "spacing">,

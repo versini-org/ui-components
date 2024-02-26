@@ -1,8 +1,8 @@
+import { LiveRegion } from "@versini/ui-private";
 import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TEXT_AREA_CLASSNAME } from "../../common/constants";
 import { useMergeRefs, useUncontrolled, useUniqueId } from "..";
-import { LiveRegion } from "../private/LiveRegion/LiveRegion";
 import type { TextAreaProps } from "./TextAreaTypes";
 import { adjustLabelAndHelperText, getTextAreaClasses } from "./utilities";
 

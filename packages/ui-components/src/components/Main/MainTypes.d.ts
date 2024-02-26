@@ -1,4 +1,4 @@
-import type { SpacingProps } from "../../common";
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
 
 export type MainProps = {
 	/**

@@ -1,8 +1,8 @@
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
-import type { SpacingProps } from "../../common";
 import { TOGGLE_CLASSNAME } from "../../common/constants";
-import { getSpacing } from "../../common/utilities";
 
 const getToggleBaseClasses = () => {
 	return clsx(TOGGLE_CLASSNAME, "peer h-6 w-11 rounded-full");

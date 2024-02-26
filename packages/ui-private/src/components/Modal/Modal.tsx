@@ -4,10 +4,10 @@ import {
 	FloatingPortal,
 	useMergeRefs,
 } from "@floating-ui/react";
+import { useUniqueId } from "@versini/ui-hooks";
 import clsx from "clsx";
 import * as React from "react";
 
-import { useUniqueId } from "../..";
 import { ModalContext } from "./ModalContext";
 import { useModal, useModalContext } from "./ModalHooks";
 import type { ModalOptions } from "./ModalTypes";

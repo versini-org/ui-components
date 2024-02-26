@@ -1,13 +1,13 @@
-import { useEffect, useRef } from "react";
-
-import { ButtonIcon, IconClose } from "../";
 import {
 	Modal,
 	ModalClose,
 	ModalContent,
 	ModalDescription,
 	ModalHeading,
-} from "../private/Modal/Modal";
+} from "@versini/ui-private";
+import { useEffect, useRef } from "react";
+
+import { ButtonIcon, IconClose } from "../";
 import type { PanelProps } from "./PanelTypes";
 import { getPanelClassName, TYPE_PANEL } from "./utilities";
 

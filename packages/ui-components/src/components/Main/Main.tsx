@@ -1,8 +1,8 @@
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
 import { MAIN_CLASSNAME } from "../../common/constants";
-import { getSpacing } from "../../common/utilities";
-import { MainProps } from "./MainTypes";
+import type { MainProps } from "./MainTypes";
 
 export const Main = ({
 	children,

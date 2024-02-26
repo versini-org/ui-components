@@ -1,8 +1,8 @@
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
-import type { SpacingProps } from "../../common";
 import { BUTTON_CLASSNAME } from "../../common/constants";
-import { getSpacing } from "../../common/utilities";
 
 export const TYPE_ICON = "icon";
 export const TYPE_BUTTON = "button";

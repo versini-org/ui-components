@@ -1,6 +1,5 @@
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
 import React from "react";
-
-import type { SpacingProps } from "../../common";
 
 export type TableProps = {
 	/**

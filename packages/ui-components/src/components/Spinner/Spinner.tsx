@@ -1,7 +1,7 @@
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
 import { SPINNER_CLASSNAME } from "../../common/constants";
-import { getSpacing } from "../../common/utilities";
 import type { SpinnerProps } from "./SpinnerTypes";
 
 export const Spinner = ({

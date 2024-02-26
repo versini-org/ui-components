@@ -2,5 +2,6 @@
 	"packages/eslint-plugin-client": "1.0.1",
 	"packages/ui-components": "5.1.0",
 	"packages/ui-hooks": "2.2.0",
-	"packages/ui-system": "1.0.0"
+	"packages/ui-system": "1.0.0",
+	"packages/ui-private": "0.0.0"
 }
