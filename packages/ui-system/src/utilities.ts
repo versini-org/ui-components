@@ -1,5 +1,3 @@
-import { customCSS } from "../lib/customCSS";
-import { twPlugin } from "../lib/tailwindPlugin";
-import { tokens } from "../lib/tokens";
+import { twPlugin } from "../../../lib/tailwindPlugin";
 
-export { customCSS, tokens, twPlugin };
+export { twPlugin };
