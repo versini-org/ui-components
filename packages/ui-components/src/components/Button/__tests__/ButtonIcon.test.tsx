@@ -100,7 +100,7 @@ describe("ButtonIcon modifiers", () => {
 	it("should render a size small button icon with a label on the right", async () => {
 		render(
 			<ButtonIcon size="small" labelRight="Settings">
-				<IconSettings decorative />
+				<IconSettings />
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
@@ -112,7 +112,7 @@ describe("ButtonIcon modifiers", () => {
 	it("should render a size small button icon with a label on the left", async () => {
 		render(
 			<ButtonIcon size="small" labelLeft="Settings">
-				<IconSettings decorative />
+				<IconSettings />
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
@@ -134,7 +134,7 @@ describe("ButtonIcon modifiers", () => {
 	it("should render a size medium button icon with a label on the right", async () => {
 		render(
 			<ButtonIcon size="medium" labelRight="Settings">
-				<IconSettings decorative />
+				<IconSettings />
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
@@ -146,7 +146,7 @@ describe("ButtonIcon modifiers", () => {
 	it("should render a size medium button icon with a label on the left", async () => {
 		render(
 			<ButtonIcon size="medium" labelLeft="Settings">
-				<IconSettings decorative />
+				<IconSettings />
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
@@ -168,7 +168,7 @@ describe("ButtonIcon modifiers", () => {
 	it("should render a size large button icon with a label on the right", async () => {
 		render(
 			<ButtonIcon size="large" labelRight="Settings">
-				<IconSettings decorative />
+				<IconSettings />
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
@@ -180,7 +180,7 @@ describe("ButtonIcon modifiers", () => {
 	it("should render a size large button icon with a label on the left", async () => {
 		render(
 			<ButtonIcon size="large" labelLeft="Settings">
-				<IconSettings decorative />
+				<IconSettings />
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
