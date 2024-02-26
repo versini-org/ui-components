@@ -12,7 +12,7 @@ export const SvgIcon = ({
 	defaultClassName,
 	spacing,
 	title,
-	decorative = false,
+	semantic = false,
 	...rest
 }: SvgIconProps) => {
 	const generatedSpacing = getSpacing(spacing);
@@ -28,13 +28,13 @@ export const SvgIcon = ({
 				viewBox={viewBox ? viewBox : defaultViewBox}
 				fill={fill ? fill : "currentColor"}
 				role="img"
-				aria-hidden={decorative}
+				aria-hidden={!semantic}
 				focusable={false}
 				{...rest}
 			>
 				{children}
 			</svg>
-			{title && !decorative && <span className="sr-only">{title}</span>}
+			{title && semantic && <span className="sr-only">{title}</span>}
 		</>
 	);
 };

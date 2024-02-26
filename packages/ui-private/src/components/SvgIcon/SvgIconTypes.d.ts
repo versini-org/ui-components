@@ -19,12 +19,6 @@ export type SvgIconProps = {
 	 */
 	className?: string;
 	/**
-	 * Whether or not the icon is decorative only (visual but not
-	 * announced to assistive technologies).
-	 * @default false
-	 */
-	decorative?: boolean;
-	/**
 	 * CSS class(es) to add to the main component wrapper.
 	 */
 	defaultClassName?: string;
@@ -33,6 +27,12 @@ export type SvgIconProps = {
 	 * @default "currentColor"
 	 */
 	fill?: string;
+	/**
+	 * Whether or not the icon is semantic (visual and
+	 * announced to assistive technologies).
+	 * @default false
+	 */
+	semantic?: boolean;
 	/**
 	 * The viewBox to use. If not provided, the default viewBox will be used.
 	 */

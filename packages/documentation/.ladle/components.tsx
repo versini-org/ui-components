@@ -53,7 +53,7 @@ export const Provider: GlobalProvider = ({ children, storyMeta }) => {
 						label="link to UI Components GitHub repository"
 						onClick={handleOnClickGitHub}
 					>
-						<IconGitHub decorative />
+						<IconGitHub />
 					</ButtonIcon>
 				}
 				row2={

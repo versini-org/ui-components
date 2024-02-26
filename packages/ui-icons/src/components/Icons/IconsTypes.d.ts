@@ -4,12 +4,6 @@ export interface IconsProps
 	extends Omit<React.SVGAttributes<SVGElement>, "spacing">,
 		SpacingProps {
 	/**
-	 * Whether or not the icon is decorative only (visual but not
-	 * announced to assistive technologies).
-	 * @default false
-	 */
-	decorative?: boolean;
-	/**
 	 * Whether or not to render the icon in a single color
 	 * @default false
 	 */
@@ -19,4 +13,10 @@ export interface IconsProps
 	 * but it can be overridden with this prop.
 	 */
 	title?: string;
+	/**
+	 * Whether or not the icon is semantic (visual and
+	 * announced to assistive technologies).
+	 * @default false
+	 */
+	semantic?: boolean;
 }
