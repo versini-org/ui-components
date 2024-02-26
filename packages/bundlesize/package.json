@@ -13,6 +13,9 @@
 		"test": "echo \"WARNING: no test specified\" && exit 0",
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
 	},
+	"devDependencies": {
+		"@versini/ui-private": "workspace:../ui-private"
+	},
 	"dependencies": {
 		"@versini/ui-components": "workspace:../ui-components",
 		"@versini/ui-hooks": "workspace:../ui-hooks",
