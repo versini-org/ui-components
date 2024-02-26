@@ -4,13 +4,6 @@ import {
 	Button,
 	ButtonIcon,
 	Footer,
-	IconChart,
-	IconDelete,
-	IconHistory,
-	IconInfo,
-	IconProfile,
-	IconRestore,
-	IconSettings,
 	Menu,
 	MenuItem,
 	Spinner,
@@ -21,6 +14,15 @@ import {
 	TableRow,
 	TextInput,
 } from "@versini/ui-components";
+import {
+	IconChart,
+	IconDelete,
+	IconHistory,
+	IconInfo,
+	IconProfile,
+	IconRestore,
+	IconSettings,
+} from "@versini/ui-icons";
 
 export default { title: "System/Dark Mode" };
 
@@ -101,6 +103,7 @@ module.exports = {
 			<form noValidate>
 				<div className="flex gap-2">
 					<TextInput
+						name="question"
 						label="Type your question here"
 						helperText="Powered by the sun"
 						rightElement={

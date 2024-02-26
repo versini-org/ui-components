@@ -18,7 +18,7 @@ import {
 	IconSettings,
 	IconShow,
 	IconUser,
-} from "@versini/ui-components";
+} from "@versini/ui-icons";
 
 export default {
 	title: "System/Icons",
@@ -29,7 +29,7 @@ export const Basic: Story<any> = (args) => (
 		<div className="mb-6 max-w-none">
 			<h1>Icons</h1>
 			<pre>
-				<code>{`import { IconXYZ } from "@versini/ui-components";`}</code>
+				<code>{`import { IconXYZ } from "@versini/ui-icons";`}</code>
 			</pre>
 		</div>
 		<div className="prose prose-dark flex max-w-none flex-wrap gap-2 bg-slate-300 p-10">

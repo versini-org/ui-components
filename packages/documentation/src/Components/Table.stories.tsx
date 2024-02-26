@@ -1,14 +1,13 @@
 import type { Story } from "@ladle/react";
 import {
 	ButtonIcon,
-	IconDelete,
-	IconRestore,
 	Table,
 	TableBody,
 	TableCell,
 	TableHead,
 	TableRow,
 } from "@versini/ui-components";
+import { IconDelete, IconRestore } from "@versini/ui-icons";
 
 export default {
 	title: "Components/Table",

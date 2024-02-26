@@ -4,6 +4,7 @@
 		"packages/ui-components": {},
 		"packages/ui-hooks": {},
 		"packages/ui-system": {},
-		"packages/ui-private": {}
+		"packages/ui-private": {},
+		"packages/ui-icons": {}
 	}
 }

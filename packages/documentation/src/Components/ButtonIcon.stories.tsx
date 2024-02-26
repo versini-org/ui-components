@@ -1,11 +1,11 @@
 import type { Story } from "@ladle/react";
+import { ButtonIcon } from "@versini/ui-components";
 import {
-	ButtonIcon,
 	IconEdit,
 	IconNext,
 	IconPrevious,
 	IconSettings,
-} from "@versini/ui-components";
+} from "@versini/ui-icons";
 
 export const Basic: Story<any> = (args) => (
 	<div className="flex flex-wrap">

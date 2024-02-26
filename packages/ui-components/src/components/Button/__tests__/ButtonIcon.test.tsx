@@ -1,7 +1,8 @@
 import { render, screen } from "@testing-library/react";
+import { IconSettings } from "@versini/ui-icons";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
-import { ButtonIcon, IconSettings } from "../..";
+import { ButtonIcon } from "../ButtonIcon";
 
 describe("ButtonIcon (exceptions)", () => {
 	it("should be able to require/import from root", () => {

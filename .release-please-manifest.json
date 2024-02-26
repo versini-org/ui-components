@@ -3,5 +3,6 @@
 	"packages/ui-components": "5.2.0",
 	"packages/ui-hooks": "2.2.0",
 	"packages/ui-system": "1.0.1",
-	"packages/ui-private": "1.0.0"
+	"packages/ui-private": "1.0.0",
+	"packages/ui-icons": "0.0.0"
 }
