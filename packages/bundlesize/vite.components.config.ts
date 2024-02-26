@@ -29,10 +29,11 @@ export default defineConfig({
 		},
 	},
 	build: {
-		outDir: "dist/system",
+		outDir: "dist/components",
+		emptyOutDir: false,
 		rollupOptions: {
 			input: {
-				index: resolve(__dirname, "ui-system", "index.html"),
+				index: resolve(__dirname, "ui-components", "index.html"),
 			},
 			output: {
 				assetFileNames: "assets/style[extname]",
