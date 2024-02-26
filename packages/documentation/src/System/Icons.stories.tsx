@@ -58,5 +58,4 @@ export const Basic: Story<any> = (args) => (
 Basic.args = {
 	monotone: false,
 	semantic: false,
-	// decorative: true,
 };
