@@ -1,14 +1,13 @@
 import type { Story } from "@ladle/react";
 import {
 	Card,
-	Flexgrid,
-	FlexgridItem,
 	Table,
 	TableBody,
 	TableCell,
 	TableHead,
 	TableRow,
 } from "@versini/ui-components";
+import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 
 export default {
 	title: "System/Flexgrid",

@@ -1,3 +1,7 @@
+/** @type {import('vite').UserConfig} */
+
+import { resolve } from "node:path";
+
 import fs from "fs-extra";
 import { defineConfig } from "vite";
 
@@ -25,7 +29,11 @@ export default defineConfig({
 		},
 	},
 	build: {
+		outDir: "dist/system",
 		rollupOptions: {
+			input: {
+				index: resolve(__dirname, "ui-system", "index.html"),
+			},
 			output: {
 				assetFileNames: "assets/style[extname]",
 				entryFileNames: "assets/[name].js",

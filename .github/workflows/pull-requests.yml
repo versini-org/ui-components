@@ -27,13 +27,18 @@ jobs:
           corepack enable
           pnpm install
           npx lerna run build --ignore @versini/documentation
-          npx lerna run stats:pr --scope=@versini/ui-components
-          npx lerna run stats:report --scope=@versini/ui-components
+          npx lerna run stats:pr
+          npx lerna run stats:report
       - uses: mshick/add-pr-comment@v2
         if: always()
         with:
           refresh-message-position: true
           message-path: packages/ui-components/tmp/pr-stats.md
+      - uses: mshick/add-pr-comment@v2
+        if: always()
+        with:
+          refresh-message-position: true
+          message-path: packages/ui-system/tmp/pr-stats.md
 
   inspect:
     if: ${{ always() }}

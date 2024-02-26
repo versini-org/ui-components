@@ -1,0 +1,85 @@
+{
+	"clone": {
+		"name": "IconCopy",
+		"title": "Copy",
+		"monotone": true
+	},
+	"ellipsis": {
+		"name": "IconSettings",
+		"title": "Settings"
+	},
+	"eye": {
+		"name": "IconShow",
+		"title": "Show",
+		"monotone": true
+	},
+	"eye-slash": {
+		"name": "IconHide",
+		"title": "Hide",
+		"monotone": true
+	},
+	"face-smile": {
+		"name": "IconUser",
+		"title": "User"
+	},
+	"pen-to-square": {
+		"name": "IconEdit",
+		"title": "Edit",
+		"monotone": true
+	},
+	"square-check": {
+		"name": "IconCopied",
+		"title": "Copied"
+	},
+	"trash-can": {
+		"name": "IconDelete",
+		"title": "Delete",
+		"monotone": true
+	},
+	"window-restore": {
+		"name": "IconRestore",
+		"title": "Restore",
+		"monotone": true
+	},
+	"xmark": {
+		"name": "IconClose",
+		"title": "Close"
+	},
+	"chart-simple": {
+		"name": "IconChart",
+		"title": "Chart",
+		"monotone": true
+	},
+	"address-card": {
+		"name": "IconProfile",
+		"title": "Profile"
+	},
+	"clock-rotate-left": {
+		"name": "IconHistory",
+		"title": "History",
+		"monotone": true
+	},
+	"circle-info": {
+		"name": "IconInfo",
+		"title": "Info"
+	},
+	"arrow-up-left-from-circle": {
+		"name": "IconBack",
+		"title": "Back",
+		"monotone": true
+	},
+	"arrow-right": {
+		"name": "IconNext",
+		"title": "Next",
+		"monotone": true
+	},
+	"arrow-left": {
+		"name": "IconPrevious",
+		"title": "Previous",
+		"monotone": true
+	},
+	"github": {
+		"name": "IconGitHub",
+		"title": "GitHub"
+	}
+}

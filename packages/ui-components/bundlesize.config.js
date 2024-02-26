@@ -1,6 +1,7 @@
-const bundlePath = "../bundlesize/dist";
+const bundlePath = "../bundlesize/dist/components";
 export default {
 	report: {
+		header: "## Bundle Size (components)",
 		previous: "stats/stats.json",
 		current: "tmp/stats.json",
 	},

@@ -1,5 +1,6 @@
 import type { Story } from "@ladle/react";
-import { Button, TextArea, ThemeProvider } from "@versini/ui-components";
+import { Button, TextArea } from "@versini/ui-components";
+import { ThemeProvider } from "@versini/ui-system";
 
 const customTheme = {
 	"--av-copy-light": "#403c3a",
