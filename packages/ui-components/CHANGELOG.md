@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.0](https://github.com/aversini/ui-components/compare/ui-components-v4.37.0...ui-components-v5.0.0) (2024-02-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* introducing automatic dark and light modes
+
+### Features
+
+* introducing automatic dark and light modes ([dcb56c0](https://github.com/aversini/ui-components/commit/dcb56c05dbf9113a2b6550da9cde92b7914a4b4e))
+
 ## [4.37.0](https://github.com/aversini/ui-components/compare/ui-components-v4.36.0...ui-components-v4.37.0) (2024-02-24)
 
 
