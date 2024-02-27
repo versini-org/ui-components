@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import { ButtonIcon, Footer } from "@versini/ui-components";
+import { ButtonIcon, Footer, Pill } from "@versini/ui-components";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 
 import type { GlobalProvider } from "@ladle/react";
@@ -11,12 +11,16 @@ const renderImportLine = (importName: string, stage?: string) => {
 	const releaseTag = stage ? stage : "alpha";
 	return (
 		<div className="mb-6">
-			<Flexgrid alignVertical="flex-end" className="mb-2">
+			<Flexgrid
+				alignVertical="flex-end"
+				alignHorizontal="space-between"
+				className="mb-2"
+			>
 				<FlexgridItem>
 					<h1 className="m-0">{importName}</h1>
 				</FlexgridItem>
 				<FlexgridItem>
-					<p className="m-0 pl-2">stage: {releaseTag}</p>
+					<Pill label={releaseTag} theme="information" />
 				</FlexgridItem>
 			</Flexgrid>
 

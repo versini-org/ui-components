@@ -24,6 +24,10 @@ export const tokens = {
 		"surface-light": colors.slate[300],
 		"surface-lighter": colors.slate[200],
 		"surface-accent": "#0B93F6",
+		"surface-information": colors.violet[200],
+		"surface-success": colors.green[200],
+		"surface-warning": colors.orange[200],
+		"surface-error": colors.red[200],
 
 		/**
 		 * Typography tokens.
@@ -47,6 +51,11 @@ export const tokens = {
 		"copy-error-dark": errorColorDark,
 		"copy-error-light": errorColorLight,
 
+		"copy-information": colors.violet[800],
+		"copy-success": colors.green[800],
+		"copy-warning": colors.orange[800],
+		"copy-error": colors.red[800],
+
 		/**
 		 * Border tokens.
 		 */
@@ -57,6 +66,11 @@ export const tokens = {
 		"border-white": "#ffffff",
 		"border-error-dark": errorColorDark,
 		"border-error-light": errorColorLight,
+
+		"border-information": colors.violet[400],
+		"border-success": colors.green[400],
+		"border-warning": colors.orange[400],
+		"border-error": colors.red[400],
 
 		/**
 		 * Focus tokens.
