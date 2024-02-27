@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.3.0](https://github.com/aversini/ui-components/compare/ui-components-v5.2.0...ui-components-v5.3.0) (2024-02-27)
+
+
+### Features
+
+* **Pill:** introducing Pill component ([#363](https://github.com/aversini/ui-components/issues/363)) ([a6672c7](https://github.com/aversini/ui-components/commit/a6672c755c17b7a97fc584e4dae158164e86899e))
+
 ## [5.2.0](https://github.com/aversini/ui-components/compare/ui-components-v5.1.0...ui-components-v5.2.0) (2024-02-26)
 
 
