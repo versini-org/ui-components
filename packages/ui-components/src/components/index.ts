@@ -18,6 +18,7 @@ import { Menu } from "./Menu/Menu";
 import { MenuItem } from "./Menu/MenuItem";
 import { MenuSeparator } from "./Menu/MenuItem";
 import { Panel } from "./Panel/Panel";
+import { Pill } from "./Pill/Pill";
 import { Spinner } from "./Spinner/Spinner";
 import {
 	Table,
@@ -30,6 +31,8 @@ import { TextArea } from "./TextArea/TextArea";
 import { TextInput } from "./TextInput/TextInput";
 import { TextInputMask } from "./TextInput/TextInputMask";
 import { Toggle } from "./Toggle/Toggle";
+
+Pill;
 
 export {
 	Anchor,
@@ -45,6 +48,7 @@ export {
 	MenuItem,
 	MenuSeparator,
 	Panel,
+	Pill,
 	Spinner,
 	Table,
 	TableBody,
