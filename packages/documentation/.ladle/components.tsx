@@ -7,8 +7,20 @@ import type { GlobalProvider } from "@ladle/react";
 import { IconGitHub } from "@versini/ui-icons";
 import clsx from "clsx";
 
-const renderImportLine = (importName: string, stage?: string) => {
+const renderImportLine = ({
+	importName,
+	importPackage,
+	stage,
+	header,
+}: {
+	importName: string;
+	importPackage?: string;
+	stage?: string;
+	header?: string;
+}) => {
 	let variant: "information" | "warning" | "success", releaseTag;
+	let packageName = importPackage || "ui-components";
+	let titleHeader = header || importName;
 
 	switch (stage) {
 		case "beta":
@@ -29,7 +41,7 @@ const renderImportLine = (importName: string, stage?: string) => {
 		<div className="mb-6">
 			<Flexgrid alignVertical="center" className="mb-2" columnGap={3}>
 				<FlexgridItem>
-					<h1 className="m-0">{importName}</h1>
+					<h1 className="m-0">{titleHeader}</h1>
 				</FlexgridItem>
 				<FlexgridItem>
 					<Pill label={releaseTag} variant={variant} className="mt-2" />
@@ -37,7 +49,7 @@ const renderImportLine = (importName: string, stage?: string) => {
 			</Flexgrid>
 
 			<pre className="mt-0">
-				<code>{`import { ${importName} } from "@versini/ui-components";`}</code>
+				<code>{`import { ${importName} } from "@versini/${packageName}";`}</code>
 			</pre>
 		</div>
 	);
@@ -54,7 +66,12 @@ export const Provider: GlobalProvider = ({ children, storyMeta }) => {
 		<>
 			<div className={className}>
 				{storyMeta?.importName
-					? renderImportLine(storyMeta.importName, storyMeta?.stage)
+					? renderImportLine({
+							importName: storyMeta.importName,
+							importPackage: storyMeta?.importPackage,
+							header: storyMeta?.header,
+							stage: storyMeta?.stage,
+						})
 					: null}
 				{children}
 			</div>
