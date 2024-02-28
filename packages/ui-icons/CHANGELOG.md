@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.0.0...ui-icons-v1.1.0) (2024-02-28)
+
+
+### Features
+
+* **Icons:** adding IconBrightness ([#367](https://github.com/aversini/ui-components/issues/367)) ([68afee2](https://github.com/aversini/ui-components/commit/68afee290cc97e42d0031b9ad0e5754576227ca1))
+
 ## 1.0.0 (2024-02-26)
 
 
