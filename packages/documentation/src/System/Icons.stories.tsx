@@ -1,24 +1,12 @@
 import type { Story } from "@ladle/react";
 import {
-	IconBack,
-	IconChart,
-	IconClose,
-	IconCopied,
-	IconCopy,
-	IconDelete,
-	IconEdit,
-	IconGitHub,
-	IconHide,
-	IconHistory,
-	IconInfo,
-	IconNext,
-	IconPrevious,
-	IconProfile,
-	IconRestore,
-	IconSettings,
-	IconShow,
-	IconUser,
-} from "@versini/ui-icons";
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableRow,
+} from "@versini/ui-components";
+import * as AllIcons from "@versini/ui-icons";
 
 export default {
 	title: "System/Icons",
@@ -31,24 +19,27 @@ export default {
 
 export const Basic: Story<any> = (args) => (
 	<div className="prose prose-dark flex max-w-none flex-wrap gap-2 bg-slate-300 p-10">
-		<IconBack {...args} />
-		<IconChart {...args} />
-		<IconClose {...args} />
-		<IconCopied {...args} />
-		<IconCopy {...args} />
-		<IconDelete {...args} />
-		<IconEdit {...args} />
-		<IconGitHub {...args} />
-		<IconHide {...args} />
-		<IconHistory {...args} />
-		<IconInfo {...args} />
-		<IconNext {...args} />
-		<IconPrevious {...args} />
-		<IconProfile {...args} />
-		<IconRestore {...args} />
-		<IconSettings {...args} />
-		<IconShow {...args} />
-		<IconUser {...args} />
+		<Table kind="light">
+			<TableHead>
+				<TableRow>
+					<TableCell>Icon Name</TableCell>
+					<TableCell>Icon</TableCell>
+				</TableRow>
+			</TableHead>
+
+			<TableBody>
+				{Object.entries(AllIcons).map(([name, Icon]) => {
+					return name !== "IconDog" ? (
+						<TableRow key={name}>
+							<TableCell>{name}</TableCell>
+							<TableCell>
+								<Icon {...args} />
+							</TableCell>
+						</TableRow>
+					) : null;
+				})}
+			</TableBody>
+		</Table>
 	</div>
 );
 
