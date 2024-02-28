@@ -1,6 +1,7 @@
 import type { Story } from "@ladle/react";
 import {
 	IconBack,
+	IconBrightness,
 	IconChart,
 	IconClose,
 	IconCopied,
@@ -32,6 +33,7 @@ export default {
 export const Basic: Story<any> = (args) => (
 	<div className="prose prose-dark flex max-w-none flex-wrap gap-2 bg-slate-300 p-10">
 		<IconBack {...args} />
+		<IconBrightness {...args} />
 		<IconChart {...args} />
 		<IconClose {...args} />
 		<IconCopied {...args} />
