@@ -7,3 +7,18 @@
 		@apply m-0 !important;
 	}
 }
+
+/* @media (prefers-color-scheme: light) {
+	html,
+	body,
+	.ladle-background {
+		background-color: white;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	html,
+	body,
+	.ladle-background {
+		background-color: rgb(100 116 139);
+	}
+} */

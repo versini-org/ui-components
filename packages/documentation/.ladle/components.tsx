@@ -8,19 +8,31 @@ import { IconGitHub } from "@versini/ui-icons";
 import clsx from "clsx";
 
 const renderImportLine = (importName: string, stage?: string) => {
-	const releaseTag = stage ? stage : "alpha";
+	let variant: "information" | "warning" | "success", releaseTag;
+
+	switch (stage) {
+		case "beta":
+			variant = "information";
+			releaseTag = "beta";
+			break;
+		case "stable":
+			variant = "success";
+			releaseTag = "stable";
+			break;
+		default:
+			variant = "warning";
+			releaseTag = "alpha";
+			break;
+	}
+
 	return (
 		<div className="mb-6">
-			<Flexgrid
-				alignVertical="flex-end"
-				alignHorizontal="space-between"
-				className="mb-2"
-			>
+			<Flexgrid alignVertical="center" className="mb-2" columnGap={3}>
 				<FlexgridItem>
 					<h1 className="m-0">{importName}</h1>
 				</FlexgridItem>
 				<FlexgridItem>
-					<Pill label={releaseTag} theme="information" />
+					<Pill label={releaseTag} variant={variant} className="mt-2" />
 				</FlexgridItem>
 			</Flexgrid>
 
