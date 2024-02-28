@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import { linkTo, Story } from "@ladle/react";
-import { ButtonIcon } from "@versini/ui-components";
+import { ButtonIcon, Pill } from "@versini/ui-components";
 import { IconPrevious } from "@versini/ui-icons";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 
@@ -17,8 +19,19 @@ export const ReleaseTags: Story<any> = () => (
 			help consuming partners, we are applying tags per components: alpha, then
 			beta and finally stable.
 		</p>
+		<p>
+			Component stage is indicated by a little "pill" located to the right of
+			the component title.
+		</p>
 
-		<h2>Alpha</h2>
+		<Flexgrid alignVertical="center" columnGap={3}>
+			<FlexgridItem>
+				<h2 className="m-0">Alpha</h2>
+			</FlexgridItem>
+			<FlexgridItem>
+				<Pill label="alpha" variant="warning" />
+			</FlexgridItem>
+		</Flexgrid>
 		<ul>
 			<li>
 				<strong>Alpha</strong> components are in the early stages of
@@ -33,7 +46,14 @@ export const ReleaseTags: Story<any> = () => (
 			</li>
 		</ul>
 
-		<h2>Beta</h2>
+		<Flexgrid alignVertical="center" columnGap={3}>
+			<FlexgridItem>
+				<h2 className="m-0">Beta</h2>
+			</FlexgridItem>
+			<FlexgridItem>
+				<Pill label="beta" variant="information" />
+			</FlexgridItem>
+		</Flexgrid>
 		<ul>
 			<li>
 				<strong>Beta</strong> components <em>can</em> be deployed to production.
@@ -50,7 +70,14 @@ export const ReleaseTags: Story<any> = () => (
 			</li>
 		</ul>
 
-		<h2>Stable</h2>
+		<Flexgrid alignVertical="center" columnGap={3}>
+			<FlexgridItem>
+				<h2 className="m-0">Stable</h2>
+			</FlexgridItem>
+			<FlexgridItem>
+				<Pill label="stable" variant="success" />
+			</FlexgridItem>
+		</Flexgrid>
 		<ul>
 			<li>
 				<strong>Stable</strong> components <strong>can</strong> be deployed to
