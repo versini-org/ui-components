@@ -81,5 +81,10 @@
 	"github": {
 		"name": "IconGitHub",
 		"title": "GitHub"
+	},
+	"brightness": {
+		"name": "IconBrightness",
+		"title": "Brightness",
+		"monotone": true
 	}
 }

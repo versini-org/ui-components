@@ -3,6 +3,7 @@ import { SpacingProps } from "@versini/ui-private/dist/utilities";
 
 import {
 	IconBack,
+	IconBrightness,
 	IconChart,
 	IconClose,
 	IconCopied,
@@ -193,6 +194,13 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
+					<IconBrightness
+						data-testid="icon-brightness"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 				</>,
 			);
 
@@ -215,6 +223,7 @@ describe("Generic Icons prop tests", () => {
 				"icon-next",
 				"icon-previous",
 				"icon-github",
+				"icon-brightness",
 			].forEach(async (dataTestId) => {
 				await renderExpected({
 					dataTestId,
