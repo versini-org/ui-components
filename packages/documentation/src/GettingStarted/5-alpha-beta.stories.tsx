@@ -19,9 +19,10 @@ export const ReleaseTags: Story<any> = () => (
 			help consuming partners, we are applying tags per components: alpha, then
 			beta and finally stable.
 		</p>
+
 		<p>
-			Component stage is indicated by a little "pill" located to the right of
-			the component title.
+			<strong>NOTE:</strong> component stage is indicated by a little "pill"
+			located to the right of the component title.
 		</p>
 
 		<Flexgrid alignVertical="center" columnGap={3}>

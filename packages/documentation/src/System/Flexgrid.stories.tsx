@@ -13,6 +13,7 @@ export default {
 	title: "System/Flexgrid",
 	meta: {
 		importName: "Flexgrid, FlexgridItem",
+		importPackage: "ui-system",
 	},
 	args: {
 		className: "",
