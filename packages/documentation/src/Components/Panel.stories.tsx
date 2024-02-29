@@ -12,14 +12,14 @@ export default {
 		title: "Panel Title",
 		children: "Panel Content",
 		borderKind: "light",
-		kind: "panel",
+		mode: "panel",
 	},
 	argTypes: {
 		borderKind: {
 			options: ["dark", "light"],
 			control: { type: "radio" },
 		},
-		kind: {
+		mode: {
 			options: ["panel", "messagebox"],
 			control: { type: "radio" },
 		},
@@ -43,7 +43,7 @@ export const Basic: Story<any> = (args) => {
 				footer={
 					<div className="flex flex-row-reverse gap-2">
 						<Button noBorder>Log out</Button>
-						<Button kind="light">Cancel</Button>
+						<Button mode="light">Cancel</Button>
 					</div>
 				}
 				{...args}

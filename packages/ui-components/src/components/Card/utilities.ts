@@ -8,20 +8,25 @@ type getCardClassesProps = {
 	className?: string;
 	footerClassName?: string;
 	headerClassName?: string;
-	noBackground?: boolean;
+	mode?: "dark" | "light" | "system" | "alt-system";
 } & SpacingProps;
 
 export const getCardClasses = ({
 	className,
 	headerClassName,
 	footerClassName,
-	noBackground,
 	spacing,
+	mode,
 }: getCardClassesProps) => {
 	const wrapper = className
 		? className
-		: clsx(CARD_CLASSNAME, "rounded-md text-copy-light", getSpacing(spacing), {
-				"border-2 border-border-dark bg-surface-dark p-4": !noBackground,
+		: clsx(CARD_CLASSNAME, "rounded-md border-2 p-4 ", getSpacing(spacing), {
+				"border-border-dark bg-surface-dark text-copy-light": mode === "dark",
+				"border-border-light bg-surface-light text-copy-dark": mode === "light",
+				"border-border-dark bg-surface-dark text-copy-light dark:border-border-light dark:bg-surface-light dark:text-copy-dark":
+					mode === "system",
+				"border-border-light bg-surface-light text-copy-dark dark:border-border-dark dark:bg-surface-dark dark:text-copy-light":
+					mode === "alt-system",
 			});
 	const header = headerClassName
 		? headerClassName

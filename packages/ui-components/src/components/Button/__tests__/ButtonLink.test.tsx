@@ -58,7 +58,7 @@ describe("ButtonLink modifiers", () => {
 
 	it("should render a dark link", async () => {
 		render(
-			<ButtonLink kind="dark" link="toto">
+			<ButtonLink mode="dark" link="toto">
 				hello
 			</ButtonLink>,
 		);
@@ -70,7 +70,7 @@ describe("ButtonLink modifiers", () => {
 
 	it("should render a light anchor", async () => {
 		render(
-			<ButtonLink kind="light" link="toto">
+			<ButtonLink mode="light" link="toto">
 				hello
 			</ButtonLink>,
 		);

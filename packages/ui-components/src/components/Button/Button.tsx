@@ -9,7 +9,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			children,
 			onClick,
 			disabled = false,
-			kind = "dark",
+			mode = "dark",
 			focus = "light",
 			fullWidth = false,
 			className,
@@ -27,7 +27,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	) => {
 		const buttonClass = getButtonClasses({
 			type: TYPE_BUTTON,
-			kind,
+			mode,
 			focus,
 			fullWidth,
 			disabled,

@@ -16,9 +16,9 @@ export type CommonButtonProps = {
 	 */
 	fullWidth?: boolean;
 	/**
-	 * The type of Button. This will change the color of the Button.
+	 * The mode of Button. This will change the color of the Button.
 	 */
-	kind?: "dark" | "light" | "system";
+	mode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * Whether or not to render the Button with a border.
 	 * @default false

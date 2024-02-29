@@ -10,7 +10,7 @@ export default {
 };
 
 export const ReleaseTags: Story<any> = () => (
-	<div className="prose prose-lighter mb-6">
+	<>
 		<h1>Release Tags</h1>
 		<p className="lead">
 			UI components are being made available for consumption as soon as they
@@ -109,5 +109,5 @@ export const ReleaseTags: Story<any> = () => (
 				</FlexgridItem>
 			</Flexgrid>
 		</div>
-	</div>
+	</>
 );

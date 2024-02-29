@@ -181,7 +181,7 @@ const CommonTemplate = ({
 			</ul>
 			<p>
 				After this sort of list I usually have a closing statement or paragraph,
-				because it kinda looks weird jumping right to a heading.
+				because it modea looks weird jumping right to a heading.
 			</p>
 			<h4>
 				We haven't used an <code>h4</code> yet

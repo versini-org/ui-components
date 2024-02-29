@@ -58,7 +58,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render a dark link", async () => {
 		render(
-			<Anchor kind="dark" link="toto">
+			<Anchor mode="dark" link="toto">
 				hello
 			</Anchor>,
 		);
@@ -70,7 +70,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render a light anchor", async () => {
 		render(
-			<Anchor kind="light" link="toto">
+			<Anchor mode="light" link="toto">
 				hello
 			</Anchor>,
 		);

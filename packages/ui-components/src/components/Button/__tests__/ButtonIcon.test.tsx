@@ -31,7 +31,7 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a dark button icon", async () => {
 		render(
-			<ButtonIcon kind="dark">
+			<ButtonIcon mode="dark">
 				<IconSettings />
 			</ButtonIcon>,
 		);
@@ -43,7 +43,7 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a light button icon", async () => {
 		render(
-			<ButtonIcon kind="light">
+			<ButtonIcon mode="light">
 				<IconSettings />
 			</ButtonIcon>,
 		);
@@ -55,7 +55,7 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a disabled dark button icon", async () => {
 		render(
-			<ButtonIcon kind="dark" disabled>
+			<ButtonIcon mode="dark" disabled>
 				<IconSettings />
 			</ButtonIcon>,
 		);
@@ -67,7 +67,7 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a disabled light button icon", async () => {
 		render(
-			<ButtonIcon kind="light" disabled>
+			<ButtonIcon mode="light" disabled>
 				<IconSettings />
 			</ButtonIcon>,
 		);

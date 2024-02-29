@@ -20,7 +20,7 @@ export const Basic: Story<any> = (args) => (
 Basic.args = {
 	disabled: false,
 	fullWidth: false,
-	kind: "dark",
+	mode: "dark",
 	focus: "light",
 	slim: false,
 	size: "medium",
@@ -29,8 +29,8 @@ Basic.args = {
 	spacing: { r: 2 },
 };
 Basic.argTypes = {
-	kind: {
-		options: ["dark", "light", "system"],
+	mode: {
+		options: ["dark", "light", "system", "alt-system"],
 		control: { type: "radio" },
 	},
 	focus: {

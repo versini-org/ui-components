@@ -5,7 +5,7 @@ import { twPlugin as systemPlugin } from "@versini/ui-system/dist/utilities";
 
 export default systemPlugin.merge(
 	componentsPlugin.merge({
-		darkMode: "selector",
+		// darkMode: "selector",
 		content: ["./src/**/*.{js,ts,jsx,tsx}", "./.ladle/**/*.tsx"],
 	}),
 );

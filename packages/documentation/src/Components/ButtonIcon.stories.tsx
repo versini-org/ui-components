@@ -73,7 +73,7 @@ export default {
 	args: {
 		disabled: false,
 		fullWidth: false,
-		kind: "dark",
+		mode: "dark",
 		focus: "light",
 		type: "button",
 		raw: false,
@@ -82,8 +82,8 @@ export default {
 		spacing: { r: 2 },
 	},
 	argTypes: {
-		kind: {
-			options: ["dark", "light", "system"],
+		mode: {
+			options: ["dark", "light", "system", "alt-system"],
 			control: { type: "radio" },
 		},
 		focus: {

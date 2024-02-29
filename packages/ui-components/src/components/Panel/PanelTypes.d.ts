@@ -30,5 +30,5 @@ export type PanelProps = {
 	/**
 	 * The type of Panel. This will change the layout of the Panel.
 	 */
-	kind?: typeof TYPE_PANEL | typeof TYPE_MESSAGEBOX;
+	mode?: typeof TYPE_PANEL | typeof TYPE_MESSAGEBOX;
 };

@@ -24,7 +24,7 @@ export const WithHeaderAndFooter: Story<any> = (args) => (
 		</Main>
 
 		<Footer
-			kind="light"
+			mode="light"
 			className="bg-slate-500"
 			row1={<div>App Name v1.0.0</div>}
 			row2={<div>something something</div>}

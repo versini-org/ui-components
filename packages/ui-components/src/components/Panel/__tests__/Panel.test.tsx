@@ -67,7 +67,7 @@ describe("Panel modifiers", () => {
 	});
 
 	it("should render a responsive messagebox", async () => {
-		render(<SimplePanel kind="messagebox" />);
+		render(<SimplePanel mode="messagebox" />);
 		const panel = screen.getByRole("dialog");
 
 		expectToHaveClasses(panel, [
@@ -81,7 +81,7 @@ describe("Panel modifiers", () => {
 	});
 
 	it("should render a responsive messagebox wit dark borders", async () => {
-		render(<SimplePanel kind="messagebox" borderKind="dark" />);
+		render(<SimplePanel mode="messagebox" borderKind="dark" />);
 		const panel = screen.getByRole("dialog");
 
 		expectToHaveClasses(panel, [

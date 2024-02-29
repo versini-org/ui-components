@@ -7,12 +7,12 @@ export default {
 		importName: "Spinner",
 	},
 	args: {
-		kind: "dark",
+		mode: "dark",
 		type: "circle",
 	},
 	argTypes: {
-		kind: {
-			options: ["dark", "light", "system"],
+		mode: {
+			options: ["dark", "light", "system", "alt-system"],
 			control: { type: "radio" },
 		},
 		type: {

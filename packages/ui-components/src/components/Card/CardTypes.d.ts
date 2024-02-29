@@ -32,10 +32,9 @@ export type CardProps = {
 	 */
 	headerClassName?: string;
 	/**
-	 * Whether or not to render the Card with a border.
-	 * @default false
+	 * The mode of Card. This will change the color of the Card.
 	 */
-	noBackground?: boolean;
+	mode?: "dark" | "light" | "system" | "alt-system";
 } & SpacingProps;
 
 export type CardHeaderProps = {

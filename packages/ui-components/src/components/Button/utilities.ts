@@ -12,7 +12,7 @@ type getButtonClassesProps = {
 	disabled: boolean;
 	focus: string;
 	fullWidth: boolean;
-	kind: "dark" | "light" | "system";
+	mode: "dark" | "light" | "system" | "alt-system";
 	noBorder: boolean;
 	raw: boolean;
 	size: string;
@@ -72,61 +72,69 @@ const getButtonSizesClasses = ({
 	}
 };
 
-const getButtonBaseClasses = ({ kind }: { kind: string }) => {
+const getButtonBaseClasses = ({ mode }: { mode: string }) => {
 	return clsx("not-prose rounded-full", {
-		"bg-action-dark text-copy-light": kind === "dark",
-		"bg-action-light text-copy-lighter": kind === "light",
+		"bg-action-dark text-copy-light": mode === "dark",
+		"bg-action-light text-copy-lighter": mode === "light",
 		"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
-			kind === "system",
+			mode === "system",
+		"bg-action-light text-copy-lighter dark:bg-action-dark dark:text-copy-light":
+			mode === "alt-system",
 	});
 };
 
 const getButtonHoverClasses = ({
-	kind,
+	mode,
 	disabled,
 }: {
 	disabled: boolean;
-	kind: string;
+	mode: string;
 }) => {
 	return disabled
 		? ""
 		: clsx("hover:text-copy-light-hover", {
-				"hover:bg-action-dark-hover": kind === "dark",
-				"hover:bg-action-light-hover": kind === "light",
+				"hover:bg-action-dark-hover": mode === "dark",
+				"hover:bg-action-light-hover": mode === "light",
 				"hover:bg-action-dark-hover dark:hover:bg-action-light-hover":
-					kind === "system",
+					mode === "system",
+				"hover:bg-action-light-hover dark:hover:bg-action-dark-hover":
+					mode === "alt-system",
 			});
 };
 
 const getButtonActiveClasses = ({
-	kind,
+	mode,
 	disabled,
 }: {
 	disabled: boolean;
-	kind: string;
+	mode: string;
 }) => {
 	return disabled
 		? ""
 		: clsx("active:text-copy-light-active", {
-				"active:bg-action-dark-active": kind === "dark",
-				"active:bg-action-light-active": kind === "light",
+				"active:bg-action-dark-active": mode === "dark",
+				"active:bg-action-light-active": mode === "light",
 				"active:bg-action-dark-active dark:active:bg-action-light-active":
-					kind === "system",
+					mode === "system",
+				"active:bg-action-light-active dark:active:bg-action-dark-active":
+					mode === "alt-system",
 			});
 };
 
 const getButtonBorderClasses = ({
-	kind,
+	mode,
 	noBorder,
 }: {
-	kind: string;
+	mode: string;
 	noBorder: boolean;
 }) => {
 	return clsx("border", {
-		"border-border-dark": !noBorder && kind === "dark",
-		"border-border-light": !noBorder && kind === "light",
+		"border-border-dark": !noBorder && mode === "dark",
+		"border-border-light": !noBorder && mode === "light",
 		"border-border-dark dark:border-border-light":
-			!noBorder && kind === "system",
+			!noBorder && mode === "system",
+		"border-border-light dark:border-border-dark":
+			!noBorder && mode === "alt-system",
 		"border-transparent": noBorder,
 		"focus:border-white": !noBorder,
 	});
@@ -143,7 +151,7 @@ export const getButtonClasses = ({
 	type,
 	className,
 	raw,
-	kind,
+	mode,
 	focus,
 	disabled,
 	fullWidth,
@@ -160,12 +168,12 @@ export const getButtonClasses = ({
 				BUTTON_CLASSNAME,
 				className,
 				getSpacing(spacing),
-				getButtonBaseClasses({ kind }),
+				getButtonBaseClasses({ mode }),
 				getButtonSizesClasses({ type, slim, size, labelRight, labelLeft }),
-				getButtonBorderClasses({ kind, noBorder }),
+				getButtonBorderClasses({ mode, noBorder }),
 				getButtonFocusClasses({ focus }),
-				getButtonHoverClasses({ kind, disabled }),
-				getButtonActiveClasses({ kind, disabled }),
+				getButtonHoverClasses({ mode, disabled }),
+				getButtonActiveClasses({ mode, disabled }),
 				{
 					"w-full": fullWidth,
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,

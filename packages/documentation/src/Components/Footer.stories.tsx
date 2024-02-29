@@ -8,13 +8,13 @@ export default {
 	},
 	args: {
 		noMargins: false,
-		kind: "dark",
+		mode: "dark",
 		raw: false,
 	},
 	argTypes: {
-		kind: {
+		mode: {
 			control: { type: "radio" },
-			options: ["dark", "light", "system"],
+			options: ["dark", "light", "system", "alt-system"],
 		},
 	},
 };

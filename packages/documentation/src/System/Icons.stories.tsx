@@ -19,7 +19,7 @@ export default {
 
 export const Basic: Story<any> = (args) => (
 	<div className="prose prose-dark flex max-w-none flex-wrap gap-2 bg-slate-300 p-10">
-		<Table kind="light">
+		<Table mode="light">
 			<TableHead>
 				<TableRow>
 					<TableCell>Icon Name</TableCell>

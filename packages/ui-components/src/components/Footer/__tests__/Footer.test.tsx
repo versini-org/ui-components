@@ -32,7 +32,7 @@ describe("Footer modifiers", () => {
 	});
 
 	it("should render a dark footer", async () => {
-		render(<Footer kind="dark" />);
+		render(<Footer mode="dark" />);
 		const footer = await screen.findByRole("contentinfo");
 		expectToHaveClasses(footer, [
 			FOOTER_CLASSNAME,
@@ -52,7 +52,7 @@ describe("Footer modifiers", () => {
 	});
 
 	it("should render a light footer", async () => {
-		render(<Footer kind="light" />);
+		render(<Footer mode="light" />);
 		const footer = await screen.findByRole("contentinfo");
 		expectToHaveClasses(footer, [
 			FOOTER_CLASSNAME,

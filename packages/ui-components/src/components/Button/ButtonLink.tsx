@@ -8,7 +8,7 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 	(
 		{
 			children,
-			kind = "dark",
+			mode = "dark",
 			focus = "light",
 			fullWidth = false,
 			className,
@@ -29,7 +29,7 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 	) => {
 		const buttonClass = getButtonClasses({
 			type: TYPE_LINK,
-			kind,
+			mode,
 			focus,
 			fullWidth,
 			disabled: false,

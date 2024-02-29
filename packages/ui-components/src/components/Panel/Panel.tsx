@@ -19,10 +19,10 @@ export const Panel = ({
 	children,
 	footer,
 	borderKind = "light",
-	kind = TYPE_PANEL,
+	mode = TYPE_PANEL,
 }: PanelProps) => {
 	const originalTitleRef = useRef("");
-	const panelClassName = getPanelClassName({ kind, borderKind });
+	const panelClassName = getPanelClassName({ mode, borderKind });
 
 	/**
 	 * If the panel is opened, set the document

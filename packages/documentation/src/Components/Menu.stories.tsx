@@ -22,13 +22,13 @@ export default {
 		importName: "Menu, MenuItem, MenuSeparator",
 	},
 	args: {
-		kind: "dark",
+		mode: "dark",
 		defaultPlacement: "bottom-start",
 	},
 	argTypes: {
-		kind: {
+		mode: {
 			control: { type: "radio" },
-			options: ["dark", "light", "system"],
+			options: ["dark", "light", "system", "alt-system"],
 		},
 		defaultPlacement: {
 			control: { type: "select" },
@@ -52,7 +52,7 @@ export default {
 
 export const Basic: Story<any> = (args) => (
 	<div className="flex h-96 min-h-10 flex-wrap bg-slate-900 p-11">
-		<Button kind="light" size="small" noBorder spacing={{ r: 2 }}>
+		<Button mode="light" size="small" noBorder spacing={{ r: 2 }}>
 			Button
 		</Button>
 		<Menu icon={<IconSettings />} spacing={{ r: 2 }} {...args}>
@@ -61,7 +61,7 @@ export const Basic: Story<any> = (args) => (
 			<MenuItem label="History" />
 			<MenuItem label="About" />
 		</Menu>
-		<Button kind="light" size="small" noBorder>
+		<Button mode="light" size="small" noBorder>
 			Button
 		</Button>
 	</div>
@@ -98,14 +98,14 @@ export const WithMessageBox: Story<any> = (args) => {
 	return (
 		<>
 			<Panel
-				kind="messagebox"
+				mode="messagebox"
 				open={showMessage}
 				onOpenChange={setShowMessage}
 				title="Log out"
 				footer={
 					<div className="flex flex-row-reverse gap-2">
 						<Button onClick={onLogout}>Log out</Button>
-						<Button kind="light" onClick={onCancel}>
+						<Button mode="light" onClick={onCancel}>
 							Cancel
 						</Button>
 					</div>

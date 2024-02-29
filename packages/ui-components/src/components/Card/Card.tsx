@@ -33,10 +33,10 @@ export const Card = ({
 	footer,
 	footerClassName,
 	children,
-	noBackground = false,
 	className,
 	"aria-labelledby": ariaLabelledby,
 	spacing,
+	mode = "dark",
 
 	...otherProps
 }: CardProps) => {
@@ -47,11 +47,11 @@ export const Card = ({
 	const uniqueIdForHeader = useUniqueId(CARD_CLASSNAME);
 
 	const cardClassName = getCardClasses({
-		noBackground,
 		className,
 		headerClassName,
 		footerClassName,
 		spacing,
+		mode,
 	});
 
 	if (isHeaderString) {

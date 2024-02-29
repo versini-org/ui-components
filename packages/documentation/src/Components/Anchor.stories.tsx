@@ -19,7 +19,7 @@ export const Basic: Story<any> = (args) => (
 
 Basic.args = {
 	fullWidth: false,
-	kind: "dark",
+	mode: "dark",
 	focus: "light",
 	raw: false,
 	link: "https://www.google.com",
@@ -31,8 +31,8 @@ Basic.args = {
 };
 
 Basic.argTypes = {
-	kind: {
-		options: ["dark", "light", "system"],
+	mode: {
+		options: ["dark", "light", "system", "alt-system"],
 		control: { type: "radio" },
 	},
 	focus: {

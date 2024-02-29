@@ -95,7 +95,7 @@ describe("Table classes", () => {
 
 	it("should render a light table", async () => {
 		render(
-			<Table data-testid="table" caption="the caption" kind="light">
+			<Table data-testid="table" caption="the caption" mode="light">
 				<TableHead>
 					<TableRow data-testid="table-row-head">
 						<TableCell data-testid="table-cell-head">the header</TableCell>

@@ -7,7 +7,13 @@ export default {
 		importName: "Card",
 	},
 	args: {
-		noBackground: false,
+		mode: "dark",
+	},
+	argTypes: {
+		mode: {
+			options: ["dark", "light", "system", "alt-system"],
+			control: { type: "radio" },
+		},
 	},
 };
 
@@ -15,7 +21,7 @@ export const Basic: Story<any> = (args) => (
 	<div className="min-h-10">
 		<div className="flex flex-wrap gap-2">
 			<Card {...args}>
-				<p className="prose prose-light dark:prose-dark">
+				<p>
 					In the year 10191, a spice called melange is the most valuable
 					substance known in the universe, and its only source is the desert
 					planet Arrakis.

@@ -8,7 +8,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 		{
 			children,
 			disabled = false,
-			kind = "dark",
+			mode = "dark",
 			focus = "light",
 			fullWidth = false,
 			className,
@@ -28,7 +28,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 	) => {
 		const buttonClass = getButtonClasses({
 			type: TYPE_ICON,
-			kind,
+			mode,
 			focus,
 			fullWidth,
 			disabled,

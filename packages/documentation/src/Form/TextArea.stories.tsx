@@ -78,7 +78,7 @@ export const RightElement: Story<any> = (args) => (
 );
 RightElement.args = {
 	rightElement: (
-		<Button kind="light" noBorder>
+		<Button mode="light" noBorder>
 			Send
 		</Button>
 	),
@@ -105,7 +105,7 @@ export const CustomTheme: Story<any> = (args) => (
 );
 CustomTheme.args = {
 	rightElement: (
-		<Button kind="light" noBorder>
+		<Button mode="light" noBorder>
 			Send
 		</Button>
 	),

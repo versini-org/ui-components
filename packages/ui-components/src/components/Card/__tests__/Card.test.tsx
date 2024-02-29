@@ -27,16 +27,6 @@ describe("Card modifiers", () => {
 		]);
 	});
 
-	it("should render a card with no background color", async () => {
-		const { container } = render(<Card noBackground>{cardContent}</Card>);
-		const card = container.children[0];
-		expectToHaveClasses(card, [
-			CARD_CLASSNAME,
-			"rounded-md",
-			"text-copy-light",
-		]);
-	});
-
 	it("should render a default card with a custom class", async () => {
 		const { container } = render(
 			<Card className="toto-main">{cardContent}</Card>,

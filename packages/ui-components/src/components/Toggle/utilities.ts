@@ -39,25 +39,31 @@ const getToggleKnobOffClasses = () => {
 	);
 };
 
-const getToggleColorClasses = ({ kind }: { kind: string }) => {
+const getToggleColorClasses = ({ mode }: { mode: string }) => {
 	return clsx({
-		"border-border-dark bg-surface-medium": kind === "light",
-		"border-border-light bg-surface-dark": kind === "dark",
+		"border-border-dark bg-surface-medium": mode === "light",
+		"border-border-light bg-surface-dark": mode === "dark",
+		"border-border-light bg-surface-dark dark:border-border-dark dark:bg-surface-medium":
+			mode === "alt-system",
+		"border-border-dark bg-surface-medium dark:border-border-light dark:bg-surface-dark":
+			mode === "system",
 	});
 };
 
 const getLabelClasses = ({
-	kind,
+	mode,
 	labelHidden,
 }: {
-	kind: string;
 	labelHidden: boolean;
+	mode: string;
 }) => {
 	return labelHidden
 		? "sr-only"
 		: clsx("ml-3 text-sm", {
-				"text-copy-medium": kind === "light",
-				"text-copy-light": kind === "dark",
+				"text-copy-medium": mode === "light",
+				"text-copy-light": mode === "dark",
+				"text-copy-light dark:text-copy-medium": mode === "alt-system",
+				"text-copy-medium dark:text-copy-light": mode === "system",
 			});
 };
 
@@ -70,22 +76,22 @@ const getWrapperClasses = ({ spacing }: SpacingProps) => {
 };
 
 export const getToggleClasses = ({
-	kind,
+	mode,
 	labelHidden,
 	spacing,
 }: {
-	kind: string;
 	labelHidden: boolean;
+	mode: string;
 } & SpacingProps) => {
 	return {
 		toggle: clsx(
 			getToggleBaseClasses(),
-			getToggleColorClasses({ kind }),
+			getToggleColorClasses({ mode }),
 			getToggleKnobClasses(),
 			getToggleKnobOffClasses(),
 			getToggleKnobOnClasses(),
 		),
-		label: getLabelClasses({ kind, labelHidden }),
+		label: getLabelClasses({ mode, labelHidden }),
 		input: getInputClasses(),
 		wrapper: getWrapperClasses({ spacing }),
 	};
