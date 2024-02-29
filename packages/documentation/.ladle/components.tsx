@@ -90,9 +90,7 @@ export const Provider: GlobalProvider = ({ children, storyMeta }) => {
 					</ButtonIcon>
 				}
 				row2={
-					<div
-					// className="text-copy-lighter"
-					>
+					<div>
 						UI Components v{import.meta.env.BUILDVERSION} - &copy;{" "}
 						{new Date().getFullYear()} {import.meta.env.OWNER}
 					</div>
