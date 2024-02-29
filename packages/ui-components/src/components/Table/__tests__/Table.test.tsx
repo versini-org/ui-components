@@ -56,7 +56,7 @@ describe("Table classes", () => {
 				"overflow-x-auto",
 				"rounded-lg",
 				"shadow-md",
-				"bg-surface-dark",
+				"bg-surface-darker",
 				"text-copy-light",
 			]);
 		}
@@ -212,7 +212,7 @@ describe("Table classes", () => {
 				"overflow-y-scroll",
 				"rounded-lg",
 				"shadow-md",
-				"bg-surface-dark",
+				"bg-surface-darker",
 				"text-copy-light",
 			]);
 			expectToHaveStyles(wrapper, { "max-height": "100px" });
@@ -296,7 +296,7 @@ describe("Table classes", () => {
 				"overflow-x-auto",
 				"rounded-lg",
 				"shadow-md",
-				"bg-surface-dark",
+				"bg-surface-darker",
 				"text-copy-light",
 				"h-full",
 				"max-h-[75vh]",

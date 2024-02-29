@@ -39,7 +39,7 @@ const getTextInputSizesClasses = ({ simple }: { simple: boolean }) => {
 };
 
 const getTextInputColorClasses = () => {
-	return `bg-surface-dark text-copy-light caret-copy-light`;
+	return `bg-surface-darker text-copy-light caret-copy-light`;
 };
 
 const getTextInputFocusClasses = ({

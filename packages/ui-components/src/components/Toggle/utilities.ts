@@ -42,10 +42,10 @@ const getToggleKnobOffClasses = () => {
 const getToggleColorClasses = ({ mode }: { mode: string }) => {
 	return clsx({
 		"border-border-dark bg-surface-medium": mode === "light",
-		"border-border-light bg-surface-dark": mode === "dark",
-		"border-border-light bg-surface-dark dark:border-border-dark dark:bg-surface-medium":
+		"border-border-light bg-surface-darker": mode === "dark",
+		"border-border-light bg-surface-darker dark:border-border-dark dark:bg-surface-medium":
 			mode === "alt-system",
-		"border-border-dark bg-surface-medium dark:border-border-light dark:bg-surface-dark":
+		"border-border-dark bg-surface-medium dark:border-border-light dark:bg-surface-darker":
 			mode === "system",
 	});
 };

@@ -37,7 +37,7 @@ const getTextAreaSizesClasses = () => {
 };
 
 const getTextAreaColorClasses = () => {
-	return `bg-surface-dark text-copy-light caret-copy-light`;
+	return `bg-surface-darker text-copy-light caret-copy-light`;
 };
 
 const getTextAreaFocusClasses = ({

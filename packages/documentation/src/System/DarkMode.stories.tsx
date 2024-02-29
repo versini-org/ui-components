@@ -3,6 +3,7 @@ import {
 	Anchor,
 	Button,
 	ButtonIcon,
+	Card,
 	Footer,
 	Menu,
 	MenuItem,
@@ -76,6 +77,12 @@ module.exports = {
 				Now instead of dark classes being applied based on{" "}
 				<code>prefers-color-scheme</code>, they will be applied whenever the
 				<code>dark</code> class is present earlier in the HTML tree.
+			</p>
+
+			<h2>Kitchen Sink</h2>
+			<p>
+				All the components rendered below have their <code>mode</code> sets to{" "}
+				<code>system</code>.
 			</p>
 
 			<div className="mb-2 flex flex-wrap gap-1">
@@ -180,21 +187,9 @@ module.exports = {
 	);
 };
 
-const commonClassName =
-	"prose prose-dark grid border-2 border-slate-900 bg-slate-100 p-5 dark:prose-lighter dark:border-slate-100 dark:bg-slate-700";
-
-export const Night: Story<any> = () => (
-	<div className="dark">
-		<div className={commonClassName}>
-			<h1>Night Mode</h1>
-			<CommonTemplate />
-		</div>
-	</div>
-);
-
-export const Day: Story<any> = () => (
-	<div className={commonClassName}>
-		<h1>Day Mode</h1>
+export const Automatic: Story<any> = () => (
+	<Card mode="system">
+		<h1>Automatic Dark Mode</h1>
 		<CommonTemplate />
-	</div>
+	</Card>
 );

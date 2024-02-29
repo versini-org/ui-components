@@ -55,9 +55,17 @@ const renderImportLine = ({
 	);
 };
 
-export const Provider: GlobalProvider = ({ children, storyMeta }) => {
+export const Provider: GlobalProvider = ({
+	children,
+	storyMeta,
+	globalState,
+}) => {
 	const className = clsx(
-		"prose prose-dark mt-0 flex w-full flex-col p-2 dark:prose-lighter sm:mt-3 md:mx-auto md:max-w-4xl",
+		"prose mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl",
+		{
+			"prose-dark dark:prose-lighter":
+				!globalState?.story.startsWith("system--typography"),
+		},
 	);
 	const handleOnClickGitHub = () => {
 		window.open(import.meta.env.REPOSITORY, "_blank", "noopener,noreferrer");

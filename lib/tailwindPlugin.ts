@@ -109,7 +109,7 @@ const myComponentLibraryConfig = {
 						"--tw-prose-captions": tokens.colors["copy-lighter"],
 						"--tw-prose-code": tokens.colors["copy-lighter"],
 						"--tw-prose-pre-code": tokens.colors["copy-lighter"],
-						"--tw-prose-pre-bg": tokens.colors["surface-dark"],
+						"--tw-prose-pre-bg": tokens.colors["surface-darker"],
 						"--tw-prose-kbd": tokens.colors["copy-lighter"],
 						li: {
 							color: tokens.colors["copy-lighter"],

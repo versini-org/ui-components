@@ -214,6 +214,13 @@ const CommonTemplate = ({
 	);
 };
 
+export const Basic: Story<any> = () => (
+	<>
+		<h1>Typography</h1>
+		<p></p>
+	</>
+);
+
 export const Light: Story<any> = () => (
 	<div className="bg-slate-900 p-11">
 		<div className="prose prose-light max-w-none">

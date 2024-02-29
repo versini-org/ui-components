@@ -19,7 +19,8 @@ export const tokens = {
 		/**
 		 * Surface tokens.
 		 */
-		"surface-dark": colors.slate[900],
+		"surface-darker": colors.slate[900],
+		"surface-dark": colors.slate[700],
 		"surface-medium": colors.slate[500],
 		"surface-light": colors.slate[300],
 		"surface-lighter": colors.slate[200],

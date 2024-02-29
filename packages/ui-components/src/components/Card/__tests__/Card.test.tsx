@@ -23,7 +23,7 @@ describe("Card modifiers", () => {
 			"text-copy-light",
 			"border-2",
 			"border-border-dark",
-			"bg-surface-dark",
+			"bg-surface-darker",
 		]);
 	});
 

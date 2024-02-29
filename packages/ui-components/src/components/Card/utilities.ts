@@ -21,11 +21,13 @@ export const getCardClasses = ({
 	const wrapper = className
 		? className
 		: clsx(CARD_CLASSNAME, "rounded-md border-2 p-4 ", getSpacing(spacing), {
-				"border-border-dark bg-surface-dark text-copy-light": mode === "dark",
-				"border-border-light bg-surface-light text-copy-dark": mode === "light",
-				"border-border-dark bg-surface-dark text-copy-light dark:border-border-light dark:bg-surface-light dark:text-copy-dark":
+				"border-border-light bg-surface-dark text-copy-light": mode === "dark",
+				"border-border-dark bg-surface-lighter text-copy-dark":
+					mode === "light",
+
+				"border-border-dark bg-surface-lighter text-copy-dark dark:border-border-light dark:bg-surface-dark dark:text-copy-light":
 					mode === "system",
-				"border-border-light bg-surface-light text-copy-dark dark:border-border-dark dark:bg-surface-dark dark:text-copy-light":
+				"border-border-light bg-surface-dark text-copy-light dark:border-border-dark dark:bg-surface-lighter dark:text-copy-dark":
 					mode === "alt-system",
 			});
 	const header = headerClassName

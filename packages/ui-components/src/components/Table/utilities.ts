@@ -24,11 +24,11 @@ export const getTableClasses = ({
 			{
 				"overflow-x-auto": !stickyHeader,
 				"overflow-y-scroll": stickyHeader,
-				"bg-surface-dark text-copy-light": mode === "dark",
+				"bg-surface-darker text-copy-light": mode === "dark",
 				"bg-surface-light text-copy-dark": mode === "light",
-				"bg-surface-dark text-copy-light dark:bg-surface-light dark:text-copy-dark":
+				"bg-surface-darker text-copy-light dark:bg-surface-light dark:text-copy-dark":
 					mode === "system",
-				"bg-surface-light text-copy-dark dark:bg-surface-dark dark:text-copy-light":
+				"bg-surface-light text-copy-dark dark:bg-surface-darker dark:text-copy-light":
 					mode === "alt-system",
 			},
 			wrapperClassName,
