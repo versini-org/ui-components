@@ -72,20 +72,25 @@ export const getTableRowClasses = ({
 	return clsx("border-b last:border-0", className, {
 		"border-table-dark": mode === "dark",
 		"bg-table-dark": cellWrapper === CELL_WRAPPER_HEAD && mode === "dark",
-		"bg-table-dark dark:bg-table-light":
-			cellWrapper === CELL_WRAPPER_HEAD && mode === "system",
-		"bg-table-light dark:bg-table-dark":
-			cellWrapper === CELL_WRAPPER_HEAD && mode === "alt-system",
 		"odd:bg-table-dark-odd even:bg-table-dark-even":
 			cellWrapper === CELL_WRAPPER_BODY && mode === "dark",
-		"odd:bg-table-dark-odd even:bg-table-dark-even dark:odd:bg-table-light-odd dark:even:bg-table-light-even":
-			cellWrapper === CELL_WRAPPER_BODY && mode === "system",
-		"border-table-dark odd:bg-table-light-odd even:bg-table-light-even dark:odd:bg-table-dark-odd dark:even:bg-table-dark-even":
-			cellWrapper === CELL_WRAPPER_BODY && mode === "alt-system",
 
+		"border-table-light": mode === "light",
 		"bg-table-light": cellWrapper === CELL_WRAPPER_HEAD && mode === "light",
 		"odd:bg-table-light-odd even:bg-table-light-even":
 			cellWrapper === CELL_WRAPPER_BODY && mode === "light",
+
+		"border-table-dark dark:border-table-light": mode === "system",
+		"bg-table-dark dark:bg-table-light":
+			cellWrapper === CELL_WRAPPER_HEAD && mode === "system",
+		"odd:bg-table-dark-odd even:bg-table-dark-even dark:odd:bg-table-light-odd dark:even:bg-table-light-even":
+			cellWrapper === CELL_WRAPPER_BODY && mode === "system",
+
+		"border-table-light dark:border-table-dark": mode === "alt-system",
+		"bg-table-light dark:bg-table-dark":
+			cellWrapper === CELL_WRAPPER_HEAD && mode === "alt-system",
+		"odd:bg-table-light-odd even:bg-table-light-even dark:odd:bg-table-dark-odd dark:even:bg-table-dark-even":
+			cellWrapper === CELL_WRAPPER_BODY && mode === "alt-system",
 	});
 };
 
