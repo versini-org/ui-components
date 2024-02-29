@@ -19,7 +19,7 @@ export const Basic: Story<any> = (args) => (
 
 Basic.args = {
 	fullWidth: false,
-	mode: "dark",
+	mode: "system",
 	focus: "light",
 	raw: false,
 	link: "https://www.google.com",

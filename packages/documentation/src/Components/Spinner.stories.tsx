@@ -7,7 +7,7 @@ export default {
 		importName: "Spinner",
 	},
 	args: {
-		mode: "dark",
+		mode: "system",
 		type: "circle",
 	},
 	argTypes: {
@@ -23,7 +23,7 @@ export default {
 };
 
 export const Basic: Story<any> = (args) => (
-	<div className="min-h-10 bg-slate-300 p-11">
+	<div className="min-h-10 p-11">
 		<div className="flex flex-wrap gap-2">
 			<Spinner {...args} type="dots" />
 			<Spinner {...args} type="circle" />

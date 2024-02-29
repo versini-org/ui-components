@@ -73,7 +73,7 @@ export default {
 	args: {
 		disabled: false,
 		fullWidth: false,
-		mode: "dark",
+		mode: "system",
 		focus: "light",
 		type: "button",
 		raw: false,

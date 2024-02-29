@@ -15,7 +15,7 @@ export default {
 		importName: "Table, TableBody, TableCell, TableHead, TableRow",
 	},
 	args: {
-		mode: "dark",
+		mode: "system",
 		summary: "A table about Dune",
 	},
 	argTypes: {

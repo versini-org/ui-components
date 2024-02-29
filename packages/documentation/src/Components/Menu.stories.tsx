@@ -22,7 +22,7 @@ export default {
 		importName: "Menu, MenuItem, MenuSeparator",
 	},
 	args: {
-		mode: "dark",
+		mode: "system",
 		defaultPlacement: "bottom-start",
 	},
 	argTypes: {
@@ -51,8 +51,8 @@ export default {
 };
 
 export const Basic: Story<any> = (args) => (
-	<div className="flex h-96 min-h-10 flex-wrap bg-slate-900 p-11">
-		<Button mode="light" size="small" noBorder spacing={{ r: 2 }}>
+	<div className="flex h-96 min-h-10 flex-wrap p-11">
+		<Button size="small" noBorder spacing={{ r: 2 }}>
 			Button
 		</Button>
 		<Menu icon={<IconSettings />} spacing={{ r: 2 }} {...args}>
@@ -61,7 +61,7 @@ export const Basic: Story<any> = (args) => (
 			<MenuItem label="History" />
 			<MenuItem label="About" />
 		</Menu>
-		<Button mode="light" size="small" noBorder>
+		<Button size="small" noBorder>
 			Button
 		</Button>
 	</div>

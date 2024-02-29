@@ -7,7 +7,7 @@ export default {
 		importName: "Card",
 	},
 	args: {
-		mode: "dark",
+		mode: "system",
 	},
 	argTypes: {
 		mode: {
