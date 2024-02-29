@@ -49,7 +49,7 @@ const renderImportLine = ({
 			</Flexgrid>
 
 			<pre className="mt-0">
-				<code>{`import { ${importName} } from "@versini/${packageName}";`}</code>
+				<code className="text-wrap">{`import { ${importName} } from "@versini/${packageName}";`}</code>
 			</pre>
 		</div>
 	);
