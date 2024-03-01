@@ -7,7 +7,7 @@ export const Toggle = ({
 	label,
 	labelHidden = false,
 	name,
-	mode = "dark",
+	mode = "system",
 	spacing,
 }: ToggleProps) => {
 	const toggleClasses = getToggleClasses({ mode, labelHidden, spacing });

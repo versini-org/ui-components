@@ -38,7 +38,7 @@ export const MenuComponent = forwardRef<
 			defaultPlacement = "bottom-start",
 			onOpenChange,
 			spacing,
-			mode = "dark",
+			mode = "system",
 			...props
 		},
 		userRef,

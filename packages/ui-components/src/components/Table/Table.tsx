@@ -19,7 +19,7 @@ import {
 
 export const Table = ({
 	children,
-	mode = "dark",
+	mode = "system",
 	caption,
 	summary,
 	className,

@@ -10,7 +10,7 @@ export const TYPE_LINK = "link";
 
 type getButtonClassesProps = {
 	disabled: boolean;
-	focus: string;
+	focus: "dark" | "light" | "system" | "alt-system";
 	fullWidth: boolean;
 	mode: "dark" | "light" | "system" | "alt-system";
 	noBorder: boolean;
@@ -136,14 +136,19 @@ const getButtonBorderClasses = ({
 		"border-border-light dark:border-border-dark":
 			!noBorder && mode === "alt-system",
 		"border-transparent": noBorder,
-		"focus:border-white": !noBorder,
 	});
 };
 
 const getButtonFocusClasses = ({ focus }: { focus: string }) => {
-	return clsx("focus:outline-none focus:ring-2 focus:ring-offset-0", {
-		"focus:ring-focus-light": focus === "light",
-		"focus:ring-focus-dark": focus === "dark",
+	return clsx("focus:outline", "focus:outline-2", "focus:outline-offset-2", {
+		"focus:outline-focus-dark": focus === "dark",
+		"focus:outline-focus-light": focus === "light",
+
+		"focus:outline-focus-light dark:focus:outline-focus-dark":
+			focus === "alt-system",
+
+		"focus:outline-focus-dark dark:focus:outline-focus-light":
+			focus === "system",
 	});
 };
 

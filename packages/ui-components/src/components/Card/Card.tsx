@@ -36,7 +36,7 @@ export const Card = ({
 	className,
 	"aria-labelledby": ariaLabelledby,
 	spacing,
-	mode = "dark",
+	mode = "system",
 
 	...otherProps
 }: CardProps) => {

@@ -6,7 +6,7 @@ import type { SpinnerProps } from "./SpinnerTypes";
 
 export const Spinner = ({
 	spinnerRef,
-	mode = "dark",
+	mode = "system",
 	type = "circle",
 	spacing,
 }: SpinnerProps) => {

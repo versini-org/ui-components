@@ -8,8 +8,8 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 		{
 			children,
 			disabled = false,
-			mode = "dark",
-			focus = "light",
+			mode = "system",
+			focus = "system",
 			fullWidth = false,
 			className,
 			type = "button",

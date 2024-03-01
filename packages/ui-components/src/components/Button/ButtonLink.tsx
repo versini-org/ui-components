@@ -8,8 +8,8 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 	(
 		{
 			children,
-			mode = "dark",
-			focus = "light",
+			mode = "system",
+			focus = "system",
 			fullWidth = false,
 			className,
 			slim = false,

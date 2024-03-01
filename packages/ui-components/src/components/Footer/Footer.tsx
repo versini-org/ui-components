@@ -6,7 +6,7 @@ import type { FooterProps } from "./FooterTypes";
 
 export const Footer = ({
 	className,
-	mode = "dark",
+	mode = "system",
 	row1,
 	row2,
 	noMargins = false,
