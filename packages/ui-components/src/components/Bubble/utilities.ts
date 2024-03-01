@@ -52,8 +52,8 @@ export const getBubbleClasses = ({
 	);
 	const footer = "pr-2 pt-1 text-end text-xs text-copy-light";
 	const copyButton = clsx("flex flex-col-reverse gap-2 sm:flex-row", {
-		"ml-1": kind === "left",
-		"mr-1": kind === "right",
+		"ml-2": kind === "left",
+		"mr-2": kind === "right",
 	});
 
 	return {
