@@ -76,8 +76,8 @@ export const tokens = {
 		/**
 		 * Focus tokens.
 		 */
-		"focus-dark": colors.slate[900],
-		"focus-light": colors.slate[300],
+		"focus-dark": colors.green[700],
+		"focus-light": colors.green[300],
 		"focus-error-dark": errorColorDark,
 		"focus-error-light": errorColorLight,
 
