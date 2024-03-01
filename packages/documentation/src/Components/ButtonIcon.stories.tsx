@@ -74,7 +74,7 @@ export default {
 		disabled: false,
 		fullWidth: false,
 		mode: "system",
-		focus: "light",
+		focus: "system",
 		type: "button",
 		raw: false,
 		noBorder: false,
@@ -87,7 +87,7 @@ export default {
 			control: { type: "radio" },
 		},
 		focus: {
-			options: ["dark", "light"],
+			options: ["dark", "light", "system", "alt-system"],
 			control: { type: "radio" },
 		},
 		size: {

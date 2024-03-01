@@ -8,25 +8,29 @@ export default {
 	},
 };
 
-export const Basic: Story<any> = (args) => (
-	<div className="flex flex-wrap">
-		<Button {...args}>Button</Button>
-		<Button {...args}>Button</Button>
-		<Button {...args}>Button</Button>
-		<Button {...args}>Button</Button>
-	</div>
-);
+export const Basic: Story<any> = (args) => {
+	return (
+		<div className="flex flex-wrap gap-2">
+			<Button {...args}>Button</Button>
+			<Button {...args}>Button</Button>
+			<Button {...args}>Button</Button>
+			<Button {...args}>Button</Button>
+			<Button {...args}>Button</Button>
+			<Button {...args}>Button</Button>
+			<Button {...args}>Button</Button> <Button {...args}>Button</Button>
+		</div>
+	);
+};
 
 Basic.args = {
 	disabled: false,
 	fullWidth: false,
 	mode: "system",
-	focus: "light",
+	focus: "system",
 	slim: false,
 	size: "medium",
 	raw: false,
 	noBorder: false,
-	spacing: { r: 2 },
 };
 Basic.argTypes = {
 	mode: {
@@ -34,7 +38,7 @@ Basic.argTypes = {
 		control: { type: "radio" },
 	},
 	focus: {
-		options: ["dark", "light"],
+		options: ["dark", "light", "system", "alt-system"],
 		control: { type: "radio" },
 	},
 	size: {

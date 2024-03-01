@@ -85,22 +85,26 @@ module.exports = {
 				<code>system</code>.
 			</p>
 
-			<div className="mb-2 flex flex-wrap gap-1">
-				<Button mode="system">Button</Button>
-				<Button mode="system">Button</Button>
-				<Button mode="system">Button</Button>
-				<Button mode="system">Button</Button>
+			<div className="mb-2 flex flex-wrap gap-2">
+				<Button>Button</Button>
+				<Button>Button</Button>
+				<Button>Button</Button>
+				<Button>Button</Button>
 			</div>
-			<div className="mb-2 flex flex-wrap gap-1">
-				<Anchor mode="system">Anchor as a button</Anchor>
-				<Anchor mode="system">Anchor as a button lorem ipsum</Anchor>
-				<Anchor mode="system">Anchor as a button lorem ipsum dolor</Anchor>
-				<Anchor mode="system">
+			<div className="mb-2 flex flex-wrap gap-2">
+				<Anchor link="https://www.google.com">Anchor as a button</Anchor>
+				<Anchor link="https://www.google.com">
+					Anchor as a button lorem ipsum
+				</Anchor>
+				<Anchor link="https://www.google.com">
+					Anchor as a button lorem ipsum dolor
+				</Anchor>
+				<Anchor link="https://www.google.com">
 					Anchor as a button lorem ipsum dolor sit amet
 				</Anchor>
 			</div>
 			<div className="mb-2 flex flex-wrap justify-end gap-1">
-				<Menu icon={<IconSettings />} mode="system">
+				<Menu icon={<IconSettings />}>
 					<MenuItem label="Profile" icon={<IconProfile />} />
 					<MenuItem label="Statistics" icon={<IconChart />} />
 					<MenuItem label="History" icon={<IconHistory />} />
@@ -114,7 +118,7 @@ module.exports = {
 						label="Type your question here"
 						helperText="Powered by the sun"
 						rightElement={
-							<Button mode="light" noBorder>
+							<Button mode="light" focus="light" noBorder>
 								Send
 							</Button>
 						}
@@ -152,6 +156,7 @@ module.exports = {
 												noBorder
 												label="Restore chat"
 												mode="light"
+												focus="alt-system"
 												onClick={() => {}}
 											>
 												<IconRestore className="h-3 w-3" />
@@ -160,6 +165,7 @@ module.exports = {
 												noBorder
 												label="Delete chat"
 												mode="light"
+												focus="alt-system"
 												onClick={() => {}}
 											>
 												<div className="text-red-400">
