@@ -22,7 +22,6 @@ type getTextInputClassesProps = {
 
 	className?: string;
 	inputClassName?: string;
-	slim?: boolean;
 } & SpacingProps;
 
 const getTextInputBaseClasses = ({ simple }: { simple: boolean }) => {
