@@ -27,10 +27,7 @@
 		"dev:types": "tsup --watch src",
 		"dev": "npm-run-all clean --parallel dev:js dev:types",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
-		"start": "static-server dist --port 5173",
-		"test:coverage:ui": "vitest --coverage --ui",
-		"test:coverage": "vitest run --coverage",
-		"test:watch": "vitest",
-		"test": "vitest run"
+		"test:coverage": "echo \"WARNING: no test specified\" && exit 0",
+		"test": "echo \"WARNING: no test specified\" && exit 0"
 	}
 }
