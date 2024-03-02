@@ -78,6 +78,7 @@ export default {
 		type: "button",
 		raw: false,
 		noBorder: false,
+		noBackground: false,
 		size: "medium",
 		spacing: { r: 2 },
 	},

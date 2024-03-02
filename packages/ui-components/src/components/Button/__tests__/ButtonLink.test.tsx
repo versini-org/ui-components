@@ -16,16 +16,6 @@ describe("ButtonLink modifiers", () => {
 		expect(button.className).toContain("py-0");
 	});
 
-	it("should render a slim (legacy) anchor", async () => {
-		render(
-			<ButtonLink slim link="toto">
-				hello
-			</ButtonLink>,
-		);
-		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-0");
-	});
-
 	it("should render a size small anchor", async () => {
 		render(
 			<ButtonLink size="small" link="toto">

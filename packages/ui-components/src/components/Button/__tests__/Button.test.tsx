@@ -38,12 +38,6 @@ describe("Button modifiers", () => {
 		]);
 	});
 
-	it("should render a slim (legacy) button", async () => {
-		render(<Button slim>hello</Button>);
-		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["px-4", "py-0", "max-h-8"]);
-	});
-
 	it("should render a size small button", async () => {
 		render(<Button size="small">hello</Button>);
 		const button = await screen.findByRole("button");

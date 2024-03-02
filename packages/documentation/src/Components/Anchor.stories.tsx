@@ -24,7 +24,6 @@ Basic.args = {
 	raw: false,
 	link: "https://www.google.com",
 	noBorder: false,
-	slim: false,
 	size: "small",
 	noTruncate: false,
 	spacing: { r: 2, b: 2 },

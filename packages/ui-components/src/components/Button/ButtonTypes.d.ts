@@ -33,11 +33,6 @@ export type CommonButtonProps = {
 	 * The size of the Button.
 	 */
 	size?: "small" | "medium" | "large";
-	/**
-	 * @deprecated
-	 * Please use "size" instead.
-	 */
-	slim?: boolean;
 } & SpacingProps;
 
 export type ButtonProps = {

@@ -27,7 +27,6 @@ Basic.args = {
 	fullWidth: false,
 	mode: "system",
 	focus: "system",
-	slim: false,
 	size: "medium",
 	raw: false,
 	noBorder: false,
