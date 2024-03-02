@@ -1,0 +1,1 @@
+export { twPlugin } from "./tailwindPlugin";

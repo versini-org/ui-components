@@ -5,6 +5,7 @@
 		"packages/ui-hooks": {},
 		"packages/ui-system": {},
 		"packages/ui-private": {},
-		"packages/ui-icons": {}
+		"packages/ui-icons": {},
+		"packages/ui-plugins": {}
 	}
 }

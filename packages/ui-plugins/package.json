@@ -1,0 +1,33 @@
+{
+	"name": "@versini/ui-plugins",
+	"version": "0.0.0",
+	"license": "MIT",
+	"author": "Arno Versini",
+	"publishConfig": {
+		"access": "public"
+	},
+	"homepage": "https://github.com/aversini/ui-components",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:aversini/ui-components.git"
+	},
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build:check": "tsc",
+		"build:js": "vite build",
+		"build:types": "tsup",
+		"build": "npm-run-all --serial clean build:check build:js build:types",
+		"clean": "rimraf dist",
+		"dev:js": "vite build --watch --mode development",
+		"dev:types": "tsup --watch src",
+		"dev": "npm-run-all clean --parallel dev:js dev:types",
+		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
+		"test:coverage": "echo \"WARNING: no test specified\" && exit 0",
+		"test": "echo \"WARNING: no test specified\" && exit 0"
+	}
+}
