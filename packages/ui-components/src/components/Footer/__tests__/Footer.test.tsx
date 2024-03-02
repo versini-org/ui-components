@@ -58,7 +58,49 @@ describe("Footer modifiers", () => {
 			FOOTER_CLASSNAME,
 			"text-center",
 			"text-xs",
-			"text-copy-light",
+			"text-copy-lighter",
+			"mb-[100px]",
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"sm:mt-3",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+	});
+
+	it("should render a light or dark (system) footer", async () => {
+		render(<Footer mode="system" />);
+		const footer = await screen.findByRole("contentinfo");
+		expectToHaveClasses(footer, [
+			FOOTER_CLASSNAME,
+			"text-center",
+			"text-xs",
+			"text-copy-dark",
+			"dark:text-copy-lighter",
+			"mb-[100px]",
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"sm:mt-3",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+	});
+
+	it("should render a light or dark (alt-system) footer", async () => {
+		render(<Footer mode="alt-system" />);
+		const footer = await screen.findByRole("contentinfo");
+		expectToHaveClasses(footer, [
+			FOOTER_CLASSNAME,
+			"text-center",
+			"text-xs",
+			"text-copy-lighter",
+			"dark:text-copy-dark",
 			"mb-[100px]",
 			"mt-0",
 			"flex",
@@ -120,26 +162,6 @@ describe("Footer modifiers", () => {
 
 	it("should render a footer with no margins", async () => {
 		render(<Footer noMargins />);
-		const footer = await screen.findByRole("contentinfo");
-		expectToHaveClasses(footer, [
-			FOOTER_CLASSNAME,
-			"text-center",
-			"text-xs",
-			"text-copy-dark",
-			"mt-0",
-			"flex",
-			"w-full",
-			"flex-col",
-			"p-2",
-			"sm:mt-3",
-			"md:mx-auto",
-			"md:max-w-4xl",
-		]);
-		expect(footer.className).not.toContain("mb-[100px]");
-	});
-
-	it("should render a footer with no margins with deprecated prop", async () => {
-		render(<Footer noPaddings />);
 		const footer = await screen.findByRole("contentinfo");
 		expectToHaveClasses(footer, [
 			FOOTER_CLASSNAME,

@@ -10,19 +10,18 @@ export const Footer = ({
 	row1,
 	row2,
 	noMargins = false,
-	noPaddings = false,
 	spacing,
 	raw = false,
 }: FooterProps) => {
 	const footerClass = clsx(FOOTER_CLASSNAME, className, getSpacing(spacing), {
-		"text-center text-xs text-copy-dark": !raw && mode === "dark",
-		"text-center text-xs text-copy-lighter": !raw && mode === "light",
-		"text-center text-xs text-copy-dark dark:text-copy-lighter":
-			!raw && mode === "system",
-		"text-copy-lighter dark:text-center dark:text-xs dark:text-copy-dark":
-			!raw && mode === "alt-system",
-		"mb-[100px]": !noMargins && !noPaddings && !raw,
-		"mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl": !raw,
+		"text-copy-dark": !raw && mode === "dark",
+		"text-copy-lighter": !raw && mode === "light",
+		"text-copy-dark dark:text-copy-lighter": !raw && mode === "system",
+		"text-copy-lighter dark:text-copy-dark": !raw && mode === "alt-system",
+
+		"mb-[100px]": !noMargins && !raw,
+		"mt-0 flex w-full flex-col p-2 text-center text-xs sm:mt-3 md:mx-auto md:max-w-4xl":
+			!raw,
 	});
 
 	return (

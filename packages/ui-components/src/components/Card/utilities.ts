@@ -20,7 +20,7 @@ export const getCardClasses = ({
 }: getCardClassesProps) => {
 	const wrapper = className
 		? className
-		: clsx(CARD_CLASSNAME, "rounded-md border-2 p-4 ", getSpacing(spacing), {
+		: clsx(CARD_CLASSNAME, "rounded-md border-2 p-4", getSpacing(spacing), {
 				"border-border-light bg-surface-dark text-copy-light": mode === "dark",
 				"border-border-dark bg-surface-lighter text-copy-dark":
 					mode === "light",

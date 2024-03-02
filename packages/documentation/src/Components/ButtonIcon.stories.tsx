@@ -8,7 +8,7 @@ import {
 } from "@versini/ui-icons";
 
 export const Basic: Story<any> = (args) => (
-	<div className="flex flex-wrap">
+	<div className="flex flex-wrap gap-2">
 		<ButtonIcon {...args}>
 			<IconSettings />
 		</ButtonIcon>
@@ -26,7 +26,7 @@ export const Basic: Story<any> = (args) => (
 
 export const WithLabel: Story<any> = (args) => (
 	<>
-		<div className="flex flex-wrap">
+		<div className="flex flex-wrap gap-2">
 			<ButtonIcon labelRight="Settings" {...args}>
 				<IconSettings />
 			</ButtonIcon>
@@ -40,7 +40,7 @@ export const WithLabel: Story<any> = (args) => (
 				<IconEdit />
 			</ButtonIcon>
 		</div>
-		<div className="mt-2 flex flex-wrap">
+		<div className="mt-2 flex flex-wrap gap-2">
 			<ButtonIcon labelLeft="Settings" {...args}>
 				<IconSettings />
 			</ButtonIcon>
@@ -54,7 +54,7 @@ export const WithLabel: Story<any> = (args) => (
 				<IconEdit />
 			</ButtonIcon>
 		</div>
-		<div className="mt-2 flex flex-wrap">
+		<div className="mt-2 flex flex-wrap gap-2">
 			<ButtonIcon labelRight="Previous page" {...args}>
 				<IconPrevious monotone />
 			</ButtonIcon>
@@ -80,7 +80,6 @@ export default {
 		noBorder: false,
 		noBackground: false,
 		size: "medium",
-		spacing: { r: 2 },
 	},
 	argTypes: {
 		mode: {

@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { IconSettings } from "@versini/ui-icons";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import { BUTTON_CLASSNAME } from "../../../common/constants";
 import { ButtonIcon } from "../ButtonIcon";
 
 describe("ButtonIcon (exceptions)", () => {
@@ -11,7 +12,7 @@ describe("ButtonIcon (exceptions)", () => {
 });
 
 describe("ButtonIcon modifiers", () => {
-	it("should render a default button icon", async () => {
+	it("should render a dark or light (system) button icon", async () => {
 		render(
 			<ButtonIcon>
 				<IconSettings />
@@ -20,12 +21,72 @@ describe("ButtonIcon modifiers", () => {
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("p-1");
 		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"active:bg-action-dark-active",
+			"active:text-copy-light-active",
+			"bg-action-dark",
+			"border-border-dark",
+			"border",
+			"dark:active:bg-action-light-active",
+			"dark:bg-action-light",
+			"dark:border-border-light",
+			"dark:focus:outline-focus-light",
+			"dark:hover:bg-action-light-hover",
+			"dark:text-copy-lighter",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-8",
+			"hover:bg-action-dark-hover",
+			"hover:text-copy-light-hover",
 			"inline-flex",
 			"items-center",
 			"justify-center",
+			"not-prose",
+			"p-1",
 			"rounded-full",
-			"focus:outline-none",
-			"focus:ring-2",
+			"text-copy-light",
+			"w-8",
+		]);
+	});
+
+	it("should render a dark or light (alt-system) button icon", async () => {
+		render(
+			<ButtonIcon mode="alt-system">
+				<IconSettings />
+			</ButtonIcon>,
+		);
+		const button = await screen.findByRole("button");
+		expect(button.className).toContain("p-1");
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"active:bg-action-light-active",
+			"active:text-copy-light-active",
+			"bg-action-light",
+			"border-border-light",
+			"border",
+			"dark:active:bg-action-dark-active",
+			"dark:bg-action-dark",
+			"dark:border-border-dark",
+			"dark:focus:outline-focus-light",
+			"dark:hover:bg-action-dark-hover",
+			"dark:text-copy-light",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-8",
+			"hover:bg-action-light-hover",
+			"hover:text-copy-light-hover",
+			"inline-flex",
+			"items-center",
+			"justify-center",
+			"not-prose",
+			"p-1",
+			"rounded-full",
+			"text-copy-lighter",
+			"w-8",
 		]);
 	});
 
@@ -36,9 +97,30 @@ describe("ButtonIcon modifiers", () => {
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
-		const buttonClass = button.className;
-		expect(buttonClass).toContain("text-copy-light");
-		expect(buttonClass).toContain("bg-action-dark");
+		expect(button.className).toContain("p-1");
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"active:bg-action-dark-active",
+			"active:text-copy-light-active",
+			"bg-action-dark",
+			"border-border-dark",
+			"border",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-8",
+			"hover:bg-action-dark-hover",
+			"hover:text-copy-light-hover",
+			"inline-flex",
+			"items-center",
+			"justify-center",
+			"not-prose",
+			"p-1",
+			"rounded-full",
+			"text-copy-light",
+			"w-8",
+		]);
 	});
 
 	it("should render a light button icon", async () => {
@@ -48,9 +130,30 @@ describe("ButtonIcon modifiers", () => {
 			</ButtonIcon>,
 		);
 		const button = await screen.findByRole("button");
-		const buttonClass = button.className;
-		expect(buttonClass).toContain("text-copy-light");
-		expect(buttonClass).toContain("bg-action-light");
+		expect(button.className).toContain("p-1");
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"active:bg-action-light-active",
+			"active:text-copy-light-active",
+			"bg-action-light",
+			"border-border-light",
+			"border",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-8",
+			"hover:bg-action-light-hover",
+			"hover:text-copy-light-hover",
+			"inline-flex",
+			"items-center",
+			"justify-center",
+			"not-prose",
+			"p-1",
+			"rounded-full",
+			"text-copy-lighter",
+			"w-8",
+		]);
 	});
 
 	it("should render a disabled dark button icon", async () => {

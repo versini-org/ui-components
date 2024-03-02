@@ -15,12 +15,6 @@ export type FooterProps = {
 	 */
 	noMargins?: boolean;
 	/**
-	 * Deprecated. Please use `noMargins` instead.
-	 * @default false
-	 * @deprecated
-	 */
-	noPaddings?: boolean;
-	/**
 	 * Whether or not to render the Footer component with no styles.
 	 * @default false
 	 */
