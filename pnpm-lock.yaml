@@ -57,6 +57,9 @@ importers:
       '@versini/ui-icons':
         specifier: workspace:../ui-icons
         version: link:../ui-icons
+      '@versini/ui-plugins':
+        specifier: workspace:../ui-plugins
+        version: link:../ui-plugins
       '@versini/ui-system':
         specifier: workspace:../ui-system
         version: link:../ui-system
@@ -151,6 +154,8 @@ importers:
       tailwindcss:
         specifier: 3.4.1
         version: 3.4.1
+
+  packages/ui-plugins: {}
 
   packages/ui-private:
     dependencies:
