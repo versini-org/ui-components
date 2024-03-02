@@ -9,14 +9,19 @@ const getBubbleSizesClasses = () => {
 };
 
 const getBubbleColorClasses = ({ kind }: { kind: string }) => {
-	return clsx("text-copy-dark", {
-		"bg-surface-lighter": kind === "left",
+	return clsx({
+		"bg-surface-lighter dark:bg-surface-dark": kind === "left",
 		"bg-surface-accent": kind === "right",
 	});
 };
 
-const getBubbleTypographyClasses = () => {
-	return "prose prose-dark prose-p:my-3 prose-blockquote:my-3 prose-ol:my-3 prose-ul:my-3 prose-ul:prose-li:marker:text-black";
+const getBubbleTypographyClasses = ({ kind }: { kind: string }) => {
+	return clsx(
+		"prose prose-dark dark:prose-lighter prose-p:my-3 prose-blockquote:my-3 prose-ol:my-3 prose-ul:my-3 prose-ul:prose-li:marker:text-black",
+		{
+			"text-copy-dark": kind === "right",
+		},
+	);
 };
 
 const getBubbleBorderClasses = ({ kind }: { kind: string }) => {
@@ -46,7 +51,7 @@ export const getBubbleClasses = ({
 	const main = clsx(
 		"flex flex-col empty:hidden",
 		getBubbleSizesClasses(),
-		getBubbleTypographyClasses(),
+		getBubbleTypographyClasses({ kind }),
 		getBubbleColorClasses({ kind }),
 		getBubbleBorderClasses({ kind }),
 	);

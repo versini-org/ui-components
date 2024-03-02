@@ -13,6 +13,7 @@ type getButtonClassesProps = {
 	focus: "dark" | "light" | "system" | "alt-system";
 	fullWidth: boolean;
 	mode: "dark" | "light" | "system" | "alt-system";
+	noBackground: boolean;
 	noBorder: boolean;
 	raw: boolean;
 	size: string;
@@ -21,6 +22,7 @@ type getButtonClassesProps = {
 	className?: string;
 	labelLeft?: string;
 	labelRight?: string;
+
 	slim?: boolean;
 } & SpacingProps;
 
@@ -72,14 +74,20 @@ const getButtonSizesClasses = ({
 	}
 };
 
-const getButtonBaseClasses = ({ mode }: { mode: string }) => {
+const getButtonBaseClasses = ({
+	mode,
+	noBackground,
+}: {
+	mode: string;
+	noBackground: boolean;
+}) => {
 	return clsx("not-prose rounded-full", {
-		"bg-action-dark text-copy-light": mode === "dark",
-		"bg-action-light text-copy-lighter": mode === "light",
+		"bg-action-dark text-copy-light": mode === "dark" && !noBackground,
+		"bg-action-light text-copy-lighter": mode === "light" && !noBackground,
 		"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
-			mode === "system",
+			mode === "system" && !noBackground,
 		"bg-action-light text-copy-lighter dark:bg-action-dark dark:text-copy-light":
-			mode === "alt-system",
+			mode === "alt-system" && !noBackground,
 	});
 };
 
@@ -166,6 +174,7 @@ export const getButtonClasses = ({
 	labelRight,
 	labelLeft,
 	spacing,
+	noBackground,
 }: getButtonClassesProps) => {
 	return raw
 		? clsx(BUTTON_CLASSNAME, className)
@@ -173,7 +182,7 @@ export const getButtonClasses = ({
 				BUTTON_CLASSNAME,
 				className,
 				getSpacing(spacing),
-				getButtonBaseClasses({ mode }),
+				getButtonBaseClasses({ mode, noBackground }),
 				getButtonSizesClasses({ type, slim, size, labelRight, labelLeft }),
 				getButtonBorderClasses({ mode, noBorder }),
 				getButtonFocusClasses({ focus }),

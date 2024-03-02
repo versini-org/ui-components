@@ -47,3 +47,15 @@ Basic.args = {
 	monotone: false,
 	semantic: false,
 };
+
+export const Mode: Story<any> = (args) => (
+	<div className="flex max-w-none flex-wrap gap-2">
+		{Object.entries(AllIcons).map(([name, Icon]) => {
+			return name !== "IconDog" ? (
+				<div key={name}>
+					<Icon {...args} />
+				</div>
+			) : null;
+		})}
+	</div>
+);

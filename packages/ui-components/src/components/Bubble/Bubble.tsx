@@ -68,13 +68,13 @@ export const Bubble = ({
 			{isCopyToClipboardEnabled && (
 				<div className={bubbleClasses.copyButton}>
 					<ButtonIcon
-						mode="dark"
-						focus="light"
+						mode="system"
+						focus="system"
 						label={copied ? "Copied to clipboard" : "Copy to clipboard"}
 						noBorder
+						noBackground
 						onClick={handleCopyToClipboard}
 						disabled={copied}
-						size="small"
 					>
 						{copied ? <IconCopied /> : <IconCopy />}
 					</ButtonIcon>

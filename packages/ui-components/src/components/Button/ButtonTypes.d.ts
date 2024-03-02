@@ -96,5 +96,9 @@ export type ButtonIconProps = {
 	 * The label to show to the right of the icon.
 	 */
 	labelRight?: string;
+	/**
+	 * Option to make the Button transparent.
+	 */
+	noBackground?: boolean;
 } & CommonButtonProps &
 	React.ButtonHTMLAttributes<HTMLButtonElement>;
