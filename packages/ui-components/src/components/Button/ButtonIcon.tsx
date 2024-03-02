@@ -9,7 +9,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			children,
 			disabled = false,
 			mode = "system",
-			focus = "system",
+			focusMode = "system",
 			fullWidth = false,
 			className,
 			type = "button",
@@ -30,7 +30,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 		const buttonClass = getButtonClasses({
 			type: TYPE_ICON,
 			mode,
-			focus,
+			focusMode,
 			fullWidth,
 			disabled,
 			raw,

@@ -10,7 +10,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			onClick,
 			disabled = false,
 			mode = "system",
-			focus = "system",
+			focusMode = "system",
 			fullWidth = false,
 			className,
 			size = "medium",
@@ -27,7 +27,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 		const buttonClass = getButtonClasses({
 			type: TYPE_BUTTON,
 			mode,
-			focus,
+			focusMode,
 			fullWidth,
 			disabled,
 			raw,

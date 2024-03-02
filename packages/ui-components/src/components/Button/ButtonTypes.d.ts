@@ -9,7 +9,7 @@ export type CommonButtonProps = {
 	 * The type of focus for the Button. This will change the color
 	 * of the focus ring around the Button.
 	 */
-	focus?: "dark" | "light" | "system" | "alt-system";
+	focusMode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * Whether or not the Button is full width.
 	 * @default false

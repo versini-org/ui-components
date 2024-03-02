@@ -26,7 +26,7 @@ Basic.args = {
 	disabled: false,
 	fullWidth: false,
 	mode: "system",
-	focus: "system",
+	focusMode: "system",
 	size: "medium",
 	raw: false,
 	noBorder: false,
@@ -36,7 +36,7 @@ Basic.argTypes = {
 		options: ["dark", "light", "system", "alt-system"],
 		control: { type: "radio" },
 	},
-	focus: {
+	focusMode: {
 		options: ["dark", "light", "system", "alt-system"],
 		control: { type: "radio" },
 	},

@@ -10,7 +10,7 @@ export const TYPE_LINK = "link";
 
 type getButtonClassesProps = {
 	disabled: boolean;
-	focus: "dark" | "light" | "system" | "alt-system";
+	focusMode: "dark" | "light" | "system" | "alt-system";
 	fullWidth: boolean;
 	mode: "dark" | "light" | "system" | "alt-system";
 
@@ -143,16 +143,16 @@ const getButtonBorderClasses = ({
 	});
 };
 
-const getButtonFocusClasses = ({ focus }: { focus: string }) => {
+const getButtonFocusClasses = ({ focusMode }: { focusMode: string }) => {
 	return clsx("focus:outline", "focus:outline-2", "focus:outline-offset-2", {
-		"focus:outline-focus-dark": focus === "dark",
-		"focus:outline-focus-light": focus === "light",
+		"focus:outline-focus-dark": focusMode === "dark",
+		"focus:outline-focus-light": focusMode === "light",
 
 		"focus:outline-focus-light dark:focus:outline-focus-dark":
-			focus === "alt-system",
+			focusMode === "alt-system",
 
 		"focus:outline-focus-dark dark:focus:outline-focus-light":
-			focus === "system",
+			focusMode === "system",
 	});
 };
 
@@ -161,7 +161,7 @@ export const getButtonClasses = ({
 	className,
 	raw,
 	mode,
-	focus,
+	focusMode,
 	disabled,
 	fullWidth,
 	size,
@@ -180,7 +180,7 @@ export const getButtonClasses = ({
 				getButtonBaseClasses({ mode, noBackground }),
 				getButtonSizesClasses({ type, size, labelRight, labelLeft }),
 				getButtonBorderClasses({ mode, noBorder }),
-				getButtonFocusClasses({ focus }),
+				getButtonFocusClasses({ focusMode }),
 				getButtonHoverClasses({ mode, disabled }),
 				getButtonActiveClasses({ mode, disabled }),
 				{
