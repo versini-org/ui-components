@@ -69,7 +69,7 @@ export const Bubble = ({
 				<div className={bubbleClasses.copyButton}>
 					<ButtonIcon
 						mode="system"
-						focus="system"
+						focusMode="system"
 						label={copied ? "Copied to clipboard" : "Copy to clipboard"}
 						noBorder
 						noBackground
