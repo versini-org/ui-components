@@ -121,6 +121,10 @@ importers:
       tailwindcss:
         specifier: 3.4.1
         version: 3.4.1
+    devDependencies:
+      '@versini/ui-plugins':
+        specifier: workspace:../ui-plugins
+        version: link:../ui-plugins
 
   packages/ui-hooks:
     devDependencies:
@@ -154,6 +158,10 @@ importers:
       tailwindcss:
         specifier: 3.4.1
         version: 3.4.1
+    devDependencies:
+      '@versini/ui-plugins':
+        specifier: workspace:../ui-plugins
+        version: link:../ui-plugins
 
   packages/ui-plugins: {}
 
@@ -181,6 +189,9 @@ importers:
         specifier: 3.4.1
         version: 3.4.1
     devDependencies:
+      '@versini/ui-plugins':
+        specifier: workspace:../ui-plugins
+        version: link:../ui-plugins
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -209,6 +220,9 @@ importers:
         specifier: 3.4.1
         version: 3.4.1
     devDependencies:
+      '@versini/ui-plugins':
+        specifier: workspace:../ui-plugins
+        version: link:../ui-plugins
       react:
         specifier: 18.2.0
         version: 18.2.0

@@ -42,6 +42,7 @@
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
+		"@versini/ui-plugins": "workspace:../ui-plugins",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
 	},
