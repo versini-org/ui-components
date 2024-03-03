@@ -9,27 +9,16 @@ export type CommonTextInputProps = {
 	 * The name of the TextInput.
 	 */
 	name: string;
-
-	/**
-	 * The type of border for the TextInput. This will change the color
-	 * of the border of the TextInput.
-	 */
-	borderKind?: "dark" | "light";
 	/**
 	 * Whether or not the TextInput is in error state.
 	 * @default false
 	 */
 	error?: boolean;
 	/**
-	 * The type of error for the TextInput. This will change the color
-	 * of the error of the TextInput.
-	 */
-	errorKind?: "dark" | "light";
-	/**
 	 * The type of focus for the TextInput. This will change the color
 	 * of the focus ring around the TextInput.
 	 */
-	focusKind?: "dark" | "light";
+	focusMode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * Text to add to the bottom of the TextInput.
 	 */
@@ -42,6 +31,10 @@ export type CommonTextInputProps = {
 	 * Id to use for the TextInput label.
 	 */
 	labelId?: string;
+	/**
+	 * The mode of TextInput. This will change the color of the TextInput.
+	 */
+	mode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * Whether or not the TextInput has a border.
 	 * @default false
@@ -62,12 +55,6 @@ export type TextInputProps = {
 	 * elements, such a Button.
 	 */
 	rightElement?: React.ReactElement;
-	/**
-	 * Whether or not the TextInput is simple. A simple TextInput is smaller
-	 * in height and does not have helper text support. If the prop "helperText"
-	 * is passed in, it will be ignored.
-	 */
-	simple?: boolean;
 } & CommonTextInputProps &
 	React.InputHTMLAttributes<HTMLInputElement>;
 
