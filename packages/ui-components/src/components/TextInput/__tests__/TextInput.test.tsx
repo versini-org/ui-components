@@ -53,7 +53,7 @@ describe("TextInput modifiers", () => {
 		render(<TextInput mode="light" label="hello world" name="toto" />);
 		const label = await screen.findAllByText("hello world");
 		const input = await screen.findByRole("textbox");
-		screen.debug(input);
+
 		expect(label[0].className).toContain("sr-only");
 		expectToHaveClasses(label[1], [
 			"absolute",

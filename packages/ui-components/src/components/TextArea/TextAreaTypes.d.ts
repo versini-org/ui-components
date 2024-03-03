@@ -9,27 +9,16 @@ export type TextAreaProps = {
 	 * The name of the TextArea.
 	 */
 	name: string;
-
-	/**
-	 * The type of border for the TextArea. This will change the color
-	 * of the border of the TextArea.
-	 */
-	borderKind?: "dark" | "light";
 	/**
 	 * Whether or not the TextArea is in error state.
 	 * @default false
 	 */
 	error?: boolean;
 	/**
-	 * The type of error for the TextArea. This will change the color
-	 * of the error of the TextArea.
-	 */
-	errorKind?: "dark" | "light";
-	/**
 	 * The type of focus for the TextArea. This will change the color
 	 * of the focus ring around the TextArea.
 	 */
-	focusKind?: "dark" | "light";
+	focusMode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * Text to add to the bottom of the TextArea.
 	 */
@@ -47,6 +36,10 @@ export type TextAreaProps = {
 	 * Whether or not the TextArea has a border.
 	 * @default false
 	 */
+	/**
+	 * The mode of TextInput. This will change the color of the TextInput.
+	 */
+	mode?: "dark" | "light" | "system" | "alt-system";
 	noBorder?: boolean;
 	/**
 	 * Whether or not to render the TextArea with styles or not.

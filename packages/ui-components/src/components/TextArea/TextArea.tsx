@@ -16,9 +16,8 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			raw = false,
 			className,
 			textAreaClassName,
-			focusKind = "light",
-			borderKind = "dark",
-			errorKind = "light",
+			mode = "system",
+			focusMode = "system",
 			value,
 			defaultValue,
 
@@ -63,12 +62,11 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			textAreaClassName,
 			error,
 			raw,
-			focusKind,
+			focusMode,
 			disabled,
 			noBorder,
-			borderKind,
-			errorKind,
 			spacing,
+			mode,
 		});
 
 		/**

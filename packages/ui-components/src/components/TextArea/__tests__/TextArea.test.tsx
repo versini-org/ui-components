@@ -4,7 +4,10 @@ import { act, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
-import { TEXT_AREA_CONTROL_RIGHT_CLASSNAME } from "../../../common/constants";
+import {
+	TEXT_AREA_CLASSNAME,
+	TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
+} from "../../../common/constants";
 import { TextArea } from "../..";
 
 describe("TextArea (exceptions)", () => {
@@ -14,11 +17,112 @@ describe("TextArea (exceptions)", () => {
 });
 
 describe("TextArea modifiers", () => {
-	it("should render a default text area", async () => {
+	it("should render a dark or light (system) text area", async () => {
 		render(<TextArea label="hello world" name="toto" />);
-		const input = await screen.findAllByText("hello world");
-		expect(input[0].className).toContain("sr-only");
-		expectToHaveClasses(input[1], ["cursor-text", "text-copy-medium"]);
+		const label = await screen.findAllByText("hello world");
+		const input = await screen.findByRole("textbox");
+
+		expect(label[0].className).toContain("sr-only");
+		expectToHaveClasses(label[1], [
+			"absolute",
+			"cursor-text",
+			"dark:text-copy-lighter",
+			"font-medium",
+			"text-copy-dark",
+		]);
+		expectToHaveClasses(input, [
+			TEXT_AREA_CLASSNAME,
+			"bg-surface-lighter",
+			"border-2",
+			"border-border-dark",
+			"caret-copy-dark",
+			"dark:bg-surface-darker",
+			"dark:caret-copy-light",
+			"dark:focus:outline-focus-light",
+			"dark:text-copy-lighter",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-20",
+			"min-h-[80px]",
+			"overflow-hidden",
+			"px-4",
+			"py-7",
+			"resize-none",
+			"rounded-md",
+			"text-base",
+			"text-copy-dark",
+		]);
+	});
+
+	it("should render a light text area", async () => {
+		render(<TextArea mode="light" label="hello world" name="toto" />);
+		const label = await screen.findAllByText("hello world");
+		const input = await screen.findByRole("textbox");
+
+		expect(label[0].className).toContain("sr-only");
+		expectToHaveClasses(label[1], [
+			"absolute",
+			"cursor-text",
+			"font-medium",
+			"text-copy-dark",
+		]);
+		expectToHaveClasses(input, [
+			TEXT_AREA_CLASSNAME,
+			"bg-surface-lighter",
+			"border-2",
+			"border-border-dark",
+			"caret-copy-dark",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-20",
+			"min-h-[80px]",
+			"overflow-hidden",
+			"px-4",
+			"py-7",
+			"resize-none",
+			"rounded-md",
+			"text-base",
+			"text-copy-dark",
+		]);
+	});
+
+	it("should render a dark text area", async () => {
+		render(<TextArea mode="dark" label="hello world" name="toto" />);
+		const label = await screen.findAllByText("hello world");
+		const input = await screen.findByRole("textbox");
+
+		expect(label[0].className).toContain("sr-only");
+		expectToHaveClasses(label[1], [
+			"absolute",
+			"cursor-text",
+			"font-medium",
+			"text-copy-lighter",
+		]);
+		expectToHaveClasses(input, [
+			TEXT_AREA_CLASSNAME,
+			"bg-surface-darker",
+			"border-2",
+			"border-border-dark",
+			"caret-copy-light",
+			"dark:focus:outline-focus-light",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-20",
+			"min-h-[80px]",
+			"overflow-hidden",
+			"px-4",
+			"py-7",
+			"resize-none",
+			"rounded-md",
+			"text-base",
+			"text-copy-lighter",
+		]);
 	});
 
 	it("should render a text area with an error message", async () => {

@@ -10,11 +10,10 @@ import {
 } from "../../common/constants";
 
 type getTextAreaClassesProps = {
-	borderKind: string;
 	disabled: boolean;
 	error: boolean;
-	errorKind: string;
-	focusKind: string;
+	focusMode: "dark" | "light" | "system" | "alt-system";
+	mode: "dark" | "light" | "system" | "alt-system";
 	noBorder: boolean;
 	raw: boolean;
 
@@ -26,56 +25,59 @@ const getTextAreaBaseClasses = () => {
 	/**
 	 * overflow-hidden is needed to prevent the text area from
 	 * showing a scrollbar. We automatically expand the text area
-	 * when the user types more than one line, so there is no need
-	 * for a scrollbar.
+	 * when the user types more than one line, so there is no
+	 * need for a scrollbar.
 	 */
-	return "rounded-md text-base h-20 min-h-[80px] resize-none overflow-hidden";
+	return "rounded-md text-base h-20 min-h-[80px] resize-none overflow-hidden px-4 py-7";
 };
 
-const getTextAreaSizesClasses = () => {
-	return "px-4 py-7";
-};
-
-const getTextAreaColorClasses = () => {
-	return `bg-surface-darker text-copy-light caret-copy-light`;
+const getTextAreaColorClasses = ({
+	mode,
+}: {
+	mode: "dark" | "light" | "system" | "alt-system";
+}) => {
+	return clsx({
+		"bg-surface-darker text-copy-lighter caret-copy-light": mode === "dark",
+		"bg-surface-lighter text-copy-dark caret-copy-dark": mode === "light",
+		"bg-surface-lighter text-copy-dark caret-copy-dark dark:bg-surface-darker dark:text-copy-lighter dark:caret-copy-light":
+			mode === "system",
+		"bg-surface-darker text-copy-lighter caret-copy-light dark:bg-surface-lighter dark:text-copy-dark dark:caret-copy-dark":
+			mode === "alt-system",
+	});
 };
 
 const getTextAreaFocusClasses = ({
-	focusKind,
+	focusMode,
 	error,
-	errorKind,
 }: {
 	error: boolean;
-	errorKind: string;
-	focusKind: string;
+	focusMode: "dark" | "light" | "system" | "alt-system";
 }) => {
-	return clsx("focus:outline-none focus:ring-offset-0", {
-		"focus:ring-2": !error,
-		"focus:ring-1": error,
-		"focus:ring-focus-dark": !error && focusKind === "dark",
-		"focus:ring-focus-light": !error && focusKind === "light",
-		"focus:ring-focus-error-dark": error && errorKind === "dark",
-		"focus:ring-focus-error-light": error && errorKind === "light",
-	});
+	if (error) {
+		return "focus:outline focus:outline-2 focus:outline-focus-error-dark";
+	} else {
+		return clsx("focus:outline focus:outline-2 focus:outline-offset-2", {
+			"focus:outline-focus-dark": focusMode === "dark",
+			"focus:outline-focus-light": focusMode === "light",
+			"focus:outline-focus-light dark:focus:outline-focus-dark":
+				focusMode === "alt-system",
+			"focus:outline-focus-dark dark:focus:outline-focus-light":
+				focusMode === "system",
+		});
+	}
 };
 
 const getTextAreaBorderClasses = ({
 	noBorder,
 	error,
-	borderKind,
-	errorKind,
 }: {
-	borderKind: string;
 	error: boolean;
-	errorKind: string;
 	noBorder: boolean;
 }) => {
 	return clsx("border-2", {
-		"border-border-dark": !noBorder && borderKind === "dark",
-		"border-border-light": !noBorder && borderKind === "light",
+		"border-border-dark": !noBorder,
 		"border-transparent": noBorder,
-		"border-border-error-dark": error && errorKind === "dark",
-		"border-border-error-light": error && errorKind === "light",
+		"border-border-error-dark": error,
 	});
 };
 
@@ -83,38 +85,43 @@ const getTextAreaLabelClasses = ({
 	disabled,
 	raw,
 	error,
-	errorKind,
+	mode,
 }: {
 	disabled: boolean;
 	error: boolean;
-	errorKind: string;
+	mode: "dark" | "light" | "system" | "alt-system";
 	raw: boolean;
 }) => {
-	return raw
-		? ""
-		: clsx("absolute cursor-text font-medium", {
-				"text-copy-error-dark": error && errorKind === "dark",
-				"text-copy-error-light": error && errorKind === "light",
-				"text-copy-medium": !error,
-				"cursor-not-allowed opacity-50": disabled,
-			});
+	if (raw) {
+		return "";
+	}
+	return clsx("absolute cursor-text font-medium", {
+		"text-copy-lighter": !error && mode === "dark",
+		"text-copy-dark": !error && mode === "light",
+		"text-copy-dark dark:text-copy-lighter": !error && mode === "system",
+		"text-copy-lighter dark:text-copy-dark": !error && mode === "alt-system",
+		"cursor-not-allowed opacity-50": disabled,
+	});
 };
 
 const getTextAreaHelperTextClasses = ({
 	error,
 	raw,
-	errorKind,
+	mode,
 }: {
 	error: boolean;
-	errorKind: string;
+	mode: "dark" | "light" | "system" | "alt-system";
 	raw: boolean;
 }) => {
 	return raw
 		? undefined
-		: clsx(TEXT_AREA_HELPER_TEXT_CLASSNAME, "absolute font-medium", {
-				"text-copy-error-dark": error && errorKind === "dark",
-				"text-copy-error-light": error && errorKind === "light",
-				"text-copy-medium": !error,
+		: clsx(TEXT_AREA_HELPER_TEXT_CLASSNAME, "absolute px-2 font-medium", {
+				"rounded-md bg-surface-darker text-copy-error-light": error,
+				"text-copy-lighter": !error && mode === "dark",
+				"text-copy-dark": !error && mode === "light",
+				"text-copy-dark dark:text-copy-lighter": !error && mode === "system",
+				"text-copy-lighter dark:text-copy-dark":
+					!error && mode === "alt-system",
 			});
 };
 
@@ -122,13 +129,12 @@ export const getTextAreaClasses = ({
 	className,
 	textAreaClassName,
 	raw,
-	focusKind,
-	borderKind,
-	errorKind,
+	focusMode,
 	disabled,
 	noBorder,
 	error,
 	spacing,
+	mode,
 }: getTextAreaClassesProps) => {
 	const wrapper = raw
 		? className
@@ -145,14 +151,11 @@ export const getTextAreaClasses = ({
 				TEXT_AREA_CLASSNAME,
 				textAreaClassName,
 				getTextAreaBaseClasses(),
-				getTextAreaSizesClasses(),
-				getTextAreaColorClasses(),
-				getTextAreaFocusClasses({ focusKind, error, errorKind }),
+				getTextAreaColorClasses({ mode }),
+				getTextAreaFocusClasses({ focusMode, error }),
 				getTextAreaBorderClasses({
 					noBorder,
 					error,
-					borderKind,
-					errorKind,
 				}),
 				{
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
@@ -165,13 +168,13 @@ export const getTextAreaClasses = ({
 		disabled,
 		raw,
 		error,
-		errorKind,
+		mode,
 	});
 
 	const helperText = getTextAreaHelperTextClasses({
 		error,
 		raw,
-		errorKind,
+		mode,
 	});
 
 	const rightElement = raw
