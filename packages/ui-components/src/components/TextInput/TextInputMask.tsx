@@ -1,9 +1,9 @@
 import { useMergeRefs } from "@versini/ui-hooks";
-import { IconHide, IconShow } from "@versini/ui-icons";
+// import { IconHide, IconShow } from "@versini/ui-icons";
 import { LiveRegion } from "@versini/ui-private";
 import React, { useEffect, useRef, useState } from "react";
 
-import { ButtonIcon } from "..";
+// import { ButtonIcon } from "..";
 import { TextInput } from "./TextInput";
 import type { TextInputMaskProps } from "./TextInputTypes";
 
@@ -32,6 +32,8 @@ export const TextInputMask = React.forwardRef<
 			onBlur,
 			onFocus,
 			onTextInputMaskBlur,
+
+			rightElement,
 
 			spacing,
 
@@ -63,6 +65,11 @@ export const TextInputMask = React.forwardRef<
 						politeness: "polite",
 						message: `${label} hiding characters`,
 					});
+					/**
+					 * Callback that can be used to generate
+					 * show/hide analytics.
+					 */
+					onMaskChange && onMaskChange(true);
 				}, AUTO_HIDE_TIMEOUT);
 			}
 		};
@@ -83,9 +90,10 @@ export const TextInputMask = React.forwardRef<
 			});
 
 			/**
-			 * Callback that can be used to generate show/hide analytics.
+			 * Callback that can be used to generate
+			 * show/hide analytics.
 			 */
-			onMaskChange && onMaskChange({ e, masked: newHiddenState });
+			onMaskChange && onMaskChange(newHiddenState);
 		};
 
 		const handleTextInputMaskBlur = (
@@ -162,16 +170,24 @@ export const TextInputMask = React.forwardRef<
 					onBlur={handleFieldBlur}
 					onFocus={handleFieldFocus}
 					onChange={handleChange}
-					rightElement={
-						<ButtonIcon
-							label={buttonLabel}
-							onClick={handleShowMaskButtonClick}
-							onBlur={handleTextInputMaskBlur}
-							disabled={disabled}
-						>
-							{masked ? <IconShow /> : <IconHide />}
-						</ButtonIcon>
-					}
+					rightElement={React.cloneElement(rightElement, {
+						ref,
+						label: buttonLabel,
+						onClick: handleShowMaskButtonClick,
+						onBlur: handleTextInputMaskBlur,
+
+						disabled: disabled,
+					})}
+					// rightElement={
+					// 	<ButtonIcon
+					// 		label={buttonLabel}
+					// 		onClick={handleShowMaskButtonClick}
+					// 		onBlur={handleTextInputMaskBlur}
+					// 		disabled={disabled}
+					// 	>
+					// 		{masked ? <IconShow /> : <IconHide />}
+					// 	</ButtonIcon>
+					// }
 					{...otherProps}
 				/>
 

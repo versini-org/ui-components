@@ -1,5 +1,7 @@
 import type { Story } from "@ladle/react";
-import { TextInputMask } from "@versini/ui-components";
+import { ButtonIcon, TextInputMask } from "@versini/ui-components";
+import { IconHide, IconShow } from "@versini/ui-icons";
+import { useState } from "react";
 
 export default {
 	title: "Form components/TextInputMask",
@@ -12,35 +14,39 @@ export default {
 		disabled: false,
 		helperText: "",
 		raw: false,
-		focusKind: "light",
-		borderKind: "dark",
-		errorKind: "light",
+		focusMode: "system",
+		mode: "system",
 		error: false,
 		inputClassName: "",
 		className: "",
 	},
 	argTypes: {
-		focusKind: {
-			options: ["dark", "light"],
+		focusMode: {
+			options: ["dark", "light", "system", "alt-system"],
 			control: { type: "radio" },
 		},
-		borderKind: {
-			options: ["dark", "light"],
-			control: { type: "radio" },
-		},
-		errorKind: {
-			options: ["dark", "light"],
+		mode: {
+			options: ["dark", "light", "system", "alt-system"],
 			control: { type: "radio" },
 		},
 	},
 };
 
-export const Basic: Story<any> = (args) => (
-	<div className="min-h-10">
-		<form noValidate>
-			<div className="flex gap-2">
-				<TextInputMask {...args} />
-			</div>
-		</form>
-	</div>
-);
+export const Basic: Story<any> = (args) => {
+	const [masked, setMasked] = useState(true);
+	return (
+		<div className="min-h-10">
+			<form noValidate>
+				<div className="flex gap-2">
+					<TextInputMask
+						{...args}
+						onMaskChange={setMasked}
+						rightElement={
+							<ButtonIcon>{masked ? <IconShow /> : <IconHide />}</ButtonIcon>
+						}
+					/>
+				</div>
+			</form>
+		</div>
+	);
+};

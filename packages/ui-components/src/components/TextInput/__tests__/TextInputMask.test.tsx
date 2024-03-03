@@ -2,10 +2,10 @@
 
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { IconHide } from "@versini/ui-icons";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
-// import { TEXT_INPUT_CLASSNAME } from "../../../common/constants";
-import { TextInputMask } from "../..";
+import { ButtonIcon, TextInputMask } from "../..";
 
 function renderWithUserEvent(jsx: JSX.Element) {
 	return {
@@ -22,7 +22,17 @@ describe("TextInputMask (exceptions)", () => {
 
 describe("TextInputMask modifiers", () => {
 	it("should render a dark or light (system) text input", async () => {
-		render(<TextInputMask label="hello world" name="toto" />);
+		render(
+			<TextInputMask
+				label="hello world"
+				name="toto"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
+			/>,
+		);
 		const label = await screen.findAllByText("hello world");
 		// const input = await screen.findByRole("textbox");
 
@@ -62,6 +72,11 @@ describe("TextInputMask modifiers", () => {
 				helperText="error message"
 				label="hello world"
 				name="toto"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 		const errorMessage = await screen.findByText("error message");
@@ -75,6 +90,11 @@ describe("TextInputMask modifiers", () => {
 				name="toto"
 				noBorder
 				data-testid="txtnpt-1"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 		const input = await screen.findByTestId("txtnpt-1");
@@ -83,7 +103,17 @@ describe("TextInputMask modifiers", () => {
 
 	it("should render a raw text input with no styling", async () => {
 		render(
-			<TextInputMask label="toto" name="toto" raw data-testid="txtnpt-1" />,
+			<TextInputMask
+				label="toto"
+				name="toto"
+				raw
+				data-testid="txtnpt-1"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
+			/>,
 		);
 		const input = await screen.findByTestId("txtnpt-1");
 		expect(input.className).toBe("");
@@ -96,6 +126,11 @@ describe("TextInputMask modifiers", () => {
 				name="toto"
 				className="toto"
 				data-testid="txtnpt-1"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 		const input = await screen.findByTestId("txtnpt-1");
@@ -116,6 +151,11 @@ describe("TextInputMask modifiers", () => {
 				name="toto"
 				inputClassName="toto"
 				data-testid="txtnpt-1"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 		const input = await screen.findByTestId("txtnpt-1");
@@ -142,6 +182,11 @@ describe("TextInputMask methods", () => {
 				label="hello world"
 				name="toto"
 				data-testid="txtnpt-1"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 		const input = await screen.findByTestId("txtnpt-1");
@@ -158,20 +203,19 @@ describe("TextInputMask methods", () => {
 				name="hello"
 				label="hello world"
 				onMaskChange={onMaskChangeHandler}
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 
 		const button = screen.getByRole("button");
 		fireEvent.click(button);
-		expect(onMaskChangeHandler).toHaveBeenCalledWith({
-			e: expect.anything(),
-			masked: false,
-		});
+		expect(onMaskChangeHandler).toHaveBeenCalledWith(false);
 		fireEvent.click(button);
-		expect(onMaskChangeHandler).toHaveBeenCalledWith({
-			e: expect.anything(),
-			masked: true,
-		});
+		expect(onMaskChangeHandler).toHaveBeenCalledWith(true);
 	});
 
 	it("should call the `onTextInputMaskBlur` callback when focus moves from the input outside the component", async () => {
@@ -183,6 +227,11 @@ describe("TextInputMask methods", () => {
 				label="hello world"
 				data-testid="txtnptmsk-1"
 				onTextInputMaskBlur={onTextInputMaskBlurMock}
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 
@@ -206,6 +255,11 @@ describe("TextInputMask methods", () => {
 				label="hello world"
 				data-testid="txtnptmsk-1"
 				onTextInputMaskBlur={onTextInputMaskBlurMock}
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 
@@ -230,6 +284,11 @@ describe("TextInputMask methods", () => {
 				label="hello world"
 				data-testid="txtnptmsk-1"
 				onTextInputMaskBlur={onTextInputMaskBlurMock}
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 
@@ -252,6 +311,11 @@ describe("TextInputMask methods", () => {
 				label="hello world"
 				data-testid="txtnptmsk-1"
 				onTextInputMaskBlur={onTextInputMaskBlurMock}
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 
@@ -275,6 +339,11 @@ describe("TextInputMask methods", () => {
 				label="hello world"
 				data-testid="txtnptmsk-1"
 				onBlur={onBlurMock}
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 
@@ -293,6 +362,11 @@ describe("TextInputMask methods", () => {
 				label="hello world"
 				data-testid="txtnptmsk-1"
 				onFocus={onFocusMock}
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 
@@ -311,6 +385,11 @@ describe("TextInputMask accessibility", () => {
 				helperText="error message"
 				label="hello world"
 				name="toto"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 		const errorMessage = await screen.findByText("error message");
@@ -332,6 +411,11 @@ describe("TextInputMask accessibility", () => {
 				helperText="error message"
 				label="hello world"
 				name="toto"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 		const liveRegion = screen.getByText("toto error, error message");
@@ -346,14 +430,34 @@ describe("TextInputMask accessibility", () => {
 
 describe("TextInputMask show/hide button tests", () => {
 	it("should initially render with 'Show' Button label", () => {
-		render(<TextInputMask name="hello" label="hello world" />);
+		render(
+			<TextInputMask
+				name="hello"
+				label="hello world"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
+			/>,
+		);
 
 		const buttonLabel = screen.getByLabelText("Show");
 		expect(buttonLabel).toBeInTheDocument();
 	});
 
 	it("should toggle the button label to 'Hide'", () => {
-		render(<TextInputMask name="hello" label="hello world" />);
+		render(
+			<TextInputMask
+				name="hello"
+				label="hello world"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
+			/>,
+		);
 
 		let buttonLabel = screen.getByLabelText("Show");
 		expect(buttonLabel).toBeInTheDocument();
@@ -364,7 +468,17 @@ describe("TextInputMask show/hide button tests", () => {
 	});
 
 	it("should announce the default 'Characters showing' text when the 'Show' button is clicked", () => {
-		render(<TextInputMask name="hello" label="hello world" />);
+		render(
+			<TextInputMask
+				name="hello"
+				label="hello world"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
+			/>,
+		);
 
 		const buttonLabel = screen.getByLabelText("Show");
 		expect(buttonLabel).toBeInTheDocument();
@@ -375,7 +489,17 @@ describe("TextInputMask show/hide button tests", () => {
 	});
 
 	it("should toggle the button label back to 'Show'", () => {
-		render(<TextInputMask name="hello" label="hello world" />);
+		render(
+			<TextInputMask
+				name="hello"
+				label="hello world"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
+			/>,
+		);
 
 		let buttonLabel = screen.getByLabelText("Show");
 		expect(buttonLabel).toBeInTheDocument();
@@ -401,6 +525,11 @@ describe("TextInputMask timer tests", () => {
 				data-testid="txtnptmsk-1"
 				name="hello"
 				label="hello world"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 
@@ -427,6 +556,11 @@ describe("TextInputMask timer tests", () => {
 				data-testid="txtnptmsk-1"
 				name="hello"
 				label="hello world"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
 			/>,
 		);
 

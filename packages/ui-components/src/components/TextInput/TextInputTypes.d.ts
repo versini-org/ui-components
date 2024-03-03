@@ -60,17 +60,16 @@ export type TextInputProps = {
 
 export type TextInputMaskProps = {
 	/**
+	 * This prop allows you to pass in a React element to render on the right
+	 * side of the TextInput. This is useful for adding icons or actionable
+	 * elements, such a Button.
+	 */
+	rightElement: React.ReactElement;
+	/**
 	 * Callback fired when the value changes.
 	 * @param masked whether or not the value is masked
-	 * @param e the synthetic event
 	 */
-	onMaskChange?: ({
-		e,
-		masked,
-	}: {
-		e: React.SyntheticEvent;
-		masked: boolean;
-	}) => void;
+	onMaskChange?: (masked: boolean) => void;
 	/**
 	 * Callback fired when the user blurs out of the TextInputMask.
 	 */
