@@ -4,6 +4,7 @@
 		".ladle/*.*",
 		"src/**/*.*",
 		"../ui-components/src/**/*.*",
-		"../ui-components/lib/**/*.*"
+		"../ui-components/lib/**/*.*",
+		"../ui-plugins/src/**/*.*"
 	]
 }
