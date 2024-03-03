@@ -204,9 +204,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.10
         version: 0.5.10(tailwindcss@3.4.1)
-      '@versini/ui-components':
-        specifier: workspace:../ui-components
-        version: link:../ui-components
       clsx:
         specifier: 2.1.0
         version: 2.1.0
@@ -220,6 +217,9 @@ importers:
         specifier: 3.4.1
         version: 3.4.1
     devDependencies:
+      '@versini/ui-components':
+        specifier: workspace:../ui-components
+        version: link:../ui-components
       '@versini/ui-plugins':
         specifier: workspace:../ui-plugins
         version: link:../ui-plugins
