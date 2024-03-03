@@ -1,5 +1,6 @@
+import { useUniqueId } from "@versini/ui-hooks";
+
 import { CARD_CLASSNAME } from "../../common/constants";
-import { useUniqueId } from "..";
 import type { CardHeaderProps, CardProps } from "./CardTypes";
 import { getCardClasses } from "./utilities";
 

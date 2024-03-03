@@ -1,8 +1,9 @@
+import { useMergeRefs } from "@versini/ui-hooks";
 import { IconHide, IconShow } from "@versini/ui-icons";
 import { LiveRegion } from "@versini/ui-private";
 import React, { useEffect, useRef, useState } from "react";
 
-import { ButtonIcon, useMergeRefs } from "..";
+import { ButtonIcon } from "..";
 import { TextInput } from "./TextInput";
 import type { TextInputMaskProps } from "./TextInputTypes";
 

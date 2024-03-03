@@ -1,8 +1,8 @@
+import { useUniqueId } from "@versini/ui-hooks";
 import { LiveRegion } from "@versini/ui-private";
 import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TEXT_INPUT_CLASSNAME } from "../../common/constants";
-import { useUniqueId } from "../";
 import type { TextInputProps } from "./TextInputTypes";
 import { getTextInputClasses } from "./utilities";
 
