@@ -87,6 +87,8 @@ const getTextInputLabelClasses = ({
 	return clsx("absolute cursor-text font-medium", {
 		"text-copy-lighter": !error && mode === "dark",
 		"text-copy-dark": !error && mode === "light",
+		"text-copy-dark dark:text-copy-lighter": !error && mode === "system",
+		"text-copy-lighter dark:text-copy-dark": !error && mode === "alt-system",
 		"cursor-not-allowed opacity-50": disabled,
 	});
 };
@@ -106,6 +108,9 @@ const getTextInputHelperTextClasses = ({
 				"rounded-md bg-surface-darker text-copy-error-light": error,
 				"text-copy-lighter": !error && mode === "dark",
 				"text-copy-dark": !error && mode === "light",
+				"text-copy-dark dark:text-copy-lighter": !error && mode === "system",
+				"text-copy-lighter dark:text-copy-dark":
+					!error && mode === "alt-system",
 			});
 };
 
