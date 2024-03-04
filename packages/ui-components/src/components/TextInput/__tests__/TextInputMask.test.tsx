@@ -613,4 +613,30 @@ describe("TextInputMask timer tests", () => {
 		});
 		expect(input).toHaveAttribute("type", "text");
 	});
+
+	it("should call the `onMaskChange` function with correct parameters after a delay", () => {
+		const onMaskChangeHandler = vi.fn();
+
+		render(
+			<TextInputMask
+				data-testid="txtnptmsk-1"
+				name="hello"
+				label="hello world"
+				onMaskChange={onMaskChangeHandler}
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
+			/>,
+		);
+
+		const button = screen.getByRole("button");
+		fireEvent.click(button);
+		expect(onMaskChangeHandler).toHaveBeenCalledWith(false);
+		act(() => {
+			vi.advanceTimersByTime(20000);
+		});
+		expect(onMaskChangeHandler).toHaveBeenCalledWith(true);
+	});
 });
