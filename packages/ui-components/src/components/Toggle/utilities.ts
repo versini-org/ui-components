@@ -60,10 +60,10 @@ const getLabelClasses = ({
 	return labelHidden
 		? "sr-only"
 		: clsx("ml-3 text-sm", {
-				"text-copy-medium": mode === "light",
-				"text-copy-light": mode === "dark",
-				"text-copy-light dark:text-copy-medium": mode === "alt-system",
-				"text-copy-medium dark:text-copy-light": mode === "system",
+				"text-copy-dark": mode === "light",
+				"text-copy-lighter": mode === "dark",
+				"text-copy-lighter dark:text-copy-dark": mode === "alt-system",
+				"text-copy-dark dark:text-copy-lighter": mode === "system",
 			});
 };
 

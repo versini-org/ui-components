@@ -23,7 +23,7 @@ describe("Toggle modifiers", () => {
 			/>,
 		);
 		const node = screen.getByText("toto");
-		expectToHaveClasses(node, ["ml-3", "text-sm", "text-copy-light"]);
+		expectToHaveClasses(node, ["ml-3", "text-sm", "text-copy-lighter"]);
 	});
 
 	it("should render a light Toggle ", async () => {
@@ -37,7 +37,7 @@ describe("Toggle modifiers", () => {
 			/>,
 		);
 		const node = screen.getByText("toto");
-		expectToHaveClasses(node, ["ml-3", "text-sm", "text-copy-medium"]);
+		expectToHaveClasses(node, ["ml-3", "text-sm", "text-copy-dark"]);
 	});
 
 	it("should render a Toggle with no label", async () => {
