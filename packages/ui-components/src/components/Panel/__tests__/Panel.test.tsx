@@ -45,7 +45,7 @@ describe("Panel modifiers", () => {
 	});
 
 	it("should render a responsive panel with dark borders", async () => {
-		render(<SimplePanel borderKind="dark" />);
+		render(<SimplePanel borderMode="dark" />);
 		const panel = screen.getByRole("dialog");
 
 		expectToHaveClasses(panel, [
@@ -72,25 +72,37 @@ describe("Panel modifiers", () => {
 
 		expectToHaveClasses(panel, [
 			MESSAGEBOX_CLASSNAME,
-			"w-[95%]",
-			"rounded-lg",
-			"sm:w-[50%]",
+			"bg-surface-medium",
 			"border-2",
 			"border-border-light",
+			"flex-col",
+			"flex",
+			"md:max-w-2xl",
+			"prose-lighter",
+			"prose",
+			"rounded-lg",
+			"sm:w-[50%]",
+			"w-[95%]",
 		]);
 	});
 
-	it("should render a responsive messagebox wit dark borders", async () => {
-		render(<SimplePanel kind="messagebox" borderKind="dark" />);
+	it("should render a responsive messagebox with dark borders", async () => {
+		render(<SimplePanel kind="messagebox" borderMode="dark" />);
 		const panel = screen.getByRole("dialog");
 
 		expectToHaveClasses(panel, [
 			MESSAGEBOX_CLASSNAME,
-			"w-[95%]",
-			"rounded-lg",
-			"sm:w-[50%]",
+			"bg-surface-medium",
 			"border-2",
 			"border-border-dark",
+			"flex-col",
+			"flex",
+			"md:max-w-2xl",
+			"prose-lighter",
+			"prose",
+			"rounded-lg",
+			"sm:w-[50%]",
+			"w-[95%]",
 		]);
 	});
 

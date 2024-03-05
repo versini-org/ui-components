@@ -16,16 +16,6 @@ describe("Anchor modifiers", () => {
 		expect(button.className).toContain("py-0");
 	});
 
-	it("should render a slim (legacy) anchor", async () => {
-		render(
-			<Anchor slim link="toto">
-				hello
-			</Anchor>,
-		);
-		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-0");
-	});
-
 	it("should render a size small anchor", async () => {
 		render(
 			<Anchor size="small" link="toto">
@@ -58,7 +48,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render a dark link", async () => {
 		render(
-			<Anchor kind="dark" link="toto">
+			<Anchor mode="dark" link="toto">
 				hello
 			</Anchor>,
 		);
@@ -70,7 +60,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render a light anchor", async () => {
 		render(
-			<Anchor kind="light" link="toto">
+			<Anchor mode="light" link="toto">
 				hello
 			</Anchor>,
 		);

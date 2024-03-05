@@ -19,7 +19,7 @@ import {
 
 export const Table = ({
 	children,
-	kind = "dark",
+	mode = "system",
 	caption,
 	summary,
 	className,
@@ -30,14 +30,14 @@ export const Table = ({
 	...otherProps
 }: TableProps) => {
 	const tableClass = getTableClasses({
-		kind,
+		mode,
 		className,
 		wrapperClassName,
 		stickyHeader,
 		spacing,
 	});
 	return (
-		<TableContext.Provider value={{ kind, stickyHeader }}>
+		<TableContext.Provider value={{ mode, stickyHeader }}>
 			<div
 				className={tableClass.wrapper}
 				{...(maxHeight && {
@@ -86,7 +86,7 @@ export const TableRow = ({
 }: TableRowProps) => {
 	const context = useContext(TableContext);
 	const rowClass = getTableRowClasses({
-		kind: context.kind,
+		mode: context.mode,
 		cellWrapper: context.cellWrapper,
 		className,
 	});
@@ -109,7 +109,7 @@ export const TableCell = ({
 	const cellClass = getTableCellClasses({
 		cellWrapper: context.cellWrapper,
 		className,
-		kind: context.kind,
+		mode: context.mode,
 	});
 	return (
 		<Component className={cellClass} {...otherProps}>

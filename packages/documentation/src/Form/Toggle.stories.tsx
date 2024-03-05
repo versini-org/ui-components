@@ -9,33 +9,29 @@ export default {
 	},
 };
 
-export const Basic: Story<any> = () => {
+export const Basic: Story<any> = (args) => {
 	const [checked, setChecked] = useState(false);
 
 	return (
-		<>
-			<div className="min-h-10 bg-slate-900 p-11">
-				<div className="flex flex-wrap gap-2">
-					<Toggle
-						onChange={setChecked}
-						checked={checked}
-						label="Toggle light"
-						name="Toggle light"
-						kind="light"
-					/>
-				</div>
-			</div>
-
-			<div className="min-h-10 p-11">
-				<div className="flex flex-wrap gap-2">
-					<Toggle
-						onChange={setChecked}
-						checked={checked}
-						label="Toggle dark"
-						name="Toggle dark"
-					/>
-				</div>
-			</div>
-		</>
+		<div className="flex flex-wrap gap-2">
+			<Toggle
+				onChange={setChecked}
+				checked={checked}
+				label="Toggle"
+				name="Toggle"
+				{...args}
+			/>
+		</div>
 	);
+};
+Basic.args = {
+	checked: false,
+	disabled: false,
+	mode: "system",
+};
+Basic.argTypes = {
+	mode: {
+		options: ["dark", "light", "system", "alt-system"],
+		control: { type: "radio" },
+	},
 };

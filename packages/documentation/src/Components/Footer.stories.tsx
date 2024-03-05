@@ -8,23 +8,21 @@ export default {
 	},
 	args: {
 		noMargins: false,
-		kind: "dark",
+		mode: "system",
 		raw: false,
 	},
 	argTypes: {
-		kind: {
+		mode: {
 			control: { type: "radio" },
-			options: ["dark", "light", "system"],
+			options: ["dark", "light", "system", "alt-system"],
 		},
 	},
 };
 
 export const Basic: Story<any> = (args) => (
-	<div className="grid bg-slate-300">
-		<Footer
-			{...args}
-			row1={<div>App Name v1.0.0</div>}
-			row2={<div>something something</div>}
-		/>
-	</div>
+	<Footer
+		{...args}
+		row1={<div>App Name v1.0.0</div>}
+		row2={<div>something something</div>}
+	/>
 );

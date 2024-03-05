@@ -1,8 +1,8 @@
+import { useUniqueId } from "@versini/ui-hooks";
 import { LiveRegion } from "@versini/ui-private";
 import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TEXT_INPUT_CLASSNAME } from "../../common/constants";
-import { useUniqueId } from "../";
 import type { TextInputProps } from "./TextInputTypes";
 import { getTextInputClasses } from "./utilities";
 
@@ -16,9 +16,8 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			raw = false,
 			className,
 			inputClassName,
-			focusKind = "light",
-			borderKind = "dark",
-			errorKind = "light",
+			mode = "system",
+			focusMode = "system",
 
 			disabled = false,
 			noBorder = false,
@@ -27,7 +26,6 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			type = "text",
 
 			helperText = "",
-			simple = false,
 
 			rightElement,
 			spacing,
@@ -39,21 +37,17 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		const rightElementRef = useRef<HTMLDivElement>(null);
 		const [inputPaddingRight, setInputPaddingRight] = useState(0);
 		const inputId = useUniqueId({ id, prefix: `${TEXT_INPUT_CLASSNAME}-` });
-		const liveErrorMessage = simple
-			? `${name} error`
-			: `${name} error, ${helperText}`;
+		const liveErrorMessage = `${name} error, ${helperText}`;
 		const textInputClassName = getTextInputClasses({
 			className,
 			inputClassName,
 			error,
 			raw,
-			focusKind,
+			focusMode,
 			disabled,
 			noBorder,
-			borderKind,
-			errorKind,
 			spacing,
-			simple,
+			mode,
 		});
 
 		useLayoutEffect(() => {
@@ -95,7 +89,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 					</label>
 				)}
 
-				{helperText && !simple && (
+				{helperText && (
 					<div
 						id={`${inputId}-helper`}
 						className={textInputClassName.helperText}
@@ -113,7 +107,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 					</div>
 				)}
 
-				{error && helperText && !simple && (
+				{error && helperText && (
 					<LiveRegion politeness="polite" clearAnnouncementDelay={500}>
 						{liveErrorMessage}
 					</LiveRegion>

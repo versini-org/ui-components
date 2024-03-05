@@ -15,7 +15,7 @@ export default {
 		importName: "Table, TableBody, TableCell, TableHead, TableRow",
 	},
 	args: {
-		kind: "dark",
+		mode: "system",
 		summary: "A table about Dune",
 	},
 	argTypes: {
@@ -25,8 +25,8 @@ export default {
 		summary: {
 			control: { type: "text" },
 		},
-		kind: {
-			options: ["dark", "light", "system"],
+		mode: {
+			options: ["dark", "light", "system", "alt-system"],
 			control: { type: "radio" },
 		},
 	},
@@ -113,7 +113,7 @@ export const WithAction: Story<any> = (args) => {
 											<ButtonIcon
 												noBorder
 												label="Restore chat"
-												kind="light"
+												mode="light"
 												onClick={() => {}}
 											>
 												<IconRestore className="h-3 w-3" />
@@ -121,7 +121,7 @@ export const WithAction: Story<any> = (args) => {
 											<ButtonIcon
 												noBorder
 												label="Delete chat"
-												kind="light"
+												mode="light"
 												onClick={() => {}}
 											>
 												<div className="text-red-400">
@@ -214,7 +214,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 											<ButtonIcon
 												noBorder
 												label="Restore chat"
-												kind="light"
+												mode="light"
 												onClick={() => {}}
 											>
 												<IconRestore className="h-3 w-3" />
@@ -222,7 +222,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 											<ButtonIcon
 												noBorder
 												label="Delete chat"
-												kind="light"
+												mode="light"
 												onClick={() => {}}
 											>
 												<div className="text-red-400">

@@ -29,24 +29,19 @@ export default {
 		disabled: false,
 		helperText: "",
 		raw: false,
-		focusKind: "light",
-		borderKind: "dark",
-		errorKind: "light",
+		focusMode: "system",
+		mode: "system",
 		error: false,
 		textAreaClassName: "",
 		className: "",
 	},
 	argTypes: {
-		focusKind: {
-			options: ["dark", "light"],
+		mode: {
+			options: ["dark", "light", "system", "alt-system"],
 			control: { type: "radio" },
 		},
-		borderKind: {
-			options: ["dark", "light"],
-			control: { type: "radio" },
-		},
-		errorKind: {
-			options: ["dark", "light"],
+		focusMode: {
+			options: ["dark", "light", "system", "alt-system"],
 			control: { type: "radio" },
 		},
 	},
@@ -78,7 +73,7 @@ export const RightElement: Story<any> = (args) => (
 );
 RightElement.args = {
 	rightElement: (
-		<Button kind="light" noBorder>
+		<Button mode="light" noBorder>
 			Send
 		</Button>
 	),
@@ -105,7 +100,7 @@ export const CustomTheme: Story<any> = (args) => (
 );
 CustomTheme.args = {
 	rightElement: (
-		<Button kind="light" noBorder>
+		<Button mode="light" noBorder>
 			Send
 		</Button>
 	),

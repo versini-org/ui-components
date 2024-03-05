@@ -8,8 +8,8 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 		{
 			children,
 			disabled = false,
-			kind = "dark",
-			focus = "light",
+			mode = "system",
+			focusMode = "system",
 			fullWidth = false,
 			className,
 			type = "button",
@@ -21,6 +21,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			labelRight,
 			labelLeft,
 			spacing,
+			noBackground = false,
 
 			...otherProps
 		},
@@ -28,8 +29,8 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 	) => {
 		const buttonClass = getButtonClasses({
 			type: TYPE_ICON,
-			kind,
-			focus,
+			mode,
+			focusMode,
 			fullWidth,
 			disabled,
 			raw,
@@ -39,6 +40,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			labelRight,
 			labelLeft,
 			spacing,
+			noBackground,
 		});
 
 		return (

@@ -8,7 +8,7 @@ export default {
 };
 
 export const Configuration: Story<any> = () => (
-	<div className="prose prose-lighter max-w-none">
+	<>
 		<h1>Configuration</h1>
 
 		<h2>JavaScript</h2>
@@ -100,5 +100,5 @@ export default twPlugin.merge({
 				</ButtonIcon>
 			</FlexgridItem>
 		</Flexgrid>
-	</div>
+	</>
 );

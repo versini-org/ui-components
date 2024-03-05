@@ -6,7 +6,7 @@ import type { SpinnerProps } from "./SpinnerTypes";
 
 export const Spinner = ({
 	spinnerRef,
-	kind = "dark",
+	mode = "system",
 	type = "circle",
 	spacing,
 }: SpinnerProps) => {
@@ -20,19 +20,19 @@ export const Spinner = ({
 					"border-4",
 					"inline-block animate-spin rounded-full border-solid border-current border-r-transparent motion-reduce:animate-[spin_1.5s_linear_infinite]",
 					{
-						"text-copy-dark": kind === "dark",
-						"text-copy-light": kind === "light",
-						"text-copy-dark dark:text-copy-light": kind === "system",
-						"text-copy-light dark:text-copy-dark": kind === "alt-system",
+						"text-copy-dark": mode === "dark",
+						"text-copy-light": mode === "light",
+						"text-copy-dark dark:text-copy-light": mode === "system",
+						"text-copy-light dark:text-copy-dark": mode === "alt-system",
 					},
 				)
 			: clsx(SPINNER_CLASSNAME, getSpacing(spacing));
 
 	const dotClassName = clsx("av-spinner__dot", {
-		"fill-copy-dark": kind === "dark",
-		"fill-copy-light": kind === "light",
-		"fill-copy-dark dark:fill-copy-light": kind === "system",
-		"fill-copy-light dark:fill-copy-dark": kind === "alt-system",
+		"fill-copy-dark": mode === "dark",
+		"fill-copy-light": mode === "light",
+		"fill-copy-dark dark:fill-copy-light": mode === "system",
+		"fill-copy-light dark:fill-copy-dark": mode === "alt-system",
 	});
 
 	return (

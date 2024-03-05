@@ -8,7 +8,7 @@ export default {
 };
 
 export const Installation: Story<any> = () => (
-	<div className="prose prose-lighter max-w-none">
+	<>
 		<h1>Installation</h1>
 		<p>
 			The <strong>UI-Components</strong> library is available as a npm package.
@@ -42,5 +42,5 @@ export const Installation: Story<any> = () => (
 				</ButtonIcon>
 			</FlexgridItem>
 		</Flexgrid>
-	</div>
+	</>
 );

@@ -49,15 +49,23 @@ const renderImportLine = ({
 			</Flexgrid>
 
 			<pre className="mt-0">
-				<code>{`import { ${importName} } from "@versini/${packageName}";`}</code>
+				<code className="text-wrap">{`import { ${importName} } from "@versini/${packageName}";`}</code>
 			</pre>
 		</div>
 	);
 };
 
-export const Provider: GlobalProvider = ({ children, storyMeta }) => {
+export const Provider: GlobalProvider = ({
+	children,
+	storyMeta,
+	globalState,
+}) => {
 	const className = clsx(
-		"prose prose-lighter mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl",
+		"prose mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl",
+		{
+			"prose-dark dark:prose-lighter":
+				!globalState?.story.startsWith("system--typography"),
+		},
 	);
 	const handleOnClickGitHub = () => {
 		window.open(import.meta.env.REPOSITORY, "_blank", "noopener,noreferrer");
@@ -76,12 +84,12 @@ export const Provider: GlobalProvider = ({ children, storyMeta }) => {
 				{children}
 			</div>
 			<Footer
-				kind="light"
+				mode="system"
 				row1={
 					<ButtonIcon
 						noBorder
 						size="small"
-						kind="light"
+						mode="system"
 						spacing={{ b: 2 }}
 						label="link to UI Components GitHub repository"
 						onClick={handleOnClickGitHub}
@@ -90,7 +98,7 @@ export const Provider: GlobalProvider = ({ children, storyMeta }) => {
 					</ButtonIcon>
 				}
 				row2={
-					<div className="text-copy-lighter">
+					<div>
 						UI Components v{import.meta.env.BUILDVERSION} - &copy;{" "}
 						{new Date().getFullYear()} {import.meta.env.OWNER}
 					</div>

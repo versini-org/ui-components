@@ -7,15 +7,15 @@ export type TableProps = {
 	 */
 	caption?: React.ReactNode;
 	/**
-	 * The kind of table. It defines the color of the table.
-	 */
-	kind?: "dark" | "light" | "system";
-	/**
 	 * The max height of the table. It follows the CSS max-height property.
 	 * Note: It is required to configure 'maxHeight' prop for the prop
 	 * 'stickyHeader' to work.
 	 */
 	maxHeight?: string;
+	/**
+	 * The mode of table. It defines the color of the table.
+	 */
+	mode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * If true, the table header will be sticky.
 	 * Note: It is required to configure 'maxHeight' prop for the prop

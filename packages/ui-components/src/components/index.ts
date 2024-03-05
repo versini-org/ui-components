@@ -1,10 +1,3 @@
-import {
-	useLocalStorage,
-	useMergeRefs,
-	useUncontrolled,
-	useUniqueId,
-} from "@versini/ui-hooks";
-
 import { Anchor } from "./Anchor/Anchor";
 import { Bubble } from "./Bubble/Bubble";
 import { Button } from "./Button/Button";
@@ -59,8 +52,4 @@ export {
 	TextInput,
 	TextInputMask,
 	Toggle,
-	useLocalStorage,
-	useMergeRefs,
-	useUncontrolled,
-	useUniqueId,
 };

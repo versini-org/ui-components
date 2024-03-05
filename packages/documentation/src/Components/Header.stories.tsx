@@ -9,7 +9,7 @@ export default {
 };
 
 export const Basic: Story<any> = (args) => (
-	<Header {...args}>hello header </Header>
+	<Header {...args}>hello header</Header>
 );
 Basic.args = {
 	raw: false,

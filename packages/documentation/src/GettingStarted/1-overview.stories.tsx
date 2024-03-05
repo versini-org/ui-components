@@ -8,7 +8,7 @@ export default {
 };
 
 export const Overview: Story<any> = () => (
-	<div className="prose prose-lighter max-w-none">
+	<>
 		<h1 className="mb-0">UI Components</h1>
 
 		<Flexgrid alignVertical="center">
@@ -75,5 +75,5 @@ export const Overview: Story<any> = () => (
 				look of the components.
 			</li>
 		</ul>
-	</div>
+	</>
 );

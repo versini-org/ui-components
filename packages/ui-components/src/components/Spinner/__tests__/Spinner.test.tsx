@@ -32,7 +32,7 @@ describe("Spinner modifiers", () => {
 	});
 
 	it("should render a light Spinner ", async () => {
-		render(<Spinner kind="light" />);
+		render(<Spinner mode="light" />);
 		const node = await screen.findByRole("status");
 		expectToHaveClasses(node, [
 			SPINNER_CLASSNAME,

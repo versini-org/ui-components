@@ -85,7 +85,6 @@ export default defineConfig(({ mode }) => {
 				input: {
 					index: resolve(__dirname, "src/components/index.ts"),
 					style: resolve(__dirname, "src/style.ts"),
-					utilities: resolve(__dirname, "src/utilities.ts"),
 					...input,
 				},
 				treeshake: "smallest",

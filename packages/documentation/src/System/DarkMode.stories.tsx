@@ -3,6 +3,7 @@ import {
 	Anchor,
 	Button,
 	ButtonIcon,
+	Card,
 	Footer,
 	Menu,
 	MenuItem,
@@ -78,22 +79,32 @@ module.exports = {
 				<code>dark</code> class is present earlier in the HTML tree.
 			</p>
 
-			<div className="mb-2 flex flex-wrap gap-1">
-				<Button kind="system">Button</Button>
-				<Button kind="system">Button</Button>
-				<Button kind="system">Button</Button>
-				<Button kind="system">Button</Button>
+			<h2>Kitchen Sink</h2>
+			<p>
+				All the components rendered below have their <code>mode</code> sets to{" "}
+				<code>system</code>.
+			</p>
+
+			<div className="mb-2 flex flex-wrap gap-2">
+				<Button>Button</Button>
+				<Button>Button</Button>
+				<Button>Button</Button>
+				<Button>Button</Button>
 			</div>
-			<div className="mb-2 flex flex-wrap gap-1">
-				<Anchor kind="system">Anchor as a button</Anchor>
-				<Anchor kind="system">Anchor as a button lorem ipsum</Anchor>
-				<Anchor kind="system">Anchor as a button lorem ipsum dolor</Anchor>
-				<Anchor kind="system">
+			<div className="mb-2 flex flex-wrap gap-2">
+				<Anchor link="https://www.google.com">Anchor as a button</Anchor>
+				<Anchor link="https://www.google.com">
+					Anchor as a button lorem ipsum
+				</Anchor>
+				<Anchor link="https://www.google.com">
+					Anchor as a button lorem ipsum dolor
+				</Anchor>
+				<Anchor link="https://www.google.com">
 					Anchor as a button lorem ipsum dolor sit amet
 				</Anchor>
 			</div>
 			<div className="mb-2 flex flex-wrap justify-end gap-1">
-				<Menu icon={<IconSettings />} kind="system">
+				<Menu icon={<IconSettings />}>
 					<MenuItem label="Profile" icon={<IconProfile />} />
 					<MenuItem label="Statistics" icon={<IconChart />} />
 					<MenuItem label="History" icon={<IconHistory />} />
@@ -107,7 +118,7 @@ module.exports = {
 						label="Type your question here"
 						helperText="Powered by the sun"
 						rightElement={
-							<Button kind="light" noBorder>
+							<Button mode="light" focus="light" noBorder>
 								Send
 							</Button>
 						}
@@ -115,7 +126,7 @@ module.exports = {
 				</div>
 			</form>
 			<div className="my-2 flex flex-wrap">
-				<Table caption="Dune" kind="system">
+				<Table caption="Dune" mode="system">
 					<TableHead className="uppercase">
 						<TableRow>
 							<TableCell scope="col">Date</TableCell>
@@ -136,7 +147,7 @@ module.exports = {
 									</TableCell>
 									<TableCell>{row.character}</TableCell>
 									<TableCell>
-										<Spinner type="dots" kind="alt-system" />
+										<Spinner type="dots" mode="alt-system" />
 									</TableCell>
 
 									<TableCell>
@@ -144,7 +155,8 @@ module.exports = {
 											<ButtonIcon
 												noBorder
 												label="Restore chat"
-												kind="light"
+												mode="light"
+												focus="alt-system"
 												onClick={() => {}}
 											>
 												<IconRestore className="h-3 w-3" />
@@ -152,7 +164,8 @@ module.exports = {
 											<ButtonIcon
 												noBorder
 												label="Delete chat"
-												kind="light"
+												mode="light"
+												focus="alt-system"
 												onClick={() => {}}
 											>
 												<div className="text-red-400">
@@ -171,7 +184,7 @@ module.exports = {
 			<div className="grid">
 				<Footer
 					noMargins
-					kind="system"
+					mode="system"
 					row1={<div>App Name v1.0.0</div>}
 					row2={<div>something something</div>}
 				/>
@@ -180,21 +193,9 @@ module.exports = {
 	);
 };
 
-const commonClassName =
-	"prose prose-dark grid border-2 border-slate-900 bg-slate-100 p-5 dark:prose-lighter dark:border-slate-100 dark:bg-slate-700";
-
-export const Night: Story<any> = () => (
-	<div className="dark">
-		<div className={commonClassName}>
-			<h1>Night Mode</h1>
-			<CommonTemplate />
-		</div>
-	</div>
-);
-
-export const Day: Story<any> = () => (
-	<div className={commonClassName}>
-		<h1>Day Mode</h1>
+export const Automatic: Story<any> = () => (
+	<Card mode="system">
+		<h1>Automatic Dark Mode</h1>
 		<CommonTemplate />
-	</div>
+	</Card>
 );

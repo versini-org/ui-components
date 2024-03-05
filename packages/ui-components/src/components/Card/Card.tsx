@@ -1,5 +1,6 @@
+import { useUniqueId } from "@versini/ui-hooks";
+
 import { CARD_CLASSNAME } from "../../common/constants";
-import { useUniqueId } from "..";
 import type { CardHeaderProps, CardProps } from "./CardTypes";
 import { getCardClasses } from "./utilities";
 
@@ -33,10 +34,10 @@ export const Card = ({
 	footer,
 	footerClassName,
 	children,
-	noBackground = false,
 	className,
 	"aria-labelledby": ariaLabelledby,
 	spacing,
+	mode = "system",
 
 	...otherProps
 }: CardProps) => {
@@ -47,11 +48,11 @@ export const Card = ({
 	const uniqueIdForHeader = useUniqueId(CARD_CLASSNAME);
 
 	const cardClassName = getCardClasses({
-		noBackground,
 		className,
 		headerClassName,
 		footerClassName,
 		spacing,
+		mode,
 	});
 
 	if (isHeaderString) {

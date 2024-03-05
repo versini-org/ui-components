@@ -42,12 +42,13 @@
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
+		"@versini/ui-plugins": "workspace:../ui-plugins",
+		"@versini/ui-components": "workspace:../ui-components",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
 	},
 	"dependencies": {
 		"@tailwindcss/typography": "0.5.10",
-		"@versini/ui-components": "workspace:../ui-components",
 		"clsx": "2.1.0",
 		"fast-equals": "5.0.1",
 		"micro-memoize": "4.1.2",

@@ -5,9 +5,7 @@ import { IconNext, IconPrevious } from "@versini/ui-icons";
 
 <Meta title="Getting started/Usage" />
 
-<div className="prose prose-lighter mb-6">
-	<h1>Usage</h1>
-</div>
+<h1>Usage</h1>
 
 ```jsx
 // App.jsx
@@ -23,7 +21,7 @@ function App() {
 		<Card
 			header="Welcome to UI Components"
 			footer={
-				<Button kind="light" noBorder>
+				<Button mode="light" noBorder>
 					Hooray
 				</Button>
 			}
@@ -34,20 +32,20 @@ function App() {
 }
 ```
 
-<div className="prose prose-lighter max-w-none">
-	<p className="mb-4">If everything works well, this is what you should see in your page:</p>
+<p className="mb-4">
+	{"If everything works well, this is what you should see in your page:"}
+</p>
 
 <Card
 	header="Welcome to UI Components"
 	footer={
-		<Button kind="light" noBorder>
+		<Button mode="light" noBorder>
 			Hooray
 		</Button>
 	}
 >
 	<p>Hello World</p>
 </Card>
-</div>
 
 <div className="mt-8">
 	<Flexgrid alignHorizontal="space-between">

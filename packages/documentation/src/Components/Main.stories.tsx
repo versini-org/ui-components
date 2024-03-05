@@ -16,15 +16,15 @@ Basic.args = {
 export const WithHeaderAndFooter: Story<any> = (args) => (
 	<div className="h-full bg-slate-100">
 		<Header {...args} className="bg-slate-500">
-			<div>hello header content</div>
+			<p>hello header content</p>
 		</Header>
 
 		<Main {...args} className="bg-slate-500">
-			<div>hello main content</div>
+			<p>hello main content</p>
 		</Main>
 
 		<Footer
-			kind="light"
+			mode="light"
 			className="bg-slate-500"
 			row1={<div>App Name v1.0.0</div>}
 			row2={<div>something something</div>}

@@ -1,8 +1,8 @@
+import { useMergeRefs, useUncontrolled, useUniqueId } from "@versini/ui-hooks";
 import { LiveRegion } from "@versini/ui-private";
 import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TEXT_AREA_CLASSNAME } from "../../common/constants";
-import { useMergeRefs, useUncontrolled, useUniqueId } from "..";
 import type { TextAreaProps } from "./TextAreaTypes";
 import { adjustLabelAndHelperText, getTextAreaClasses } from "./utilities";
 
@@ -16,9 +16,8 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			raw = false,
 			className,
 			textAreaClassName,
-			focusKind = "light",
-			borderKind = "dark",
-			errorKind = "light",
+			mode = "system",
+			focusMode = "system",
 			value,
 			defaultValue,
 
@@ -63,12 +62,11 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			textAreaClassName,
 			error,
 			raw,
-			focusKind,
+			focusMode,
 			disabled,
 			noBorder,
-			borderKind,
-			errorKind,
 			spacing,
+			mode,
 		});
 
 		/**

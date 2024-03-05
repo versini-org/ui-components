@@ -9,14 +9,19 @@ const getBubbleSizesClasses = () => {
 };
 
 const getBubbleColorClasses = ({ kind }: { kind: string }) => {
-	return clsx("text-copy-dark", {
-		"bg-surface-lighter": kind === "left",
+	return clsx({
+		"bg-surface-lighter dark:bg-surface-dark": kind === "left",
 		"bg-surface-accent": kind === "right",
 	});
 };
 
-const getBubbleTypographyClasses = () => {
-	return "prose prose-dark prose-p:my-3 prose-blockquote:my-3 prose-ol:my-3 prose-ul:my-3 prose-ul:prose-li:marker:text-black";
+const getBubbleTypographyClasses = ({ kind }: { kind: string }) => {
+	return clsx(
+		"prose prose-dark dark:prose-lighter prose-p:my-3 prose-blockquote:my-3 prose-ol:my-3 prose-ul:my-3 prose-ul:prose-li:marker:text-black",
+		{
+			"text-copy-dark": kind === "right",
+		},
+	);
 };
 
 const getBubbleBorderClasses = ({ kind }: { kind: string }) => {
@@ -46,14 +51,14 @@ export const getBubbleClasses = ({
 	const main = clsx(
 		"flex flex-col empty:hidden",
 		getBubbleSizesClasses(),
-		getBubbleTypographyClasses(),
+		getBubbleTypographyClasses({ kind }),
 		getBubbleColorClasses({ kind }),
 		getBubbleBorderClasses({ kind }),
 	);
 	const footer = "pr-2 pt-1 text-end text-xs text-copy-light";
 	const copyButton = clsx("flex flex-col-reverse gap-2 sm:flex-row", {
-		"ml-1": kind === "left",
-		"mr-1": kind === "right",
+		"ml-2": kind === "left",
+		"mr-2": kind === "right",
 	});
 
 	return {

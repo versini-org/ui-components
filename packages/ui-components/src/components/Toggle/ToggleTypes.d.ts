@@ -15,14 +15,13 @@ export type ToggleProps = {
 	 * @param checked whether or not the component is checked
 	 */
 	onChange: (checked: boolean) => void;
-
-	/**
-	 * The type of Toggle. This will change the color of the Toggle.
-	 */
-	kind?: "dark" | "light";
 	/**
 	 * Whether or not to render the label.
 	 * @default false
 	 */
 	labelHidden?: boolean;
+	/**
+	 * The type of Toggle. This will change the color of the Toggle.
+	 */
+	mode?: "dark" | "light" | "system" | "alt-system";
 } & SpacingProps;

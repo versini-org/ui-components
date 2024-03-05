@@ -38,7 +38,7 @@ export const MenuComponent = forwardRef<
 			defaultPlacement = "bottom-start",
 			onOpenChange,
 			spacing,
-			kind = "dark",
+			mode = "system",
 			...props
 		},
 		userRef,
@@ -121,7 +121,7 @@ export const MenuComponent = forwardRef<
 		return (
 			<FloatingNode id={nodeId}>
 				<ButtonIcon
-					kind={kind}
+					mode={mode}
 					spacing={spacing}
 					label={label || "Open menu"}
 					ref={useMergeRefs([refs.setReference, item.ref, userRef])}

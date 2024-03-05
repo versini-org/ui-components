@@ -19,7 +19,7 @@ export default {
 
 export const Basic: Story<any> = (args) => (
 	<div className="prose prose-dark flex max-w-none flex-wrap gap-2 bg-slate-300 p-10">
-		<Table kind="light">
+		<Table mode="light">
 			<TableHead>
 				<TableRow>
 					<TableCell>Icon Name</TableCell>
@@ -47,3 +47,15 @@ Basic.args = {
 	monotone: false,
 	semantic: false,
 };
+
+export const Mode: Story<any> = (args) => (
+	<div className="flex max-w-none flex-wrap gap-2">
+		{Object.entries(AllIcons).map(([name, Icon]) => {
+			return name !== "IconDog" ? (
+				<div key={name}>
+					<Icon {...args} />
+				</div>
+			) : null;
+		})}
+	</div>
+);

@@ -4,80 +4,69 @@ import clsx from "clsx";
 
 import {
 	TEXT_INPUT_CLASSNAME,
-	TEXT_INPUT_CONTROL_RIGHT_CLASSNAME,
 	TEXT_INPUT_HELPER_TEXT_CLASSNAME,
-	TEXT_INPUT_SIMPLE_CLASSNAME,
 	TEXT_INPUT_WRAPPER_CLASSNAME,
 } from "../../common/constants";
 
 type getTextInputClassesProps = {
-	borderKind: string;
 	disabled: boolean;
 	error: boolean;
-	errorKind: string;
-	focusKind: string;
+	focusMode: "dark" | "light" | "system" | "alt-system";
+	mode: "dark" | "light" | "system" | "alt-system";
 	noBorder: boolean;
 	raw: boolean;
-	simple: boolean;
 
 	className?: string;
 	inputClassName?: string;
-	slim?: boolean;
 } & SpacingProps;
 
-const getTextInputBaseClasses = ({ simple }: { simple: boolean }) => {
-	return clsx("rounded-md text-base", {
-		"h-20": !simple,
-		"h-12": simple,
+const getTextInputColorClasses = ({
+	mode,
+}: {
+	mode: "dark" | "light" | "system" | "alt-system";
+}) => {
+	return clsx({
+		"bg-surface-darker text-copy-lighter caret-copy-light": mode === "dark",
+		"bg-surface-lighter text-copy-dark caret-copy-dark": mode === "light",
+		"bg-surface-lighter text-copy-dark caret-copy-dark dark:bg-surface-darker dark:text-copy-lighter dark:caret-copy-light":
+			mode === "system",
+		"bg-surface-darker text-copy-lighter caret-copy-light dark:bg-surface-lighter dark:text-copy-dark dark:caret-copy-dark":
+			mode === "alt-system",
 	});
-};
-
-const getTextInputSizesClasses = ({ simple }: { simple: boolean }) => {
-	return clsx("px-4", {
-		"pt-4": simple,
-	});
-};
-
-const getTextInputColorClasses = () => {
-	return `bg-surface-dark text-copy-light caret-copy-light`;
 };
 
 const getTextInputFocusClasses = ({
-	focusKind,
+	focusMode,
 	error,
-	errorKind,
 }: {
 	error: boolean;
-	errorKind: string;
-	focusKind: string;
+	focusMode: "dark" | "light" | "system" | "alt-system";
 }) => {
-	return clsx("focus:outline-none focus:ring-offset-0", {
-		"focus:ring-2": !error,
-		"focus:ring-1": error,
-		"focus:ring-focus-dark": !error && focusKind === "dark",
-		"focus:ring-focus-light": !error && focusKind === "light",
-		"focus:ring-focus-error-dark": error && errorKind === "dark",
-		"focus:ring-focus-error-light": error && errorKind === "light",
-	});
+	if (error) {
+		return "focus:outline focus:outline-2 focus:outline-focus-error-dark";
+	} else {
+		return clsx("focus:outline focus:outline-2 focus:outline-offset-2", {
+			"focus:outline-focus-dark": focusMode === "dark",
+			"focus:outline-focus-light": focusMode === "light",
+			"focus:outline-focus-light dark:focus:outline-focus-dark":
+				focusMode === "alt-system",
+			"focus:outline-focus-dark dark:focus:outline-focus-light":
+				focusMode === "system",
+		});
+	}
 };
 
 const getTextInputBorderClasses = ({
 	noBorder,
 	error,
-	borderKind,
-	errorKind,
 }: {
-	borderKind: string;
 	error: boolean;
-	errorKind: string;
 	noBorder: boolean;
 }) => {
 	return clsx("border-2", {
-		"border-border-dark": !noBorder && borderKind === "dark",
-		"border-border-light": !noBorder && borderKind === "light",
+		"border-border-dark": !noBorder,
 		"border-transparent": noBorder,
-		"border-border-error-dark": error && errorKind === "dark",
-		"border-border-error-light": error && errorKind === "light",
+		"border-border-error-dark": error,
 	});
 };
 
@@ -85,38 +74,43 @@ const getTextInputLabelClasses = ({
 	disabled,
 	raw,
 	error,
-	errorKind,
+	mode,
 }: {
 	disabled: boolean;
 	error: boolean;
-	errorKind: string;
+	mode: "dark" | "light" | "system" | "alt-system";
 	raw: boolean;
 }) => {
-	return raw
-		? ""
-		: clsx("absolute cursor-text font-medium", {
-				"text-copy-error-dark": error && errorKind === "dark",
-				"text-copy-error-light": error && errorKind === "light",
-				"text-copy-medium": !error,
-				"cursor-not-allowed opacity-50": disabled,
-			});
+	if (raw) {
+		return "";
+	}
+	return clsx("absolute cursor-text font-medium", {
+		"text-copy-lighter": !error && mode === "dark",
+		"text-copy-dark": !error && mode === "light",
+		"text-copy-dark dark:text-copy-lighter": !error && mode === "system",
+		"text-copy-lighter dark:text-copy-dark": !error && mode === "alt-system",
+		"cursor-not-allowed opacity-50": disabled,
+	});
 };
 
 const getTextInputHelperTextClasses = ({
 	error,
 	raw,
-	errorKind,
+	mode,
 }: {
 	error: boolean;
-	errorKind: string;
+	mode: "dark" | "light" | "system" | "alt-system";
 	raw: boolean;
 }) => {
 	return raw
 		? undefined
-		: clsx(TEXT_INPUT_HELPER_TEXT_CLASSNAME, "absolute font-medium", {
-				"text-copy-error-dark": error && errorKind === "dark",
-				"text-copy-error-light": error && errorKind === "light",
-				"text-copy-medium": !error,
+		: clsx(TEXT_INPUT_HELPER_TEXT_CLASSNAME, "absolute px-2 font-medium", {
+				"rounded-md bg-surface-darker text-copy-error-light": error,
+				"text-copy-lighter": !error && mode === "dark",
+				"text-copy-dark": !error && mode === "light",
+				"text-copy-dark dark:text-copy-lighter": !error && mode === "system",
+				"text-copy-lighter dark:text-copy-dark":
+					!error && mode === "alt-system",
 			});
 };
 
@@ -124,14 +118,12 @@ export const getTextInputClasses = ({
 	className,
 	inputClassName,
 	raw,
-	focusKind,
-	borderKind,
-	errorKind,
 	disabled,
 	noBorder,
 	error,
 	spacing,
-	simple,
+	mode,
+	focusMode,
 }: getTextInputClassesProps) => {
 	const wrapper = raw
 		? className
@@ -145,13 +137,12 @@ export const getTextInputClasses = ({
 	const input = raw
 		? clsx(inputClassName)
 		: clsx(
-				simple ? TEXT_INPUT_SIMPLE_CLASSNAME : TEXT_INPUT_CLASSNAME,
+				TEXT_INPUT_CLASSNAME,
 				inputClassName,
-				getTextInputBaseClasses({ simple }),
-				getTextInputSizesClasses({ simple }),
-				getTextInputColorClasses(),
-				getTextInputFocusClasses({ focusKind, error, errorKind }),
-				getTextInputBorderClasses({ noBorder, error, borderKind, errorKind }),
+				"h-12 rounded-md px-4 text-base",
+				getTextInputColorClasses({ mode }),
+				getTextInputFocusClasses({ focusMode, error }),
+				getTextInputBorderClasses({ noBorder, error }),
 				{
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
 				},
@@ -163,18 +154,16 @@ export const getTextInputClasses = ({
 		disabled,
 		raw,
 		error,
-		errorKind,
+		mode,
 	});
 
 	const helperText = getTextInputHelperTextClasses({
 		error,
 		raw,
-		errorKind,
+		mode,
 	});
 
-	const rightElement = raw
-		? undefined
-		: clsx(TEXT_INPUT_CONTROL_RIGHT_CLASSNAME, "absolute");
+	const rightElement = raw ? undefined : "absolute right-3";
 
 	return {
 		wrapper,

@@ -10,9 +10,10 @@ export const TYPE_LINK = "link";
 
 type getButtonClassesProps = {
 	disabled: boolean;
-	focus: string;
+	focusMode: "dark" | "light" | "system" | "alt-system";
 	fullWidth: boolean;
-	kind: "dark" | "light" | "system";
+	mode: "dark" | "light" | "system" | "alt-system";
+
 	noBorder: boolean;
 	raw: boolean;
 	size: string;
@@ -21,12 +22,11 @@ type getButtonClassesProps = {
 	className?: string;
 	labelLeft?: string;
 	labelRight?: string;
-	slim?: boolean;
+	noBackground?: boolean;
 } & SpacingProps;
 
 const getButtonSizesClasses = ({
 	type,
-	slim,
 	size,
 	labelRight,
 	labelLeft,
@@ -35,7 +35,6 @@ const getButtonSizesClasses = ({
 	type: string;
 	labelLeft?: string;
 	labelRight?: string;
-	slim?: boolean;
 }) => {
 	const smallClasses = "text-sm font-medium max-h-8 py-0";
 	const mediumClasses = "text-base font-medium max-h-9 py-1";
@@ -44,98 +43,116 @@ const getButtonSizesClasses = ({
 	switch (type) {
 		case TYPE_BUTTON:
 			return clsx("px-4", {
-				[smallClasses]: size === "small" || slim,
-				[mediumClasses]: size === "medium" && !slim,
-				[largeClasses]: size === "large" && !slim,
+				[smallClasses]: size === "small",
+				[mediumClasses]: size === "medium",
+				[largeClasses]: size === "large",
 			});
 
 		case TYPE_LINK:
 			return clsx("px-4 text-center", {
-				[smallClasses]: size === "small" || slim,
-				[mediumClasses]: size === "medium" && !slim,
-				[largeClasses]: size === "large" && !slim,
+				[smallClasses]: size === "small",
+				[mediumClasses]: size === "medium",
+				[largeClasses]: size === "large",
 			});
 
 		case TYPE_ICON:
 			return clsx("inline-flex items-center justify-center", {
-				"h-6 w-6 p-0": (size === "small" || slim) && !(labelRight || labelLeft),
+				"h-6 w-6 p-0": size === "small" && !(labelRight || labelLeft),
 				"h-6 px-4 text-sm font-medium":
-					(size === "small" || slim) && (labelRight || labelLeft),
-				"h-8 w-8 p-1": size === "medium" && !slim && !(labelRight || labelLeft),
+					size === "small" && (labelRight || labelLeft),
+				"h-8 w-8 p-1": size === "medium" && !(labelRight || labelLeft),
 				"h-8 px-4 text-base font-medium":
-					size === "medium" && !slim && (labelRight || labelLeft),
-				"h-12 w-12 p-2":
-					size === "large" && !slim && !(labelRight || labelLeft),
+					size === "medium" && (labelRight || labelLeft),
+				"h-12 w-12 p-2": size === "large" && !(labelRight || labelLeft),
 				"h-12 px-4 text-lg font-medium":
-					size === "large" && !slim && (labelRight || labelLeft),
+					size === "large" && (labelRight || labelLeft),
 			});
 	}
 };
 
-const getButtonBaseClasses = ({ kind }: { kind: string }) => {
+const getButtonBaseClasses = ({
+	mode,
+	noBackground,
+}: {
+	mode: string;
+	noBackground?: boolean;
+}) => {
 	return clsx("not-prose rounded-full", {
-		"bg-action-dark text-copy-light": kind === "dark",
-		"bg-action-light text-copy-lighter": kind === "light",
+		"bg-action-dark text-copy-light": mode === "dark" && !noBackground,
+		"bg-action-light text-copy-lighter": mode === "light" && !noBackground,
 		"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
-			kind === "system",
+			mode === "system" && !noBackground,
+		"bg-action-light text-copy-lighter dark:bg-action-dark dark:text-copy-light":
+			mode === "alt-system" && !noBackground,
 	});
 };
 
 const getButtonHoverClasses = ({
-	kind,
+	mode,
 	disabled,
 }: {
 	disabled: boolean;
-	kind: string;
+	mode: string;
 }) => {
 	return disabled
 		? ""
 		: clsx("hover:text-copy-light-hover", {
-				"hover:bg-action-dark-hover": kind === "dark",
-				"hover:bg-action-light-hover": kind === "light",
+				"hover:bg-action-dark-hover": mode === "dark",
+				"hover:bg-action-light-hover": mode === "light",
 				"hover:bg-action-dark-hover dark:hover:bg-action-light-hover":
-					kind === "system",
+					mode === "system",
+				"hover:bg-action-light-hover dark:hover:bg-action-dark-hover":
+					mode === "alt-system",
 			});
 };
 
 const getButtonActiveClasses = ({
-	kind,
+	mode,
 	disabled,
 }: {
 	disabled: boolean;
-	kind: string;
+	mode: string;
 }) => {
 	return disabled
 		? ""
 		: clsx("active:text-copy-light-active", {
-				"active:bg-action-dark-active": kind === "dark",
-				"active:bg-action-light-active": kind === "light",
+				"active:bg-action-dark-active": mode === "dark",
+				"active:bg-action-light-active": mode === "light",
 				"active:bg-action-dark-active dark:active:bg-action-light-active":
-					kind === "system",
+					mode === "system",
+				"active:bg-action-light-active dark:active:bg-action-dark-active":
+					mode === "alt-system",
 			});
 };
 
 const getButtonBorderClasses = ({
-	kind,
+	mode,
 	noBorder,
 }: {
-	kind: string;
+	mode: string;
 	noBorder: boolean;
 }) => {
 	return clsx("border", {
-		"border-border-dark": !noBorder && kind === "dark",
-		"border-border-light": !noBorder && kind === "light",
+		"border-border-dark": !noBorder && mode === "dark",
+		"border-border-light": !noBorder && mode === "light",
 		"border-border-dark dark:border-border-light":
-			!noBorder && kind === "system",
+			!noBorder && mode === "system",
+		"border-border-light dark:border-border-dark":
+			!noBorder && mode === "alt-system",
 		"border-transparent": noBorder,
-		"focus:border-white": !noBorder,
 	});
 };
 
-const getButtonFocusClasses = ({ focus }: { focus: string }) => {
-	return clsx("focus:outline-none focus:ring-2 focus:ring-offset-0", {
-		"focus:ring-focus-light": focus === "light",
-		"focus:ring-focus-dark": focus === "dark",
+const getButtonFocusClasses = ({ focusMode }: { focusMode: string }) => {
+	return clsx("focus:outline", "focus:outline-2", "focus:outline-offset-2", {
+		"focus:outline-focus-dark": focusMode === "dark",
+		"focus:outline-focus-light": focusMode === "light",
+
+		"focus:outline-focus-light dark:focus:outline-focus-dark":
+			focusMode === "alt-system",
+
+		"focus:outline-focus-dark dark:focus:outline-focus-light":
+			focusMode === "system",
 	});
 };
 
@@ -143,16 +160,16 @@ export const getButtonClasses = ({
 	type,
 	className,
 	raw,
-	kind,
-	focus,
+	mode,
+	focusMode,
 	disabled,
 	fullWidth,
-	slim,
 	size,
 	noBorder,
 	labelRight,
 	labelLeft,
 	spacing,
+	noBackground,
 }: getButtonClassesProps) => {
 	return raw
 		? clsx(BUTTON_CLASSNAME, className)
@@ -160,12 +177,12 @@ export const getButtonClasses = ({
 				BUTTON_CLASSNAME,
 				className,
 				getSpacing(spacing),
-				getButtonBaseClasses({ kind }),
-				getButtonSizesClasses({ type, slim, size, labelRight, labelLeft }),
-				getButtonBorderClasses({ kind, noBorder }),
-				getButtonFocusClasses({ focus }),
-				getButtonHoverClasses({ kind, disabled }),
-				getButtonActiveClasses({ kind, disabled }),
+				getButtonBaseClasses({ mode, noBackground }),
+				getButtonSizesClasses({ type, size, labelRight, labelLeft }),
+				getButtonBorderClasses({ mode, noBorder }),
+				getButtonFocusClasses({ focusMode }),
+				getButtonHoverClasses({ mode, disabled }),
+				getButtonActiveClasses({ mode, disabled }),
 				{
 					"w-full": fullWidth,
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,

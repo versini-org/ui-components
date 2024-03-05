@@ -8,18 +8,12 @@ export type FooterProps = {
 	/**
 	 * The type of Footer. This will change the color of the Footer.
 	 */
-	kind?: "dark" | "light" | "system";
+	mode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * Whether or not to render the Footer with margins.
 	 * @default false
 	 */
 	noMargins?: boolean;
-	/**
-	 * Deprecated. Please use `noMargins` instead.
-	 * @default false
-	 * @deprecated
-	 */
-	noPaddings?: boolean;
 	/**
 	 * Whether or not to render the Footer component with no styles.
 	 * @default false

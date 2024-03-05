@@ -15,7 +15,7 @@ describe("Toggle modifiers", () => {
 	it("should render a default Toggle (dark)", async () => {
 		render(
 			<Toggle
-				kind="dark"
+				mode="dark"
 				name="toto"
 				label="toto"
 				checked
@@ -23,13 +23,13 @@ describe("Toggle modifiers", () => {
 			/>,
 		);
 		const node = screen.getByText("toto");
-		expectToHaveClasses(node, ["ml-3", "text-sm", "text-copy-light"]);
+		expectToHaveClasses(node, ["ml-3", "text-sm", "text-copy-lighter"]);
 	});
 
 	it("should render a light Toggle ", async () => {
 		render(
 			<Toggle
-				kind="light"
+				mode="light"
 				name="toto"
 				label="toto"
 				checked
@@ -37,13 +37,13 @@ describe("Toggle modifiers", () => {
 			/>,
 		);
 		const node = screen.getByText("toto");
-		expectToHaveClasses(node, ["ml-3", "text-sm", "text-copy-medium"]);
+		expectToHaveClasses(node, ["ml-3", "text-sm", "text-copy-dark"]);
 	});
 
 	it("should render a Toggle with no label", async () => {
 		render(
 			<Toggle
-				kind="dark"
+				mode="dark"
 				name="toto"
 				label="toto"
 				labelHidden
@@ -70,7 +70,7 @@ describe("Toggle methods", () => {
 			<Toggle
 				// @ts-ignore
 				onChange={spyOnChange}
-				kind="dark"
+				mode="dark"
 				name="toto"
 				label="toto"
 				labelHidden

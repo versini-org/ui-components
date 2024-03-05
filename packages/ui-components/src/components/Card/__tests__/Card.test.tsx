@@ -13,27 +13,65 @@ describe("Card (exceptions)", () => {
 });
 
 describe("Card modifiers", () => {
-	it("should render a default card", async () => {
+	it("should render a dark or light (system) card", async () => {
 		const { container } = render(<Card>{cardContent}</Card>);
 		const card = container.children[0];
 		expectToHaveClasses(card, [
 			CARD_CLASSNAME,
-			"p-4",
 			"rounded-md",
-			"text-copy-light",
 			"border-2",
+			"p-4",
 			"border-border-dark",
-			"bg-surface-dark",
+			"bg-surface-lighter",
+			"text-copy-dark",
+			"dark:border-border-light",
+			"dark:bg-surface-dark",
+			"dark:text-copy-light",
 		]);
 	});
 
-	it("should render a card with no background color", async () => {
-		const { container } = render(<Card noBackground>{cardContent}</Card>);
+	it("should render a dark or light (alt-system) card", async () => {
+		const { container } = render(<Card mode="alt-system">{cardContent}</Card>);
+		const card = container.children[0];
+		expectToHaveClasses(card, [
+			CARD_CLASSNAME,
+			"bg-surface-dark",
+			"border-2",
+			"border-border-light",
+			"dark:bg-surface-lighter",
+			"dark:border-border-dark",
+			"dark:text-copy-dark",
+			"p-4",
+			"rounded-md",
+			"text-copy-light",
+		]);
+	});
+
+	it("should render a dark card", async () => {
+		const { container } = render(<Card mode="dark">{cardContent}</Card>);
+		const card = container.children[0];
+		expectToHaveClasses(card, [
+			CARD_CLASSNAME,
+			"bg-surface-dark",
+			"border-2",
+			"border-border-light",
+			"p-4",
+			"rounded-md",
+			"text-copy-light",
+		]);
+	});
+
+	it("should render a light card", async () => {
+		const { container } = render(<Card>{cardContent}</Card>);
 		const card = container.children[0];
 		expectToHaveClasses(card, [
 			CARD_CLASSNAME,
 			"rounded-md",
-			"text-copy-light",
+			"border-2",
+			"p-4",
+			"border-border-dark",
+			"bg-surface-lighter",
+			"text-copy-dark",
 		]);
 	});
 

@@ -9,16 +9,16 @@ export type CommonButtonProps = {
 	 * The type of focus for the Button. This will change the color
 	 * of the focus ring around the Button.
 	 */
-	focus?: "dark" | "light";
+	focusMode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * Whether or not the Button is full width.
 	 * @default false
 	 */
 	fullWidth?: boolean;
 	/**
-	 * The type of Button. This will change the color of the Button.
+	 * The mode of Button. This will change the color of the Button.
 	 */
-	kind?: "dark" | "light" | "system";
+	mode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * Whether or not to render the Button with a border.
 	 * @default false
@@ -33,11 +33,6 @@ export type CommonButtonProps = {
 	 * The size of the Button.
 	 */
 	size?: "small" | "medium" | "large";
-	/**
-	 * @deprecated
-	 * Please use "size" instead.
-	 */
-	slim?: boolean;
 } & SpacingProps;
 
 export type ButtonProps = {
@@ -96,5 +91,9 @@ export type ButtonIconProps = {
 	 * The label to show to the right of the icon.
 	 */
 	labelRight?: string;
+	/**
+	 * Option to make the Button transparent.
+	 */
+	noBackground?: boolean;
 } & CommonButtonProps &
 	React.ButtonHTMLAttributes<HTMLButtonElement>;

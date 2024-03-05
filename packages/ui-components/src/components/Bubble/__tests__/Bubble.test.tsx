@@ -18,25 +18,24 @@ describe("Bubble modifiers", () => {
 		render(<Bubble kind="left">hello</Bubble>);
 		const bubble = await screen.findByText("hello");
 		expectToHaveClasses(bubble, [
-			"flex",
-			"flex-col",
+			"bg-surface-lighter",
+			"dark:bg-surface-dark",
+			"dark:prose-lighter",
 			"empty:hidden",
-			"p-4",
-			"sm:max-w-md",
+			"flex-col",
+			"flex",
 			"md:max-w-2xl",
-			"prose",
-			"prose-p:my-3",
+			"p-4",
 			"prose-blockquote:my-3",
+			"prose-dark",
 			"prose-ol:my-3",
+			"prose-p:my-3",
 			"prose-ul:my-3",
 			"prose-ul:prose-li:marker:text-black",
-			"p-4",
-			"sm:max-w-md",
-			"md:max-w-2xl",
-			"bg-surface-lighter",
-			"text-copy-dark",
+			"prose",
 			"rounded-b-xl",
 			"rounded-tr-xl",
+			"sm:max-w-md",
 		]);
 		if (bubble.parentElement?.parentElement) {
 			expectToHaveClasses(bubble.parentElement.parentElement, [
@@ -51,25 +50,24 @@ describe("Bubble modifiers", () => {
 		render(<Bubble kind="right">hello</Bubble>);
 		const bubble = await screen.findByText("hello");
 		expectToHaveClasses(bubble, [
-			"flex",
-			"flex-col",
+			"bg-surface-accent",
+			"dark:prose-lighter",
 			"empty:hidden",
-			"p-4",
-			"sm:max-w-md",
+			"flex-col",
+			"flex",
 			"md:max-w-2xl",
-			"prose",
-			"prose-p:my-3",
+			"p-4",
 			"prose-blockquote:my-3",
+			"prose-dark",
 			"prose-ol:my-3",
+			"prose-p:my-3",
 			"prose-ul:my-3",
 			"prose-ul:prose-li:marker:text-black",
-			"p-4",
-			"sm:max-w-md",
-			"md:max-w-2xl",
-			"bg-surface-accent",
-			"text-copy-dark",
+			"prose",
 			"rounded-b-xl",
 			"rounded-tl-xl",
+			"sm:max-w-md",
+			"text-copy-dark",
 		]);
 		if (bubble.parentElement?.parentElement) {
 			expectToHaveClasses(bubble.parentElement.parentElement, [

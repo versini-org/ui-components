@@ -44,6 +44,9 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
+	"devDependencies": {
+		"@versini/ui-plugins": "workspace:../ui-plugins"
+	},
 	"dependencies": {
 		"@tailwindcss/typography": "0.5.10",
 		"@versini/ui-hooks": "workspace:../ui-hooks",

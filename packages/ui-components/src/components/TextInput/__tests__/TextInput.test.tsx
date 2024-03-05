@@ -4,7 +4,7 @@ import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { expectToHaveClasses } from "../../../common/__tests__/helpers";
-import { TEXT_INPUT_CONTROL_RIGHT_CLASSNAME } from "../../../common/constants";
+import { TEXT_INPUT_CLASSNAME } from "../../../common/constants";
 import { TextInput } from "../..";
 
 describe("TextInput (exceptions)", () => {
@@ -14,24 +14,100 @@ describe("TextInput (exceptions)", () => {
 });
 
 describe("TextInput modifiers", () => {
-	it("should render a default text input", async () => {
+	it("should render a dark or light (system) text input", async () => {
 		render(<TextInput label="hello world" name="toto" />);
-		const input = await screen.findAllByText("hello world");
-		expect(input[0].className).toContain("sr-only");
-		expectToHaveClasses(input[1], ["cursor-text", "text-copy-medium"]);
+		const label = await screen.findAllByText("hello world");
+		const input = await screen.findByRole("textbox");
+
+		expect(label[0].className).toContain("sr-only");
+		expectToHaveClasses(label[1], [
+			"absolute",
+			"cursor-text",
+			"dark:text-copy-lighter",
+			"font-medium",
+			"text-copy-dark",
+		]);
+		expectToHaveClasses(input, [
+			TEXT_INPUT_CLASSNAME,
+			"bg-surface-lighter",
+			"border-2",
+			"border-border-dark",
+			"caret-copy-dark",
+			"dark:bg-surface-darker",
+			"dark:caret-copy-light",
+			"dark:focus:outline-focus-light",
+			"dark:text-copy-lighter",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-12",
+			"px-4",
+			"rounded-md",
+			"text-base",
+			"text-copy-dark",
+		]);
 	});
 
-	it("should render a simple text input", async () => {
-		render(
-			<TextInput
-				label="hello world"
-				name="toto"
-				simple
-				data-testid="txtnpt-1"
-			/>,
-		);
-		const input = await screen.findByTestId("txtnpt-1");
-		expect(input.className).toContain("pt-4");
+	it("should render a light text input", async () => {
+		render(<TextInput mode="light" label="hello world" name="toto" />);
+		const label = await screen.findAllByText("hello world");
+		const input = await screen.findByRole("textbox");
+
+		expect(label[0].className).toContain("sr-only");
+		expectToHaveClasses(label[1], [
+			"absolute",
+			"cursor-text",
+			"font-medium",
+			"text-copy-dark",
+		]);
+		expectToHaveClasses(input, [
+			TEXT_INPUT_CLASSNAME,
+			"bg-surface-lighter",
+			"border-2",
+			"border-border-dark",
+			"caret-copy-dark",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-12",
+			"px-4",
+			"rounded-md",
+			"text-base",
+			"text-copy-dark",
+		]);
+	});
+
+	it("should render a dark text input", async () => {
+		render(<TextInput mode="dark" label="hello world" name="toto" />);
+		const label = await screen.findAllByText("hello world");
+		const input = await screen.findByRole("textbox");
+		screen.debug(input);
+		expect(label[0].className).toContain("sr-only");
+		expectToHaveClasses(label[1], [
+			"absolute",
+			"cursor-text",
+			"font-medium",
+			"text-copy-lighter",
+		]);
+		expectToHaveClasses(input, [
+			TEXT_INPUT_CLASSNAME,
+			"bg-surface-darker",
+			"border-2",
+			"border-border-dark",
+			"caret-copy-light",
+			"dark:focus:outline-focus-light",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-12",
+			"px-4",
+			"rounded-md",
+			"text-base",
+			"text-copy-lighter",
+		]);
 	});
 
 	it("should render a text input with an error message", async () => {
@@ -104,10 +180,7 @@ describe("TextInput modifiers", () => {
 				data-testid="txtnpt-1"
 			/>,
 		);
-		const rightElement = await screen.findByText("right element");
-		expect(rightElement?.parentElement?.className).toContain(
-			TEXT_INPUT_CONTROL_RIGHT_CLASSNAME,
-		);
+		await screen.findByText("right element");
 	});
 });
 

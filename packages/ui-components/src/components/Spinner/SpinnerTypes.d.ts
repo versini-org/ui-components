@@ -2,9 +2,9 @@ import type { SpacingProps } from "@versini/ui-private/dist/utilities";
 
 export type SpinnerProps = {
 	/**
-	 * The kind of spinner to render. This will change the color of the spinner.
+	 * The mode of spinner to render. This will change the color of the spinner.
 	 */
-	kind?: "dark" | "light" | "system" | "alt-system";
+	mode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * A ref to the spinner element.
 	 */
