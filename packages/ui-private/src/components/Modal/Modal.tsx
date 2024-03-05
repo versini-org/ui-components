@@ -107,18 +107,19 @@ export const ModalClose = React.forwardRef<
 	HTMLButtonElement,
 	{
 		trigger: React.ReactElement;
+		className?: string;
 	}
 >(function ModalClose(props, ref) {
 	const { setOpen } = useModalContext();
-	const { trigger, ...rest } = props;
+	const { trigger, className, ...rest } = props;
 	const handleClose = React.useCallback(() => setOpen(false), [setOpen]);
 	return (
-		<>
+		<div className={className}>
 			{React.cloneElement(trigger, {
 				ref,
 				onClick: handleClose,
 				...rest,
 			})}
-		</>
+		</div>
 	);
 });
