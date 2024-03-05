@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/aversini/ui-components/compare/ui-private-v1.1.0...ui-private-v1.2.0) (2024-03-05)
+
+
+### Features
+
+* **Modal:** adding prop className to ModalClose ([#372](https://github.com/aversini/ui-components/issues/372)) ([fbadadb](https://github.com/aversini/ui-components/commit/fbadadb949bdc4816e4553eff0cea95403cc6444))
+
 ## [1.1.0](https://github.com/aversini/ui-components/compare/ui-private-v1.0.0...ui-private-v1.1.0) (2024-02-26)
 
 
