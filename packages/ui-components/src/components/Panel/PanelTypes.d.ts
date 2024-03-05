@@ -1,5 +1,3 @@
-import { TYPE_MESSAGEBOX, TYPE_PANEL } from "./utilities";
-
 export type PanelProps = {
 	/**
 	 * The children to render.
@@ -22,7 +20,7 @@ export type PanelProps = {
 	/**
 	 * The type of Panel border.
 	 */
-	borderKind?: "dark" | "light";
+	borderMode?: "dark" | "light";
 	/**
 	 * The content to render in the footer.
 	 */
@@ -30,5 +28,5 @@ export type PanelProps = {
 	/**
 	 * The type of Panel. This will change the layout of the Panel.
 	 */
-	mode?: typeof TYPE_PANEL | typeof TYPE_MESSAGEBOX;
+	kind?: "panel" | "messagebox";
 };

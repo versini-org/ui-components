@@ -18,11 +18,11 @@ export const Panel = ({
 	title,
 	children,
 	footer,
-	borderKind = "light",
-	mode = TYPE_PANEL,
+	borderMode = "light",
+	kind = TYPE_PANEL,
 }: PanelProps) => {
 	const originalTitleRef = useRef("");
-	const panelClassName = getPanelClassName({ mode, borderKind });
+	const panelClassName = getPanelClassName({ kind, borderMode });
 
 	/**
 	 * If the panel is opened, set the document
@@ -44,16 +44,17 @@ export const Panel = ({
 	return (
 		<Modal open={open} onOpenChange={onOpenChange}>
 			<ModalContent className={panelClassName.main}>
-				<ModalHeading className={panelClassName.header}>
+				<div className="flex flex-row-reverse items-center justify-between">
 					<ModalClose
+						className={panelClassName.close}
 						trigger={
-							<ButtonIcon noBorder label="Close">
+							<ButtonIcon mode="dark" focusMode="light" noBorder label="Close">
 								<IconClose />
 							</ButtonIcon>
 						}
-					></ModalClose>
-					<div>{title}</div>
-				</ModalHeading>
+					/>
+					<ModalHeading className={panelClassName.header}>{title}</ModalHeading>
+				</div>
 
 				<ModalDescription className={panelClassName.content}>
 					{children}
