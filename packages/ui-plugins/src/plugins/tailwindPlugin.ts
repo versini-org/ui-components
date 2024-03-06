@@ -10,6 +10,19 @@ type TailwindConfig = {
 	content: string[];
 } & OptionalConfig;
 
+export const isProd = process.env.NODE_ENV === "production";
+export const isDev = !isProd;
+
+const packagesList = ["ui-system", "ui-components"];
+const distLocation = isDev ? "src" : "dist";
+
+export const tailwindContentPath = packagesList.map((pkg) =>
+	`${__dirname}/**/*.{js,ts,jsx,tsx}`.replace(
+		`ui-plugins/${distLocation}`,
+		`${pkg}/${distLocation}`,
+	),
+);
+
 const parse = converter("rgb");
 
 const dynamicColors = () => {
@@ -147,17 +160,6 @@ const myComponentLibraryConfig = {
 		},
 	},
 };
-
-const tailwindContentPath = [
-	(__dirname + "/**/*.{js,ts,jsx,tsx}").replace(
-		"ui-plugins/dist",
-		"ui-system/dist",
-	),
-	(__dirname + "/**/*.{js,ts,jsx,tsx}").replace(
-		"ui-plugins/dist",
-		"ui-components/dist",
-	),
-];
 
 const tailwindPlugins = [
 	typography,
