@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.4.0](https://github.com/aversini/ui-components/compare/ui-components-v5.3.0...ui-components-v5.4.0) (2024-03-05)
+
+
+### Features
+
+* adding mode prop to all components ([#374](https://github.com/aversini/ui-components/issues/374)) ([71e06d8](https://github.com/aversini/ui-components/commit/71e06d8c050be82f56f5b1f798502c9c9ddec9fd))
+
 ## [5.3.0](https://github.com/aversini/ui-components/compare/ui-components-v5.2.0...ui-components-v5.3.0) (2024-02-27)
 
 
