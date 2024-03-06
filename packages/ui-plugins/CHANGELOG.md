@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/aversini/ui-components/compare/ui-plugins-v1.1.0...ui-plugins-v1.1.1) (2024-03-06)
+
+
+### Bug Fixes
+
+* **ui-plugins:** adding missing dependencies ([#376](https://github.com/aversini/ui-components/issues/376)) ([859220c](https://github.com/aversini/ui-components/commit/859220c8c509dd40156d560f0da8d48f9f749126))
+
 ## [1.1.0](https://github.com/aversini/ui-components/compare/ui-plugins-v1.0.0...ui-plugins-v1.1.0) (2024-03-05)
 
 
