@@ -29,7 +29,7 @@
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0",
 		"test:watch": "vitest",
-		"test": "vitest run"
+		"test": "cross-env-shell NODE_ENV=test vitest run"
 	},
 	"dependencies": {
 		"@tailwindcss/typography": "0.5.10",

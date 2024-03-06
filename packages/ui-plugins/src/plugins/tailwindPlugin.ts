@@ -10,11 +10,10 @@ type TailwindConfig = {
 	content: string[];
 } & OptionalConfig;
 
-export const isProd = process.env.NODE_ENV === "production";
-export const isDev = !isProd;
+export const isTest = process.env.NODE_ENV === "test";
 
 const packagesList = ["ui-system", "ui-components"];
-const distLocation = isDev ? "src" : "dist";
+const distLocation = isTest ? "src" : "dist";
 
 export const tailwindContentPath = packagesList.map((pkg) =>
 	`${__dirname}/**/*.{js,ts,jsx,tsx}`.replace(
