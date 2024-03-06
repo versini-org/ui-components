@@ -163,7 +163,17 @@ importers:
         specifier: workspace:../ui-plugins
         version: link:../ui-plugins
 
-  packages/ui-plugins: {}
+  packages/ui-plugins:
+    dependencies:
+      '@tailwindcss/typography':
+        specifier: 0.5.10
+        version: 0.5.10(tailwindcss@3.4.1)
+      culori:
+        specifier: 4.0.1
+        version: 4.0.1
+      tailwindcss:
+        specifier: 3.4.1
+        version: 3.4.1
 
   packages/ui-private:
     dependencies:
@@ -4005,7 +4015,6 @@ packages:
   /culori@4.0.1:
     resolution: {integrity: sha512-LSnjA6HuIUOlkfKVbzi2OlToZE8OjFi667JWN9qNymXVXzGDmvuP60SSgC+e92sd7B7158f7Fy3Mb6rXS5EDPw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: true
 
   /dargs@7.0.0:
     resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
