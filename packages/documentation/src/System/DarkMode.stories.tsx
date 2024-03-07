@@ -156,7 +156,7 @@ module.exports = {
 												noBorder
 												label="Restore chat"
 												mode="light"
-												focus="alt-system"
+												focusMode="alt-system"
 												onClick={() => {}}
 											>
 												<IconRestore className="h-3 w-3" />
@@ -165,7 +165,7 @@ module.exports = {
 												noBorder
 												label="Delete chat"
 												mode="light"
-												focus="alt-system"
+												focusMode="alt-system"
 												onClick={() => {}}
 											>
 												<div className="text-red-400">
