@@ -10,14 +10,10 @@ type TailwindConfig = {
 	content: string[];
 } & OptionalConfig;
 
-export const isTest = process.env.NODE_ENV === "test";
-
 const packagesList = ["@versini/ui-system", "@versini/ui-components"];
-const distLocation = isTest ? "src" : "dist";
 
 export const tailwindContentPath = packagesList.map(
-	(pkg) =>
-		`${process.cwd()}/node_modules/${pkg}/${distLocation}/**/*.{js,ts,jsx,tsx}`,
+	(pkg) => `${process.cwd()}/node_modules/${pkg}/dist/**/*.{js,ts,jsx,tsx}`,
 );
 
 const parse = converter("rgb");
@@ -33,21 +29,6 @@ const dynamicColors = () => {
 		result[name] = `var(${variable}, rgb(${fallbackValue} / <alpha-value>))`;
 	});
 	return result;
-};
-
-const dynamicMargins = () => {
-	const allowed = [
-		0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 44,
-		48, 52, 56, 60, 64, 72, 80, 96,
-	];
-	const margins: string[] = [];
-	allowed.forEach((num) => {
-		margins.push(`mt-${num}`);
-		margins.push(`mr-${num}`);
-		margins.push(`mb-${num}`);
-		margins.push(`ml-${num}`);
-	});
-	return margins;
 };
 
 const myComponentLibraryConfig = {
@@ -165,19 +146,17 @@ const tailwindPlugins = [
 	}, myComponentLibraryConfig),
 ];
 
-const tailwindSafelist = [...dynamicMargins()];
-
 export const twPlugin = {
 	content: tailwindContentPath,
-	safelist: tailwindSafelist,
 	plugins: tailwindPlugins,
 
 	merge: (config: TailwindConfig) => {
-		const safelist = tailwindSafelist;
 		const content = tailwindContentPath;
 		const plugins = tailwindPlugins;
 
-		config.safelist = [...(config.safelist || []), ...safelist];
+		if (config && config.safelist && config.safelist.length > 0) {
+			config.safelist = [...(config.safelist || [])];
+		}
 		config.content = [...(config.content || []), ...content];
 		config.plugins = [...(config.plugins || []), ...plugins];
 
