@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/aversini/ui-components/compare/ui-plugins-v1.1.2...ui-plugins-v1.2.0) (2024-03-08)
+
+
+### Features
+
+* **ui-plugins:** simplifying Tailwind plugin ([#381](https://github.com/aversini/ui-components/issues/381)) ([dafe648](https://github.com/aversini/ui-components/commit/dafe64843e4f4820725b1d8178674dc5a59db98c))
+
 ## [1.1.2](https://github.com/aversini/ui-components/compare/ui-plugins-v1.1.1...ui-plugins-v1.1.2) (2024-03-08)
 
 
