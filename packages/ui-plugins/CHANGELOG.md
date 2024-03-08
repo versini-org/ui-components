@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/aversini/ui-components/compare/ui-plugins-v1.1.1...ui-plugins-v1.1.2) (2024-03-08)
+
+
+### Bug Fixes
+
+* **ui-plugins:** incorrect node_modules path leading to invalid styles ([#379](https://github.com/aversini/ui-components/issues/379)) ([2dc2b3b](https://github.com/aversini/ui-components/commit/2dc2b3bfaab70347d7a1866e9ca179cc0e66af00))
+
 ## [1.1.1](https://github.com/aversini/ui-components/compare/ui-plugins-v1.1.0...ui-plugins-v1.1.1) (2024-03-06)
 
 
