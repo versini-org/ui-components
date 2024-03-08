@@ -12,14 +12,12 @@ type TailwindConfig = {
 
 export const isTest = process.env.NODE_ENV === "test";
 
-const packagesList = ["ui-system", "ui-components"];
+const packagesList = ["@versini/ui-system", "@versini/ui-components"];
 const distLocation = isTest ? "src" : "dist";
 
-export const tailwindContentPath = packagesList.map((pkg) =>
-	`${__dirname}/**/*.{js,ts,jsx,tsx}`.replace(
-		`ui-plugins/${distLocation}`,
-		`${pkg}/${distLocation}`,
-	),
+export const tailwindContentPath = packagesList.map(
+	(pkg) =>
+		`${process.cwd()}/node_modules/${pkg}/${distLocation}/**/*.{js,ts,jsx,tsx}`,
 );
 
 const parse = converter("rgb");
