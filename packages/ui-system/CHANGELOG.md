@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/aversini/ui-components/compare/ui-system-v1.1.0...ui-system-v1.1.1) (2024-03-10)
+
+
+### Bug Fixes
+
+* **ui-system:** remove obsolete prod dependencies ([#387](https://github.com/aversini/ui-components/issues/387)) ([9d13728](https://github.com/aversini/ui-components/commit/9d13728a7e5a341ecaa16854f6d0f9953cfae2f6))
+
 ## [1.1.0](https://github.com/aversini/ui-components/compare/ui-system-v1.0.1...ui-system-v1.1.0) (2024-03-05)
 
 
