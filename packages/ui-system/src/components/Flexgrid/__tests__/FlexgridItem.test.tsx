@@ -4,7 +4,7 @@ import { Button } from "@versini/ui-components";
 import {
 	expectToHaveClasses,
 	expectToHaveStyles,
-} from "../../../common/__tests__/helpers";
+} from "../../../../../../configuration/tests-helpers";
 import { Flexgrid, FlexgridItem } from "../..";
 
 describe("FlexgridItem (exceptions)", () => {
