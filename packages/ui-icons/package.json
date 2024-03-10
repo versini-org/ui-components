@@ -41,6 +41,9 @@
 	"devDependencies": {
 		"@versini/ui-private": "workspace:../ui-private"
 	},
+	"dependencies": {
+		"@versini/ui-private": "workspace:../ui-private"
+	},
 	"sideEffects": [
 		"**/*.css"
 	]
