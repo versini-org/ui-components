@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { IconSettings } from "@versini/ui-icons";
 
-import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { BUTTON_CLASSNAME } from "../../../common/constants";
 import { ButtonIcon } from "../ButtonIcon";
 

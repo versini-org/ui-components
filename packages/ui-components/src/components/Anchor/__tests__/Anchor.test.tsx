@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { Anchor } from "../..";
 
 describe("Anchor (exceptions)", () => {
