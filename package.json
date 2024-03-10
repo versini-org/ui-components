@@ -5,6 +5,7 @@
 		"packages/*"
 	],
 	"scripts": {
+		"clean": "lerna run clean",
 		"build": "lerna run build",
 		"lint": "lerna run lint",
 		"lint-staged": "lint-staged --config \"./configuration/lint-staged.config.cjs\"",

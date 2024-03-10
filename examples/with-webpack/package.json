@@ -1,0 +1,33 @@
+{
+	"name": "@versini/example-with-webpack",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"clean": "rimraf dist",
+		"build:js": "webpack --mode=production",
+		"build": "npm run clean && npm run build:js",
+		"dev": "webpack serve --mode=development",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+	},
+	"dependencies": {
+		"@versini/ui-components": "workspace:../../packages/ui-components",
+		"@versini/ui-icons": "workspace:../../packages/ui-icons",
+		"@versini/ui-plugins": "workspace:../../packages/ui-plugins",
+		"react": "18.2.0",
+		"react-dom": "18.2.0"
+	},
+	"devDependencies": {
+		"css-loader": "6.10.0",
+		"html-webpack-plugin": "5.6.0",
+		"mini-css-extract-plugin": "2.8.1",
+		"postcss-loader": "8.1.1",
+		"postcss": "8.4.35",
+		"style-loader": "3.3.4",
+		"ts-loader": "9.5.1",
+		"tslib": "2.4.0",
+		"webpack-cli": "5.1.4",
+		"webpack-config-utils": "2.3.1",
+		"webpack-dev-server": "5.0.2",
+		"webpack": "5.90.3"
+	}
+}
