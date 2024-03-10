@@ -21,8 +21,9 @@ type TailwindConfig = {
  * added here.
  */
 export const customContentPath = [
-	"@versini/ui-system",
 	"@versini/ui-components",
+	"@versini/ui-icons",
+	"@versini/ui-system",
 ].map(
 	(pkg) => `${process.cwd()}/node_modules/${pkg}/dist/**/*.{js,ts,jsx,tsx}`,
 );

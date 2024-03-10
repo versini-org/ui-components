@@ -11,7 +11,7 @@ export const IconDog = ({
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 1200 500"
-			defaultClassName={"w-full"}
+			defaultClassName="w-full"
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
