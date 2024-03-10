@@ -3,7 +3,7 @@
 import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { TEXT_INPUT_CLASSNAME } from "../../../common/constants";
 import { TextInput } from "../..";
 

@@ -4,7 +4,7 @@ import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { IconHide } from "@versini/ui-icons";
 
-import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { ButtonIcon, TextInputMask } from "../..";
 
 function renderWithUserEvent(jsx: JSX.Element) {

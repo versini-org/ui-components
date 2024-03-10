@@ -3,7 +3,7 @@
 import { act, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import {
 	TEXT_AREA_CLASSNAME,
 	TEXT_AREA_CONTROL_RIGHT_CLASSNAME,

@@ -2,7 +2,7 @@
 
 import { fireEvent, render, screen } from "@testing-library/react";
 
-import { expectToHaveClasses } from "../../../common/__tests__/helpers";
+import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { Toggle } from "../..";
 
 describe("Toggle (exceptions)", () => {
