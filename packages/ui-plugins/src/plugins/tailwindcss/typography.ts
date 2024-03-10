@@ -1,40 +1,10 @@
-import typography from "@tailwindcss/typography";
-import { converter } from "culori";
-import plugin from "tailwindcss/plugin";
-import type { Config, OptionalConfig } from "tailwindcss/types/config";
+import dynamicColors from "./colors";
+import tokens from "./tokens";
 
-import { customCSS } from "./customCSS";
-import { tokens } from "./tokens";
-
-type TailwindConfig = {
-	content: string[];
-} & OptionalConfig;
-
-const packagesList = ["@versini/ui-system", "@versini/ui-components"];
-
-export const tailwindContentPath = packagesList.map(
-	(pkg) => `${process.cwd()}/node_modules/${pkg}/dist/**/*.{js,ts,jsx,tsx}`,
-);
-
-const parse = converter("rgb");
-
-const dynamicColors = () => {
-	const result: { [key: string]: string } = {};
-	Object.entries(tokens.colors).forEach(([name, color]) => {
-		const rgb = parse(color);
-		const variable = `--av-${name}`;
-		const fallbackValue = rgb
-			? `${rgb.r * 255} ${rgb.g * 255} ${rgb.b * 255}`
-			: "0 0 0";
-		result[name] = `var(${variable}, rgb(${fallbackValue} / <alpha-value>))`;
-	});
-	return result;
-};
-
-const myComponentLibraryConfig = {
+export default {
 	theme: {
 		extend: {
-			colors: dynamicColors(),
+			colors: dynamicColors,
 			typography: ({ theme }: { theme: (arg0: string) => any }) => ({
 				DEFAULT: {
 					css: {
@@ -121,13 +91,8 @@ const myComponentLibraryConfig = {
 						"--tw-prose-quote-borders": theme("colors.slate[300]"),
 						"--tw-prose-captions": theme("colors.slate[700]"),
 						"--tw-prose-code": theme("colors.slate[900]"),
-
 						"--tw-prose-pre-code": tokens.colors["copy-lighter"],
 						"--tw-prose-pre-bg": tokens.colors["surface-medium"],
-
-						// "--tw-prose-pre-code": theme("colors.slate[100]"),
-						// "--tw-prose-pre-bg": theme("colors.slate[900]"),
-
 						"--tw-prose-kbd": theme("colors.slate[800]"),
 						li: {
 							color: tokens.colors["copy-dark"],
@@ -136,30 +101,5 @@ const myComponentLibraryConfig = {
 				},
 			}),
 		},
-	},
-};
-
-const tailwindPlugins = [
-	typography,
-	plugin(function ({ addUtilities }) {
-		addUtilities(customCSS);
-	}, myComponentLibraryConfig),
-];
-
-export const twPlugin = {
-	content: tailwindContentPath,
-	plugins: tailwindPlugins,
-
-	merge: (config: TailwindConfig) => {
-		const content = tailwindContentPath;
-		const plugins = tailwindPlugins;
-
-		if (config && config.safelist && config.safelist.length > 0) {
-			config.safelist = [...(config.safelist || [])];
-		}
-		config.content = [...(config.content || []), ...content];
-		config.plugins = [...(config.plugins || []), ...plugins];
-
-		return config as Config;
 	},
 };
