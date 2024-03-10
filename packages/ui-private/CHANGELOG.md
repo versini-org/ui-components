@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/aversini/ui-components/compare/ui-private-v1.3.0...ui-private-v1.3.1) (2024-03-10)
+
+
+### Bug Fixes
+
+* **ui-private:** remove premature optimization and dependencies ([#390](https://github.com/aversini/ui-components/issues/390)) ([55e9818](https://github.com/aversini/ui-components/commit/55e981840fda75678baea89260494f6441acdfb5))
+
 ## [1.3.0](https://github.com/aversini/ui-components/compare/ui-private-v1.2.0...ui-private-v1.3.0) (2024-03-05)
 
 

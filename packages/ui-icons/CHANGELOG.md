@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/aversini/ui-components/compare/ui-icons-v1.2.0...ui-icons-v1.2.1) (2024-03-10)
+
+
+### Bug Fixes
+
+* **ui-icons:** removing redundant dependencies and adding them to the plugin ([#392](https://github.com/aversini/ui-components/issues/392)) ([142b064](https://github.com/aversini/ui-components/commit/142b0641451bf73fc2f982f70c18cbff240deaad))
+
 ## [1.2.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.1.0...ui-icons-v1.2.0) (2024-03-05)
 
 
