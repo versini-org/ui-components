@@ -1,1 +1,1 @@
-export { twPlugin } from "./tailwindPlugin";
+export { twPlugin } from "./tailwindcss/tailwindPlugin";

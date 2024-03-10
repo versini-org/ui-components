@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { tailwindContentPath } from "../tailwindPlugin";
+import { tailwindContentPath } from "../tailwindcss/tailwindPlugin";
 
 describe("Non-DOM tests", () => {
 	it("should return an array with ui-system and ui-components", () => {

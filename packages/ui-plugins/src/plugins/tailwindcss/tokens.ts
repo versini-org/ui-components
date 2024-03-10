@@ -2,7 +2,7 @@ import colors from "tailwindcss/colors";
 
 const errorColorLight = "#ff3f3f";
 
-export const tokens = {
+export default {
 	colors: {
 		/**
 		 * Action tokens.
