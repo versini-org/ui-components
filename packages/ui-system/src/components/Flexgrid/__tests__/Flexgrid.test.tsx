@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import {
 	expectToHaveClasses,
 	expectToHaveStyles,
-} from "../../../common/__tests__/helpers";
+} from "../../../../../../configuration/tests-helpers";
 import { Flexgrid } from "../..";
 
 describe("Flexgrid (exceptions)", () => {
