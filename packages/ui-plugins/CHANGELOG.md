@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/aversini/ui-components/compare/ui-plugins-v1.2.0...ui-plugins-v1.2.1) (2024-03-10)
+
+
+### Bug Fixes
+
+* **ui-plugins:** missing dynamic margins since last refactor ([#389](https://github.com/aversini/ui-components/issues/389)) ([a0d6973](https://github.com/aversini/ui-components/commit/a0d6973f1011b45b54041d727b34cb8ade08314c))
+
 ## [1.2.0](https://github.com/aversini/ui-components/compare/ui-plugins-v1.1.2...ui-plugins-v1.2.0) (2024-03-08)
 
 
