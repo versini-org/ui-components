@@ -1,5 +1,5 @@
 import type { Story } from "@ladle/react";
-import { Toggle } from "@versini/ui-components";
+import { Toggle } from "@versini/ui-form";
 import { useState } from "react";
 
 export default {

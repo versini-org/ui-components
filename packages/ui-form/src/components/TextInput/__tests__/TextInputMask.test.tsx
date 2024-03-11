@@ -2,10 +2,11 @@
 
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { ButtonIcon } from "@versini/ui-components";
 import { IconHide } from "@versini/ui-icons";
 
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
-import { ButtonIcon, TextInputMask } from "../..";
+import { TextInputMask } from "../..";
 
 function renderWithUserEvent(jsx: JSX.Element) {
 	return {
