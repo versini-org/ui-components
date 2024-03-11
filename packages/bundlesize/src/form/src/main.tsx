@@ -1,5 +1,3 @@
-import "@versini/ui-form/dist/style.css";
-
 import * as UI from "@versini/ui-form";
 import React from "react";
 import ReactDOM from "react-dom/client";
