@@ -3,9 +3,6 @@ export const FOOTER_CLASSNAME = "av-footer";
 export const MAIN_CLASSNAME = "av-main";
 export const HEADER_CLASSNAME = "av-header";
 
-export const FLEXGRID_CLASSNAME = "av-flexgrid";
-export const FLEXGRID_ITEM_CLASSNAME = "av-flexgrid-item";
-
 export const CARD_CLASSNAME = "av-card";
 
 export const SPINNER_CLASSNAME = "av-spinner";
