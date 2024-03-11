@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/aversini/ui-components/compare/ui-plugins-v1.2.2...ui-plugins-v1.3.0) (2024-03-11)
+
+
+### Features
+
+* **ui-form:** moving form components to their own package ([#393](https://github.com/aversini/ui-components/issues/393)) ([59a6f42](https://github.com/aversini/ui-components/commit/59a6f42827a6a9b899c816f506a8d8174cf12a2b))
+
 ## [1.2.2](https://github.com/aversini/ui-components/compare/ui-plugins-v1.2.1...ui-plugins-v1.2.2) (2024-03-10)
 
 
