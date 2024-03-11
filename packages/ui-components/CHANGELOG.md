@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.5.1](https://github.com/aversini/ui-components/compare/ui-components-v5.5.0...ui-components-v5.5.1) (2024-03-11)
+
+
+### Bug Fixes
+
+* **ui-components:** minor clean up - removing obsolete code ([#395](https://github.com/aversini/ui-components/issues/395)) ([1d69969](https://github.com/aversini/ui-components/commit/1d69969d6c85abfbd3ba1af302edc5bf44532386))
+
 ## [5.5.0](https://github.com/aversini/ui-components/compare/ui-components-v5.4.0...ui-components-v5.5.0) (2024-03-11)
 
 
