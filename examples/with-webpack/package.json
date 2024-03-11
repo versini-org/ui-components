@@ -13,7 +13,7 @@
 		"@versini/ui-components": "workspace:../../packages/ui-components",
 		"@versini/ui-form": "workspace:../../packages/ui-form",
 		"@versini/ui-icons": "workspace:../../packages/ui-icons",
-		"@versini/ui-plugins": "workspace:../../packages/ui-plugins",
+		"@versini/ui-styles": "workspace:../../packages/ui-styles",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
 	},

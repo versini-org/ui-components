@@ -6,7 +6,7 @@
 		"packages/ui-system": {},
 		"packages/ui-private": {},
 		"packages/ui-icons": {},
-		"packages/ui-plugins": {},
+		"packages/ui-styles": {},
 		"packages/ui-form": {}
 	}
 }
