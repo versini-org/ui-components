@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.6.0](https://github.com/aversini/ui-components/compare/ui-components-v5.5.1...ui-components-v5.6.0) (2024-03-11)
+
+
+### Features
+
+* **ui-styles:** renaming ui-plugins package into ui-styles ([#397](https://github.com/aversini/ui-components/issues/397)) ([90f0343](https://github.com/aversini/ui-components/commit/90f0343fd8858a4a28a14b6b412ee48484c4ae14))
+
 ## [5.5.1](https://github.com/aversini/ui-components/compare/ui-components-v5.5.0...ui-components-v5.5.1) (2024-03-11)
 
 

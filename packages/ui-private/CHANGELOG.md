@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/aversini/ui-components/compare/ui-private-v1.3.1...ui-private-v1.4.0) (2024-03-11)
+
+
+### Features
+
+* **ui-styles:** renaming ui-plugins package into ui-styles ([#397](https://github.com/aversini/ui-components/issues/397)) ([90f0343](https://github.com/aversini/ui-components/commit/90f0343fd8858a4a28a14b6b412ee48484c4ae14))
+
 ## [1.3.1](https://github.com/aversini/ui-components/compare/ui-private-v1.3.0...ui-private-v1.3.1) (2024-03-10)
 
 
