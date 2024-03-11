@@ -48,6 +48,7 @@
 		"@versini/ui-plugins": "workspace:../ui-plugins"
 	},
 	"dependencies": {
+		"@floating-ui/react": "0.26.9",
 		"@tailwindcss/typography": "0.5.10",
 		"@versini/ui-hooks": "workspace:../ui-hooks",
 		"@versini/ui-icons": "workspace:../ui-icons",
