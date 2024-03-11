@@ -1,5 +1,6 @@
 import type { Story } from "@ladle/react";
-import { Button, TextArea } from "@versini/ui-components";
+import { Button } from "@versini/ui-components";
+import { TextArea } from "@versini/ui-form";
 import { ThemeProvider } from "@versini/ui-system";
 
 const customTheme = {

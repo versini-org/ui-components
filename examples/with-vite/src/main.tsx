@@ -14,8 +14,8 @@ import {
 	TableCell,
 	TableHead,
 	TableRow,
-	TextInput,
 } from "@versini/ui-components";
+import { TextInput } from "@versini/ui-form";
 import {
 	IconChart,
 	IconDelete,

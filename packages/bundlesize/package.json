@@ -19,6 +19,7 @@
 	},
 	"dependencies": {
 		"@versini/ui-components": "workspace:../ui-components",
+		"@versini/ui-form": "workspace:../ui-form",
 		"@versini/ui-hooks": "workspace:../ui-hooks",
 		"@versini/ui-icons": "workspace:../ui-icons",
 		"@versini/ui-system": "workspace:../ui-system",

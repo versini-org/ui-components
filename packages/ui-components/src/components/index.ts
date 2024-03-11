@@ -20,12 +20,6 @@ import {
 	TableHead,
 	TableRow,
 } from "./Table/Table";
-import { TextArea } from "./TextArea/TextArea";
-import { TextInput } from "./TextInput/TextInput";
-import { TextInputMask } from "./TextInput/TextInputMask";
-import { Toggle } from "./Toggle/Toggle";
-
-Pill;
 
 export {
 	Anchor,
@@ -48,8 +42,4 @@ export {
 	TableCell,
 	TableHead,
 	TableRow,
-	TextArea,
-	TextInput,
-	TextInputMask,
-	Toggle,
 };

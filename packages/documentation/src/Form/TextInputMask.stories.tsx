@@ -1,5 +1,6 @@
 import type { Story } from "@ladle/react";
-import { ButtonIcon, TextInputMask } from "@versini/ui-components";
+import { ButtonIcon } from "@versini/ui-components";
+import { TextInputMask } from "@versini/ui-form";
 import { IconHide, IconShow } from "@versini/ui-icons";
 import { useState } from "react";
 

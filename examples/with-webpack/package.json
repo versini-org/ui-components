@@ -11,6 +11,7 @@
 	},
 	"dependencies": {
 		"@versini/ui-components": "workspace:../../packages/ui-components",
+		"@versini/ui-form": "workspace:../../packages/ui-form",
 		"@versini/ui-icons": "workspace:../../packages/ui-icons",
 		"@versini/ui-plugins": "workspace:../../packages/ui-plugins",
 		"react": "18.2.0",

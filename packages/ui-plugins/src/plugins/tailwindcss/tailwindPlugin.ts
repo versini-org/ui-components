@@ -22,6 +22,7 @@ type TailwindConfig = {
  */
 export const customContentPath = [
 	"@versini/ui-components",
+	"@versini/ui-form",
 	"@versini/ui-icons",
 	"@versini/ui-system",
 ].map(
