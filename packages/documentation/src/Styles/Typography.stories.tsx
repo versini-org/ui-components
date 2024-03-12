@@ -2,7 +2,7 @@
 
 import type { Story } from "@ladle/react";
 
-export default { title: "System/Typography" };
+export default { title: "Styles/Typography" };
 
 const CommonTemplate = ({
 	intro,
@@ -214,7 +214,7 @@ const CommonTemplate = ({
 	);
 };
 
-export const Basic: Story<any> = () => (
+export const QuickStart: Story<any> = () => (
 	<div className="prose prose-dark dark:prose-lighter">
 		<h1>Typography</h1>
 		<p>
@@ -223,15 +223,15 @@ export const Basic: Story<any> = () => (
 		</p>
 		<h2>Installation</h2>
 		<p>
-			You do not have to install anything special, besides the main library:
+			You have to install the <code>@versini/ui-styles</code> package:
 		</p>
 		<pre>
-			<code>$ npm install --save @versini/ui-components</code>
+			<code>$ npm install --save @versini/ui-styles</code>
 		</pre>
 
 		<h2>Configuration</h2>
 		<p>
-			However, you need to configure your application to use TailwindCSS and our
+			You need to configure your application to use TailwindCSS and our
 			TailwindCSS plugin:
 		</p>
 		<pre>
@@ -239,7 +239,7 @@ export const Basic: Story<any> = () => (
 				{`// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 
-import { twPlugin } from "@versini/ui-components/dist/utilities";
+import { twPlugin } from "@versini/ui-styles";
 
 export default twPlugin.merge({
   // this is an example, you can change the path to your files

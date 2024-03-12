@@ -101,7 +101,6 @@ export const ReleaseTags: Story<any> = () => (
 				<FlexgridItem>
 					<ButtonIcon
 						labelRight="Usage"
-						noBorder
 						onClick={linkTo("getting-started--usage")}
 					>
 						<IconPrevious monotone />

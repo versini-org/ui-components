@@ -25,7 +25,7 @@ import {
 	IconSettings,
 } from "@versini/ui-icons";
 
-export default { title: "System/Dark Mode" };
+export default { title: "Styles/Dark Mode" };
 
 const data = [
 	{
@@ -118,7 +118,7 @@ module.exports = {
 						label="Type your question here"
 						helperText="Powered by the sun"
 						rightElement={
-							<Button mode="light" focus="light" noBorder>
+							<Button mode="light" focusMode="light" noBorder>
 								Send
 							</Button>
 						}
