@@ -2,7 +2,7 @@
 
 import { linkTo, Story } from "@ladle/react";
 import { ButtonIcon, Pill } from "@versini/ui-components";
-import { IconPrevious } from "@versini/ui-icons";
+import { IconNext, IconPrevious } from "@versini/ui-icons";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 
 export default {
@@ -97,13 +97,21 @@ export const ReleaseTags: Story<any> = () => (
 		</ul>
 
 		<div className="mt-8">
-			<Flexgrid alignHorizontal="flex-start">
+			<Flexgrid alignHorizontal="space-between">
 				<FlexgridItem>
 					<ButtonIcon
 						labelRight="Usage"
 						onClick={linkTo("getting-started--usage")}
 					>
 						<IconPrevious monotone />
+					</ButtonIcon>
+				</FlexgridItem>
+				<FlexgridItem>
+					<ButtonIcon
+						labelLeft="Changelogs"
+						onClick={linkTo("getting-started--changelogs")}
+					>
+						<IconNext monotone />
 					</ButtonIcon>
 				</FlexgridItem>
 			</Flexgrid>

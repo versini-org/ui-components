@@ -99,8 +99,8 @@ export const Provider: GlobalProvider = ({
 				}
 				row2={
 					<div>
-						UI Components v{import.meta.env.BUILDVERSION} - &copy;{" "}
-						{new Date().getFullYear()} {import.meta.env.OWNER}
+						UI Components - &copy; {new Date().getFullYear()}{" "}
+						{import.meta.env.OWNER}
 					</div>
 				}
 			/>
