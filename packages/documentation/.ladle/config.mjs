@@ -11,8 +11,9 @@ export default {
 		"getting-started--changelogs",
 		"Components*",
 		"Form-components*",
-		"System*",
+		"Icons*",
 		"Styles*",
+		"System*",
 	],
 	appendToHead: `
 	<link rel="preconnect" href="https://fonts.googleapis.com">
