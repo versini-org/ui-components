@@ -25,7 +25,7 @@ import {
 	IconSettings,
 } from "@versini/ui-icons";
 
-export default { title: "Styles/Dark Mode" };
+export default { title: "Styles/Components" };
 
 const data = [
 	{
@@ -198,7 +198,7 @@ module.exports = {
 	);
 };
 
-export const Automatic: Story<any> = () => (
+export const DarkMode: Story<any> = () => (
 	<Card>
 		<h1>Automatic Dark Mode</h1>
 		<CommonTemplate />
