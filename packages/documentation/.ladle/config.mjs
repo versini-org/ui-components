@@ -12,8 +12,8 @@ export default {
 		"Components*",
 		"Form-components*",
 		"Icons*",
-		"System*",
 		"Styles*",
+		"System*",
 	],
 	appendToHead: `
 	<link rel="preconnect" href="https://fonts.googleapis.com">
