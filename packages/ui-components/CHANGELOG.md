@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.7.0](https://github.com/aversini/ui-components/compare/ui-components-v5.6.0...ui-components-v5.7.0) (2024-03-12)
+
+
+### Features
+
+* **Card:** adding prop bodyClassName ([#403](https://github.com/aversini/ui-components/issues/403)) ([4f896a5](https://github.com/aversini/ui-components/commit/4f896a5ebf9bdef19735502fc14c42723b592608))
+
 ## [5.6.0](https://github.com/aversini/ui-components/compare/ui-components-v5.5.1...ui-components-v5.6.0) (2024-03-11)
 
 
