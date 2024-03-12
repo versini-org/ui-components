@@ -55,7 +55,7 @@ export default {
 };
 
 const Container = ({ children }: { children: React.ReactNode }) => (
-	<div className="bg-slate-100 p-11">{children}</div>
+	<div className="bg-slate-100 p-11 text-copy-lighter">{children}</div>
 );
 
 export const Basic: Story<any> = (args) => (
