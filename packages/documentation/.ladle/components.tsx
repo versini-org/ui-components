@@ -64,7 +64,7 @@ export const Provider: GlobalProvider = ({
 		"prose mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl",
 		{
 			"prose-dark dark:prose-lighter":
-				!globalState?.story.startsWith("system--typography"),
+				!globalState?.story.startsWith("styles--typography"),
 		},
 	);
 	const handleOnClickGitHub = () => {

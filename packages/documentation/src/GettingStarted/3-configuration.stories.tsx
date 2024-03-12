@@ -39,31 +39,9 @@ export const Configuration: Story<any> = () => (
 		<h2>CSS</h2>
 
 		<p>
-			You can use the <strong>UI-Components</strong> library with or without{" "}
-			<strong>TailwindCSS</strong>. Depending on your situation, you can either
-			use the pre-built CSS or the TailwindCSS plugin to build your own styles
-			and take advantage of tree-shaking unused styles.
-		</p>
-
-		<h2>Without TailwindCSS</h2>
-
-		<p>
-			If you are not using TailwindCSS, you can use the pre-built CSS file. Just
-			import it in your entry file:
-		</p>
-
-		<pre>
-			<code>
-				{`// index.js
-import "@versini/ui-components/dist/style.css";`}
-			</code>
-		</pre>
-
-		<h2>With TailwindCSS</h2>
-
-		<p>
-			If you are using TailwindCSS, you can use the{" "}
-			<strong>UI-Components</strong> library TailwindCSS plugin:
+			TailwindCSS is required to style the components within the{" "}
+			<strong>UI-Components</strong> library. Thanks to our TailwindCSS plugin,
+			you can take advantage of tree-shaking unused styles:
 		</p>
 
 		<pre>
@@ -71,7 +49,7 @@ import "@versini/ui-components/dist/style.css";`}
 				{`// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 
-import { twPlugin } from "@versini/ui-components/dist/utilities";
+import { twPlugin } from "@versini/ui-styles";
 
 export default twPlugin.merge({
   // this is an example, you can change the path to your files
@@ -84,7 +62,6 @@ export default twPlugin.merge({
 			<FlexgridItem>
 				<ButtonIcon
 					labelRight="Installation"
-					noBorder
 					onClick={linkTo("getting-started--installation")}
 				>
 					<IconPrevious monotone />
@@ -93,7 +70,6 @@ export default twPlugin.merge({
 			<FlexgridItem>
 				<ButtonIcon
 					labelLeft="Usage"
-					noBorder
 					onClick={linkTo("getting-started--usage")}
 				>
 					<IconNext monotone />

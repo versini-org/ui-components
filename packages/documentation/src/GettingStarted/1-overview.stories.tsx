@@ -23,7 +23,6 @@ export const Overview: Story<any> = () => (
 				<ButtonIcon
 					spacing={{ t: 8 }}
 					labelLeft="Installation"
-					noBorder
 					onClick={linkTo("getting-started--installation")}
 				>
 					<IconNext monotone />
