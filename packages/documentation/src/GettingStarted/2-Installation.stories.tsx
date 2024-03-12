@@ -76,16 +76,18 @@ export const Installation: Story<any> = () => (
 		</div>
 		<p>
 			<strong>NOTE</strong>: each package content is detailed in this
-			documentation. You can find them on the right side of the screen.
+			documentation. You can find them in the navigation bar.
 		</p>
 		<h2>Example</h2>
 		<p>
 			If you only need some core components and of course the CSS styles
-			associated, use the following command:
+			associated<sup>1</sup>, use the following command:
 		</p>
 		<pre>
 			<code>
-				$ npm install --save @versini/ui-styles @versini/ui-components
+				{`$ npm install --save-dev @versini/ui-styles
+$ npm install --save @versini/ui-components
+`}
 			</code>
 		</pre>
 		<p>
@@ -94,6 +96,15 @@ export const Installation: Story<any> = () => (
 		<pre>
 			<code>$ npm install --save react react-dom</code>
 		</pre>
+
+		<p>
+			<sup>1</sup>{" "}
+			<small>
+				For more information about how CSS styles are handled, please check the
+				Styles section in the navigation bar.
+			</small>
+		</p>
+
 		<Flexgrid alignHorizontal="space-between">
 			<FlexgridItem>
 				<ButtonIcon

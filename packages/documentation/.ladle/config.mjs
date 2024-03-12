@@ -12,7 +12,7 @@ export default {
 		"Components*",
 		"Form-components*",
 		"Icons*",
-		"styles--typography--quick-start",
+		"styles--quick-start",
 		"Styles*",
 		"System*",
 	],
