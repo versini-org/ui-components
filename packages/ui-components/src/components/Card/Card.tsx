@@ -35,6 +35,7 @@ export const Card = ({
 	footerClassName,
 	children,
 	className,
+	bodyClassName,
 	"aria-labelledby": ariaLabelledby,
 	spacing,
 	mode = "system",
@@ -50,6 +51,7 @@ export const Card = ({
 	const cardClassName = getCardClasses({
 		className,
 		headerClassName,
+		bodyClassName,
 		footerClassName,
 		spacing,
 		mode,
@@ -97,6 +99,7 @@ export const Card = ({
 				{...(sectionAriaLabelledBy && {
 					"aria-labelledby": sectionAriaLabelledBy,
 				})}
+				className={cardClassName.body}
 				{...otherProps}
 			>
 				<CardHeader

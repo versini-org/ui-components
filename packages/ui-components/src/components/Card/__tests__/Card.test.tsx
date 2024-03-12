@@ -94,6 +94,17 @@ describe("Card modifiers", () => {
 		expectToHaveClasses(header, ["toto-header"]);
 	});
 
+	it("should render a card with a custom body class", async () => {
+		render(<Card bodyClassName="toto-body">{cardContent}</Card>);
+		const body = await screen.findByText(cardContent);
+		expect(body).toBeDefined();
+
+		const parent = body.parentElement;
+		if (parent) {
+			expectToHaveClasses(parent, ["toto-body"]);
+		}
+	});
+
 	it("should render a card with a custom footer class", async () => {
 		render(
 			<Card footer="hello" footerClassName="toto-footer">

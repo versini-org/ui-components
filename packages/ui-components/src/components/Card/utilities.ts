@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { CARD_CLASSNAME } from "../../common/constants";
 
 type getCardClassesProps = {
+	bodyClassName?: string;
 	className?: string;
 	footerClassName?: string;
 	headerClassName?: string;
@@ -14,6 +15,7 @@ type getCardClassesProps = {
 export const getCardClasses = ({
 	className,
 	headerClassName,
+	bodyClassName,
 	footerClassName,
 	spacing,
 	mode,
@@ -36,6 +38,7 @@ export const getCardClasses = ({
 				`${CARD_CLASSNAME}__header not-prose mb-4 border-b-2 border-border-medium text-lg font-bold`,
 			);
 
+	const body = clsx(bodyClassName);
 	const footer = footerClassName
 		? footerClassName
 		: clsx(`${CARD_CLASSNAME}__footer pt-2`);
@@ -43,6 +46,7 @@ export const getCardClasses = ({
 	return {
 		wrapper,
 		header,
+		body,
 		footer,
 	};
 };

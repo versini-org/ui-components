@@ -12,7 +12,12 @@ export type CardProps = {
 	 */
 	"aria-labelledby"?: string;
 	/**
-	 * CSS class(es) to add to the main component wrapper.
+	 * CSS class(es) to add to the body.
+	 */
+	bodyClassName?: string;
+	/**
+	 * CSS class(es) to add to the main component wrapper. If provided,
+	 * it overrides the default styles.
 	 */
 	className?: string;
 	/**
