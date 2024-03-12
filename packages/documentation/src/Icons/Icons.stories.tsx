@@ -9,7 +9,7 @@ import {
 import * as AllIcons from "@versini/ui-icons";
 
 export default {
-	title: "System/Icons",
+	title: "Icons",
 	meta: {
 		header: "Icons",
 		importName: "IconXYZ",

@@ -11,6 +11,7 @@ export default {
 		"getting-started--changelogs",
 		"Components*",
 		"Form-components*",
+		"Icons*",
 		"System*",
 		"Styles*",
 	],
