@@ -52,11 +52,15 @@ const CommonTemplate = () => {
 	return (
 		<>
 			<p>
-				Most components support a <code>system</code> mode which allows them to
-				toggle from dark to light colors automatically by relying on the
+				Most components support a <code>system</code> mode prop which allows
+				them to toggle from dark to light colors automatically by relying on the
 				<code>prefers-color-scheme</code> CSS media feature. For special cases,
 				there is a<code>alt-system</code> mode which is a toggled version of the
 				<code>system</code> mode.
+			</p>
+			<p>
+				Additionally, some components also provide a <code>focusMode</code> prop
+				that is also set to <code>system</code> by default.
 			</p>
 
 			<h2 className="mt-2">Toggling dark mode manually</h2>
@@ -82,7 +86,9 @@ module.exports = {
 			<h2>Kitchen Sink</h2>
 			<p>
 				All the components rendered below have their <code>mode</code> sets to{" "}
-				<code>system</code>.
+				<code>system</code> by default, except for a few ones where we force the
+				mode to be different so that the contrast with the background is
+				accessible (see the Button in the TextInput for example).
 			</p>
 
 			<div className="mb-2 flex flex-wrap gap-2">
@@ -118,7 +124,7 @@ module.exports = {
 						label="Type your question here"
 						helperText="Powered by the sun"
 						rightElement={
-							<Button mode="light" focusMode="light" noBorder>
+							<Button mode="light" noBorder>
 								Send
 							</Button>
 						}
@@ -126,7 +132,7 @@ module.exports = {
 				</div>
 			</form>
 			<div className="my-2 flex flex-wrap">
-				<Table caption="Dune" mode="system">
+				<Table caption="Dune">
 					<TableHead className="uppercase">
 						<TableRow>
 							<TableCell scope="col">Date</TableCell>
@@ -184,7 +190,6 @@ module.exports = {
 			<div className="grid">
 				<Footer
 					noMargins
-					mode="system"
 					row1={<div>App Name v1.0.0</div>}
 					row2={<div>something something</div>}
 				/>
@@ -194,7 +199,7 @@ module.exports = {
 };
 
 export const Automatic: Story<any> = () => (
-	<Card mode="system">
+	<Card>
 		<h1>Automatic Dark Mode</h1>
 		<CommonTemplate />
 	</Card>
