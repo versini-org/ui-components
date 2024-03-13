@@ -8,6 +8,7 @@ export default {
 	title: "Form components/TextInputMask",
 	meta: {
 		importName: "TextInputMask",
+		importPackage: "ui-form",
 	},
 	args: {
 		label: "Enter password",
