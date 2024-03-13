@@ -200,7 +200,7 @@ export const Responsive: Story<any> = (args) => {
 	return (
 		<>
 			<p className="text-copy-lighter">{intro}</p>
-			<Table mode="light" spacing={{ t: 2, b: 2 }}>
+			<Table>
 				<TableHead>
 					<TableRow>
 						<TableCell>Breakpoint prefix</TableCell>
