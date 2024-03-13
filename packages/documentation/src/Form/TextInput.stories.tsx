@@ -6,6 +6,7 @@ export default {
 	title: "Form components/TextInput",
 	meta: {
 		importName: "TextInput",
+		importPackage: "ui-form",
 	},
 	args: {
 		type: "text",

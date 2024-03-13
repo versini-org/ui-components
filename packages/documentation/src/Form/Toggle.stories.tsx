@@ -6,6 +6,7 @@ export default {
 	title: "Form components/Toggle",
 	meta: {
 		importName: "Toggle",
+		importPackage: "ui-form",
 	},
 };
 
