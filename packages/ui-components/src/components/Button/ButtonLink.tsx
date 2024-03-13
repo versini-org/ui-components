@@ -58,9 +58,9 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 				href={link}
 				{...extraProps}
 			>
-				<div {...(!noTruncate && { className: "truncate" })}>
+				<span {...(!noTruncate && { className: "truncate" })}>
 					{formattedLabel?.truncatedString || children}
-				</div>
+				</span>
 			</a>
 		);
 	},
