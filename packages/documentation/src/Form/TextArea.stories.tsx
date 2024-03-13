@@ -23,6 +23,7 @@ export default {
 	title: "Form components/TextArea",
 	meta: {
 		importName: "TextArea",
+		importPackage: "ui-form",
 	},
 	args: {
 		label: "Type your question here",
