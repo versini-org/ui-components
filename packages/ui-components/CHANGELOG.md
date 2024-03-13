@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.7.1](https://github.com/aversini/ui-components/compare/ui-components-v5.7.0...ui-components-v5.7.1) (2024-03-13)
+
+
+### Bug Fixes
+
+* **Anchor:** [a11y] replace `div` with `span` as `div` cannot be placed in `p` ([#409](https://github.com/aversini/ui-components/issues/409)) ([f789f0c](https://github.com/aversini/ui-components/commit/f789f0c49cc4f3275e6abe17795de2384fd77ab0))
+
 ## [5.7.0](https://github.com/aversini/ui-components/compare/ui-components-v5.6.0...ui-components-v5.7.0) (2024-03-12)
 
 
