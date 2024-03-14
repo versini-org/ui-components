@@ -41,7 +41,7 @@ export const Overview: Story<any> = () => (
 
 		<ul>
 			<li>
-				<strong>Strong</strong>: built-i2n components typing via TypeScript.
+				<strong>Strong</strong>: built-in components typing via TypeScript.
 			</li>
 			<li>
 				<strong>Responsive</strong>: built-in responsive components.
