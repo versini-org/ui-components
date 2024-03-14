@@ -192,7 +192,7 @@ export const Responsive: Story<any> = (args) => {
 		{ id: 2, prefix: "md", minwidth: "768px" },
 		{ id: 3, prefix: "lg", minwidth: "1024px" },
 		{ id: 4, prefix: "xl", minwidth: "1280px" },
-		{ id: 5, prefix: "s2xlm", minwidth: "1536px" },
+		{ id: 5, prefix: "2xl", minwidth: "1536px" },
 	];
 	const intro = `FlexgridItem span prop can be configured with multiple breakpoints. Instead of using a single number, an object can be passed with the following keys:`;
 
