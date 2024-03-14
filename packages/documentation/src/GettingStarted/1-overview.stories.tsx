@@ -1,7 +1,6 @@
 import { linkTo, Story } from "@ladle/react";
 import { ButtonIcon } from "@versini/ui-components";
 import { IconNext } from "@versini/ui-icons";
-import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 
 export default {
 	title: "Getting started",
@@ -11,11 +10,11 @@ export const Overview: Story<any> = () => (
 	<>
 		<h1 className="">UI Components</h1>
 
-		<div className="max-w-md overflow-hidden rounded-md shadow-lg md:max-w-2xl dark:shadow-none">
+		<div className="max-w-md overflow-hidden rounded-md shadow-lg md:max-w-4xl dark:shadow-none">
 			<div className="md:flex">
 				<div className="bg-surface-medium md:shrink-0">
 					<img
-						className="my-0 ml-auto mr-auto h-48 w-full object-cover sm:h-52 sm:w-52 md:h-full md:w-60"
+						className="my-0 ml-auto mr-auto h-52 w-52 object-cover sm:h-52 sm:w-52 md:h-full md:w-60"
 						src="hero-14.jpg"
 						alt="An illustration of web page rendered on both desktop and mobile devices"
 					/>
@@ -38,24 +37,11 @@ export const Overview: Story<any> = () => (
 			</div>
 		</div>
 
-		{/* <Flexgrid alignVertical="center">
-			<FlexgridItem span={{ fallback: 12, lg: 6 }}>
-				<ButtonIcon
-					spacing={{ t: 8 }}
-					labelLeft="Installation"
-					onClick={linkTo("getting-started--installation")}
-				>
-					<IconNext monotone />
-				</ButtonIcon>
-			</FlexgridItem>
-		</Flexgrid> */}
-
 		<h2>Features</h2>
 
 		<ul>
 			<li>
-				<strong>Strong</strong>: built-in strong components typing via
-				TypeScript.
+				<strong>Strong</strong>: built-i2n components typing via TypeScript.
 			</li>
 			<li>
 				<strong>Responsive</strong>: built-in responsive components.
