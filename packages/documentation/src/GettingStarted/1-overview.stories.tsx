@@ -9,17 +9,37 @@ export default {
 
 export const Overview: Story<any> = () => (
 	<>
-		<h1 className="mb-0">UI Components</h1>
+		<h1 className="">UI Components</h1>
 
-		<Flexgrid alignVertical="center">
+		<div className="max-w-md overflow-hidden rounded-md shadow-lg md:max-w-2xl dark:shadow-none">
+			<div className="md:flex">
+				<div className="bg-surface-medium md:shrink-0">
+					<img
+						className="my-0 ml-auto mr-auto h-48 w-full object-cover sm:h-52 sm:w-52 md:h-full md:w-60"
+						src="hero-14.jpg"
+						alt="An illustration of web page rendered on both desktop and mobile devices"
+					/>
+				</div>
+				<div className="p-4">
+					<blockquote>
+						<p>
+							The UI Components Library provides a strong, responsive, and
+							accessible set of foundational React components.
+						</p>
+					</blockquote>
+					<ButtonIcon
+						spacing={{ t: 8 }}
+						labelLeft="Installation"
+						onClick={linkTo("getting-started--installation")}
+					>
+						<IconNext monotone />
+					</ButtonIcon>
+				</div>
+			</div>
+		</div>
+
+		{/* <Flexgrid alignVertical="center">
 			<FlexgridItem span={{ fallback: 12, lg: 6 }}>
-				<blockquote>
-					<p className="lead">
-						UI Components provides a strong, responsive, and accessible library
-						of foundational React components.
-					</p>
-				</blockquote>
-
 				<ButtonIcon
 					spacing={{ t: 8 }}
 					labelLeft="Installation"
@@ -28,15 +48,7 @@ export const Overview: Story<any> = () => (
 					<IconNext monotone />
 				</ButtonIcon>
 			</FlexgridItem>
-			<FlexgridItem span={{ fallback: 12, lg: 6 }}>
-				<img
-					className="mt-5"
-					src="hero-14.jpg"
-					alt="An illustration of web page rendered on both desktop and mobile devices."
-					title="Hero image of a web page rendered on both desktop and mobile devices."
-				/>
-			</FlexgridItem>
-		</Flexgrid>
+		</Flexgrid> */}
 
 		<h2>Features</h2>
 
