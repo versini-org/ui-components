@@ -3,6 +3,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
+import { TOGGLE_CLASSNAME } from "../../../common/constants";
 import { Toggle } from "../..";
 
 describe("Toggle (exceptions)", () => {
@@ -22,11 +23,47 @@ describe("Toggle modifiers", () => {
 				onChange={() => {}}
 			/>,
 		);
-		const node = screen.getByText("toto");
-		expectToHaveClasses(node, ["ml-3", "text-sm", "text-copy-lighter"]);
+		const label = screen.getByText("toto");
+		const input = screen.getByRole("checkbox");
+		const toggle = input.nextElementSibling;
+
+		expectToHaveClasses(label, ["ml-3", "text-sm", "text-copy-lighter"]);
+		if (toggle) {
+			expectToHaveClasses(toggle, [
+				TOGGLE_CLASSNAME,
+				"after:absolute",
+				"after:bg-surface-light",
+				"after:border-surface-light",
+				"after:border",
+				"after:content-['']",
+				"after:h-5",
+				"after:left-[2px]",
+				"after:rounded-full",
+				"after:top-[2px]",
+				"after:transition-all",
+				"after:w-5",
+				"bg-surface-darker",
+				"border-border-light",
+				"dark:after:bg-surface-medium",
+				"dark:after:border-surface-medium",
+				"dark:peer-focus:outline-focus-light",
+				"h-6",
+				"peer-checked:after:bg-white",
+				"peer-checked:after:border-white",
+				"peer-checked:after:translate-x-full",
+				"peer-checked:bg-[#5bc236]",
+				"peer-focus:outline-2",
+				"peer-focus:outline-focus-dark",
+				"peer-focus:outline-offset-2",
+				"peer-focus:outline",
+				"peer",
+				"rounded-full",
+				"w-11",
+			]);
+		}
 	});
 
-	it("should render a light Toggle ", async () => {
+	it("should render a light Toggle", async () => {
 		render(
 			<Toggle
 				mode="light"
@@ -36,8 +73,44 @@ describe("Toggle modifiers", () => {
 				onChange={() => {}}
 			/>,
 		);
-		const node = screen.getByText("toto");
-		expectToHaveClasses(node, ["ml-3", "text-sm", "text-copy-dark"]);
+
+		const label = screen.getByText("toto");
+		const input = screen.getByRole("checkbox");
+		const toggle = input.nextElementSibling;
+		expectToHaveClasses(label, ["ml-3", "text-sm", "text-copy-dark"]);
+		if (toggle) {
+			expectToHaveClasses(toggle, [
+				TOGGLE_CLASSNAME,
+				"peer",
+				"h-6",
+				"w-11",
+				"rounded-full",
+				"border-border-dark",
+				"bg-surface-medium",
+				"peer-focus:outline",
+				"peer-focus:outline-2",
+				"peer-focus:outline-offset-2",
+				"peer-focus:outline-focus-dark",
+				"dark:peer-focus:outline-focus-light",
+				"after:left-[2px]",
+				"after:top-[2px]",
+				"after:border",
+				"after:border-surface-light",
+				"dark:after:border-surface-medium",
+				"after:bg-surface-light",
+				"dark:after:bg-surface-medium",
+				"after:absolute",
+				"after:h-5",
+				"after:w-5",
+				"after:rounded-full",
+				"after:transition-all",
+				"after:content-['']",
+				"peer-checked:bg-[#5bc236]",
+				"peer-checked:after:translate-x-full",
+				"peer-checked:after:bg-white",
+				"peer-checked:after:border-white",
+			]);
+		}
 	});
 
 	it("should render a Toggle with no label", async () => {

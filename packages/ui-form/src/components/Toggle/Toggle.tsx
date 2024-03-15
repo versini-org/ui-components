@@ -8,9 +8,15 @@ export const Toggle = ({
 	labelHidden = false,
 	name,
 	mode = "system",
+	focusMode = "system",
 	spacing,
 }: ToggleProps) => {
-	const toggleClasses = getToggleClasses({ mode, labelHidden, spacing });
+	const toggleClasses = getToggleClasses({
+		mode,
+		focusMode,
+		labelHidden,
+		spacing,
+	});
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		onChange?.(e.target.checked);
 	};
