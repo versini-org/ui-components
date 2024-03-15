@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/aversini/ui-components/compare/ui-form-v1.1.0...ui-form-v1.1.1) (2024-03-15)
+
+
+### Bug Fixes
+
+* **Toggle:** better dark and light modes ([#418](https://github.com/aversini/ui-components/issues/418)) ([e3231cf](https://github.com/aversini/ui-components/commit/e3231cf7234c9f4a6454cd77108d01c74ba936b7))
+
 ## [1.1.0](https://github.com/aversini/ui-components/compare/ui-form-v1.0.0...ui-form-v1.1.0) (2024-03-11)
 
 
