@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.8.0](https://github.com/aversini/ui-components/compare/ui-components-v5.7.2...ui-components-v5.8.0) (2024-03-15)
+
+
+### Features
+
+* **Bubble:** adding modes for copy-to-clipboard button ([#416](https://github.com/aversini/ui-components/issues/416)) ([9caf87c](https://github.com/aversini/ui-components/commit/9caf87c5197844c8dc77c181cc78bc76d14df2e8))
+
 ## [5.7.2](https://github.com/aversini/ui-components/compare/ui-components-v5.7.1...ui-components-v5.7.2) (2024-03-15)
 
 
