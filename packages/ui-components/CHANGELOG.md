@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.7.2](https://github.com/aversini/ui-components/compare/ui-components-v5.7.1...ui-components-v5.7.2) (2024-03-15)
+
+
+### Bug Fixes
+
+* **Menu:** no way to update focusMode ([#414](https://github.com/aversini/ui-components/issues/414)) ([2535187](https://github.com/aversini/ui-components/commit/2535187538dbe428a62addb89735d1572b9045c9))
+
 ## [5.7.1](https://github.com/aversini/ui-components/compare/ui-components-v5.7.0...ui-components-v5.7.1) (2024-03-13)
 
 
