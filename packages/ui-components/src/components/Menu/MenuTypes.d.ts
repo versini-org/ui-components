@@ -12,6 +12,11 @@ export interface MenuProps extends SpacingProps {
 	 */
 	defaultPlacement?: Placement;
 	/**
+	 * The type of focus for the Button. This will change the color
+	 * of the focus ring around the Button.
+	 */
+	focusMode?: "dark" | "light" | "system" | "alt-system";
+	/**
 	 * A React component of type Icon to be placed on the left of the label.
 	 */
 	icon?: React.ReactNode;
