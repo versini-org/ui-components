@@ -14,6 +14,15 @@ export type BubbleProps = {
 	 */
 	copyToClipboard?: boolean | string | ((text: any) => void);
 	/**
+	 * The type of focus for the Copy Button. This will change the color
+	 * of the focus ring around the Button.
+	 */
+	copyToClipboardFocusMode?: "dark" | "light" | "system" | "alt-system";
+	/**
+	 * The mode of Copy Button. This will change the color of the Button.
+	 */
+	copyToClipboardMode?: "dark" | "light" | "system" | "alt-system";
+	/**
 	 * Object depicting the extra rows for the Bubble.
 	 * @example
 	 * ```tsx

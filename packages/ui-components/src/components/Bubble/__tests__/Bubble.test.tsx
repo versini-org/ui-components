@@ -4,7 +4,7 @@ import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
-import { BUBBLE_CLASSNAME } from "../../../common/constants";
+import { BUBBLE_CLASSNAME, BUTTON_CLASSNAME } from "../../../common/constants";
 import { Bubble } from "../..";
 
 describe("Bubble (exceptions)", () => {
@@ -195,6 +195,152 @@ describe("Bubble modifiers", () => {
 			"text-start",
 			"text-xs",
 			"text-red-500",
+		]);
+	});
+
+	it("should render a default (system) copy button", async () => {
+		render(
+			<Bubble kind="left" copyToClipboard>
+				hello
+			</Bubble>,
+		);
+		await screen.findByText("hello");
+		await screen.findByLabelText("Copy to clipboard");
+		const button = await screen.findByRole("button");
+		expect(button).toBeInTheDocument();
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"active:bg-action-dark-active",
+			"active:text-copy-light-active",
+			"border-transparent",
+			"border",
+			"dark:active:bg-action-light-active",
+			"dark:focus:outline-focus-light",
+			"dark:hover:bg-action-light-hover",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-8",
+			"hover:bg-action-dark-hover",
+			"hover:text-copy-light-hover",
+			"inline-flex",
+			"items-center",
+			"justify-center",
+			"not-prose",
+			"p-1",
+			"rounded-full",
+			"w-8",
+		]);
+	});
+
+	it("should render a light copy button", async () => {
+		render(
+			<Bubble kind="left" copyToClipboard copyToClipboardMode="light">
+				hello
+			</Bubble>,
+		);
+		await screen.findByText("hello");
+		await screen.findByLabelText("Copy to clipboard");
+		const button = await screen.findByRole("button");
+		expect(button).toBeInTheDocument();
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"active:bg-action-light-active",
+			"active:text-copy-light-active",
+			"border-transparent",
+			"border",
+			"dark:focus:outline-focus-light",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-8",
+			"hover:bg-action-light-hover",
+			"hover:text-copy-light-hover",
+			"inline-flex",
+			"items-center",
+			"justify-center",
+			"not-prose",
+			"p-1",
+			"rounded-full",
+			"w-8",
+		]);
+	});
+
+	it("should render a light copy button with light focus", async () => {
+		render(
+			<Bubble
+				kind="left"
+				copyToClipboard
+				copyToClipboardMode="light"
+				copyToClipboardFocusMode="light"
+			>
+				hello
+			</Bubble>,
+		);
+		await screen.findByText("hello");
+		await screen.findByLabelText("Copy to clipboard");
+		const button = await screen.findByRole("button");
+		expect(button).toBeInTheDocument();
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"active:bg-action-light-active",
+			"active:text-copy-light-active",
+			"border-transparent",
+			"border",
+			"focus:outline-2",
+			"focus:outline-focus-light",
+			"focus:outline-offset-2",
+			"focus:outline",
+			"h-8",
+			"hover:bg-action-light-hover",
+			"hover:text-copy-light-hover",
+			"inline-flex",
+			"items-center",
+			"justify-center",
+			"not-prose",
+			"p-1",
+			"rounded-full",
+			"w-8",
+		]);
+	});
+
+	it("should render a light copy button with dark focus", async () => {
+		render(
+			<Bubble
+				kind="left"
+				copyToClipboard
+				copyToClipboardMode="light"
+				copyToClipboardFocusMode="dark"
+			>
+				hello
+			</Bubble>,
+		);
+		await screen.findByText("hello");
+		await screen.findByLabelText("Copy to clipboard");
+		const button = await screen.findByRole("button");
+		expect(button).toBeInTheDocument();
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"not-prose",
+			"rounded-full",
+			"inline-flex",
+			"items-center",
+			"justify-center",
+			"h-8",
+			"w-8",
+			"p-1",
+			"border",
+			"border-transparent",
+			"focus:outline",
+			"focus:outline-2",
+			"focus:outline-offset-2",
+			"focus:outline-focus-dark",
+			"hover:text-copy-light-hover",
+			"hover:bg-action-light-hover",
+			"active:text-copy-light-active",
+			"active:bg-action-light-active",
 		]);
 	});
 });

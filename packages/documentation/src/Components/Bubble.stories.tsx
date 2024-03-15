@@ -174,3 +174,18 @@ export const Copy: Story<any> = (args) => {
 		</div>
 	);
 };
+
+Copy.args = {
+	copyToClipboardMode: "system",
+	copyToClipboardFocusMode: "system",
+};
+Copy.argTypes = {
+	copyToClipboardMode: {
+		options: ["dark", "light", "system", "alt-system"],
+		control: { type: "radio" },
+	},
+	copyToClipboardFocusMode: {
+		options: ["dark", "light", "system", "alt-system"],
+		control: { type: "radio" },
+	},
+};
