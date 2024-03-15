@@ -12,6 +12,8 @@ export const Bubble = ({
 	footer,
 	rawFooter,
 	copyToClipboard,
+	copyToClipboardFocusMode = "system",
+	copyToClipboardMode = "system",
 	spacing,
 }: BubbleProps) => {
 	const [copied, setCopied] = useState(false);
@@ -68,8 +70,8 @@ export const Bubble = ({
 			{isCopyToClipboardEnabled && (
 				<div className={bubbleClasses.copyButton}>
 					<ButtonIcon
-						mode="system"
-						focusMode="system"
+						mode={copyToClipboardMode}
+						focusMode={copyToClipboardFocusMode}
 						label={copied ? "Copied to clipboard" : "Copy to clipboard"}
 						noBorder
 						noBackground
