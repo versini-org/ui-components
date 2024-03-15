@@ -23,13 +23,19 @@ export default {
 	},
 	args: {
 		mode: "system",
+		focusMode: "system",
 		defaultPlacement: "bottom-start",
 	},
 	argTypes: {
+		focusMode: {
+			control: { type: "radio" },
+			options: ["dark", "light", "system", "alt-system"],
+		},
 		mode: {
 			control: { type: "radio" },
 			options: ["dark", "light", "system", "alt-system"],
 		},
+
 		defaultPlacement: {
 			control: { type: "select" },
 			options: [
@@ -98,7 +104,7 @@ export const WithMessageBox: Story<any> = (args) => {
 	return (
 		<>
 			<Panel
-				mode="messagebox"
+				kind="messagebox"
 				open={showMessage}
 				onOpenChange={setShowMessage}
 				title="Log out"
