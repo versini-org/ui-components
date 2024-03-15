@@ -1,7 +1,6 @@
 import type { SpacingProps } from "@versini/ui-private/dist/utilities";
 
 export type ToggleProps = {
-	checked: boolean;
 	/**
 	 * The label to use for the component.
 	 */
@@ -15,6 +14,16 @@ export type ToggleProps = {
 	 * @param checked whether or not the component is checked
 	 */
 	onChange: (checked: boolean) => void;
+	/**
+	 * Whether or not the component is checked.
+	 * @default false
+	 */
+	checked?: boolean;
+	/**
+	 * The type of focus for the Button. This will change the color
+	 * of the focus ring around the Button.
+	 */
+	focusMode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * Whether or not to render the label.
 	 * @default false
