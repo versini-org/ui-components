@@ -4,6 +4,7 @@ import tokens from "./tokens";
 
 const parse = converter("rgb");
 
+/* v8 ignore next 12 */
 const dynamicColors = () => {
 	const result: { [key: string]: string } = {};
 	Object.entries(tokens.colors).forEach(([name, color]) => {

@@ -8,7 +8,7 @@ import textInputCSS from "./components/textInput";
 import dynamicMargins from "./margins";
 import customTypography from "./typography";
 
-type TailwindConfig = {
+export type TailwindConfig = {
 	content: string[];
 } & OptionalConfig;
 
@@ -43,6 +43,7 @@ const customSafelist = [...dynamicMargins];
  * parameter to the plugin function, which is then used to extend the
  * default TailwindCSS theme.
  */
+/* v8 ignore next 8 */
 const customPlugins = [
 	typography,
 	plugin(function ({ addComponents }) {

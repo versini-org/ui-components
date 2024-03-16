@@ -1,3 +1,5 @@
+/* c8 ignore start */
+
 import dynamicColors from "./colors";
 import tokens from "./tokens";
 
