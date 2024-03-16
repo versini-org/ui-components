@@ -27,7 +27,7 @@
 		"dev:types": "tsup --watch src",
 		"dev": "npm-run-all clean --parallel dev:js dev:types",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
-		"test:coverage": "echo \"WARNING: no test specified\" && exit 0",
+		"test:coverage": "vitest run --coverage",
 		"test:watch": "vitest",
 		"test": "cross-env-shell NODE_ENV=test vitest run"
 	},
