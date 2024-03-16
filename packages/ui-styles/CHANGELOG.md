@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/aversini/ui-components/compare/ui-styles-v1.4.0...ui-styles-v1.4.1) (2024-03-16)
+
+
+### Bug Fixes
+
+* **ui-styles:** adding as much test coverage as possible ([#420](https://github.com/aversini/ui-components/issues/420)) ([e9b9d5b](https://github.com/aversini/ui-components/commit/e9b9d5b74ceab21a57199c4098320ba4323980e6))
+
 ## [1.4.0](https://github.com/aversini/ui-components/compare/ui-styles-v1.3.0...ui-styles-v1.4.0) (2024-03-11)
 
 
