@@ -40,6 +40,20 @@ export default twPlugin.merge({
 			</code>
 		</pre>
 
+		<p>
+			Finally, while our Typography styles could be used as is, some styles are
+			taking advantage of the Open Sans font if it is available. To add it to
+			your project, simply copy the following lines in your index.html{" "}
+			<code>head</code>:
+		</p>
+		<pre>
+			<code>
+				{`<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">`}
+			</code>
+		</pre>
+
 		<h2>Usage</h2>
 		<p>
 			Now you can use the <code>prose-dark</code>,<code>prose-light</code> and{" "}
