@@ -23,6 +23,7 @@ type getButtonClassesProps = {
 	labelLeft?: string;
 	labelRight?: string;
 	noBackground?: boolean;
+	variant?: "primary" | "secondary" | "danger";
 } & SpacingProps;
 
 const getButtonSizesClasses = ({
@@ -73,74 +74,174 @@ const getButtonSizesClasses = ({
 const getButtonBaseClasses = ({
 	mode,
 	noBackground,
+	variant,
 }: {
-	mode: string;
+	mode: "dark" | "light" | "system" | "alt-system";
+	variant: "primary" | "secondary" | "danger";
 	noBackground?: boolean;
 }) => {
-	return clsx("not-prose rounded-full", {
-		"bg-action-dark text-copy-light": mode === "dark" && !noBackground,
-		"bg-action-light text-copy-lighter": mode === "light" && !noBackground,
-		"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
-			mode === "system" && !noBackground,
-		"bg-action-light text-copy-lighter dark:bg-action-dark dark:text-copy-light":
-			mode === "alt-system" && !noBackground,
-	});
+	if (noBackground) {
+		return "not-prose rounded-full";
+	}
+
+	if (variant === "primary") {
+		return clsx("not-prose rounded-full", {
+			"bg-action-dark text-copy-light": mode === "dark",
+			"bg-action-light text-copy-lighter": mode === "light",
+			"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
+				mode === "system",
+			"bg-action-light text-copy-lighter dark:bg-action-dark dark:text-copy-light":
+				mode === "alt-system",
+		});
+	}
+	if (variant === "secondary") {
+		return clsx("not-prose rounded-full", {
+			"bg-action-dark text-copy-light": mode === "light",
+			"bg-action-light text-copy-lighter": mode === "dark",
+			"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
+				mode === "alt-system",
+			"bg-action-light text-copy-lighter dark:bg-action-dark dark:text-copy-light":
+				mode === "system",
+		});
+	}
+	if (variant === "danger") {
+		return clsx("not-prose rounded-full", {
+			"bg-action-danger-dark text-copy-light": mode === "dark",
+			"bg-action-danger-light text-copy-lighter": mode === "light",
+			"bg-action-danger-dark text-copy-light dark:bg-action-danger-light dark:text-copy-lighter":
+				mode === "system",
+			"bg-action-danger-light text-copy-lighter dark:bg-action-danger-dark dark:text-copy-light":
+				mode === "alt-system",
+		});
+	}
 };
 
 const getButtonHoverClasses = ({
 	mode,
 	disabled,
+	variant,
 }: {
 	disabled: boolean;
-	mode: string;
+	mode: "dark" | "light" | "system" | "alt-system";
+	variant: "primary" | "secondary" | "danger";
 }) => {
-	return disabled
-		? ""
-		: clsx("hover:text-copy-light-hover", {
-				"hover:bg-action-dark-hover": mode === "dark",
-				"hover:bg-action-light-hover": mode === "light",
-				"hover:bg-action-dark-hover dark:hover:bg-action-light-hover":
-					mode === "system",
-				"hover:bg-action-light-hover dark:hover:bg-action-dark-hover":
-					mode === "alt-system",
-			});
+	if (disabled) {
+		return "";
+	}
+	if (variant === "primary") {
+		return clsx("hover:text-copy-light-hover", {
+			"hover:bg-action-dark-hover": mode === "dark",
+			"hover:bg-action-light-hover": mode === "light",
+			"hover:bg-action-dark-hover dark:hover:bg-action-light-hover":
+				mode === "system",
+			"hover:bg-action-light-hover dark:hover:bg-action-dark-hover":
+				mode === "alt-system",
+		});
+	}
+	if (variant === "secondary") {
+		return clsx("hover:text-copy-light-hover", {
+			"hover:bg-action-dark-hover": mode === "light",
+			"hover:bg-action-light-hover": mode === "dark",
+			"hover:bg-action-dark-hover dark:hover:bg-action-light-hover":
+				mode === "alt-system",
+			"hover:bg-action-light-hover dark:hover:bg-action-dark-hover":
+				mode === "system",
+		});
+	}
+	if (variant === "danger") {
+		return clsx("hover:text-copy-light-hover", {
+			"hover:bg-action-danger-dark-hover": mode === "dark",
+			"hover:bg-action-danger-light-hover": mode === "light",
+			"hover:bg-action-danger-dark-hover dark:hover:bg-action-danger-light-hover":
+				mode === "system",
+			"hover:bg-action-danger-light-hover dark:hover:bg-action-danger-dark-hover":
+				mode === "alt-system",
+		});
+	}
 };
 
 const getButtonActiveClasses = ({
 	mode,
 	disabled,
+	variant,
 }: {
 	disabled: boolean;
-	mode: string;
+	mode: "dark" | "light" | "system" | "alt-system";
+	variant: "primary" | "secondary" | "danger";
 }) => {
-	return disabled
-		? ""
-		: clsx("active:text-copy-light-active", {
-				"active:bg-action-dark-active": mode === "dark",
-				"active:bg-action-light-active": mode === "light",
-				"active:bg-action-dark-active dark:active:bg-action-light-active":
-					mode === "system",
-				"active:bg-action-light-active dark:active:bg-action-dark-active":
-					mode === "alt-system",
-			});
+	if (disabled) {
+		return "";
+	}
+	if (variant === "primary") {
+		return clsx("active:text-copy-light-active", {
+			"active:bg-action-dark-active": mode === "dark",
+			"active:bg-action-light-active": mode === "light",
+			"active:bg-action-dark-active dark:active:bg-action-light-active":
+				mode === "system",
+			"active:bg-action-light-active dark:active:bg-action-dark-active":
+				mode === "alt-system",
+		});
+	}
+	if (variant === "secondary") {
+		return clsx("active:text-copy-light-active", {
+			"active:bg-action-dark-active": mode === "light",
+			"active:bg-action-light-active": mode === "dark",
+			"active:bg-action-dark-active dark:active:bg-action-light-active":
+				mode === "alt-system",
+			"active:bg-action-light-active dark:active:bg-action-dark-active":
+				mode === "system",
+		});
+	}
+	if (variant === "danger") {
+		return clsx("active:text-copy-lighter-active", {
+			"active:bg-action-danger-dark-active": mode === "dark",
+			"active:bg-action-danger-light-active": mode === "light",
+			"active:bg-action-danger-dark-active dark:active:bg-action-danger-light-active":
+				mode === "system",
+			"active:bg-action-danger-light-active dark:active:bg-action-danger-dark-active":
+				mode === "alt-system",
+		});
+	}
 };
 
 const getButtonBorderClasses = ({
 	mode,
 	noBorder,
+	variant,
 }: {
-	mode: string;
+	mode: "dark" | "light" | "system" | "alt-system";
 	noBorder: boolean;
+	variant: "primary" | "secondary" | "danger";
 }) => {
-	return clsx("border", {
-		"border-border-dark": !noBorder && mode === "dark",
-		"border-border-light": !noBorder && mode === "light",
-		"border-border-dark dark:border-border-light":
-			!noBorder && mode === "system",
-		"border-border-light dark:border-border-dark":
-			!noBorder && mode === "alt-system",
-		"border-transparent": noBorder,
-	});
+	if (noBorder) {
+		return "border border-transparent";
+	}
+	if (variant === "primary") {
+		return clsx("border", {
+			"border-border-dark": mode === "dark",
+			"border-border-light": mode === "light",
+			"border-border-dark dark:border-border-light": mode === "system",
+			"border-border-light dark:border-border-dark": mode === "alt-system",
+		});
+	}
+	if (variant === "secondary") {
+		return clsx("border", {
+			"border-border-dark": mode === "light",
+			"border-border-light": mode === "dark",
+			"border-border-dark dark:border-border-light": mode === "alt-system",
+			"border-border-light dark:border-border-dark": mode === "system",
+		});
+	}
+	if (variant === "danger") {
+		return clsx("border", {
+			"border-border-danger-dark": mode === "dark",
+			"border-border-danger-medium": mode === "light",
+			"border-border-danger-dark dark:border-border-danger-medium":
+				mode === "system",
+			"border-border-danger-medium dark:border-border-danger-dark":
+				mode === "alt-system",
+		});
+	}
 };
 
 const getButtonFocusClasses = ({ focusMode }: { focusMode: string }) => {
@@ -170,19 +271,23 @@ export const getButtonClasses = ({
 	labelLeft,
 	spacing,
 	noBackground,
+	variant,
 }: getButtonClassesProps) => {
+	if (!variant) {
+		variant = "primary";
+	}
 	return raw
 		? clsx(BUTTON_CLASSNAME, className)
 		: clsx(
 				BUTTON_CLASSNAME,
 				className,
 				getSpacing(spacing),
-				getButtonBaseClasses({ mode, noBackground }),
+				getButtonBaseClasses({ mode, variant, noBackground }),
 				getButtonSizesClasses({ type, size, labelRight, labelLeft }),
-				getButtonBorderClasses({ mode, noBorder }),
+				getButtonBorderClasses({ mode, variant, noBorder }),
 				getButtonFocusClasses({ focusMode }),
-				getButtonHoverClasses({ mode, disabled }),
-				getButtonActiveClasses({ mode, disabled }),
+				getButtonHoverClasses({ mode, variant, disabled }),
+				getButtonActiveClasses({ mode, variant, disabled }),
 				{
 					"w-full": fullWidth,
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,

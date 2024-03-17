@@ -15,6 +15,14 @@ export default {
 		"action-light-hover": colors.slate[600],
 		"action-light-active": colors.slate[700],
 
+		"action-danger-dark": colors.red[900],
+		"action-danger-dark-hover": colors.red[700],
+		"action-danger-dark-active": colors.red[600],
+
+		"action-danger-light": colors.red[600],
+		"action-danger-light-hover": colors.red[700],
+		"action-danger-light-active": colors.red[800],
+
 		/**
 		 * Surface tokens.
 		 */
@@ -62,6 +70,10 @@ export default {
 		"border-dark": colors.slate[900],
 		"border-medium": colors.slate[400],
 		"border-light": colors.slate[300],
+
+		"border-danger-dark": colors.red[900],
+		"border-danger-medium": colors.red[400],
+		"border-danger-light": colors.red[300],
 
 		"border-white": "#ffffff",
 		"border-error-dark": colors.red[700],

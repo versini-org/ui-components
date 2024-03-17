@@ -49,6 +49,10 @@ export type ButtonProps = {
 	 * Handler to call when the Button is clicked.
 	 */
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	/**
+	 * The variant style of the Button.
+	 */
+	variant?: "primary" | "secondary" | "danger";
 } & CommonButtonProps &
 	React.ButtonHTMLAttributes<HTMLButtonElement>;
 
