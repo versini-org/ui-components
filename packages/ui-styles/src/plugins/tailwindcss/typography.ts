@@ -13,6 +13,7 @@ export default {
 						maxWidth: "inherit",
 						"h1, h2, h3, h4, h5, h6": {
 							fontFamily: "Open Sans, ui-sans-serif, system-ui, sans-serif",
+							fontWeight: "400",
 						},
 						blockquote: {
 							borderLeftWidth: "6px",
