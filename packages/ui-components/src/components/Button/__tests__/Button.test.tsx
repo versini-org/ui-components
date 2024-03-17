@@ -174,10 +174,132 @@ describe("Button modifiers", () => {
 		]);
 	});
 
-	it("should render a light button", async () => {
-		render(<Button mode="light">hello</Button>);
+	it("should render a dark button with variant 'secondary'", async () => {
+		render(
+			<Button mode="dark" variant="secondary">
+				hello
+			</Button>,
+		);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["bg-action-light", "text-copy-lighter"]);
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"not-prose",
+			"rounded-full",
+			"bg-action-light",
+			"text-copy-lighter",
+			"px-4",
+			"text-base",
+			"font-medium",
+			"max-h-9",
+			"py-1",
+			"border",
+			"border-border-light",
+			"focus:outline",
+			"focus:outline-2",
+			"focus:outline-offset-2",
+			"focus:outline-focus-dark",
+			"dark:focus:outline-focus-light",
+			"hover:text-copy-light-hover",
+			"hover:bg-action-light-hover",
+			"active:text-copy-light-active",
+			"active:bg-action-light-active",
+		]);
+	});
+
+	it("should render a light button with variant 'secondary'", async () => {
+		render(
+			<Button mode="light" variant="secondary">
+				hello
+			</Button>,
+		);
+		const button = await screen.findByRole("button");
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"not-prose",
+			"rounded-full",
+			"bg-action-dark",
+			"text-copy-light",
+			"px-4",
+			"text-base",
+			"font-medium",
+			"max-h-9",
+			"py-1",
+			"border",
+			"border-border-dark",
+			"focus:outline",
+			"focus:outline-2",
+			"focus:outline-offset-2",
+			"focus:outline-focus-dark",
+			"dark:focus:outline-focus-light",
+			"hover:text-copy-light-hover",
+			"hover:bg-action-dark-hover",
+			"active:text-copy-light-active",
+			"active:bg-action-dark-active",
+		]);
+	});
+
+	it("should render a dark button with variant 'danger'", async () => {
+		render(
+			<Button mode="dark" variant="danger">
+				hello
+			</Button>,
+		);
+		const button = await screen.findByRole("button");
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"not-prose",
+			"rounded-full",
+			"bg-action-danger-dark",
+			"text-copy-light",
+			"px-4",
+			"text-base",
+			"font-medium",
+			"max-h-9",
+			"py-1",
+			"border",
+			"border-border-danger-dark",
+			"focus:outline",
+			"focus:outline-2",
+			"focus:outline-offset-2",
+			"focus:outline-focus-dark",
+			"dark:focus:outline-focus-light",
+			"hover:text-copy-light-hover",
+			"hover:bg-action-danger-dark-hover",
+			"active:text-copy-lighter-active",
+			"active:bg-action-danger-dark-active",
+		]);
+	});
+
+	it("should render a light button with variant 'danger'", async () => {
+		render(
+			<Button mode="light" variant="danger">
+				hello
+			</Button>,
+		);
+		const button = await screen.findByRole("button");
+		expectToHaveClasses(button, [
+			BUTTON_CLASSNAME,
+			"not-prose",
+			"rounded-full",
+			"bg-action-danger-light",
+			"text-copy-lighter",
+			"px-4",
+			"text-base",
+			"font-medium",
+			"max-h-9",
+			"py-1",
+			"border",
+			"border-border-danger-medium",
+			"focus:outline",
+			"focus:outline-2",
+			"focus:outline-offset-2",
+			"focus:outline-focus-dark",
+			"dark:focus:outline-focus-light",
+			"hover:text-copy-light-hover",
+			"hover:bg-action-danger-light-hover",
+			"active:text-copy-lighter-active",
+			"active:bg-action-danger-light-active",
+		]);
 	});
 
 	it("should render a disabled dark button", async () => {
