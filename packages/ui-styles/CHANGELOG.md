@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/aversini/ui-components/compare/ui-styles-v1.5.0...ui-styles-v1.5.1) (2024-03-17)
+
+
+### Bug Fixes
+
+* **ui-styles:** h1 to h6 should not be bold ([#426](https://github.com/aversini/ui-components/issues/426)) ([ce0e593](https://github.com/aversini/ui-components/commit/ce0e5934639d45ba86a83edbb42da52c39c9fc38))
+
 ## [1.5.0](https://github.com/aversini/ui-components/compare/ui-styles-v1.4.1...ui-styles-v1.5.0) (2024-03-17)
 
 
