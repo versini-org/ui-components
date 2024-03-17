@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/aversini/ui-components/compare/ui-styles-v1.4.1...ui-styles-v1.5.0) (2024-03-17)
+
+
+### Features
+
+* **Button:** adding prop variant to support different styles ([#424](https://github.com/aversini/ui-components/issues/424)) ([49eaf4f](https://github.com/aversini/ui-components/commit/49eaf4f6ca7c267a210d0ab1ef377366605e1e4c))
+
 ## [1.4.1](https://github.com/aversini/ui-components/compare/ui-styles-v1.4.0...ui-styles-v1.4.1) (2024-03-16)
 
 
