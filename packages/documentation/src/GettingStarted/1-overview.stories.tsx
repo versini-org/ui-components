@@ -1,6 +1,7 @@
 import { linkTo, Story } from "@ladle/react";
 import { ButtonIcon } from "@versini/ui-components";
 import { IconNext } from "@versini/ui-icons";
+import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 
 export default {
 	title: "Getting started",
@@ -19,6 +20,7 @@ export const Overview: Story<any> = () => (
 						alt="An illustration of web page rendered on both desktop and mobile devices"
 					/>
 				</div>
+
 				<div className="p-4">
 					<blockquote>
 						<p>
@@ -26,13 +28,16 @@ export const Overview: Story<any> = () => (
 							accessible set of foundational React components.
 						</p>
 					</blockquote>
-					<ButtonIcon
-						spacing={{ t: 8 }}
-						labelLeft="Installation"
-						onClick={linkTo("getting-started--installation")}
-					>
-						<IconNext monotone />
-					</ButtonIcon>
+					<Flexgrid alignHorizontal="flex-end">
+						<FlexgridItem>
+							<ButtonIcon
+								labelLeft="Installation"
+								onClick={linkTo("getting-started--installation")}
+							>
+								<IconNext monotone />
+							</ButtonIcon>
+						</FlexgridItem>
+					</Flexgrid>
 				</div>
 			</div>
 		</div>

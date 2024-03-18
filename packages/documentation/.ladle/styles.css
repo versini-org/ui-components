@@ -12,7 +12,7 @@
 	html,
 	body,
 	.ladle-background {
-		background-color: white;
+		background-color: #f9fafb;
 	}
 }
 @media (prefers-color-scheme: dark) {
