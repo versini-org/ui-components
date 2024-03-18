@@ -9,6 +9,7 @@ import {
 } from "@versini/ui-components";
 import { IconNext, IconPrevious } from "@versini/ui-icons";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
+import { Highlight, themes } from "prism-react-renderer";
 
 export default {
 	title: "Getting Started",
@@ -42,6 +43,9 @@ const data = [
 		description: "System level components such as Flexgrid and ThemeProvider.",
 	},
 ];
+
+const installBlock = `$ npm install --save-dev @versini/ui-styles
+$ npm install --save @versini/ui-components`;
 
 export const Installation: Story<any> = () => (
 	<>
@@ -83,19 +87,40 @@ export const Installation: Story<any> = () => (
 			If you only need some core components and of course the CSS styles
 			associated<sup>1</sup>, use the following command:
 		</p>
-		<pre>
-			<code>
-				{`$ npm install --save-dev @versini/ui-styles
-$ npm install --save @versini/ui-components
-`}
-			</code>
-		</pre>
+		<Highlight theme={themes.vsDark} code={installBlock} language="jsx">
+			{({ style, tokens, getLineProps, getTokenProps }) => (
+				<pre style={style}>
+					{tokens.map((line, i) => (
+						<div key={i} {...getLineProps({ line })}>
+							{line.map((token, key) => (
+								<span key={key} {...getTokenProps({ token })} />
+							))}
+						</div>
+					))}
+				</pre>
+			)}
+		</Highlight>
+
 		<p>
 			You also need to install React and React-DOM (at least 18.0.0 or above).
 		</p>
-		<pre>
-			<code>$ npm install --save react react-dom</code>
-		</pre>
+		<Highlight
+			theme={themes.vsDark}
+			code={`$ npm install --save react react-dom`}
+			language="jsx"
+		>
+			{({ style, tokens, getLineProps, getTokenProps }) => (
+				<pre style={style}>
+					{tokens.map((line, i) => (
+						<div key={i} {...getLineProps({ line })}>
+							{line.map((token, key) => (
+								<span key={key} {...getTokenProps({ token })} />
+							))}
+						</div>
+					))}
+				</pre>
+			)}
+		</Highlight>
 
 		<p>
 			<sup>1</sup>{" "}

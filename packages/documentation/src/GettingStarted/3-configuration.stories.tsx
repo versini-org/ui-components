@@ -2,10 +2,21 @@ import { linkTo, Story } from "@ladle/react";
 import { ButtonIcon } from "@versini/ui-components";
 import { IconNext, IconPrevious } from "@versini/ui-icons";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
+import { Highlight, themes } from "prism-react-renderer";
 
 export default {
 	title: "Getting Started",
 };
+
+const codeBlock = `// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+
+import { twPlugin } from "@versini/ui-styles";
+
+export default twPlugin.merge({
+  // this is an example, you can change the path to your files
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+});`;
 
 export const Configuration: Story<any> = () => (
 	<>
@@ -44,19 +55,21 @@ export const Configuration: Story<any> = () => (
 			you can take advantage of tree-shaking unused styles:
 		</p>
 
-		<pre>
-			<code>
-				{`// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-
-import { twPlugin } from "@versini/ui-styles";
-
-export default twPlugin.merge({
-  // this is an example, you can change the path to your files
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
-});`}
-			</code>
-		</pre>
+		<div>
+			<Highlight theme={themes.vsDark} code={codeBlock} language="jsx">
+				{({ style, tokens, getLineProps, getTokenProps }) => (
+					<pre style={style}>
+						{tokens.map((line, i) => (
+							<div key={i} {...getLineProps({ line })}>
+								{line.map((token, key) => (
+									<span key={key} {...getTokenProps({ token })} />
+								))}
+							</div>
+						))}
+					</pre>
+				)}
+			</Highlight>
+		</div>
 
 		<Flexgrid alignHorizontal="space-between">
 			<FlexgridItem>
