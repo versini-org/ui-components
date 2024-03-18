@@ -268,7 +268,7 @@ export const Lighter: Story<any> = () => (
 );
 
 export const Dark: Story<any> = () => (
-	<div className="bg-white p-11">
+	<div className="bg-gray-50 p-11">
 		<div className="prose prose-dark max-w-none">
 			<h1>Dark</h1>
 			<CommonTemplate
