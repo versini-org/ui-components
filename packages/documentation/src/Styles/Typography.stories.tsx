@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import type { Story } from "@ladle/react";
+import { Highlight, themes } from "prism-react-renderer";
 
 export default { title: "Styles/Typography" };
 
@@ -14,9 +15,23 @@ const CommonTemplate = ({
 	return (
 		<>
 			{intro}
-			<pre>
-				<code>{`<div className="prose prose-${type}>...</div>`}</code>
-			</pre>
+			<Highlight
+				theme={type === "light" ? themes.vsLight : themes.vsDark}
+				code={`<div className="prose prose-${type}>...</div>`}
+				language="jsx"
+			>
+				{({ style, tokens, getLineProps, getTokenProps }) => (
+					<pre style={style}>
+						{tokens.map((line, i) => (
+							<div key={i} {...getLineProps({ line })}>
+								{line.map((token, key) => (
+									<span key={key} {...getTokenProps({ token })} />
+								))}
+							</div>
+						))}
+					</pre>
+				)}
+			</Highlight>
 			<p>
 				By default, Tailwind removes all of the default browser styling from
 				paragraphs, headings, lists and more. This ends up being really useful
@@ -54,7 +69,9 @@ const CommonTemplate = ({
 				that you can slap on any block of vanilla HTML content and turn it into
 				a beautiful, well-formatted document:
 			</p>
-			<pre>{`<article className="prose prose-${type}">
+			<Highlight
+				theme={type === "light" ? themes.vsLight : themes.vsDark}
+				code={`<article class="prose prose-dark">
   <h1>Garlic bread with cheese: What the science tells us</h1>
   <p>
     For years parents have espoused the health benefits of eating
@@ -64,11 +81,24 @@ const CommonTemplate = ({
   </p>
   <p>
     But a recent study shows that the celebrated appetizer may be
-    linked to a series of rabies cases springing up around the
-    country.
+    linked to a series of rabies cases springing up around the country.
   </p>
   <!-- ... -->
-</article>`}</pre>
+</article>`}
+				language="markup"
+			>
+				{({ style, tokens, getLineProps, getTokenProps }) => (
+					<pre style={style}>
+						{tokens.map((line, i) => (
+							<div key={i} {...getLineProps({ line })}>
+								{line.map((token, key) => (
+									<span key={key} {...getTokenProps({ token })} />
+								))}
+							</div>
+						))}
+					</pre>
+				)}
+			</Highlight>
 			<h2>What to expect from here on out</h2>
 			<p>
 				What follows from here is just a bunch of absolute nonsense I've written
@@ -101,17 +131,6 @@ const CommonTemplate = ({
 					like trash. Make it good then it won't be bad.
 				</p>
 			</blockquote>
-			<p>
-				It's probably important that images look okay here by default as well:
-			</p>
-			<figure>
-				<img src="hero-14.jpg" alt="" />
-				<figcaption>
-					Contrary to popular belief, Lorem Ipsum is not simply random text. It
-					has roots in a piece of classical Latin literature from 45 BC, making
-					it over 2000 years old.
-				</figcaption>
-			</figure>
 			<p>
 				Now I'm going to show you an example of an unordered list to make sure
 				that looks good, too:
