@@ -7,6 +7,11 @@ const packageJson = fs.readJSONSync(
 );
 
 export default {
+	esbuild: {
+		supported: {
+			"top-level-await": true,
+		},
+	},
 	server: {
 		open: false,
 	},
