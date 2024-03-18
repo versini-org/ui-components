@@ -24,6 +24,7 @@ import {
 	IconRestore,
 	IconSettings,
 } from "@versini/ui-icons";
+import { Highlight, themes } from "prism-react-renderer";
 
 export default { title: "Styles/Components" };
 
@@ -48,6 +49,16 @@ const data = [
 	},
 ];
 
+const codeBlock = `// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+
+import { twPlugin } from "@versini/ui-styles";
+
+export default twPlugin.merge({
+  darkMode: "selector",
+  ...
+});`;
+
 const CommonTemplate = () => {
 	return (
 		<>
@@ -68,15 +79,19 @@ const CommonTemplate = () => {
 				If you want to toggle dark mode manually instead of relying on the
 				operating system preference, use the Tailwind selector strategy:
 			</p>
-			<pre className="my-0">
-				<code>
-					{`// tailwind.config.js
-module.exports = {
-  darkMode: 'selector',
-  // ...
-}`}
-				</code>
-			</pre>
+			<Highlight theme={themes.vsDark} code={codeBlock} language="jsx">
+				{({ style, tokens, getLineProps, getTokenProps }) => (
+					<pre style={style}>
+						{tokens.map((line, i) => (
+							<div key={i} {...getLineProps({ line })}>
+								{line.map((token, key) => (
+									<span key={key} {...getTokenProps({ token })} />
+								))}
+							</div>
+						))}
+					</pre>
+				)}
+			</Highlight>
 			<p>
 				Now instead of dark classes being applied based on{" "}
 				<code>prefers-color-scheme</code>, they will be applied whenever the
@@ -122,7 +137,6 @@ module.exports = {
 					<TextInput
 						name="question"
 						label="Type your question here"
-						helperText="Powered by the sun"
 						rightElement={
 							<Button mode="light" noBorder>
 								Send
