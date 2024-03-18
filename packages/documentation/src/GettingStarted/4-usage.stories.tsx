@@ -8,7 +8,7 @@ export default {
 	title: "Getting Started",
 };
 
-const codeBlock = `// App.jsx
+const codeBlock = `// App.tsx
 import { Button, Card } from "@versini/ui-components";
 
 /**
