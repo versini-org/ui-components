@@ -39,7 +39,7 @@ jobs:
       - run: |
           corepack enable
           pnpm install
-          npx lerna run build --ignore @versini/documentation
+          npx lerna run build --ignore "@versini/example-*" --ignore @versini/documentation --ignore @versini/bundlesize
           npx lerna run build:ci --scope=@versini/documentation
       - name: Setup Pages
         if: ${{ always() }}
