@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import { linkTo, Story } from "@ladle/react";
 import {
 	ButtonIcon,
@@ -9,10 +11,15 @@ import {
 } from "@versini/ui-components";
 import { IconNext, IconPrevious } from "@versini/ui-icons";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
+import { Highlight, Prism, themes } from "prism-react-renderer";
 
 export default {
 	title: "Getting Started",
 };
+
+(typeof global !== "undefined" ? global : window).Prism = Prism;
+// @ts-ignore
+await import("prismjs/components/prism-bash");
 
 const data = [
 	{
@@ -83,19 +90,45 @@ export const Installation: Story<any> = () => (
 			If you only need some core components and of course the CSS styles
 			associated<sup>1</sup>, use the following command:
 		</p>
-		<pre>
-			<code>
-				{`$ npm install --save-dev @versini/ui-styles
-$ npm install --save @versini/ui-components
-`}
-			</code>
-		</pre>
+		<Highlight
+			theme={themes.vsDark}
+			code={`$ npm install --save-dev @versini/ui-styles
+$ npm install --save @versini/ui-components`}
+			language="bash"
+		>
+			{({ style, tokens, getLineProps, getTokenProps }) => (
+				<pre style={style}>
+					{tokens.map((line, i) => (
+						<div key={i} {...getLineProps({ line })}>
+							{line.map((token, key) => (
+								<span key={key} {...getTokenProps({ token })} />
+							))}
+						</div>
+					))}
+				</pre>
+			)}
+		</Highlight>
+
 		<p>
 			You also need to install React and React-DOM (at least 18.0.0 or above).
 		</p>
-		<pre>
-			<code>$ npm install --save react react-dom</code>
-		</pre>
+		<Highlight
+			theme={themes.vsDark}
+			code={`$ npm install --save react react-dom`}
+			language="bash"
+		>
+			{({ style, tokens, getLineProps, getTokenProps }) => (
+				<pre style={style}>
+					{tokens.map((line, i) => (
+						<div key={i} {...getLineProps({ line })}>
+							{line.map((token, key) => (
+								<span key={key} {...getTokenProps({ token })} />
+							))}
+						</div>
+					))}
+				</pre>
+			)}
+		</Highlight>
 
 		<p>
 			<sup>1</sup>{" "}
