@@ -17,6 +17,12 @@ export type TableProps = {
 	 */
 	mode?: "dark" | "light" | "system" | "alt-system";
 	/**
+	 * If true, the table footer will be sticky.
+	 * Note: It is required to configure 'maxHeight' prop for the prop
+	 * 'stickyHeader' to work.
+	 */
+	stickyFooter?: boolean;
+	/**
 	 * If true, the table header will be sticky.
 	 * Note: It is required to configure 'maxHeight' prop for the prop
 	 * 'stickyHeader' to work.

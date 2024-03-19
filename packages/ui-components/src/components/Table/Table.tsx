@@ -10,9 +10,11 @@ import type {
 } from "./TableTypes";
 import {
 	CELL_WRAPPER_BODY,
+	CELL_WRAPPER_FOOTER,
 	CELL_WRAPPER_HEAD,
 	getTableCellClasses,
 	getTableClasses,
+	getTableFooterClasses,
 	getTableHeadClasses,
 	getTableRowClasses,
 } from "./utilities";
@@ -26,6 +28,7 @@ export const Table = ({
 	wrapperClassName,
 	maxHeight,
 	stickyHeader,
+	stickyFooter,
 	spacing,
 	...otherProps
 }: TableProps) => {
@@ -34,10 +37,11 @@ export const Table = ({
 		className,
 		wrapperClassName,
 		stickyHeader,
+		stickyFooter,
 		spacing,
 	});
 	return (
-		<TableContext.Provider value={{ mode, stickyHeader }}>
+		<TableContext.Provider value={{ mode, stickyHeader, stickyFooter }}>
 			<div
 				className={tableClass.wrapper}
 				{...(maxHeight && {
@@ -64,12 +68,32 @@ export const TableHead = ({
 	context.cellWrapper = CELL_WRAPPER_HEAD;
 	const tableHeadClass = getTableHeadClasses({
 		className,
+		mode: context.mode,
 		stickyHeader: context.stickyHeader,
 	});
 	return (
 		<thead className={tableHeadClass} {...otherProps}>
 			{children}
 		</thead>
+	);
+};
+
+export const TableFooter = ({
+	children,
+	className,
+	...otherProps
+}: TableHeadProps) => {
+	const context = useContext(TableContext);
+	context.cellWrapper = CELL_WRAPPER_FOOTER;
+	const tableFooterClass = getTableFooterClasses({
+		className,
+		mode: context.mode,
+		stickyFooter: context.stickyFooter,
+	});
+	return (
+		<tfoot className={tableFooterClass} {...otherProps}>
+			{children}
+		</tfoot>
 	);
 };
 

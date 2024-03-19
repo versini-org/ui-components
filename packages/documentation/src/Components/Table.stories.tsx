@@ -4,6 +4,7 @@ import {
 	Table,
 	TableBody,
 	TableCell,
+	TableFooter,
 	TableHead,
 	TableRow,
 } from "@versini/ui-components";
@@ -134,6 +135,13 @@ export const WithAction: Story<any> = (args) => {
 							);
 						})}
 					</TableBody>
+					<TableFooter>
+						<TableRow>
+							<TableCell colSpan={3} className="text-center uppercase">
+								hello footer
+							</TableCell>
+						</TableRow>
+					</TableFooter>
 				</Table>
 			</div>
 		</div>
@@ -189,7 +197,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 	return (
 		<div className="min-h-10">
 			<div className="flex flex-wrap gap-2">
-				<Table maxHeight="238px" stickyHeader {...args}>
+				<Table maxHeight="285px" stickyHeader stickyFooter {...args}>
 					<TableHead className="uppercase">
 						<TableRow>
 							<TableCell scope="col">Date</TableCell>
@@ -235,6 +243,14 @@ export const WithStickyHeader: Story<any> = (args) => {
 							);
 						})}
 					</TableBody>
+
+					<TableFooter>
+						<TableRow>
+							<TableCell colSpan={3} className="text-center uppercase">
+								hello footer
+							</TableCell>
+						</TableRow>
+					</TableFooter>
 				</Table>
 			</div>
 		</div>

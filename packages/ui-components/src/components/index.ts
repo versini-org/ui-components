@@ -17,6 +17,7 @@ import {
 	Table,
 	TableBody,
 	TableCell,
+	TableFooter,
 	TableHead,
 	TableRow,
 } from "./Table/Table";
@@ -40,6 +41,7 @@ export {
 	Table,
 	TableBody,
 	TableCell,
+	TableFooter,
 	TableHead,
 	TableRow,
 };
