@@ -4,7 +4,14 @@ import {
 	expectToHaveClasses,
 	expectToHaveStyles,
 } from "../../../../../../configuration/tests-helpers";
-import { Table, TableBody, TableCell, TableHead, TableRow } from "../..";
+import {
+	Table,
+	TableBody,
+	TableCell,
+	TableFooter,
+	TableHead,
+	TableRow,
+} from "../..";
 
 describe("Table (exceptions)", () => {
 	it("should be able to require/import from root", () => {
@@ -248,6 +255,96 @@ describe("Table classes", () => {
 		if (tableCellHead) {
 			expectToHaveClasses(tableCellHead, ["px-4", "py-3"]);
 		}
+		if (tableCellBody) {
+			expectToHaveClasses(tableCellBody, ["p-4"]);
+		}
+	});
+
+	it("should render a table with a sticky footer", async () => {
+		render(
+			<Table
+				data-testid="table"
+				caption="the caption"
+				maxHeight="100px"
+				stickyFooter
+			>
+				<TableHead data-testid="table-head">
+					<TableRow data-testid="table-row-head">
+						<TableCell data-testid="table-cell-head">the header</TableCell>
+					</TableRow>
+				</TableHead>
+				<TableBody>
+					<TableRow data-testid="table-row-body">
+						<TableCell data-testid="table-cell-body">the body</TableCell>
+					</TableRow>
+				</TableBody>
+				<TableFooter data-testid="table-footer">
+					<TableRow data-testid="table-row-footer">
+						<TableCell data-testid="table-cell-footer">the footer</TableCell>
+					</TableRow>
+				</TableFooter>
+			</Table>,
+		);
+		const table = await screen.findByTestId("table");
+		const wrapper = table.parentElement;
+		const caption = table.querySelector("caption");
+		const tableFooter = await screen.findByTestId("table-footer");
+		const tableRowFooter = await screen.findByTestId("table-row-footer");
+		const tableRowBody = await screen.findByTestId("table-row-body");
+		const tableCellFooter = await screen.findByTestId("table-cell-footer");
+		const tableCellBody = await screen.findByTestId("table-cell-body");
+
+		expect(table).toBeInTheDocument();
+		expect(table.tagName).toBe("TABLE");
+
+		expectToHaveClasses(table, [
+			"w-full",
+			"text-left",
+			"text-sm",
+			"text-copy-light",
+		]);
+		if (wrapper) {
+			expectToHaveClasses(wrapper, [
+				"relative",
+				"w-full",
+				"overflow-y-scroll",
+				"rounded-lg",
+				"shadow-md",
+				"bg-surface-darker",
+				"text-copy-light",
+			]);
+			expectToHaveStyles(wrapper, { "max-height": "100px" });
+		}
+		if (caption) {
+			expectToHaveClasses(caption, [
+				"py-2",
+				"text-sm",
+				"font-bold",
+				"text-copy-light",
+			]);
+		}
+		if (tableFooter) {
+			expectToHaveClasses(tableFooter, ["sticky", "bottom-0", "z-10"]);
+		}
+		if (tableRowFooter) {
+			expectToHaveClasses(tableRowFooter, [
+				"border-b",
+				"last:border-0",
+				"border-table-dark",
+				"bg-table-dark",
+			]);
+		}
+		if (tableRowBody) {
+			expectToHaveClasses(tableRowBody, [
+				"border-b",
+				"last:border-0",
+				"border-table-dark",
+				"odd:bg-table-dark-odd",
+				"even:bg-table-dark-even",
+			]);
+		}
+		expect(tableCellFooter).toBeInTheDocument();
+
 		if (tableCellBody) {
 			expectToHaveClasses(tableCellBody, ["p-4"]);
 		}
