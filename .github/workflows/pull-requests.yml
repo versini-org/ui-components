@@ -26,7 +26,7 @@ jobs:
       - run: |
           corepack enable
           pnpm install
-          npx lerna run build --ignore @versini/documentation
+          npx lerna run build --ignore "@versini/example-*" --ignore @versini/documentation
           npx lerna run stats:pr
           npx lerna run stats:report
       - uses: mshick/add-pr-comment@v2
@@ -89,7 +89,7 @@ jobs:
       - run: |
           corepack enable
           pnpm install
-          npx lerna run build --ignore @versini/documentation
+          npx lerna run build --ignore "@versini/example-*" --ignore @versini/documentation
           npx lerna run stats:release
       - name: Commit Release Stats
         uses: stefanzweifel/git-auto-commit-action@v5
