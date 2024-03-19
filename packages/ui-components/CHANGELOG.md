@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.10.0](https://github.com/aversini/ui-components/compare/ui-components-v5.9.0...ui-components-v5.10.0) (2024-03-19)
+
+
+### Features
+
+* **Table:** adding TableFooter and better sticky visual clues ([#437](https://github.com/aversini/ui-components/issues/437)) ([33d73c6](https://github.com/aversini/ui-components/commit/33d73c6dde1b414d6b1d01feb605e4ad0e110335))
+
 ## [5.9.0](https://github.com/aversini/ui-components/compare/ui-components-v5.8.0...ui-components-v5.9.0) (2024-03-17)
 
 
