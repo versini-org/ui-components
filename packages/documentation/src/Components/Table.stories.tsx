@@ -197,7 +197,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 	return (
 		<div className="min-h-10">
 			<div className="flex flex-wrap gap-2">
-				<Table maxHeight="285px" stickyHeader stickyFooter {...args}>
+				<Table maxHeight="260px" stickyHeader stickyFooter {...args}>
 					<TableHead className="uppercase">
 						<TableRow>
 							<TableCell scope="col">Date</TableCell>
@@ -246,7 +246,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 
 					<TableFooter>
 						<TableRow>
-							<TableCell colSpan={3} className="text-center uppercase">
+							<TableCell colSpan={3} className="py-3 text-center uppercase">
 								hello footer
 							</TableCell>
 						</TableRow>
