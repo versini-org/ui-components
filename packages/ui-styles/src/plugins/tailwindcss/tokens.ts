@@ -96,12 +96,11 @@ export default {
 		 * Table tokens
 		 */
 		"table-head-dark": colors.gray[950],
-		"table-head-light": colors.gray[100],
-
 		"table-dark": colors.gray[700],
 		"table-dark-odd": colors.gray[800],
 		"table-dark-even": colors.gray[900],
 
+		"table-head-light": colors.gray[100],
 		"table-light": colors.gray[100],
 		"table-light-odd": colors.gray[200],
 		"table-light-even": colors.gray[300],
