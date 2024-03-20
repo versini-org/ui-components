@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.10.1](https://github.com/aversini/ui-components/compare/ui-components-v5.10.0...ui-components-v5.10.1) (2024-03-20)
+
+
+### Bug Fixes
+
+* **Table:** better header and footer contrast in dark mode - take 2 ([#441](https://github.com/aversini/ui-components/issues/441)) ([8989649](https://github.com/aversini/ui-components/commit/89896491ffff970c9fed467639363ba1c7c9cf52))
+
 ## [5.10.0](https://github.com/aversini/ui-components/compare/ui-components-v5.9.0...ui-components-v5.10.0) (2024-03-19)
 
 
