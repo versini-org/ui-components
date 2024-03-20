@@ -115,6 +115,7 @@ export const WithAction: Story<any> = (args) => {
 												noBorder
 												label="Restore chat"
 												mode="light"
+												focusMode="alt-system"
 												onClick={() => {}}
 											>
 												<IconRestore className="h-3 w-3" />
@@ -123,6 +124,7 @@ export const WithAction: Story<any> = (args) => {
 												noBorder
 												label="Delete chat"
 												mode="light"
+												focusMode="alt-system"
 												onClick={() => {}}
 											>
 												<div className="text-red-400">
@@ -135,20 +137,13 @@ export const WithAction: Story<any> = (args) => {
 							);
 						})}
 					</TableBody>
-					<TableFooter>
-						<TableRow>
-							<TableCell colSpan={3} className="text-center uppercase">
-								hello footer
-							</TableCell>
-						</TableRow>
-					</TableFooter>
 				</Table>
 			</div>
 		</div>
 	);
 };
 
-export const WithStickyHeader: Story<any> = (args) => {
+export const StickyHeader: Story<any> = (args) => {
 	const data = [
 		{
 			id: 1,
@@ -197,7 +192,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 	return (
 		<div className="min-h-10">
 			<div className="flex flex-wrap gap-2">
-				<Table maxHeight="260px" stickyHeader stickyFooter {...args}>
+				<Table {...args}>
 					<TableHead className="uppercase">
 						<TableRow>
 							<TableCell scope="col">Date</TableCell>
@@ -223,6 +218,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 												noBorder
 												label="Restore chat"
 												mode="light"
+												focusMode="alt-system"
 												onClick={() => {}}
 											>
 												<IconRestore className="h-3 w-3" />
@@ -231,6 +227,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 												noBorder
 												label="Delete chat"
 												mode="light"
+												focusMode="alt-system"
 												onClick={() => {}}
 											>
 												<div className="text-red-400">
@@ -255,4 +252,9 @@ export const WithStickyHeader: Story<any> = (args) => {
 			</div>
 		</div>
 	);
+};
+StickyHeader.args = {
+	stickyHeader: true,
+	stickyFooter: true,
+	maxHeight: "260px",
 };
