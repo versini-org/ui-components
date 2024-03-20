@@ -76,12 +76,7 @@ describe("Table classes", () => {
 			]);
 		}
 		if (tableRowHead) {
-			expectToHaveClasses(tableRowHead, [
-				"border-b",
-				"last:border-0",
-				"border-table-dark",
-				"bg-table-dark",
-			]);
+			expectToHaveClasses(tableRowHead, ["bg-table-head-dark"]);
 		}
 		if (tableRowBody) {
 			expectToHaveClasses(tableRowBody, [
@@ -152,11 +147,7 @@ describe("Table classes", () => {
 			]);
 		}
 		if (tableRowHead) {
-			expectToHaveClasses(tableRowHead, [
-				"border-b",
-				"last:border-0",
-				"bg-table-light",
-			]);
+			expectToHaveClasses(tableRowHead, ["bg-table-head-light"]);
 		}
 		if (tableRowBody) {
 			expectToHaveClasses(tableRowBody, [
@@ -237,10 +228,8 @@ describe("Table classes", () => {
 		}
 		if (tableRowHead) {
 			expectToHaveClasses(tableRowHead, [
-				"border-b",
-				"last:border-0",
-				"border-table-dark",
-				"bg-table-dark",
+				"bg-table-head-dark",
+				"dark:bg-table-head-light",
 			]);
 		}
 		if (tableRowBody) {
@@ -328,10 +317,8 @@ describe("Table classes", () => {
 		}
 		if (tableRowFooter) {
 			expectToHaveClasses(tableRowFooter, [
-				"border-b",
-				"last:border-0",
-				"border-table-dark",
-				"bg-table-dark",
+				"bg-table-head-dark",
+				"dark:bg-table-head-light",
 			]);
 		}
 		if (tableRowBody) {
@@ -409,10 +396,8 @@ describe("Table classes", () => {
 		}
 		if (tableRowHead) {
 			expectToHaveClasses(tableRowHead, [
-				"border-b",
-				"last:border-0",
-				"border-table-dark",
-				"bg-table-dark",
+				"bg-table-head-dark",
+				"dark:bg-table-head-light",
 			]);
 		}
 		if (tableRowBody) {
