@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/aversini/ui-components/compare/ui-styles-v1.5.1...ui-styles-v1.6.0) (2024-03-20)
+
+
+### Features
+
+* **ui-styles:** update tokens for table head ([#445](https://github.com/aversini/ui-components/issues/445)) ([9599e65](https://github.com/aversini/ui-components/commit/9599e65a3bbf8b10957492acd608e99b8b27c425))
+
 ## [1.5.1](https://github.com/aversini/ui-components/compare/ui-styles-v1.5.0...ui-styles-v1.5.1) (2024-03-17)
 
 
