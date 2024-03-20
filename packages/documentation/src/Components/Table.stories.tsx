@@ -115,6 +115,7 @@ export const WithAction: Story<any> = (args) => {
 												noBorder
 												label="Restore chat"
 												mode="light"
+												focusMode="alt-system"
 												onClick={() => {}}
 											>
 												<IconRestore className="h-3 w-3" />
@@ -123,6 +124,7 @@ export const WithAction: Story<any> = (args) => {
 												noBorder
 												label="Delete chat"
 												mode="light"
+												focusMode="alt-system"
 												onClick={() => {}}
 											>
 												<div className="text-red-400">
@@ -135,20 +137,13 @@ export const WithAction: Story<any> = (args) => {
 							);
 						})}
 					</TableBody>
-					<TableFooter>
-						<TableRow>
-							<TableCell colSpan={3} className="text-center uppercase">
-								hello footer
-							</TableCell>
-						</TableRow>
-					</TableFooter>
 				</Table>
 			</div>
 		</div>
 	);
 };
 
-export const WithStickyHeader: Story<any> = (args) => {
+export const Sticky: Story<any> = (args) => {
 	const data = [
 		{
 			id: 1,
@@ -197,13 +192,13 @@ export const WithStickyHeader: Story<any> = (args) => {
 	return (
 		<div className="min-h-10">
 			<div className="flex flex-wrap gap-2">
-				<Table maxHeight="285px" stickyHeader stickyFooter {...args}>
+				<Table {...args}>
 					<TableHead className="uppercase">
 						<TableRow>
 							<TableCell scope="col">Date</TableCell>
-							<TableCell scope="col">First message</TableCell>
+							<TableCell scope="col">Question</TableCell>
 							<TableCell className="text-right" scope="col">
-								Actions
+								Answer
 							</TableCell>
 						</TableRow>
 					</TableHead>
@@ -216,29 +211,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 										{row.timestamp}
 									</TableCell>
 									<TableCell>{row.character}</TableCell>
-
-									<TableCell>
-										<div className="flex justify-end gap-2">
-											<ButtonIcon
-												noBorder
-												label="Restore chat"
-												mode="light"
-												onClick={() => {}}
-											>
-												<IconRestore className="h-3 w-3" />
-											</ButtonIcon>
-											<ButtonIcon
-												noBorder
-												label="Delete chat"
-												mode="light"
-												onClick={() => {}}
-											>
-												<div className="text-red-400">
-													<IconDelete className="h-3 w-3" monotone />
-												</div>
-											</ButtonIcon>
-										</div>
-									</TableCell>
+									<TableCell className="text-right">{row.actor}</TableCell>
 								</TableRow>
 							);
 						})}
@@ -246,7 +219,7 @@ export const WithStickyHeader: Story<any> = (args) => {
 
 					<TableFooter>
 						<TableRow>
-							<TableCell colSpan={3} className="text-center uppercase">
+							<TableCell colSpan={3} className="py-3 text-center uppercase">
 								hello footer
 							</TableCell>
 						</TableRow>
@@ -255,4 +228,9 @@ export const WithStickyHeader: Story<any> = (args) => {
 			</div>
 		</div>
 	);
+};
+Sticky.args = {
+	stickyHeader: true,
+	stickyFooter: true,
+	maxHeight: "260px",
 };
