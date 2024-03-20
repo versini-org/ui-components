@@ -148,7 +148,8 @@ export const getTableCellClasses = ({
 		"text-copy-dark": mode === "light",
 		"text-copy-light dark:text-copy-dark": mode === "system",
 		"text-copy-dark dark:text-copy-light": mode === "alt-system",
-		"px-4 py-3": cellWrapper === CELL_WRAPPER_HEAD,
+		"px-4 py-3":
+			cellWrapper === CELL_WRAPPER_HEAD || cellWrapper === CELL_WRAPPER_FOOTER,
 		"p-4": cellWrapper === CELL_WRAPPER_BODY,
 	});
 };
