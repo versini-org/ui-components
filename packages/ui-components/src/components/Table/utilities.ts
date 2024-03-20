@@ -62,13 +62,13 @@ export const getTableHeadClasses = ({
 }) => {
 	return clsx(className, {
 		"sticky top-0 z-10": stickyHeader,
-		"shadow-[rgb(190_190_190_/30%)_0_0.5rem_1rem]":
+		"shadow-[rgb(190_190_190_/20%)_0_0.5rem_1rem]":
 			stickyHeader && mode === "dark",
-		"shadow-[rgb(190_190_190_/30%)_0_0.5rem_1rem] dark:shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem]":
+		"shadow-[rgb(190_190_190_/20%)_0_0.5rem_1rem] dark:shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem]":
 			stickyHeader && mode === "system",
 		"shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem]":
 			stickyHeader && mode === "light",
-		"shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem] dark:shadow-[rgb(190_190_190_/30%)_0_0.5rem_1rem]":
+		"shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem] dark:shadow-[rgb(190_190_190_/20%)_0_0.5rem_1rem]":
 			stickyHeader && mode === "alt-system",
 	});
 };
@@ -84,13 +84,13 @@ export const getTableFooterClasses = ({
 }) => {
 	return clsx(className, {
 		"sticky bottom-0 z-10": stickyFooter,
-		"shadow-[rgb(190_190_190_/30%)_0_-0.5rem_1rem]":
+		"shadow-[rgb(190_190_190_/20%)_0_-0.5rem_1rem]":
 			stickyFooter && mode === "dark",
-		"shadow-[rgb(190_190_190_/30%)_0_-0.5rem_1rem] dark:shadow-[rgb(65_65_65_/30%)_0_-0.5rem_1rem]":
+		"shadow-[rgb(190_190_190_/20%)_0_-0.5rem_1rem] dark:shadow-[rgb(65_65_65_/30%)_0_-0.5rem_1rem]":
 			stickyFooter && mode === "system",
 		"shadow-[rgb(65_65_65_/30%)_0_-0.5rem_1rem]":
 			stickyFooter && mode === "light",
-		"shadow-[rgb(65_65_65_/30%)_-0_0.5rem_1rem] dark:shadow-[rgb(190_190_190_/30%)_0_-0.5rem_1rem]":
+		"shadow-[rgb(65_65_65_/30%)_-0_0.5rem_1rem] dark:shadow-[rgb(190_190_190_/20%)_0_-0.5rem_1rem]":
 			stickyFooter && mode === "alt-system",
 	});
 };
@@ -112,7 +112,7 @@ export const getTableRowClasses = ({
 			"bg-table-head-dark": mode === "dark",
 			"bg-table-head-light": mode === "light",
 			"bg-table-head-dark dark:bg-table-head-light": mode === "system",
-			"dark:bg-table-head-dark bg-table-head-light": mode === "alt-system",
+			"bg-table-head-light dark:bg-table-head-dark": mode === "alt-system",
 		});
 	}
 	return clsx("border-b last:border-0", className, {
