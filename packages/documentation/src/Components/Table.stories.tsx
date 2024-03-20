@@ -143,7 +143,7 @@ export const WithAction: Story<any> = (args) => {
 	);
 };
 
-export const StickyHeader: Story<any> = (args) => {
+export const Sticky: Story<any> = (args) => {
 	const data = [
 		{
 			id: 1,
@@ -196,9 +196,9 @@ export const StickyHeader: Story<any> = (args) => {
 					<TableHead className="uppercase">
 						<TableRow>
 							<TableCell scope="col">Date</TableCell>
-							<TableCell scope="col">First message</TableCell>
+							<TableCell scope="col">Question</TableCell>
 							<TableCell className="text-right" scope="col">
-								Actions
+								Answer
 							</TableCell>
 						</TableRow>
 					</TableHead>
@@ -211,31 +211,7 @@ export const StickyHeader: Story<any> = (args) => {
 										{row.timestamp}
 									</TableCell>
 									<TableCell>{row.character}</TableCell>
-
-									<TableCell>
-										<div className="flex justify-end gap-2">
-											<ButtonIcon
-												noBorder
-												label="Restore chat"
-												mode="light"
-												focusMode="alt-system"
-												onClick={() => {}}
-											>
-												<IconRestore className="h-3 w-3" />
-											</ButtonIcon>
-											<ButtonIcon
-												noBorder
-												label="Delete chat"
-												mode="light"
-												focusMode="alt-system"
-												onClick={() => {}}
-											>
-												<div className="text-red-400">
-													<IconDelete className="h-3 w-3" monotone />
-												</div>
-											</ButtonIcon>
-										</div>
-									</TableCell>
+									<TableCell className="text-right">{row.actor}</TableCell>
 								</TableRow>
 							);
 						})}
@@ -253,7 +229,7 @@ export const StickyHeader: Story<any> = (args) => {
 		</div>
 	);
 };
-StickyHeader.args = {
+Sticky.args = {
 	stickyHeader: true,
 	stickyFooter: true,
 	maxHeight: "260px",
