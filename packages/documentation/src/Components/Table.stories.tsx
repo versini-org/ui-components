@@ -219,7 +219,7 @@ export const Sticky: Story<any> = (args) => {
 
 					<TableFooter>
 						<TableRow>
-							<TableCell colSpan={3} className="py-3 text-center uppercase">
+							<TableCell colSpan={3} className="text-center uppercase">
 								hello footer
 							</TableCell>
 						</TableRow>
