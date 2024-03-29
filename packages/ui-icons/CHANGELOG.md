@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.2.1...ui-icons-v1.3.0) (2024-03-29)
+
+
+### Features
+
+* **ui-icons:** adding IconUp and IconDown ([#450](https://github.com/aversini/ui-components/issues/450)) ([b61c9d2](https://github.com/aversini/ui-components/commit/b61c9d20bbce329f2c4e4abd0a815d8969c81fd5))
+
 ## [1.2.1](https://github.com/aversini/ui-components/compare/ui-icons-v1.2.0...ui-icons-v1.2.1) (2024-03-10)
 
 
