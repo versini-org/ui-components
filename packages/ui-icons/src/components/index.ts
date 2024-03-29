@@ -6,6 +6,7 @@ import { IconCopied } from "./Icons/IconCopied";
 import { IconCopy } from "./Icons/IconCopy";
 import { IconDelete } from "./Icons/IconDelete";
 import { IconDog } from "./Icons/IconDog";
+import { IconDown } from "./Icons/IconDown";
 import { IconEdit } from "./Icons/IconEdit";
 import { IconGitHub } from "./Icons/IconGitHub";
 import { IconHide } from "./Icons/IconHide";
@@ -17,6 +18,7 @@ import { IconProfile } from "./Icons/IconProfile";
 import { IconRestore } from "./Icons/IconRestore";
 import { IconSettings } from "./Icons/IconSettings";
 import { IconShow } from "./Icons/IconShow";
+import { IconUp } from "./Icons/IconUp";
 import { IconUser } from "./Icons/IconUser";
 
 export {
@@ -28,6 +30,7 @@ export {
 	IconCopy,
 	IconDelete,
 	IconDog,
+	IconDown,
 	IconEdit,
 	IconGitHub,
 	IconHide,
@@ -39,5 +42,6 @@ export {
 	IconRestore,
 	IconSettings,
 	IconShow,
+	IconUp,
 	IconUser,
 };

@@ -6,6 +6,7 @@
 		"../ui-components/src/**/*.*",
 		"../ui-components/lib/**/*.*",
 		"../ui-styles/src/**/*.*",
-		"../ui-form/src/**/*.*"
+		"../ui-form/src/**/*.*",
+		"../ui-icons/src/**/*.*"
 	]
 }
