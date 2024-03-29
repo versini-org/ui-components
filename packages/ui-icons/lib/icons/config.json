@@ -86,5 +86,15 @@
 		"name": "IconBrightness",
 		"title": "Brightness",
 		"monotone": true
+	},
+	"arrow-up": {
+		"name": "IconUp",
+		"title": "Up",
+		"monotone": true
+	},
+	"arrow-down": {
+		"name": "IconDown",
+		"title": "Down",
+		"monotone": true
 	}
 }

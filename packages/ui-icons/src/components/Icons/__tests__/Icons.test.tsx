@@ -10,6 +10,7 @@ import {
 	IconCopy,
 	IconDelete,
 	IconDog,
+	IconDown,
 	IconEdit,
 	IconGitHub,
 	IconHide,
@@ -21,6 +22,7 @@ import {
 	IconRestore,
 	IconSettings,
 	IconShow,
+	IconUp,
 	IconUser,
 } from "../..";
 
@@ -201,6 +203,20 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
+					<IconDown
+						data-testid="icon-down"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
+					<IconUp
+						data-testid="icon-up"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 				</>,
 			);
 
@@ -224,6 +240,8 @@ describe("Generic Icons prop tests", () => {
 				"icon-previous",
 				"icon-github",
 				"icon-brightness",
+				"icon-down",
+				"icon-up",
 			].forEach(async (dataTestId) => {
 				await renderExpected({
 					dataTestId,
