@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { SpacingProps } from "@versini/ui-private/dist/utilities";
 
 import {
+	IconAdd,
 	IconBack,
 	IconBrightness,
 	IconChart,
@@ -217,6 +218,13 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
+					<IconAdd
+						data-testid="icon-add"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 				</>,
 			);
 
@@ -242,6 +250,7 @@ describe("Generic Icons prop tests", () => {
 				"icon-brightness",
 				"icon-down",
 				"icon-up",
+				"icon-add",
 			].forEach(async (dataTestId) => {
 				await renderExpected({
 					dataTestId,

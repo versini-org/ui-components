@@ -1,3 +1,4 @@
+import { IconAdd } from "./Icons/IconAdd";
 import { IconBack } from "./Icons/IconBack";
 import { IconBrightness } from "./Icons/IconBrightness";
 import { IconChart } from "./Icons/IconChart";
@@ -22,6 +23,7 @@ import { IconUp } from "./Icons/IconUp";
 import { IconUser } from "./Icons/IconUser";
 
 export {
+	IconAdd,
 	IconBack,
 	IconBrightness,
 	IconChart,

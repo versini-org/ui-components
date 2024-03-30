@@ -96,5 +96,10 @@
 		"name": "IconDown",
 		"title": "Down",
 		"monotone": true
+	},
+	"plus": {
+		"name": "IconAdd",
+		"title": "Add",
+		"monotone": true
 	}
 }
