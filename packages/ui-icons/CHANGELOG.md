@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.3.0...ui-icons-v1.4.0) (2024-03-30)
+
+
+### Features
+
+* **ui-icons:** adding IconAdd ([#452](https://github.com/aversini/ui-components/issues/452)) ([6b42e1d](https://github.com/aversini/ui-components/commit/6b42e1d49cac9be31205c1e1d4120df5890a37e8))
+
 ## [1.3.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.2.1...ui-icons-v1.3.0) (2024-03-29)
 
 

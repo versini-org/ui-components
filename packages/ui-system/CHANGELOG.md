@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/aversini/ui-components/compare/ui-system-v1.2.0...ui-system-v1.2.1) (2024-03-30)
+
+
+### Bug Fixes
+
+* bump tailwind dependencies to latest ([#454](https://github.com/aversini/ui-components/issues/454)) ([8c06361](https://github.com/aversini/ui-components/commit/8c0636164432be100410778d810ec6c3a6613c9b))
+
 ## [1.2.0](https://github.com/aversini/ui-components/compare/ui-system-v1.1.1...ui-system-v1.2.0) (2024-03-11)
 
 
