@@ -18,6 +18,7 @@ export default {
 	args: {
 		mode: "system",
 		summary: "A table about Dune",
+		compact: false,
 	},
 	argTypes: {
 		caption: {

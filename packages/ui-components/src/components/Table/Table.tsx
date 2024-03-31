@@ -23,6 +23,7 @@ export const Table = ({
 	children,
 	mode = "system",
 	caption,
+	compact,
 	summary,
 	className,
 	wrapperClassName,
@@ -41,7 +42,9 @@ export const Table = ({
 		spacing,
 	});
 	return (
-		<TableContext.Provider value={{ mode, stickyHeader, stickyFooter }}>
+		<TableContext.Provider
+			value={{ mode, stickyHeader, stickyFooter, compact }}
+		>
 			<div
 				className={tableClass.wrapper}
 				{...(maxHeight && {
@@ -134,6 +137,7 @@ export const TableCell = ({
 		cellWrapper: context.cellWrapper,
 		className,
 		mode: context.mode,
+		compact: context.compact,
 	});
 	return (
 		<Component className={cellClass} {...otherProps}>

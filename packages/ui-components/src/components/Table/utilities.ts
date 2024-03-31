@@ -137,11 +137,13 @@ export const getTableRowClasses = ({
 export const getTableCellClasses = ({
 	cellWrapper,
 	className,
+	compact,
 	mode,
 }: {
 	mode: string;
 	cellWrapper?: string;
 	className?: string;
+	compact?: boolean;
 }) => {
 	return clsx(className, {
 		"text-copy-light": mode === "dark",
@@ -149,7 +151,10 @@ export const getTableCellClasses = ({
 		"text-copy-light dark:text-copy-dark": mode === "system",
 		"text-copy-dark dark:text-copy-light": mode === "alt-system",
 		"px-4 py-3":
-			cellWrapper === CELL_WRAPPER_HEAD || cellWrapper === CELL_WRAPPER_FOOTER,
-		"p-4": cellWrapper === CELL_WRAPPER_BODY,
+			!compact &&
+			(cellWrapper === CELL_WRAPPER_HEAD ||
+				cellWrapper === CELL_WRAPPER_FOOTER),
+		"p-4": !compact && cellWrapper === CELL_WRAPPER_BODY,
+		"px-4 py-1": compact,
 	});
 };

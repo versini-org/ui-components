@@ -7,6 +7,10 @@ export type TableProps = {
 	 */
 	caption?: React.ReactNode;
 	/**
+	 * If true, the table will be smaller.
+	 */
+	compact?: boolean;
+	/**
 	 * The max height of the table. It follows the CSS max-height property.
 	 * Note: It is required to configure 'maxHeight' prop for the prop
 	 * 'stickyHeader' to work.
