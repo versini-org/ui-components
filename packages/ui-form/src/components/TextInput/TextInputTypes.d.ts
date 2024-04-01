@@ -28,6 +28,10 @@ export type CommonTextInputProps = {
 	 */
 	inputClassName?: string;
 	/**
+	 * Hides the label visually but retain accessible relationship with the TextInput.
+	 */
+	labelHidden?: boolean;
+	/**
 	 * Id to use for the TextInput label.
 	 */
 	labelId?: string;

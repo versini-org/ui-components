@@ -20,6 +20,7 @@ export default {
 		inputClassName: "",
 		className: "",
 		mode: "system",
+		labelHidden: false,
 	},
 	argTypes: {
 		mode: {

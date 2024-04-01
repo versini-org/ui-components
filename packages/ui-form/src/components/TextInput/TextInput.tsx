@@ -23,6 +23,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			noBorder = false,
 
 			labelId,
+			labelHidden = false,
 			type = "text",
 
 			helperText = "",
@@ -79,7 +80,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 						!raw && { style: { paddingRight: inputPaddingRight } })}
 					{...extraProps}
 				/>
-				{!raw && (
+				{!raw && !labelHidden && (
 					<label
 						aria-hidden={true}
 						htmlFor={inputId}

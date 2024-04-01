@@ -21,6 +21,7 @@ export default {
 		error: false,
 		inputClassName: "",
 		className: "",
+		labelHidden: false,
 	},
 	argTypes: {
 		focusMode: {

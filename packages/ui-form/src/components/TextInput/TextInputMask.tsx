@@ -1,9 +1,7 @@
 import { useMergeRefs } from "@versini/ui-hooks";
-// import { IconHide, IconShow } from "@versini/ui-icons";
 import { LiveRegion } from "@versini/ui-private";
 import React, { useEffect, useRef, useState } from "react";
 
-// import { ButtonIcon } from "..";
 import { TextInput } from "./TextInput";
 import type { TextInputMaskProps } from "./TextInputTypes";
 
@@ -26,6 +24,7 @@ export const TextInputMask = React.forwardRef<
 			name,
 			disabled,
 			label,
+			labelHidden,
 			onMaskChange,
 
 			onChange,
@@ -164,6 +163,7 @@ export const TextInputMask = React.forwardRef<
 					ref={mergedInputRef}
 					name={name}
 					label={label}
+					labelHidden={labelHidden}
 					type={masked ? "password" : "text"}
 					disabled={disabled}
 					spacing={spacing}
@@ -178,16 +178,6 @@ export const TextInputMask = React.forwardRef<
 
 						disabled: disabled,
 					})}
-					// rightElement={
-					// 	<ButtonIcon
-					// 		label={buttonLabel}
-					// 		onClick={handleShowMaskButtonClick}
-					// 		onBlur={handleTextInputMaskBlur}
-					// 		disabled={disabled}
-					// 	>
-					// 		{masked ? <IconShow /> : <IconHide />}
-					// 	</ButtonIcon>
-					// }
 					{...otherProps}
 				/>
 
