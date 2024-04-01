@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.11.0](https://github.com/aversini/ui-components/compare/ui-components-v5.10.2...ui-components-v5.11.0) (2024-04-01)
+
+
+### Features
+
+* **ui-components:** Adding support for compact Table ([#455](https://github.com/aversini/ui-components/issues/455)) ([22d058a](https://github.com/aversini/ui-components/commit/22d058a21874343671693c4a33c07a8d24817da5))
+
 ## [5.10.2](https://github.com/aversini/ui-components/compare/ui-components-v5.10.1...ui-components-v5.10.2) (2024-03-30)
 
 
