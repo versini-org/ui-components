@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/aversini/ui-components/compare/ui-form-v1.1.1...ui-form-v1.2.0) (2024-04-01)
+
+
+### Features
+
+* **ui-form:** adding support for labelHidden prop ([#457](https://github.com/aversini/ui-components/issues/457)) ([cb58eac](https://github.com/aversini/ui-components/commit/cb58eace8967372697b7e0456598afd780b886ae))
+
 ## [1.1.1](https://github.com/aversini/ui-components/compare/ui-form-v1.1.0...ui-form-v1.1.1) (2024-03-15)
 
 
