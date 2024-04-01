@@ -130,6 +130,20 @@ describe("TextInput modifiers", () => {
 		expect(input.className).toContain("border-transparent");
 	});
 
+	it("should render a text input with a hidden label", async () => {
+		render(
+			<TextInput
+				label="hello world"
+				name="toto"
+				labelHidden
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const label = await screen.findAllByText("hello world");
+		screen.debug(label);
+		expect(label.length).toBe(1);
+	});
+
 	it("should render a raw text input with no styling", async () => {
 		render(<TextInput label="toto" name="toto" raw data-testid="txtnpt-1" />);
 		const input = await screen.findByTestId("txtnpt-1");
