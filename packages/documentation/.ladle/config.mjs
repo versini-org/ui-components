@@ -29,7 +29,7 @@ export default {
 		previousComponent: [],
 		control: [],
 		darkMode: [],
-		fullscreen: [],
+		fullscreen: ["f"],
 		width: [],
 		rtl: [],
 		source: [],
@@ -51,7 +51,7 @@ export default {
 			enabled: false,
 		},
 		mode: {
-			enabled: false,
+			enabled: true,
 			defaultState: "full",
 		},
 		msw: {
