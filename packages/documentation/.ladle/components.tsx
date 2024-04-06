@@ -60,13 +60,12 @@ export const Provider: GlobalProvider = ({
 	storyMeta,
 	globalState,
 }) => {
-	const className = clsx(
-		"prose mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl",
-		{
-			"prose-dark dark:prose-lighter":
-				!globalState?.story.startsWith("styles--typography"),
-		},
-	);
+	const className = clsx("prose", {
+		"mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl":
+			globalState.mode === "full",
+		"prose-dark dark:prose-lighter":
+			!globalState?.story.startsWith("styles--typography"),
+	});
 	const handleOnClickGitHub = () => {
 		window.open(import.meta.env.REPOSITORY, "_blank", "noopener,noreferrer");
 	};
