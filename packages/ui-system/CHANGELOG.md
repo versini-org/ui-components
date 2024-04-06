@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/aversini/ui-components/compare/ui-system-v1.2.1...ui-system-v1.3.0) (2024-04-06)
+
+
+### Features
+
+* **ui-system:** adding prop "className" to ThemeProvider ([#465](https://github.com/aversini/ui-components/issues/465)) ([095531d](https://github.com/aversini/ui-components/commit/095531d8879659f38c9e43f226d3336310277c02))
+
 ## [1.2.1](https://github.com/aversini/ui-components/compare/ui-system-v1.2.0...ui-system-v1.2.1) (2024-03-30)
 
 
