@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.12.0](https://github.com/aversini/ui-components/compare/ui-components-v5.11.1...ui-components-v5.12.0) (2024-04-06)
+
+
+### Features
+
+* **Card:** adding prop "compact" ([#463](https://github.com/aversini/ui-components/issues/463)) ([1f65900](https://github.com/aversini/ui-components/commit/1f659002660c24ae69bcf88f9179fb6af4ebac44))
+
 ## [5.11.1](https://github.com/aversini/ui-components/compare/ui-components-v5.11.0...ui-components-v5.11.1) (2024-04-06)
 
 
