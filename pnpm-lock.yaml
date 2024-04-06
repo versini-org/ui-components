@@ -269,7 +269,7 @@ importers:
   packages/ui-private:
     dependencies:
       '@floating-ui/react':
-        specifier: 0.26.9
+        specifier: <=0.26.9
         version: 0.26.9(react-dom@18.2.0)(react@18.2.0)
       '@versini/ui-hooks':
         specifier: workspace:../ui-hooks
