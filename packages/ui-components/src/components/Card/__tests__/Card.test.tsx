@@ -75,6 +75,23 @@ describe("Card modifiers", () => {
 		]);
 	});
 
+	it("should render a default compact card", async () => {
+		const { container } = render(<Card compact>{cardContent}</Card>);
+		const card = container.children[0];
+		expectToHaveClasses(card, [
+			CARD_CLASSNAME,
+			"rounded-md",
+			"border-2",
+			"p-2",
+			"border-border-dark",
+			"bg-surface-lighter",
+			"text-copy-dark",
+			"dark:border-border-light",
+			"dark:bg-surface-dark",
+			"dark:text-copy-light",
+		]);
+	});
+
 	it("should render a default card with a custom class", async () => {
 		const { container } = render(
 			<Card className="toto-main">{cardContent}</Card>,
@@ -125,8 +142,6 @@ describe("Card modifiers", () => {
 			"mb-4",
 			"border-b-2",
 			"border-border-medium",
-			"text-lg",
-			"font-bold",
 		]);
 	});
 

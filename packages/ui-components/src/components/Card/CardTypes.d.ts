@@ -5,7 +5,6 @@ export type CardProps = {
 	 * The children to render.
 	 */
 	children: React.ReactNode;
-
 	/**
 	 * If the header prop is not provided, the Card must be
 	 * described via aria-labelledby.
@@ -16,10 +15,13 @@ export type CardProps = {
 	 */
 	bodyClassName?: string;
 	/**
-	 * CSS class(es) to add to the main component wrapper. If provided,
-	 * it overrides the default styles.
+	 * CSS class(es) to add to the main component wrapper.
 	 */
 	className?: string;
+	/**
+	 * If true, the card will be smaller.
+	 */
+	compact?: boolean;
 	/**
 	 * The content to render in the footer.
 	 */

@@ -8,6 +8,7 @@ export default {
 	},
 	args: {
 		mode: "system",
+		compact: false,
 	},
 	argTypes: {
 		mode: {
@@ -63,6 +64,6 @@ export const Custom: Story<any> = (args) => (
 );
 
 Custom.args = {
-	header: <h3 className="text-red-500">Dune</h3>,
+	header: <h2 className="text-red-500">Dune</h2>,
 	footer: <h4 className="text-xs text-slate-400">Frank Herbert</h4>,
 };
