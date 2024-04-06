@@ -39,6 +39,7 @@ export const Card = ({
 	"aria-labelledby": ariaLabelledby,
 	spacing,
 	mode = "system",
+	compact = false,
 
 	...otherProps
 }: CardProps) => {
@@ -55,6 +56,7 @@ export const Card = ({
 		footerClassName,
 		spacing,
 		mode,
+		compact,
 	});
 
 	if (isHeaderString) {
