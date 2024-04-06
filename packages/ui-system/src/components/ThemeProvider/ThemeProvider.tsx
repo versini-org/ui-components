@@ -1,13 +1,17 @@
+import clsx from "clsx";
 import { useEffect, useRef } from "react";
 
+import { THEMEPROVIDER_CLASSNAME } from "../../common/constants";
 import { ThemeProviderProps } from "./ThemeProviderTypes";
 
 export const ThemeProvider = ({
 	customTheme,
 	children,
 	global,
+	className,
 }: ThemeProviderProps) => {
 	const wrapperRef = useRef<HTMLDivElement>(null);
+	const wrapperClass = clsx(THEMEPROVIDER_CLASSNAME, "contents", className);
 
 	useEffect(() => {
 		const wrapper = global
@@ -22,7 +26,7 @@ export const ThemeProvider = ({
 	}, [customTheme, global]);
 
 	return customTheme || !global ? (
-		<div ref={wrapperRef} className="contents">
+		<div ref={wrapperRef} className={wrapperClass}>
 			{children}
 		</div>
 	) : (

@@ -4,6 +4,10 @@ export type ThemeProviderProps = {
 	 */
 	children: React.ReactNode;
 	/**
+	 * CSS class(es) to add to the main component wrapper.
+	 */
+	className?: string;
+	/**
 	 * An object specifying custom properties impacting the base theme.
 	 * Not all custom properties need to be specified.
 	 * @example
