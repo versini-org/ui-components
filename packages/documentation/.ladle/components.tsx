@@ -60,8 +60,6 @@ export const Provider: GlobalProvider = ({
 	storyMeta,
 	globalState,
 }) => {
-	console.log(`==> [${Date.now()}] globalState: `, globalState);
-
 	const className = clsx("prose", {
 		"mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl":
 			globalState.mode === "full",
