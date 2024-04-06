@@ -1,5 +1,7 @@
 import { act, render, screen } from "@testing-library/react";
 
+import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
+import { THEMEPROVIDER_CLASSNAME } from "../../../common/constants";
 import { ThemeProvider } from "../..";
 
 const customTheme = {
@@ -10,6 +12,16 @@ const customTheme = {
 describe("ThemeProvider (exceptions)", () => {
 	it("should be able to require/import from root", () => {
 		expect(ThemeProvider).toBeDefined();
+	});
+});
+
+describe("ThemeProvider props tests", () => {
+	it("should have default and custom classes", async () => {
+		await act(async () => {
+			render(<ThemeProvider className="toto">Hello World</ThemeProvider>);
+		});
+		const node = await screen.findByText("Hello World");
+		expectToHaveClasses(node, [THEMEPROVIDER_CLASSNAME, "contents", "toto"]);
 	});
 });
 
