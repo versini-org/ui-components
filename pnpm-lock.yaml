@@ -18,7 +18,7 @@ importers:
         specifier: 1.1.9
         version: 1.1.9
       '@versini/eslint-plugin-client':
-        specifier: 1.0.1
+        specifier: workspace:./packages/eslint-plugin-client
         version: link:packages/eslint-plugin-client
 
   examples/with-vite:
