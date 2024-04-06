@@ -43,7 +43,7 @@
 		"react-dom": "18.2.0"
 	},
 	"dependencies": {
-		"@floating-ui/react": "<=0.26.9",
+		"@floating-ui/react": "<=0.26.12",
 		"@versini/ui-hooks": "workspace:../ui-hooks",
 		"clsx": "2.1.0"
 	},
