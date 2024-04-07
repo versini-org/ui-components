@@ -15,7 +15,7 @@ describe("Main modifiers", () => {
 		const main = await screen.findByRole("main");
 		expectToHaveClasses(main, [
 			"av-main",
-			"mt-0",
+			"mt-2",
 			"flex",
 			"w-full",
 			"flex-col",
