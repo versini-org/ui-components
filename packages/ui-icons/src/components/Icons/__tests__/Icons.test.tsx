@@ -23,6 +23,7 @@ import {
 	IconRestore,
 	IconSettings,
 	IconShow,
+	IconStarInCircle,
 	IconUp,
 	IconUser,
 } from "../..";
@@ -225,6 +226,13 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
+					<IconStarInCircle
+						data-testid="icon-star-in-circle"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 				</>,
 			);
 
@@ -251,6 +259,7 @@ describe("Generic Icons prop tests", () => {
 				"icon-down",
 				"icon-up",
 				"icon-add",
+				"icon-star-in-circle",
 			].forEach(async (dataTestId) => {
 				await renderExpected({
 					dataTestId,
