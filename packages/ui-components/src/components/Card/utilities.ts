@@ -29,7 +29,7 @@ export const getCardClasses = ({
 		getSpacing(spacing),
 		{
 			"p-4": !compact,
-			"p-2": compact,
+			"p-1 sm:p-2": compact,
 			"border-border-accent bg-surface-dark text-copy-light": mode === "dark",
 			"border-border-dark bg-surface-lighter text-copy-dark": mode === "light",
 
