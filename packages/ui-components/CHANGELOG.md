@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.13.1](https://github.com/aversini/ui-components/compare/ui-components-v5.13.0...ui-components-v5.13.1) (2024-04-07)
+
+
+### Bug Fixes
+
+* **ui-components:** better Header contrast in dark mode ([#470](https://github.com/aversini/ui-components/issues/470)) ([ed2cd0d](https://github.com/aversini/ui-components/commit/ed2cd0db8b508e422c07fc01ae9a4cd315e364a2))
+
 ## [5.13.0](https://github.com/aversini/ui-components/compare/ui-components-v5.12.0...ui-components-v5.13.0) (2024-04-07)
 
 
