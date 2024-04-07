@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.13.0](https://github.com/aversini/ui-components/compare/ui-components-v5.12.0...ui-components-v5.13.0) (2024-04-07)
+
+
+### Features
+
+* **ui-components:** adding colors to Header component ([#468](https://github.com/aversini/ui-components/issues/468)) ([23f978a](https://github.com/aversini/ui-components/commit/23f978af7e147003d7daef0bb7e38d7d42255624))
+
 ## [5.12.0](https://github.com/aversini/ui-components/compare/ui-components-v5.11.1...ui-components-v5.12.0) (2024-04-06)
 
 
