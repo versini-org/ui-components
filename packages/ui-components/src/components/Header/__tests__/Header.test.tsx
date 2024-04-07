@@ -16,9 +16,9 @@ describe("Header modifiers", () => {
 		const header = await screen.findByRole("banner");
 		expectToHaveClasses(header, [
 			HEADER_CLASSNAME,
-			"border-border-accent",
-			"dark:border-border-medium",
+			"border-border-medium",
 			"bg-surface-light",
+			"dark:border-border-accent",
 			"dark:bg-surface-dark",
 		]);
 		expectToHaveClasses(header.children[0], [
@@ -37,9 +37,9 @@ describe("Header modifiers", () => {
 		const header = await screen.findByRole("banner");
 		expectToHaveClasses(header, [
 			HEADER_CLASSNAME,
-			"border-border-medium",
-			"dark:border-border-accent",
+			"border-border-accent",
 			"bg-surface-dark",
+			"dark:border-border-medium",
 			"dark:bg-surface-light",
 		]);
 		expectToHaveClasses(header.children[0], [
@@ -78,7 +78,7 @@ describe("Header modifiers", () => {
 		expectToHaveClasses(header, [
 			HEADER_CLASSNAME,
 			"border-border-accent",
-			"bg-surface-medium",
+			"bg-surface-dark",
 		]);
 		expectToHaveClasses(header.children[0], [
 			"mt-0",
