@@ -101,5 +101,10 @@
 		"name": "IconAdd",
 		"title": "Add",
 		"monotone": true
+	},
+	"circle-star": {
+		"name": "IconStarInCircle",
+		"title": "Star in Circle",
+		"monotone": true
 	}
 }
