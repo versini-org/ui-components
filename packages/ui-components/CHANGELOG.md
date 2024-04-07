@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.14.2](https://github.com/aversini/ui-components/compare/ui-components-v5.14.1...ui-components-v5.14.2) (2024-04-07)
+
+
+### Bug Fixes
+
+* **ui-components:** Card compact is not compact enough at lower bp ([#476](https://github.com/aversini/ui-components/issues/476)) ([a30c555](https://github.com/aversini/ui-components/commit/a30c55510685f601366eff11c4ae3d827f752802))
+
 ## [5.14.1](https://github.com/aversini/ui-components/compare/ui-components-v5.14.0...ui-components-v5.14.1) (2024-04-07)
 
 
