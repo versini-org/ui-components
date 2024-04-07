@@ -70,6 +70,7 @@ export default {
 		"border-dark": colors.slate[900],
 		"border-medium": colors.slate[400],
 		"border-light": colors.slate[300],
+		"border-accent": "#AAC0AF",
 
 		"border-danger-dark": colors.red[900],
 		"border-danger-medium": colors.red[400],

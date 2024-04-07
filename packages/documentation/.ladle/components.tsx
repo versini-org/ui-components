@@ -72,7 +72,7 @@ export const Provider: GlobalProvider = ({
 	return (
 		<>
 			<div className={className}>
-				{storyMeta?.importName
+				{storyMeta?.importName && globalState.mode === "full"
 					? renderImportLine({
 							importName: storyMeta.importName,
 							importPackage: storyMeta?.importPackage,
@@ -82,27 +82,29 @@ export const Provider: GlobalProvider = ({
 					: null}
 				{children}
 			</div>
-			<Footer
-				mode="system"
-				row1={
-					<ButtonIcon
-						noBorder
-						size="small"
-						mode="system"
-						spacing={{ b: 2 }}
-						label="link to UI Components GitHub repository"
-						onClick={handleOnClickGitHub}
-					>
-						<IconGitHub />
-					</ButtonIcon>
-				}
-				row2={
-					<div>
-						UI Components - &copy; {new Date().getFullYear()}{" "}
-						{import.meta.env.OWNER}
-					</div>
-				}
-			/>
+			{globalState.mode === "full" && (
+				<Footer
+					mode="system"
+					row1={
+						<ButtonIcon
+							noBorder
+							size="small"
+							mode="system"
+							spacing={{ b: 2 }}
+							label="link to UI Components GitHub repository"
+							onClick={handleOnClickGitHub}
+						>
+							<IconGitHub />
+						</ButtonIcon>
+					}
+					row2={
+						<div>
+							UI Components - &copy; {new Date().getFullYear()}{" "}
+							{import.meta.env.OWNER}
+						</div>
+					}
+				/>
+			)}
 		</>
 	);
 };
