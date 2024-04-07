@@ -39,7 +39,7 @@ describe("Panel modifiers", () => {
 			"sm:w-[95%]",
 			"sm:rounded-lg",
 			"sm:border-2",
-			"sm:border-border-light",
+			"sm:border-border-accent",
 			"md:max-w-2xl",
 		]);
 	});
@@ -74,7 +74,7 @@ describe("Panel modifiers", () => {
 			MESSAGEBOX_CLASSNAME,
 			"bg-surface-medium",
 			"border-2",
-			"border-border-light",
+			"border-border-accent",
 			"flex-col",
 			"flex",
 			"md:max-w-2xl",

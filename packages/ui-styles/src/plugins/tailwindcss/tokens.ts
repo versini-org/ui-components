@@ -63,6 +63,8 @@ export default {
 		"copy-success": colors.green[800],
 		"copy-warning": colors.orange[800],
 		"copy-error": colors.red[800],
+		"copy-accent": "#a9b9ad",
+		"copy-accent-dark": "#cde8d4",
 
 		/**
 		 * Border tokens.
@@ -70,7 +72,7 @@ export default {
 		"border-dark": colors.slate[900],
 		"border-medium": colors.slate[400],
 		"border-light": colors.slate[300],
-		"border-accent": "#AAC0AF",
+		"border-accent": "#a9b9ad",
 
 		"border-danger-dark": colors.red[900],
 		"border-danger-medium": colors.red[400],

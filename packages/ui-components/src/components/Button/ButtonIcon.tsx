@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 
 import type { ButtonIconProps } from "./ButtonTypes";
@@ -42,6 +43,13 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			spacing,
 			noBackground,
 		});
+		const iconClass = clsx({
+			"text-copy-accent-dark": mode === "light" && !raw,
+			"text-copy-light": mode === "dark" && !raw,
+			"text-copy-accent-dark dark:text-copy-light":
+				mode === "alt-system" && !raw,
+			"text-copy-light dark:text-copy-accent-dark": mode === "system" && !raw,
+		});
 
 		return (
 			<button
@@ -53,7 +61,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 				{...otherProps}
 			>
 				{labelLeft && <span className="pr-2">{labelLeft}</span>}
-				{children}
+				<div className={iconClass}>{children}</div>
 				{labelRight && <span className="pl-2">{labelRight}</span>}
 			</button>
 		);

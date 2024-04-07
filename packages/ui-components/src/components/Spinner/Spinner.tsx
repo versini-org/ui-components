@@ -21,18 +21,18 @@ export const Spinner = ({
 					"inline-block animate-spin rounded-full border-solid border-current border-r-transparent motion-reduce:animate-[spin_1.5s_linear_infinite]",
 					{
 						"text-copy-dark": mode === "dark",
-						"text-copy-light": mode === "light",
-						"text-copy-dark dark:text-copy-light": mode === "system",
-						"text-copy-light dark:text-copy-dark": mode === "alt-system",
+						"text-copy-accent": mode === "light",
+						"text-copy-dark dark:text-copy-accent": mode === "system",
+						"text-copy-accent dark:text-copy-dark": mode === "alt-system",
 					},
 				)
 			: clsx(SPINNER_CLASSNAME, getSpacing(spacing));
 
 	const dotClassName = clsx("av-spinner__dot", {
 		"fill-copy-dark": mode === "dark",
-		"fill-copy-light": mode === "light",
-		"fill-copy-dark dark:fill-copy-light": mode === "system",
-		"fill-copy-light dark:fill-copy-dark": mode === "alt-system",
+		"fill-copy-accent": mode === "light",
+		"fill-copy-dark dark:fill-copy-accent": mode === "system",
+		"fill-copy-accent dark:fill-copy-dark": mode === "alt-system",
 	});
 
 	return (

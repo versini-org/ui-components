@@ -80,6 +80,7 @@ export default {
 		noBorder: false,
 		noBackground: false,
 		size: "medium",
+		label: "some label",
 	},
 	argTypes: {
 		mode: {

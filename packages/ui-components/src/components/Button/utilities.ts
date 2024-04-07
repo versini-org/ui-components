@@ -219,17 +219,17 @@ const getButtonBorderClasses = ({
 	if (variant === "primary") {
 		return clsx("border", {
 			"border-border-dark": mode === "dark",
-			"border-border-light": mode === "light",
-			"border-border-dark dark:border-border-light": mode === "system",
-			"border-border-light dark:border-border-dark": mode === "alt-system",
+			"border-border-accent": mode === "light",
+			"border-border-dark dark:border-border-accent": mode === "system",
+			"border-border-accent dark:border-border-dark": mode === "alt-system",
 		});
 	}
 	if (variant === "secondary") {
 		return clsx("border", {
 			"border-border-dark": mode === "light",
-			"border-border-light": mode === "dark",
-			"border-border-dark dark:border-border-light": mode === "alt-system",
-			"border-border-light dark:border-border-dark": mode === "system",
+			"border-border-accent": mode === "dark",
+			"border-border-dark dark:border-border-accent": mode === "alt-system",
+			"border-border-accent dark:border-border-dark": mode === "system",
 		});
 	}
 	if (variant === "danger") {
