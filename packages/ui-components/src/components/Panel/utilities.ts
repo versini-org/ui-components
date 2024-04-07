@@ -21,9 +21,10 @@ export const getPanelClassName = ({
 				[`${MESSAGEBOX_CLASSNAME} w-[95%] rounded-lg border-2 sm:w-[50%]`]:
 					kind === TYPE_MESSAGEBOX,
 				"sm:border-border-dark": borderMode === "dark" && kind === TYPE_PANEL,
-				"sm:border-border-light": borderMode === "light" && kind === TYPE_PANEL,
+				"sm:border-border-accent":
+					borderMode === "light" && kind === TYPE_PANEL,
 				"border-border-dark": borderMode === "dark" && kind === TYPE_MESSAGEBOX,
-				"border-border-light":
+				"border-border-accent":
 					borderMode === "light" && kind === TYPE_MESSAGEBOX,
 			},
 		),

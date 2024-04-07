@@ -30,18 +30,23 @@ export const getCardClasses = ({
 		{
 			"p-4": !compact,
 			"p-2": compact,
-			"border-border-light bg-surface-dark text-copy-light": mode === "dark",
+			"border-border-accent bg-surface-dark text-copy-light": mode === "dark",
 			"border-border-dark bg-surface-lighter text-copy-dark": mode === "light",
 
-			"border-border-dark bg-surface-lighter text-copy-dark dark:border-border-light dark:bg-surface-dark dark:text-copy-light":
+			"border-border-dark bg-surface-lighter text-copy-dark dark:border-border-accent dark:bg-surface-dark dark:text-copy-light":
 				mode === "system",
-			"border-border-light bg-surface-dark text-copy-light dark:border-border-dark dark:bg-surface-lighter dark:text-copy-dark":
+			"border-border-accent bg-surface-dark text-copy-light dark:border-border-dark dark:bg-surface-lighter dark:text-copy-dark":
 				mode === "alt-system",
 		},
 	);
 	const header = headerClassName
 		? headerClassName
-		: clsx(`${CARD_CLASSNAME}__header mt-0 border-b-2 border-border-medium`, {
+		: clsx(`${CARD_CLASSNAME}__header mt-0 border-b-2`, {
+				"border-border-accent": mode === "dark",
+				"border-border-medium": mode === "light",
+				"border-border-medium dark:border-border-accent": mode === "system",
+				"border-border-accent dark:border-border-medium": mode === "alt-system",
+
 				"mb-4": !compact,
 				"mb-2": compact,
 			});
