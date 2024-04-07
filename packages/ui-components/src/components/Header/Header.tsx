@@ -13,14 +13,14 @@ export const Header = ({
 	noColors = false,
 }: HeaderProps) => {
 	const headerClass = clsx(HEADER_CLASSNAME, getSpacing(spacing), {
-		"border-border-accent bg-surface-medium":
+		"border-border-accent bg-surface-dark":
 			mode === "dark" && !raw && !noColors,
 		"border-border-medium bg-surface-light":
 			mode === "light" && !raw && !noColors,
-		"border-border-accent bg-surface-light dark:border-border-medium dark:bg-surface-dark":
-			mode === "system" && !raw && !noColors,
-		"border-border-medium bg-surface-dark dark:border-border-accent dark:bg-surface-light":
+		"border-border-accent bg-surface-dark dark:border-border-medium dark:bg-surface-light":
 			mode === "alt-system" && !raw && !noColors,
+		"border-border-medium bg-surface-light dark:border-border-accent dark:bg-surface-dark":
+			mode === "system" && !raw && !noColors,
 		"border-b-4": !raw,
 		"border-transparent": !raw && noColors,
 	});
