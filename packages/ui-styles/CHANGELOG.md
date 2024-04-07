@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/aversini/ui-components/compare/ui-styles-v1.7.0...ui-styles-v1.8.0) (2024-04-07)
+
+
+### Features
+
+* applying global accent color in dark mode ([#472](https://github.com/aversini/ui-components/issues/472)) ([4e3b13c](https://github.com/aversini/ui-components/commit/4e3b13ca94a5df66ab66a7a6afd0ff7b550d75d3))
+
 ## [1.7.0](https://github.com/aversini/ui-components/compare/ui-styles-v1.6.1...ui-styles-v1.7.0) (2024-04-07)
 
 
