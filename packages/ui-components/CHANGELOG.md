@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.14.1](https://github.com/aversini/ui-components/compare/ui-components-v5.14.0...ui-components-v5.14.1) (2024-04-07)
+
+
+### Bug Fixes
+
+* **ui-components:** Main is missing a top margin at lower breakpoints ([#474](https://github.com/aversini/ui-components/issues/474)) ([dee8490](https://github.com/aversini/ui-components/commit/dee849091f06cfc079d9e647f0ab3927ee97ef74))
+
 ## [5.14.0](https://github.com/aversini/ui-components/compare/ui-components-v5.13.1...ui-components-v5.14.0) (2024-04-07)
 
 
