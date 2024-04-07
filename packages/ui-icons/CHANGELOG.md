@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.4.0...ui-icons-v1.5.0) (2024-04-07)
+
+
+### Features
+
+* **ui-icons:** adding IconStarInCircle ([#478](https://github.com/aversini/ui-components/issues/478)) ([d0fbc93](https://github.com/aversini/ui-components/commit/d0fbc936d0c0137a4310d537d664a7eaf5164f21))
+
 ## [1.4.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.3.0...ui-icons-v1.4.0) (2024-03-30)
 
 
