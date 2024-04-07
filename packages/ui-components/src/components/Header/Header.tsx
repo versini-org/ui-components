@@ -9,10 +9,28 @@ export const Header = ({
 	className,
 	raw = false,
 	spacing,
+	mode = "system",
+	noColors = false,
 }: HeaderProps) => {
-	const headerClass = clsx(className, HEADER_CLASSNAME, getSpacing(spacing), {
-		"mt-0 flex w-full flex-col p-2 sm:mt-3 md:mx-auto md:max-w-4xl": !raw,
+	const headerClass = clsx(HEADER_CLASSNAME, getSpacing(spacing), {
+		"border-border-accent bg-surface-medium":
+			mode === "dark" && !raw && !noColors,
+		"border-border-medium bg-surface-light":
+			mode === "light" && !raw && !noColors,
+		"border-border-accent bg-surface-light dark:border-border-medium dark:bg-surface-dark":
+			mode === "system" && !raw && !noColors,
+		"border-border-medium bg-surface-dark dark:border-border-accent dark:bg-surface-light":
+			mode === "alt-system" && !raw && !noColors,
+		"border-b-4": !raw,
+		"border-transparent": !raw && noColors,
+	});
+	const headerInnerClass = clsx(className, {
+		"mt-0 flex w-full flex-col p-2 md:mx-auto md:max-w-4xl": !raw,
 	});
 
-	return <header className={headerClass}>{children}</header>;
+	return (
+		<header className={headerClass}>
+			<div className={headerInnerClass}>{children}</div>
+		</header>
+	);
 };

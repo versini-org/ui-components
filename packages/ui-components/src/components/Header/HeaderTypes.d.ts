@@ -10,6 +10,14 @@ export type HeaderProps = {
 	 */
 	className?: string;
 	/**
+	 * The mode of Header. This will change the background color.
+	 */
+	mode?: "dark" | "light" | "system" | "alt-system";
+	/**
+	 * Whether or not to render the Header component with colors.
+	 */
+	noColors?: boolean;
+	/**
 	 * Whether or not to render the Header component with no styles.
 	 * @default false
 	 */
