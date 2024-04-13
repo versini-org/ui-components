@@ -19,7 +19,7 @@ const getBubbleTypographyClasses = ({ kind }: { kind: string }) => {
 	return clsx(
 		"prose prose-dark dark:prose-lighter prose-p:my-3 prose-blockquote:my-3 prose-ol:my-3 prose-ul:my-3 prose-ul:prose-li:marker:text-black",
 		{
-			"text-copy-dark": kind === "right",
+			"text-copy-lighter": kind === "right",
 		},
 	);
 };
