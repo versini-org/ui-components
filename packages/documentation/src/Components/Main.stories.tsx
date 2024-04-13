@@ -16,7 +16,7 @@ Basic.args = {
 export const WithHeaderAndFooter: Story<any> = (args) => (
 	<div className="h-full bg-slate-100">
 		<Header {...args} className="bg-slate-500">
-			<p>hello header content</p>
+			<h2>hello header content</h2>
 		</Header>
 
 		<Main {...args} className="bg-slate-500">

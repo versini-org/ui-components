@@ -15,6 +15,13 @@ export default {
 							fontFamily: "Open Sans, ui-sans-serif, system-ui, sans-serif",
 							fontWeight: "400",
 						},
+						".av-header h1, .av-header h2, .av-header h3, .av-header h4, .av-header h5, .av-header h6":
+							{
+								margin: "0",
+							},
+						".av-header p": {
+							margin: "0",
+						},
 						blockquote: {
 							borderLeftWidth: "6px",
 						},
