@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/aversini/ui-components/compare/ui-styles-v1.8.1...ui-styles-v1.8.2) (2024-04-13)
+
+
+### Bug Fixes
+
+* better color contrast for right Bubble ([#488](https://github.com/aversini/ui-components/issues/488)) ([cccc4df](https://github.com/aversini/ui-components/commit/cccc4dfe8b0e9e0299dc50a51ada02eb4a0e18b0))
+
 ## [1.8.1](https://github.com/aversini/ui-components/compare/ui-styles-v1.8.0...ui-styles-v1.8.1) (2024-04-13)
 
 
