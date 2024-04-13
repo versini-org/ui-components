@@ -42,40 +42,45 @@ export const Overview: Story<any> = () => (
 			</div>
 		</div>
 
-		<h2>Features</h2>
+		<Flexgrid>
+			<FlexgridItem span={{ fallback: 12, lg: 6 }}>
+				<h2>Features</h2>
 
-		<ul>
-			<li>
-				<strong>Strong</strong>: built-in components typing via TypeScript.
-			</li>
-			<li>
-				<strong>Responsive</strong>: built-in responsive components.
-			</li>
-			<li>
-				<strong>Accessible</strong>: built with accessibility in mind from the
-				start.
-			</li>
-		</ul>
+				<ul>
+					<li>
+						<strong>Strong</strong>: built-in components typing via TypeScript.
+					</li>
+					<li>
+						<strong>Responsive</strong>: built-in responsive components.
+					</li>
+					<li>
+						<strong>Accessible</strong>: built with accessibility in mind from
+						the start.
+					</li>
+				</ul>
+			</FlexgridItem>
+			<FlexgridItem span={{ fallback: 12, lg: 6 }}>
+				<h2>Extra</h2>
 
-		<h2>Extra</h2>
-
-		<ul>
-			<li>
-				<strong>TailwindCSS</strong>: built with TailwindCSS, enabling styles
-				tree-shaking.
-			</li>
-			<li>
-				<strong>Hooks</strong>: provides a set of hooks to use in your
-				application.
-			</li>
-			<li>
-				<strong>Icons</strong>: provides a set of icons to use in your
-				application.
-			</li>
-			<li>
-				<strong>Theming</strong>: provides a theming system to customize the
-				look of the components.
-			</li>
-		</ul>
+				<ul>
+					<li>
+						<strong>TailwindCSS</strong>: built with TailwindCSS, enabling
+						styles tree-shaking.
+					</li>
+					<li>
+						<strong>Hooks</strong>: provides a set of hooks to use in your
+						application.
+					</li>
+					<li>
+						<strong>Icons</strong>: provides a set of icons to use in your
+						application.
+					</li>
+					<li>
+						<strong>Theming</strong>: provides a theming system to customize the
+						look of the components.
+					</li>
+				</ul>
+			</FlexgridItem>
+		</Flexgrid>
 	</>
 );
