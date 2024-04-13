@@ -232,14 +232,14 @@ const CommonTemplate = () => {
 
 export const Basic: Story<any> = (args) => (
 	<Header {...args}>
-		<h1 className="m-0">hello header</h1>
+		<h1>hello header</h1>
 	</Header>
 );
 
 export const KitchenSink: Story<any> = (args) => (
 	<>
 		<Header {...args}>
-			<h1 className="m-0">hello header</h1>
+			<h1>hello header</h1>
 		</Header>
 		<Main>
 			<Card header="Automatic Dark Mode">
