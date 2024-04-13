@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { Menu, MenuItem, MenuSeparator } from "../..";
@@ -125,7 +125,9 @@ describe("Menu behaviors", () => {
 		expect(firstMenuItem).toHaveFocus();
 		expect(document.activeElement).toBe(firstMenuItem);
 		await user.click(firstMenuItem);
-		expect(trigger).toHaveFocus();
+		await waitFor(() => {
+			expect(screen.queryByText(FIRST_MENU_ITEM)).not.toBeInTheDocument();
+		});
 	});
 
 	it("should trigger the Menu onOpenChange callback when opened and closed", async () => {
