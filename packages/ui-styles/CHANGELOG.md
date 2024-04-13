@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/aversini/ui-components/compare/ui-styles-v1.8.0...ui-styles-v1.8.1) (2024-04-13)
+
+
+### Bug Fixes
+
+* **ui-styles:** internal margins are impacting Header styles ([#484](https://github.com/aversini/ui-components/issues/484)) ([76a19e1](https://github.com/aversini/ui-components/commit/76a19e194b98dc796074fce62a3b3284694bcb5e))
+
 ## [1.8.0](https://github.com/aversini/ui-components/compare/ui-styles-v1.7.0...ui-styles-v1.8.0) (2024-04-07)
 
 
