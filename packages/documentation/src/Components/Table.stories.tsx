@@ -34,12 +34,28 @@ export default {
 	},
 };
 
+const data = [
+	{
+		id: 1,
+		character: "Paul Atreides",
+		actor: "Timothée Chalamet",
+		timestamp: "10/16/2023 08:46 PM EDT",
+	},
+	{
+		id: 2,
+		character: "Lady Jessica",
+		actor: "Rebecca Ferguson",
+		timestamp: "10/16/2023 08:55 PM EDT",
+	},
+	{
+		id: 3,
+		character: "Duncan Idaho",
+		actor: "Jason Momoa",
+		timestamp: "10/16/2023 08:59 PM EDT",
+	},
+];
+
 export const Basic: Story<any> = (args) => {
-	const data = [
-		{ id: 1, character: "Paul Atreides", actor: "Timothée Chalamet" },
-		{ id: 2, character: "Lady Jessica", actor: "Rebecca Ferguson" },
-		{ id: 3, character: "Duncan Idaho", actor: "Jason Momoa" },
-	];
 	return (
 		<div className="min-h-10">
 			<div className="flex flex-wrap gap-2">
@@ -66,27 +82,6 @@ export const Basic: Story<any> = (args) => {
 };
 
 export const WithAction: Story<any> = (args) => {
-	const data = [
-		{
-			id: 1,
-			timestamp: "10/16/2023 08:46 PM EDT",
-			character: "Who plays Paul Atreides?",
-			actor: "Timothée Chalamet",
-		},
-		{
-			id: 2,
-			timestamp: "10/16/2023 08:55 PM EDT",
-			character: "What about Lady Jessica?",
-			actor: "Rebecca Ferguson",
-		},
-		{
-			id: 3,
-			timestamp: "10/16/2023 08:59 PM EDT",
-			character: "And Duncan Idaho?",
-			actor: "Jason Momoa",
-		},
-	];
-
 	return (
 		<div className="min-h-10">
 			<div className="flex flex-wrap gap-2">
@@ -145,7 +140,7 @@ export const WithAction: Story<any> = (args) => {
 };
 
 export const Sticky: Story<any> = (args) => {
-	const data = [
+	const extraData = [
 		{
 			id: 1,
 			timestamp: "10/16/2023 08:46 PM EDT",
@@ -205,7 +200,7 @@ export const Sticky: Story<any> = (args) => {
 					</TableHead>
 
 					<TableBody>
-						{data.map((row, idx) => {
+						{extraData.map((row, idx) => {
 							return (
 								<TableRow key={`${row.id}-${idx}`}>
 									<TableCell component="th" scope="row">
@@ -234,4 +229,32 @@ Sticky.args = {
 	stickyHeader: true,
 	stickyFooter: true,
 	maxHeight: "260px",
+};
+
+export const WithRowNumbers: Story<any> = (args) => {
+	return (
+		<div className="min-h-10">
+			<div className="flex flex-wrap gap-2">
+				<Table caption="Dune" {...args}>
+					<TableHead>
+						<TableRow>
+							<TableCell className="sr-only">Row</TableCell>
+							<TableCell>Character</TableCell>
+							<TableCell>Actor</TableCell>
+						</TableRow>
+					</TableHead>
+
+					<TableBody>
+						{data.map((row, idx) => (
+							<TableRow key={row.id}>
+								<TableCell>{idx + 1}</TableCell>
+								<TableCell>{row.character}</TableCell>
+								<TableCell>{row.actor}</TableCell>
+							</TableRow>
+						))}
+					</TableBody>
+				</Table>
+			</div>
+		</div>
+	);
 };
