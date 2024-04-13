@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/aversini/ui-components/compare/ui-private-v1.4.1...ui-private-v1.4.2) (2024-04-13)
+
+
+### Bug Fixes
+
+* bump @floating-ui/react to latest ([#490](https://github.com/aversini/ui-components/issues/490)) ([67a84a5](https://github.com/aversini/ui-components/commit/67a84a5556c9708ca1e9be2f902cf59a4088ffb0))
+
 ## [1.4.1](https://github.com/aversini/ui-components/compare/ui-private-v1.4.0...ui-private-v1.4.1) (2024-04-06)
 
 
