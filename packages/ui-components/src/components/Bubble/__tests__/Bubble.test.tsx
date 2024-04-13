@@ -67,7 +67,7 @@ describe("Bubble modifiers", () => {
 			"rounded-b-xl",
 			"rounded-tl-xl",
 			"sm:max-w-md",
-			"text-copy-dark",
+			"text-copy-lighter",
 		]);
 		if (bubble.parentElement?.parentElement) {
 			expectToHaveClasses(bubble.parentElement.parentElement, [

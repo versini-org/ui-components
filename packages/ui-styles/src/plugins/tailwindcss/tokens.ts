@@ -31,7 +31,7 @@ export default {
 		"surface-medium": colors.slate[500],
 		"surface-light": colors.slate[300],
 		"surface-lighter": colors.slate[200],
-		"surface-accent": "#0B93F6",
+		"surface-accent": "#0071EB",
 		"surface-information": colors.violet[200],
 		"surface-success": colors.green[200],
 		"surface-warning": colors.orange[200],
