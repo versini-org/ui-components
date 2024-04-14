@@ -46,6 +46,14 @@ export type ButtonProps = {
 	 */
 	disabled?: boolean;
 	/**
+	 * Whether or not to truncate the text automatically. The text will truncate
+	 * only if this prop is not set AND the text is longer than the Component. For the
+	 * text to be longer than the Component, the Component must have a fixed width, potentially
+	 * set by the parent component or its own className prop.
+	 * @default false
+	 */
+	noTruncate?: boolean;
+	/**
 	 * Handler to call when the Button is clicked.
 	 */
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -58,23 +66,11 @@ export type ButtonProps = {
 
 export type ButtonLinkProps = {
 	/**
-	 * The children to render.
-	 */
-	children?: React.ReactNode;
-	/**
-	 * The URL to link to.
-	 */
-	link?: string;
-	/**
-	 * The maximum length of the label. If the label is longer than
-	 * this value, it will be truncated.
-	 */
-	maxLabelLength?: number;
-	/**
-	 * Whether or not to truncate the label automatically.
+	 * Whether or not to add an icon indicating that the link
+	 * opens in a new window.
 	 * @default false
 	 */
-	noTruncate?: boolean;
+	noNewWindowIcon?: boolean;
 } & ButtonProps &
 	React.AnchorHTMLAttributes<HTMLAnchorElement>;
 

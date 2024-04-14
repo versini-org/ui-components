@@ -11,14 +11,14 @@ describe("Anchor (exceptions)", () => {
 
 describe("Anchor modifiers", () => {
 	it("should render a default anchor", async () => {
-		render(<Anchor link="toto">hello</Anchor>);
+		render(<Anchor href="toto">hello</Anchor>);
 		const button = await screen.findByRole("link");
 		expect(button.className).toContain("py-0");
 	});
 
 	it("should render a size small anchor", async () => {
 		render(
-			<Anchor size="small" link="toto">
+			<Anchor size="small" href="toto">
 				hello
 			</Anchor>,
 		);
@@ -28,7 +28,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render a size medium anchor", async () => {
 		render(
-			<Anchor size="medium" link="toto">
+			<Anchor size="medium" href="toto">
 				hello
 			</Anchor>,
 		);
@@ -38,7 +38,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render a size large anchor", async () => {
 		render(
-			<Anchor size="large" link="toto">
+			<Anchor size="large" href="toto">
 				hello
 			</Anchor>,
 		);
@@ -48,7 +48,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render a dark link", async () => {
 		render(
-			<Anchor mode="dark" link="toto">
+			<Anchor mode="dark" href="toto">
 				hello
 			</Anchor>,
 		);
@@ -60,7 +60,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render a light anchor", async () => {
 		render(
-			<Anchor mode="light" link="toto">
+			<Anchor mode="light" href="toto">
 				hello
 			</Anchor>,
 		);
@@ -72,7 +72,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render a fullWidth link", async () => {
 		render(
-			<Anchor fullWidth link="toto">
+			<Anchor fullWidth href="toto">
 				hello
 			</Anchor>,
 		);
@@ -82,19 +82,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render an anchor with truncated text", async () => {
 		render(
-			<Anchor link="toto" maxLabelLength={8}>
-				hello world
-			</Anchor>,
-		);
-		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-0");
-		const label = await screen.findByText("hello...");
-		expect(label).toBeDefined();
-	});
-
-	it("should render an anchor with full text", async () => {
-		render(
-			<Anchor link="toto" maxLabelLength={11}>
+			<Anchor href="toto" className="w-44">
 				hello world
 			</Anchor>,
 		);
@@ -102,11 +90,12 @@ describe("Anchor modifiers", () => {
 		expect(button.className).toContain("py-0");
 		const label = await screen.findByText("hello world");
 		expect(label).toBeDefined();
+		expect(label.className).toContain("truncate");
 	});
 
 	it("should render an anchor element with a special rel value", async () => {
 		render(
-			<Anchor link="http://www.example.com" target="_blank">
+			<Anchor href="http://www.example.com" target="_blank">
 				Hello World
 			</Anchor>,
 		);
@@ -115,7 +104,7 @@ describe("Anchor modifiers", () => {
 	});
 
 	it("should render an anchor with full text but with truncated class", async () => {
-		render(<Anchor link="toto">hello world</Anchor>);
+		render(<Anchor href="toto">hello world</Anchor>);
 		const button = await screen.findByRole("link");
 		expect(button.className).toContain("py-0");
 		const label = await screen.findByText("hello world");
@@ -125,7 +114,7 @@ describe("Anchor modifiers", () => {
 
 	it("should render an anchor with full text without a truncated class", async () => {
 		render(
-			<Anchor link="toto" noTruncate>
+			<Anchor href="toto" noTruncate>
 				hello world
 			</Anchor>,
 		);

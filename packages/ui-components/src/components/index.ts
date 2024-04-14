@@ -2,7 +2,6 @@ import { Anchor } from "./Anchor/Anchor";
 import { Bubble } from "./Bubble/Bubble";
 import { Button } from "./Button/Button";
 import { ButtonIcon } from "./Button/ButtonIcon";
-import { ButtonLink } from "./Button/ButtonLink";
 import { Card } from "./Card/Card";
 import { Footer } from "./Footer/Footer";
 import { Header } from "./Header/Header";
@@ -27,7 +26,6 @@ export {
 	Bubble,
 	Button,
 	ButtonIcon,
-	ButtonLink,
 	Card,
 	Footer,
 	Header,

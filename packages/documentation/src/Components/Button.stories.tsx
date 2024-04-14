@@ -6,15 +6,44 @@ export default {
 	meta: {
 		importName: "Button",
 	},
+	args: {
+		disabled: false,
+		fullWidth: false,
+		mode: "system",
+		focusMode: "system",
+		size: "medium",
+		raw: false,
+		noBorder: false,
+		variant: "primary",
+		noTruncate: false,
+	},
+	argTypes: {
+		mode: {
+			options: ["dark", "light", "system", "alt-system"],
+			control: { type: "radio" },
+		},
+		focusMode: {
+			options: ["dark", "light", "system", "alt-system"],
+			control: { type: "radio" },
+		},
+		size: {
+			options: ["small", "medium", "large"],
+			control: { type: "radio" },
+		},
+		variant: {
+			options: ["primary", "secondary", "danger"],
+			control: { type: "radio" },
+		},
+	},
 };
 
 export const Basic: Story<any> = (args) => {
 	return (
 		<>
 			<div className="flex flex-wrap gap-2">
-				<Button {...args}>Button</Button>
-				<Button {...args}>Button</Button>
-				<Button {...args}>Button</Button>
+				<Button {...args}>Button lorem ipsum</Button>
+				<Button {...args}>Button lorem ipsum dolor</Button>
+				<Button {...args}>Button lorem ipsum dolor sit amet</Button>
 			</div>
 
 			<p>
@@ -35,31 +64,33 @@ export const Basic: Story<any> = (args) => {
 	);
 };
 
-Basic.args = {
-	disabled: false,
-	fullWidth: false,
-	mode: "system",
-	focusMode: "system",
-	size: "medium",
-	raw: false,
-	noBorder: false,
-	variant: "primary",
+export const Truncate: Story<any> = (args) => {
+	return (
+		<>
+			<div className="flex flex-wrap gap-2">
+				<Button {...args}>Button lorem ipsum</Button>
+				<Button {...args}>Button lorem ipsum dolor</Button>
+				<Button {...args}>Button lorem ipsum dolor sit amet</Button>
+			</div>
+
+			<p>
+				The following row is having the <code>variant</code> prop hard-coded:
+			</p>
+			<div className="flex flex-wrap gap-2">
+				<Button {...args} variant="primary">
+					Button lorem ipsum
+				</Button>
+				<Button {...args} variant="secondary">
+					Button lorem ipsum dolor
+				</Button>
+				<Button {...args} variant="danger">
+					Button lorem ipsum dolor sit amet
+				</Button>
+			</div>
+		</>
+	);
 };
-Basic.argTypes = {
-	mode: {
-		options: ["dark", "light", "system", "alt-system"],
-		control: { type: "radio" },
-	},
-	focusMode: {
-		options: ["dark", "light", "system", "alt-system"],
-		control: { type: "radio" },
-	},
-	size: {
-		options: ["small", "medium", "large"],
-		control: { type: "radio" },
-	},
-	variant: {
-		options: ["primary", "secondary", "danger"],
-		control: { type: "radio" },
-	},
+
+Truncate.args = {
+	className: "w-44 sm:w-52",
 };
