@@ -33,4 +33,9 @@ export type ToggleProps = {
 	 * The type of Toggle. This will change the color of the Toggle.
 	 */
 	mode?: "dark" | "light" | "system" | "alt-system";
+	/**
+	 * Whether or not to render the Toggle with a border.
+	 * @default false
+	 */
+	noBorder?: boolean;
 } & SpacingProps;
