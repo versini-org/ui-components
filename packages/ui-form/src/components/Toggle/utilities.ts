@@ -32,11 +32,13 @@ const getToggleKnobFocusClasses = ({
 
 const getToggleKnobOnClasses = () => {
 	return clsx(
-		"peer-checked:bg-[#5bc236]",
-
 		"peer-checked:after:translate-x-full",
-		"peer-checked:after:bg-white",
 
+		// background color when checked
+		"peer-checked:bg-violet-500",
+
+		// knob circle and border color when checked
+		"peer-checked:after:bg-white",
 		"peer-checked:after:border-white",
 	);
 };
