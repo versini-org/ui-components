@@ -92,14 +92,14 @@ module.exports = {
 				<Button>Button</Button>
 			</div>
 			<div className="mb-2 flex flex-wrap gap-2">
-				<Anchor link="https://www.google.com">Anchor as a button</Anchor>
-				<Anchor link="https://www.google.com">
+				<Anchor href="https://www.google.com">Anchor as a button</Anchor>
+				<Anchor href="https://www.google.com">
 					Anchor as a button lorem ipsum
 				</Anchor>
-				<Anchor link="https://www.google.com">
+				<Anchor href="https://www.google.com">
 					Anchor as a button lorem ipsum dolor
 				</Anchor>
-				<Anchor link="https://www.google.com">
+				<Anchor href="https://www.google.com">
 					Anchor as a button lorem ipsum dolor sit amet
 				</Anchor>
 			</div>

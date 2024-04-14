@@ -23,6 +23,7 @@ type getButtonClassesProps = {
 	labelLeft?: string;
 	labelRight?: string;
 	noBackground?: boolean;
+	noTruncate?: boolean;
 	variant?: "primary" | "secondary" | "danger";
 } & SpacingProps;
 
@@ -33,7 +34,7 @@ const getButtonSizesClasses = ({
 	labelLeft,
 }: {
 	size: string;
-	type: string;
+	type: typeof TYPE_BUTTON | typeof TYPE_ICON | typeof TYPE_LINK;
 	labelLeft?: string;
 	labelRight?: string;
 }) => {
@@ -74,11 +75,13 @@ const getButtonSizesClasses = ({
 const getButtonBaseClasses = ({
 	mode,
 	noBackground,
+	noTruncate,
 	variant,
 }: {
 	mode: "dark" | "light" | "system" | "alt-system";
 	variant: "primary" | "secondary" | "danger";
 	noBackground?: boolean;
+	noTruncate?: boolean;
 }) => {
 	if (noBackground) {
 		return "not-prose rounded-full";
@@ -86,6 +89,7 @@ const getButtonBaseClasses = ({
 
 	if (variant === "primary") {
 		return clsx("not-prose rounded-full", {
+			truncate: !noTruncate,
 			"bg-action-dark text-copy-light": mode === "dark",
 			"bg-action-light text-copy-lighter": mode === "light",
 			"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
@@ -96,6 +100,7 @@ const getButtonBaseClasses = ({
 	}
 	if (variant === "secondary") {
 		return clsx("not-prose rounded-full", {
+			truncate: !noTruncate,
 			"bg-action-dark text-copy-light": mode === "light",
 			"bg-action-light text-copy-lighter": mode === "dark",
 			"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
@@ -106,6 +111,7 @@ const getButtonBaseClasses = ({
 	}
 	if (variant === "danger") {
 		return clsx("not-prose rounded-full", {
+			truncate: !noTruncate,
 			"bg-action-danger-dark text-copy-light": mode === "dark",
 			"bg-action-danger-light text-copy-lighter": mode === "light",
 			"bg-action-danger-dark text-copy-light dark:bg-action-danger-light dark:text-copy-lighter":
@@ -272,6 +278,7 @@ export const getButtonClasses = ({
 	spacing,
 	noBackground,
 	variant,
+	noTruncate,
 }: getButtonClassesProps) => {
 	if (!variant) {
 		variant = "primary";
@@ -282,7 +289,7 @@ export const getButtonClasses = ({
 				BUTTON_CLASSNAME,
 				className,
 				getSpacing(spacing),
-				getButtonBaseClasses({ mode, variant, noBackground }),
+				getButtonBaseClasses({ mode, variant, noBackground, noTruncate }),
 				getButtonSizesClasses({ type, size, labelRight, labelLeft }),
 				getButtonBorderClasses({ mode, variant, noBorder }),
 				getButtonFocusClasses({ focusMode }),

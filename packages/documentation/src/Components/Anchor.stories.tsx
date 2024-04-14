@@ -6,10 +6,35 @@ export default {
 	meta: {
 		importName: "Anchor",
 	},
+	args: {
+		fullWidth: false,
+		mode: "system",
+		focusMode: "system",
+		raw: false,
+		href: "https://example.com",
+		noBorder: false,
+		size: "small",
+		noTruncate: false,
+		noNewWindowIcon: false,
+	},
+	argTypes: {
+		mode: {
+			options: ["dark", "light", "system", "alt-system"],
+			control: { type: "radio" },
+		},
+		focusMode: {
+			options: ["dark", "light", "system", "alt-system"],
+			control: { type: "radio" },
+		},
+		size: {
+			options: ["small", "medium", "large"],
+			control: { type: "radio" },
+		},
+	},
 };
 
 export const Basic: Story<any> = (args) => (
-	<div className="flex flex-wrap">
+	<div className="flex flex-wrap gap-2">
 		<Anchor {...args}>Anchor as a button</Anchor>
 		<Anchor {...args}>Anchor as a button lorem ipsum</Anchor>
 		<Anchor {...args}>Anchor as a button lorem ipsum dolor</Anchor>
@@ -17,29 +42,27 @@ export const Basic: Story<any> = (args) => (
 	</div>
 );
 
-Basic.args = {
-	fullWidth: false,
-	mode: "system",
-	focusMode: "system",
-	raw: false,
-	link: "https://www.google.com",
-	noBorder: false,
-	size: "small",
-	noTruncate: false,
-	spacing: { r: 2, b: 2 },
+export const NewWindow: Story<any> = (args) => (
+	<div className="flex flex-wrap gap-2">
+		<Anchor {...args}>Anchor as a button</Anchor>
+		<Anchor {...args}>Anchor as a button lorem ipsum</Anchor>
+		<Anchor {...args}>Anchor as a button lorem ipsum dolor</Anchor>
+		<Anchor {...args}>Anchor as a button lorem ipsum dolor sit amet</Anchor>
+	</div>
+);
+NewWindow.args = {
+	target: "_blank",
 };
 
-Basic.argTypes = {
-	mode: {
-		options: ["dark", "light", "system", "alt-system"],
-		control: { type: "radio" },
-	},
-	focusMode: {
-		options: ["dark", "light", "system", "alt-system"],
-		control: { type: "radio" },
-	},
-	size: {
-		options: ["small", "medium", "large"],
-		control: { type: "radio" },
-	},
+export const Truncate: Story<any> = (args) => (
+	<div className="flex flex-wrap gap-2">
+		<Anchor {...args}>Anchor as a button</Anchor>
+		<Anchor {...args}>Anchor as a button lorem ipsum</Anchor>
+		<Anchor {...args}>Anchor as a button lorem ipsum dolor</Anchor>
+		<Anchor {...args}>Anchor as a button lorem ipsum dolor sit amet</Anchor>
+	</div>
+);
+
+Truncate.args = {
+	className: "w-44 sm:w-52",
 };

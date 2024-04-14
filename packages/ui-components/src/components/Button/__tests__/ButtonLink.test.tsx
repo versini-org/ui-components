@@ -1,24 +1,18 @@
 import { render, screen } from "@testing-library/react";
 
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
-import { ButtonLink } from "../..";
-
-describe("ButtonLink (exceptions)", () => {
-	it("should be able to require/import from root", () => {
-		expect(ButtonLink).toBeDefined();
-	});
-});
+import { ButtonLink } from "../ButtonLink";
 
 describe("ButtonLink modifiers", () => {
 	it("should render a default anchor", async () => {
-		render(<ButtonLink link="toto">hello</ButtonLink>);
+		render(<ButtonLink href="toto">hello</ButtonLink>);
 		const button = await screen.findByRole("link");
 		expect(button.className).toContain("py-0");
 	});
 
 	it("should render a size small anchor", async () => {
 		render(
-			<ButtonLink size="small" link="toto">
+			<ButtonLink size="small" href="toto">
 				hello
 			</ButtonLink>,
 		);
@@ -28,7 +22,7 @@ describe("ButtonLink modifiers", () => {
 
 	it("should render a size medium anchor", async () => {
 		render(
-			<ButtonLink size="medium" link="toto">
+			<ButtonLink size="medium" href="toto">
 				hello
 			</ButtonLink>,
 		);
@@ -38,7 +32,7 @@ describe("ButtonLink modifiers", () => {
 
 	it("should render a size large anchor", async () => {
 		render(
-			<ButtonLink size="large" link="toto">
+			<ButtonLink size="large" href="toto">
 				hello
 			</ButtonLink>,
 		);
@@ -48,7 +42,7 @@ describe("ButtonLink modifiers", () => {
 
 	it("should render a dark link", async () => {
 		render(
-			<ButtonLink mode="dark" link="toto">
+			<ButtonLink mode="dark" href="toto">
 				hello
 			</ButtonLink>,
 		);
@@ -60,7 +54,7 @@ describe("ButtonLink modifiers", () => {
 
 	it("should render a light anchor", async () => {
 		render(
-			<ButtonLink mode="light" link="toto">
+			<ButtonLink mode="light" href="toto">
 				hello
 			</ButtonLink>,
 		);
@@ -72,7 +66,7 @@ describe("ButtonLink modifiers", () => {
 
 	it("should render a fullWidth link", async () => {
 		render(
-			<ButtonLink fullWidth link="toto">
+			<ButtonLink fullWidth href="toto">
 				hello
 			</ButtonLink>,
 		);
@@ -82,19 +76,7 @@ describe("ButtonLink modifiers", () => {
 
 	it("should render an anchor with truncated text", async () => {
 		render(
-			<ButtonLink link="toto" maxLabelLength={8}>
-				hello world
-			</ButtonLink>,
-		);
-		const button = await screen.findByRole("link");
-		expect(button.className).toContain("py-0");
-		const label = await screen.findByText("hello...");
-		expect(label).toBeDefined();
-	});
-
-	it("should render an anchor with full text", async () => {
-		render(
-			<ButtonLink link="toto" maxLabelLength={11}>
+			<ButtonLink href="toto" className="w-44">
 				hello world
 			</ButtonLink>,
 		);
@@ -102,11 +84,12 @@ describe("ButtonLink modifiers", () => {
 		expect(button.className).toContain("py-0");
 		const label = await screen.findByText("hello world");
 		expect(label).toBeDefined();
+		expect(label.className).toContain("truncate");
 	});
 
 	it("should render an anchor element with a special rel value", async () => {
 		render(
-			<ButtonLink link="http://www.example.com" target="_blank">
+			<ButtonLink href="http://www.example.com" target="_blank">
 				Hello World
 			</ButtonLink>,
 		);
@@ -115,7 +98,7 @@ describe("ButtonLink modifiers", () => {
 	});
 
 	it("should render an anchor with full text but with truncated class", async () => {
-		render(<ButtonLink link="toto">hello world</ButtonLink>);
+		render(<ButtonLink href="toto">hello world</ButtonLink>);
 		const button = await screen.findByRole("link");
 		expect(button.className).toContain("py-0");
 		const label = await screen.findByText("hello world");
@@ -125,7 +108,7 @@ describe("ButtonLink modifiers", () => {
 
 	it("should render an anchor with full text without a truncated class", async () => {
 		render(
-			<ButtonLink link="toto" noTruncate>
+			<ButtonLink href="toto" noTruncate>
 				hello world
 			</ButtonLink>,
 		);

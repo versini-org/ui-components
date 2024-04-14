@@ -7,19 +7,17 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	(
 		{
 			children,
-			onClick,
 			disabled = false,
 			mode = "system",
 			focusMode = "system",
 			fullWidth = false,
 			className,
 			size = "medium",
-			type = "button",
 			raw = false,
 			noBorder = false,
-			"aria-label": ariaLabel,
 			spacing,
 			variant = "primary",
+			noTruncate = false,
 
 			...otherProps
 		},
@@ -37,16 +35,14 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			noBorder,
 			spacing,
 			variant,
+			noTruncate,
 		});
 
 		return (
 			<button
 				ref={ref}
 				className={buttonClass}
-				onClick={onClick}
 				disabled={disabled}
-				type={type}
-				aria-label={ariaLabel}
 				{...otherProps}
 			>
 				{children}
