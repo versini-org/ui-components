@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/aversini/ui-components/compare/ui-form-v1.2.1...ui-form-v1.3.0) (2024-04-14)
+
+
+### Features
+
+* **Toggle:** adding support for noBorder ([#496](https://github.com/aversini/ui-components/issues/496)) ([90e0f3e](https://github.com/aversini/ui-components/commit/90e0f3e8259c3e9258bb52a318f2dd108d249eb2))
+
 ## [1.2.1](https://github.com/aversini/ui-components/compare/ui-form-v1.2.0...ui-form-v1.2.1) (2024-04-14)
 
 
