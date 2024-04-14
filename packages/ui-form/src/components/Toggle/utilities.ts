@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { TOGGLE_CLASSNAME } from "../../common/constants";
 
 const getToggleBaseClasses = () => {
-	return clsx(TOGGLE_CLASSNAME, "peer", "h-6", "w-11", "rounded-full");
+	return clsx("peer", "h-6", "w-11", "rounded-full");
 };
 
 const getToggleKnobFocusClasses = ({
@@ -60,10 +60,13 @@ const getToggleKnobOffClasses = () => {
 
 const getToggleColorClasses = ({
 	mode,
+	noBorder,
 }: {
 	mode: "dark" | "light" | "system" | "alt-system";
+	noBorder: boolean;
 }) => {
 	return clsx({
+		border: !noBorder,
 		"border-border-dark bg-surface-medium": mode === "light",
 		"border-border-light bg-surface-darker": mode === "dark",
 		"border-border-light bg-surface-darker dark:border-border-dark dark:bg-surface-medium":
@@ -82,7 +85,7 @@ const getLabelClasses = ({
 }) => {
 	return labelHidden
 		? "sr-only"
-		: clsx("ml-3 text-sm", {
+		: clsx("ml-2 text-sm", {
 				"text-copy-dark": mode === "light",
 				"text-copy-lighter": mode === "dark",
 				"text-copy-lighter dark:text-copy-dark": mode === "alt-system",
@@ -91,7 +94,11 @@ const getLabelClasses = ({
 };
 
 const getWrapperClasses = ({ spacing }: SpacingProps) => {
-	return clsx("relative flex cursor-pointer items-center", getSpacing(spacing));
+	return clsx(
+		TOGGLE_CLASSNAME,
+		"relative flex cursor-pointer items-center",
+		getSpacing(spacing),
+	);
 };
 
 export const getToggleClasses = ({
@@ -99,15 +106,17 @@ export const getToggleClasses = ({
 	focusMode,
 	labelHidden,
 	spacing,
+	noBorder,
 }: {
 	focusMode: "dark" | "light" | "system" | "alt-system";
 	labelHidden: boolean;
 	mode: "dark" | "light" | "system" | "alt-system";
+	noBorder: boolean;
 } & SpacingProps) => {
 	return {
 		toggle: clsx(
 			getToggleBaseClasses(),
-			getToggleColorClasses({ mode }),
+			getToggleColorClasses({ mode, noBorder }),
 			getToggleKnobFocusClasses({ focusMode }),
 			getToggleKnobOffClasses(),
 			getToggleKnobOnClasses(),

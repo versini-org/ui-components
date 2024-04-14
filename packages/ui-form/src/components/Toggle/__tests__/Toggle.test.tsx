@@ -4,7 +4,6 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
-import { TOGGLE_CLASSNAME } from "../../../common/constants";
 import { Toggle } from "../..";
 
 describe("Toggle (exceptions)", () => {
@@ -28,10 +27,9 @@ describe("Toggle modifiers", () => {
 		const input = screen.getByRole("checkbox");
 		const toggle = input.nextElementSibling;
 
-		expectToHaveClasses(label, ["ml-3", "text-sm", "text-copy-lighter"]);
+		expectToHaveClasses(label, ["ml-2", "text-sm", "text-copy-lighter"]);
 		if (toggle) {
 			expectToHaveClasses(toggle, [
-				TOGGLE_CLASSNAME,
 				"after:absolute",
 				"after:bg-surface-light",
 				"after:border-surface-light",
@@ -78,10 +76,9 @@ describe("Toggle modifiers", () => {
 		const label = screen.getByText("toto");
 		const input = screen.getByRole("checkbox");
 		const toggle = input.nextElementSibling;
-		expectToHaveClasses(label, ["ml-3", "text-sm", "text-copy-dark"]);
+		expectToHaveClasses(label, ["ml-2", "text-sm", "text-copy-dark"]);
 		if (toggle) {
 			expectToHaveClasses(toggle, [
-				TOGGLE_CLASSNAME,
 				"peer",
 				"h-6",
 				"w-11",

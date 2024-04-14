@@ -14,6 +14,7 @@ export default {
 		focusMode: "system",
 		labelHidden: false,
 		label: "Toggle",
+		noBorder: false,
 	},
 	argTypes: {
 		mode: {
@@ -33,6 +34,23 @@ export const Basic: Story<any> = (args) => {
 	return (
 		<div className="flex flex-wrap gap-2">
 			<Toggle onChange={setChecked} checked={checked} name="Toggle" {...args} />
+		</div>
+	);
+};
+
+export const DynamicLabel: Story<any> = (args) => {
+	const [checked, setChecked] = useState(true);
+
+	return (
+		<div className="flex flex-wrap items-center gap-2">
+			<div className="text-sm">Edit Mode:</div>
+			<Toggle
+				onChange={setChecked}
+				checked={checked}
+				name="Toggle"
+				{...args}
+				label={checked ? "On" : "Off"}
+			/>
 		</div>
 	);
 };
