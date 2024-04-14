@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/aversini/ui-components/compare/ui-form-v1.2.0...ui-form-v1.2.1) (2024-04-14)
+
+
+### Bug Fixes
+
+* **Toggle:** a bit more unique color / style ([#494](https://github.com/aversini/ui-components/issues/494)) ([1ff0727](https://github.com/aversini/ui-components/commit/1ff0727fcb929ca3e74a90a59d4d405eae5857cb))
+
 ## [1.2.0](https://github.com/aversini/ui-components/compare/ui-form-v1.1.1...ui-form-v1.2.0) (2024-04-01)
 
 
