@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.14.5](https://github.com/aversini/ui-components/compare/ui-components-v5.14.4...ui-components-v5.14.5) (2024-04-14)
+
+
+### Bug Fixes
+
+* refactor Button and Anchor ([#492](https://github.com/aversini/ui-components/issues/492)) ([58b2df0](https://github.com/aversini/ui-components/commit/58b2df0ac748d7f9bd949c3309867d4ffc66786b))
+
 ## [5.14.4](https://github.com/aversini/ui-components/compare/ui-components-v5.14.3...ui-components-v5.14.4) (2024-04-13)
 
 
