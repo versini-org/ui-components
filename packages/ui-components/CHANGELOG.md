@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.16.0](https://github.com/aversini/ui-components/compare/ui-components-v5.15.0...ui-components-v5.16.0) (2024-04-15)
+
+
+### Features
+
+* **Table:** adding TableCellSort to support sortable data ([#501](https://github.com/aversini/ui-components/issues/501)) ([5115669](https://github.com/aversini/ui-components/commit/511566909d7223f8a8057bf2256ef1da449aec1e))
+
 ## [5.15.0](https://github.com/aversini/ui-components/compare/ui-components-v5.14.5...ui-components-v5.15.0) (2024-04-15)
 
 
