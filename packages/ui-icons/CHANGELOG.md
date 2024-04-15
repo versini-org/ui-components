@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.5.0...ui-icons-v1.6.0) (2024-04-15)
+
+
+### Features
+
+* adding IconSort ([#500](https://github.com/aversini/ui-components/issues/500)) ([9f8b17b](https://github.com/aversini/ui-components/commit/9f8b17bbcfe63183717079fc374699547f3f6c25))
+
 ## [1.5.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.4.0...ui-icons-v1.5.0) (2024-04-07)
 
 

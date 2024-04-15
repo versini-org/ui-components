@@ -19,6 +19,7 @@ type getButtonClassesProps = {
 	size: string;
 	type: typeof TYPE_BUTTON | typeof TYPE_ICON | typeof TYPE_LINK;
 
+	align?: "center" | "left" | "right";
 	className?: string;
 	labelLeft?: string;
 	labelRight?: string;
@@ -32,9 +33,11 @@ const getButtonSizesClasses = ({
 	size,
 	labelRight,
 	labelLeft,
+	align,
 }: {
 	size: string;
 	type: typeof TYPE_BUTTON | typeof TYPE_ICON | typeof TYPE_LINK;
+	align?: "center" | "left" | "right";
 	labelLeft?: string;
 	labelRight?: string;
 }) => {
@@ -58,7 +61,10 @@ const getButtonSizesClasses = ({
 			});
 
 		case TYPE_ICON:
-			return clsx("inline-flex items-center justify-center", {
+			return clsx("inline-flex items-center", {
+				"justify-center": align === "center",
+				"justify-start": align === "left",
+				"justify-end": align === "right",
 				"h-6 w-6 p-0": size === "small" && !(labelRight || labelLeft),
 				"h-6 px-4 text-sm font-medium":
 					size === "small" && (labelRight || labelLeft),
@@ -279,6 +285,7 @@ export const getButtonClasses = ({
 	noBackground,
 	variant,
 	noTruncate,
+	align,
 }: getButtonClassesProps) => {
 	if (!variant) {
 		variant = "primary";
@@ -290,7 +297,7 @@ export const getButtonClasses = ({
 				className,
 				getSpacing(spacing),
 				getButtonBaseClasses({ mode, variant, noBackground, noTruncate }),
-				getButtonSizesClasses({ type, size, labelRight, labelLeft }),
+				getButtonSizesClasses({ type, size, labelRight, labelLeft, align }),
 				getButtonBorderClasses({ mode, variant, noBorder }),
 				getButtonFocusClasses({ focusMode }),
 				getButtonHoverClasses({ mode, variant, disabled }),

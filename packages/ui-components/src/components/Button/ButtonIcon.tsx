@@ -23,6 +23,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			labelLeft,
 			spacing,
 			noBackground = false,
+			align = "center",
 
 			...otherProps
 		},
@@ -42,6 +43,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			labelLeft,
 			spacing,
 			noBackground,
+			align,
 		});
 		const iconClass = clsx({
 			"text-copy-accent-dark": mode === "light" && !raw,

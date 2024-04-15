@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.15.0](https://github.com/aversini/ui-components/compare/ui-components-v5.14.5...ui-components-v5.15.0) (2024-04-15)
+
+
+### Features
+
+* **ButtonIcon:** adding support for prop "align" ([#498](https://github.com/aversini/ui-components/issues/498)) ([3a96dbe](https://github.com/aversini/ui-components/commit/3a96dbea52b48db73921618dd479091c038984c8))
+
 ## [5.14.5](https://github.com/aversini/ui-components/compare/ui-components-v5.14.4...ui-components-v5.14.5) (2024-04-14)
 
 
