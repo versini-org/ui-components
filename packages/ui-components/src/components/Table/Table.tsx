@@ -1,9 +1,12 @@
+import { IconDown, IconSort, IconUp } from "@versini/ui-icons";
 import { useContext } from "react";
 
+import { ButtonIcon } from "../Button/ButtonIcon";
 import { TableContext } from "./TableContext";
 import type {
 	TableBodyProps,
 	TableCellProps,
+	TableCellSortProps,
 	TableHeadProps,
 	TableProps,
 	TableRowProps,
@@ -17,6 +20,7 @@ import {
 	getTableFooterClasses,
 	getTableHeadClasses,
 	getTableRowClasses,
+	TableCellSortDirections,
 } from "./utilities";
 
 export const Table = ({
@@ -143,5 +147,57 @@ export const TableCell = ({
 		<Component className={cellClass} {...otherProps}>
 			{children}
 		</Component>
+	);
+};
+
+export const TableCellSort = ({
+	align,
+	children,
+	className,
+	component,
+	focusMode = "alt-system",
+	mode = "alt-system",
+	onClick,
+	sortDirection,
+	sortedCell,
+	cellId,
+	...otherProps
+}: TableCellSortProps) => {
+	return (
+		<TableCell
+			component={component}
+			className={className}
+			role="columnheader"
+			aria-sort={
+				sortDirection === TableCellSortDirections.ASC && sortedCell === cellId
+					? "ascending"
+					: sortDirection === TableCellSortDirections.DESC &&
+						  sortedCell === cellId
+						? "descending"
+						: "other"
+			}
+			{...otherProps}
+		>
+			<ButtonIcon
+				className="rounded-none"
+				onClick={onClick}
+				align={align}
+				noBorder
+				focusMode={focusMode}
+				mode={mode}
+				fullWidth
+				labelRight={children}
+			>
+				{sortDirection === TableCellSortDirections.ASC &&
+				sortedCell === cellId ? (
+					<IconUp className="h-3 w-3" monotone />
+				) : sortDirection === TableCellSortDirections.DESC &&
+				  sortedCell === cellId ? (
+					<IconDown className="h-3 w-3" monotone />
+				) : (
+					<IconSort className="h-3 w-3" monotone />
+				)}
+			</ButtonIcon>
+		</TableCell>
 	);
 };

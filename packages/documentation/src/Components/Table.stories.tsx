@@ -4,16 +4,20 @@ import {
 	Table,
 	TableBody,
 	TableCell,
+	TableCellSort,
+	TableCellSortDirections,
 	TableFooter,
 	TableHead,
 	TableRow,
 } from "@versini/ui-components";
 import { IconDelete, IconRestore } from "@versini/ui-icons";
+import { useState } from "react";
 
 export default {
 	title: "Components/Table",
 	meta: {
-		importName: "Table, TableBody, TableCell, TableHead, TableRow",
+		importName:
+			"Table, TableBody, TableCell, TableCellSort, TableHead, TableRow",
 	},
 	args: {
 		mode: "system",
@@ -39,7 +43,7 @@ const data = [
 		id: 1,
 		character: "Paul Atreides",
 		actor: "Timothée Chalamet",
-		timestamp: "10/16/2023 08:46 PM EDT",
+		timestamp: "10/17/2023 08:46 PM EDT",
 	},
 	{
 		id: 2,
@@ -248,6 +252,115 @@ export const WithRowNumbers: Story<any> = (args) => {
 						{data.map((row, idx) => (
 							<TableRow key={row.id}>
 								<TableCell>{idx + 1}</TableCell>
+								<TableCell>{row.character}</TableCell>
+								<TableCell>{row.actor}</TableCell>
+							</TableRow>
+						))}
+					</TableBody>
+				</Table>
+			</div>
+		</div>
+	);
+};
+
+export const Sortable: Story<any> = (args) => {
+	const [sortState, setSortState] = useState<{
+		cell: string;
+		direction: boolean | string;
+	}>({ direction: false, cell: "" });
+
+	const sortedData = data.sort((a, b) => {
+		switch (sortState.cell) {
+			case "actor":
+			case "character":
+				if (sortState.direction === TableCellSortDirections.ASC) {
+					return a[sortState.cell].localeCompare(b[sortState.cell]);
+				} else if (sortState.direction === TableCellSortDirections.DESC) {
+					return b[sortState.cell].localeCompare(a[sortState.cell]);
+				}
+				break;
+
+			case "timestamp":
+				if (sortState.direction === TableCellSortDirections.ASC) {
+					return (
+						new Date(a[sortState.cell]).getTime() -
+						new Date(b[sortState.cell]).getTime()
+					);
+				} else if (sortState.direction === TableCellSortDirections.DESC) {
+					return (
+						new Date(b[sortState.cell]).getTime() -
+						new Date(a[sortState.cell]).getTime()
+					);
+				}
+				break;
+
+			default:
+				return 0;
+		}
+		return 0;
+	});
+
+	const onClickSort = (key: string) => {
+		switch (sortState.direction) {
+			case false:
+				setSortState({ cell: key, direction: TableCellSortDirections.ASC });
+				break;
+			case TableCellSortDirections.ASC:
+				setSortState({ cell: key, direction: TableCellSortDirections.DESC });
+				break;
+			default:
+				setSortState({ cell: key, direction: TableCellSortDirections.ASC });
+				break;
+		}
+	};
+
+	return (
+		<div className="min-h-10">
+			<div className="flex flex-wrap gap-2">
+				<Table caption="Dune" {...args}>
+					<TableHead>
+						<TableRow>
+							<TableCellSort
+								scope="col"
+								cellId="timestamp"
+								align="left"
+								sortDirection={sortState.direction}
+								sortedCell={sortState.cell}
+								onClick={() => {
+									onClickSort("timestamp");
+								}}
+							>
+								Date
+							</TableCellSort>
+							<TableCellSort
+								cellId="character"
+								align="left"
+								sortDirection={sortState.direction}
+								sortedCell={sortState.cell}
+								onClick={() => {
+									onClickSort("character");
+								}}
+							>
+								Character
+							</TableCellSort>
+							<TableCellSort
+								cellId="actor"
+								align="left"
+								sortDirection={sortState.direction}
+								sortedCell={sortState.cell}
+								onClick={() => {
+									onClickSort("actor");
+								}}
+							>
+								Actor
+							</TableCellSort>
+						</TableRow>
+					</TableHead>
+
+					<TableBody>
+						{sortedData.map((row) => (
+							<TableRow key={row.id}>
+								<TableCell>{row.timestamp}</TableCell>
 								<TableCell>{row.character}</TableCell>
 								<TableCell>{row.actor}</TableCell>
 							</TableRow>

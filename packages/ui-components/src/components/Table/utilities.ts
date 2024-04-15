@@ -6,6 +6,11 @@ export const CELL_WRAPPER_HEAD = "thead";
 export const CELL_WRAPPER_FOOTER = "tfoot";
 export const CELL_WRAPPER_BODY = "tbody";
 
+export const TableCellSortDirections = {
+	ASC: "asc",
+	DESC: "desc",
+};
+
 export const getTableClasses = ({
 	mode,
 	className,

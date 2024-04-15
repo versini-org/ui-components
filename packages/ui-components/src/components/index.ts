@@ -16,10 +16,12 @@ import {
 	Table,
 	TableBody,
 	TableCell,
+	TableCellSort,
 	TableFooter,
 	TableHead,
 	TableRow,
 } from "./Table/Table";
+import { TableCellSortDirections } from "./Table/utilities";
 
 export {
 	Anchor,
@@ -39,6 +41,8 @@ export {
 	Table,
 	TableBody,
 	TableCell,
+	TableCellSort,
+	TableCellSortDirections,
 	TableFooter,
 	TableHead,
 	TableRow,

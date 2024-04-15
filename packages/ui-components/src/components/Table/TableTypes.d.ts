@@ -57,3 +57,17 @@ export type TableCellProps = {
 	component?: "td" | "th";
 } & React.ThHTMLAttributes<HTMLTableCellElement> &
 	React.TdHTMLAttributes<HTMLTableCellElement>;
+
+export type TableCellSortProps = {
+	cellId: string;
+	children: string;
+	onClick: (event: React.MouseEvent<unknown>) => void;
+	sortDirection: "asc" | "desc" | false;
+	sortedCell: string;
+
+	align?: "left" | "center" | "right";
+	component?: "td" | "th";
+	focusMode?: "system" | "light" | "dark" | "alt-system";
+	mode?: "system" | "light" | "dark" | "alt-system";
+} & React.ThHTMLAttributes<HTMLTableCellElement> &
+	React.TdHTMLAttributes<HTMLTableCellElement>;
