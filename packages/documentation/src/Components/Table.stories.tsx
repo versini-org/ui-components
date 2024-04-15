@@ -8,7 +8,8 @@ import {
 	TableHead,
 	TableRow,
 } from "@versini/ui-components";
-import { IconDelete, IconRestore } from "@versini/ui-icons";
+import { IconDelete, IconDown, IconRestore, IconUp } from "@versini/ui-icons";
+import { useState } from "react";
 
 export default {
 	title: "Components/Table",
@@ -39,7 +40,7 @@ const data = [
 		id: 1,
 		character: "Paul Atreides",
 		actor: "Timothée Chalamet",
-		timestamp: "10/16/2023 08:46 PM EDT",
+		timestamp: "10/17/2023 08:46 PM EDT",
 	},
 	{
 		id: 2,
@@ -248,6 +249,119 @@ export const WithRowNumbers: Story<any> = (args) => {
 						{data.map((row, idx) => (
 							<TableRow key={row.id}>
 								<TableCell>{idx + 1}</TableCell>
+								<TableCell>{row.character}</TableCell>
+								<TableCell>{row.actor}</TableCell>
+							</TableRow>
+						))}
+					</TableBody>
+				</Table>
+			</div>
+		</div>
+	);
+};
+
+export const Sortable: Story<any> = (args) => {
+	const [order, setOrder] = useState<boolean | string>(false);
+	const [orderBy, setOrderBy] = useState<boolean | string>(false);
+	const sortedData = data.sort((a, b) => {
+		if (orderBy === "actor" || orderBy === "character") {
+			if (order === "asc") {
+				return a[orderBy].localeCompare(b[orderBy]);
+			} else if (order === "desc") {
+				return b[orderBy].localeCompare(a[orderBy]);
+			}
+		}
+		if (orderBy === "timestamp") {
+			if (order === "asc") {
+				return new Date(a[orderBy]).getTime() - new Date(b[orderBy]).getTime();
+			} else if (order === "desc") {
+				return new Date(b[orderBy]).getTime() - new Date(a[orderBy]).getTime();
+			}
+		}
+		return 0;
+	});
+
+	const onClickSort = (key: string) => {
+		setOrderBy(key);
+		if (order === false) {
+			setOrder("asc");
+		} else if (order === "asc") {
+			setOrder("desc");
+		} else {
+			setOrder("asc");
+		}
+	};
+
+	return (
+		<div className="min-h-10">
+			<div className="flex flex-wrap gap-2">
+				<Table caption="Dune" {...args}>
+					<TableHead>
+						<TableRow>
+							<TableCell scope="col">
+								<ButtonIcon
+									onClick={() => {
+										onClickSort("timestamp");
+									}}
+									align="left"
+									noBorder
+									focusMode="alt-system"
+									mode="alt-system"
+									fullWidth
+									labelRight="Date"
+								>
+									{order === "asc" && orderBy === "timestamp" ? (
+										<IconUp className="h-3 w-3" monotone />
+									) : order === "desc" && orderBy === "timestamp" ? (
+										<IconDown className="h-3 w-3" monotone />
+									) : null}
+								</ButtonIcon>
+							</TableCell>
+							<TableCell>
+								<ButtonIcon
+									onClick={() => {
+										onClickSort("character");
+									}}
+									align="left"
+									noBorder
+									focusMode="alt-system"
+									mode="alt-system"
+									fullWidth
+									labelRight="Character"
+								>
+									{order === "asc" && orderBy === "character" ? (
+										<IconUp className="h-3 w-3" monotone />
+									) : order === "desc" && orderBy === "character" ? (
+										<IconDown className="h-3 w-3" monotone />
+									) : null}
+								</ButtonIcon>
+							</TableCell>
+							<TableCell>
+								<ButtonIcon
+									onClick={() => {
+										onClickSort("actor");
+									}}
+									align="left"
+									noBorder
+									focusMode="alt-system"
+									mode="alt-system"
+									fullWidth
+									labelRight="Actor"
+								>
+									{order === "asc" && orderBy === "actor" ? (
+										<IconUp className="h-3 w-3" monotone />
+									) : order === "desc" && orderBy === "actor" ? (
+										<IconDown className="h-3 w-3" monotone />
+									) : null}
+								</ButtonIcon>
+							</TableCell>
+						</TableRow>
+					</TableHead>
+
+					<TableBody>
+						{sortedData.map((row) => (
+							<TableRow key={row.id}>
+								<TableCell>{row.timestamp}</TableCell>
 								<TableCell>{row.character}</TableCell>
 								<TableCell>{row.actor}</TableCell>
 							</TableRow>
