@@ -80,6 +80,11 @@ export type ButtonIconProps = {
 	 */
 	children: React.ReactNode;
 	/**
+	 * Cell content alignment.
+	 * @default "center"
+	 */
+	align?: "left" | "right" | "center";
+	/**
 	 * The label to show next to the icon.
 	 */
 	label?: string;

@@ -190,6 +190,36 @@ describe("ButtonIcon modifiers", () => {
 		expect(button.className).toContain("w-full");
 	});
 
+	it("should render a left-aligned button icon", async () => {
+		render(
+			<ButtonIcon align="left">
+				<IconSettings />
+			</ButtonIcon>,
+		);
+		const button = await screen.findByRole("button");
+		expect(button.className).toContain("justify-start");
+	});
+
+	it("should render a right-aligned button icon", async () => {
+		render(
+			<ButtonIcon align="right">
+				<IconSettings />
+			</ButtonIcon>,
+		);
+		const button = await screen.findByRole("button");
+		expect(button.className).toContain("justify-end");
+	});
+
+	it("should render a center-aligned button icon", async () => {
+		render(
+			<ButtonIcon align="center">
+				<IconSettings />
+			</ButtonIcon>,
+		);
+		const button = await screen.findByRole("button");
+		expect(button.className).toContain("justify-center");
+	});
+
 	it("should render a size small button icon", async () => {
 		render(
 			<ButtonIcon size="small">
