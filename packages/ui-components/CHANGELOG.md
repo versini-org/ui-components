@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.16.1](https://github.com/aversini/ui-components/compare/ui-components-v5.16.0...ui-components-v5.16.1) (2024-04-15)
+
+
+### Bug Fixes
+
+* **TableCellSort:** better types and description for each ([#503](https://github.com/aversini/ui-components/issues/503)) ([cf44672](https://github.com/aversini/ui-components/commit/cf4467257a91e45ac28df1b187f4f9261cc84d4b))
+
 ## [5.16.0](https://github.com/aversini/ui-components/compare/ui-components-v5.15.0...ui-components-v5.16.0) (2024-04-15)
 
 
