@@ -266,7 +266,10 @@ export const WithRowNumbers: Story<any> = (args) => {
 export const Sortable: Story<any> = (args) => {
 	const [sortState, setSortState] = useState<{
 		cell: string;
-		direction: boolean | string;
+		direction:
+			| typeof TableCellSortDirections.ASC
+			| typeof TableCellSortDirections.DESC
+			| false;
 	}>({ direction: false, cell: "" });
 
 	const sortedData = data.sort((a, b) => {

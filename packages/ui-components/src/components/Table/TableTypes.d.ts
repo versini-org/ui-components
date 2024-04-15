@@ -1,6 +1,8 @@
 import type { SpacingProps } from "@versini/ui-private/dist/utilities";
 import React from "react";
 
+import { TableCellSortDirections } from "./utilities";
+
 export type TableProps = {
 	/**
 	 * This attribute defines the caption (or title) of a table.
@@ -59,15 +61,49 @@ export type TableCellProps = {
 	React.TdHTMLAttributes<HTMLTableCellElement>;
 
 export type TableCellSortProps = {
+	/**
+	 * Unique identifier for the cell. This string will have to be onClick
+	 * handler to sort on this particular cell.
+	 */
 	cellId: string;
+	/**
+	 * The label of the cell.
+	 */
 	children: string;
+	/**
+	 * The handler to be called when the cell is clicked.
+	 */
 	onClick: (event: React.MouseEvent<unknown>) => void;
-	sortDirection: "asc" | "desc" | false;
+	/**
+	 * The direction of the sort.
+	 */
+	sortDirection:
+		| typeof TableCellSortDirections.ASC
+		| typeof TableCellSortDirections.DESC
+		| false;
+	/**
+	 * The cellId that is currently sorted.
+	 */
 	sortedCell: string;
-
+	/**
+	 * Whether to align the cell content to the left, center, or right.
+	 */
 	align?: "left" | "center" | "right";
+	/**
+	 * The type of cell.
+	 * @default "td"
+	 */
 	component?: "td" | "th";
+	/**
+	 * Pass through to the underlying ButtonIcon.
+	 * The type of focus for the Button. This will change the color
+	 * of the focus ring around the Button.
+	 */
 	focusMode?: "system" | "light" | "dark" | "alt-system";
+	/**
+	 * Pass through to the underlying ButtonIcon.
+	 * The mode of Button. This will change the color of the Button.
+	 */
 	mode?: "system" | "light" | "dark" | "alt-system";
 } & React.ThHTMLAttributes<HTMLTableCellElement> &
 	React.TdHTMLAttributes<HTMLTableCellElement>;
