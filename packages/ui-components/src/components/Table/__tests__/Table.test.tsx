@@ -8,6 +8,7 @@ import {
 	Table,
 	TableBody,
 	TableCell,
+	TableCellSort,
 	TableFooter,
 	TableHead,
 	TableRow,
@@ -538,6 +539,81 @@ describe("Table components", () => {
 		const tableCell = await screen.findByTestId("table-cell");
 		expect(tableCell).toBeInTheDocument();
 		expect(tableCell.tagName).toBe("TD");
+	});
+
+	it("should render a sortable table cell with ASC icon", async () => {
+		render(
+			<table>
+				<tbody>
+					<tr>
+						<TableCellSort
+							cellId="cell-id"
+							sortDirection="asc"
+							sortedCell="cell-id"
+							onClick={() => {}}
+							data-testid="table-cell-sort"
+						>
+							hello
+						</TableCellSort>
+					</tr>
+				</tbody>
+			</table>,
+		);
+		const tableCell = await screen.findByTestId("table-cell-sort");
+		expect(tableCell).toBeInTheDocument();
+		expect(tableCell.tagName).toBe("TD");
+		expect(tableCell.querySelector("svg")).toBeInTheDocument();
+		expect(tableCell).toHaveAttribute("aria-sort", "ascending");
+	});
+
+	it("should render a sortable table cell with DESC icon", async () => {
+		render(
+			<table>
+				<tbody>
+					<tr>
+						<TableCellSort
+							cellId="cell-id"
+							sortDirection="desc"
+							sortedCell="cell-id"
+							onClick={() => {}}
+							data-testid="table-cell-sort"
+						>
+							hello
+						</TableCellSort>
+					</tr>
+				</tbody>
+			</table>,
+		);
+		const tableCell = await screen.findByTestId("table-cell-sort");
+		expect(tableCell).toBeInTheDocument();
+		expect(tableCell.tagName).toBe("TD");
+		expect(tableCell.querySelector("svg")).toBeInTheDocument();
+		expect(tableCell).toHaveAttribute("aria-sort", "descending");
+	});
+
+	it("should render a sortable table cell with non-sorted icon", async () => {
+		render(
+			<table>
+				<tbody>
+					<tr>
+						<TableCellSort
+							cellId="cell-id"
+							sortDirection={false}
+							sortedCell="cell-id"
+							onClick={() => {}}
+							data-testid="table-cell-sort"
+						>
+							hello
+						</TableCellSort>
+					</tr>
+				</tbody>
+			</table>,
+		);
+		const tableCell = await screen.findByTestId("table-cell-sort");
+		expect(tableCell).toBeInTheDocument();
+		expect(tableCell.tagName).toBe("TD");
+		expect(tableCell.querySelector("svg")).toBeInTheDocument();
+		expect(tableCell).toHaveAttribute("aria-sort", "other");
 	});
 
 	it("should render a generated table cell (th)", async () => {

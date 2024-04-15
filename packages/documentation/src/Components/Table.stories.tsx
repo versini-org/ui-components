@@ -4,17 +4,20 @@ import {
 	Table,
 	TableBody,
 	TableCell,
+	TableCellSortDirections,
 	TableFooter,
 	TableHead,
 	TableRow,
 } from "@versini/ui-components";
-import { IconDelete, IconDown, IconRestore, IconUp } from "@versini/ui-icons";
+import { TableCellSort } from "@versini/ui-components";
+import { IconDelete, IconRestore } from "@versini/ui-icons";
 import { useState } from "react";
 
 export default {
 	title: "Components/Table",
 	meta: {
-		importName: "Table, TableBody, TableCell, TableHead, TableRow",
+		importName:
+			"Table, TableBody, TableCell, TableCellSort, TableHead, TableRow",
 	},
 	args: {
 		mode: "system",
@@ -109,7 +112,7 @@ export const WithAction: Story<any> = (args) => {
 									<TableCell>
 										<div className="flex justify-end gap-2">
 											<ButtonIcon
-												noBorder
+												noBsortDirection
 												label="Restore chat"
 												mode="light"
 												focusMode="alt-system"
@@ -118,7 +121,7 @@ export const WithAction: Story<any> = (args) => {
 												<IconRestore className="h-3 w-3" />
 											</ButtonIcon>
 											<ButtonIcon
-												noBorder
+												noBsortDirection
 												label="Delete chat"
 												mode="light"
 												focusMode="alt-system"
@@ -261,34 +264,53 @@ export const WithRowNumbers: Story<any> = (args) => {
 };
 
 export const Sortable: Story<any> = (args) => {
-	const [order, setOrder] = useState<boolean | string>(false);
-	const [orderBy, setOrderBy] = useState<boolean | string>(false);
+	const [sortState, setSortState] = useState<{
+		cell: string;
+		direction: boolean | string;
+	}>({ direction: false, cell: "" });
+
 	const sortedData = data.sort((a, b) => {
-		if (orderBy === "actor" || orderBy === "character") {
-			if (order === "asc") {
-				return a[orderBy].localeCompare(b[orderBy]);
-			} else if (order === "desc") {
-				return b[orderBy].localeCompare(a[orderBy]);
-			}
-		}
-		if (orderBy === "timestamp") {
-			if (order === "asc") {
-				return new Date(a[orderBy]).getTime() - new Date(b[orderBy]).getTime();
-			} else if (order === "desc") {
-				return new Date(b[orderBy]).getTime() - new Date(a[orderBy]).getTime();
-			}
+		switch (sortState.cell) {
+			case "actor":
+			case "character":
+				if (sortState.direction === TableCellSortDirections.ASC) {
+					return a[sortState.cell].localeCompare(b[sortState.cell]);
+				} else if (sortState.direction === TableCellSortDirections.DESC) {
+					return b[sortState.cell].localeCompare(a[sortState.cell]);
+				}
+				break;
+
+			case "timestamp":
+				if (sortState.direction === TableCellSortDirections.ASC) {
+					return (
+						new Date(a[sortState.cell]).getTime() -
+						new Date(b[sortState.cell]).getTime()
+					);
+				} else if (sortState.direction === TableCellSortDirections.DESC) {
+					return (
+						new Date(b[sortState.cell]).getTime() -
+						new Date(a[sortState.cell]).getTime()
+					);
+				}
+				break;
+
+			default:
+				return 0;
 		}
 		return 0;
 	});
 
 	const onClickSort = (key: string) => {
-		setOrderBy(key);
-		if (order === false) {
-			setOrder("asc");
-		} else if (order === "asc") {
-			setOrder("desc");
-		} else {
-			setOrder("asc");
+		switch (sortState.direction) {
+			case false:
+				setSortState({ cell: key, direction: TableCellSortDirections.ASC });
+				break;
+			case TableCellSortDirections.ASC:
+				setSortState({ cell: key, direction: TableCellSortDirections.DESC });
+				break;
+			default:
+				setSortState({ cell: key, direction: TableCellSortDirections.ASC });
+				break;
 		}
 	};
 
@@ -298,63 +320,40 @@ export const Sortable: Story<any> = (args) => {
 				<Table caption="Dune" {...args}>
 					<TableHead>
 						<TableRow>
-							<TableCell scope="col">
-								<ButtonIcon
-									onClick={() => {
-										onClickSort("timestamp");
-									}}
-									align="left"
-									noBorder
-									focusMode="alt-system"
-									mode="alt-system"
-									fullWidth
-									labelRight="Date"
-								>
-									{order === "asc" && orderBy === "timestamp" ? (
-										<IconUp className="h-3 w-3" monotone />
-									) : order === "desc" && orderBy === "timestamp" ? (
-										<IconDown className="h-3 w-3" monotone />
-									) : null}
-								</ButtonIcon>
-							</TableCell>
-							<TableCell>
-								<ButtonIcon
-									onClick={() => {
-										onClickSort("character");
-									}}
-									align="left"
-									noBorder
-									focusMode="alt-system"
-									mode="alt-system"
-									fullWidth
-									labelRight="Character"
-								>
-									{order === "asc" && orderBy === "character" ? (
-										<IconUp className="h-3 w-3" monotone />
-									) : order === "desc" && orderBy === "character" ? (
-										<IconDown className="h-3 w-3" monotone />
-									) : null}
-								</ButtonIcon>
-							</TableCell>
-							<TableCell>
-								<ButtonIcon
-									onClick={() => {
-										onClickSort("actor");
-									}}
-									align="left"
-									noBorder
-									focusMode="alt-system"
-									mode="alt-system"
-									fullWidth
-									labelRight="Actor"
-								>
-									{order === "asc" && orderBy === "actor" ? (
-										<IconUp className="h-3 w-3" monotone />
-									) : order === "desc" && orderBy === "actor" ? (
-										<IconDown className="h-3 w-3" monotone />
-									) : null}
-								</ButtonIcon>
-							</TableCell>
+							<TableCellSort
+								scope="col"
+								cellId="timestamp"
+								align="left"
+								sortDirection={sortState.direction}
+								sortedCell={sortState.cell}
+								onClick={() => {
+									onClickSort("timestamp");
+								}}
+							>
+								Date
+							</TableCellSort>
+							<TableCellSort
+								cellId="character"
+								align="left"
+								sortDirection={sortState.direction}
+								sortedCell={sortState.cell}
+								onClick={() => {
+									onClickSort("character");
+								}}
+							>
+								Character
+							</TableCellSort>
+							<TableCellSort
+								cellId="actor"
+								align="left"
+								sortDirection={sortState.direction}
+								sortedCell={sortState.cell}
+								onClick={() => {
+									onClickSort("actor");
+								}}
+							>
+								Actor
+							</TableCellSort>
 						</TableRow>
 					</TableHead>
 
