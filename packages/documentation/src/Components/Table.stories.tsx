@@ -4,12 +4,12 @@ import {
 	Table,
 	TableBody,
 	TableCell,
+	TableCellSort,
 	TableCellSortDirections,
 	TableFooter,
 	TableHead,
 	TableRow,
 } from "@versini/ui-components";
-import { TableCellSort } from "@versini/ui-components";
 import { IconDelete, IconRestore } from "@versini/ui-icons";
 import { useState } from "react";
 
