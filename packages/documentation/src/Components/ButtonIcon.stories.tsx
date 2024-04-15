@@ -81,8 +81,13 @@ export default {
 		noBackground: false,
 		size: "medium",
 		label: "some label",
+		align: "center",
 	},
 	argTypes: {
+		align: {
+			options: ["center", "left", "right"],
+			control: { type: "radio" },
+		},
 		mode: {
 			options: ["dark", "light", "system", "alt-system"],
 			control: { type: "radio" },
