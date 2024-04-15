@@ -104,7 +104,11 @@
 	},
 	"circle-star": {
 		"name": "IconStarInCircle",
-		"title": "Star in Circle",
+		"title": "Star in Circle"
+	},
+	"arrow-down-arrow-up": {
+		"name": "IconSort",
+		"title": "Sort",
 		"monotone": true
 	}
 }

@@ -19,6 +19,7 @@ import { IconProfile } from "./Icons/IconProfile";
 import { IconRestore } from "./Icons/IconRestore";
 import { IconSettings } from "./Icons/IconSettings";
 import { IconShow } from "./Icons/IconShow";
+import { IconSort } from "./Icons/IconSort";
 import { IconStarInCircle } from "./Icons/IconStarInCircle";
 import { IconUp } from "./Icons/IconUp";
 import { IconUser } from "./Icons/IconUser";
@@ -45,6 +46,7 @@ export {
 	IconRestore,
 	IconSettings,
 	IconShow,
+	IconSort,
 	IconStarInCircle,
 	IconUp,
 	IconUser,
