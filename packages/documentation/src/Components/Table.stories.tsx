@@ -112,7 +112,7 @@ export const WithAction: Story<any> = (args) => {
 									<TableCell>
 										<div className="flex justify-end gap-2">
 											<ButtonIcon
-												noBsortDirection
+												noBorder
 												label="Restore chat"
 												mode="light"
 												focusMode="alt-system"
@@ -121,7 +121,7 @@ export const WithAction: Story<any> = (args) => {
 												<IconRestore className="h-3 w-3" />
 											</ButtonIcon>
 											<ButtonIcon
-												noBsortDirection
+												noBorder
 												label="Delete chat"
 												mode="light"
 												focusMode="alt-system"
