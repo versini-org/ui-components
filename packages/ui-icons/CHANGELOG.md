@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.6.0...ui-icons-v1.7.0) (2024-04-16)
+
+
+### Features
+
+* refactoring all icons to use the size- Tailwind shortcut ([#505](https://github.com/aversini/ui-components/issues/505)) ([ebac848](https://github.com/aversini/ui-components/commit/ebac848cf929ddf395bacb35913177489f4d1040))
+
 ## [1.6.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.5.0...ui-icons-v1.6.0) (2024-04-15)
 
 
