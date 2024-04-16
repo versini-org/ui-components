@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.17.1](https://github.com/aversini/ui-components/compare/ui-components-v5.17.0...ui-components-v5.17.1) (2024-04-16)
+
+
+### Bug Fixes
+
+* refactor ButtonIcon to extract ButtonSort as a private component ([#508](https://github.com/aversini/ui-components/issues/508)) ([dd96ec9](https://github.com/aversini/ui-components/commit/dd96ec94abce7bc405e8516a7dee56e8a537d782))
+
 ## [5.17.0](https://github.com/aversini/ui-components/compare/ui-components-v5.16.1...ui-components-v5.17.0) (2024-04-16)
 
 
