@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.17.0](https://github.com/aversini/ui-components/compare/ui-components-v5.16.1...ui-components-v5.17.0) (2024-04-16)
+
+
+### Features
+
+* **Table:** better sort indicator when a column is sorted ([#507](https://github.com/aversini/ui-components/issues/507)) ([e52ca48](https://github.com/aversini/ui-components/commit/e52ca48ff81ff84da926248df7d539b73bf2ea3e))
+
 ## [5.16.1](https://github.com/aversini/ui-components/compare/ui-components-v5.16.0...ui-components-v5.16.1) (2024-04-15)
 
 
