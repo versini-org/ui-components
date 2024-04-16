@@ -3,20 +3,20 @@ import { IconSettings } from "@versini/ui-icons";
 
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { BUTTON_CLASSNAME } from "../../../common/constants";
-import { ButtonIcon } from "../ButtonIcon";
+import { ButtonSort } from "../ButtonSort";
 
-describe("ButtonIcon (exceptions)", () => {
+describe("ButtonSort (exceptions)", () => {
 	it("should be able to require/import from root", () => {
-		expect(ButtonIcon).toBeDefined();
+		expect(ButtonSort).toBeDefined();
 	});
 });
 
-describe("ButtonIcon modifiers", () => {
+describe("ButtonSort modifiers", () => {
 	it("should render a dark or light (system) button icon", async () => {
 		render(
-			<ButtonIcon>
+			<ButtonSort>
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("p-1");
@@ -53,9 +53,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a dark or light (alt-system) button icon", async () => {
 		render(
-			<ButtonIcon mode="alt-system">
+			<ButtonSort mode="alt-system">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("p-1");
@@ -92,9 +92,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a dark button icon", async () => {
 		render(
-			<ButtonIcon mode="dark">
+			<ButtonSort mode="dark">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("p-1");
@@ -125,9 +125,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a light button icon", async () => {
 		render(
-			<ButtonIcon mode="light">
+			<ButtonSort mode="light">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("p-1");
@@ -158,9 +158,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a disabled dark button icon", async () => {
 		render(
-			<ButtonIcon mode="dark" disabled>
+			<ButtonSort mode="dark" disabled>
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		const buttonClass = button.className;
@@ -170,9 +170,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a disabled light button icon", async () => {
 		render(
-			<ButtonIcon mode="light" disabled>
+			<ButtonSort mode="light" disabled>
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		const buttonClass = button.className;
@@ -180,11 +180,61 @@ describe("ButtonIcon modifiers", () => {
 		expect(buttonClass).toContain("disabled:cursor-not-allowed");
 	});
 
+	it("should render an active light button icon", async () => {
+		render(
+			<ButtonSort mode="light" active>
+				<IconSettings />
+			</ButtonSort>,
+		);
+		const button = await screen.findByRole("button");
+		const parent = button.parentElement;
+
+		if (parent) {
+			expectToHaveClasses(parent, [
+				"focus-within:static",
+				"after:absolute",
+				"after:content-['']",
+				"after:border-b-2",
+				"after:z-[-1px]",
+				"after:bottom-[-4px]",
+				"after:left-0",
+				"after:right-0",
+				"relative",
+				"after:border-table-light",
+			]);
+		}
+	});
+
+	it("should render an active dark button icon", async () => {
+		render(
+			<ButtonSort mode="dark" active>
+				<IconSettings />
+			</ButtonSort>,
+		);
+		const button = await screen.findByRole("button");
+		const parent = button.parentElement;
+
+		if (parent) {
+			expectToHaveClasses(parent, [
+				"focus-within:static",
+				"after:absolute",
+				"after:content-['']",
+				"after:border-b-2",
+				"after:z-[-1px]",
+				"after:bottom-[-4px]",
+				"after:left-0",
+				"after:right-0",
+				"relative",
+				"after:border-table-dark",
+			]);
+		}
+	});
+
 	it("should render a fullWidth button icon", async () => {
 		render(
-			<ButtonIcon fullWidth>
+			<ButtonSort fullWidth>
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("w-full");
@@ -192,9 +242,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a left-aligned button icon", async () => {
 		render(
-			<ButtonIcon align="left">
+			<ButtonSort align="left">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("justify-start");
@@ -202,9 +252,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a right-aligned button icon", async () => {
 		render(
-			<ButtonIcon align="right">
+			<ButtonSort align="right">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("justify-end");
@@ -212,9 +262,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a center-aligned button icon", async () => {
 		render(
-			<ButtonIcon align="center">
+			<ButtonSort align="center">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expect(button.className).toContain("justify-center");
@@ -222,9 +272,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a size small button icon", async () => {
 		render(
-			<ButtonIcon size="small">
+			<ButtonSort size="small">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, ["h-6", "w-6", "p-0"]);
@@ -232,9 +282,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a size small button icon with a label on the right", async () => {
 		render(
-			<ButtonIcon size="small" labelRight="Settings">
+			<ButtonSort size="small" labelRight="Settings">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		const label = await screen.findByText("Settings");
@@ -244,9 +294,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a size small button icon with a label on the left", async () => {
 		render(
-			<ButtonIcon size="small" labelLeft="Settings">
+			<ButtonSort size="small" labelLeft="Settings">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		const label = await screen.findByText("Settings");
@@ -256,9 +306,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a size medium button icon", async () => {
 		render(
-			<ButtonIcon size="medium">
+			<ButtonSort size="medium">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, ["h-8", "w-8", "p-1"]);
@@ -266,9 +316,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a size medium button icon with a label on the right", async () => {
 		render(
-			<ButtonIcon size="medium" labelRight="Settings">
+			<ButtonSort size="medium" labelRight="Settings">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		const label = await screen.findByText("Settings");
@@ -278,9 +328,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a size medium button icon with a label on the left", async () => {
 		render(
-			<ButtonIcon size="medium" labelLeft="Settings">
+			<ButtonSort size="medium" labelLeft="Settings">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		const label = await screen.findByText("Settings");
@@ -290,9 +340,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a size large button icon", async () => {
 		render(
-			<ButtonIcon size="large">
+			<ButtonSort size="large">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, ["h-12", "w-12", "p-2"]);
@@ -300,9 +350,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a size large button icon with a label on the right", async () => {
 		render(
-			<ButtonIcon size="large" labelRight="Settings">
+			<ButtonSort size="large" labelRight="Settings">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		const label = await screen.findByText("Settings");
@@ -312,9 +362,9 @@ describe("ButtonIcon modifiers", () => {
 
 	it("should render a size large button icon with a label on the left", async () => {
 		render(
-			<ButtonIcon size="large" labelLeft="Settings">
+			<ButtonSort size="large" labelLeft="Settings">
 				<IconSettings />
-			</ButtonIcon>,
+			</ButtonSort>,
 		);
 		const button = await screen.findByRole("button");
 		const label = await screen.findByText("Settings");
