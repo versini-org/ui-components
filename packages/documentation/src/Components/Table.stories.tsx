@@ -330,7 +330,7 @@ export const WithRowNumbers: Story<any> = (args) => {
 
 export const Sortable: Story<any> = (args) => {
 	const [sortState, setSortState] = useState<{
-		cell: string | number;
+		cell: string;
 		direction:
 			| typeof TableCellSortDirections.ASC
 			| typeof TableCellSortDirections.DESC

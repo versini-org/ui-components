@@ -58,10 +58,10 @@ export const ButtonSort = React.forwardRef<HTMLButtonElement, ButtonSortProps>(
 			? clsx(
 					"relative",
 					"focus-within:static",
+					"focus-within:after:border-transparent",
 					"after:absolute",
 					"after:content-['']",
 					"after:border-b-2",
-					"after:z-[-1px]",
 					"after:bottom-[-4px]",
 					"after:left-0",
 					"after:right-0",
