@@ -24,7 +24,6 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			spacing,
 			noBackground = false,
 			align = "center",
-			active = false,
 
 			...otherProps
 		},
@@ -54,40 +53,19 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			"text-copy-light dark:text-copy-accent-dark": mode === "system" && !raw,
 		});
 
-		const activeClass = clsx(
-			"focus-within:static",
-			"after:absolute",
-			"after:content-['']",
-			"after:border-b-2",
-			"after:z-[-1px]",
-			"after:bottom-[-4px]",
-			"after:left-0",
-			"after:right-0",
-			{
-				relative: active,
-				"after:border-table-dark": mode === "dark",
-				"after:border-table-light": mode === "light",
-				"after:border-table-dark dark:after:border-table-light":
-					mode === "system",
-				"after:border-table-light dark:after:border-table-dark":
-					mode === "alt-system",
-			},
-		);
 		return (
-			<div className={activeClass}>
-				<button
-					ref={ref}
-					className={buttonClass}
-					disabled={disabled}
-					type={type}
-					aria-label={ariaLabel || label}
-					{...otherProps}
-				>
-					{labelLeft && <span className="pr-2">{labelLeft}</span>}
-					<div className={iconClass}>{children}</div>
-					{labelRight && <span className="pl-2">{labelRight}</span>}
-				</button>
-			</div>
+			<button
+				ref={ref}
+				className={buttonClass}
+				disabled={disabled}
+				type={type}
+				aria-label={ariaLabel || label}
+				{...otherProps}
+			>
+				{labelLeft && <span className="pr-2">{labelLeft}</span>}
+				<div className={iconClass}>{children}</div>
+				{labelRight && <span className="pl-2">{labelRight}</span>}
+			</button>
 		);
 	},
 );
