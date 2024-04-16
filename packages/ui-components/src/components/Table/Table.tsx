@@ -179,7 +179,8 @@ export const TableCellSort = ({
 			{...otherProps}
 		>
 			<ButtonIcon
-				className="rounded-none"
+				active={sortedCell === cellId}
+				className="rounded-none text-sm"
 				onClick={onClick}
 				align={align}
 				noBorder

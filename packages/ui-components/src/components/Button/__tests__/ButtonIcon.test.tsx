@@ -180,6 +180,56 @@ describe("ButtonIcon modifiers", () => {
 		expect(buttonClass).toContain("disabled:cursor-not-allowed");
 	});
 
+	it("should render an active light button icon", async () => {
+		render(
+			<ButtonIcon mode="light" active>
+				<IconSettings />
+			</ButtonIcon>,
+		);
+		const button = await screen.findByRole("button");
+		const parent = button.parentElement;
+
+		if (parent) {
+			expectToHaveClasses(parent, [
+				"focus-within:static",
+				"after:absolute",
+				"after:content-['']",
+				"after:border-b-2",
+				"after:z-[-1px]",
+				"after:bottom-[-4px]",
+				"after:left-0",
+				"after:right-0",
+				"relative",
+				"after:border-table-light",
+			]);
+		}
+	});
+
+	it("should render an active dark button icon", async () => {
+		render(
+			<ButtonIcon mode="dark" active>
+				<IconSettings />
+			</ButtonIcon>,
+		);
+		const button = await screen.findByRole("button");
+		const parent = button.parentElement;
+
+		if (parent) {
+			expectToHaveClasses(parent, [
+				"focus-within:static",
+				"after:absolute",
+				"after:content-['']",
+				"after:border-b-2",
+				"after:z-[-1px]",
+				"after:bottom-[-4px]",
+				"after:left-0",
+				"after:right-0",
+				"relative",
+				"after:border-table-dark",
+			]);
+		}
+	});
+
 	it("should render a fullWidth button icon", async () => {
 		render(
 			<ButtonIcon fullWidth>

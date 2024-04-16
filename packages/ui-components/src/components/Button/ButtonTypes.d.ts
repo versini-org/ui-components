@@ -80,6 +80,12 @@ export type ButtonIconProps = {
 	 */
 	children: React.ReactNode;
 	/**
+	 * Prop to signal if the Button is active.
+	 * This is an internal prop and should not be used by consumers.
+	 * @private
+	 */
+	active?: boolean;
+	/**
 	 * Cell content alignment.
 	 * @default "center"
 	 */
