@@ -59,6 +59,71 @@ const data = [
 	},
 ];
 
+const nutritionData = [
+	{ id: 1, name: "Cupcake", calories: 305, fat: 3.7, carbs: 67, protein: 4.3 },
+	{ id: 2, name: "Donut", calories: 452, fat: 25.0, carbs: 51, protein: 4.9 },
+	{ id: 3, name: "Eclair", calories: 262, fat: 16.0, carbs: 24, protein: 6.0 },
+	{
+		id: 4,
+		name: "Frozen yoghurt",
+		calories: 159,
+		fat: 6.0,
+		carbs: 24,
+		protein: 4.0,
+	},
+	{
+		id: 5,
+		name: "Gingerbread",
+		calories: 356,
+		fat: 16.0,
+		carbs: 49,
+		protein: 3.9,
+	},
+	{
+		id: 6,
+		name: "Honeycomb",
+		calories: 408,
+		fat: 3.2,
+		carbs: 87,
+		protein: 6.5,
+	},
+	{
+		id: 7,
+		name: "Ice cream sandwich",
+		calories: 237,
+		fat: 9.0,
+		carbs: 37,
+		protein: 4.3,
+	},
+	{
+		id: 8,
+		name: "Jelly Bean",
+		calories: 375,
+		fat: 0.0,
+		carbs: 94,
+		protein: 0.0,
+	},
+	{ id: 9, name: "KitKat", calories: 518, fat: 26.0, carbs: 65, protein: 7.0 },
+	{
+		id: 10,
+		name: "Lollipop",
+		calories: 392,
+		fat: 0.2,
+		carbs: 98,
+		protein: 0.0,
+	},
+	{
+		id: 11,
+		name: "Marshmallow",
+		calories: 318,
+		fat: 0,
+		carbs: 81,
+		protein: 2.0,
+	},
+	{ id: 12, name: "Nougat", calories: 360, fat: 19.0, carbs: 9, protein: 37.0 },
+	{ id: 13, name: "Oreo", calories: 437, fat: 18.0, carbs: 63, protein: 4.0 },
+];
+
 export const Basic: Story<any> = (args) => {
 	return (
 		<div className="min-h-10">
@@ -265,17 +330,16 @@ export const WithRowNumbers: Story<any> = (args) => {
 
 export const Sortable: Story<any> = (args) => {
 	const [sortState, setSortState] = useState<{
-		cell: string;
+		cell: string | number;
 		direction:
 			| typeof TableCellSortDirections.ASC
 			| typeof TableCellSortDirections.DESC
 			| false;
 	}>({ direction: false, cell: "" });
 
-	const sortedData = data.sort((a, b) => {
+	const sortedData = nutritionData.sort((a, b) => {
 		switch (sortState.cell) {
-			case "actor":
-			case "character":
+			case "name":
 				if (sortState.direction === TableCellSortDirections.ASC) {
 					return a[sortState.cell].localeCompare(b[sortState.cell]);
 				} else if (sortState.direction === TableCellSortDirections.DESC) {
@@ -283,17 +347,14 @@ export const Sortable: Story<any> = (args) => {
 				}
 				break;
 
-			case "timestamp":
+			case "calories":
+			case "fat":
+			case "carbs":
+			case "protein":
 				if (sortState.direction === TableCellSortDirections.ASC) {
-					return (
-						new Date(a[sortState.cell]).getTime() -
-						new Date(b[sortState.cell]).getTime()
-					);
+					return a[sortState.cell] - b[sortState.cell];
 				} else if (sortState.direction === TableCellSortDirections.DESC) {
-					return (
-						new Date(b[sortState.cell]).getTime() -
-						new Date(a[sortState.cell]).getTime()
-					);
+					return b[sortState.cell] - a[sortState.cell];
 				}
 				break;
 
@@ -320,42 +381,53 @@ export const Sortable: Story<any> = (args) => {
 	return (
 		<div className="min-h-10">
 			<div className="flex flex-wrap gap-2">
-				<Table caption="Dune" {...args}>
+				<Table caption="Nutrition Facts" {...args}>
 					<TableHead>
 						<TableRow>
+							<TableCell>Name</TableCell>
 							<TableCellSort
-								scope="col"
-								cellId="timestamp"
-								align="left"
+								cellId="calories"
+								align="right"
 								sortDirection={sortState.direction}
 								sortedCell={sortState.cell}
 								onClick={() => {
-									onClickSort("timestamp");
+									onClickSort("calories");
 								}}
 							>
-								Date
+								Calories
 							</TableCellSort>
 							<TableCellSort
-								cellId="character"
-								align="left"
+								cellId="fat"
+								align="right"
 								sortDirection={sortState.direction}
 								sortedCell={sortState.cell}
 								onClick={() => {
-									onClickSort("character");
+									onClickSort("fat");
 								}}
 							>
-								Character
+								Fat
 							</TableCellSort>
 							<TableCellSort
-								cellId="actor"
-								align="left"
+								cellId="carbs"
+								align="right"
 								sortDirection={sortState.direction}
 								sortedCell={sortState.cell}
 								onClick={() => {
-									onClickSort("actor");
+									onClickSort("carbs");
 								}}
 							>
-								Actor
+								Carbs
+							</TableCellSort>
+							<TableCellSort
+								cellId="protein"
+								align="right"
+								sortDirection={sortState.direction}
+								sortedCell={sortState.cell}
+								onClick={() => {
+									onClickSort("protein");
+								}}
+							>
+								Protein
 							</TableCellSort>
 						</TableRow>
 					</TableHead>
@@ -363,9 +435,11 @@ export const Sortable: Story<any> = (args) => {
 					<TableBody>
 						{sortedData.map((row) => (
 							<TableRow key={row.id}>
-								<TableCell>{row.timestamp}</TableCell>
-								<TableCell>{row.character}</TableCell>
-								<TableCell>{row.actor}</TableCell>
+								<TableCell>{row.name}</TableCell>
+								<TableCell className="text-right">{row.calories}</TableCell>
+								<TableCell className="text-right">{row.fat}</TableCell>
+								<TableCell className="text-right">{row.carbs}</TableCell>
+								<TableCell className="text-right">{row.protein}</TableCell>
 							</TableRow>
 						))}
 					</TableBody>
