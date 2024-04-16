@@ -54,7 +54,7 @@ export const ${name} = ({
 	return (
 		<SvgIcon
 			defaultViewBox="${viewBox}"
-			defaultClassName="h-5 w-5"
+			defaultClassName="size-5"
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}

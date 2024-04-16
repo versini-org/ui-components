@@ -1,5 +1,6 @@
 import type { Story } from "@ladle/react";
 import {
+	Card,
 	Table,
 	TableBody,
 	TableCell,
@@ -15,11 +16,15 @@ export default {
 		importName: "IconXYZ",
 		importPackage: "ui-icons",
 	},
+	args: {
+		monotone: false,
+		semantic: false,
+	},
 };
 
 export const Basic: Story<any> = (args) => (
-	<div className="prose prose-dark flex max-w-none flex-wrap gap-2 bg-slate-300 p-10">
-		<Table mode="light">
+	<Card header="All Icons">
+		<Table compact>
 			<TableHead>
 				<TableRow>
 					<TableCell>Icon Name</TableCell>
@@ -40,22 +45,5 @@ export const Basic: Story<any> = (args) => (
 				})}
 			</TableBody>
 		</Table>
-	</div>
-);
-
-Basic.args = {
-	monotone: false,
-	semantic: false,
-};
-
-export const Mode: Story<any> = (args) => (
-	<div className="flex max-w-none flex-wrap gap-2">
-		{Object.entries(AllIcons).map(([name, Icon]) => {
-			return name !== "IconDog" ? (
-				<div key={name}>
-					<Icon {...args} />
-				</div>
-			) : null;
-		})}
-	</div>
+	</Card>
 );

@@ -29,7 +29,7 @@ import {
 	IconUser,
 } from "../..";
 
-const defaultIconSize = "h-5 w-5";
+const defaultIconSize = "size-5";
 
 const renderExpected = async ({
 	dataTestId,

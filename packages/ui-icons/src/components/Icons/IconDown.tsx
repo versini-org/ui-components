@@ -28,7 +28,7 @@ export const IconDown = ({
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 384 512"
-			defaultClassName="h-5 w-5"
+			defaultClassName="size-5"
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
