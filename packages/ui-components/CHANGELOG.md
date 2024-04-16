@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.17.2](https://github.com/aversini/ui-components/compare/ui-components-v5.17.1...ui-components-v5.17.2) (2024-04-16)
+
+
+### Bug Fixes
+
+* **Table:** invalid sort indicator location when sticky is enabled ([#510](https://github.com/aversini/ui-components/issues/510)) ([8408f69](https://github.com/aversini/ui-components/commit/8408f696c74def74aaca12d9c498225d7e208800))
+
 ## [5.17.1](https://github.com/aversini/ui-components/compare/ui-components-v5.17.0...ui-components-v5.17.1) (2024-04-16)
 
 
