@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.18.1](https://github.com/aversini/ui-components/compare/ui-components-v5.18.0...ui-components-v5.18.1) (2024-04-17)
+
+
+### Bug Fixes
+
+* **Table:** slightly larger sort indicator icons ([#515](https://github.com/aversini/ui-components/issues/515)) ([fed2541](https://github.com/aversini/ui-components/commit/fed2541e2d321104bf73a70a9af150c654cc001e))
+
 ## [5.18.0](https://github.com/aversini/ui-components/compare/ui-components-v5.17.2...ui-components-v5.18.0) (2024-04-17)
 
 
