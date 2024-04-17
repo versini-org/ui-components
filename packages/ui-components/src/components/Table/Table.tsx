@@ -1,4 +1,4 @@
-import { IconDown, IconSort, IconUp } from "@versini/ui-icons";
+import { IconSort, IconSortDown, IconSortUp } from "@versini/ui-icons";
 import { useContext } from "react";
 
 import { ButtonSort } from "../private/ButtonSort";
@@ -191,10 +191,10 @@ export const TableCellSort = ({
 			>
 				{sortDirection === TableCellSortDirections.ASC &&
 				sortedCell === cellId ? (
-					<IconUp className="h-3 w-3" monotone />
+					<IconSortUp className="h-3 w-3" monotone />
 				) : sortDirection === TableCellSortDirections.DESC &&
 				  sortedCell === cellId ? (
-					<IconDown className="h-3 w-3" monotone />
+					<IconSortDown className="h-3 w-3" monotone />
 				) : (
 					<IconSort className="h-3 w-3" monotone />
 				)}
