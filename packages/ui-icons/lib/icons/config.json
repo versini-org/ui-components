@@ -110,5 +110,15 @@
 		"name": "IconSort",
 		"title": "Sort",
 		"monotone": true
+	},
+	"arrow-up-short-wide": {
+		"name": "IconSortUp",
+		"title": "Sort Up",
+		"monotone": true
+	},
+	"arrow-down-wide-short": {
+		"name": "IconSortDown",
+		"title": "Sort Down",
+		"monotone": true
 	}
 }
