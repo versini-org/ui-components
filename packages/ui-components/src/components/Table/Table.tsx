@@ -191,12 +191,12 @@ export const TableCellSort = ({
 			>
 				{sortDirection === TableCellSortDirections.ASC &&
 				sortedCell === cellId ? (
-					<IconSortUp className="h-3 w-3" monotone />
+					<IconSortUp className="size-4" monotone />
 				) : sortDirection === TableCellSortDirections.DESC &&
 				  sortedCell === cellId ? (
-					<IconSortDown className="h-3 w-3" monotone />
+					<IconSortDown className="size-4" monotone />
 				) : (
-					<IconSort className="h-3 w-3" monotone />
+					<IconSort className="size-4" monotone />
 				)}
 			</ButtonSort>
 		</TableCell>
