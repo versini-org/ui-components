@@ -4,7 +4,7 @@
  *
  * To update this file, run `yarn build:icons`.
  *
- * Original name: arrow-down-arrow-up.svg
+ * Original name: arrow-down-wide-short.svg
  *
  * !Font Awesome Pro 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.
  *
@@ -14,7 +14,7 @@ import { SvgIcon } from "@versini/ui-private";
 
 import type { IconsProps } from "./IconsTypes";
 
-export const IconSort = ({
+export const IconSortDown = ({
 	className,
 	viewBox,
 	spacing,
@@ -32,14 +32,14 @@ export const IconSort = ({
 			viewBox={viewBox}
 			className={className}
 			spacing={spacing}
-			title={title || "Sort"}
+			title={title || "Sort Down"}
 			{...rest}
 		>
 			<path
 				opacity={opacity}
-				d="M393.4 41.4c12.5-12.5 32.8-12.5 45.3 0l96 96c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L448 141.3V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V141.3l-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l96-96z"
+				d="M288 448c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32H320c-17.7 0-32 14.3-32 32zm0-128c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H320c-17.7 0-32 14.3-32 32zm0-128c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H320c-17.7 0-32 14.3-32 32zm0-128c0 17.7 14.3 32 32 32H544c17.7 0 32-14.3 32-32s-14.3-32-32-32H320c-17.7 0-32 14.3-32 32z"
 			/>
-			<path d="M137.4 470.6c12.5 12.5 32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 370.7V64c0-17.7-14.3-32-32-32s-32 14.3-32 32V370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96z" />
+			<path d="M128 480c9 0 17.5-3.8 23.6-10.4l88-96c11.9-13 11.1-33.3-2-45.2s-33.3-11.1-45.2 2L160 365.7V64c0-17.7-14.3-32-32-32s-32 14.3-32 32V365.7L63.6 330.4c-11.9-13-32.2-13.9-45.2-2s-13.9 32.2-2 45.2l88 96C110.5 476.2 119 480 128 480z" />
 		</SvgIcon>
 	);
 };
