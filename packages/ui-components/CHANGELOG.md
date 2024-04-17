@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.18.0](https://github.com/aversini/ui-components/compare/ui-components-v5.17.2...ui-components-v5.18.0) (2024-04-17)
+
+
+### Features
+
+* **Table:** using the new sort icons ([#514](https://github.com/aversini/ui-components/issues/514)) ([74ca7a9](https://github.com/aversini/ui-components/commit/74ca7a901990ace2beeff956c54d04a26ffa250b))
+
 ## [5.17.2](https://github.com/aversini/ui-components/compare/ui-components-v5.17.1...ui-components-v5.17.2) (2024-04-16)
 
 

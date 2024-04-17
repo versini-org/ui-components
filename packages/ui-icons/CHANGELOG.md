@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.7.0...ui-icons-v1.8.0) (2024-04-17)
+
+
+### Features
+
+* adding IconSortUp and IconSortDown ([#512](https://github.com/aversini/ui-components/issues/512)) ([85649fe](https://github.com/aversini/ui-components/commit/85649fe3dd1434e49dfd0afcfce0adf015fef170))
+
 ## [1.7.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.6.0...ui-icons-v1.7.0) (2024-04-16)
 
 
