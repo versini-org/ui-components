@@ -45,7 +45,7 @@ const customSafelist = [...dynamicMargins];
  */
 /* v8 ignore next 8 */
 const customPlugins = [
-	typography,
+	typography({ className: "verse" }),
 	plugin(function ({ addComponents }) {
 		addComponents(textInputCSS);
 		addComponents(textAreaCSS);

@@ -78,7 +78,7 @@ describe("Button modifiers", () => {
 			"hover:bg-action-dark-hover",
 			"hover:text-copy-light-hover",
 			"max-h-9",
-			"not-prose",
+			"not-verse",
 			"px-4",
 			"py-1",
 			"rounded-full",
@@ -111,7 +111,7 @@ describe("Button modifiers", () => {
 			"hover:bg-action-light-hover",
 			"hover:text-copy-light-hover",
 			"max-h-9",
-			"not-prose",
+			"not-verse",
 			"px-4",
 			"py-1",
 			"rounded-full",
@@ -138,7 +138,7 @@ describe("Button modifiers", () => {
 			"hover:bg-action-light-hover",
 			"hover:text-copy-light-hover",
 			"max-h-9",
-			"not-prose",
+			"not-verse",
 			"px-4",
 			"py-1",
 			"rounded-full",
@@ -165,7 +165,7 @@ describe("Button modifiers", () => {
 			"hover:bg-action-dark-hover",
 			"hover:text-copy-light-hover",
 			"max-h-9",
-			"not-prose",
+			"not-verse",
 			"px-4",
 			"py-1",
 			"rounded-full",
@@ -183,7 +183,7 @@ describe("Button modifiers", () => {
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, [
 			BUTTON_CLASSNAME,
-			"not-prose",
+			"not-verse",
 			"rounded-full",
 			"bg-action-light",
 			"text-copy-lighter",
@@ -215,7 +215,7 @@ describe("Button modifiers", () => {
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, [
 			BUTTON_CLASSNAME,
-			"not-prose",
+			"not-verse",
 			"rounded-full",
 			"bg-action-dark",
 			"text-copy-light",
@@ -247,7 +247,7 @@ describe("Button modifiers", () => {
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, [
 			BUTTON_CLASSNAME,
-			"not-prose",
+			"not-verse",
 			"rounded-full",
 			"bg-action-danger-dark",
 			"text-copy-light",
@@ -279,7 +279,7 @@ describe("Button modifiers", () => {
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, [
 			BUTTON_CLASSNAME,
-			"not-prose",
+			"not-verse",
 			"rounded-full",
 			"bg-action-danger-light",
 			"text-copy-lighter",

@@ -14,7 +14,7 @@ export const getPanelClassName = ({
 }) => {
 	return {
 		main: clsx(
-			"prose prose-lighter flex flex-col bg-surface-medium md:max-w-2xl",
+			"verse verse-lighter flex flex-col bg-surface-medium md:max-w-2xl",
 			{
 				[`${PANEL_CLASSNAME} h-full min-h-[95%] w-full sm:h-auto sm:min-h-[10rem] sm:w-[95%] sm:rounded-lg sm:border-2`]:
 					kind === TYPE_PANEL,

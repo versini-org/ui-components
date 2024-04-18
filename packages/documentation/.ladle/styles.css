@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-	.prose pre.ladle-markdown .prism-code {
+	.verse pre.ladle-markdown .prism-code {
 		@apply m-0 !important;
 	}
 }

@@ -17,7 +17,7 @@ const CommonTemplate = ({
 			{intro}
 			<Highlight
 				theme={type === "light" ? themes.vsLight : themes.vsDark}
-				code={`<div className="prose prose-${type}>...</div>`}
+				code={`<div className="verse verse-${type}>...</div>`}
 				language="jsx"
 			>
 				{({ style, tokens, getLineProps, getTokenProps }) => (
@@ -65,13 +65,13 @@ const CommonTemplate = ({
 				doing something stupid like disabling our base styles.
 			</p>
 			<p>
-				It adds a new <code>prose</code> and <code>prose-{type}</code> class
+				It adds a new <code>verse</code> and <code>verse-{type}</code> class
 				that you can slap on any block of vanilla HTML content and turn it into
 				a beautiful, well-formatted document:
 			</p>
 			<Highlight
 				theme={type === "light" ? themes.vsLight : themes.vsDark}
-				code={`<article class="prose prose-dark">
+				code={`<article class="verse verse-dark">
   <h1>Garlic bread with cheese: What the science tells us</h1>
   <p>
     For years parents have espoused the health benefits of eating
@@ -235,7 +235,7 @@ const CommonTemplate = ({
 
 export const Light: Story<any> = () => (
 	<div className="bg-slate-900 p-11">
-		<div className="prose prose-light max-w-none">
+		<div className="verse verse-light max-w-none">
 			<h1>Light</h1>
 			<CommonTemplate
 				type={"light"}
@@ -252,7 +252,7 @@ export const Light: Story<any> = () => (
 
 export const Lighter: Story<any> = () => (
 	<div className="bg-slate-500 p-11">
-		<div className="prose prose-lighter max-w-none">
+		<div className="verse verse-lighter max-w-none">
 			<h1>Lighter</h1>
 			<CommonTemplate
 				type={"lighter"}
@@ -269,7 +269,7 @@ export const Lighter: Story<any> = () => (
 
 export const Dark: Story<any> = () => (
 	<div className="bg-gray-50 p-11">
-		<div className="prose prose-dark max-w-none">
+		<div className="verse verse-dark max-w-none">
 			<h1>Dark</h1>
 			<CommonTemplate
 				type={"dark"}

@@ -10,7 +10,7 @@ export default { title: "Styles" };
 await import("prismjs/components/prism-bash");
 
 export const QuickStart: Story<any> = () => (
-	<div className="prose prose-dark dark:prose-lighter">
+	<div className="verse verse-dark dark:verse-lighter">
 		<h1>Styles</h1>
 		<p>
 			To import the styles needed by UI Components, including Typography, you
@@ -101,13 +101,13 @@ export default twPlugin.merge({
 
 		<h2>Usage</h2>
 		<p>
-			Now you can use the <code>prose-dark</code>,<code>prose-light</code> and{" "}
-			<code>prose-lighter</code> classes to add our typography styles to any
+			Now you can use the <code>verse-dark</code>,<code>verse-light</code> and{" "}
+			<code>verse-lighter</code> classes to add our typography styles to any
 			vanilla HTML:
 		</p>
 		<Highlight
 			theme={themes.vsDark}
-			code={`<article class="prose prose-dark">
+			code={`<article class="verse verse-dark">
   <h1>Garlic bread with cheese: What the science tells us</h1>
   <p>
     For years parents have espoused the health benefits of eating
@@ -137,7 +137,7 @@ export default twPlugin.merge({
 		</Highlight>
 
 		<p>
-			<strong>NOTE:</strong> always include the <code>prose</code> class when
+			<strong>NOTE:</strong> always include the <code>verse</code> class when
 			adding a typography style (dark, light, or lighter).
 		</p>
 
@@ -148,7 +148,7 @@ export default twPlugin.merge({
 		</p>
 		<Highlight
 			theme={themes.vsDark}
-			code={`<article class="prose prose-dark dark:prose-light">
+			code={`<article class="verse verse-dark dark:verse-light">
   <h1>Garlic bread with cheese: What the science tells us</h1>
   <p>
     For years parents have espoused the health benefits of eating

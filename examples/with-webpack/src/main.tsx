@@ -193,7 +193,7 @@ module.exports = {
 	);
 };
 export const App: React.FC = () => (
-	<div className="prose prose-dark dark:prose-lighter">
+	<div className="verse verse-dark dark:verse-lighter">
 		<Header>
 			<h1>Webpack + TS + TailwindCSS</h1>
 		</Header>

@@ -27,7 +27,7 @@ export const getTableClasses = ({
 } & SpacingProps) => {
 	return {
 		wrapper: clsx(
-			"not-prose relative w-full rounded-lg shadow-md",
+			"not-verse relative w-full rounded-lg shadow-md",
 			getSpacing(spacing),
 			{
 				"overflow-x-auto": !stickyHeader && !stickyFooter,

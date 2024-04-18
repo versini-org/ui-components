@@ -57,7 +57,7 @@ export const Bubble = ({
 				{footer &&
 					Object.keys(footer).map((key) => {
 						return footer[key] ? (
-							<div key={`-${key}`} className="prose-p:m-0">
+							<div key={`-${key}`} className="verse-p:m-0">
 								<p className={bubbleClasses.footer}>
 									{key}: {footer[key]}
 								</p>

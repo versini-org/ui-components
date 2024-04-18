@@ -14,7 +14,7 @@ const getPillBorderClasses = ({ variant }: { variant?: string }) => {
 };
 
 const getPillCopyClasses = ({ variant }: { variant?: string }) => {
-	return clsx("not-prose", {
+	return clsx("not-verse", {
 		"text-copy-information": variant === "information",
 		"text-copy-warning": variant === "warning",
 		"text-copy-success": variant === "success",

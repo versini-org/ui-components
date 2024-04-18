@@ -17,7 +17,7 @@ const getBubbleColorClasses = ({ kind }: { kind: string }) => {
 
 const getBubbleTypographyClasses = ({ kind }: { kind: string }) => {
 	return clsx(
-		"prose prose-dark dark:prose-lighter prose-p:my-3 prose-blockquote:my-3 prose-ol:my-3 prose-ul:my-3 prose-ul:prose-li:marker:text-black",
+		"verse verse-dark dark:verse-lighter verse-p:my-3 verse-blockquote:my-3 verse-ol:my-3 verse-ul:my-3 verse-ul:verse-li:marker:text-black",
 		{
 			"text-copy-lighter": kind === "right",
 		},

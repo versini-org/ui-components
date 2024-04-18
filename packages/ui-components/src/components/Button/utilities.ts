@@ -90,11 +90,11 @@ const getButtonBaseClasses = ({
 	noTruncate?: boolean;
 }) => {
 	if (noBackground) {
-		return "not-prose rounded-full";
+		return "not-verse rounded-full";
 	}
 
 	if (variant === "primary") {
-		return clsx("not-prose rounded-full", {
+		return clsx("not-verse rounded-full", {
 			truncate: !noTruncate,
 			"bg-action-dark text-copy-light": mode === "dark",
 			"bg-action-light text-copy-lighter": mode === "light",
@@ -105,7 +105,7 @@ const getButtonBaseClasses = ({
 		});
 	}
 	if (variant === "secondary") {
-		return clsx("not-prose rounded-full", {
+		return clsx("not-verse rounded-full", {
 			truncate: !noTruncate,
 			"bg-action-dark text-copy-light": mode === "light",
 			"bg-action-light text-copy-lighter": mode === "dark",
@@ -116,7 +116,7 @@ const getButtonBaseClasses = ({
 		});
 	}
 	if (variant === "danger") {
-		return clsx("not-prose rounded-full", {
+		return clsx("not-verse rounded-full", {
 			truncate: !noTruncate,
 			"bg-action-danger-dark text-copy-light": mode === "dark",
 			"bg-action-danger-light text-copy-lighter": mode === "light",
