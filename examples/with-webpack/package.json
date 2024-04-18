@@ -6,8 +6,9 @@
 		"clean": "rimraf dist",
 		"build:js": "webpack --mode=production",
 		"build": "npm run clean && npm run build:js",
-		"dev": "webpack serve --mode=development",
-		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+		"dev": "nodemon",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"start": "webpack serve --mode=development"
 	},
 	"dependencies": {
 		"@versini/ui-components": "workspace:../../packages/ui-components",
