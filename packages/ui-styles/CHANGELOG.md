@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.3](https://github.com/aversini/ui-components/compare/ui-styles-v1.8.2...ui-styles-v1.8.3) (2024-04-18)
+
+
+### Bug Fixes
+
+* **ui-styles:** TextArea helper text is misaligned ([#518](https://github.com/aversini/ui-components/issues/518)) ([71bea12](https://github.com/aversini/ui-components/commit/71bea12aa81977ee9849c7183373021e75b10664))
+
 ## [1.8.2](https://github.com/aversini/ui-components/compare/ui-styles-v1.8.1...ui-styles-v1.8.2) (2024-04-13)
 
 
