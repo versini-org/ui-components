@@ -39,7 +39,7 @@ const serializeJSON = <T>(value: T) => {
 	try {
 		return JSON.stringify(value);
 		/* v8 ignore next 5 */
-	} catch (error) {
+	} catch (_error) {
 		throw new Error(
 			`@versini/ui-hooks useLocalStorage: Failed to serialize the value`,
 		);
@@ -82,6 +82,8 @@ export function useLocalStorage<T = string>({
 	 * If value is not found, update localStorage with
 	 * actualDefaultValue and return it.
 	 */
+
+	// biome-ignore lint/correctness/useExhaustiveDependencies:
 	const readStorageValue = useCallback((): T => {
 		let storageBlockedOrSkipped;
 
@@ -103,7 +105,6 @@ export function useLocalStorage<T = string>({
 
 		try {
 			const item = window.localStorage.getItem(key);
-			// return item !== null ? deserialize(item) : (actualDefaultValue as T);
 			if (item !== null) {
 				return deserialize(item);
 			} else {
@@ -115,7 +116,6 @@ export function useLocalStorage<T = string>({
 			console.warn(`Error reading localStorage key “${key}”:`, error);
 			return actualDefaultValue as T;
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [actualDefaultValue, key]);
 
 	const [value, setValue] = useState<T>(readStorageValue());

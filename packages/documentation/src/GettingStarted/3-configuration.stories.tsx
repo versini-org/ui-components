@@ -1,4 +1,4 @@
-import { linkTo, Story } from "@ladle/react";
+import { Story, linkTo } from "@ladle/react";
 import { ButtonIcon } from "@versini/ui-components";
 import { IconNext, IconPrevious } from "@versini/ui-icons";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";

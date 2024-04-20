@@ -1,4 +1,5 @@
-import type { Story } from "@ladle/react";
+import * as AllIcons from "@versini/ui-icons";
+
 import {
 	Card,
 	Table,
@@ -7,7 +8,8 @@ import {
 	TableHead,
 	TableRow,
 } from "@versini/ui-components";
-import * as AllIcons from "@versini/ui-icons";
+
+import type { Story } from "@ladle/react";
 
 export default {
 	title: "Icons",
@@ -34,6 +36,7 @@ export const Basic: Story<any> = (args) => (
 
 			<TableBody>
 				{Object.entries(AllIcons).map(([name, Icon]) => {
+					// biome-ignore lint/correctness/useJsxKeyInIterable:
 					return name !== "IconDog" ? (
 						<TableRow key={name}>
 							<TableCell>{name}</TableCell>

@@ -1,682 +1,682 @@
 {
-  "5.1.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 42342,
-      "fileSizeGzip": 7143,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 57574,
-      "fileSizeGzip": 19062,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.2.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 42077,
-      "fileSizeGzip": 7065,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 57826,
-      "fileSizeGzip": 19158,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.3.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 43627,
-      "fileSizeGzip": 7288,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 56338,
-      "fileSizeGzip": 16610,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.4.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 43831,
-      "fileSizeGzip": 7338,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 55275,
-      "fileSizeGzip": 14779,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.5.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 40624,
-      "fileSizeGzip": 6790,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 25285,
-      "fileSizeGzip": 7935,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.5.1": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 39620,
-      "fileSizeGzip": 6578,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 25285,
-      "fileSizeGzip": 7931,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.6.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 39620,
-      "fileSizeGzip": 6578,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 25285,
-      "fileSizeGzip": 7934,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.7.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 39620,
-      "fileSizeGzip": 6578,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 25364,
-      "fileSizeGzip": 7959,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.7.1": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 39620,
-      "fileSizeGzip": 6578,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 25365,
-      "fileSizeGzip": 7960,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.7.2": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 39620,
-      "fileSizeGzip": 6578,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 25401,
-      "fileSizeGzip": 7975,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.8.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 39620,
-      "fileSizeGzip": 6578,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 25454,
-      "fileSizeGzip": 7991,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.9.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 42677,
-      "fileSizeGzip": 6781,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 28232,
-      "fileSizeGzip": 8229,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.10.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 45052,
-      "fileSizeGzip": 6950,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 29364,
-      "fileSizeGzip": 8414,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.10.1": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 45088,
-      "fileSizeGzip": 6972,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 29355,
-      "fileSizeGzip": 8431,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.10.2": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 46295,
-      "fileSizeGzip": 7077,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 29355,
-      "fileSizeGzip": 8423,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.11.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 46295,
-      "fileSizeGzip": 7077,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 29438,
-      "fileSizeGzip": 8452,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.11.1": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 46295,
-      "fileSizeGzip": 7077,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 29438,
-      "fileSizeGzip": 8458,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.12.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 46295,
-      "fileSizeGzip": 7077,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 29476,
-      "fileSizeGzip": 8475,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.13.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 46724,
-      "fileSizeGzip": 7118,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 29924,
-      "fileSizeGzip": 8583,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.13.1": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 46724,
-      "fileSizeGzip": 7118,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 29922,
-      "fileSizeGzip": 8582,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.14.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 46946,
-      "fileSizeGzip": 7136,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 30359,
-      "fileSizeGzip": 8647,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.14.1": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 46946,
-      "fileSizeGzip": 7136,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 30359,
-      "fileSizeGzip": 8650,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.14.2": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 46946,
-      "fileSizeGzip": 7136,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 30366,
-      "fileSizeGzip": 8650,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.14.3": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 47196,
-      "fileSizeGzip": 7164,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 30369,
-      "fileSizeGzip": 8660,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 199813,
-      "fileSizeGzip": 66629,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.14.4": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 47196,
-      "fileSizeGzip": 7164,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 30369,
-      "fileSizeGzip": 8659,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 200133,
-      "fileSizeGzip": 66728,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.14.5": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 47306,
-      "fileSizeGzip": 7207,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 31004,
-      "fileSizeGzip": 8753,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 200133,
-      "fileSizeGzip": 66728,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.15.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 47386,
-      "fileSizeGzip": 7221,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 31121,
-      "fileSizeGzip": 8801,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 200133,
-      "fileSizeGzip": 66728,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.16.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 47453,
-      "fileSizeGzip": 7237,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 33580,
-      "fileSizeGzip": 9309,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 200133,
-      "fileSizeGzip": 66728,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.16.1": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 47453,
-      "fileSizeGzip": 7237,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 33580,
-      "fileSizeGzip": 9311,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 200133,
-      "fileSizeGzip": 66728,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.17.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 48610,
-      "fileSizeGzip": 7398,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 34035,
-      "fileSizeGzip": 9432,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 200133,
-      "fileSizeGzip": 66728,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.17.1": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 48610,
-      "fileSizeGzip": 7398,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 34935,
-      "fileSizeGzip": 9512,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 200133,
-      "fileSizeGzip": 66728,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.17.2": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 48657,
-      "fileSizeGzip": 7399,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 34958,
-      "fileSizeGzip": 9512,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 200133,
-      "fileSizeGzip": 66728,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.18.0": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 48657,
-      "fileSizeGzip": 7399,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 35454,
-      "fileSizeGzip": 9685,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 200133,
-      "fileSizeGzip": 66728,
-      "limit": "67 KB",
-      "passed": true
-    }
-  },
-  "5.18.1": {
-    "../bundlesize/dist/components/assets/style.css": {
-      "fileSize": 48620,
-      "fileSizeGzip": 7388,
-      "limit": "8 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/index.js": {
-      "fileSize": 35451,
-      "fileSizeGzip": 9682,
-      "limit": "20 KB",
-      "passed": true
-    },
-    "../bundlesize/dist/components/assets/vendor.js": {
-      "fileSize": 200133,
-      "fileSizeGzip": 66728,
-      "limit": "67 KB",
-      "passed": true
-    }
-  }
+	"5.1.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 42342,
+			"fileSizeGzip": 7143,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 57574,
+			"fileSizeGzip": 19062,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.2.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 42077,
+			"fileSizeGzip": 7065,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 57826,
+			"fileSizeGzip": 19158,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.3.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 43627,
+			"fileSizeGzip": 7288,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 56338,
+			"fileSizeGzip": 16610,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.4.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 43831,
+			"fileSizeGzip": 7338,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 55275,
+			"fileSizeGzip": 14779,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.5.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 40624,
+			"fileSizeGzip": 6790,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 25285,
+			"fileSizeGzip": 7935,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.5.1": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 39620,
+			"fileSizeGzip": 6578,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 25285,
+			"fileSizeGzip": 7931,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.6.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 39620,
+			"fileSizeGzip": 6578,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 25285,
+			"fileSizeGzip": 7934,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.7.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 39620,
+			"fileSizeGzip": 6578,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 25364,
+			"fileSizeGzip": 7959,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.7.1": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 39620,
+			"fileSizeGzip": 6578,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 25365,
+			"fileSizeGzip": 7960,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.7.2": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 39620,
+			"fileSizeGzip": 6578,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 25401,
+			"fileSizeGzip": 7975,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.8.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 39620,
+			"fileSizeGzip": 6578,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 25454,
+			"fileSizeGzip": 7991,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.9.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 42677,
+			"fileSizeGzip": 6781,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 28232,
+			"fileSizeGzip": 8229,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.10.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 45052,
+			"fileSizeGzip": 6950,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 29364,
+			"fileSizeGzip": 8414,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.10.1": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 45088,
+			"fileSizeGzip": 6972,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 29355,
+			"fileSizeGzip": 8431,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.10.2": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 46295,
+			"fileSizeGzip": 7077,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 29355,
+			"fileSizeGzip": 8423,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.11.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 46295,
+			"fileSizeGzip": 7077,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 29438,
+			"fileSizeGzip": 8452,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.11.1": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 46295,
+			"fileSizeGzip": 7077,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 29438,
+			"fileSizeGzip": 8458,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.12.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 46295,
+			"fileSizeGzip": 7077,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 29476,
+			"fileSizeGzip": 8475,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.13.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 46724,
+			"fileSizeGzip": 7118,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 29924,
+			"fileSizeGzip": 8583,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.13.1": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 46724,
+			"fileSizeGzip": 7118,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 29922,
+			"fileSizeGzip": 8582,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.14.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 46946,
+			"fileSizeGzip": 7136,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 30359,
+			"fileSizeGzip": 8647,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.14.1": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 46946,
+			"fileSizeGzip": 7136,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 30359,
+			"fileSizeGzip": 8650,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.14.2": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 46946,
+			"fileSizeGzip": 7136,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 30366,
+			"fileSizeGzip": 8650,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.14.3": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 47196,
+			"fileSizeGzip": 7164,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 30369,
+			"fileSizeGzip": 8660,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 199813,
+			"fileSizeGzip": 66629,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.14.4": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 47196,
+			"fileSizeGzip": 7164,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 30369,
+			"fileSizeGzip": 8659,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 200133,
+			"fileSizeGzip": 66728,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.14.5": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 47306,
+			"fileSizeGzip": 7207,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 31004,
+			"fileSizeGzip": 8753,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 200133,
+			"fileSizeGzip": 66728,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.15.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 47386,
+			"fileSizeGzip": 7221,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 31121,
+			"fileSizeGzip": 8801,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 200133,
+			"fileSizeGzip": 66728,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.16.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 47453,
+			"fileSizeGzip": 7237,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 33580,
+			"fileSizeGzip": 9309,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 200133,
+			"fileSizeGzip": 66728,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.16.1": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 47453,
+			"fileSizeGzip": 7237,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 33580,
+			"fileSizeGzip": 9311,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 200133,
+			"fileSizeGzip": 66728,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.17.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 48610,
+			"fileSizeGzip": 7398,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 34035,
+			"fileSizeGzip": 9432,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 200133,
+			"fileSizeGzip": 66728,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.17.1": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 48610,
+			"fileSizeGzip": 7398,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 34935,
+			"fileSizeGzip": 9512,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 200133,
+			"fileSizeGzip": 66728,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.17.2": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 48657,
+			"fileSizeGzip": 7399,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 34958,
+			"fileSizeGzip": 9512,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 200133,
+			"fileSizeGzip": 66728,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.18.0": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 48657,
+			"fileSizeGzip": 7399,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 35454,
+			"fileSizeGzip": 9685,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 200133,
+			"fileSizeGzip": 66728,
+			"limit": "67 KB",
+			"passed": true
+		}
+	},
+	"5.18.1": {
+		"../bundlesize/dist/components/assets/style.css": {
+			"fileSize": 48620,
+			"fileSizeGzip": 7388,
+			"limit": "8 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/index.js": {
+			"fileSize": 35451,
+			"fileSizeGzip": 9682,
+			"limit": "20 KB",
+			"passed": true
+		},
+		"../bundlesize/dist/components/assets/vendor.js": {
+			"fileSize": 200133,
+			"fileSizeGzip": 66728,
+			"limit": "67 KB",
+			"passed": true
+		}
+	}
 }

@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { useEffect, useReducer, useRef } from "react";
 
-import { DEFAULT_POLITENESS_BY_ROLE } from "./constants";
 import type { LiveRegionProps } from "./LiveRegionTypes";
+import { DEFAULT_POLITENESS_BY_ROLE } from "./constants";
 import { reducer } from "./reducer";
 import { conditionallyDelayAnnouncement } from "./utilities";
 

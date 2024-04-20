@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 
+import { Footer } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { FOOTER_CLASSNAME } from "../../../common/constants";
-import { Footer } from "../..";
 
 describe("Footer (exceptions)", () => {
 	it("should be able to require/import from root", () => {

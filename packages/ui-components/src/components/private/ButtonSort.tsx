@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 
-import { getButtonClasses, TYPE_ICON } from "../Button/utilities";
+import { TYPE_ICON, getButtonClasses } from "../Button/utilities";
 import type { ButtonSortProps } from "./ButtonSortTypes";
 
 export const ButtonSort = React.forwardRef<HTMLButtonElement, ButtonSortProps>(

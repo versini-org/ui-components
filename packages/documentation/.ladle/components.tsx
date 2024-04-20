@@ -19,8 +19,8 @@ const renderImportLine = ({
 	header?: string;
 }) => {
 	let variant: "information" | "warning" | "success", releaseTag;
-	let packageName = importPackage || "ui-components";
-	let titleHeader = header || importName;
+	const packageName = importPackage || "ui-components";
+	const titleHeader = header || importName;
 
 	switch (stage) {
 		case "beta":

@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 
+import { Flexgrid } from "../..";
 import {
 	expectToHaveClasses,
 	expectToHaveStyles,
 } from "../../../../../../configuration/tests-helpers";
-import { Flexgrid } from "../..";
 
 describe("Flexgrid (exceptions)", () => {
 	it("should be able to require/import from root", () => {

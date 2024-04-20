@@ -1,7 +1,7 @@
-import { useUniqueId } from "@versini/ui-hooks";
-import { LiveRegion } from "@versini/ui-private";
 import React, { useLayoutEffect, useRef, useState } from "react";
 
+import { useUniqueId } from "@versini/ui-hooks";
+import { LiveRegion } from "@versini/ui-private";
 import { TEXT_INPUT_CLASSNAME } from "../../common/constants";
 import type { TextInputProps } from "./TextInputTypes";
 import { getTextInputClasses } from "./utilities";
@@ -55,7 +55,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			if (rightElementRef.current) {
 				setInputPaddingRight(rightElementRef.current.offsetWidth + 18 + 10);
 			}
-		}, [rightElement]);
+		}, []);
 
 		return (
 			<div className={textInputClassName.wrapper}>

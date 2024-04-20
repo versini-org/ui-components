@@ -1,11 +1,11 @@
 import { render } from "@testing-library/react";
 import { Button } from "@versini/ui-components";
 
+import { Flexgrid, FlexgridItem } from "../..";
 import {
 	expectToHaveClasses,
 	expectToHaveStyles,
 } from "../../../../../../configuration/tests-helpers";
-import { Flexgrid, FlexgridItem } from "../..";
 
 describe("FlexgridItem (exceptions)", () => {
 	it("should be able to require/import from root", () => {

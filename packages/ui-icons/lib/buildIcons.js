@@ -134,7 +134,6 @@ const generateIcons = async () => {
 		}),
 	);
 };
-
 (async () => {
 	await generateIcons();
 })();

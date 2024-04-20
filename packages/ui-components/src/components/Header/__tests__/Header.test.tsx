@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 
+import { Header } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { HEADER_CLASSNAME } from "../../../common/constants";
-import { Header } from "../..";
 
 describe("Header (exceptions)", () => {
 	it("should be able to require/import from root", () => {

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
-import { linkTo, Story } from "@ladle/react";
+import { Story, linkTo } from "@ladle/react";
 import {
 	ButtonIcon,
 	Table,
@@ -16,7 +16,6 @@ import { Highlight, Prism, themes } from "prism-react-renderer";
 export default {
 	title: "Getting Started",
 };
-
 (typeof global !== "undefined" ? global : window).Prism = Prism;
 // @ts-ignore
 await import("prismjs/components/prism-bash");

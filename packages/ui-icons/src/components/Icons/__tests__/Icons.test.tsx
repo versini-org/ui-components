@@ -259,7 +259,6 @@ describe("Generic Icons prop tests", () => {
 					/>
 				</>,
 			);
-
 			[
 				"icon-back",
 				"icon-chart",

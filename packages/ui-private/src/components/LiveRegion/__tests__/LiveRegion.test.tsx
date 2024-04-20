@@ -1,12 +1,12 @@
 import { act, fireEvent, render } from "@testing-library/react";
 import React from "react";
 
+import { LiveRegion } from "../LiveRegion";
 import {
 	ACTION_CLEAR_ANNOUNCEMENT,
 	ACTION_SET_ANNOUNCEMENT,
 	ROLES,
 } from "../constants";
-import { LiveRegion } from "../LiveRegion";
 import { reducer } from "../reducer";
 
 const getContent = (renderResult: any) =>
@@ -291,10 +291,10 @@ describe(`The LiveRegion Component`, () => {
 	});
 
 	describe.each`
-		type                           | children              | children2
-		${"string"}                    | ${content}            | ${content2}
-		${"React Element"}             | ${(<p>{content}</p>)} | ${(<div>{content2}</div>)}
-		${"string then React Element"} | ${content}            | ${(<div>{content2}</div>)}
+		type                           | children            | children2
+		${"string"}                    | ${content}          | ${content2}
+		${"React Element"}             | ${<p>{content}</p>} | ${<div>{content2}</div>}
+		${"string then React Element"} | ${content}          | ${<div>{content2}</div>}
 	`(
 		`Given that a $type is passed for "props.children"`,
 		({ children, children2 }) => {

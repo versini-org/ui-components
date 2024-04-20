@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 
+import { Card } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { CARD_CLASSNAME } from "../../../common/constants";
-import { Card } from "../..";
 
 const cardContent = "salut le monde";
 
