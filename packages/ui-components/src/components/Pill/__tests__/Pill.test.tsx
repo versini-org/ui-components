@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 
+import { Pill } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { PILL_CLASSNAME } from "../../../common/constants";
-import { Pill } from "../..";
 
 describe("Pill (exceptions)", () => {
 	it("should be able to require/import from root", () => {

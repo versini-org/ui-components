@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React from "react";
 
 import type { ButtonIconProps } from "./ButtonTypes";
-import { getButtonClasses, TYPE_ICON } from "./utilities";
+import { TYPE_ICON, getButtonClasses } from "./utilities";
 
 export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 	(

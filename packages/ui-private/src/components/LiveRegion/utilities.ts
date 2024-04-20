@@ -1,12 +1,12 @@
+import type {
+	ClearAnnouncementProps,
+	announceProps,
+	conditionallyDelayAnnouncementProps,
+} from "./LiveRegionTypes";
 import {
 	ACTION_CLEAR_ANNOUNCEMENT,
 	ACTION_SET_ANNOUNCEMENT,
 } from "./constants";
-import type {
-	announceProps,
-	ClearAnnouncementProps,
-	conditionallyDelayAnnouncementProps,
-} from "./LiveRegionTypes";
 
 /**
  * Removes the content from the live region.

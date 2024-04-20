@@ -1,10 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
 import {
-	expectToHaveClasses,
-	expectToHaveStyles,
-} from "../../../../../../configuration/tests-helpers";
-import {
 	Table,
 	TableBody,
 	TableCell,
@@ -13,6 +9,10 @@ import {
 	TableHead,
 	TableRow,
 } from "../..";
+import {
+	expectToHaveClasses,
+	expectToHaveStyles,
+} from "../../../../../../configuration/tests-helpers";
 
 describe("Table (exceptions)", () => {
 	it("should be able to require/import from root", () => {

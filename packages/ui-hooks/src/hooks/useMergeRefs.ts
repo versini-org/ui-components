@@ -24,6 +24,7 @@ export function useMergeRefs<T = any>(
 		React.MutableRefObject<T> | React.LegacyRef<T> | undefined | null
 	>,
 ): React.RefCallback<T> {
+	// biome-ignore lint/correctness/useExhaustiveDependencies:
 	return useMemo(() => {
 		if (refs.every((ref) => ref == null)) {
 			return () => {};
@@ -37,6 +38,5 @@ export function useMergeRefs<T = any>(
 				}
 			});
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, refs);
 }

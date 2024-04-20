@@ -1,8 +1,8 @@
 import { act, render, screen } from "@testing-library/react";
 
+import { ThemeProvider } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { THEMEPROVIDER_CLASSNAME } from "../../../common/constants";
-import { ThemeProvider } from "../..";
 
 const customTheme = {
 	"--test-color-primary": "red",

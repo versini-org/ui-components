@@ -1,8 +1,8 @@
+import type { ActionProps, StateProps } from "./LiveRegionTypes";
 import {
 	ACTION_CLEAR_ANNOUNCEMENT,
 	ACTION_SET_ANNOUNCEMENT,
 } from "./constants";
-import type { ActionProps, StateProps } from "./LiveRegionTypes";
 
 export const reducer = (state: StateProps, action: ActionProps) => {
 	switch (action?.type) {

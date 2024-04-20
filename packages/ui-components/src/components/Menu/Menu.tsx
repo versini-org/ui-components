@@ -1,11 +1,11 @@
 import {
-	autoUpdate,
-	flip,
 	FloatingFocusManager,
 	FloatingList,
 	FloatingNode,
 	FloatingPortal,
 	FloatingTree,
+	autoUpdate,
+	flip,
 	offset,
 	shift,
 	useClick,
@@ -111,7 +111,7 @@ export const MenuComponent = forwardRef<
 			return () => {
 				tree.events.off("click", handleTreeClick);
 			};
-		}, [tree, nodeId, onOpenChange]);
+		}, [tree, onOpenChange]);
 
 		useEffect(() => {
 			if (isOpen && tree) {

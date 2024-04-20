@@ -3,9 +3,9 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
+import { Bubble } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { BUBBLE_CLASSNAME, BUTTON_CLASSNAME } from "../../../common/constants";
-import { Bubble } from "../..";
 
 describe("Bubble (exceptions)", () => {
 	it("should be able to require/import from root", () => {

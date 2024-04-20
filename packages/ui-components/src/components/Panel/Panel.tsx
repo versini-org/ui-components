@@ -10,7 +10,7 @@ import { useEffect, useRef } from "react";
 
 import { ButtonIcon } from "../";
 import type { PanelProps } from "./PanelTypes";
-import { getPanelClassName, TYPE_PANEL } from "./utilities";
+import { TYPE_PANEL, getPanelClassName } from "./utilities";
 
 export const Panel = ({
 	open,

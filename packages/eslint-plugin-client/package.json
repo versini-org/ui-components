@@ -13,11 +13,7 @@
 		"url": "git@github.com:aversini/ui-components.git"
 	},
 	"main": "index.js",
-	"files": [
-		"index.js",
-		"eslintrc.json",
-		"rules"
-	],
+	"files": ["index.js", "eslintrc.json", "rules"],
 	"engines": {
 		"node": ">= 18.0.0"
 	},

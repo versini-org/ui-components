@@ -3,8 +3,8 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { Toggle } from "../..";
+import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 
 describe("Toggle (exceptions)", () => {
 	it("should be able to require/import from root", () => {

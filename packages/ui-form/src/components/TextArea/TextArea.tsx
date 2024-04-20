@@ -1,10 +1,10 @@
 import { useMergeRefs, useUncontrolled, useUniqueId } from "@versini/ui-hooks";
-import { LiveRegion } from "@versini/ui-private";
 import React, { useLayoutEffect, useRef, useState } from "react";
+import { adjustLabelAndHelperText, getTextAreaClasses } from "./utilities";
 
+import { LiveRegion } from "@versini/ui-private";
 import { TEXT_AREA_CLASSNAME } from "../../common/constants";
 import type { TextAreaProps } from "./TextAreaTypes";
-import { adjustLabelAndHelperText, getTextAreaClasses } from "./utilities";
 
 export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 	(
@@ -113,7 +113,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			if (!raw && rightElementRef.current) {
 				setTextAreaPaddingRight(rightElementRef.current.offsetWidth + 18 + 10);
 			}
-		}, [rightElement, raw]);
+		}, [raw]);
 
 		/**
 		 * This effect is used to resize the textarea based
@@ -130,7 +130,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 				textAreaRef.current.style.height =
 					textAreaRef.current.scrollHeight + "px";
 			}
-		}, [userInput, raw]);
+		}, [raw]);
 
 		/**
 		 * This section is to toggle the transitions.
@@ -195,7 +195,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
 				textAreaHeightRef.current = scrollHeight || textAreaHeightRef.current;
 			}
-		}, [userInput, raw]);
+		}, [raw]);
 
 		return (
 			<div className={textTextAreaClassName.wrapper}>

@@ -4,7 +4,6 @@ import { Story } from "@ladle/react";
 import { Highlight, Prism, themes } from "prism-react-renderer";
 
 export default { title: "Styles" };
-
 (typeof global !== "undefined" ? global : window).Prism = Prism;
 // @ts-ignore
 await import("prismjs/components/prism-bash");

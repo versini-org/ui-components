@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 
-import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { Main } from "../..";
+import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 
 describe("Main (exceptions)", () => {
 	it("should be able to require/import from root", () => {

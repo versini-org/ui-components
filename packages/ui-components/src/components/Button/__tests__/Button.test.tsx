@@ -3,9 +3,9 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
+import { Button } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { BUTTON_CLASSNAME } from "../../../common/constants";
-import { Button } from "../..";
 
 describe("Button (exceptions)", () => {
 	it("should be able to require/import from root", () => {

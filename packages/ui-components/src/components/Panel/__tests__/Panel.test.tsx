@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 
+import { Panel } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import {
 	MESSAGEBOX_CLASSNAME,
 	PANEL_CLASSNAME,
 } from "../../../common/constants";
-import { Panel } from "../..";
 
 const PANEL_CONTENT = "Panel Content Lorem";
 

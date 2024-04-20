@@ -3,12 +3,12 @@
 import { act, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
+import { TextArea } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import {
 	TEXT_AREA_CLASSNAME,
 	TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
 } from "../../../common/constants";
-import { TextArea } from "../..";
 
 describe("TextArea (exceptions)", () => {
 	it("should be able to require/import from root", () => {

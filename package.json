@@ -1,9 +1,7 @@
 {
 	"name": "root",
 	"private": true,
-	"workspaces": [
-		"packages/*"
-	],
+	"workspaces": ["packages/*"],
 	"scripts": {
 		"clean": "lerna run clean",
 		"build": "lerna run build",
@@ -14,6 +12,7 @@
 		"test:coverage": "lerna run test:coverage"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "1.7.0",
 		"@node-cli/bundlesize": "4.0.2",
 		"@versini/dev-dependencies-client": "4.1.20",
 		"@versini/dev-dependencies-types": "1.1.10",

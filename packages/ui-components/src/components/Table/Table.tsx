@@ -15,12 +15,12 @@ import {
 	CELL_WRAPPER_BODY,
 	CELL_WRAPPER_FOOTER,
 	CELL_WRAPPER_HEAD,
+	TableCellSortDirections,
 	getTableCellClasses,
 	getTableClasses,
 	getTableFooterClasses,
 	getTableHeadClasses,
 	getTableRowClasses,
-	TableCellSortDirections,
 } from "./utilities";
 
 export const Table = ({
@@ -172,7 +172,7 @@ export const TableCellSort = ({
 				sortDirection === TableCellSortDirections.ASC && sortedCell === cellId
 					? "ascending"
 					: sortDirection === TableCellSortDirections.DESC &&
-						  sortedCell === cellId
+							sortedCell === cellId
 						? "descending"
 						: "other"
 			}
@@ -193,7 +193,7 @@ export const TableCellSort = ({
 				sortedCell === cellId ? (
 					<IconSortUp className="size-4" monotone />
 				) : sortDirection === TableCellSortDirections.DESC &&
-				  sortedCell === cellId ? (
+					sortedCell === cellId ? (
 					<IconSortDown className="size-4" monotone />
 				) : (
 					<IconSort className="size-4" monotone />

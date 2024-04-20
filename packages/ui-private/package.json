@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -26,7 +24,7 @@
 		"dev:js": "vite build --watch --mode development",
 		"dev:types": "tsup --watch src",
 		"dev": "npm-run-all clean --parallel dev:js dev:types",
-		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix --color",
+		"lint": "biome lint src",
 		"start": "static-server dist --port 5173",
 		"test:coverage:ui": "vitest --coverage --ui",
 		"test:coverage": "vitest run --coverage",
@@ -47,7 +45,5 @@
 		"@versini/ui-hooks": "workspace:../ui-hooks",
 		"clsx": "2.1.0"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }
