@@ -34,8 +34,10 @@ export const ModalContent = React.forwardRef<
 	const { context: floatingContext, ...context } = useModalContext();
 	const ref = useMergeRefs([context.refs.setFloating, propRef]);
 
-	/* v8 ignore next 1 */
-	if (!floatingContext.open) return null;
+	/* v8 ignore next 3 */
+	if (!floatingContext.open) {
+		return null;
+	}
 
 	const { overlayBackground, ...rest } = props;
 	const overlayClass = clsx("grid place-items-center", {
