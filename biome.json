@@ -1,4 +1,4 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-	"extends": ["node_modules/@versini/dev-dependencies-common/biome.json"]
+	"extends": ["@versini/dev-dependencies-common/biome"]
 }
