@@ -19,7 +19,6 @@ export const IconAdd = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

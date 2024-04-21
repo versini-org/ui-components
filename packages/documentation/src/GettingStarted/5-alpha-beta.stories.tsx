@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import { Story, linkTo } from "@ladle/react";
 import { ButtonIcon, Pill } from "@versini/ui-components";
 import { IconNext, IconPrevious } from "@versini/ui-icons";

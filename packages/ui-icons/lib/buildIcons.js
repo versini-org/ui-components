@@ -18,9 +18,6 @@ const iconTemplate = ({
 	copyright,
 	monotone,
 }) => {
-	const monotoneProp = monotone
-		? ""
-		: "// eslint-disable-next-line @typescript-eslint/no-unused-vars";
 	const opacityLine1 = monotone ? "\n\t/* v8 ignore next 1 */" : "";
 	const opacityLine2 = monotone
 		? `\n\tconst opacity = monotone ? "1" : "0.4";`
@@ -47,7 +44,6 @@ export const ${name} = ({
 	viewBox,
 	spacing,
 	title,
-	${monotoneProp}
 	monotone,
 	...rest
 }: IconsProps) => {${opacityLine1}${opacityLine2}

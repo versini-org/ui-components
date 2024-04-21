@@ -19,7 +19,6 @@ export const IconGitHub = ({
 	viewBox,
 	spacing,
 	title,
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	monotone,
 	...rest
 }: IconsProps) => {

@@ -19,7 +19,6 @@ export const IconCopy = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

@@ -19,7 +19,6 @@ export const IconPrevious = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

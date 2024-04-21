@@ -19,7 +19,6 @@ export const IconDelete = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-
 import { Story } from "@ladle/react";
 import { Highlight, Prism, themes } from "prism-react-renderer";
 

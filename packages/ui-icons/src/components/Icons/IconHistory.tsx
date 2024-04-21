@@ -19,7 +19,6 @@ export const IconHistory = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

@@ -19,7 +19,6 @@ export const IconUp = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

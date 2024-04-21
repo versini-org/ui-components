@@ -19,7 +19,6 @@ export const IconEdit = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

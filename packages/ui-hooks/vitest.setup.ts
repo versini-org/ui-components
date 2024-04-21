@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import "@testing-library/jest-dom/vitest";
 
 import util from "node:util";
