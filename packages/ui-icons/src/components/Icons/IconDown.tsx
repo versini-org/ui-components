@@ -19,7 +19,6 @@ export const IconDown = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

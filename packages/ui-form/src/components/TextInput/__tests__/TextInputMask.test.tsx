@@ -1,12 +1,10 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { ButtonIcon } from "@versini/ui-components";
 import { IconHide } from "@versini/ui-icons";
 
-import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { TextInputMask } from "../..";
+import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 
 function renderWithUserEvent(jsx: JSX.Element) {
 	return {

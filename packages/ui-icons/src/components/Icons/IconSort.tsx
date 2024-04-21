@@ -19,7 +19,6 @@ export const IconSort = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

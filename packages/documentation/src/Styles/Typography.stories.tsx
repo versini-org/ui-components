@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import type { Story } from "@ladle/react";
 import { Highlight, themes } from "prism-react-renderer";
 

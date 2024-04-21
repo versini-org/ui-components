@@ -19,7 +19,6 @@ export const IconHide = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

@@ -19,7 +19,6 @@ export const IconNext = ({
 	viewBox,
 	spacing,
 	title,
-
 	monotone,
 	...rest
 }: IconsProps) => {

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-
 import { Story, linkTo } from "@ladle/react";
 import {
 	ButtonIcon,
