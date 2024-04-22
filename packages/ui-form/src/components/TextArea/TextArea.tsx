@@ -73,7 +73,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		 * useUncontrolled hook is used to make the textarea
 		 * both controlled and uncontrolled.
 		 */
-		const [userInput, setValue] = useUncontrolled({
+		const [userInput, setUserInput] = useUncontrolled({
 			value,
 			defaultValue,
 			onChange: (value: any) => {
@@ -87,7 +87,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		});
 
 		const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-			setValue(e.target.value);
+			setUserInput(e.target.value);
 		};
 
 		const handleFocus = (e: React.FocusEvent<HTMLTextAreaElement, Element>) => {
@@ -124,13 +124,14 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			if (raw) {
 				return;
 			}
-			if (textAreaRef && textAreaRef.current) {
+
+			if (textAreaRef && textAreaRef.current && userInput !== undefined) {
 				textAreaRef.current.style.height = "inherit";
 				// Set the height to match the content
 				textAreaRef.current.style.height =
 					textAreaRef.current.scrollHeight + "px";
 			}
-		}, [raw]);
+		}, [userInput, raw]);
 
 		/**
 		 * This section is to toggle the transitions.
@@ -166,7 +167,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 				return;
 			}
 
-			if (textAreaRef && textAreaRef.current) {
+			if (textAreaRef && textAreaRef.current && userInput !== undefined) {
 				const { labelOffset, helperTextOffset, scrollHeight } =
 					adjustLabelAndHelperText({
 						scrollHeight: textAreaRef.current.scrollHeight,
@@ -195,7 +196,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
 				textAreaHeightRef.current = scrollHeight || textAreaHeightRef.current;
 			}
-		}, [raw]);
+		}, [userInput, raw]);
 
 		return (
 			<div className={textTextAreaClassName.wrapper}>
