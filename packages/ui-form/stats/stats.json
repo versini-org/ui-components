@@ -1,86 +1,100 @@
 {
-	"1.0.0": {
-		"../bundlesize/dist/form/assets/index.js": {
-			"fileSize": 15225,
-			"fileSizeGzip": 4780,
-			"limit": "20 KB",
-			"passed": true
-		},
-		"../bundlesize/dist/form/assets/vendor.js": {
-			"fileSize": 142166,
-			"fileSizeGzip": 45561,
-			"limit": "67 KB",
-			"passed": true
-		}
-	},
-	"1.1.0": {
-		"../bundlesize/dist/form/assets/index.js": {
-			"fileSize": 15225,
-			"fileSizeGzip": 4771,
-			"limit": "20 KB",
-			"passed": true
-		},
-		"../bundlesize/dist/form/assets/vendor.js": {
-			"fileSize": 142166,
-			"fileSizeGzip": 45561,
-			"limit": "67 KB",
-			"passed": true
-		}
-	},
-	"1.1.1": {
-		"../bundlesize/dist/form/assets/index.js": {
-			"fileSize": 15658,
-			"fileSizeGzip": 4839,
-			"limit": "20 KB",
-			"passed": true
-		},
-		"../bundlesize/dist/form/assets/vendor.js": {
-			"fileSize": 142166,
-			"fileSizeGzip": 45561,
-			"limit": "67 KB",
-			"passed": true
-		}
-	},
-	"1.2.0": {
-		"../bundlesize/dist/form/assets/index.js": {
-			"fileSize": 15707,
-			"fileSizeGzip": 4843,
-			"limit": "20 KB",
-			"passed": true
-		},
-		"../bundlesize/dist/form/assets/vendor.js": {
-			"fileSize": 142166,
-			"fileSizeGzip": 45561,
-			"limit": "67 KB",
-			"passed": true
-		}
-	},
-	"1.2.1": {
-		"../bundlesize/dist/form/assets/index.js": {
-			"fileSize": 15708,
-			"fileSizeGzip": 4845,
-			"limit": "20 KB",
-			"passed": true
-		},
-		"../bundlesize/dist/form/assets/vendor.js": {
-			"fileSize": 142166,
-			"fileSizeGzip": 45561,
-			"limit": "67 KB",
-			"passed": true
-		}
-	},
-	"1.3.0": {
-		"../bundlesize/dist/form/assets/index.js": {
-			"fileSize": 15776,
-			"fileSizeGzip": 4862,
-			"limit": "20 KB",
-			"passed": true
-		},
-		"../bundlesize/dist/form/assets/vendor.js": {
-			"fileSize": 142166,
-			"fileSizeGzip": 45561,
-			"limit": "67 KB",
-			"passed": true
-		}
-	}
+  "1.0.0": {
+    "../bundlesize/dist/form/assets/index.js": {
+      "fileSize": 15225,
+      "fileSizeGzip": 4780,
+      "limit": "20 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/form/assets/vendor.js": {
+      "fileSize": 142166,
+      "fileSizeGzip": 45561,
+      "limit": "67 KB",
+      "passed": true
+    }
+  },
+  "1.1.0": {
+    "../bundlesize/dist/form/assets/index.js": {
+      "fileSize": 15225,
+      "fileSizeGzip": 4771,
+      "limit": "20 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/form/assets/vendor.js": {
+      "fileSize": 142166,
+      "fileSizeGzip": 45561,
+      "limit": "67 KB",
+      "passed": true
+    }
+  },
+  "1.1.1": {
+    "../bundlesize/dist/form/assets/index.js": {
+      "fileSize": 15658,
+      "fileSizeGzip": 4839,
+      "limit": "20 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/form/assets/vendor.js": {
+      "fileSize": 142166,
+      "fileSizeGzip": 45561,
+      "limit": "67 KB",
+      "passed": true
+    }
+  },
+  "1.2.0": {
+    "../bundlesize/dist/form/assets/index.js": {
+      "fileSize": 15707,
+      "fileSizeGzip": 4843,
+      "limit": "20 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/form/assets/vendor.js": {
+      "fileSize": 142166,
+      "fileSizeGzip": 45561,
+      "limit": "67 KB",
+      "passed": true
+    }
+  },
+  "1.2.1": {
+    "../bundlesize/dist/form/assets/index.js": {
+      "fileSize": 15708,
+      "fileSizeGzip": 4845,
+      "limit": "20 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/form/assets/vendor.js": {
+      "fileSize": 142166,
+      "fileSizeGzip": 45561,
+      "limit": "67 KB",
+      "passed": true
+    }
+  },
+  "1.3.0": {
+    "../bundlesize/dist/form/assets/index.js": {
+      "fileSize": 15776,
+      "fileSizeGzip": 4862,
+      "limit": "20 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/form/assets/vendor.js": {
+      "fileSize": 142166,
+      "fileSizeGzip": 45561,
+      "limit": "67 KB",
+      "passed": true
+    }
+  },
+  "1.3.1": {
+    "../bundlesize/dist/form/assets/index.js": {
+      "fileSize": 15797,
+      "fileSizeGzip": 4860,
+      "limit": "20 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/form/assets/vendor.js": {
+      "fileSize": 142166,
+      "fileSizeGzip": 45561,
+      "limit": "67 KB",
+      "passed": true
+    }
+  }
 }
