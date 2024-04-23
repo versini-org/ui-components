@@ -5,6 +5,7 @@ const dynamicMargins = () => {
 	];
 	const margins: string[] = [];
 	allowed.forEach((num) => {
+		margins.push(`m-${num}`);
 		margins.push(`mt-${num}`);
 		margins.push(`mr-${num}`);
 		margins.push(`mb-${num}`);

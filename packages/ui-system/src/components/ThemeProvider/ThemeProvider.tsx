@@ -1,6 +1,7 @@
 import clsx from "clsx";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import { THEMEPROVIDER_CLASSNAME } from "../../common/constants";
 import { ThemeProviderProps } from "./ThemeProviderTypes";
 
@@ -9,9 +10,11 @@ export const ThemeProvider = ({
 	children,
 	global,
 	className,
+	spacing,
 }: ThemeProviderProps) => {
 	const wrapperRef = useRef<HTMLDivElement>(null);
 	const wrapperClass = clsx(THEMEPROVIDER_CLASSNAME, "contents", className);
+	const Component = spacing ? "div" : React.Fragment;
 
 	useEffect(() => {
 		const wrapper = global
@@ -26,10 +29,14 @@ export const ThemeProvider = ({
 	}, [customTheme, global]);
 
 	return customTheme || !global ? (
-		<div ref={wrapperRef} className={wrapperClass}>
-			{children}
-		</div>
+		<Component {...(spacing ? { className: getSpacing(spacing) } : {})}>
+			<div ref={wrapperRef} className={wrapperClass}>
+				{children}
+			</div>
+		</Component>
 	) : (
-		children
+		<Component {...(spacing ? { className: getSpacing(spacing) } : {})}>
+			{children}
+		</Component>
 	);
 };
