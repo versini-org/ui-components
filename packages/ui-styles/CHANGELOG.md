@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.4](https://github.com/aversini/ui-components/compare/ui-styles-v1.8.3...ui-styles-v1.8.4) (2024-04-23)
+
+
+### Bug Fixes
+
+* better error styles for TextInput and TextArea ([#527](https://github.com/aversini/ui-components/issues/527)) ([d0952ab](https://github.com/aversini/ui-components/commit/d0952ab8de74f63adb2d4e67d5d123789788d67a))
+
 ## [1.8.3](https://github.com/aversini/ui-components/compare/ui-styles-v1.8.2...ui-styles-v1.8.3) (2024-04-18)
 
 
