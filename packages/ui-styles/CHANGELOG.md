@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/aversini/ui-components/compare/ui-styles-v1.8.4...ui-styles-v1.9.0) (2024-04-23)
+
+
+### Features
+
+* adding support for spacing prop for Flexgrid and ThemeProvider ([#530](https://github.com/aversini/ui-components/issues/530)) ([9822ede](https://github.com/aversini/ui-components/commit/9822ede6f387450c345bf6d94b566b65739f916a))
+
 ## [1.8.4](https://github.com/aversini/ui-components/compare/ui-styles-v1.8.3...ui-styles-v1.8.4) (2024-04-23)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/aversini/ui-components/compare/ui-system-v1.3.0...ui-system-v1.4.0) (2024-04-23)
+
+
+### Features
+
+* adding support for spacing prop for Flexgrid and ThemeProvider ([#530](https://github.com/aversini/ui-components/issues/530)) ([9822ede](https://github.com/aversini/ui-components/commit/9822ede6f387450c345bf6d94b566b65739f916a))
+
 ## [1.3.0](https://github.com/aversini/ui-components/compare/ui-system-v1.2.1...ui-system-v1.3.0) (2024-04-06)
 
 
