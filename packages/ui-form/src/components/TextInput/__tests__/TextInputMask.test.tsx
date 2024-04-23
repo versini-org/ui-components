@@ -33,7 +33,6 @@ describe("TextInputMask modifiers", () => {
 			/>,
 		);
 		const label = await screen.findAllByText("hello world");
-		// const input = await screen.findByRole("textbox");
 
 		expectToHaveClasses(label[1], [
 			"absolute",
@@ -42,26 +41,6 @@ describe("TextInputMask modifiers", () => {
 			"font-medium",
 			"text-copy-dark",
 		]);
-		// expectToHaveClasses(input, [
-		// 	TEXT_INPUT_CLASSNAME,
-		// 	"bg-surface-lighter",
-		// 	"border-2",
-		// 	"border-border-dark",
-		// 	"caret-copy-dark",
-		// 	"dark:bg-surface-darker",
-		// 	"dark:caret-copy-light",
-		// 	"dark:focus:outline-focus-light",
-		// 	"dark:text-copy-lighter",
-		// 	"focus:outline-2",
-		// 	"focus:outline-focus-dark",
-		// 	"focus:outline-offset-2",
-		// 	"focus:outline",
-		// 	"h-12",
-		// 	"px-4",
-		// 	"rounded-md",
-		// 	"text-base",
-		// 	"text-copy-dark",
-		// ]);
 	});
 
 	it("should render a text input with an error message", async () => {
@@ -162,7 +141,7 @@ describe("TextInputMask modifiers", () => {
 		}
 	});
 
-	it("should render a text input with an input class", async () => {
+	it("should render a text input with a custom class", async () => {
 		render(
 			<TextInputMask
 				label="toto"
@@ -179,6 +158,30 @@ describe("TextInputMask modifiers", () => {
 		const input = await screen.findByTestId("txtnpt-1");
 		expect(input.className).toContain("toto");
 		expect(input.parentElement?.className).not.toContain("toto");
+	});
+
+	it("should render a disabled text input", async () => {
+		render(
+			<TextInputMask
+				disabled
+				label="hello world"
+				name="toto"
+				rightElement={
+					<ButtonIcon>
+						<IconHide />
+					</ButtonIcon>
+				}
+			/>,
+		);
+		const label = await screen.findAllByText("hello world");
+
+		expectToHaveClasses(label[1], [
+			"px-2",
+			"absolute",
+			"cursor-not-allowed",
+			"font-medium",
+			"opacity-50",
+		]);
 	});
 });
 

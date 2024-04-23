@@ -48,23 +48,17 @@ const getTextAreaColorClasses = ({
 
 const getTextAreaFocusClasses = ({
 	focusMode,
-	error,
 }: {
-	error: boolean;
 	focusMode: "dark" | "light" | "system" | "alt-system";
 }) => {
-	if (error) {
-		return "focus:outline focus:outline-2 focus:outline-focus-error-dark";
-	} else {
-		return clsx("focus:outline focus:outline-2 focus:outline-offset-2", {
-			"focus:outline-focus-dark": focusMode === "dark",
-			"focus:outline-focus-light": focusMode === "light",
-			"focus:outline-focus-light dark:focus:outline-focus-dark":
-				focusMode === "alt-system",
-			"focus:outline-focus-dark dark:focus:outline-focus-light":
-				focusMode === "system",
-		});
-	}
+	return clsx("focus:outline focus:outline-2 focus:outline-offset-2", {
+		"focus:outline-focus-dark": focusMode === "dark",
+		"focus:outline-focus-light": focusMode === "light",
+		"focus:outline-focus-light dark:focus:outline-focus-dark":
+			focusMode === "alt-system",
+		"focus:outline-focus-dark dark:focus:outline-focus-light":
+			focusMode === "system",
+	});
 };
 
 const getTextAreaBorderClasses = ({
@@ -75,9 +69,10 @@ const getTextAreaBorderClasses = ({
 	noBorder: boolean;
 }) => {
 	return clsx("border-2", {
-		"border-border-dark": !noBorder,
+		"border-border-dark": !noBorder && !error,
+		"focus:border-border-dark": !noBorder && error,
+		"border-border-error-dark": !noBorder && error,
 		"border-transparent": noBorder,
-		"border-border-error-dark": error,
 	});
 };
 
@@ -95,34 +90,63 @@ const getTextAreaLabelClasses = ({
 	if (raw) {
 		return "";
 	}
-	return clsx("absolute cursor-text font-medium", {
-		"text-copy-lighter": !error && mode === "dark",
-		"text-copy-dark": !error && mode === "light",
-		"text-copy-dark dark:text-copy-lighter": !error && mode === "system",
-		"text-copy-lighter dark:text-copy-dark": !error && mode === "alt-system",
-		"cursor-not-allowed opacity-50": disabled,
-	});
+	if (disabled) {
+		return clsx("absolute px-2 cursor-not-allowed opacity-50 font-medium");
+	}
+	if (!error) {
+		return clsx("absolute px-2 cursor-text font-medium", {
+			"text-copy-lighter": mode === "dark",
+			"text-copy-dark": mode === "light",
+			"text-copy-dark dark:text-copy-lighter": mode === "system",
+			"text-copy-lighter dark:text-copy-dark": mode === "alt-system",
+		});
+	}
+	if (error) {
+		return clsx("absolute px-2 cursor-text font-medium", {
+			"text-copy-lighter": mode === "dark",
+			"text-copy-error-dark": mode === "light",
+			"text-copy-error-dark dark:text-copy-error-light": mode === "system",
+			"text-copy-lighter dark:text-copy-error-dark": mode === "alt-system",
+		});
+	}
 };
 
 const getTextAreaHelperTextClasses = ({
 	error,
 	raw,
 	mode,
+	disabled,
 }: {
+	disabled: boolean;
 	error: boolean;
 	mode: "dark" | "light" | "system" | "alt-system";
 	raw: boolean;
 }) => {
-	return raw
-		? undefined
-		: clsx(TEXT_AREA_HELPER_TEXT_CLASSNAME, "absolute px-2 font-medium", {
-				"rounded-md bg-surface-darker text-copy-error-light": error,
-				"text-copy-lighter": !error && mode === "dark",
-				"text-copy-dark": !error && mode === "light",
-				"text-copy-dark dark:text-copy-lighter": !error && mode === "system",
-				"text-copy-lighter dark:text-copy-dark":
-					!error && mode === "alt-system",
-			});
+	if (raw) {
+		return "";
+	}
+	if (disabled) {
+		return clsx(
+			TEXT_AREA_HELPER_TEXT_CLASSNAME,
+			"absolute px-2 cursor-not-allowed opacity-50 font-medium",
+		);
+	}
+	if (!error) {
+		return clsx(TEXT_AREA_HELPER_TEXT_CLASSNAME, "absolute px-2 font-medium", {
+			"text-copy-lighter": mode === "dark",
+			"text-copy-dark": mode === "light",
+			"text-copy-dark dark:text-copy-lighter": mode === "system",
+			"text-copy-lighter dark:text-copy-dark": mode === "alt-system",
+		});
+	}
+	if (error) {
+		return clsx(TEXT_AREA_HELPER_TEXT_CLASSNAME, "absolute px-2 font-medium", {
+			"text-copy-error-light": mode === "dark",
+			"text-copy-error-dark": mode === "light",
+			"text-copy-error-dark dark:text-copy-error-light": mode === "system",
+			"dark:text-copy-error-dark text-copy-error-light": mode === "alt-system",
+		});
+	}
 };
 
 export const getTextAreaClasses = ({
@@ -152,7 +176,7 @@ export const getTextAreaClasses = ({
 				textAreaClassName,
 				getTextAreaBaseClasses(),
 				getTextAreaColorClasses({ mode }),
-				getTextAreaFocusClasses({ focusMode, error }),
+				getTextAreaFocusClasses({ focusMode }),
 				getTextAreaBorderClasses({
 					noBorder,
 					error,
@@ -175,6 +199,7 @@ export const getTextAreaClasses = ({
 		error,
 		raw,
 		mode,
+		disabled,
 	});
 
 	const rightElement = raw

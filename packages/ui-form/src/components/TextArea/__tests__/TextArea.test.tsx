@@ -237,6 +237,20 @@ describe("TextArea modifiers", () => {
 			expect(screen.queryByText("helper text")).not.toBeInTheDocument();
 		});
 	});
+
+	it("should render a disabled text area", async () => {
+		render(<TextArea label="hello world" name="toto" disabled />);
+		const label = await screen.findAllByText("hello world");
+
+		expect(label[0].className).toContain("sr-only");
+		expectToHaveClasses(label[1], [
+			"px-2",
+			"absolute",
+			"cursor-not-allowed",
+			"font-medium",
+			"opacity-50",
+		]);
+	});
 });
 
 describe("TextArea methods", () => {
