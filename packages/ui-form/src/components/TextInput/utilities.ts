@@ -80,7 +80,7 @@ const getTextInputLabelClasses = ({
 		return "";
 	}
 	if (disabled) {
-		return clsx("absolute cursor-not-allowed opacity-50 font-medium");
+		return clsx("absolute px-2 cursor-not-allowed opacity-50 font-medium");
 	}
 	if (!error) {
 		return clsx("absolute px-2 cursor-text font-medium", {
@@ -105,13 +105,21 @@ const getTextInputHelperTextClasses = ({
 	error,
 	raw,
 	mode,
+	disabled,
 }: {
+	disabled: boolean;
 	error: boolean;
 	mode: "dark" | "light" | "system" | "alt-system";
 	raw: boolean;
 }) => {
 	if (raw) {
 		return "";
+	}
+	if (disabled) {
+		return clsx(
+			TEXT_INPUT_HELPER_TEXT_CLASSNAME,
+			"absolute px-2 cursor-not-allowed opacity-50 font-medium",
+		);
 	}
 	if (!error) {
 		return clsx(TEXT_INPUT_HELPER_TEXT_CLASSNAME, "absolute px-2 font-medium", {
@@ -180,6 +188,7 @@ export const getTextInputClasses = ({
 		error,
 		raw,
 		mode,
+		disabled,
 	});
 
 	const rightElement = raw ? undefined : "absolute right-3";
