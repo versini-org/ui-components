@@ -1,5 +1,7 @@
 import clsx from "clsx";
 
+import { getSpacing } from "@versini/ui-private/dist/utilities";
+import React from "react";
 import { FLEXGRID_CLASSNAME, FLEXGRID_GAP_RATIO } from "../../common/constants";
 import { FlexgridContext } from "./FlexgridContext";
 import type { FlexgridProps } from "./FlexgridTypes";
@@ -15,6 +17,8 @@ export const Flexgrid = ({
 	direction = "row",
 	alignHorizontal = "normal",
 	alignVertical = "normal",
+
+	spacing,
 
 	...otherProps
 }: FlexgridProps) => {
@@ -34,19 +38,22 @@ export const Flexgrid = ({
 	};
 
 	const flexgridClassName = clsx(
-		className,
 		FLEXGRID_CLASSNAME,
+		className,
 		"box-border flex flex-wrap",
 	);
 
 	const context = { columnGap, rowGap };
+	const Component = spacing ? "div" : React.Fragment;
 
 	return (
-		<div className={flexgridClassName} style={cssRoot} {...otherProps}>
-			<FlexgridContext.Provider value={context}>
-				{children}
-			</FlexgridContext.Provider>
-		</div>
+		<Component {...(spacing ? { className: getSpacing(spacing) } : {})}>
+			<div className={flexgridClassName} style={cssRoot} {...otherProps}>
+				<FlexgridContext.Provider value={context}>
+					{children}
+				</FlexgridContext.Provider>
+			</div>
+		</Component>
 	);
 };
 

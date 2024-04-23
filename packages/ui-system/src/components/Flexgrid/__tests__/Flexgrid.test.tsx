@@ -101,4 +101,15 @@ describe("Flexgrid props", () => {
 		const gridRoot = await screen.findByTestId("grid-1");
 		expectToHaveStyles(gridRoot, { "align-items": "stretch" });
 	});
+
+	it("should respect the spacing prop", async () => {
+		render(
+			<Flexgrid alignVertical="stretch" data-testid="grid-1" spacing={20}>
+				hello
+			</Flexgrid>,
+		);
+		const gridRoot = await screen.findByTestId("grid-1");
+		expectToHaveStyles(gridRoot, { "align-items": "stretch" });
+		expect(gridRoot.parentElement).toHaveClass("m-20");
+	});
 });

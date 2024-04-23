@@ -1,3 +1,5 @@
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+
 export type ThemeProviderProps = {
 	/**
 	 * The children to render.
@@ -24,4 +26,4 @@ export type ThemeProviderProps = {
 	 * @default false
 	 */
 	global?: boolean;
-};
+} & SpacingProps;
