@@ -193,6 +193,20 @@ describe("TextInput modifiers", () => {
 		);
 		await screen.findByText("right element");
 	});
+
+	it("should render a disabled text input", async () => {
+		render(<TextInput label="hello world" name="toto" disabled />);
+		const label = await screen.findAllByText("hello world");
+
+		expect(label[0].className).toContain("sr-only");
+		expectToHaveClasses(label[1], [
+			"px-2",
+			"absolute",
+			"cursor-not-allowed",
+			"font-medium",
+			"opacity-50",
+		]);
+	});
 });
 
 describe("TextInput methods", () => {
