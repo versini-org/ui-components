@@ -9,7 +9,8 @@ export const CommonTemplate = () => {
 				Most components support a <code>system</code> mode which allows them to
 				toggle from dark to light colors automatically by relying on the
 				<code>prefers-color-scheme</code> CSS media feature. For special cases,
-				there is a<code>alt-system</code> mode which is a toggled version of the
+				there is a <code>alt-system</code> mode which is a toggled version of
+				the
 				<code>system</code> mode.
 			</p>
 
