@@ -32,6 +32,9 @@ importers:
       '@versini/ui-styles':
         specifier: workspace:../../packages/ui-styles
         version: link:../../packages/ui-styles
+      '@versini/ui-system':
+        specifier: workspace:../../packages/ui-system
+        version: link:../../packages/ui-system
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -53,6 +56,9 @@ importers:
       '@versini/ui-styles':
         specifier: workspace:../../packages/ui-styles
         version: link:../../packages/ui-styles
+      '@versini/ui-system':
+        specifier: workspace:../../packages/ui-system
+        version: link:../../packages/ui-system
       react:
         specifier: 18.2.0
         version: 18.2.0
