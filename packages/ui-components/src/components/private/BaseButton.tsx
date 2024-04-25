@@ -20,7 +20,9 @@ const internalClick = (
 	e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
 	onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void,
 ) => {
-	typeof e?.currentTarget?.focus === "function" && e.currentTarget.focus();
+	if (!document.activeElement || document.activeElement !== e.currentTarget) {
+		typeof e?.currentTarget?.focus === "function" && e.currentTarget.focus();
+	}
 	typeof onClick === "function" && onClick(e);
 };
 
