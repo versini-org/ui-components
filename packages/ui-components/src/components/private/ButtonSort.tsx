@@ -1,11 +1,8 @@
 import clsx from "clsx";
 import React from "react";
 
-import {
-	TYPE_ICON,
-	getButtonClasses,
-	internalClick,
-} from "../Button/utilities";
+import { TYPE_ICON, getButtonClasses } from "../Button/utilities";
+import { BaseButton } from "./BaseButton";
 import type { ButtonSortProps } from "./ButtonSortTypes";
 
 export const ButtonSort = React.forwardRef<HTMLButtonElement, ButtonSortProps>(
@@ -29,7 +26,6 @@ export const ButtonSort = React.forwardRef<HTMLButtonElement, ButtonSortProps>(
 			noBackground = false,
 			align = "center",
 			active = false,
-			onClick,
 
 			...otherProps
 		},
@@ -82,21 +78,18 @@ export const ButtonSort = React.forwardRef<HTMLButtonElement, ButtonSortProps>(
 			: "";
 		return (
 			<div className={activeClass}>
-				<button
+				<BaseButton
 					ref={ref}
 					className={buttonClass}
 					disabled={disabled}
 					type={type}
 					aria-label={ariaLabel || label}
-					onClick={(e) => {
-						internalClick(e, onClick);
-					}}
 					{...otherProps}
 				>
 					{labelLeft && <span className="pr-2">{labelLeft}</span>}
 					<div className={iconClass}>{children}</div>
 					{labelRight && <span className="pl-2">{labelRight}</span>}
-				</button>
+				</BaseButton>
 			</div>
 		);
 	},

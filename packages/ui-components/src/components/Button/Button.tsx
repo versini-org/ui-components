@@ -1,7 +1,8 @@
 import React from "react";
 
+import { BaseButton } from "../private/BaseButton";
 import type { ButtonProps } from "./ButtonTypes";
-import { TYPE_BUTTON, getButtonClasses, internalClick } from "./utilities";
+import { TYPE_BUTTON, getButtonClasses } from "./utilities";
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	(
@@ -18,7 +19,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			spacing,
 			variant = "primary",
 			noTruncate = false,
-			onClick,
 
 			...otherProps
 		},
@@ -40,17 +40,14 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 		});
 
 		return (
-			<button
+			<BaseButton
 				ref={ref}
 				className={buttonClass}
 				disabled={disabled}
-				onClick={(e) => {
-					internalClick(e, onClick);
-				}}
 				{...otherProps}
 			>
 				{children}
-			</button>
+			</BaseButton>
 		);
 	},
 );
