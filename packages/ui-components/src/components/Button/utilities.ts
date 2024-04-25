@@ -326,7 +326,7 @@ export const getButtonClasses = ({
  */
 export const internalClick = (
 	e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-	onClick: any,
+	onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void,
 ) => {
 	typeof e?.currentTarget?.focus === "function" && e.currentTarget.focus();
 	typeof onClick === "function" && onClick(e);
