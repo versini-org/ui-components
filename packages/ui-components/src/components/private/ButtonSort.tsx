@@ -2,6 +2,7 @@ import clsx from "clsx";
 import React from "react";
 
 import { TYPE_ICON, getButtonClasses } from "../Button/utilities";
+import { BaseButton } from "./BaseButton";
 import type { ButtonSortProps } from "./ButtonSortTypes";
 
 export const ButtonSort = React.forwardRef<HTMLButtonElement, ButtonSortProps>(
@@ -77,7 +78,7 @@ export const ButtonSort = React.forwardRef<HTMLButtonElement, ButtonSortProps>(
 			: "";
 		return (
 			<div className={activeClass}>
-				<button
+				<BaseButton
 					ref={ref}
 					className={buttonClass}
 					disabled={disabled}
@@ -88,7 +89,7 @@ export const ButtonSort = React.forwardRef<HTMLButtonElement, ButtonSortProps>(
 					{labelLeft && <span className="pr-2">{labelLeft}</span>}
 					<div className={iconClass}>{children}</div>
 					{labelRight && <span className="pl-2">{labelRight}</span>}
-				</button>
+				</BaseButton>
 			</div>
 		);
 	},

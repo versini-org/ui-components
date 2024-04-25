@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { IconSettings } from "@versini/ui-icons";
 
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
@@ -370,5 +371,36 @@ describe("ButtonSort modifiers", () => {
 		const label = await screen.findByText("Settings");
 		expect(label).toBeDefined();
 		expectToHaveClasses(button, ["h-12", "px-4", "text-lg", "font-medium"]);
+	});
+});
+
+describe("Button methods", () => {
+	afterEach(() => {
+		vi.restoreAllMocks();
+	});
+
+	it("should honor the onClick prop", async () => {
+		const events = {
+			onClick: () => {},
+		};
+		const spyOnClick = vi.spyOn(events, "onClick");
+		const user = userEvent.setup();
+
+		// @ts-ignore
+		render(<ButtonSort onClick={spyOnClick}>hello</ButtonSort>);
+		const button = await screen.findByRole("button");
+		await user.click(button);
+		await user.click(button);
+
+		expect(spyOnClick).toHaveBeenCalledTimes(2);
+	});
+
+	it("should implement a focus method via the ref prop", () => {
+		const buttonRef = (ref: HTMLButtonElement) => {
+			if (ref) {
+				expect(ref.focus).toBeDefined();
+			}
+		};
+		render(<ButtonSort ref={buttonRef}>ButtonSort</ButtonSort>);
 	});
 });

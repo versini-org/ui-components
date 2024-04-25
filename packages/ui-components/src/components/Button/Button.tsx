@@ -1,5 +1,6 @@
 import React from "react";
 
+import { BaseButton } from "../private/BaseButton";
 import type { ButtonProps } from "./ButtonTypes";
 import { TYPE_BUTTON, getButtonClasses } from "./utilities";
 
@@ -39,14 +40,14 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 		});
 
 		return (
-			<button
+			<BaseButton
 				ref={ref}
 				className={buttonClass}
 				disabled={disabled}
 				{...otherProps}
 			>
 				{children}
-			</button>
+			</BaseButton>
 		);
 	},
 );

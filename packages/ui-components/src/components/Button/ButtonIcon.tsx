@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 
+import { BaseButton } from "../private/BaseButton";
 import type { ButtonIconProps } from "./ButtonTypes";
 import { TYPE_ICON, getButtonClasses } from "./utilities";
 
@@ -54,7 +55,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 		});
 
 		return (
-			<button
+			<BaseButton
 				ref={ref}
 				className={buttonClass}
 				disabled={disabled}
@@ -65,7 +66,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 				{labelLeft && <span className="pr-2">{labelLeft}</span>}
 				<div className={iconClass}>{children}</div>
 				{labelRight && <span className="pl-2">{labelRight}</span>}
-			</button>
+			</BaseButton>
 		);
 	},
 );
