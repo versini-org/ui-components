@@ -24,6 +24,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			spacing,
 			noBackground = false,
 			align = "center",
+			onClick,
 
 			...otherProps
 		},
@@ -53,6 +54,28 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 			"text-copy-light dark:text-copy-accent-dark": mode === "system" && !raw,
 		});
 
+		/**
+		 * Internal hack to handle Safari (iOS and desktop).
+		 *
+		 * Safari does not consider a <button> as a focusable
+		 * element, therefore, when one <button> is clicked
+		 * in Safari, we cannot rely on activeElement to figure
+		 * out what triggered the action.
+		 *
+		 * This is where this hack comes in: we intercept a click,
+		 * then we are "forcing" a focus, before actually executing
+		 * the click handler. It has no impact on browsers that
+		 * already apply the focus themselves, but it helps poor
+		 * old cranky Safari.
+		 *
+		 */
+		const internalClick = (
+			e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+		) => {
+			typeof e?.currentTarget?.focus === "function" && e.currentTarget.focus();
+			typeof onClick === "function" && onClick(e);
+		};
+
 		return (
 			<button
 				ref={ref}
@@ -60,6 +83,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
 				disabled={disabled}
 				type={type}
 				aria-label={ariaLabel || label}
+				onClick={internalClick}
 				{...otherProps}
 			>
 				{labelLeft && <span className="pr-2">{labelLeft}</span>}
