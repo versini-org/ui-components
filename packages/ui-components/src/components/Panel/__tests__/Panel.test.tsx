@@ -24,7 +24,7 @@ describe("Panel (exceptions)", () => {
 describe("Panel modifiers", () => {
 	it("should render a responsive panel", async () => {
 		render(<SimplePanel />);
-		const panel = screen.getByRole("dialog");
+		const panel = await screen.findByRole("dialog");
 
 		expectToHaveClasses(panel, [
 			PANEL_CLASSNAME,
@@ -46,7 +46,7 @@ describe("Panel modifiers", () => {
 
 	it("should render a responsive panel with dark borders", async () => {
 		render(<SimplePanel borderMode="dark" />);
-		const panel = screen.getByRole("dialog");
+		const panel = await screen.findByRole("dialog");
 
 		expectToHaveClasses(panel, [
 			PANEL_CLASSNAME,
@@ -68,7 +68,7 @@ describe("Panel modifiers", () => {
 
 	it("should render a responsive messagebox", async () => {
 		render(<SimplePanel kind="messagebox" />);
-		const panel = screen.getByRole("dialog");
+		const panel = await screen.findByRole("dialog");
 
 		expectToHaveClasses(panel, [
 			MESSAGEBOX_CLASSNAME,
@@ -88,7 +88,7 @@ describe("Panel modifiers", () => {
 
 	it("should render a responsive messagebox with dark borders", async () => {
 		render(<SimplePanel kind="messagebox" borderMode="dark" />);
-		const panel = screen.getByRole("dialog");
+		const panel = await screen.findByRole("dialog");
 
 		expectToHaveClasses(panel, [
 			MESSAGEBOX_CLASSNAME,
