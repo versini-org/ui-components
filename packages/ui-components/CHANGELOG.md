@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.18.2](https://github.com/aversini/ui-components/compare/ui-components-v5.18.1...ui-components-v5.18.2) (2024-04-26)
+
+
+### Bug Fixes
+
+* ensure Button receives focus even in Safari ([#533](https://github.com/aversini/ui-components/issues/533)) ([7af6083](https://github.com/aversini/ui-components/commit/7af6083da983fbf847f23bc0f4acb92212847c3a))
+
+
+### Performance Improvements
+
+* refactor Panel to lazy load heavy imports ([#535](https://github.com/aversini/ui-components/issues/535)) ([840113b](https://github.com/aversini/ui-components/commit/840113be1cde02e5aadf2a70fed3556dea1826d2))
+
 ## [5.18.1](https://github.com/aversini/ui-components/compare/ui-components-v5.18.0...ui-components-v5.18.1) (2024-04-17)
 
 
