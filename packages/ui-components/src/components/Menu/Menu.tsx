@@ -31,6 +31,19 @@ import React, {
 import { MenuContext } from "./MenuContext";
 import type { MenuProps } from "./MenuTypes";
 
+const getDisplayName = (element: React.ReactNode): string => {
+	if (typeof element === "string") {
+		return element;
+	}
+	if (typeof element === "object" && element !== null && "type" in element) {
+		const type = element.type as any;
+		if (typeof type === "function" || typeof type === "object") {
+			return type.displayName || type.name || "Component";
+		}
+	}
+	return "Element";
+};
+
 export const MenuComponent = forwardRef<
 	HTMLButtonElement,
 	MenuProps & React.HTMLProps<HTMLButtonElement>
@@ -97,19 +110,15 @@ export const MenuComponent = forwardRef<
 		const { getReferenceProps, getFloatingProps, getItemProps } =
 			useInteractions([click, role, dismiss, listNavigation, typeahead]);
 
-		let isKnownButton = false;
-		if (
-			trigger?.type?.displayName === "Button" ||
-			trigger?.type?.displayName === "ButtonIcon"
-		) {
-			isKnownButton = true;
-		}
+		const noInternalClick =
+			getDisplayName(trigger) === "Button" ||
+			getDisplayName(trigger) === "ButtonIcon";
 
 		const triggerElement = React.cloneElement(trigger as React.ReactElement, {
 			mode,
 			focusMode,
 			spacing,
-			noInternalClick: isKnownButton,
+			noInternalClick,
 			"aria-label": label,
 			"data-open": isOpen ? "" : undefined,
 			"data-focus-inside": hasFocusInside ? "" : undefined,

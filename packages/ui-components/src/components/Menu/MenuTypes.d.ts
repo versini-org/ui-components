@@ -1,11 +1,12 @@
 import type { Placement } from "@floating-ui/react";
 import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import React from "react";
 
 export type MenuProps = {
 	/**
 	 * The component to use to open the menu, e.g. a ButtonIcon, a Button, etc.
 	 */
-	trigger: any;
+	trigger: React.ReactNode;
 	/**
 	 * The children to render.
 	 */
