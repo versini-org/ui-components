@@ -1,7 +1,12 @@
 import type { Placement } from "@floating-ui/react";
 import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import React from "react";
 
-export interface MenuProps extends SpacingProps {
+export type MenuProps = {
+	/**
+	 * The component to use to open the menu, e.g. a ButtonIcon, a Button, etc.
+	 */
+	trigger: React.ReactNode;
 	/**
 	 * The children to render.
 	 */
@@ -17,10 +22,6 @@ export interface MenuProps extends SpacingProps {
 	 */
 	focusMode?: "dark" | "light" | "system" | "alt-system";
 	/**
-	 * A React component of type Icon to be placed on the left of the label.
-	 */
-	icon?: React.ReactNode;
-	/**
 	 * The type of Button trigger. This will change the color of the Button.
 	 */
 	mode?: "dark" | "light" | "system" | "alt-system";
@@ -33,9 +34,9 @@ export interface MenuProps extends SpacingProps {
 	 * @param open whether or not the menu is open
 	 */
 	onOpenChange?: (open: boolean) => void;
-}
+} & SpacingProps;
 
-export interface MenuItemProps {
+export type MenuItemProps = {
 	/**
 	 * The label to use for the menu item.
 	 */
@@ -49,6 +50,6 @@ export interface MenuItemProps {
 	 * A React component of type Icon to be placed on the left of the label.
 	 */
 	icon?: React.ReactNode;
-}
+};
 
 export type MenuSeparatorProps = React.HTMLAttributes<HTMLDivElement>;

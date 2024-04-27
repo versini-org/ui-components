@@ -1,4 +1,10 @@
-import { Card, Menu, MenuItem, Panel } from "@versini/ui-components";
+import {
+	ButtonIcon,
+	Card,
+	Menu,
+	MenuItem,
+	Panel,
+} from "@versini/ui-components";
 import {
 	IconChart,
 	IconHistory,
@@ -27,7 +33,13 @@ export const CustomCard = () => {
 							<h2 className="m-0 mb-1">Kitchen Sink</h2>
 						</FlexgridItem>
 						<FlexgridItem>
-							<Menu icon={<IconSettings />}>
+							<Menu
+								trigger={
+									<ButtonIcon>
+										<IconSettings />
+									</ButtonIcon>
+								}
+							>
 								<MenuItem
 									label="Profile"
 									icon={<IconProfile />}

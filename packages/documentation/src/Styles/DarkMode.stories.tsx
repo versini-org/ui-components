@@ -125,7 +125,13 @@ const CommonTemplate = () => {
 				</Anchor>
 			</div>
 			<div className="mb-2 flex flex-wrap justify-end gap-1">
-				<Menu icon={<IconSettings />}>
+				<Menu
+					trigger={
+						<ButtonIcon>
+							<IconSettings />
+						</ButtonIcon>
+					}
+				>
 					<MenuItem label="Profile" icon={<IconProfile />} />
 					<MenuItem label="Statistics" icon={<IconChart />} />
 					<MenuItem label="History" icon={<IconHistory />} />
