@@ -1,6 +1,7 @@
 import type { Story } from "@ladle/react";
 import {
 	Button,
+	ButtonIcon,
 	Menu,
 	MenuItem,
 	MenuSeparator,
@@ -61,7 +62,15 @@ export const Basic: Story<any> = (args) => (
 		<Button size="small" noBorder spacing={{ r: 2 }}>
 			Button
 		</Button>
-		<Menu icon={<IconSettings />} spacing={{ r: 2 }} {...args}>
+		<Menu
+			trigger={
+				<ButtonIcon>
+					<IconSettings />
+				</ButtonIcon>
+			}
+			spacing={{ r: 2 }}
+			{...args}
+		>
 			<MenuItem label="Profile" />
 			<MenuItem label="Statistics" />
 			<MenuItem label="History" />
@@ -78,7 +87,15 @@ export const WithIcons: Story<any> = (args) => (
 		<Button size="small" spacing={{ r: 2 }}>
 			Button
 		</Button>
-		<Menu icon={<IconSettings />} spacing={{ r: 2 }} {...args}>
+		<Menu
+			trigger={
+				<ButtonIcon>
+					<IconSettings />
+				</ButtonIcon>
+			}
+			spacing={{ r: 2 }}
+			{...args}
+		>
 			<MenuItem label="Profile" icon={<IconProfile />} />
 			<MenuItem label="Statistics" icon={<IconChart />} />
 			<MenuItem label="History" icon={<IconHistory />} />
@@ -123,7 +140,15 @@ export const WithMessageBox: Story<any> = (args) => {
 				<Button size="small" spacing={{ r: 2 }}>
 					Button
 				</Button>
-				<Menu icon={<IconSettings />} spacing={{ r: 2 }} {...args}>
+				<Menu
+					trigger={
+						<ButtonIcon>
+							<IconSettings />
+						</ButtonIcon>
+					}
+					spacing={{ r: 2 }}
+					{...args}
+				>
 					<MenuItem label="Profile" icon={<IconProfile />} />
 					<MenuItem label="Statistics" icon={<IconChart />} />
 					<MenuItem label="History" icon={<IconHistory />} />

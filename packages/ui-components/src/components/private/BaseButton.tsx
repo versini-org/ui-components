@@ -18,25 +18,32 @@ import type { ButtonProps } from "../Button/ButtonTypes";
  */
 const internalClick = (
 	e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+	noInternalClick: boolean,
 	onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void,
 ) => {
-	if (!document.activeElement || document.activeElement !== e.currentTarget) {
+	if (
+		!noInternalClick &&
+		(!document.activeElement || document.activeElement !== e.currentTarget)
+	) {
 		typeof e?.currentTarget?.focus === "function" && e.currentTarget.focus();
 	}
+
 	typeof onClick === "function" && onClick(e);
 };
 
 export const BaseButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	(buttonProps: any, ref) => {
-		const { onClick, ...otherProps } = buttonProps;
+		const { onClick, noInternalClick = false, ...otherProps } = buttonProps;
 		return (
 			<button
 				ref={ref}
 				onClick={(e) => {
-					internalClick(e, onClick);
+					internalClick(e, noInternalClick, onClick);
 				}}
 				{...otherProps}
 			/>
 		);
 	},
 );
+
+BaseButton.displayName = "BaseButton";

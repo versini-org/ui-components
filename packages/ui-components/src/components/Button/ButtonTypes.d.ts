@@ -25,6 +25,11 @@ export type CommonButtonProps = {
 	 */
 	noBorder?: boolean;
 	/**
+	 * Whether or not to render the Button with a hack for Safari click.
+	 * @default false
+	 */
+	noInternalClick?: boolean;
+	/**
 	 * Whether or not to render the Button with styles or not.
 	 * @default false
 	 */

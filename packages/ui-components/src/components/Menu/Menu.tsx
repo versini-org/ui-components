@@ -20,9 +20,14 @@ import {
 	useRole,
 	useTypeahead,
 } from "@floating-ui/react";
-import { forwardRef, useContext, useEffect, useRef, useState } from "react";
+import React, {
+	forwardRef,
+	useContext,
+	useEffect,
+	useRef,
+	useState,
+} from "react";
 
-import { ButtonIcon } from "..";
 import { MenuContext } from "./MenuContext";
 import type { MenuProps } from "./MenuTypes";
 
@@ -32,9 +37,9 @@ export const MenuComponent = forwardRef<
 >(
 	(
 		{
+			trigger,
 			children,
-			label,
-			icon,
+			label = "Open menu",
 			defaultPlacement = "bottom-start",
 			onOpenChange,
 			spacing,
@@ -92,6 +97,30 @@ export const MenuComponent = forwardRef<
 		const { getReferenceProps, getFloatingProps, getItemProps } =
 			useInteractions([click, role, dismiss, listNavigation, typeahead]);
 
+		let isKnownButton = false;
+		if (
+			trigger?.type?.displayName === "Button" ||
+			trigger?.type?.displayName === "ButtonIcon"
+		) {
+			isKnownButton = true;
+		}
+
+		const triggerElement = React.cloneElement(trigger as React.ReactElement, {
+			mode,
+			focusMode,
+			spacing,
+			noInternalClick: isKnownButton,
+			"aria-label": label,
+			"data-open": isOpen ? "" : undefined,
+			"data-focus-inside": hasFocusInside ? "" : undefined,
+			ref: useMergeRefs([refs.setReference, item.ref, userRef]),
+			...getReferenceProps(
+				parent.getItemProps({
+					...props,
+				}),
+			),
+		});
+
 		// Event emitter allows you to communicate across tree components.
 		// This effect closes all menus when an item gets clicked anywhere
 		// in the tree.
@@ -121,23 +150,7 @@ export const MenuComponent = forwardRef<
 
 		return (
 			<FloatingNode id={nodeId}>
-				<ButtonIcon
-					mode={mode}
-					focusMode={focusMode}
-					spacing={spacing}
-					label={label || "Open menu"}
-					ref={useMergeRefs([refs.setReference, item.ref, userRef])}
-					data-open={isOpen ? "" : undefined}
-					data-focus-inside={hasFocusInside ? "" : undefined}
-					{...getReferenceProps(
-						parent.getItemProps({
-							...props,
-						}),
-					)}
-				>
-					{label}
-					{icon}
-				</ButtonIcon>
+				{triggerElement}
 
 				<MenuContext.Provider
 					value={{
