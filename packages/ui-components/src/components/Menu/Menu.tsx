@@ -30,19 +30,7 @@ import React, {
 
 import { MenuContext } from "./MenuContext";
 import type { MenuProps } from "./MenuTypes";
-
-const getDisplayName = (element: React.ReactNode): string => {
-	if (typeof element === "string") {
-		return element;
-	}
-	if (typeof element === "object" && element !== null && "type" in element) {
-		const type = element.type as any;
-		if (typeof type === "function" || typeof type === "object") {
-			return type.displayName || type.name || "Component";
-		}
-	}
-	return "Element";
-};
+import { getDisplayName } from "./utilities";
 
 export const MenuComponent = forwardRef<
 	HTMLButtonElement,
