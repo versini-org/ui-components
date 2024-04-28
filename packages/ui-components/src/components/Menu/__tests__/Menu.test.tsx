@@ -149,6 +149,7 @@ describe("Menu behaviors", () => {
 		expect(firstMenuItem).toHaveFocus();
 		expect(document.activeElement).toBe(firstMenuItem);
 		await user.click(firstMenuItem);
+		expect(trigger).toHaveFocus();
 		await waitFor(() => {
 			expect(screen.queryByText(FIRST_MENU_ITEM)).not.toBeInTheDocument();
 		});
@@ -179,6 +180,7 @@ describe("Menu behaviors", () => {
 		expect(firstMenuItem).toHaveFocus();
 		expect(document.activeElement).toBe(firstMenuItem);
 		await user.click(firstMenuItem);
+		expect(trigger).toHaveFocus();
 
 		expect(onOpenChange).toHaveBeenCalledWith(false);
 	});
@@ -202,6 +204,7 @@ describe("Menu behaviors", () => {
 		expect(firstMenuItem).toHaveFocus();
 		expect(document.activeElement).toBe(firstMenuItem);
 		await user.click(firstMenuItem);
+		expect(trigger).toHaveFocus();
 		expect(onClick).toHaveBeenCalled();
 	});
 
@@ -224,6 +227,7 @@ describe("Menu behaviors", () => {
 		expect(firstMenuItem).toHaveFocus();
 		expect(document.activeElement).toBe(firstMenuItem);
 		await user.click(firstMenuItem);
+		expect(trigger).toHaveFocus();
 		expect(onFocus).toHaveBeenCalled();
 	});
 
