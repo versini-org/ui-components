@@ -110,5 +110,19 @@
       "limit": "67 KB",
       "passed": true
     }
+  },
+  "1.3.3": {
+    "../bundlesize/dist/form/assets/index.js": {
+      "fileSize": 16994,
+      "fileSizeGzip": 4954,
+      "limit": "20 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/form/assets/vendor.js": {
+      "fileSize": 142129,
+      "fileSizeGzip": 45524,
+      "limit": "67 KB",
+      "passed": true
+    }
   }
 }

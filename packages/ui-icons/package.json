@@ -1,6 +1,6 @@
 {
 	"name": "@versini/ui-icons",
-	"version": "1.8.0",
+	"version": "1.8.1",
 	"license": "MIT",
 	"author": "Arno Versini",
 	"publishConfig": {
@@ -14,7 +14,9 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build:check": "tsc",
 		"build:icons": "node lib/buildIcons.js",
@@ -42,5 +44,7 @@
 	"dependencies": {
 		"@versini/ui-private": "workspace:../ui-private"
 	},
-	"sideEffects": ["**/*.css"]
+	"sideEffects": [
+		"**/*.css"
+	]
 }

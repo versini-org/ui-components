@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/aversini/ui-components/compare/ui-styles-v1.9.0...ui-styles-v1.9.1) (2024-04-28)
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies ([#539](https://github.com/aversini/ui-components/issues/539)) ([2826c44](https://github.com/aversini/ui-components/commit/2826c44c5a55bf45b97072a1865964c30d05a302))
+
 ## [1.9.0](https://github.com/aversini/ui-components/compare/ui-styles-v1.8.4...ui-styles-v1.9.0) (2024-04-23)
 
 
