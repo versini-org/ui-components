@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.19.0](https://github.com/aversini/ui-components/compare/ui-components-v5.18.2...ui-components-v5.19.0) (2024-04-28)
+
+
+### Features
+
+* refactor Menu to extract trigger prop ([#536](https://github.com/aversini/ui-components/issues/536)) ([1818315](https://github.com/aversini/ui-components/commit/181831560f8a8e2562b14fd438d98b065338d4a4))
+
+
+### Bug Fixes
+
+* **Menu:** return focus to trigger on close ([#538](https://github.com/aversini/ui-components/issues/538)) ([9d229b0](https://github.com/aversini/ui-components/commit/9d229b05b1872a5661b73db6493b316380006b4e))
+
 ## [5.18.2](https://github.com/aversini/ui-components/compare/ui-components-v5.18.1...ui-components-v5.18.2) (2024-04-26)
 
 
