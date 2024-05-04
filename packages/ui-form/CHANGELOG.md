@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.4](https://github.com/aversini/ui-components/compare/ui-form-v1.3.3...ui-form-v1.3.4) (2024-05-04)
+
+
+### Bug Fixes
+
+* **TextArea:** right element padding is sometimes missing ([#541](https://github.com/aversini/ui-components/issues/541)) ([3625872](https://github.com/aversini/ui-components/commit/362587224993964f1f8e7a14fce57cdef4659374))
+
 ## [1.3.3](https://github.com/aversini/ui-components/compare/ui-form-v1.3.2...ui-form-v1.3.3) (2024-04-28)
 
 
