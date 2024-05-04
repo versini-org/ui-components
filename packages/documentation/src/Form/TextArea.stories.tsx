@@ -71,6 +71,13 @@ export const RightElement: Story<any> = (args) => (
 				<TextArea {...args} />
 			</div>
 		</form>
+		<div className="flex gap-2">
+			<TextArea
+				name="chat-input"
+				label={"Type your message here"}
+				rightElement={<Button>{"SEND"}</Button>}
+			/>
+		</div>
 	</div>
 );
 RightElement.args = {

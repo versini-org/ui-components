@@ -109,11 +109,17 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		 * that the text in the textarea does not overlap with the
 		 * rightElement.
 		 */
+		/* v8 ignore next 10 */
 		useLayoutEffect(() => {
-			if (!raw && rightElementRef.current) {
+			if (
+				!raw &&
+				rightElement &&
+				rightElementRef.current &&
+				rightElementRef.current.offsetWidth > 0
+			) {
 				setTextAreaPaddingRight(rightElementRef.current.offsetWidth + 18 + 10);
 			}
-		}, [raw]);
+		}, [rightElement, raw]);
 
 		/**
 		 * This effect is used to resize the textarea based
