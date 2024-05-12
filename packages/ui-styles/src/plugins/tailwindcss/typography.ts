@@ -102,7 +102,7 @@ export default {
 						"--tw-prose-captions": theme("colors.slate[700]"),
 						"--tw-prose-code": theme("colors.slate[900]"),
 						"--tw-prose-pre-code": tokens.colors["copy-lighter"],
-						"--tw-prose-pre-bg": tokens.colors["surface-medium"],
+						"--tw-prose-pre-bg": tokens.colors["surface-darker"],
 						"--tw-prose-kbd": theme("colors.slate[800]"),
 						li: {
 							color: tokens.colors["copy-dark"],
