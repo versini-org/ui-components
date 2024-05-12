@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.2](https://github.com/aversini/ui-components/compare/ui-styles-v1.9.1...ui-styles-v1.9.2) (2024-05-12)
+
+
+### Bug Fixes
+
+* **Typography:** pre background color is too light ([#544](https://github.com/aversini/ui-components/issues/544)) ([8f2ae2d](https://github.com/aversini/ui-components/commit/8f2ae2dd7304524755f1998d08fa8e0ca54cad4e))
+
 ## [1.9.1](https://github.com/aversini/ui-components/compare/ui-styles-v1.9.0...ui-styles-v1.9.1) (2024-04-28)
 
 
