@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.4](https://github.com/aversini/ui-components/compare/ui-private-v1.4.3...ui-private-v1.4.4) (2024-05-13)
+
+
+### Bug Fixes
+
+* bump prod dependencies ([#546](https://github.com/aversini/ui-components/issues/546)) ([ee97a88](https://github.com/aversini/ui-components/commit/ee97a88eb225dc1547216c0694aff59924792ace))
+
 ## [1.4.3](https://github.com/aversini/ui-components/compare/ui-private-v1.4.2...ui-private-v1.4.3) (2024-04-28)
 
 
