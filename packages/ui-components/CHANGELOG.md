@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.19.4](https://github.com/aversini/ui-components/compare/ui-components-v5.19.3...ui-components-v5.19.4) (2024-05-16)
+
+
+### Bug Fixes
+
+* **Bubble:** smaller and better copy-paste icon ([#552](https://github.com/aversini/ui-components/issues/552)) ([44e4858](https://github.com/aversini/ui-components/commit/44e4858eaaf78f1bc1c28c41a39f4ee45d382bf0))
+
 ## [5.19.3](https://github.com/aversini/ui-components/compare/ui-components-v5.19.2...ui-components-v5.19.3) (2024-05-13)
 
 
