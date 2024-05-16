@@ -144,7 +144,7 @@ export const WithRawFooter: Story<any> = (args) => {
 export const Copy: Story<any> = (args) => {
 	const string = "DOM element with string";
 	return (
-		<div className="h-full min-h-10 p-11">
+		<div className=" bg-slate-900 h-full min-h-10 p-11">
 			<Bubble kind="right" spacing={{ b: 4 }} copyToClipboard {...args}>
 				Right bubble...
 			</Bubble>
