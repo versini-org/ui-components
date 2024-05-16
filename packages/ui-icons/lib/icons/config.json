@@ -1,8 +1,7 @@
 {
 	"clone": {
 		"name": "IconCopy",
-		"title": "Copy",
-		"monotone": true
+		"title": "Copy"
 	},
 	"ellipsis": {
 		"name": "IconSettings",
