@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/aversini/ui-components/compare/ui-icons-v1.8.1...ui-icons-v1.8.2) (2024-05-16)
+
+
+### Bug Fixes
+
+* simpler iconCopy ([#550](https://github.com/aversini/ui-components/issues/550)) ([acbb143](https://github.com/aversini/ui-components/commit/acbb14306fd0830b1b123e9f6bee5b5009802df8))
+
 ## [1.8.1](https://github.com/aversini/ui-components/compare/ui-icons-v1.8.0...ui-icons-v1.8.1) (2024-04-28)
 
 
