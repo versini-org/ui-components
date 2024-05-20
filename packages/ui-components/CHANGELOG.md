@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.19.5](https://github.com/aversini/ui-components/compare/ui-components-v5.19.4...ui-components-v5.19.5) (2024-05-20)
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#553](https://github.com/aversini/ui-components/issues/553)) ([1f6a6e5](https://github.com/aversini/ui-components/commit/1f6a6e5cceeb1ef3bf192c4b743d35bc37406357))
+
 ## [5.19.4](https://github.com/aversini/ui-components/compare/ui-components-v5.19.3...ui-components-v5.19.4) (2024-05-16)
 
 
