@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.8.2...ui-icons-v1.9.0) (2024-05-28)
+
+
+### Features
+
+* adding IconRefresh ([#556](https://github.com/aversini/ui-components/issues/556)) ([8e18bbe](https://github.com/aversini/ui-components/commit/8e18bbe7dc29937c66db75021c907a4d5e3fa258))
+
 ## [1.8.2](https://github.com/aversini/ui-components/compare/ui-icons-v1.8.1...ui-icons-v1.8.2) (2024-05-16)
 
 
