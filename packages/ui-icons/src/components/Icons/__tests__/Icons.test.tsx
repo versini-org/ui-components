@@ -20,6 +20,7 @@ import {
 	IconNext,
 	IconPrevious,
 	IconProfile,
+	IconRefresh,
 	IconRestore,
 	IconSettings,
 	IconShow,
@@ -257,6 +258,13 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
+					<IconRefresh
+						data-testid="icon-refresh"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 				</>,
 			);
 			[
@@ -286,6 +294,7 @@ describe("Generic Icons prop tests", () => {
 				"icon-sort",
 				"icon-sort-down",
 				"icon-sort-up",
+				"icon-refresh",
 			].forEach(async (dataTestId) => {
 				await renderExpected({
 					dataTestId,
