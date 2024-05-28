@@ -119,5 +119,10 @@
 		"name": "IconSortDown",
 		"title": "Sort Down",
 		"monotone": true
+	},
+	"arrows-rotate": {
+		"name": "IconRefresh",
+		"title": "Refresh",
+		"monotone": true
 	}
 }
