@@ -30,7 +30,7 @@ export interface StorageProperties<T> {
 	/**
 	 * Function to deserialize string value from storage to value.
 	 */
-	deserialize?: (value: string | undefined) => T;
+	deserialize?: (value: string) => T;
 }
 
 const serializeJSON = <T>(value: T) => {
@@ -44,9 +44,9 @@ const serializeJSON = <T>(value: T) => {
 	}
 };
 
-const deserializeJSON = (value: string | undefined) => {
+const deserializeJSON = <T>(value: T) => {
 	try {
-		return value && JSON.parse(value);
+		return value && JSON.parse(value as string);
 		/* v8 ignore next 3 */
 	} catch {
 		return value;
