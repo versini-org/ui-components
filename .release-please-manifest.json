@@ -1,6 +1,6 @@
 {
 	"packages/ui-components": "5.19.5",
-	"packages/ui-hooks": "2.2.1",
+	"packages/ui-hooks": "3.0.0",
 	"packages/ui-system": "1.4.1",
 	"packages/ui-private": "1.4.5",
 	"packages/ui-icons": "1.9.0",
