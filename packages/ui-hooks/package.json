@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -40,5 +38,8 @@
 	"devDependencies": {
 		"react": "18.3.1",
 		"react-dom": "18.3.1"
+	},
+	"dependencies": {
+		"usehooks-ts": "3.1.0"
 	}
 }
