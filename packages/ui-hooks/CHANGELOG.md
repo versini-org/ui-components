@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/aversini/ui-components/compare/ui-hooks-v2.2.1...ui-hooks-v3.0.0) (2024-06-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* **useLocalstorage:** the signature of useLocalstorage has changed. See the official documentation here:
+
+### Features
+
+* **useLocalstorage:** migrate to usehooks-ts ([#560](https://github.com/aversini/ui-components/issues/560)) ([f4386e8](https://github.com/aversini/ui-components/commit/f4386e84448064459b8a9876e72a8bb7f6a02d10))
+
 ## [2.2.1](https://github.com/aversini/ui-components/compare/ui-hooks-v2.2.0...ui-hooks-v2.2.1) (2024-04-28)
 
 
