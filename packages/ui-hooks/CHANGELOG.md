@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/aversini/ui-components/compare/ui-hooks-v3.0.0...ui-hooks-v3.0.1) (2024-06-23)
+
+
+### Bug Fixes
+
+* Revert "feat(useLocalstorage)!: migrate to usehooks-ts ([#560](https://github.com/aversini/ui-components/issues/560))" ([#565](https://github.com/aversini/ui-components/issues/565)) ([4e3729a](https://github.com/aversini/ui-components/commit/4e3729a504c836350bd31c4f0c580386bf73ed44))
+
 ## [3.0.0](https://github.com/aversini/ui-components/compare/ui-hooks-v2.2.1...ui-hooks-v3.0.0) (2024-06-06)
 
 
