@@ -93,11 +93,16 @@ export function useLocalStorage<T>({
 	}, [setValue]);
 
 	React.useEffect(() => {
-		if (
-			getLocalStorageItem(key) === null &&
-			typeof initialValue !== "undefined"
-		) {
-			setLocalStorageItem(key, initialValue);
+		try {
+			if (
+				getLocalStorageItem(key) === null &&
+				typeof initialValue !== "undefined"
+			) {
+				setLocalStorageItem(key, initialValue);
+			}
+			/* v8 ignore next 3 */
+		} catch (e) {
+			console.warn(e);
 		}
 	}, [key, initialValue]);
 
