@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function dispatchStorageEvent(key: any, newValue: string | null) {
+function dispatchStorageEvent(key: string, newValue: string | null) {
 	window.dispatchEvent(new StorageEvent("storage", { key, newValue }));
 }
 
