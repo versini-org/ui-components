@@ -189,7 +189,7 @@ describe("useLocalStorage() event based updates", () => {
 		expect(window.localStorage.getItem("key")).toBe(JSON.stringify("edited"));
 	});
 
-	it.skip("should update the state of all hooks when one is reset", () => {
+	it("should update the state of all hooks when one is reset", () => {
 		const { result: A } = renderHook(() =>
 			useLocalStorage({
 				key: "key",
@@ -238,7 +238,7 @@ describe("useLocalStorage() event based updates", () => {
 		expect(window.localStorage.getItem("key2")).toBe(JSON.stringify("value"));
 	});
 
-	it.skip("should NOT update the state of all hooks when one is reset", () => {
+	it("should NOT update the state of all hooks when one is reset", () => {
 		const { result: A } = renderHook(() =>
 			useLocalStorage({
 				key: "key1",
