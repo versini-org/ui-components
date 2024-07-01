@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.5](https://github.com/aversini/ui-components/compare/ui-form-v1.3.4...ui-form-v1.3.5) (2024-07-01)
+
+
+### Bug Fixes
+
+* **Toggle:** cannot toggle programmatically ([#569](https://github.com/aversini/ui-components/issues/569)) ([9a6b39b](https://github.com/aversini/ui-components/commit/9a6b39b0c726178bf2d1ec4dab271b5485799a2b))
+
 ## [1.3.4](https://github.com/aversini/ui-components/compare/ui-form-v1.3.3...ui-form-v1.3.4) (2024-05-04)
 
 
