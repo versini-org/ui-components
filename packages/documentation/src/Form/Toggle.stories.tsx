@@ -1,5 +1,5 @@
 import type { Story } from "@ladle/react";
-import { Card } from "@versini/ui-components";
+import { Button, Card } from "@versini/ui-components";
 import { Toggle } from "@versini/ui-form";
 import { useState } from "react";
 
@@ -35,6 +35,25 @@ export const Basic: Story<any> = (args) => {
 		<div className="flex flex-wrap gap-2">
 			<Toggle onChange={setChecked} checked={checked} name="Toggle" {...args} />
 		</div>
+	);
+};
+
+export const Programmatically: Story<any> = (args) => {
+	const [checked, setChecked] = useState(true);
+
+	return (
+		<>
+			<Toggle
+				onChange={setChecked}
+				checked={checked}
+				name="Toggle"
+				{...args}
+				labelHidden
+			/>
+			<Button spacing={{ t: 5 }} onClick={() => setChecked(!checked)}>
+				Toggle
+			</Button>
+		</>
 	);
 };
 
