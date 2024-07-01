@@ -26,7 +26,7 @@ export const Toggle = ({
 		<label className={toggleClasses.wrapper}>
 			<input
 				name={name}
-				defaultChecked={checked}
+				checked={checked}
 				type="checkbox"
 				className={toggleClasses.input}
 				onChange={handleChange}
