@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useCallback, useEffect, useSyncExternalStore } from "react";
 
 function dispatchStorageEvent(key: string, newValue: string | null) {
 	window.dispatchEvent(new StorageEvent("storage", { key, newValue }));
@@ -60,12 +60,9 @@ export function useLocalStorage<T>({
 }: StorageProperties<T>) {
 	const getSnapshot = () => getLocalStorageItem(key);
 
-	const store = React.useSyncExternalStore(
-		useLocalStorageSubscribe,
-		getSnapshot,
-	);
+	const store = useSyncExternalStore(useLocalStorageSubscribe, getSnapshot);
 
-	const setValue = React.useCallback(
+	const setValue = useCallback(
 		(v: (arg0: any) => any) => {
 			try {
 				const nextState =
@@ -84,15 +81,15 @@ export function useLocalStorage<T>({
 		[key, store],
 	);
 
-	const resetValue = React.useCallback(() => {
+	const resetValue = useCallback(() => {
 		setValue(initialValue as any);
 	}, [initialValue, setValue]);
 
-	const removeValue = React.useCallback(() => {
+	const removeValue = useCallback(() => {
 		setValue(null as any);
 	}, [setValue]);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		try {
 			if (
 				getLocalStorageItem(key) === null &&
