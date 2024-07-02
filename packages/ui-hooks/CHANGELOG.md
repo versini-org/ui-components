@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/aversini/ui-components/compare/ui-hooks-v4.0.0...ui-hooks-v4.0.1) (2024-07-02)
+
+
+### Bug Fixes
+
+* useLocalStorage issue with context ([#571](https://github.com/aversini/ui-components/issues/571)) ([a9ffc59](https://github.com/aversini/ui-components/commit/a9ffc592e08e1bf6fc9f07118a93c62d55fd1d33))
+
 ## [4.0.0](https://github.com/aversini/ui-components/compare/ui-hooks-v3.0.1...ui-hooks-v4.0.0) (2024-06-24)
 
 
