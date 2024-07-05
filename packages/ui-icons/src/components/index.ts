@@ -13,6 +13,7 @@ import { IconGitHub } from "./Icons/IconGitHub";
 import { IconHide } from "./Icons/IconHide";
 import { IconHistory } from "./Icons/IconHistory";
 import { IconInfo } from "./Icons/IconInfo";
+import { IconLocked } from "./Icons/IconLocked";
 import { IconNext } from "./Icons/IconNext";
 import { IconPrevious } from "./Icons/IconPrevious";
 import { IconProfile } from "./Icons/IconProfile";
@@ -43,6 +44,7 @@ export {
 	IconHide,
 	IconHistory,
 	IconInfo,
+	IconLocked,
 	IconNext,
 	IconPrevious,
 	IconProfile,

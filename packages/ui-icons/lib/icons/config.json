@@ -124,5 +124,10 @@
 		"name": "IconRefresh",
 		"title": "Refresh",
 		"monotone": true
+	},
+	"lock-keyhole": {
+		"name": "IconLocked",
+		"title": "Locked",
+		"monotone": true
 	}
 }
