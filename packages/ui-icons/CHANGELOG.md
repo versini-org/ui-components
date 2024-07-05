@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.9.0...ui-icons-v1.10.0) (2024-07-05)
+
+
+### Features
+
+* adding IconLocked ([#573](https://github.com/aversini/ui-components/issues/573)) ([27a9bf7](https://github.com/aversini/ui-components/commit/27a9bf7f4b40cf34e48729762501f14722ca21fd))
+
 ## [1.9.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.8.2...ui-icons-v1.9.0) (2024-05-28)
 
 
