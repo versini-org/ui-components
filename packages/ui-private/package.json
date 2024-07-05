@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -43,11 +41,9 @@
 		"react-dom": "18.3.1"
 	},
 	"dependencies": {
-		"@floating-ui/react": "0.26.16",
+		"@floating-ui/react": "0.26.19",
 		"@versini/ui-hooks": "workspace:../ui-hooks",
 		"clsx": "2.1.1"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }
