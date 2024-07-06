@@ -9,10 +9,11 @@ export default {
 	args: {
 		mode: "system",
 		compact: false,
+		noBorder: false,
 	},
 	argTypes: {
 		mode: {
-			options: ["dark", "light", "system", "alt-system"],
+			options: ["dark", "light", "system", "alt-system", "darker"],
 			control: { type: "radio" },
 		},
 	},

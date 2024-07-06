@@ -40,6 +40,7 @@ export const Card = ({
 	spacing,
 	mode = "system",
 	compact = false,
+	noBorder = false,
 
 	...otherProps
 }: CardProps) => {
@@ -57,6 +58,7 @@ export const Card = ({
 		spacing,
 		mode,
 		compact,
+		noBorder,
 	});
 
 	if (isHeaderString) {
