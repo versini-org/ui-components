@@ -41,7 +41,12 @@ export type CardProps = {
 	/**
 	 * The mode of Card. This will change the color of the Card.
 	 */
-	mode?: "dark" | "light" | "system" | "alt-system";
+	mode?: "darker" | "dark" | "light" | "system" | "alt-system";
+	/**
+	 * Whether or not to render the Card with a border.
+	 * @default false
+	 */
+	noBorder?: boolean;
 } & SpacingProps;
 
 export type CardHeaderProps = {

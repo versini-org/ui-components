@@ -75,6 +75,37 @@ describe("Card modifiers", () => {
 		]);
 	});
 
+	it("should render a darker card", async () => {
+		const { container } = render(<Card mode="darker">{cardContent}</Card>);
+		const card = container.children[0];
+		expectToHaveClasses(card, [
+			CARD_CLASSNAME,
+			"bg-surface-darker",
+			"border-2",
+			"border-border-accent",
+			"p-4",
+			"rounded-md",
+			"text-copy-light",
+		]);
+	});
+
+	it("should render a default card with no border", async () => {
+		const { container } = render(<Card noBorder>{cardContent}</Card>);
+		const card = container.children[0];
+		expectToHaveClasses(card, [
+			CARD_CLASSNAME,
+			"rounded-md",
+			"border-none",
+			"p-4",
+			"border-border-dark",
+			"bg-surface-lighter",
+			"text-copy-dark",
+			"dark:border-border-accent",
+			"dark:bg-surface-dark",
+			"dark:text-copy-light",
+		]);
+	});
+
 	it("should render a default compact card", async () => {
 		const { container } = render(<Card compact>{cardContent}</Card>);
 		const card = container.children[0];
