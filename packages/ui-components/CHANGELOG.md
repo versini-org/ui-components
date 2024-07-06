@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.20.0](https://github.com/aversini/ui-components/compare/ui-components-v5.19.6...ui-components-v5.20.0) (2024-07-06)
+
+
+### Features
+
+* **Card:** adding support for darker mode and noBorder options ([#576](https://github.com/aversini/ui-components/issues/576)) ([40c03e9](https://github.com/aversini/ui-components/commit/40c03e9a79213d212023e6ec38fdfae8cef298c6))
+
 ## [5.19.6](https://github.com/aversini/ui-components/compare/ui-components-v5.19.5...ui-components-v5.19.6) (2024-07-05)
 
 
