@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.6](https://github.com/aversini/ui-components/compare/ui-form-v1.3.5...ui-form-v1.3.6) (2024-07-08)
+
+
+### Bug Fixes
+
+* **TextArea:** darker label and hint text in dark mode ([#578](https://github.com/aversini/ui-components/issues/578)) ([c4ca807](https://github.com/aversini/ui-components/commit/c4ca807ef9810d71a98dd40cda22961f42f20254))
+
 ## [1.3.5](https://github.com/aversini/ui-components/compare/ui-form-v1.3.4...ui-form-v1.3.5) (2024-07-01)
 
 
