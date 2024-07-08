@@ -95,18 +95,18 @@ const getTextAreaLabelClasses = ({
 	}
 	if (!error) {
 		return clsx("absolute px-2 cursor-text font-medium", {
-			"text-copy-lighter": mode === "dark",
+			"text-copy-medium": mode === "dark",
 			"text-copy-dark": mode === "light",
-			"text-copy-dark dark:text-copy-lighter": mode === "system",
-			"text-copy-lighter dark:text-copy-dark": mode === "alt-system",
+			"text-copy-dark dark:text-copy-medium": mode === "system",
+			"text-copy-medium dark:text-copy-dark": mode === "alt-system",
 		});
 	}
 	if (error) {
 		return clsx("absolute px-2 cursor-text font-medium", {
-			"text-copy-lighter": mode === "dark",
+			"text-copy-medium": mode === "dark",
 			"text-copy-error-dark": mode === "light",
 			"text-copy-error-dark dark:text-copy-error-light": mode === "system",
-			"text-copy-lighter dark:text-copy-error-dark": mode === "alt-system",
+			"text-copy-medium dark:text-copy-error-dark": mode === "alt-system",
 		});
 	}
 };
@@ -133,10 +133,10 @@ const getTextAreaHelperTextClasses = ({
 	}
 	if (!error) {
 		return clsx(TEXT_AREA_HELPER_TEXT_CLASSNAME, "absolute px-2 font-medium", {
-			"text-copy-lighter": mode === "dark",
+			"text-copy-medium": mode === "dark",
 			"text-copy-dark": mode === "light",
-			"text-copy-dark dark:text-copy-lighter": mode === "system",
-			"text-copy-lighter dark:text-copy-dark": mode === "alt-system",
+			"text-copy-dark dark:text-copy-medium": mode === "system",
+			"text-copy-medium dark:text-copy-dark": mode === "alt-system",
 		});
 	}
 	if (error) {

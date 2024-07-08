@@ -24,7 +24,7 @@ describe("TextArea modifiers", () => {
 		expectToHaveClasses(label[1], [
 			"absolute",
 			"cursor-text",
-			"dark:text-copy-lighter",
+			"dark:text-copy-medium",
 			"font-medium",
 			"text-copy-dark",
 		]);
@@ -98,7 +98,7 @@ describe("TextArea modifiers", () => {
 			"absolute",
 			"cursor-text",
 			"font-medium",
-			"text-copy-lighter",
+			"text-copy-medium",
 		]);
 		expectToHaveClasses(input, [
 			TEXT_AREA_CLASSNAME,
