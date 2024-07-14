@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.10.0...ui-icons-v1.11.0) (2024-07-14)
+
+
+### Features
+
+* **IconKey:** adding IconKey to library ([#584](https://github.com/aversini/ui-components/issues/584)) ([3589daf](https://github.com/aversini/ui-components/commit/3589daf4c373ad138b4534c021e664407c51931d))
+
 ## [1.10.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.9.0...ui-icons-v1.10.0) (2024-07-05)
 
 
