@@ -129,5 +129,10 @@
 		"name": "IconLocked",
 		"title": "Locked",
 		"monotone": true
+	},
+	"key": {
+		"name": "IconKey",
+		"title": "Key",
+		"monotone": true
 	}
 }
