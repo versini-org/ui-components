@@ -17,6 +17,7 @@ import {
 	IconHide,
 	IconHistory,
 	IconInfo,
+	IconKey,
 	IconLocked,
 	IconNext,
 	IconPrevious,
@@ -273,6 +274,13 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
+					<IconKey
+						data-testid="icon-key"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 				</>,
 			);
 			[
@@ -304,6 +312,7 @@ describe("Generic Icons prop tests", () => {
 				"icon-sort-up",
 				"icon-refresh",
 				"icon-locked",
+				"icon-key",
 			].forEach(async (dataTestId) => {
 				await renderExpected({
 					dataTestId,
