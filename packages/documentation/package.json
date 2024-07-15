@@ -31,6 +31,6 @@
 		"prism-react-renderer": "2.3.1",
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
-		"tailwindcss": "3.4.4"
+		"tailwindcss": "3.4.5"
 	}
 }
