@@ -8,9 +8,10 @@
 	"scripts": {
 		"clean": "rimraf dist",
 		"build:components": "cross-env-shell VITE_UI_TARGET=components vite build",
+		"build:fingerprint": "cross-env-shell VITE_UI_TARGET=fingerprint vite build",
 		"build:form": "cross-env-shell VITE_UI_TARGET=form vite build",
 		"build:system": "cross-env-shell VITE_UI_TARGET=system vite build",
-		"build": "npm-run-all --serial clean build:components build:system build:form",
+		"build": "npm-run-all --serial clean build:*",
 		"test": "echo \"WARNING: no test specified\" && exit 0",
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
 	},
@@ -20,6 +21,7 @@
 	},
 	"dependencies": {
 		"@versini/ui-components": "workspace:../ui-components",
+		"@versini/ui-fingerprint": "workspace:../ui-fingerprint",
 		"@versini/ui-form": "workspace:../ui-form",
 		"@versini/ui-hooks": "workspace:../ui-hooks",
 		"@versini/ui-icons": "workspace:../ui-icons",
