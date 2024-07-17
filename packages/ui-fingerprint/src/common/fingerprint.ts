@@ -1,13 +1,68 @@
-import { getBrowser } from "../components/system/browser";
-import { getSystem } from "../components/system/system";
+import type {
+	AudioFP,
+	BrowserFP,
+	CanvasFP,
+	FontsFP,
+	HardwareFP,
+	LocalesFP,
+	ScreenFP,
+	SystemFP,
+} from "../common/types";
+import { emptyAudio, getAudio } from "../components/audio";
+import { emptyBrowser, getBrowser } from "../components/browser";
+import { emptyCanvas, getCanvas } from "../components/canvas";
+import { emptyFonts, getFonts } from "../components/fonts";
+import { emptyHardware, getHardware } from "../components/hardware";
+import { emptyLocales, getLocales } from "../components/locale";
+import { emptyScreen, getScreen } from "../components/screen";
+import { emptySystem, getSystem } from "../components/system";
+
 import { hash } from "./hash";
 
-export const getFingerprint = async (): Promise<string> => {
+type FingerprintData = [
+	AudioFP,
+	BrowserFP,
+	CanvasFP,
+	FontsFP,
+	HardwareFP,
+	LocalesFP,
+	ScreenFP,
+	SystemFP,
+];
+
+export const getFingerprintData = async (): Promise<FingerprintData> => {
 	try {
-		const b = await getBrowser();
-		const s = await getSystem();
-		return await hash(JSON.stringify({ b, s }));
+		return Promise.all([
+			getAudio(),
+			getBrowser(),
+			getCanvas(),
+			getFonts(),
+			getHardware(),
+			getLocales(),
+			getScreen(),
+			getSystem(),
+		]);
 	} catch (_error) {
+		return [
+			emptyAudio,
+			emptyBrowser,
+			emptyCanvas,
+			emptyFonts,
+			emptyHardware,
+			emptyLocales,
+			emptyScreen,
+			emptySystem,
+		];
+	}
+};
+
+export const getFingerprintHash = async (): Promise<string> => {
+	try {
+		const data = await getFingerprintData();
+		return await hash(JSON.stringify(data));
+	} catch (_error) {
+		console.error("Error getting fingerprint hash");
+		console.info(_error);
 		return "";
 	}
 };

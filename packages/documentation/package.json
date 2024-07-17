@@ -22,6 +22,7 @@
 	"dependencies": {
 		"@tailwindcss/typography": "0.5.13",
 		"@versini/ui-components": "workspace:../ui-components",
+		"@versini/ui-fingerprint": "workspace:../ui-fingerprint",
 		"@versini/ui-form": "workspace:../ui-form",
 		"@versini/ui-icons": "workspace:../ui-icons",
 		"@versini/ui-styles": "workspace:../ui-styles",

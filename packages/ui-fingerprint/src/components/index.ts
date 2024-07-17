@@ -1,1 +1,1 @@
-export { getFingerprint } from "../common/fingerprint";
+export { getFingerprintHash, getFingerprintData } from "../common/fingerprint";

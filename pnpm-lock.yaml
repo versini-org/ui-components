@@ -142,6 +142,9 @@ importers:
       '@versini/ui-components':
         specifier: workspace:../ui-components
         version: link:../ui-components
+      '@versini/ui-fingerprint':
+        specifier: workspace:../ui-fingerprint
+        version: link:../ui-fingerprint
       '@versini/ui-form':
         specifier: workspace:../ui-form
         version: link:../ui-form

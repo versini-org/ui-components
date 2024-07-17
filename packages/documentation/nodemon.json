@@ -6,6 +6,7 @@
 		"../ui-components/src/**/*.*",
 		"../ui-components/lib/**/*.*",
 		"../ui-styles/src/**/*.*",
+		"../ui-fingerprint/src/**/*.*",
 		"../ui-form/src/**/*.*",
 		"../ui-icons/src/**/*.*",
 		"../ui-system/src/**/*.*"
