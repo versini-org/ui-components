@@ -1,1 +1,16 @@
-{}
+{
+  "1.0.0": {
+    "../bundlesize/dist/fingerprint/assets/index.js": {
+      "fileSize": 8923,
+      "fileSizeGzip": 4036,
+      "limit": "4 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/fingerprint/assets/vendor.js": {
+      "fileSize": 141747,
+      "fileSizeGzip": 45405,
+      "limit": "45 KB",
+      "passed": true
+    }
+  }
+}
