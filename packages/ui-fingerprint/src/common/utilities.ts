@@ -7,17 +7,18 @@ export const hashFromFloat32Array = (array: Float32Array): string => {
 	return hashArray;
 };
 
-export const hashFromString = (val: string): string => {
-	let hash = 0;
-	if (val.length === 0) {
-		return hash.toString();
+export const hashFromString = async (input: string): Promise<string> => {
+	if (input === "") {
+		return "";
 	}
-	for (let i = 0; i < val.length; i++) {
-		const char = val.charCodeAt(i);
-		hash = (hash << 5) - hash + char;
-		hash = hash & hash;
-	}
-	return hash.toString();
+	const encoder = new TextEncoder();
+	const data = encoder.encode(input);
+	const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+	const hashArray = Array.from(new Uint8Array(hashBuffer));
+	const hashHex = hashArray
+		.map((b) => b.toString(16).padStart(2, "0"))
+		.join("");
+	return hashHex;
 };
 
 export function wait<T = void>(

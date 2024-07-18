@@ -7,31 +7,32 @@ export const emptyCanvas = {
 	},
 };
 export const getCanvas = async (): Promise<CanvasFP> => {
-	return new Promise<CanvasFP>((resolve) => {
-		const WIDTH = 300;
-		const HEIGHT = 30;
+	const WIDTH = 300;
+	const HEIGHT = 30;
 
-		try {
-			/**
-			 * Creating 3 identical image data with same text and same colors,
-			 * and extracting the common pixels from them. This is a fingerprint
-			 * busting technique to defeat canvas counter-fingerprinting.
-			 */
-			const imageData: ImageData[] = Array.from({ length: 3 }, () =>
-				generateImageData(WIDTH, HEIGHT),
-			);
-			const commonImageData = getCommonPixels(imageData, WIDTH, HEIGHT);
-			resolve({
-				canvas: {
-					data: hashFromString(commonImageData.data.toString()).toString(),
-				},
-			});
-		} catch (error) {
-			console.error("Error creating canvas fingerprint");
-			console.info(error);
-			resolve(emptyCanvas);
-		}
-	});
+	try {
+		/**
+		 * Creating 3 identical image data with same text and same colors,
+		 * and extracting the common pixels from them. This is a fingerprint
+		 * busting technique to defeat canvas counter-fingerprinting.
+		 */
+		const imageData: ImageData[] = Array.from({ length: 3 }, () =>
+			generateImageData(WIDTH, HEIGHT),
+		);
+		const commonImageData = getCommonPixels(imageData, WIDTH, HEIGHT);
+		const hashedData = (
+			await hashFromString(commonImageData.data.toString())
+		).toString();
+		return {
+			canvas: {
+				data: hashedData,
+			},
+		};
+	} catch (error) {
+		console.error("Error creating canvas fingerprint");
+		console.info(error);
+		return emptyCanvas;
+	}
 };
 
 const generateImageData = (width: number, height: number): ImageData => {

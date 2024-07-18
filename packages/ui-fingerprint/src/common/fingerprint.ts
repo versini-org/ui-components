@@ -17,7 +17,7 @@ import { emptyLocales, getLocales } from "../components/locale";
 import { emptyScreen, getScreen } from "../components/screen";
 import { emptySystem, getSystem } from "../components/system";
 
-import { hash } from "./hash";
+import { hashFromString } from "./utilities";
 
 type FingerprintData = [
 	AudioFP,
@@ -59,7 +59,7 @@ export const getFingerprintData = async (): Promise<FingerprintData> => {
 export const getFingerprintHash = async (): Promise<string> => {
 	try {
 		const data = await getFingerprintData();
-		return await hash(JSON.stringify(data));
+		return await hashFromString(JSON.stringify(data));
 	} catch (_error) {
 		console.error("Error getting fingerprint hash");
 		console.info(_error);
