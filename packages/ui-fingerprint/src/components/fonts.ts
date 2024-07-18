@@ -54,7 +54,7 @@ const fontList = [
 	"ZWAdobeF",
 ] as const;
 
-export const getFonts = async (_debug: boolean): Promise<FontsFP> => {
+export const getFonts = async (_debug?: boolean): Promise<FontsFP> => {
 	return withIframe(async (_, { document }) => {
 		const holder = document.body;
 		holder.style.fontSize = textSize;

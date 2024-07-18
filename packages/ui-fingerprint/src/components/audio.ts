@@ -10,7 +10,7 @@ export const emptyAudio = {
 	},
 };
 
-export const getAudio = async (debug: boolean): Promise<AudioFP> => {
+export const getAudio = async (debug?: boolean): Promise<AudioFP> => {
 	return new Promise<AudioFP>((resolve) => {
 		try {
 			const audioContext = new window.OfflineAudioContext(1, 5000, 44100);
