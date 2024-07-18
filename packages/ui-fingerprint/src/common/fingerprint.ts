@@ -30,17 +30,19 @@ type FingerprintData = [
 	SystemFP,
 ];
 
-export const getFingerprintData = async (): Promise<FingerprintData> => {
+export const getFingerprintData = async (
+	debug: boolean,
+): Promise<FingerprintData> => {
 	try {
 		return Promise.all([
-			getAudio(),
-			getBrowser(),
-			getCanvas(),
-			getFonts(),
-			getHardware(),
-			getLocales(),
-			getScreen(),
-			getSystem(),
+			getAudio(debug),
+			getBrowser(debug),
+			getCanvas(debug),
+			getFonts(debug),
+			getHardware(debug),
+			getLocales(debug),
+			getScreen(debug),
+			getSystem(debug),
 		]);
 	} catch (_error) {
 		return [
@@ -56,13 +58,15 @@ export const getFingerprintData = async (): Promise<FingerprintData> => {
 	}
 };
 
-export const getFingerprintHash = async (): Promise<string> => {
+export const getFingerprintHash = async (debug: boolean): Promise<string> => {
 	try {
-		const data = await getFingerprintData();
+		const data = await getFingerprintData(debug);
 		return await hashFromString(JSON.stringify(data));
 	} catch (_error) {
-		console.error("Error getting fingerprint hash");
-		console.info(_error);
+		if (debug) {
+			console.error("Error getting fingerprint hash");
+			console.info(_error);
+		}
 		return "";
 	}
 };

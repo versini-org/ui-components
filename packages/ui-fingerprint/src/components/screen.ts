@@ -10,7 +10,7 @@ export const emptyScreen = {
 	},
 };
 
-export const getScreen = async (): Promise<ScreenFP> => {
+export const getScreen = async (debug: boolean): Promise<ScreenFP> => {
 	return new Promise<ScreenFP>((resolve) => {
 		try {
 			const screen = window.screen;
@@ -26,8 +26,10 @@ export const getScreen = async (): Promise<ScreenFP> => {
 
 			resolve(screenData);
 		} catch (error) {
-			console.error("Error creating screen fingerprint");
-			console.info(error);
+			if (debug) {
+				console.error("Error creating screen fingerprint");
+				console.info(error);
+			}
 			resolve(emptyScreen);
 		}
 	});

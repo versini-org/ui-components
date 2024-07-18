@@ -6,7 +6,7 @@ export const emptyCanvas = {
 		data: "",
 	},
 };
-export const getCanvas = async (): Promise<CanvasFP> => {
+export const getCanvas = async (debug: boolean): Promise<CanvasFP> => {
 	const WIDTH = 300;
 	const HEIGHT = 30;
 
@@ -29,8 +29,10 @@ export const getCanvas = async (): Promise<CanvasFP> => {
 			},
 		};
 	} catch (error) {
-		console.error("Error creating canvas fingerprint");
-		console.info(error);
+		if (debug) {
+			console.error("Error creating canvas fingerprint");
+			console.info(error);
+		}
 		return emptyCanvas;
 	}
 };

@@ -1,6 +1,6 @@
 import type { SystemFP } from "../common/types";
 
-export const getSystem = async (): Promise<SystemFP> => {
+export const getSystem = async (debug: boolean): Promise<SystemFP> => {
 	try {
 		return {
 			system: {
@@ -11,8 +11,10 @@ export const getSystem = async (): Promise<SystemFP> => {
 			},
 		};
 	} catch (error) {
-		console.error("Error getting system data");
-		console.info(error);
+		if (debug) {
+			console.error("Error getting system data");
+			console.info(error);
+		}
 		return emptySystem;
 	}
 };

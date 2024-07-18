@@ -56,7 +56,7 @@ const getMemoryInfo = () =>
 		jsHeapSizeLimit: 0,
 	};
 
-export const getHardware = async (): Promise<HardwareFP> => {
+export const getHardware = async (debug: boolean): Promise<HardwareFP> => {
 	return new Promise((resolve) => {
 		try {
 			const deviceMemory = getDeviceMemory();
@@ -71,8 +71,10 @@ export const getHardware = async (): Promise<HardwareFP> => {
 				},
 			});
 		} catch (error) {
-			console.error("Error getting hardware data");
-			console.info(error);
+			if (debug) {
+				console.error("Error getting hardware data");
+				console.info(error);
+			}
 			resolve(emptyHardware);
 		}
 	});
