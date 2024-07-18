@@ -31,7 +31,7 @@ type FingerprintData = [
 ];
 
 export const getFingerprintData = async (
-	debug: boolean,
+	debug?: boolean,
 ): Promise<FingerprintData> => {
 	try {
 		return Promise.all([
@@ -58,7 +58,7 @@ export const getFingerprintData = async (
 	}
 };
 
-export const getFingerprintHash = async (debug: boolean): Promise<string> => {
+export const getFingerprintHash = async (debug?: boolean): Promise<string> => {
 	try {
 		const data = await getFingerprintData(debug);
 		return await hashFromString(JSON.stringify(data));

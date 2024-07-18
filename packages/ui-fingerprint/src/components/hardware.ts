@@ -56,7 +56,7 @@ const getMemoryInfo = () =>
 		jsHeapSizeLimit: 0,
 	};
 
-export const getHardware = async (debug: boolean): Promise<HardwareFP> => {
+export const getHardware = async (debug?: boolean): Promise<HardwareFP> => {
 	return new Promise((resolve) => {
 		try {
 			const deviceMemory = getDeviceMemory();

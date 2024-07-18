@@ -6,7 +6,7 @@ export const emptyCanvas = {
 		data: "",
 	},
 };
-export const getCanvas = async (debug: boolean): Promise<CanvasFP> => {
+export const getCanvas = async (debug?: boolean): Promise<CanvasFP> => {
 	const WIDTH = 300;
 	const HEIGHT = 30;
 

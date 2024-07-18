@@ -5,7 +5,7 @@ export const emptyLocales = {
 		timezone: "",
 	},
 };
-export const getLocales = async (_debug: boolean): Promise<LocalesFP> => {
+export const getLocales = async (_debug?: boolean): Promise<LocalesFP> => {
 	return new Promise((resolve) => {
 		resolve({
 			locales: {

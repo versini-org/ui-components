@@ -1,6 +1,6 @@
 import type { SystemFP } from "../common/types";
 
-export const getSystem = async (debug: boolean): Promise<SystemFP> => {
+export const getSystem = async (debug?: boolean): Promise<SystemFP> => {
 	try {
 		return {
 			system: {

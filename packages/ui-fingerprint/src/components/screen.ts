@@ -10,7 +10,7 @@ export const emptyScreen = {
 	},
 };
 
-export const getScreen = async (debug: boolean): Promise<ScreenFP> => {
+export const getScreen = async (debug?: boolean): Promise<ScreenFP> => {
 	return new Promise<ScreenFP>((resolve) => {
 		try {
 			const screen = window.screen;
