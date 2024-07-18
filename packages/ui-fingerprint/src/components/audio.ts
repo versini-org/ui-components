@@ -26,8 +26,12 @@ export const getAudio = async (): Promise<AudioFP> => {
 			oscillator.connect(compressor);
 			compressor.connect(audioContext.destination);
 			oscillator.start();
+
+			audioContext.startRendering();
 			audioContext.oncomplete = (event) => {
 				const samples = event.renderedBuffer.getChannelData(0);
+				oscillator.disconnect();
+				compressor.disconnect();
 				resolve({
 					audio: {
 						sampleHash: hashFromFloat32Array(samples),
@@ -37,7 +41,6 @@ export const getAudio = async (): Promise<AudioFP> => {
 					},
 				});
 			};
-			audioContext.startRendering();
 		} catch (error) {
 			console.error("Error creating audio fingerprint:", error);
 			resolve({
