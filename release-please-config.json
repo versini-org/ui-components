@@ -6,6 +6,7 @@
 		"packages/ui-private": {},
 		"packages/ui-icons": {},
 		"packages/ui-styles": {},
-		"packages/ui-form": {}
+		"packages/ui-form": {},
+		"packages/ui-fingerprint": {}
 	}
 }
