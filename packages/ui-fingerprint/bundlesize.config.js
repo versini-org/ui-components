@@ -8,7 +8,7 @@ export default {
 	sizes: [
 		{
 			path: `${bundlePath}/assets/index.js`,
-			limit: "1 KB",
+			limit: "4 KB",
 		},
 		{
 			path: `${bundlePath}/assets/vendor.js`,

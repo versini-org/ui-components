@@ -35,6 +35,7 @@ jobs:
           refresh-message-position: true
           message-path: |
             packages/ui-components/tmp/pr-stats.md
+            packages/ui-fingerprint/tmp/pr-stats.md
             packages/ui-form/tmp/pr-stats.md
             packages/ui-system/tmp/pr-stats.md
 
