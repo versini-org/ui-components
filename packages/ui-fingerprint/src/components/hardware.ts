@@ -49,16 +49,19 @@ function getArchitecture(): number {
 	return u8[3];
 }
 
+// @ts-ignore
+const getDeviceMemory = () => navigator.deviceMemory || 0;
+const getMemoryInfo = () =>
+	(window.performance && (window.performance as any).memory) || {
+		jsHeapSizeLimit: 0,
+	};
+
 export const getHardware = async (): Promise<HardwareFP> => {
 	return new Promise((resolve) => {
 		try {
-			const deviceMemory =
-				// @ts-expect-error
-				navigator.deviceMemory !== undefined ? navigator.deviceMemory : 0;
-			const memoryInfo =
-				window.performance && (window.performance as any).memory
-					? (window.performance as any).memory
-					: 0;
+			const deviceMemory = getDeviceMemory();
+			const memoryInfo = getMemoryInfo();
+
 			resolve({
 				hardware: {
 					videocard: getVideoCard(),
