@@ -1,5 +1,9 @@
 export type PanelProps = {
 	/**
+	 * Class name to apply to the Panel - this will ONLY override the default width styles.
+	 */
+	className?: string;
+	/**
 	 * The children to render.
 	 */
 	children: React.ReactNode;
