@@ -28,9 +28,10 @@ export const Panel = ({
 	footer,
 	borderMode = "light",
 	kind = TYPE_PANEL,
+	className,
 }: PanelProps) => {
 	const originalTitleRef = useRef("");
-	const panelClassName = getPanelClassName({ kind, borderMode });
+	const panelClassName = getPanelClassName({ className, kind, borderMode });
 
 	/**
 	 * If the panel is opened, set the document
