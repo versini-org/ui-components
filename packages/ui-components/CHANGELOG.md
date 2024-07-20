@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.21.0](https://github.com/aversini/ui-components/compare/ui-components-v5.20.0...ui-components-v5.21.0) (2024-07-20)
+
+
+### Features
+
+* **Panel:** adding className prop to override default width ([#594](https://github.com/aversini/ui-components/issues/594)) ([f878f15](https://github.com/aversini/ui-components/commit/f878f15154f09f7ff557de76d4aa43ef2b63884f))
+
 ## [5.20.0](https://github.com/aversini/ui-components/compare/ui-components-v5.19.6...ui-components-v5.20.0) (2024-07-06)
 
 
