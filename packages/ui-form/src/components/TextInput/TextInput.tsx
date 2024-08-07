@@ -53,7 +53,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 
 		/* c8 ignore start - ResizeObserver is tough to test... */
 		useLayoutEffect(() => {
-			if (rect.width) {
+			if (rect && rect.width) {
 				/**
 				 * - rect.width is the width of the right element (Button, Icon, etc.)
 				 * - The main input field has default left/right paddings of
@@ -63,7 +63,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 				 */
 				setInputPaddingRight(rect.width + 18 + 10);
 			}
-		}, [rect.width]);
+		}, [rect]);
 		/* c8 ignore end */
 
 		return (
