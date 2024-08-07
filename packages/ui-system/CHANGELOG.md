@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3](https://github.com/aversini/ui-components/compare/ui-system-v1.4.2...ui-system-v1.4.3) (2024-08-07)
+
+
+### Bug Fixes
+
+* bump dependencies to latest ([#598](https://github.com/aversini/ui-components/issues/598)) ([71c858d](https://github.com/aversini/ui-components/commit/71c858df83cb67c22353ddb894546a725d71e382))
+
 ## [1.4.2](https://github.com/aversini/ui-components/compare/ui-system-v1.4.1...ui-system-v1.4.2) (2024-07-05)
 
 

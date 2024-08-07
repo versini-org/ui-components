@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.21.1](https://github.com/aversini/ui-components/compare/ui-components-v5.21.0...ui-components-v5.21.1) (2024-08-07)
+
+
+### Bug Fixes
+
+* bump dependencies to latest ([#598](https://github.com/aversini/ui-components/issues/598)) ([71c858d](https://github.com/aversini/ui-components/commit/71c858df83cb67c22353ddb894546a725d71e382))
+
 ## [5.21.0](https://github.com/aversini/ui-components/compare/ui-components-v5.20.0...ui-components-v5.21.0) (2024-07-20)
 
 
