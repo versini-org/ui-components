@@ -1,7 +1,7 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
-
-import { useUniqueId } from "@versini/ui-hooks";
+import { useResizeObserver, useUniqueId } from "@versini/ui-hooks";
 import { LiveRegion } from "@versini/ui-private";
+import React, { useLayoutEffect, useState } from "react";
+
 import { TEXT_INPUT_CLASSNAME } from "../../common/constants";
 import type { TextInputProps } from "./TextInputTypes";
 import { getTextInputClasses } from "./utilities";
@@ -35,7 +35,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		},
 		ref,
 	) => {
-		const rightElementRef = useRef<HTMLDivElement>(null);
+		const [rightElementRef, rect] = useResizeObserver<HTMLDivElement>();
 		const [inputPaddingRight, setInputPaddingRight] = useState(0);
 		const inputId = useUniqueId({ id, prefix: `${TEXT_INPUT_CLASSNAME}-` });
 		const liveErrorMessage = `${name} error, ${helperText}`;
@@ -51,11 +51,20 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			mode,
 		});
 
+		/* c8 ignore start - ResizeObserver is tough to test... */
 		useLayoutEffect(() => {
-			if (rightElementRef.current) {
-				setInputPaddingRight(rightElementRef.current.offsetWidth + 18 + 10);
+			if (rect.width) {
+				/**
+				 * - rect.width is the width of the right element (Button, Icon, etc.)
+				 * - The main input field has default left/right paddings of
+				 *   16px (px-4) + 2px border (border-2) = 18px
+				 * - We add 10px to the right padding to give some space between the right
+				 *   element and the input field.
+				 */
+				setInputPaddingRight(rect.width + 18 + 10);
 			}
-		}, []);
+		}, [rect.width]);
+		/* c8 ignore end */
 
 		return (
 			<div className={textInputClassName.wrapper}>
