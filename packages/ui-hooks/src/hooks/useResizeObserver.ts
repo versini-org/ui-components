@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { useIsMounted } from "./useIsMounted";
+
 type ObserverRect = Omit<DOMRectReadOnly, "toJSON">;
 
 const defaultState: ObserverRect = {
@@ -32,6 +34,7 @@ const defaultState: ObserverRect = {
 export function useResizeObserver<T extends HTMLElement = any>(
 	options?: ResizeObserverOptions,
 ) {
+	const isMounted = useIsMounted();
 	const frameID = useRef(0);
 	const ref = useRef<T>(null);
 
@@ -47,14 +50,14 @@ export function useResizeObserver<T extends HTMLElement = any>(
 							cancelAnimationFrame(frameID.current);
 
 							frameID.current = requestAnimationFrame(() => {
-								if (ref.current) {
+								if (ref.current && isMounted()) {
 									setRect(entry.contentRect);
 								}
 							});
 						}
 					})
 				: null,
-		[],
+		[isMounted],
 	);
 
 	useEffect(() => {
