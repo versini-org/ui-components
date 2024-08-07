@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.7](https://github.com/aversini/ui-components/compare/ui-form-v1.3.6...ui-form-v1.3.7) (2024-08-07)
+
+
+### Bug Fixes
+
+* **TextInput:** first render is sometimes leaking out of the page ([#602](https://github.com/aversini/ui-components/issues/602)) ([594655c](https://github.com/aversini/ui-components/commit/594655c8dd4d13130e4012ba04a5027423390091))
+
 ## [1.3.6](https://github.com/aversini/ui-components/compare/ui-form-v1.3.5...ui-form-v1.3.6) (2024-07-08)
 
 
