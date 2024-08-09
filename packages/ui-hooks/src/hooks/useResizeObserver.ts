@@ -1,5 +1,3 @@
-/* c8 ignore start */
-
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { useIsMounted } from "./useIsMounted";
@@ -40,26 +38,27 @@ export function useResizeObserver<T extends HTMLElement = any>(
 
 	const [rect, setRect] = useState<ObserverRect>(defaultState);
 
-	const observer = useMemo(
-		() =>
-			typeof window !== "undefined"
-				? new ResizeObserver((entries: any) => {
-						const entry = entries[0];
+	const observer = useMemo(() => {
+		/* c8 ignore start */
+		if (typeof ResizeObserver === "undefined") {
+			return null;
+		}
+		/* c8 ignore end */
 
-						if (entry) {
-							cancelAnimationFrame(frameID.current);
+		return new ResizeObserver((entries: any) => {
+			const entry = entries[0];
+			if (entry) {
+				cancelAnimationFrame(frameID.current);
+				frameID.current = requestAnimationFrame(() => {
+					if (ref.current && isMounted()) {
+						setRect(entry.contentRect);
+					}
+				});
+			}
+		});
+	}, [isMounted]);
 
-							frameID.current = requestAnimationFrame(() => {
-								if (ref.current && isMounted()) {
-									setRect(entry.contentRect);
-								}
-							});
-						}
-					})
-				: null,
-		[isMounted],
-	);
-
+	/* c8 ignore start */
 	useEffect(() => {
 		if (ref.current) {
 			observer?.observe(ref.current, options);
@@ -73,8 +72,7 @@ export function useResizeObserver<T extends HTMLElement = any>(
 			}
 		};
 	}, [observer, options]);
+	/* c8 ignore end */
 
 	return [ref, rect] as const;
 }
-
-/* c8 ignore end */
