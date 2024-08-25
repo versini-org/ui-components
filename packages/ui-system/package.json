@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -50,9 +48,7 @@
 	"dependencies": {
 		"@versini/ui-private": "workspace:../ui-private",
 		"clsx": "2.1.1",
-		"tailwindcss": "3.4.7"
+		"tailwindcss": "3.4.10"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }
