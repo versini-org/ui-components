@@ -898,5 +898,25 @@
       "limit": "67 KB",
       "passed": true
     }
+  },
+  "5.21.2": {
+    "../bundlesize/dist/components/assets/style.css": {
+      "fileSize": 49311,
+      "fileSizeGzip": 7539,
+      "limit": "8 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/components/assets/index.js": {
+      "fileSize": 35617,
+      "fileSizeGzip": 10061,
+      "limit": "10 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/components/assets/vendor.js": {
+      "fileSize": 202715,
+      "fileSizeGzip": 67212,
+      "limit": "67 KB",
+      "passed": true
+    }
   }
 }
