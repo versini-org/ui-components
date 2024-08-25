@@ -17,10 +17,10 @@
 		"test": "echo \"WARNING: no test specified\" && exit 0"
 	},
 	"devDependencies": {
-		"@ladle/react": "4.1.0"
+		"@ladle/react": "4.1.1"
 	},
 	"dependencies": {
-		"@tailwindcss/typography": "0.5.13",
+		"@tailwindcss/typography": "0.5.14",
 		"@versini/ui-components": "workspace:../ui-components",
 		"@versini/ui-fingerprint": "workspace:../ui-fingerprint",
 		"@versini/ui-form": "workspace:../ui-form",
@@ -32,6 +32,6 @@
 		"prism-react-renderer": "2.3.1",
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
-		"tailwindcss": "3.4.7"
+		"tailwindcss": "3.4.10"
 	}
 }

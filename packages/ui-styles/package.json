@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -32,8 +30,8 @@
 		"test": "cross-env-shell NODE_ENV=test vitest run"
 	},
 	"dependencies": {
-		"@tailwindcss/typography": "0.5.13",
+		"@tailwindcss/typography": "0.5.14",
 		"culori": "4.0.1",
-		"tailwindcss": "3.4.7"
+		"tailwindcss": "3.4.10"
 	}
 }
