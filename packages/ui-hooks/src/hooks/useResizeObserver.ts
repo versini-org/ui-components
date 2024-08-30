@@ -39,11 +39,10 @@ export function useResizeObserver<T extends HTMLElement = any>(
 	const [rect, setRect] = useState<ObserverRect>(defaultState);
 
 	const observer = useMemo(() => {
-		/* c8 ignore start */
+		/* c8 ignore next 3 */
 		if (typeof ResizeObserver === "undefined") {
 			return null;
 		}
-		/* c8 ignore end */
 
 		return new ResizeObserver((entries: any) => {
 			const entry = entries[0];
@@ -58,8 +57,8 @@ export function useResizeObserver<T extends HTMLElement = any>(
 		});
 	}, [isMounted]);
 
-	/* c8 ignore start */
 	useEffect(() => {
+		/* c8 ignore next 3 */
 		if (ref.current) {
 			observer?.observe(ref.current, options);
 		}
@@ -67,12 +66,12 @@ export function useResizeObserver<T extends HTMLElement = any>(
 		return () => {
 			observer?.disconnect();
 
+			/* c8 ignore next 3 */
 			if (frameID.current) {
 				cancelAnimationFrame(frameID.current);
 			}
 		};
 	}, [observer, options]);
-	/* c8 ignore end */
 
 	return [ref, rect] as const;
 }
