@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.1](https://github.com/aversini/ui-components/compare/ui-hooks-v4.1.0...ui-hooks-v4.1.1) (2024-08-30)
+
+
+### Bug Fixes
+
+* slightly better tests for useResizeObserver ([#608](https://github.com/aversini/ui-components/issues/608)) ([3619c92](https://github.com/aversini/ui-components/commit/3619c9222cb435b4011272fb341a73f55e600561))
+
 ## [4.1.0](https://github.com/aversini/ui-components/compare/ui-hooks-v4.0.1...ui-hooks-v4.1.0) (2024-08-07)
 
 
