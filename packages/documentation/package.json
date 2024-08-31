@@ -20,7 +20,7 @@
 		"@ladle/react": "4.1.1"
 	},
 	"dependencies": {
-		"@tailwindcss/typography": "0.5.14",
+		"@tailwindcss/typography": "0.5.15",
 		"@versini/ui-components": "workspace:../ui-components",
 		"@versini/ui-fingerprint": "workspace:../ui-fingerprint",
 		"@versini/ui-form": "workspace:../ui-form",

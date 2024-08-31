@@ -46,7 +46,7 @@
 	},
 	"dependencies": {
 		"@floating-ui/react": "0.26.23",
-		"@tailwindcss/typography": "0.5.14",
+		"@tailwindcss/typography": "0.5.15",
 		"@versini/ui-hooks": "workspace:../ui-hooks",
 		"@versini/ui-icons": "workspace:../ui-icons",
 		"@versini/ui-private": "workspace:../ui-private",
