@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/versini-org/ui-components/compare/ui-icons-v1.11.0...ui-icons-v1.12.0) (2024-08-31)
+
+
+### Features
+
+* **icons:** adding IconPasskey ([#612](https://github.com/versini-org/ui-components/issues/612)) ([4de4c61](https://github.com/versini-org/ui-components/commit/4de4c61831d7f4f7ee7088f4cdc2b935438ee281))
+
 ## [1.11.0](https://github.com/aversini/ui-components/compare/ui-icons-v1.10.0...ui-icons-v1.11.0) (2024-07-14)
 
 
