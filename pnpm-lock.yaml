@@ -161,8 +161,8 @@ importers:
         specifier: 2.1.1
         version: 2.1.1
       prism-react-renderer:
-        specifier: 2.3.1
-        version: 2.3.1(react@18.3.1)
+        specifier: 2.4.0
+        version: 2.4.0(react@18.3.1)
       prismjs:
         specifier: 1.29.0
         version: 1.29.0
@@ -5381,8 +5381,8 @@ packages:
     resolution: {integrity: sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
-  prism-react-renderer@2.3.1:
-    resolution: {integrity: sha512-Rdf+HzBLR7KYjzpJ1rSoxT9ioO85nZngQEoFIhL07XhtJHlCU3SOz0GJ6+qvMyQe0Se+BV3qpe6Yd/NmQF5Juw==}
+  prism-react-renderer@2.4.0:
+    resolution: {integrity: sha512-327BsVCD/unU4CNLZTWVHyUHKnsqcvj2qbPlQ8MiBE2eq2rgctjigPA1Gp9HLF83kZ20zNN6jgizHJeEsyFYOw==}
     peerDependencies:
       react: '>=16.0.0'
 
@@ -7423,7 +7423,7 @@ snapshots:
       lodash.merge: 4.6.2
       msw: 2.3.1(typescript@5.5.4)
       open: 10.1.0
-      prism-react-renderer: 2.3.1(react@18.3.1)
+      prism-react-renderer: 2.4.0(react@18.3.1)
       prop-types: 15.8.1
       query-string: 9.0.0
       react: 18.3.1
@@ -8191,7 +8191,7 @@ snapshots:
     dependencies:
       '@module-federation/runtime-tools': 0.1.6
       '@rspack/binding': 0.7.5
-      caniuse-lite: 1.0.30001649
+      caniuse-lite: 1.0.30001653
       tapable: 2.2.1
       webpack-sources: 3.2.3
     optionalDependencies:
@@ -12861,7 +12861,7 @@ snapshots:
       ansi-styles: 5.2.0
       react-is: 18.2.0
 
-  prism-react-renderer@2.3.1(react@18.3.1):
+  prism-react-renderer@2.4.0(react@18.3.1):
     dependencies:
       '@types/prismjs': 1.26.3
       clsx: 2.1.1
