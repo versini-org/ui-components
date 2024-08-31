@@ -134,5 +134,10 @@
 		"name": "IconKey",
 		"title": "Key",
 		"monotone": true
+	},
+	"passkey": {
+		"name": "IconPasskey",
+		"title": "Passkey",
+		"monotone": true
 	}
 }
