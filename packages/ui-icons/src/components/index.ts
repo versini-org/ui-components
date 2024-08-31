@@ -16,6 +16,7 @@ import { IconInfo } from "./Icons/IconInfo";
 import { IconKey } from "./Icons/IconKey";
 import { IconLocked } from "./Icons/IconLocked";
 import { IconNext } from "./Icons/IconNext";
+import { IconPasskey } from "./Icons/IconPasskey";
 import { IconPrevious } from "./Icons/IconPrevious";
 import { IconProfile } from "./Icons/IconProfile";
 import { IconRefresh } from "./Icons/IconRefresh";
@@ -48,6 +49,7 @@ export {
 	IconKey,
 	IconLocked,
 	IconNext,
+	IconPasskey,
 	IconPrevious,
 	IconProfile,
 	IconRefresh,
