@@ -2,7 +2,7 @@ import type { Story } from "@ladle/react";
 import { Button } from "@versini/ui-components";
 import { TextArea } from "@versini/ui-form";
 import { ThemeProvider } from "@versini/ui-system";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const customTheme = {
 	"--av-copy-light": "#403c3a",
