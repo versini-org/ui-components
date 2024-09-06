@@ -2,6 +2,7 @@ import type { Story } from "@ladle/react";
 import { Button } from "@versini/ui-components";
 import { TextArea } from "@versini/ui-form";
 import { ThemeProvider } from "@versini/ui-system";
+import { useEffect, useState } from "react";
 
 const customTheme = {
 	"--av-copy-light": "#403c3a",
@@ -101,6 +102,36 @@ export const CustomTheme: Story<any> = (args) => (
 	</div>
 );
 CustomTheme.args = {
+	rightElement: (
+		<Button mode="light" noBorder>
+			Send
+		</Button>
+	),
+	helperText: "Powered by the sun",
+};
+
+export const Controlled: Story<any> = (args) => {
+	const [value, setValue] = useState(
+		"Charlotte, North Carolina, United States of America, Lorem Ipsum Dolor Sit Amet",
+	);
+
+	return (
+		<div className="h-full">
+			<form noValidate>
+				<div className="flex gap-2">
+					<TextArea
+						{...args}
+						value={value}
+						onChange={(e) => {
+							setValue(e.target.value);
+						}}
+					/>
+				</div>
+			</form>
+		</div>
+	);
+};
+Controlled.args = {
 	rightElement: (
 		<Button mode="light" noBorder>
 			Send

@@ -1,4 +1,9 @@
-import { useMergeRefs, useUncontrolled, useUniqueId } from "@versini/ui-hooks";
+import {
+	useMergeRefs,
+	useResizeObserver,
+	useUncontrolled,
+	useUniqueId,
+} from "@versini/ui-hooks";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { adjustLabelAndHelperText, getTextAreaClasses } from "./utilities";
 
@@ -42,7 +47,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 	) => {
 		const textAreaRef = useRef<HTMLTextAreaElement>(null);
 		const mergedTextAreaRef = useMergeRefs([ref, textAreaRef]);
-		const rightElementRef = useRef<HTMLDivElement>(null);
+		const [rightElementRef, rect] = useResizeObserver<HTMLDivElement>();
 		const textAreaHeightRef = useRef<number>(80);
 		const labelOffsetRef = useRef<number>(-25);
 		const labelRef = useRef<HTMLLabelElement>(null);
@@ -109,17 +114,20 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		 * that the text in the textarea does not overlap with the
 		 * rightElement.
 		 */
-		/* v8 ignore next 10 */
+		/* c8 ignore start - ResizeObserver is tough to test... */
 		useLayoutEffect(() => {
-			if (
-				!raw &&
-				rightElement &&
-				rightElementRef.current &&
-				rightElementRef.current.offsetWidth > 0
-			) {
-				setTextAreaPaddingRight(rightElementRef.current.offsetWidth + 18 + 10);
+			if (rect && rect.width) {
+				/**
+				 * - rect.width is the width of the right element (Button, Icon, etc.)
+				 * - The main input field has default left/right paddings of
+				 *   16px (px-4) + 2px border (border-2) = 18px
+				 * - We add 10px to the right padding to give some space between the right
+				 *   element and the input field.
+				 */
+				setTextAreaPaddingRight(rect.width + 18 + 10);
 			}
-		}, [rightElement, raw]);
+		}, [rect]);
+		/* c8 ignore end */
 
 		/**
 		 * This effect is used to resize the textarea based
