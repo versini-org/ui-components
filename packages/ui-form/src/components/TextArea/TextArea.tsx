@@ -47,7 +47,6 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 	) => {
 		const textAreaRef = useRef<HTMLTextAreaElement>(null);
 		const mergedTextAreaRef = useMergeRefs([ref, textAreaRef]);
-		// const rightElementRef = useRef<HTMLDivElement>(null);
 		const [rightElementRef, rect] = useResizeObserver<HTMLDivElement>();
 		const textAreaHeightRef = useRef<number>(80);
 		const labelOffsetRef = useRef<number>(-25);
