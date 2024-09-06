@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.8](https://github.com/versini-org/ui-components/compare/ui-form-v1.3.7...ui-form-v1.3.8) (2024-09-06)
+
+
+### Bug Fixes
+
+* **TextArea:** first render is sometimes leaking out of the page ([#618](https://github.com/versini-org/ui-components/issues/618)) ([745f37c](https://github.com/versini-org/ui-components/commit/745f37c90b88bab28e01df55cf3b2f540b5e3e79))
+
 ## [1.3.7](https://github.com/aversini/ui-components/compare/ui-form-v1.3.6...ui-form-v1.3.7) (2024-08-07)
 
 
