@@ -4,12 +4,12 @@ import {
 	useUncontrolled,
 	useUniqueId,
 } from "@versini/ui-hooks";
-import React, { useLayoutEffect, useRef, useState } from "react";
-import { adjustLabelAndHelperText, getTextAreaClasses } from "./utilities";
-
 import { LiveRegion } from "@versini/ui-private";
+import React, { useLayoutEffect, useRef, useState } from "react";
+
 import { TEXT_AREA_CLASSNAME } from "../../common/constants";
 import type { TextAreaProps } from "./TextAreaTypes";
+import { adjustLabelAndHelperText, getTextAreaClasses } from "./utilities";
 
 export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 	(
@@ -80,6 +80,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		 */
 		const [userInput, setUserInput] = useUncontrolled({
 			value,
+			initialControlledDelay: 100,
 			defaultValue,
 			onChange: (value: any) => {
 				const e: any = {

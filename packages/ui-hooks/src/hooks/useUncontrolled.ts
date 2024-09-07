@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface UseUncontrolledInput<T> {
 	/** Value for controlled state */
@@ -36,6 +36,9 @@ interface UseUncontrolledInput<T> {
 
 	/** Controlled state onChange handler */
 	onChange?: (value: T) => void;
+
+	/** Initial delay for controlled state */
+	initialControlledDelay?: number;
 }
 
 export function useUncontrolled<T>({
@@ -43,7 +46,10 @@ export function useUncontrolled<T>({
 	defaultValue,
 	finalValue,
 	onChange = () => {},
+	initialControlledDelay = 0,
 }: UseUncontrolledInput<T>): [T, (value: T) => void, boolean] {
+	const initialDelayDoneRef = useRef(false);
+	const [internalControlledValue, setInternalControlledValue] = useState<T>();
 	const [uncontrolledValue, setUncontrolledValue] = useState(
 		defaultValue !== undefined ? defaultValue : finalValue,
 	);
@@ -53,9 +59,36 @@ export function useUncontrolled<T>({
 		onChange?.(val);
 	};
 
+	useEffect(() => {
+		(async () => {
+			/**
+			 * If value is provided, set the controlled value
+			 * and ignore the uncontrolled value.
+			 * If initialControlledDelay is provided, wait for the delay.
+			 */
+			if (value !== undefined) {
+				/* c8 ignore start */
+				if (!initialDelayDoneRef.current && initialControlledDelay > 0) {
+					await new Promise((resolve) =>
+						setTimeout(resolve, initialControlledDelay),
+					);
+					initialDelayDoneRef.current = true;
+				}
+				/* c8 ignore end */
+				setInternalControlledValue(value);
+			}
+		})();
+	}, [value, initialControlledDelay]);
+
+	/**
+	 * If value is provided, return the controlled value.
+	 */
 	if (value !== undefined) {
-		return [value as T, onChange, true];
+		return [internalControlledValue as T, onChange, true];
 	}
 
+	/**
+	 * If value is not provided, return the uncontrolled value.
+	 */
 	return [uncontrolledValue as T, handleUncontrolledChange, false];
 }
