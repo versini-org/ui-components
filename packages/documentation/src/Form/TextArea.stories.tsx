@@ -122,7 +122,7 @@ export const Controlled: Story<any> = (args) => {
 					<TextArea
 						{...args}
 						value={value}
-						onChange={(e) => {
+						onChange={(e: any) => {
 							setValue(e.target.value);
 						}}
 					/>
