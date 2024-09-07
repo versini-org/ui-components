@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.2](https://github.com/versini-org/ui-components/compare/ui-hooks-v4.1.1...ui-hooks-v4.1.2) (2024-09-07)
+
+
+### Bug Fixes
+
+* **TextArea:** adding small delay when first setting controlled value ([#620](https://github.com/versini-org/ui-components/issues/620)) ([4721b20](https://github.com/versini-org/ui-components/commit/4721b20bb3435343ccd5337dc32eeec50060bd2f))
+
 ## [4.1.1](https://github.com/aversini/ui-components/compare/ui-hooks-v4.1.0...ui-hooks-v4.1.1) (2024-08-30)
 
 
