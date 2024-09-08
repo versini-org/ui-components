@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.9](https://github.com/versini-org/ui-components/compare/ui-form-v1.3.8...ui-form-v1.3.9) (2024-09-07)
+
+
+### Bug Fixes
+
+* **TextArea:** adding small delay when first setting controlled value ([#620](https://github.com/versini-org/ui-components/issues/620)) ([4721b20](https://github.com/versini-org/ui-components/commit/4721b20bb3435343ccd5337dc32eeec50060bd2f))
+
 ## [1.3.8](https://github.com/versini-org/ui-components/compare/ui-form-v1.3.7...ui-form-v1.3.8) (2024-09-06)
 
 
