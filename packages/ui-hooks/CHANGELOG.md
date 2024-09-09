@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.3](https://github.com/versini-org/ui-components/compare/ui-hooks-v4.1.2...ui-hooks-v4.1.3) (2024-09-09)
+
+
+### Bug Fixes
+
+* **TextArea:** controlled mode moves cursor to end when typing ([#622](https://github.com/versini-org/ui-components/issues/622)) ([88d729c](https://github.com/versini-org/ui-components/commit/88d729c117e8ebf1e8a4df2a0d1f2a92d918c9e7))
+
 ## [4.1.2](https://github.com/versini-org/ui-components/compare/ui-hooks-v4.1.1...ui-hooks-v4.1.2) (2024-09-07)
 
 
