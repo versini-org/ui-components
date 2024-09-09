@@ -49,7 +49,7 @@ export function useUncontrolled<T>({
 	initialControlledDelay = 0,
 }: UseUncontrolledInput<T>): [T, (value: T) => void, boolean] {
 	const initialDelayDoneRef = useRef(false);
-	const [internalControlledValue, setInternalControlledValue] = useState<T>();
+	const [, setInternalControlledValue] = useState<T>();
 	const [uncontrolledValue, setUncontrolledValue] = useState(
 		defaultValue !== undefined ? defaultValue : finalValue,
 	);
@@ -62,8 +62,6 @@ export function useUncontrolled<T>({
 	useEffect(() => {
 		(async () => {
 			/**
-			 * If value is provided, set the controlled value
-			 * and ignore the uncontrolled value.
 			 * If initialControlledDelay is provided, wait for the delay.
 			 */
 			if (value !== undefined) {
@@ -82,9 +80,16 @@ export function useUncontrolled<T>({
 
 	/**
 	 * If value is provided, return the controlled value.
+	 * If there is a delay, we need to wait for the delay: we need to first send
+	 * back a value of an empty string, then after the delay
+	 * we can send the actual value.
 	 */
 	if (value !== undefined) {
-		return [internalControlledValue as T, onChange, true];
+		if (!initialDelayDoneRef.current && initialControlledDelay > 0) {
+			return ["" as T, onChange, true];
+		} else {
+			return [value as T, onChange, true];
+		}
 	}
 
 	/**
