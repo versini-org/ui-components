@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.21.4](https://github.com/versini-org/ui-components/compare/ui-components-v5.21.3...ui-components-v5.21.4) (2024-09-09)
+
+
+### Bug Fixes
+
+* **Panel:** slightly better sizing at lower breakpoints ([#626](https://github.com/versini-org/ui-components/issues/626)) ([8ac1264](https://github.com/versini-org/ui-components/commit/8ac12642728fccde7e520dfe24e278ae54a71c9f))
+
 ## [5.21.3](https://github.com/versini-org/ui-components/compare/ui-components-v5.21.2...ui-components-v5.21.3) (2024-09-05)
 
 
