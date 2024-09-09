@@ -80,7 +80,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		 */
 		const [userInput, setUserInput] = useUncontrolled({
 			value,
-			initialControlledDelay: 100,
+			initialControlledDelay: 20,
 			defaultValue,
 			onChange: (value: any) => {
 				const e: any = {
