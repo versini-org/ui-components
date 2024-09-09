@@ -1,28 +1,4 @@
-/**
- * MIT License
- *
- * Copyright (c) 2021 Vitaly Rtishchev
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface UseUncontrolledInput<T> {
 	/** Value for controlled state */
@@ -48,8 +24,7 @@ export function useUncontrolled<T>({
 	onChange = () => {},
 	initialControlledDelay = 0,
 }: UseUncontrolledInput<T>): [T, (value: T) => void, boolean] {
-	const initialDelayDoneRef = useRef(false);
-	const [, setInternalControlledValue] = useState<T>();
+	const [initialDelayDone, setInitialDelayDone] = useState(false);
 	const [uncontrolledValue, setUncontrolledValue] = useState(
 		defaultValue !== undefined ? defaultValue : finalValue,
 	);
@@ -66,17 +41,16 @@ export function useUncontrolled<T>({
 			 */
 			if (value !== undefined) {
 				/* c8 ignore start */
-				if (!initialDelayDoneRef.current && initialControlledDelay > 0) {
+				if (!initialDelayDone && initialControlledDelay > 0) {
 					await new Promise((resolve) =>
 						setTimeout(resolve, initialControlledDelay),
 					);
-					initialDelayDoneRef.current = true;
+					setInitialDelayDone(true);
 				}
 				/* c8 ignore end */
-				setInternalControlledValue(value);
 			}
 		})();
-	}, [value, initialControlledDelay]);
+	}, [value, initialControlledDelay, initialDelayDone]);
 
 	/**
 	 * If value is provided, return the controlled value.
@@ -85,7 +59,7 @@ export function useUncontrolled<T>({
 	 * we can send the actual value.
 	 */
 	if (value !== undefined) {
-		if (!initialDelayDoneRef.current && initialControlledDelay > 0) {
+		if (!initialDelayDone && initialControlledDelay > 0) {
 			return ["" as T, onChange, true];
 		} else {
 			return [value as T, onChange, true];
