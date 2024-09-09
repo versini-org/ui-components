@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.10](https://github.com/versini-org/ui-components/compare/ui-form-v1.3.9...ui-form-v1.3.10) (2024-09-09)
+
+
+### Bug Fixes
+
+* **TextArea:** reducing initial controlled render delay ([#624](https://github.com/versini-org/ui-components/issues/624)) ([0b42446](https://github.com/versini-org/ui-components/commit/0b424460b1d07ca87121cd345f27c94635401bdc))
+
 ## [1.3.9](https://github.com/versini-org/ui-components/compare/ui-form-v1.3.8...ui-form-v1.3.9) (2024-09-07)
 
 
