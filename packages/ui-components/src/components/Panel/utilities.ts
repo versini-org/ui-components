@@ -33,9 +33,9 @@ export const getPanelClassName = ({
 			"border-border-accent":
 				borderMode === "light" && kind === TYPE_MESSAGEBOX,
 		}),
-		content: "flex flex-grow flex-col py-2 sm:py-4 px-4",
-		footer: "flex flex-grow flex-col p-4",
-		header: "p-4 mb-0",
-		close: "p-4",
+		content: "flex flex-grow flex-col py-2 sm:py-4 sm:px-4 px-2",
+		footer: "flex flex-grow flex-col sm:p-4 p-2",
+		header: "sm:p-4 mb-0 p-2",
+		close: "sm:p-4 p-2",
 	};
 };
