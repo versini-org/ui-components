@@ -1,6 +1,17 @@
 {
-	"version": "0.0.0",
+	"$schema": "node_modules/lerna/schemas/lerna-schema.json",
+	"version": "independent",
 	"npmClient": "pnpm",
-	"packages": ["packages/*", "examples/*"],
-	"$schema": "node_modules/lerna/schemas/lerna-schema.json"
+	"command": {
+		"version": {
+			"message": "chore: release main"
+		}
+	},
+	"ignoreChanges": [
+		"**/.github/**",
+		"**/__tests__/**",
+		"**/.vscode/**",
+		"**/configuration/**",
+		"**/*.md"
+	]
 }
