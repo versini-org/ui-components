@@ -121,7 +121,7 @@ jobs:
           if [ ${{ github.base_ref }} = development ]; then
             npx lerna version --exact --conventional-commits --conventional-prerelease --preid beta --yes
           else
-            npx lerna version --exact --conventional-commits --conventional-graduate --create-release github --yes
+            npx lerna version --exact --conventional-commits --create-release github --yes
           fi
 
       - name: Publish Packages
