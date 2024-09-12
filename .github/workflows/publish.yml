@@ -82,6 +82,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          # Fetch all history for all branches and tags, required for Lerna (default is 1)
           fetch-depth: 0
 
       - name: Setup Node
@@ -91,9 +92,28 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: Version Bump
+        continue-on-error: true
+        id: graduateRelease
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          corepack enable
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+
+          if [ ${{ github.base_ref }} = development ]; then
+            npx lerna version --exact --conventional-commits --conventional-prerelease --preid beta --yes
+          else
+            npx lerna version --exact --conventional-commits --conventional-graduate --create-release github --yes
+          fi
+
+      - name: Version Bump Fallback
+        if: ${{ always() && steps.graduateRelease.outcome == 'failure' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo Falling back to non-graduate release due to https://github.com/lerna/lerna/issues/2532
+          git stash
           corepack enable
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
