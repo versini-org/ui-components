@@ -9,8 +9,6 @@ env:
 
 jobs:
   bundlesize:
-    if: ${{ always() }}
-    needs: release-bundlesize
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -40,8 +38,6 @@ jobs:
             packages/ui-system/tmp/pr-stats.md
 
   inspect:
-    if: ${{ always() }}
-    needs: release-bundlesize
     runs-on: ubuntu-latest
     strategy:
       matrix:
