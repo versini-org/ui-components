@@ -42,7 +42,9 @@ jobs:
   bump:
     # needs: release-bundlesize - temporarily disabled <<<<<=======================
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -61,9 +63,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           corepack enable
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor}}@users.noreply.github.com"
-
           npx lerna version --exact --conventional-commits --create-release github --no-private --yes --no-push
 
       - name: Commit Version Bump
