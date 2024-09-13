@@ -44,8 +44,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: "write"
-      packages: "write"
-      actions: "read"
+      # packages: "write"
+      # actions: "read"
     # permissions: write-all
 
     steps:
