@@ -1,3 +1,43 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 5.0.0 (2024-09-13)
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies ([#539](https://github.com/aversini/ui-components/issues/539)) ([2826c44](https://github.com/aversini/ui-components/commit/2826c44c5a55bf45b97072a1865964c30d05a302))
+* **hooks:** trying to fix useLocalStorage ([92500da](https://github.com/aversini/ui-components/commit/92500da5f8b00d43fd99a4f6c5cac6bc449fbeeb))
+* Revert "feat(useLocalstorage)!: migrate to usehooks-ts ([#560](https://github.com/aversini/ui-components/issues/560))" ([#565](https://github.com/aversini/ui-components/issues/565)) ([4e3729a](https://github.com/aversini/ui-components/commit/4e3729a504c836350bd31c4f0c580386bf73ed44))
+* slightly better tests for useResizeObserver ([#608](https://github.com/aversini/ui-components/issues/608)) ([3619c92](https://github.com/aversini/ui-components/commit/3619c9222cb435b4011272fb341a73f55e600561)), closes [/github.com/aversini/ui-components/pull/608/files#diff-cd7fcfea89952737da719c2e7c1e5503ac41f7ca30268423d53384e84846fd9](https://github.com//github.com/aversini/ui-components/pull/608/files/issues/diff-cd7fcfea89952737da719c2e7c1e5503ac41f7ca30268423d53384e84846fd9) [/github.com/aversini/ui-components/pull/608/files#diff-817c498322b1d9ec6ea8df205b7893101d4b89f74fb9e6ef998d09c64931389](https://github.com//github.com/aversini/ui-components/pull/608/files/issues/diff-817c498322b1d9ec6ea8df205b7893101d4b89f74fb9e6ef998d09c64931389) [/github.com/aversini/ui-components/pull/608/files#diff-bb3ddb329d4b3f6fd8a1e761a789d33ba9e6b3556d42068d3928b15ff426bda1](https://github.com//github.com/aversini/ui-components/pull/608/files/issues/diff-bb3ddb329d4b3f6fd8a1e761a789d33ba9e6b3556d42068d3928b15ff426bda1)
+* **TextArea:** adding small delay when first setting controlled value ([#620](https://github.com/aversini/ui-components/issues/620)) ([4721b20](https://github.com/aversini/ui-components/commit/4721b20bb3435343ccd5337dc32eeec50060bd2f))
+* **TextArea:** controlled mode moves cursor to end when typing ([#622](https://github.com/aversini/ui-components/issues/622)) ([88d729c](https://github.com/aversini/ui-components/commit/88d729c117e8ebf1e8a4df2a0d1f2a92d918c9e7))
+* useLocalStorage issue with context ([#571](https://github.com/aversini/ui-components/issues/571)) ([a9ffc59](https://github.com/aversini/ui-components/commit/a9ffc592e08e1bf6fc9f07118a93c62d55fd1d33))
+
+
+* feat(useLocalstorage)!: migrate to usehooks-ts (#560) ([f4386e8](https://github.com/aversini/ui-components/commit/f4386e84448064459b8a9876e72a8bb7f6a02d10)), closes [#560](https://github.com/aversini/ui-components/issues/560)
+
+
+### Features
+
+* adding recommended ESLint configuration as a plugin ([b54bc07](https://github.com/aversini/ui-components/commit/b54bc071c2add09aefada2a807dc4cc148d58539))
+* adding useLocalStorage hook ([c75dd51](https://github.com/aversini/ui-components/commit/c75dd5194e5bb7f0743b5d21b68ff38dc6b3e94e))
+* adding useResizeObserver hook ([#601](https://github.com/aversini/ui-components/issues/601)) ([e180184](https://github.com/aversini/ui-components/commit/e180184ee7a88dfdef0e1851de8f3972d4f5c59c)), closes [/github.com/aversini/ui-components/pull/601/files#diff-3e5215078e5fb7d79f14b0cb95e4c4d37cb0131b6edd284e04b56b72166f1ca8](https://github.com//github.com/aversini/ui-components/pull/601/files/issues/diff-3e5215078e5fb7d79f14b0cb95e4c4d37cb0131b6edd284e04b56b72166f1ca8) [/github.com/aversini/ui-components/pull/601/files#diff-bb3ddb329d4b3f6fd8a1e761a789d33ba9e6b3556d42068d3928b15ff426bda1](https://github.com//github.com/aversini/ui-components/pull/601/files/issues/diff-bb3ddb329d4b3f6fd8a1e761a789d33ba9e6b3556d42068d3928b15ff426bda1)
+* moving hooks to their own package ([e05ea7e](https://github.com/aversini/ui-components/commit/e05ea7e4b56c27910666ecaac9d475f0f771bb62))
+
+
+### BREAKING CHANGES
+
+* the signature of useLocalstorage has changed. See the
+official documentation here:
+https://usehooks-ts.com/react-hook/use-local-storage
+
+
+
+
+
 # Changelog
 
 ## [4.1.3](https://github.com/versini-org/ui-components/compare/ui-hooks-v4.1.2...ui-hooks-v4.1.3) (2024-09-09)
