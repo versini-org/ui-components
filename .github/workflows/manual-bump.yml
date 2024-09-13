@@ -60,12 +60,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo Falling back to non-graduate release due to https://github.com/lerna/lerna/issues/2532
           corepack enable
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
 
           npx lerna version --exact --conventional-commits --create-release github --no-private --yes --no-push
 
-          git commit -am "chore(release): version bump"
+          echo "Pushing changes to the repository"
           git push
