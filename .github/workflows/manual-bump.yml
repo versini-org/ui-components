@@ -53,7 +53,7 @@ jobs:
         id: app-token
         uses: actions/create-github-app-token@v1
         with:
-          app-id: ${{ secrets.BUMP_AND_RELEASE_APPID }}
+          app-id: ${{ vars.BUMP_AND_RELEASE_APPID }}
           private-key: ${{ secrets.BUMP_AND_RELEASE_SECRET }}
 
       - name: Checkout
