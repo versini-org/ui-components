@@ -99,9 +99,9 @@ jobs:
           git config user.email "${{ github.actor}}@users.noreply.github.com"
 
           if [ ${{ github.base_ref }} = development ]; then
-            npx lerna version --exact --conventional-commits --conventional-prerelease --preid beta --yes
+            npx lerna version --exact --conventional-commits --conventional-prerelease --preid beta --no-private --yes
           else
-            npx lerna version --exact --conventional-commits --conventional-graduate --create-release github --yes
+            npx lerna version --exact --conventional-commits --conventional-graduate --create-release github --no-private --yes
           fi
 
       - name: Version Bump Fallback
@@ -116,9 +116,9 @@ jobs:
           git config user.email "${{ github.actor}}@users.noreply.github.com"
 
           if [ ${{ github.base_ref }} = development ]; then
-            npx lerna version --exact --conventional-commits --conventional-prerelease --preid beta --yes
+            npx lerna version --exact --conventional-commits --conventional-prerelease --preid beta --no-private --yes
           else
-            npx lerna version --exact --conventional-commits --create-release github --yes
+            npx lerna version --exact --conventional-commits --create-release github --no-private --yes
           fi
 
       - name: Publish Packages
