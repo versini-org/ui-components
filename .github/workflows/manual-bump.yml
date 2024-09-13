@@ -1,0 +1,89 @@
+name: Manual Bump
+
+on: workflow_dispatch
+
+jobs:
+  release-bundlesize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    strategy:
+      matrix:
+        node-version: [20.x]
+    steps:
+      # secrets.GITHUB_TOKEN is used by default with "checkout",
+      # but in this case we are explicitely using a personal
+      # token with the same permissions (NODE_CLI).
+      # This is because we want to use the "release-please" action
+      # that updates and commit files. Other jobs should react to
+      # these commits and run.
+      # From GitHub docs: "When you use the repository's GITHUB_TOKEN
+      # to perform tasks on behalf of the GitHub Actions app, events
+      # triggered by the GITHUB_TOKEN will not create a new workflow
+      # run. This prevents you from accidentally creating recursive
+      # workflow runs.
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.NODE_CLI }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          corepack enable
+          pnpm install
+          npx lerna run build --ignore "@versini/example-*" --ignore @versini/documentation
+          npx lerna run stats:release
+      - name: Commit Release Stats
+        uses: stefanzweifel/git-auto-commit-action@v5
+
+  bump:
+    needs: release-bundlesize
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Fetch all history for all branches and tags, required for Lerna (default is 1)
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Version Bump
+        continue-on-error: true
+        id: graduateRelease
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          corepack enable
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+
+          if [ ${{ github.base_ref }} = development ]; then
+            npx lerna version --exact --conventional-commits --conventional-prerelease --preid beta --no-private --yes
+          else
+            npx lerna version --exact --conventional-commits --conventional-graduate --create-release github --no-private --yes
+          fi
+
+      - name: Version Bump Fallback
+        if: ${{ always() && steps.graduateRelease.outcome == 'failure' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo Falling back to non-graduate release due to https://github.com/lerna/lerna/issues/2532
+          git stash
+          corepack enable
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+
+          if [ ${{ github.base_ref }} = development ]; then
+            npx lerna version --exact --conventional-commits --conventional-prerelease --preid beta --no-private --yes
+          else
+            npx lerna version --exact --conventional-commits --create-release github --no-private --yes
+          fi
