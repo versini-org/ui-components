@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
 	const packageJson = fs.readJSONSync(
 		`../ui-${env.VITE_UI_TARGET}/package.json`,
 	);
-	const prodDependencies = Object.keys(packageJson.dependencies).filter(
+	const prodDependencies = Object.keys(packageJson.dependencies || []).filter(
 		(dependency) =>
 			dependency !== "react" &&
 			dependency !== "react-dom" &&

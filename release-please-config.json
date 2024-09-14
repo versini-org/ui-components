@@ -1,0 +1,14 @@
+{
+	"packages": {
+		"packages/ui-components": {},
+		"packages/ui-hooks": {},
+		"packages/ui-system": {},
+		"packages/ui-private": {},
+		"packages/ui-icons": {},
+		"packages/ui-styles": {},
+		"packages/ui-form": {},
+		"packages/ui-fingerprint": {}
+	},
+	"plugins": ["node-workspace"],
+	"pull-request-header": ":rocket: Automated Release"
+}
