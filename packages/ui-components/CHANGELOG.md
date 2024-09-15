@@ -192,6 +192,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.22.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.21.4...ui-components-v5.22.0) (2024-09-15)
+
+
+### Features
+
+* **Button:** extracting Button and peers as a standalone package ([#635](https://github.com/versini-org/ui-components/issues/635)) ([651f857](https://github.com/versini-org/ui-components/commit/651f85739ba644cfa6d208e9779c8ded178f157b))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 1.0.0
+
 ## [5.21.4](https://github.com/versini-org/ui-components/compare/ui-components-v5.21.3...ui-components-v5.21.4) (2024-09-09)
 
 

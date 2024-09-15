@@ -31,6 +31,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.4.5](https://github.com/versini-org/ui-components/compare/ui-system-v1.4.4...ui-system-v1.4.5) (2024-09-15)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @versini/ui-components bumped to 5.22.0
+
 ## [1.4.4](https://github.com/aversini/ui-components/compare/ui-system-v1.4.3...ui-system-v1.4.4) (2024-08-25)
 
 
