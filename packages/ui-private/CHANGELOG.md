@@ -33,6 +33,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.4.9](https://github.com/versini-org/ui-components/compare/ui-private-v1.4.8...ui-private-v1.4.9) (2024-09-15)
+
+
+### Bug Fixes
+
+* bump dependencies to latest ([#637](https://github.com/versini-org/ui-components/issues/637)) ([428b40e](https://github.com/versini-org/ui-components/commit/428b40e3d7d872b786cb5216bbade31dcc1c7d2b))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @versini/ui-styles bumped to 1.9.7
+
 ## [1.4.8](https://github.com/aversini/ui-components/compare/ui-private-v1.4.7...ui-private-v1.4.8) (2024-08-25)
 
 
