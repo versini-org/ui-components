@@ -26,8 +26,8 @@ const banner = `/*!
   © ${copyrightYear} gizmette.com
 */
 try {
-  if (!window.__VERSINI_UI_GLOBAL__) {
-    window.__VERSINI_UI_GLOBAL__ = {
+  if (!window.__VERSINI_UI_BUTTON__) {
+    window.__VERSINI_UI_BUTTON__ = {
       version: "${packageJson.version}",
 			buildTime: "${buildTime}",
 			homepage: "${packageJson.homepage}",
@@ -79,7 +79,7 @@ export default defineConfig(({ mode }) => {
 			lib: {
 				entry: resolve(__dirname, "src/components/index.ts"),
 				formats: ["es"],
-				name: "UIComponents",
+				name: "UIButton",
 			},
 			rollupOptions: {
 				input: {
