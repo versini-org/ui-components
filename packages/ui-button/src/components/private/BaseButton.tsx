@@ -16,6 +16,7 @@ import type { ButtonProps } from "../Button/ButtonTypes";
  * old cranky Safari.
  *
  */
+/* c8 ignore start */
 const internalClick = (
 	e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
 	noInternalClick: boolean,
@@ -30,6 +31,7 @@ const internalClick = (
 
 	typeof onClick === "function" && onClick(e);
 };
+/* c8 ignore end */
 
 export const BaseButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	(buttonProps: any, ref) => {

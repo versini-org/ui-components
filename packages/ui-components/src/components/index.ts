@@ -1,7 +1,7 @@
+import { Button, ButtonIcon } from "@versini/ui-button";
+
 import { Anchor } from "./Anchor/Anchor";
 import { Bubble } from "./Bubble/Bubble";
-import { Button } from "./Button/Button";
-import { ButtonIcon } from "./Button/ButtonIcon";
 import { Card } from "./Card/Card";
 import { Footer } from "./Footer/Footer";
 import { Header } from "./Header/Header";

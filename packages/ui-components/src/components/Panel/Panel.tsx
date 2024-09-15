@@ -1,8 +1,7 @@
+import { ButtonIcon } from "@versini/ui-button";
 import { IconClose } from "@versini/ui-icons";
-
 import { Suspense, lazy, useEffect, useRef } from "react";
 
-import { ButtonIcon } from "../";
 import type { PanelProps } from "./PanelTypes";
 import { TYPE_PANEL, getPanelClassName } from "./utilities";
 

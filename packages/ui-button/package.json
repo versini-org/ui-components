@@ -1,6 +1,6 @@
 {
-	"name": "@versini/ui-components",
-	"version": "5.21.4",
+	"name": "@versini/ui-button",
+	"version": "0.0.0",
 	"license": "MIT",
 	"author": "Arno Versini",
 	"publishConfig": {
@@ -26,10 +26,6 @@
 		"dev": "npm-run-all clean --parallel dev:js dev:types",
 		"lint": "biome lint src",
 		"start": "static-server dist --port 5173",
-		"stats:pr": "bundlesize -c bundlesize.config.js -p \"$npm_package_version\" -o tmp/stats.json --silent",
-		"stats:release": "bundlesize -c bundlesize.config.js -p \"$npm_package_version\" -o stats/stats.json --silent",
-		"stats:report": "bundlesize -c bundlesize.config.js --type report -o tmp/pr-stats.md --silent",
-		"stats": "bundlesize -c bundlesize.config.js -p \"$npm_package_version\"",
 		"test:coverage:ui": "vitest --coverage --ui",
 		"test:coverage": "vitest run --coverage",
 		"test:watch": "vitest",
@@ -40,17 +36,14 @@
 		"react-dom": "^18.3.1"
 	},
 	"devDependencies": {
+		"@versini/ui-icons": "workspace:../ui-icons",
 		"@versini/ui-styles": "workspace:../ui-styles"
 	},
 	"dependencies": {
-		"@floating-ui/react": "0.26.23",
 		"@tailwindcss/typography": "0.5.15",
-		"@versini/ui-button": "workspace:../ui-button",
-		"@versini/ui-hooks": "workspace:../ui-hooks",
-		"@versini/ui-icons": "workspace:../ui-icons",
 		"@versini/ui-private": "workspace:../ui-private",
 		"clsx": "2.1.1",
-		"tailwindcss": "3.4.10"
+		"tailwindcss": "3.4.11"
 	},
 	"sideEffects": ["**/*.css"]
 }
