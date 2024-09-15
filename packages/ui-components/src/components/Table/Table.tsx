@@ -1,7 +1,7 @@
+import { ButtonSort_private } from "@versini/ui-button";
 import { IconSort, IconSortDown, IconSortUp } from "@versini/ui-icons";
 import { useContext } from "react";
 
-import { ButtonSort } from "../private/ButtonSort";
 import { TableContext } from "./TableContext";
 import type {
 	TableBodyProps,
@@ -178,7 +178,7 @@ export const TableCellSort = ({
 			}
 			{...otherProps}
 		>
-			<ButtonSort
+			<ButtonSort_private
 				active={sortedCell === cellId}
 				className="rounded-none text-sm"
 				onClick={onClick}
@@ -198,7 +198,7 @@ export const TableCellSort = ({
 				) : (
 					<IconSort className="size-4" monotone />
 				)}
-			</ButtonSort>
+			</ButtonSort_private>
 		</TableCell>
 	);
 };

@@ -190,6 +190,17 @@ describe("ButtonIcon modifiers", () => {
 		expect(button.className).toContain("w-full");
 	});
 
+	it("should render a button icon with no background", async () => {
+		render(
+			<ButtonIcon noBackground>
+				<IconSettings />
+			</ButtonIcon>,
+		);
+		const button = await screen.findByRole("button");
+		expect(button.className).toContain("not-prose");
+		expect(button.className).toContain("rounded-full");
+	});
+
 	it("should render a left-aligned button icon", async () => {
 		render(
 			<ButtonIcon align="left">

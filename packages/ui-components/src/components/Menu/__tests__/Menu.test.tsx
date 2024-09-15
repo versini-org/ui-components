@@ -1,8 +1,9 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { Button, ButtonIcon } from "@versini/ui-button";
 import { IconSettings } from "@versini/ui-icons";
 
-import { Button, ButtonIcon, Menu, MenuItem, MenuSeparator } from "../..";
+import { Menu, MenuItem, MenuSeparator } from "../..";
 
 const MENU_TRIGGER_LABEL = "Click Me";
 const FIRST_MENU_ITEM = "Menu 1";

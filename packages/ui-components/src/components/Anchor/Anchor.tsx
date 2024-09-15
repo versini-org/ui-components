@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ButtonLink } from "../Button/ButtonLink";
+import { ButtonLink } from "@versini/ui-button";
 import type { AnchorProps } from "./AnchorTypes";
 
 export const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(

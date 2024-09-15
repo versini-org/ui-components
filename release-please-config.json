@@ -7,7 +7,8 @@
 		"packages/ui-icons": {},
 		"packages/ui-styles": {},
 		"packages/ui-form": {},
-		"packages/ui-fingerprint": {}
+		"packages/ui-fingerprint": {},
+		"packages/ui-button": {}
 	},
 	"plugins": ["node-workspace"],
 	"pull-request-header": ":rocket: Automated Release"

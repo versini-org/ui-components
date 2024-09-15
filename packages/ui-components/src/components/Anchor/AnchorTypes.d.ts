@@ -1,4 +1,4 @@
-import type { ButtonLinkProps } from "../Button/ButtonTypes";
+import type { ButtonLinkProps } from "@versini/ui-button";
 
 export type AnchorProps = ButtonLinkProps &
 	React.AnchorHTMLAttributes<HTMLAnchorElement>;
