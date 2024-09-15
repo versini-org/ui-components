@@ -192,6 +192,24 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.22.1](https://github.com/versini-org/ui-components/compare/ui-components-v5.22.0...ui-components-v5.22.1) (2024-09-15)
+
+
+### Bug Fixes
+
+* bump dependencies to latest ([#637](https://github.com/versini-org/ui-components/issues/637)) ([428b40e](https://github.com/versini-org/ui-components/commit/428b40e3d7d872b786cb5216bbade31dcc1c7d2b))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 1.0.1
+    * @versini/ui-icons bumped to 1.12.1
+    * @versini/ui-private bumped to 1.4.9
+  * devDependencies
+    * @versini/ui-styles bumped to 1.9.7
+
 ## [5.22.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.21.4...ui-components-v5.22.0) (2024-09-15)
 
 

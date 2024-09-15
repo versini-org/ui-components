@@ -35,6 +35,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.3.12](https://github.com/versini-org/ui-components/compare/ui-form-v1.3.11...ui-form-v1.3.12) (2024-09-15)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.9
+  * devDependencies
+    * @versini/ui-components bumped to 5.22.1
+    * @versini/ui-icons bumped to 1.12.1
+    * @versini/ui-styles bumped to 1.9.7
+
 ## [1.3.11](https://github.com/versini-org/ui-components/compare/ui-form-v1.3.10...ui-form-v1.3.11) (2024-09-15)
 
 

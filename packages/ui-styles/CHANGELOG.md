@@ -38,6 +38,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.9.7](https://github.com/versini-org/ui-components/compare/ui-styles-v1.9.6...ui-styles-v1.9.7) (2024-09-15)
+
+
+### Bug Fixes
+
+* bump dependencies to latest ([#637](https://github.com/versini-org/ui-components/issues/637)) ([428b40e](https://github.com/versini-org/ui-components/commit/428b40e3d7d872b786cb5216bbade31dcc1c7d2b))
+
 ## [1.9.6](https://github.com/versini-org/ui-components/compare/ui-styles-v1.9.5...ui-styles-v1.9.6) (2024-09-05)
 
 
