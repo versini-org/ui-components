@@ -1,1 +1,1 @@
-export { Anchor } from "./Anchor/Anchor";
+export * from "./Anchor/Anchor";
