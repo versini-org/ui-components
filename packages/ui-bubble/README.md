@@ -1,3 +1,3 @@
-# @versini/ui-anchor
+# @versini/ui-bubble
 
-A simple anchor component for React.
+A simple bubble component for React.
