@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BaseButton } from "../private/BaseButton";
+import { BaseButton_private as BaseButton } from "../private/BaseButton";
 import type { ButtonProps } from "./ButtonTypes";
 import { TYPE_BUTTON, getButtonClasses } from "./utilities";
 
