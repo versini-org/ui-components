@@ -192,6 +192,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.24.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.23.0...ui-components-v5.24.0) (2024-09-16)
+
+
+### Features
+
+* **Card:** extracting Card as a standalone package ([#648](https://github.com/versini-org/ui-components/issues/648)) ([1a08557](https://github.com/versini-org/ui-components/commit/1a0855708584f41c825efe170da4aa13ff163453))
+
 ## [5.23.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.22.2...ui-components-v5.23.0) (2024-09-16)
 
 
