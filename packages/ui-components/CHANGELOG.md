@@ -192,6 +192,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.22.2](https://github.com/versini-org/ui-components/compare/ui-components-v5.22.1...ui-components-v5.22.2) (2024-09-16)
+
+
+### Bug Fixes
+
+* **Anchor:** replacing internal Anchor with individual in main lib ([#642](https://github.com/versini-org/ui-components/issues/642)) ([7afd5c9](https://github.com/versini-org/ui-components/commit/7afd5c94f3f922d901f95e661049ad4c73a927c4))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-anchor bumped to 1.0.1
+    * @versini/ui-button bumped to 1.0.2
+
 ## [5.22.1](https://github.com/versini-org/ui-components/compare/ui-components-v5.22.0...ui-components-v5.22.1) (2024-09-15)
 
 
