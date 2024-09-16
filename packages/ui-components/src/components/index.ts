@@ -1,6 +1,6 @@
+import { Anchor } from "@versini/ui-anchor";
 import { Button, ButtonIcon } from "@versini/ui-button";
 
-import { Anchor } from "./Anchor/Anchor";
 import { Bubble } from "./Bubble/Bubble";
 import { Card } from "./Card/Card";
 import { Footer } from "./Footer/Footer";

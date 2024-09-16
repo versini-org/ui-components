@@ -253,6 +253,9 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.11)
+      '@versini/ui-anchor':
+        specifier: workspace:../ui-anchor
+        version: link:../ui-anchor
       '@versini/ui-button':
         specifier: workspace:../ui-button
         version: link:../ui-button
