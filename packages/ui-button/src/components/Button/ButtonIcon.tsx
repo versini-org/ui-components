@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 
-import { BaseButton } from "../private/BaseButton";
+import { BaseButton_private as BaseButton } from "../private/BaseButton";
 import type { ButtonIconProps } from "./ButtonTypes";
 import { TYPE_ICON, getButtonClasses } from "./utilities";
 
