@@ -264,6 +264,37 @@ importers:
         specifier: workspace:../ui-styles
         version: link:../ui-styles
 
+  packages/ui-card:
+    dependencies:
+      '@floating-ui/react':
+        specifier: 0.26.24
+        version: 0.26.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@tailwindcss/typography':
+        specifier: 0.5.15
+        version: 0.5.15(tailwindcss@3.4.11)
+      '@versini/ui-hooks':
+        specifier: workspace:../ui-hooks
+        version: link:../ui-hooks
+      '@versini/ui-private':
+        specifier: workspace:../ui-private
+        version: link:../ui-private
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tailwindcss:
+        specifier: 3.4.11
+        version: 3.4.11
+    devDependencies:
+      '@versini/ui-styles':
+        specifier: workspace:../ui-styles
+        version: link:../ui-styles
+
   packages/ui-components:
     dependencies:
       '@floating-ui/react':
@@ -281,6 +312,9 @@ importers:
       '@versini/ui-button':
         specifier: workspace:../ui-button
         version: link:../ui-button
+      '@versini/ui-card':
+        specifier: workspace:../ui-card
+        version: link:../ui-card
       '@versini/ui-hooks':
         specifier: workspace:../ui-hooks
         version: link:../ui-hooks
