@@ -2,10 +2,13 @@ import clsx from "clsx";
 import React from "react";
 
 import { TYPE_ICON, getButtonClasses } from "../Button/utilities";
-import { BaseButton } from "./BaseButton";
+import { BaseButton_private as BaseButton } from "./BaseButton";
 import type { ButtonSortProps } from "./ButtonSortTypes";
 
-export const ButtonSort = React.forwardRef<HTMLButtonElement, ButtonSortProps>(
+export const ButtonSort_private = React.forwardRef<
+	HTMLButtonElement,
+	ButtonSortProps
+>(
 	(
 		{
 			children,
@@ -95,4 +98,4 @@ export const ButtonSort = React.forwardRef<HTMLButtonElement, ButtonSortProps>(
 	},
 );
 
-ButtonSort.displayName = "ButtonSort";
+ButtonSort_private.displayName = "ButtonSort";

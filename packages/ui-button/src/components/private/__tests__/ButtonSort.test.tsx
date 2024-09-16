@@ -4,7 +4,7 @@ import { IconSettings } from "@versini/ui-icons";
 
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { BUTTON_CLASSNAME } from "../../../common/constants";
-import { ButtonSort } from "../ButtonSort";
+import { ButtonSort_private as ButtonSort } from "../ButtonSort";
 
 describe("ButtonSort (exceptions)", () => {
 	it("should be able to require/import from root", () => {

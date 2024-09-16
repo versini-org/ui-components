@@ -33,19 +33,20 @@ const internalClick = (
 };
 /* c8 ignore end */
 
-export const BaseButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
-	(buttonProps: any, ref) => {
-		const { onClick, noInternalClick = false, ...otherProps } = buttonProps;
-		return (
-			<button
-				ref={ref}
-				onClick={(e) => {
-					internalClick(e, noInternalClick, onClick);
-				}}
-				{...otherProps}
-			/>
-		);
-	},
-);
+export const BaseButton_private = React.forwardRef<
+	HTMLButtonElement,
+	ButtonProps
+>((buttonProps: any, ref) => {
+	const { onClick, noInternalClick = false, ...otherProps } = buttonProps;
+	return (
+		<button
+			ref={ref}
+			onClick={(e) => {
+				internalClick(e, noInternalClick, onClick);
+			}}
+			{...otherProps}
+		/>
+	);
+});
 
-BaseButton.displayName = "BaseButton";
+BaseButton_private.displayName = "BaseButton";
