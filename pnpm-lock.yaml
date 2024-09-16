@@ -275,6 +275,9 @@ importers:
       '@versini/ui-anchor':
         specifier: workspace:../ui-anchor
         version: link:../ui-anchor
+      '@versini/ui-bubble':
+        specifier: workspace:../ui-bubble
+        version: link:../ui-bubble
       '@versini/ui-button':
         specifier: workspace:../ui-button
         version: link:../ui-button
