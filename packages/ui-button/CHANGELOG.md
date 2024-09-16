@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/versini-org/ui-components/compare/ui-button-v1.0.1...ui-button-v1.0.2) (2024-09-16)
+
+
+### Bug Fixes
+
+* **Button:** better exports ([#645](https://github.com/versini-org/ui-components/issues/645)) ([2abb463](https://github.com/versini-org/ui-components/commit/2abb463cee00aeaa4fc1a3238605d89398a431f8))
+
 ## [1.0.1](https://github.com/versini-org/ui-components/compare/ui-button-v1.0.0...ui-button-v1.0.1) (2024-09-15)
 
 
