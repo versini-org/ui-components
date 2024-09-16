@@ -192,6 +192,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.23.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.22.2...ui-components-v5.23.0) (2024-09-16)
+
+
+### Features
+
+* **Bubble:** extracting Bubble as a standalone package ([#646](https://github.com/versini-org/ui-components/issues/646)) ([7eb19b7](https://github.com/versini-org/ui-components/commit/7eb19b791ba2d13c72d2b19bb0a01626f0ee3b97))
+
 ## [5.22.2](https://github.com/versini-org/ui-components/compare/ui-components-v5.22.1...ui-components-v5.22.2) (2024-09-16)
 
 
