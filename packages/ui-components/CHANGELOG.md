@@ -192,6 +192,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.26.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.25.0...ui-components-v5.26.0) (2024-09-17)
+
+
+### Features
+
+* **Header:** extracting Header as a standalone package ([#657](https://github.com/versini-org/ui-components/issues/657)) ([df9d2d9](https://github.com/versini-org/ui-components/commit/df9d2d9b52123e80929f46952078cf45ca52073f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-header bumped to 1.0.0
+
 ## [5.25.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.24.1...ui-components-v5.25.0) (2024-09-17)
 
 
