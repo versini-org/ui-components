@@ -16,12 +16,38 @@ export const externalDependencies = [
 	"tailwindcss",
 ];
 
+interface CommonViteConfigForComponentOptions {
+	globalComponentName?: string;
+	globalLibraryName?: string;
+}
 export const commonViteConfigForComponent = ({
 	globalComponentName,
 	globalLibraryName,
-}) => {
+}: CommonViteConfigForComponentOptions = {}) => {
 	const cwd = process.cwd();
 	const packageJson = fs.readJSONSync(path.join(cwd, "package.json"));
+	/** packageJson.name looks like `@versini/some-name`
+	 * We need to extract `some-name` from it, and transform it
+	 * to :
+	 * - packageName = `__VERSINI_SOME_NAME__`
+	 * - libraryName = `SomeName`
+	 */
+	const packageName =
+		globalComponentName ||
+		`__VERSINI_${packageJson.name
+			.split("/")
+			.pop()
+			.replace(/-/g, "_")
+			.toUpperCase()}__`;
+
+	const libraryName =
+		globalLibraryName ||
+		packageJson.name
+			.split("/")
+			.pop()
+			.replace(/-([a-z])/g, (g: string) => g[1].toUpperCase())
+			.replace(/^[a-z]/, (g: string) => g.toUpperCase());
+
 	const copyrightYear = new Date(Date.now()).getFullYear();
 	const buildTime = new Date()
 		.toLocaleString("en-US", {
@@ -39,8 +65,8 @@ export const commonViteConfigForComponent = ({
   © ${copyrightYear} gizmette.com
 */
 try {
-  if (!window.${globalComponentName}) {
-    window.${globalComponentName} = {
+  if (!window.${packageName}) {
+    window.${packageName} = {
       version: "${packageJson.version}",
 			buildTime: "${buildTime}",
 			homepage: "${packageJson.homepage}",
@@ -53,6 +79,7 @@ try {
 `;
 	return defineConfig(({ mode }) => {
 		const isDev = mode === "development";
+
 		/**
 		 * Build a list of public files, which means all files in the
 		 * src/components/ComponentName folders.
@@ -91,7 +118,7 @@ try {
 				lib: {
 					entry: path.join(cwd, "src/components/index.ts"),
 					formats: ["es"],
-					name: globalLibraryName,
+					name: libraryName,
 				},
 				rollupOptions: {
 					input: {
@@ -111,6 +138,7 @@ try {
 							if (module?.facadeModuleId?.endsWith("src/components/index.ts")) {
 								return banner;
 							}
+							return "";
 						},
 					},
 				},
