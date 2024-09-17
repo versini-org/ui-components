@@ -6,8 +6,8 @@ import { Footer } from "@versini/ui-footer";
 import { Header } from "@versini/ui-header";
 import { Main } from "@versini/ui-main";
 import { Menu, MenuItem, MenuSeparator } from "@versini/ui-menu";
+import { Panel } from "@versini/ui-panel";
 
-import { Panel } from "./Panel/Panel";
 import { Pill } from "./Pill/Pill";
 import { Spinner } from "./Spinner/Spinner";
 import {
