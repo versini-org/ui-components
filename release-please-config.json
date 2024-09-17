@@ -13,7 +13,8 @@
 		"packages/ui-bubble": {},
 		"packages/ui-card": {},
 		"packages/ui-footer": {},
-		"packages/ui-header": {}
+		"packages/ui-header": {},
+		"packages/ui-main": {}
 	},
 	"plugins": ["node-workspace"],
 	"pull-request-header": ":rocket: Automated Release"

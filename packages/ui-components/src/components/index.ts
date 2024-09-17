@@ -4,8 +4,8 @@ import { Button, ButtonIcon } from "@versini/ui-button";
 import { Card } from "@versini/ui-card";
 import { Footer } from "@versini/ui-footer";
 import { Header } from "@versini/ui-header";
+import { Main } from "@versini/ui-main";
 
-import { Main } from "./Main/Main";
 import { Menu } from "./Menu/Menu";
 import { MenuItem } from "./Menu/MenuItem";
 import { MenuSeparator } from "./Menu/MenuItem";
