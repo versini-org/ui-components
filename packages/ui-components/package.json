@@ -41,8 +41,6 @@
 		"@versini/ui-styles": "workspace:../ui-styles"
 	},
 	"dependencies": {
-		"@floating-ui/react": "0.26.24",
-		"@tailwindcss/typography": "0.5.15",
 		"@versini/ui-anchor": "workspace:../ui-anchor",
 		"@versini/ui-button": "workspace:../ui-button",
 		"@versini/ui-bubble": "workspace:../ui-bubble",
@@ -57,9 +55,7 @@
 		"@versini/ui-pill": "workspace:../ui-pill",
 		"@versini/ui-private": "workspace:../ui-private",
 		"@versini/ui-spinner": "workspace:../ui-spinner",
-		"@versini/ui-table": "workspace:../ui-table",
-		"clsx": "2.1.1",
-		"tailwindcss": "3.4.11"
+		"@versini/ui-table": "workspace:../ui-table"
 	},
 	"sideEffects": ["**/*.css"]
 }
