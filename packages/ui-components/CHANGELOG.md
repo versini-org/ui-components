@@ -192,6 +192,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.29.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.28.0...ui-components-v5.29.0) (2024-09-17)
+
+
+### Features
+
+* **Panel:** extracting Panel as a standalone package ([#663](https://github.com/versini-org/ui-components/issues/663)) ([3450a8f](https://github.com/versini-org/ui-components/commit/3450a8fd5e72d5a5cb6cccf0dc0836d810850cf2))
+* **Pill:** extracting Pill as a standalone package ([#665](https://github.com/versini-org/ui-components/issues/665)) ([0f13fae](https://github.com/versini-org/ui-components/commit/0f13faea848ff6dd561837ccc439cd0bde69c67d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-panel bumped to 1.0.0
+
 ## [5.28.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.27.0...ui-components-v5.28.0) (2024-09-17)
 
 
