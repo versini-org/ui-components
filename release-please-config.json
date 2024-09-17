@@ -11,7 +11,8 @@
 		"packages/ui-button": {},
 		"packages/ui-anchor": {},
 		"packages/ui-bubble": {},
-		"packages/ui-card": {}
+		"packages/ui-card": {},
+		"packages/ui-footer": {}
 	},
 	"plugins": ["node-workspace"],
 	"pull-request-header": ":rocket: Automated Release"

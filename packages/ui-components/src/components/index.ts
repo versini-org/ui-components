@@ -2,8 +2,8 @@ import { Anchor } from "@versini/ui-anchor";
 import { Bubble } from "@versini/ui-bubble";
 import { Button, ButtonIcon } from "@versini/ui-button";
 import { Card } from "@versini/ui-card";
+import { Footer } from "@versini/ui-footer";
 
-import { Footer } from "./Footer/Footer";
 import { Header } from "./Header/Header";
 import { Main } from "./Main/Main";
 import { Menu } from "./Menu/Menu";
