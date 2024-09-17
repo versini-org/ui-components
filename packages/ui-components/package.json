@@ -1,6 +1,6 @@
 {
 	"name": "@versini/ui-components",
-	"version": "5.27.0",
+	"version": "5.28.0",
 	"license": "MIT",
 	"author": "Arno Versini",
 	"publishConfig": {
@@ -14,7 +14,9 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -59,5 +61,7 @@
 		"clsx": "2.1.1",
 		"tailwindcss": "3.4.11"
 	},
-	"sideEffects": ["**/*.css"]
+	"sideEffects": [
+		"**/*.css"
+	]
 }
