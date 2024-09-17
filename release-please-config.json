@@ -18,7 +18,8 @@
 		"packages/ui-menu": {},
 		"packages/ui-panel": {},
 		"packages/ui-pill": {},
-		"packages/ui-spinner": {}
+		"packages/ui-spinner": {},
+		"packages/ui-table": {}
 	},
 	"plugins": ["node-workspace"],
 	"pull-request-header": ":rocket: Automated Release"

@@ -15,11 +15,11 @@ import {
 	TableBody,
 	TableCell,
 	TableCellSort,
+	TableCellSortDirections,
 	TableFooter,
 	TableHead,
 	TableRow,
-} from "./Table/Table";
-import { TableCellSortDirections } from "./Table/utilities";
+} from "@versini/ui-table";
 
 export {
 	Anchor,
