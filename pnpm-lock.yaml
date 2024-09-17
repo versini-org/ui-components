@@ -336,6 +336,9 @@ importers:
       '@versini/ui-panel':
         specifier: workspace:../ui-panel
         version: link:../ui-panel
+      '@versini/ui-pill':
+        specifier: workspace:../ui-pill
+        version: link:../ui-pill
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private
@@ -521,6 +524,31 @@ importers:
       '@versini/ui-icons':
         specifier: workspace:../ui-icons
         version: link:../ui-icons
+      '@versini/ui-private':
+        specifier: workspace:../ui-private
+        version: link:../ui-private
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tailwindcss:
+        specifier: 3.4.11
+        version: 3.4.11
+    devDependencies:
+      '@versini/ui-styles':
+        specifier: workspace:../ui-styles
+        version: link:../ui-styles
+
+  packages/ui-pill:
+    dependencies:
+      '@tailwindcss/typography':
+        specifier: 0.5.15
+        version: 0.5.15(tailwindcss@3.4.11)
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private
