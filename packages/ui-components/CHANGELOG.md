@@ -192,6 +192,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.24.1](https://github.com/versini-org/ui-components/compare/ui-components-v5.24.0...ui-components-v5.24.1) (2024-09-17)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-anchor bumped to 1.1.0
+    * @versini/ui-button bumped to 1.1.0
+    * @versini/ui-bubble bumped to 1.0.0
+    * @versini/ui-card bumped to 1.0.0
+
 ## [5.24.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.23.0...ui-components-v5.24.0) (2024-09-16)
 
 
