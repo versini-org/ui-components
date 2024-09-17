@@ -192,6 +192,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.30.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.29.0...ui-components-v5.30.0) (2024-09-17)
+
+
+### Features
+
+* **Spinner:** extracting Spinner as a standalone package ([#666](https://github.com/versini-org/ui-components/issues/666)) ([d607d22](https://github.com/versini-org/ui-components/commit/d607d224c302c544a873515a31e5a2c8a285ca03))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-pill bumped to 1.0.0
+    * @versini/ui-spinner bumped to 1.0.0
+
 ## [5.29.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.28.0...ui-components-v5.29.0) (2024-09-17)
 
 
