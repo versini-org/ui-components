@@ -17,5 +17,5 @@
 	"packages/ui-menu": "1.0.0",
 	"packages/ui-panel": "1.0.0",
 	"packages/ui-pill": "0.0.0",
-	"packages/ui-spinner": "1.0.0"
+	"packages/ui-spinner": "0.0.0"
 }
