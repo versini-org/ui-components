@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -41,7 +39,6 @@
 		"@versini/ui-styles": "workspace:../ui-styles"
 	},
 	"dependencies": {
-		"@floating-ui/react": "0.26.24",
 		"@tailwindcss/typography": "0.5.15",
 		"@versini/ui-button": "workspace:../ui-button",
 		"@versini/ui-icons": "workspace:../ui-icons",
@@ -49,7 +46,5 @@
 		"clsx": "2.1.1",
 		"tailwindcss": "3.4.11"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }
