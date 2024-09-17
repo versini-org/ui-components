@@ -6,7 +6,7 @@ on:
 
 jobs:
   bundlesize:
-    if: ${{ always() && github.head_ref != 'release-please--branches--main' }}
+    if: ${{ always() }}
     needs: release-bundlesize
     runs-on: ubuntu-latest
     permissions:
