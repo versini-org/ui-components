@@ -342,6 +342,9 @@ importers:
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private
+      '@versini/ui-spinner':
+        specifier: workspace:../ui-spinner
+        version: link:../ui-spinner
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -590,6 +593,28 @@ importers:
       react-dom:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
+
+  packages/ui-spinner:
+    dependencies:
+      '@tailwindcss/typography':
+        specifier: 0.5.15
+        version: 0.5.15(tailwindcss@3.4.11)
+      '@versini/ui-private':
+        specifier: workspace:../ui-private
+        version: link:../ui-private
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tailwindcss:
+        specifier: 3.4.11
+        version: 3.4.11
+    devDependencies:
+      '@versini/ui-styles':
+        specifier: workspace:../ui-styles
+        version: link:../ui-styles
 
   packages/ui-styles:
     dependencies:
