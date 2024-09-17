@@ -1,6 +1,6 @@
 {
-	"name": "@versini/ui-components",
-	"version": "5.30.0",
+	"name": "@versini/ui-table",
+	"version": "0.0.0",
 	"license": "MIT",
 	"author": "Arno Versini",
 	"publishConfig": {
@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -28,10 +26,6 @@
 		"dev": "npm-run-all clean --parallel dev:js dev:types",
 		"lint": "biome lint src",
 		"start": "static-server dist --port 5173",
-		"stats:pr": "bundlesize -c bundlesize.config.js -p \"$npm_package_version\" -o tmp/stats.json --silent",
-		"stats:release": "bundlesize -c bundlesize.config.js -p \"$npm_package_version\" -o stats/stats.json --silent",
-		"stats:report": "bundlesize -c bundlesize.config.js --type report -o tmp/pr-stats.md --silent",
-		"stats": "bundlesize -c bundlesize.config.js -p \"$npm_package_version\"",
 		"test:coverage:ui": "vitest --coverage --ui",
 		"test:coverage": "vitest run --coverage",
 		"test:watch": "vitest",
@@ -47,25 +41,11 @@
 	"dependencies": {
 		"@floating-ui/react": "0.26.24",
 		"@tailwindcss/typography": "0.5.15",
-		"@versini/ui-anchor": "workspace:../ui-anchor",
 		"@versini/ui-button": "workspace:../ui-button",
-		"@versini/ui-bubble": "workspace:../ui-bubble",
-		"@versini/ui-card": "workspace:../ui-card",
-		"@versini/ui-footer": "workspace:../ui-footer",
-		"@versini/ui-header": "workspace:../ui-header",
-		"@versini/ui-hooks": "workspace:../ui-hooks",
 		"@versini/ui-icons": "workspace:../ui-icons",
-		"@versini/ui-main": "workspace:../ui-main",
-		"@versini/ui-menu": "workspace:../ui-menu",
-		"@versini/ui-panel": "workspace:../ui-panel",
-		"@versini/ui-pill": "workspace:../ui-pill",
 		"@versini/ui-private": "workspace:../ui-private",
-		"@versini/ui-spinner": "workspace:../ui-spinner",
-		"@versini/ui-table": "workspace:../ui-table",
 		"clsx": "2.1.1",
 		"tailwindcss": "3.4.11"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }
