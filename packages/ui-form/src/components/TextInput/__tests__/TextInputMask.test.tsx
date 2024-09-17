@@ -1,6 +1,6 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { ButtonIcon } from "@versini/ui-components";
+import { ButtonIcon } from "@versini/ui-button";
 import { IconHide } from "@versini/ui-icons";
 
 import { TextInputMask } from "../..";

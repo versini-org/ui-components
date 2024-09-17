@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -42,7 +40,7 @@
 		"react-dom": "^18.3.1"
 	},
 	"devDependencies": {
-		"@versini/ui-components": "workspace:../ui-components",
+		"@versini/ui-button": "workspace:../ui-button",
 		"@versini/ui-icons": "workspace:../ui-icons",
 		"@versini/ui-styles": "workspace:../ui-styles"
 	},
@@ -51,7 +49,5 @@
 		"@versini/ui-private": "workspace:../ui-private",
 		"clsx": "2.1.1"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }

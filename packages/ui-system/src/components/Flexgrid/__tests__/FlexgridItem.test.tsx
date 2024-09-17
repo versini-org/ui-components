@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { Button } from "@versini/ui-components";
+import { Button } from "@versini/ui-button";
 
 import { Flexgrid, FlexgridItem } from "../..";
 import {
