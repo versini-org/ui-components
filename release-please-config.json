@@ -9,7 +9,9 @@
 		"packages/ui-form": {},
 		"packages/ui-fingerprint": {},
 		"packages/ui-button": {},
-		"packages/ui-anchor": {}
+		"packages/ui-anchor": {},
+		"packages/ui-bubble": {},
+		"packages/ui-card": {}
 	},
 	"plugins": ["node-workspace"],
 	"pull-request-header": ":rocket: Automated Release"
