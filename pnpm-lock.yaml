@@ -361,9 +361,9 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
-      '@versini/ui-components':
-        specifier: workspace:../ui-components
-        version: link:../ui-components
+      '@versini/ui-button':
+        specifier: workspace:../ui-button
+        version: link:../ui-button
       '@versini/ui-icons':
         specifier: workspace:../ui-icons
         version: link:../ui-icons
@@ -438,9 +438,9 @@ importers:
         specifier: 3.4.11
         version: 3.4.11
     devDependencies:
-      '@versini/ui-components':
-        specifier: workspace:../ui-components
-        version: link:../ui-components
+      '@versini/ui-button':
+        specifier: workspace:../ui-button
+        version: link:../ui-button
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
         version: link:../ui-styles
