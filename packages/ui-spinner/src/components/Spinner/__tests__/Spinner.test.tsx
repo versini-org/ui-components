@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 
 import { Spinner } from "../..";
+import { SPINNER_CLASSNAME } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
-import { SPINNER_CLASSNAME } from "../../../common/constants";
 
 describe("Spinner (exceptions)", () => {
 	it("should be able to require/import from root", () => {

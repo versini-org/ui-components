@@ -8,8 +8,8 @@ import { Main } from "@versini/ui-main";
 import { Menu, MenuItem, MenuSeparator } from "@versini/ui-menu";
 import { Panel } from "@versini/ui-panel";
 import { Pill } from "@versini/ui-pill";
+import { Spinner } from "@versini/ui-spinner";
 
-import { Spinner } from "./Spinner/Spinner";
 import {
 	Table,
 	TableBody,
