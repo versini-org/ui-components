@@ -3,8 +3,8 @@ import { Bubble } from "@versini/ui-bubble";
 import { Button, ButtonIcon } from "@versini/ui-button";
 import { Card } from "@versini/ui-card";
 import { Footer } from "@versini/ui-footer";
+import { Header } from "@versini/ui-header";
 
-import { Header } from "./Header/Header";
 import { Main } from "./Main/Main";
 import { Menu } from "./Menu/Menu";
 import { MenuItem } from "./Menu/MenuItem";
