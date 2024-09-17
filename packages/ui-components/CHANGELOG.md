@@ -192,6 +192,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.25.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.24.1...ui-components-v5.25.0) (2024-09-17)
+
+
+### Features
+
+* **Footer:** extracting Footer as a standalone package ([#655](https://github.com/versini-org/ui-components/issues/655)) ([8808a2a](https://github.com/versini-org/ui-components/commit/8808a2a3f0490894a072f8fe1f3e4bd8bf94ed6f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-footer bumped to 1.0.0
+
 ## [5.24.1](https://github.com/versini-org/ui-components/compare/ui-components-v5.24.0...ui-components-v5.24.1) (2024-09-17)
 
 
