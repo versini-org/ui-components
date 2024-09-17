@@ -138,7 +138,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-components':
         specifier: workspace:../ui-components
         version: link:../ui-components
@@ -173,8 +173,8 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@ladle/react':
         specifier: 4.1.1
@@ -184,7 +184,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-button':
         specifier: workspace:../ui-button
         version: link:../ui-button
@@ -195,8 +195,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
@@ -206,7 +206,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-button':
         specifier: workspace:../ui-button
         version: link:../ui-button
@@ -226,8 +226,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
@@ -237,7 +237,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private
@@ -251,8 +251,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-icons':
         specifier: workspace:../ui-icons
@@ -265,7 +265,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-hooks':
         specifier: workspace:../ui-hooks
         version: link:../ui-hooks
@@ -282,8 +282,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
@@ -353,7 +353,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private
@@ -364,8 +364,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
@@ -403,7 +403,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private
@@ -417,8 +417,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
@@ -449,7 +449,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private
@@ -460,8 +460,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
@@ -474,7 +474,7 @@ importers:
         version: 0.26.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -485,8 +485,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-button':
         specifier: workspace:../ui-button
@@ -502,7 +502,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-button':
         specifier: workspace:../ui-button
         version: link:../ui-button
@@ -522,8 +522,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
@@ -533,7 +533,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private
@@ -547,8 +547,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
@@ -580,7 +580,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private
@@ -591,8 +591,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
@@ -602,13 +602,13 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       culori:
         specifier: 4.0.1
         version: 4.0.1
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
 
   packages/ui-system:
     dependencies:
@@ -619,8 +619,8 @@ importers:
         specifier: 2.1.1
         version: 2.1.1
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-button':
         specifier: workspace:../ui-button
@@ -639,7 +639,7 @@ importers:
     dependencies:
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.11)
+        version: 0.5.15(tailwindcss@3.4.12)
       '@versini/ui-button':
         specifier: workspace:../ui-button
         version: link:../ui-button
@@ -659,8 +659,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwindcss:
-        specifier: 3.4.11
-        version: 3.4.11
+        specifier: 3.4.12
+        version: 3.4.12
     devDependencies:
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
@@ -6379,6 +6379,11 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
+  tailwindcss@3.4.12:
+    resolution: {integrity: sha512-Htf/gHj2+soPb9UayUNci/Ja3d8pTmu9ONTfh4QY8r3MATTZOzmv6UYWF7ZwikEIC8okpfqmGqrmDehua8mF8w==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+
   tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
@@ -8514,13 +8519,13 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
 
-  '@tailwindcss/typography@0.5.15(tailwindcss@3.4.11)':
+  '@tailwindcss/typography@0.5.15(tailwindcss@3.4.12)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.11
+      tailwindcss: 3.4.12
 
   '@testing-library/dom@10.4.0':
     dependencies:
@@ -13867,6 +13872,33 @@ snapshots:
   tabbable@6.2.0: {}
 
   tailwindcss@3.4.11:
+    dependencies:
+      '@alloc/quick-lru': 5.2.0
+      arg: 5.0.2
+      chokidar: 3.6.0
+      didyoumean: 1.2.2
+      dlv: 1.1.3
+      fast-glob: 3.3.2
+      glob-parent: 6.0.2
+      is-glob: 4.0.3
+      jiti: 1.21.0
+      lilconfig: 2.1.0
+      micromatch: 4.0.8
+      normalize-path: 3.0.0
+      object-hash: 3.0.0
+      picocolors: 1.1.0
+      postcss: 8.4.47
+      postcss-import: 15.1.0(postcss@8.4.47)
+      postcss-js: 4.0.1(postcss@8.4.47)
+      postcss-load-config: 4.0.2(postcss@8.4.47)
+      postcss-nested: 6.0.1(postcss@8.4.47)
+      postcss-selector-parser: 6.0.15
+      resolve: 1.22.8
+      sucrase: 3.35.0
+    transitivePeerDependencies:
+      - ts-node
+
+  tailwindcss@3.4.12:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
