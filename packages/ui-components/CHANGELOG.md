@@ -192,6 +192,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.28.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.27.0...ui-components-v5.28.0) (2024-09-17)
+
+
+### Features
+
+* **Menu:** extracting Menu as a standalone package ([#661](https://github.com/versini-org/ui-components/issues/661)) ([c1065c3](https://github.com/versini-org/ui-components/commit/c1065c3da576d28ccc484234bb03d0ad24c4d51a))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-menu bumped to 1.0.0
+
 ## [5.27.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.26.0...ui-components-v5.27.0) (2024-09-17)
 
 
