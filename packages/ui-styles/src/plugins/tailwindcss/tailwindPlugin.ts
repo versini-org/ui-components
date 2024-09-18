@@ -29,7 +29,6 @@ export const customContentPath = [
 	"@versini/ui-header",
 	"@versini/ui-hooks",
 	"@versini/ui-icons",
-	"@versini/ui-icons",
 	"@versini/ui-main",
 	"@versini/ui-menu",
 	"@versini/ui-panel",
