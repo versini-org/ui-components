@@ -1,9 +1,8 @@
 import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { TextInput } from "../..";
+import { TEXT_INPUT_CLASSNAME, TextInput } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
-import { TEXT_INPUT_CLASSNAME } from "../../../common/constants";
 
 describe("TextInput (exceptions)", () => {
 	it("should be able to require/import from root", () => {
