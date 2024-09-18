@@ -38,6 +38,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.9.9](https://github.com/versini-org/ui-components/compare/ui-styles-v1.9.8...ui-styles-v1.9.9) (2024-09-18)
+
+
+### Bug Fixes
+
+* **ui-styles:** missing CSS in all new independent packages in prod ([#680](https://github.com/versini-org/ui-components/issues/680)) ([cc0d971](https://github.com/versini-org/ui-components/commit/cc0d9718f7ac461a3455fcd3cd5049a37fee1bf6))
+
 ## [1.9.8](https://github.com/versini-org/ui-components/compare/ui-styles-v1.9.7...ui-styles-v1.9.8) (2024-09-17)
 
 
