@@ -35,6 +35,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.4.0](https://github.com/versini-org/ui-components/compare/ui-form-v1.3.17...ui-form-v1.4.0) (2024-09-18)
+
+
+### Features
+
+* **Toggle:** extracting Toggle as a standalone package ([#672](https://github.com/versini-org/ui-components/issues/672)) ([1a215b5](https://github.com/versini-org/ui-components/commit/1a215b52aa70c6662bf5b12eddeb0d8adfd411fd))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-toggle bumped to 1.0.0
+
 ## [1.3.17](https://github.com/versini-org/ui-components/compare/ui-form-v1.3.16...ui-form-v1.3.17) (2024-09-17)
 
 
