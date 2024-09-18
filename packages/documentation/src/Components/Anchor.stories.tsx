@@ -1,5 +1,5 @@
 import type { Story } from "@ladle/react";
-import { Anchor } from "@versini/ui-components";
+import { Anchor } from "@versini/ui-anchor";
 
 export default {
 	title: "Components/Anchor",

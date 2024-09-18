@@ -193,24 +193,69 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.12)
-      '@versini/ui-components':
-        specifier: workspace:../ui-components
-        version: link:../ui-components
+      '@versini/ui-anchor':
+        specifier: workspace:../ui-anchor
+        version: link:../ui-anchor
+      '@versini/ui-bubble':
+        specifier: workspace:../ui-bubble
+        version: link:../ui-bubble
+      '@versini/ui-button':
+        specifier: workspace:../ui-button
+        version: link:../ui-button
+      '@versini/ui-card':
+        specifier: workspace:../ui-card
+        version: link:../ui-card
       '@versini/ui-fingerprint':
         specifier: workspace:../ui-fingerprint
         version: link:../ui-fingerprint
-      '@versini/ui-form':
-        specifier: workspace:../ui-form
-        version: link:../ui-form
+      '@versini/ui-footer':
+        specifier: workspace:../ui-footer
+        version: link:../ui-footer
+      '@versini/ui-header':
+        specifier: workspace:../ui-header
+        version: link:../ui-header
+      '@versini/ui-hooks':
+        specifier: workspace:../ui-hooks
+        version: link:../ui-hooks
       '@versini/ui-icons':
         specifier: workspace:../ui-icons
         version: link:../ui-icons
+      '@versini/ui-main':
+        specifier: workspace:../ui-main
+        version: link:../ui-main
+      '@versini/ui-menu':
+        specifier: workspace:../ui-menu
+        version: link:../ui-menu
+      '@versini/ui-panel':
+        specifier: workspace:../ui-panel
+        version: link:../ui-panel
+      '@versini/ui-pill':
+        specifier: workspace:../ui-pill
+        version: link:../ui-pill
+      '@versini/ui-private':
+        specifier: workspace:../ui-private
+        version: link:../ui-private
+      '@versini/ui-spinner':
+        specifier: workspace:../ui-spinner
+        version: link:../ui-spinner
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
         version: link:../ui-styles
       '@versini/ui-system':
         specifier: workspace:../ui-system
         version: link:../ui-system
+      '@versini/ui-table':
+        specifier: workspace:../ui-table
+        version: link:../ui-table
+      '@versini/ui-textarea':
+        specifier: workspace:../ui-textarea
+        version: link:../ui-textarea
+      '@versini/ui-textinput':
+        specifier: workspace:../ui-textinput
+        version: link:../ui-textinput
+      '@versini/ui-toggle':
+        specifier: workspace:../ui-toggle
+        version: link:../ui-toggle
       clsx:
         specifier: 2.1.1
         version: 2.1.1

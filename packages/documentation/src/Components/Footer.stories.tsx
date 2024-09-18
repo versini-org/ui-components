@@ -1,5 +1,5 @@
 import type { Story } from "@ladle/react";
-import { Footer } from "@versini/ui-components";
+import { Footer } from "@versini/ui-footer";
 
 export default {
 	title: "Components/Footer",

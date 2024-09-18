@@ -1,5 +1,6 @@
 import { Story, linkTo } from "@ladle/react";
-import { Button, ButtonIcon, Card } from "@versini/ui-components";
+import { Button, ButtonIcon } from "@versini/ui-button";
+import { Card } from "@versini/ui-card";
 import { IconNext, IconPrevious } from "@versini/ui-icons";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 import { Highlight, themes } from "prism-react-renderer";
@@ -9,7 +10,8 @@ export default {
 };
 
 const codeBlock = `// App.tsx
-import { Button, Card } from "@versini/ui-components";
+import { Button } from "@versini/ui-button";
+import { Card } from "@versini/ui-card";
 
 /**
  * Now that the required components are

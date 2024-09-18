@@ -1,7 +1,7 @@
 import type { Story } from "@ladle/react";
-import { Button } from "@versini/ui-components";
-import { TextArea } from "@versini/ui-form";
+import { Button } from "@versini/ui-button";
 import { ThemeProvider } from "@versini/ui-system";
+import { TextArea } from "@versini/ui-textarea";
 import { useState } from "react";
 
 const customTheme = {
@@ -24,7 +24,6 @@ export default {
 	title: "Form components/TextArea",
 	meta: {
 		importName: "TextArea",
-		importPackage: "ui-form",
 	},
 	args: {
 		label: "Type your question here",

@@ -1,5 +1,5 @@
 import type { Story } from "@ladle/react";
-import { Card } from "@versini/ui-components";
+import { Card } from "@versini/ui-card";
 
 export default {
 	title: "Components/Card",

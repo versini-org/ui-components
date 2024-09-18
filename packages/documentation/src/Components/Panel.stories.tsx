@@ -1,5 +1,6 @@
 import type { Story } from "@ladle/react";
-import { Button, Panel } from "@versini/ui-components";
+import { Button } from "@versini/ui-button";
+import { Panel } from "@versini/ui-panel";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 import { useState } from "react";
 

@@ -1,5 +1,5 @@
 import type { Story } from "@ladle/react";
-import { Spinner } from "@versini/ui-components";
+import { Spinner } from "@versini/ui-spinner";
 
 export default {
 	title: "Components/Spinner",

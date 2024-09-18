@@ -1,14 +1,14 @@
 import { Story, linkTo } from "@ladle/react";
+import { ButtonIcon } from "@versini/ui-button";
+import { IconNext, IconPrevious } from "@versini/ui-icons";
+import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 import {
-	ButtonIcon,
 	Table,
 	TableBody,
 	TableCell,
 	TableHead,
 	TableRow,
-} from "@versini/ui-components";
-import { IconNext, IconPrevious } from "@versini/ui-icons";
-import { Flexgrid, FlexgridItem } from "@versini/ui-system";
+} from "@versini/ui-table";
 import { Highlight, Prism, themes } from "prism-react-renderer";
 
 export default {
@@ -21,27 +21,17 @@ await import("prismjs/components/prism-bash");
 const data = [
 	{
 		id: 1,
-		name: "@versini/ui-components",
-		description: "Core components such as Button, Card, and Spinner.",
-	},
-	{
-		id: 2,
 		name: "@versini/ui-styles",
 		description:
 			"Required package to handle styles via TailwindCSS, including Typography.",
 	},
 	{
-		id: 3,
-		name: "@versini/ui-form",
-		description: "Form components such as TextInput, TextArea and Toggle.",
-	},
-	{
-		id: 4,
+		id: 2,
 		name: "@versini/ui-icons",
 		description: "All the icons used in the UI-Components library.",
 	},
 	{
-		id: 5,
+		id: 3,
 		name: "@versini/ui-system",
 		description: "System level components such as Flexgrid and ThemeProvider.",
 	},
@@ -53,7 +43,9 @@ export const Installation: Story<any> = () => (
 		<p>
 			The <strong>UI-Components</strong> library is available as multiple npm
 			packages. The library has been split into multiple packages to make it
-			easier to manage and to reduce the size of the final bundle.
+			easier to manage and to reduce the size of the final bundle. Most are
+			individual components such as Button, Card, and Spinner. Other "specialty"
+			packages have been created to handle styles, system and icons:
 		</p>
 		<div className="my-2 flex flex-wrap">
 			<Table>
@@ -84,13 +76,15 @@ export const Installation: Story<any> = () => (
 		</p>
 		<h2>Example</h2>
 		<p>
-			If you only need some core components and of course the CSS styles
-			associated<sup>1</sup>, use the following command:
+			If you only need some core components such as Button and Card, and of
+			course the CSS styles associated<sup>1</sup>, use the following command:
 		</p>
 		<Highlight
 			theme={themes.vsDark}
-			code={`$ npm install --save-dev @versini/ui-styles
-$ npm install --save @versini/ui-components`}
+			code={`$ npm install --save @versini/ui-button
+$ npm install --save @versini/ui-card
+
+$ npm install --save-dev @versini/ui-styles`}
 			language="bash"
 		>
 			{({ style, tokens, getLineProps, getTokenProps }) => (

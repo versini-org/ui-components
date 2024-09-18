@@ -1,12 +1,5 @@
 import type { Story } from "@ladle/react";
-import {
-	Button,
-	ButtonIcon,
-	Menu,
-	MenuItem,
-	MenuSeparator,
-	Panel,
-} from "@versini/ui-components";
+import { Button, ButtonIcon } from "@versini/ui-button";
 import {
 	IconBack,
 	IconChart,
@@ -15,12 +8,15 @@ import {
 	IconProfile,
 	IconSettings,
 } from "@versini/ui-icons";
+import { Menu, MenuItem, MenuSeparator } from "@versini/ui-menu";
+import { Panel } from "@versini/ui-panel";
 import { useState } from "react";
 
 export default {
 	title: "Components/Menu",
 	meta: {
 		importName: "Menu, MenuItem, MenuSeparator",
+		importPackage: "ui-menu",
 	},
 	args: {
 		mode: "system",

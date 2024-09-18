@@ -1,5 +1,5 @@
 import type { Story } from "@ladle/react";
-import { ButtonIcon } from "@versini/ui-components";
+import { ButtonIcon } from "@versini/ui-button";
 import {
 	IconEdit,
 	IconNext,

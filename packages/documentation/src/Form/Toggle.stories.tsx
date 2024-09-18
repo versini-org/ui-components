@@ -1,13 +1,13 @@
 import type { Story } from "@ladle/react";
-import { Button, Card } from "@versini/ui-components";
-import { Toggle } from "@versini/ui-form";
+import { Button } from "@versini/ui-button";
+import { Card } from "@versini/ui-card";
+import { Toggle } from "@versini/ui-toggle";
 import { useState } from "react";
 
 export default {
 	title: "Form components/Toggle",
 	meta: {
 		importName: "Toggle",
-		importPackage: "ui-form",
 	},
 	args: {
 		mode: "system",

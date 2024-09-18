@@ -1,22 +1,20 @@
 import type { Story } from "@ladle/react";
+import { Anchor } from "@versini/ui-anchor";
+import { Button, ButtonIcon } from "@versini/ui-button";
+import { Card } from "@versini/ui-card";
+import { Footer } from "@versini/ui-footer";
+import { Header } from "@versini/ui-header";
+import { Main } from "@versini/ui-main";
+import { Menu, MenuItem } from "@versini/ui-menu";
+import { Spinner } from "@versini/ui-spinner";
 import {
-	Anchor,
-	Button,
-	ButtonIcon,
-	Card,
-	Footer,
-	Header,
-	Main,
-	Menu,
-	MenuItem,
-	Spinner,
 	Table,
 	TableBody,
 	TableCell,
 	TableHead,
 	TableRow,
-} from "@versini/ui-components";
-import { TextInput } from "@versini/ui-form";
+} from "@versini/ui-table";
+
 import {
 	IconChart,
 	IconDelete,
@@ -26,6 +24,7 @@ import {
 	IconRestore,
 	IconSettings,
 } from "@versini/ui-icons";
+import { TextInput } from "@versini/ui-textinput";
 import { Highlight, themes } from "prism-react-renderer";
 
 export default {

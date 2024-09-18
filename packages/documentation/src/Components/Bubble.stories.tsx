@@ -1,5 +1,5 @@
 import type { Story } from "@ladle/react";
-import { Bubble } from "@versini/ui-components";
+import { Bubble } from "@versini/ui-bubble";
 
 export default {
 	title: "Components/Bubble",

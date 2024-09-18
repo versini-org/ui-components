@@ -1,12 +1,11 @@
 import type { Story } from "@ladle/react";
-import { Button } from "@versini/ui-components";
-import { TextInput } from "@versini/ui-form";
+import { Button } from "@versini/ui-button";
+import { TextInput } from "@versini/ui-textinput";
 
 export default {
 	title: "Form components/TextInput",
 	meta: {
 		importName: "TextInput",
-		importPackage: "ui-form",
 	},
 	args: {
 		type: "text",

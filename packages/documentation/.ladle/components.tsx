@@ -1,10 +1,11 @@
 import "./styles.css";
 
-import { ButtonIcon, Footer, Pill } from "@versini/ui-components";
-import { Flexgrid, FlexgridItem } from "@versini/ui-system";
-
 import type { GlobalProvider } from "@ladle/react";
+import { ButtonIcon } from "@versini/ui-button";
+import { Footer } from "@versini/ui-footer";
 import { IconGitHub } from "@versini/ui-icons";
+import { Pill } from "@versini/ui-pill";
+import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 import clsx from "clsx";
 
 const renderImportLine = ({
@@ -19,7 +20,7 @@ const renderImportLine = ({
 	header?: string;
 }) => {
 	let variant: "information" | "warning" | "success", releaseTag;
-	const packageName = importPackage || "ui-components";
+	const packageName = importPackage || `ui-${importName.toLowerCase()}`;
 	const titleHeader = header || importName;
 
 	switch (stage) {

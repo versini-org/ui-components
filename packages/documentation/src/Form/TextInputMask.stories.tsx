@@ -1,14 +1,14 @@
 import type { Story } from "@ladle/react";
-import { ButtonIcon } from "@versini/ui-components";
-import { TextInputMask } from "@versini/ui-form";
+import { ButtonIcon } from "@versini/ui-button";
 import { IconHide, IconShow } from "@versini/ui-icons";
+import { TextInputMask } from "@versini/ui-textinput";
 import { useState } from "react";
 
 export default {
 	title: "Form components/TextInputMask",
 	meta: {
 		importName: "TextInputMask",
-		importPackage: "ui-form",
+		importPackage: "ui-textinput",
 	},
 	args: {
 		label: "Enter password",
