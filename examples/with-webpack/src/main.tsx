@@ -1,4 +1,5 @@
-import { Header, Main } from "@versini/ui-components";
+import { Header } from "@versini/ui-header";
+import { Main } from "@versini/ui-main";
 import * as React from "react";
 
 import { CustomCard } from "./components/CustomCard";

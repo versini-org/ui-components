@@ -7,7 +7,7 @@ import {
 	TableFooter,
 	TableHead,
 	TableRow,
-} from "@versini/ui-components";
+} from "@versini/ui-table";
 import { useState } from "react";
 
 const nutritionData = [

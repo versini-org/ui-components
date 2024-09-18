@@ -1,10 +1,5 @@
-import {
-	ButtonIcon,
-	Card,
-	Menu,
-	MenuItem,
-	Panel,
-} from "@versini/ui-components";
+import { ButtonIcon } from "@versini/ui-button";
+import { Card } from "@versini/ui-card";
 import {
 	IconChart,
 	IconHistory,
@@ -12,8 +7,11 @@ import {
 	IconProfile,
 	IconSettings,
 } from "@versini/ui-icons";
+import { Menu, MenuItem } from "@versini/ui-menu";
+import { Panel } from "@versini/ui-panel";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 import { useState } from "react";
+
 import { CommonTemplate } from "./CommonTemplate";
 
 export const CustomCard = () => {

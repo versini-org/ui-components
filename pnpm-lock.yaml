@@ -20,21 +20,48 @@ importers:
 
   examples/with-vite:
     dependencies:
-      '@versini/ui-components':
-        specifier: workspace:../../packages/ui-components
-        version: link:../../packages/ui-components
+      '@versini/ui-anchor':
+        specifier: workspace:../../packages/ui-anchor
+        version: link:../../packages/ui-anchor
+      '@versini/ui-button':
+        specifier: workspace:../../packages/ui-button
+        version: link:../../packages/ui-button
+      '@versini/ui-card':
+        specifier: workspace:../../packages/ui-card
+        version: link:../../packages/ui-card
+      '@versini/ui-footer':
+        specifier: workspace:../../packages/ui-footer
+        version: link:../../packages/ui-footer
       '@versini/ui-form':
         specifier: workspace:../../packages/ui-form
         version: link:../../packages/ui-form
+      '@versini/ui-header':
+        specifier: workspace:../../packages/ui-header
+        version: link:../../packages/ui-header
       '@versini/ui-icons':
         specifier: workspace:../../packages/ui-icons
         version: link:../../packages/ui-icons
+      '@versini/ui-main':
+        specifier: workspace:../../packages/ui-main
+        version: link:../../packages/ui-main
+      '@versini/ui-menu':
+        specifier: workspace:../../packages/ui-menu
+        version: link:../../packages/ui-menu
+      '@versini/ui-panel':
+        specifier: workspace:../../packages/ui-panel
+        version: link:../../packages/ui-panel
       '@versini/ui-styles':
         specifier: workspace:../../packages/ui-styles
         version: link:../../packages/ui-styles
       '@versini/ui-system':
         specifier: workspace:../../packages/ui-system
         version: link:../../packages/ui-system
+      '@versini/ui-table':
+        specifier: workspace:../../packages/ui-table
+        version: link:../../packages/ui-table
+      '@versini/ui-textinput':
+        specifier: workspace:../../packages/ui-textinput
+        version: link:../../packages/ui-textinput
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -44,21 +71,48 @@ importers:
 
   examples/with-webpack:
     dependencies:
-      '@versini/ui-components':
-        specifier: workspace:../../packages/ui-components
-        version: link:../../packages/ui-components
+      '@versini/ui-anchor':
+        specifier: workspace:../../packages/ui-anchor
+        version: link:../../packages/ui-anchor
+      '@versini/ui-button':
+        specifier: workspace:../../packages/ui-button
+        version: link:../../packages/ui-button
+      '@versini/ui-card':
+        specifier: workspace:../../packages/ui-card
+        version: link:../../packages/ui-card
+      '@versini/ui-footer':
+        specifier: workspace:../../packages/ui-footer
+        version: link:../../packages/ui-footer
       '@versini/ui-form':
         specifier: workspace:../../packages/ui-form
         version: link:../../packages/ui-form
+      '@versini/ui-header':
+        specifier: workspace:../../packages/ui-header
+        version: link:../../packages/ui-header
       '@versini/ui-icons':
         specifier: workspace:../../packages/ui-icons
         version: link:../../packages/ui-icons
+      '@versini/ui-main':
+        specifier: workspace:../../packages/ui-main
+        version: link:../../packages/ui-main
+      '@versini/ui-menu':
+        specifier: workspace:../../packages/ui-menu
+        version: link:../../packages/ui-menu
+      '@versini/ui-panel':
+        specifier: workspace:../../packages/ui-panel
+        version: link:../../packages/ui-panel
       '@versini/ui-styles':
         specifier: workspace:../../packages/ui-styles
         version: link:../../packages/ui-styles
       '@versini/ui-system':
         specifier: workspace:../../packages/ui-system
         version: link:../../packages/ui-system
+      '@versini/ui-table':
+        specifier: workspace:../../packages/ui-table
+        version: link:../../packages/ui-table
+      '@versini/ui-textinput':
+        specifier: workspace:../../packages/ui-textinput
+        version: link:../../packages/ui-textinput
       react:
         specifier: 18.3.1
         version: 18.3.1
