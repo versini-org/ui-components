@@ -1,24 +1,48 @@
+/**
+ * allowImportingTsExtensions: Allow importing TypeScript files without specifying the extension.
+ * isolatedModules: Ensure that each file is treated as a separate module.
+ * jsx: Specify the JSX factory function.
+ * lib: Specify the library files to be included in the compilation.
+ * module: Specify the module code generation.
+ * moduleDetection: Specify the module type for the project.
+ * moduleResolution: Specify how TypeScript should resolve module imports.
+ * noEmit: Disable emitting files during the compilation.
+ * noFallthroughCasesInSwitch: Enable error reporting for fallthrough cases in switch statements.
+ * noImplicitOverride: Ensure overriding members in derived classes are marked with an
+ *                     override modifier.
+ * noUncheckedIndexedAccess: Enable error reporting for indexed access expressions that can be
+ *                           undefined.
+ * noUnusedLocals: Enable error reporting for unused local variables.
+ * noUnusedParameters: Enable error reporting for unused parameters.
+ * resolveJsonModule: Enable importing JSON files as modules.
+ * skipLibCheck: Skip type checking of declaration files.
+ * strict: Enable all strict type checking options.
+ * target: Specify the ECMAScript target version.
+ * types: Specify the types to include in the compilation.
+ * useDefineForClassFields: Emit ECMAScript standard class fields.
+ * verbatimModuleSyntax: Preserve the import statements in the output.
+ */
 {
 	"compilerOptions": {
-		"target": "ES2020",
-		"useDefineForClassFields": true,
-		"lib": ["ES2020", "DOM", "DOM.Iterable"],
-		"module": "ESNext",
-		"skipLibCheck": true,
-		"types": ["vitest/globals", "@testing-library/jest-dom"],
-
-		/* Bundler mode */
-		"moduleResolution": "bundler",
 		"allowImportingTsExtensions": true,
-		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"noEmit": true,
 		"jsx": "react-jsx",
-
-		/* Linting */
-		"strict": true,
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"module": "Preserve",
+		"moduleDetection": "force",
+		"moduleResolution": "bundler",
+		"noEmit": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "ES2020",
+		"types": ["vitest/globals", "@testing-library/jest-dom"],
+		"useDefineForClassFields": true,
+		"verbatimModuleSyntax": true
 	}
 }

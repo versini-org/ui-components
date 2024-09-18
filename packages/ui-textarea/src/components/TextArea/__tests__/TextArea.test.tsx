@@ -20,7 +20,7 @@ describe("TextArea modifiers", () => {
 		const label = await screen.findAllByText("hello world");
 		const input = await screen.findByRole("textbox");
 
-		expect(label[0].className).toContain("sr-only");
+		expect(label[0]?.className).toContain("sr-only");
 		expectToHaveClasses(label[1], [
 			"absolute",
 			"cursor-text",
@@ -59,7 +59,7 @@ describe("TextArea modifiers", () => {
 		const label = await screen.findAllByText("hello world");
 		const input = await screen.findByRole("textbox");
 
-		expect(label[0].className).toContain("sr-only");
+		expect(label[0]?.className).toContain("sr-only");
 		expectToHaveClasses(label[1], [
 			"absolute",
 			"cursor-text",
@@ -93,7 +93,7 @@ describe("TextArea modifiers", () => {
 		const label = await screen.findAllByText("hello world");
 		const input = await screen.findByRole("textbox");
 
-		expect(label[0].className).toContain("sr-only");
+		expect(label[0]?.className).toContain("sr-only");
 		expectToHaveClasses(label[1], [
 			"absolute",
 			"cursor-text",
@@ -242,7 +242,7 @@ describe("TextArea modifiers", () => {
 		render(<TextArea label="hello world" name="toto" disabled />);
 		const label = await screen.findAllByText("hello world");
 
-		expect(label[0].className).toContain("sr-only");
+		expect(label[0]?.className).toContain("sr-only");
 		expectToHaveClasses(label[1], [
 			"px-2",
 			"absolute",
