@@ -1,5 +1,5 @@
 import type { Story } from "@ladle/react";
-import { Pill } from "@versini/ui-components";
+import { Pill } from "@versini/ui-pill";
 
 export default {
 	title: "Components/Pill",

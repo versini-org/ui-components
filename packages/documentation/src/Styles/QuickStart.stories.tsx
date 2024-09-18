@@ -19,7 +19,8 @@ export const QuickStart: Story<any> = () => (
 		<h2>Installation</h2>
 		<p>
 			You have to install the <code>@versini/ui-styles</code> package which
-			provides our TailwindCSS plugin:
+			provides our TailwindCSS plugin. Note that it's a build time dependency so
+			it only needs to be added to the <code>devDependencies</code>:
 		</p>
 		<Highlight
 			theme={themes.vsDark}

@@ -1,7 +1,9 @@
 import { linkTo, Meta } from "@ladle/react";
-import { Button, ButtonIcon, Card } from "@versini/ui-components";
+import { Button, ButtonIcon } from "@versini/ui-button";
+import { Card } from "@versini/ui-card";
 import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 import { IconNext, IconPrevious } from "@versini/ui-icons";
+
 import ComponentsChangelog from "../../../ui-components/CHANGELOG.md";
 import StylesChangelog from "../../../ui-styles/CHANGELOG.md";
 import FormComponentsChangelog from "../../../ui-form/CHANGELOG.md";
@@ -13,49 +15,49 @@ import SystemChangelog from "../../../ui-system/CHANGELOG.md";
 <h1>Changelogs</h1>
 
 <details>
-	<summary>Components</summary>
-	<Card>
-		<ComponentsChangelog />
-	</Card>
+  <summary>Components</summary>
+  <Card>
+    <ComponentsChangelog />
+  </Card>
 </details>
 
 <details>
-	<summary>Styles</summary>
-	<Card>
-		<StylesChangelog />
-	</Card>
+  <summary>Styles</summary>
+  <Card>
+    <StylesChangelog />
+  </Card>
 </details>
 
 <details>
-	<summary>Form Components</summary>
-	<Card>
-		<FormComponentsChangelog />
-	</Card>
+  <summary>Form Components</summary>
+  <Card>
+    <FormComponentsChangelog />
+  </Card>
 </details>
 
 <details>
-	<summary>Icons</summary>
-	<Card>
-		<IconsChangelog />
-	</Card>
+  <summary>Icons</summary>
+  <Card>
+    <IconsChangelog />
+  </Card>
 </details>
 
 <details>
-	<summary>System</summary>
-	<Card>
-		<SystemChangelog />
-	</Card>
+  <summary>System</summary>
+  <Card>
+    <SystemChangelog />
+  </Card>
 </details>
 
 <div className="mt-8">
-	<Flexgrid alignHorizontal="space-between">
-		<FlexgridItem>
-			<ButtonIcon
-				labelRight="Release Tags"
-				onClick={linkTo("getting-started--release-tags")}
-			>
-				<IconPrevious monotone />
-			</ButtonIcon>
-		</FlexgridItem>
-	</Flexgrid>
+  <Flexgrid alignHorizontal="space-between">
+    <FlexgridItem>
+      <ButtonIcon
+        labelRight="Release Tags"
+        onClick={linkTo("getting-started--release-tags")}
+      >
+        <IconPrevious monotone />
+      </ButtonIcon>
+    </FlexgridItem>
+  </Flexgrid>
 </div>

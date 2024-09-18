@@ -1,6 +1,7 @@
 import type { Story } from "@ladle/react";
+import { ButtonIcon } from "@versini/ui-button";
+import { IconDelete, IconRestore } from "@versini/ui-icons";
 import {
-	ButtonIcon,
 	Table,
 	TableBody,
 	TableCell,
@@ -9,8 +10,7 @@ import {
 	TableFooter,
 	TableHead,
 	TableRow,
-} from "@versini/ui-components";
-import { IconDelete, IconRestore } from "@versini/ui-icons";
+} from "@versini/ui-table";
 import { useState } from "react";
 
 export default {
@@ -18,6 +18,7 @@ export default {
 	meta: {
 		importName:
 			"Table, TableBody, TableCell, TableCellSort, TableHead, TableRow",
+		importPackage: "ui-table",
 	},
 	args: {
 		mode: "system",

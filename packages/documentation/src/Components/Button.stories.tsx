@@ -1,5 +1,5 @@
 import type { Story } from "@ladle/react";
-import { Button } from "@versini/ui-components";
+import { Button } from "@versini/ui-button";
 
 export default {
 	title: "Components/Button",
