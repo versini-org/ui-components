@@ -21,10 +21,29 @@ export type TailwindConfig = {
  * added here.
  */
 export const customContentPath = [
+	"@versini/ui-anchor",
+	"@versini/ui-bubble",
+	"@versini/ui-button",
+	"@versini/ui-card",
+	"@versini/ui-footer",
+	"@versini/ui-header",
+	"@versini/ui-hooks",
+	"@versini/ui-icons",
+	"@versini/ui-main",
+	"@versini/ui-menu",
+	"@versini/ui-panel",
+	"@versini/ui-pill",
+	"@versini/ui-private",
+	"@versini/ui-spinner",
+	"@versini/ui-system",
+	"@versini/ui-table",
+	"@versini/ui-textarea",
+	"@versini/ui-textinput",
+	"@versini/ui-toggle",
+
+	// the following are legacy packages and should eventually be removed
 	"@versini/ui-components",
 	"@versini/ui-form",
-	"@versini/ui-icons",
-	"@versini/ui-system",
 ].map(
 	(pkg) => `${process.cwd()}/node_modules/${pkg}/dist/**/*.{js,ts,jsx,tsx}`,
 );
