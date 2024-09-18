@@ -2,7 +2,7 @@ import { ButtonIcon } from "@versini/ui-button";
 import { IconCopied, IconCopy } from "@versini/ui-icons";
 import { useEffect, useState } from "react";
 
-import { BubbleProps } from "./BubbleTypes";
+import type { BubbleProps } from "./BubbleTypes";
 import { getBubbleClasses } from "./utilities";
 
 export const Bubble = ({

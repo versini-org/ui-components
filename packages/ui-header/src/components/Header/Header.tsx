@@ -2,7 +2,7 @@ import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
 import { HEADER_CLASSNAME } from "../../common/constants";
-import { HeaderProps } from "./HeaderTypes";
+import type { HeaderProps } from "./HeaderTypes";
 
 export const Header = ({
 	children,
