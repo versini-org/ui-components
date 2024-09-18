@@ -20,6 +20,7 @@
 		"packages/ui-styles": {},
 		"packages/ui-system": {},
 		"packages/ui-table": {},
+		"packages/ui-textinput": {},
 		"packages/ui-toggle": {}
 	},
 	"plugins": ["node-workspace"],

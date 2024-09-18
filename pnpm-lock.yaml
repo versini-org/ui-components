@@ -379,6 +379,9 @@ importers:
       '@versini/ui-private':
         specifier: workspace:../ui-private
         version: link:../ui-private
+      '@versini/ui-textinput':
+        specifier: workspace:../ui-textinput
+        version: link:../ui-textinput
       '@versini/ui-toggle':
         specifier: workspace:../ui-toggle
         version: link:../ui-toggle
@@ -665,6 +668,40 @@ importers:
         specifier: 3.4.12
         version: 3.4.12
     devDependencies:
+      '@versini/ui-styles':
+        specifier: workspace:../ui-styles
+        version: link:../ui-styles
+
+  packages/ui-textinput:
+    dependencies:
+      '@tailwindcss/typography':
+        specifier: 0.5.15
+        version: 0.5.15(tailwindcss@3.4.12)
+      '@versini/ui-hooks':
+        specifier: workspace:../ui-hooks
+        version: link:../ui-hooks
+      '@versini/ui-private':
+        specifier: workspace:../ui-private
+        version: link:../ui-private
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tailwindcss:
+        specifier: 3.4.12
+        version: 3.4.12
+    devDependencies:
+      '@versini/ui-button':
+        specifier: workspace:../ui-button
+        version: link:../ui-button
+      '@versini/ui-icons':
+        specifier: workspace:../ui-icons
+        version: link:../ui-icons
       '@versini/ui-styles':
         specifier: workspace:../ui-styles
         version: link:../ui-styles
