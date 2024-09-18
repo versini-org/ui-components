@@ -35,6 +35,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.5.0](https://github.com/versini-org/ui-components/compare/ui-form-v1.4.0...ui-form-v1.5.0) (2024-09-18)
+
+
+### Features
+
+* **TextInput:** extracting TextInput as a standalone package ([#674](https://github.com/versini-org/ui-components/issues/674)) ([34c0cf3](https://github.com/versini-org/ui-components/commit/34c0cf3254dc18a88bcab992a066c53e59f80e3f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-textinput bumped to 1.0.0
+
 ## [1.4.0](https://github.com/versini-org/ui-components/compare/ui-form-v1.3.17...ui-form-v1.4.0) (2024-09-18)
 
 
