@@ -23,15 +23,16 @@ jobs:
         if: ${{ steps.release.outputs.releases_created }}
         uses: actions/checkout@v4
 
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node
         uses: useblacksmith/setup-node@v5
         if: ${{ steps.release.outputs.releases_created }}
         with:
           node-version: 20.x
           registry-url: "https://registry.npmjs.org"
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v4
+          cache: "pnpm"
 
       - name: Install Dependencies
         run: pnpm install
