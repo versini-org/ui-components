@@ -19,6 +19,7 @@
 	"packages/ui-styles": "1.9.8",
 	"packages/ui-system": "1.4.11",
 	"packages/ui-table": "1.0.1",
+	"packages/ui-textarea": "0.0.0",
 	"packages/ui-textinput": "1.0.0",
 	"packages/ui-toggle": "1.0.0"
 }
