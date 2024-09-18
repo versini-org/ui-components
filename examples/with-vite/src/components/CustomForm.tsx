@@ -1,5 +1,5 @@
-import { Button } from "@versini/ui-components";
-import { TextInput } from "@versini/ui-form";
+import { Button } from "@versini/ui-button";
+import { TextInput } from "@versini/ui-textinput";
 
 export const CustomForm = () => {
 	return (

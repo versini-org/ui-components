@@ -11,11 +11,20 @@
 		"start": "webpack serve --mode=development"
 	},
 	"dependencies": {
-		"@versini/ui-components": "workspace:../../packages/ui-components",
+		"@versini/ui-anchor": "workspace:../../packages/ui-anchor",
+		"@versini/ui-button": "workspace:../../packages/ui-button",
+		"@versini/ui-card": "workspace:../../packages/ui-card",
+		"@versini/ui-footer": "workspace:../../packages/ui-footer",
 		"@versini/ui-form": "workspace:../../packages/ui-form",
+		"@versini/ui-header": "workspace:../../packages/ui-header",
 		"@versini/ui-icons": "workspace:../../packages/ui-icons",
+		"@versini/ui-main": "workspace:../../packages/ui-main",
+		"@versini/ui-menu": "workspace:../../packages/ui-menu",
+		"@versini/ui-panel": "workspace:../../packages/ui-panel",
+		"@versini/ui-textinput": "workspace:../../packages/ui-textinput",
 		"@versini/ui-styles": "workspace:../../packages/ui-styles",
 		"@versini/ui-system": "workspace:../../packages/ui-system",
+		"@versini/ui-table": "workspace:../../packages/ui-table",
 		"react": "18.3.1",
 		"react-dom": "18.3.1"
 	},

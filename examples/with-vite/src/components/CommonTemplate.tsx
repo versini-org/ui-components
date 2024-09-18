@@ -1,4 +1,7 @@
-import { Anchor, Button, Footer } from "@versini/ui-components";
+import { Anchor } from "@versini/ui-anchor";
+import { Button } from "@versini/ui-button";
+import { Footer } from "@versini/ui-footer";
+
 import { CustomForm } from "./CustomForm";
 import { SortableTable } from "./SortableTable";
 
