@@ -35,6 +35,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.6.0](https://github.com/versini-org/ui-components/compare/ui-form-v1.5.0...ui-form-v1.6.0) (2024-09-18)
+
+
+### Features
+
+* **TextArea:** extracting TextArea as a standalone package ([#678](https://github.com/versini-org/ui-components/issues/678)) ([cfa6472](https://github.com/versini-org/ui-components/commit/cfa6472810a5979b082e4e77c8d6898693b190dc))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-textarea bumped to 1.0.0
+
 ## [1.5.0](https://github.com/versini-org/ui-components/compare/ui-form-v1.4.0...ui-form-v1.5.0) (2024-09-18)
 
 
