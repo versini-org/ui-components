@@ -35,6 +35,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.6.2](https://github.com/versini-org/ui-components/compare/ui-form-v1.6.1...ui-form-v1.6.2) (2024-09-19)
+
+
+### Bug Fixes
+
+* bump dependencies to latest ([#685](https://github.com/versini-org/ui-components/issues/685)) ([4f79647](https://github.com/versini-org/ui-components/commit/4f79647fea70398adf99653456af89e5175d7008))
+
 ## [1.6.1](https://github.com/versini-org/ui-components/compare/ui-form-v1.6.0...ui-form-v1.6.1) (2024-09-18)
 
 
