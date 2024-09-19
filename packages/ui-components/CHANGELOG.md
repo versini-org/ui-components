@@ -192,6 +192,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.31.3](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.2...ui-components-v5.31.3) (2024-09-19)
+
+
+### Bug Fixes
+
+* bump dependencies to latest ([#685](https://github.com/versini-org/ui-components/issues/685)) ([4f79647](https://github.com/versini-org/ui-components/commit/4f79647fea70398adf99653456af89e5175d7008))
+
 ## [5.31.2](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.1...ui-components-v5.31.2) (2024-09-18)
 
 
