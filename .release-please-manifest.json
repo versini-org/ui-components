@@ -21,5 +21,6 @@
 	"packages/ui-table": "1.0.2",
 	"packages/ui-textarea": "1.0.1",
 	"packages/ui-textinput": "1.0.1",
-	"packages/ui-toggle": "1.0.1"
+	"packages/ui-toggle": "1.0.1",
+	"packages/ui-truncate": "0.0.0"
 }

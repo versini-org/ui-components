@@ -27,6 +27,7 @@
 		"../ui-table/src/**/*.*",
 		"../ui-textarea/src/**/*.*",
 		"../ui-textinput/src/**/*.*",
-		"../ui-toggle/src/**/*.*"
+		"../ui-toggle/src/**/*.*",
+		"../ui-truncate/src/**/*.*"
 	]
 }

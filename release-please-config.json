@@ -22,7 +22,8 @@
 		"packages/ui-table": {},
 		"packages/ui-textarea": {},
 		"packages/ui-textinput": {},
-		"packages/ui-toggle": {}
+		"packages/ui-toggle": {},
+		"packages/ui-truncate": {}
 	},
 	"plugins": ["node-workspace"],
 	"pull-request-header": ":rocket: Automated Release"
