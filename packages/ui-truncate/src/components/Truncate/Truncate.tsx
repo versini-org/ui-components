@@ -1,5 +1,4 @@
 import { Button } from "@versini/ui-button";
-import { Flexgrid, FlexgridItem } from "@versini/ui-system";
 import { useState } from "react";
 
 import type { TruncateProps } from "./TruncateTypes";
@@ -27,21 +26,19 @@ export const Truncate = ({
 	};
 
 	return (
-		<Flexgrid>
-			<FlexgridItem>
-				{isExpanded ? children : string}
-				{isTruncated && (
-					<Button
-						mode={mode}
-						focusMode={focusMode}
-						spacing={{ l: 2 }}
-						size="small"
-						onClick={handleToggleExpanded}
-					>
-						{isExpanded ? "less..." : "more..."}
-					</Button>
-				)}
-			</FlexgridItem>
-		</Flexgrid>
+		<span>
+			{isExpanded ? children : string}
+			{isTruncated && (
+				<Button
+					mode={mode}
+					focusMode={focusMode}
+					spacing={{ l: 2 }}
+					size="small"
+					onClick={handleToggleExpanded}
+				>
+					{isExpanded ? "less..." : "more..."}
+				</Button>
+			)}
+		</span>
 	);
 };

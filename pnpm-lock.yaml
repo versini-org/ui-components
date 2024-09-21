@@ -872,9 +872,6 @@ importers:
       '@versini/ui-button':
         specifier: workspace:../ui-button
         version: link:../ui-button
-      '@versini/ui-system':
-        specifier: workspace:../ui-system
-        version: link:../ui-system
       react:
         specifier: ^18.3.1
         version: 18.3.1

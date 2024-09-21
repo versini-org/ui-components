@@ -41,7 +41,6 @@
 	"dependencies": {
 		"@tailwindcss/typography": "0.5.15",
 		"@versini/ui-button": "workspace:../ui-button",
-		"@versini/ui-system": "workspace:../ui-system",
 		"tailwindcss": "3.4.12"
 	},
 	"sideEffects": ["**/*.css"]
