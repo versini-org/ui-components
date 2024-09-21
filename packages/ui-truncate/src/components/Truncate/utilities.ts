@@ -3,7 +3,7 @@ export const DEFAULT_OMISSION = "===+-av-+===";
 
 type TruncateOptions = {
 	string: string;
-	length: number;
+	length?: number;
 	omission?: string;
 };
 type TruncateResult = {

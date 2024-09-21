@@ -6,7 +6,7 @@ export type TruncateProps = {
 	/**
 	 * The maximum length of the text.
 	 */
-	length: number;
+	length?: number;
 	/**
 	 * The mode of Button. This will change the color of the Button.
 	 */
