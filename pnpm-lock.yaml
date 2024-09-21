@@ -256,6 +256,9 @@ importers:
       '@versini/ui-toggle':
         specifier: workspace:../ui-toggle
         version: link:../ui-toggle
+      '@versini/ui-truncate':
+        specifier: workspace:../ui-truncate
+        version: link:../ui-truncate
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -847,6 +850,28 @@ importers:
       clsx:
         specifier: 2.1.1
         version: 2.1.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tailwindcss:
+        specifier: 3.4.12
+        version: 3.4.12
+    devDependencies:
+      '@versini/ui-styles':
+        specifier: workspace:../ui-styles
+        version: link:../ui-styles
+
+  packages/ui-truncate:
+    dependencies:
+      '@tailwindcss/typography':
+        specifier: 0.5.15
+        version: 0.5.15(tailwindcss@3.4.12)
+      '@versini/ui-button':
+        specifier: workspace:../ui-button
+        version: link:../ui-button
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -7410,7 +7435,7 @@ snapshots:
   '@babel/code-frame@7.24.7':
     dependencies:
       '@babel/highlight': 7.24.7
-      picocolors: 1.0.1
+      picocolors: 1.1.0
 
   '@babel/compat-data@7.24.7': {}
 
