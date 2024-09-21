@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.2](https://github.com/versini-org/ui-components/compare/ui-textarea-v1.0.1...ui-textarea-v1.0.2) (2024-09-21)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.12
+  * devDependencies
+    * @versini/ui-styles bumped to 1.10.0
+
 ## [1.0.1](https://github.com/versini-org/ui-components/compare/ui-textarea-v1.0.0...ui-textarea-v1.0.1) (2024-09-18)
 
 

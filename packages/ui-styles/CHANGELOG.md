@@ -38,6 +38,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.10.0](https://github.com/versini-org/ui-components/compare/ui-styles-v1.9.9...ui-styles-v1.10.0) (2024-09-21)
+
+
+### Features
+
+* **Truncate:** adding Truncate component ([#687](https://github.com/versini-org/ui-components/issues/687)) ([882b63b](https://github.com/versini-org/ui-components/commit/882b63b27dba050b5dbac1d2d82c949acfa5b830))
+
 ## [1.9.9](https://github.com/versini-org/ui-components/compare/ui-styles-v1.9.8...ui-styles-v1.9.9) (2024-09-18)
 
 
