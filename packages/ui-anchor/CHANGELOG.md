@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.4](https://github.com/versini-org/ui-components/compare/ui-anchor-v1.1.3...ui-anchor-v1.1.4) (2024-09-24)
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#692](https://github.com/versini-org/ui-components/issues/692)) ([2300b7c](https://github.com/versini-org/ui-components/commit/2300b7c563ce6d5ad704b93ea7cc63ba9b8c6993))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 1.1.4
+  * devDependencies
+    * @versini/ui-styles bumped to 1.10.1
+
 ## [1.1.3](https://github.com/versini-org/ui-components/compare/ui-anchor-v1.1.2...ui-anchor-v1.1.3) (2024-09-21)
 
 
