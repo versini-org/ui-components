@@ -404,5 +404,19 @@
       "limit": "67 KB",
       "passed": true
     }
+  },
+  "1.6.4": {
+    "../bundlesize/dist/form/assets/index.js": {
+      "fileSize": 22053,
+      "fileSizeGzip": 5573,
+      "limit": "20 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/form/assets/vendor.js": {
+      "fileSize": 142129,
+      "fileSizeGzip": 45524,
+      "limit": "67 KB",
+      "passed": true
+    }
   }
 }
