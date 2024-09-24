@@ -17,7 +17,7 @@ export const Truncate = ({
 	}
 	const { string, isTruncated } = truncate({
 		string: children,
-		length,
+		idealLength: length,
 	});
 
 	const handleToggleExpanded = (e: { preventDefault: () => void }) => {

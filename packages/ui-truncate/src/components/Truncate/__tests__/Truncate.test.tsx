@@ -18,7 +18,7 @@ describe("Truncate Component", () => {
 	it('should render truncated text and "more..." button when children is a string and exceeds length', () => {
 		const text = "This is a long text that needs to be truncated.";
 		render(<Truncate length={20}>{text}</Truncate>);
-		expect(screen.getByText("This is")).toBeInTheDocument();
+		expect(screen.getByText("This is a long text that")).toBeInTheDocument();
 		expect(screen.getByText("more...")).toBeInTheDocument();
 	});
 
