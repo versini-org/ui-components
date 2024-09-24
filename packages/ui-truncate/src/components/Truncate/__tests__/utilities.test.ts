@@ -1,48 +1,36 @@
 import { describe, expect, it } from "vitest";
-import { truncate } from "../utilities.ts"; // Adjust the import path as needed
+import { truncate } from "../utilities.ts";
 
 describe("truncate", () => {
-	it("should return the original string if length is greater than or equal to string length", () => {
+	it("should truncate at the ideal length", () => {
 		const result = truncate({
 			string: "Hello, World!",
-			length: 20,
+			idealLength: 6,
+		});
+		expect(result).toEqual({ string: "Hello,", isTruncated: true });
+	});
+
+	it("should truncate at the next space found right after the ideal length", () => {
+		const result = truncate({
+			string: "Hello, World!",
+			idealLength: 4,
+		});
+		expect(result).toEqual({ string: "Hello,", isTruncated: true });
+	});
+
+	it("should truncate at the next space found right after the ideal length", () => {
+		const result = truncate({
+			string: "Hello, World! This is your time to shine!",
+			idealLength: 8,
+		});
+		expect(result).toEqual({ string: "Hello, World!", isTruncated: true });
+	});
+
+	it("should handle edge case where ideal length is more than string length", () => {
+		const result = truncate({
+			string: "Hello, World!",
+			idealLength: 20,
 		});
 		expect(result).toEqual({ string: "Hello, World!", isTruncated: false });
-	});
-
-	it("should truncate the string if length is less than string length", () => {
-		const result = truncate({
-			string: "Hello, World!",
-			length: 5,
-			omission: "...",
-		});
-		expect(result).toEqual({ string: "He", isTruncated: true });
-	});
-
-	it("should return an empty string if length is less than omission length", () => {
-		const result = truncate({
-			string: "Hello, World!",
-			length: 2,
-			omission: "...",
-		});
-		expect(result).toEqual({ string: "", isTruncated: true });
-	});
-
-	it("should handle edge case where length equals omission length", () => {
-		const result = truncate({
-			string: "Hello, World!",
-			length: 3,
-			omission: "...",
-		});
-		expect(result).toEqual({ string: "", isTruncated: true });
-	});
-
-	it("should handle edge case where omission is an empty string", () => {
-		const result = truncate({
-			string: "Hello, World!",
-			length: 5,
-			omission: "",
-		});
-		expect(result).toEqual({ string: "Hello", isTruncated: true });
 	});
 });

@@ -1,30 +1,37 @@
 export const DEFAULT_LENGTH = 200;
-export const DEFAULT_OMISSION = "===+-av-+===";
 
 type TruncateOptions = {
 	string: string;
-	length?: number;
-	omission?: string;
+	idealLength?: number;
 };
 type TruncateResult = {
 	string: string;
 	isTruncated: boolean;
 };
 
+/**
+ * This function will truncate the string at the last word boundary
+ * before the ideal length.
+ * - If ideal length ends up in the middle of a word, truncate at the next space.
+ * - If ideal length ends up on a space, truncate at the ideal length.
+ */
 export const truncate = ({
 	string,
-	length = DEFAULT_LENGTH,
-	omission = DEFAULT_OMISSION,
+	idealLength = DEFAULT_LENGTH,
 }: TruncateOptions): TruncateResult => {
 	const strLength = string.length;
-	if (length >= strLength) {
-		return { string, isTruncated: false };
+	if (strLength <= idealLength) {
+		return { string: string, isTruncated: false };
 	}
-	const end = length - omission.length;
-	if (end < 1) {
-		return { string: "", isTruncated: true };
-	}
-	const result = string.slice(0, end);
 
-	return { string: result, isTruncated: true };
+	const originalTrunc = string.charAt(idealLength);
+	if (originalTrunc === " ") {
+		return { string: string.slice(0, idealLength), isTruncated: true };
+	}
+
+	const nextSpace = string.slice(idealLength).search(" ");
+	return {
+		string: string.slice(0, idealLength + nextSpace),
+		isTruncated: true,
+	};
 };
