@@ -43,6 +43,14 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		const labelRef = useRef<HTMLLabelElement>(null);
 		const helperTextRef = useRef<HTMLDivElement>(null);
 
+		const sizeStyles = {
+			xs: { label: "-25px", helperText: "29px" },
+			sm: { label: "-29px", helperText: "33px" },
+			md: { label: "-33px", helperText: "37px" },
+			lg: { label: "-15px", helperText: "22px" },
+			xl: { label: "-19px", helperText: "25px" },
+		};
+
 		const textInputClassName = getTextInputClasses({
 			className,
 			inputClassName,
@@ -71,60 +79,17 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		}, [rect]);
 		/* c8 ignore end */
 
+		/**
+		 * This effect sets the label and helper text position based on
+		 * the size of the input.
+		 */
 		useLayoutEffect(() => {
-			switch (size) {
-				case "xs":
-					labelRef?.current?.style.setProperty(
-						"--av-text-input-label",
-						"-25px",
-					);
-					helperTextRef?.current?.style.setProperty(
-						"--av-text-input-helper-text",
-						"29px",
-					);
-					break;
-				case "sm":
-					labelRef?.current?.style.setProperty(
-						"--av-text-input-label",
-						"-29px",
-					);
-					helperTextRef?.current?.style.setProperty(
-						"--av-text-input-helper-text",
-						"33px",
-					);
-					break;
-				case "lg":
-					labelRef?.current?.style.setProperty(
-						"--av-text-input-label",
-						"-15px",
-					);
-					helperTextRef?.current?.style.setProperty(
-						"--av-text-input-helper-text",
-						"22px",
-					);
-					break;
-				case "xl":
-					labelRef?.current?.style.setProperty(
-						"--av-text-input-label",
-						"-19px",
-					);
-					helperTextRef?.current?.style.setProperty(
-						"--av-text-input-helper-text",
-						"25px",
-					);
-					break;
-
-				default:
-					labelRef?.current?.style.setProperty(
-						"--av-text-input-label",
-						"-33px",
-					);
-					helperTextRef?.current?.style.setProperty(
-						"--av-text-input-helper-text",
-						"37px",
-					);
-					break;
-			}
+			const { label, helperText } = sizeStyles[size];
+			labelRef?.current?.style.setProperty("--av-text-input-label", label);
+			helperTextRef?.current?.style.setProperty(
+				"--av-text-input-helper-text",
+				helperText,
+			);
 		}, [size]);
 
 		return (
