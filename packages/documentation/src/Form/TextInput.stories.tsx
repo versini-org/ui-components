@@ -65,3 +65,29 @@ RightElement.args = {
 	),
 	helperText: "Powered by the sun",
 };
+
+export const AllSizes: Story<any> = (args) => (
+	<div className="min-h-10">
+		<form noValidate>
+			<div className="h-28">
+				<TextInput {...args} size="xs" defaultValue="xs" />
+			</div>
+			<div className="h-28">
+				<TextInput {...args} size="sm" defaultValue="sm" />
+			</div>
+			<div className="h-28">
+				<TextInput {...args} size="md" defaultValue="md" />
+			</div>
+			<div className="h-28">
+				<TextInput {...args} size="lg" defaultValue="lg" />
+			</div>
+			<div className="h-28">
+				<TextInput {...args} size="xl" defaultValue="xl" />
+			</div>
+		</form>
+	</div>
+);
+AllSizes.args = {
+	helperText: "Powered by the sun",
+	label: "Pose your question here",
+};

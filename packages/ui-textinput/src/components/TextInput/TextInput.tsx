@@ -1,6 +1,6 @@
 import { useResizeObserver, useUniqueId } from "@versini/ui-hooks";
 import { LiveRegion } from "@versini/ui-private";
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TEXT_INPUT_CLASSNAME } from "../../common/constants";
 import type { TextInputProps } from "./TextInputTypes";
@@ -40,6 +40,17 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		const [inputPaddingRight, setInputPaddingRight] = useState(0);
 		const inputId = useUniqueId({ id, prefix: `${TEXT_INPUT_CLASSNAME}-` });
 		const liveErrorMessage = `${name} error, ${helperText}`;
+		const labelRef = useRef<HTMLLabelElement>(null);
+		const helperTextRef = useRef<HTMLDivElement>(null);
+
+		const sizeStyles = {
+			xs: { label: "-25px", helperText: "30px" },
+			sm: { label: "-29px", helperText: "34px" },
+			md: { label: "-33px", helperText: "38px" },
+			lg: { label: "-15px", helperText: "22px" },
+			xl: { label: "-19px", helperText: "25px" },
+		};
+
 		const textInputClassName = getTextInputClasses({
 			className,
 			inputClassName,
@@ -68,6 +79,19 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		}, [rect]);
 		/* c8 ignore end */
 
+		/**
+		 * This effect sets the label and helper text position based on
+		 * the size of the input.
+		 */
+		useLayoutEffect(() => {
+			const { label, helperText } = sizeStyles[size];
+			labelRef?.current?.style.setProperty("--av-text-input-label", label);
+			helperTextRef?.current?.style.setProperty(
+				"--av-text-input-helper-text",
+				helperText,
+			);
+		}, [size]);
+
 		return (
 			<div className={textInputClassName.wrapper}>
 				<label
@@ -93,6 +117,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 				/>
 				{!raw && !labelHidden && (
 					<label
+						ref={labelRef}
 						aria-hidden={true}
 						htmlFor={inputId}
 						className={textInputClassName.visibleLabel}
@@ -103,6 +128,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 
 				{helperText && (
 					<div
+						ref={helperTextRef}
 						id={`${inputId}-helper`}
 						className={textInputClassName.helperText}
 					>
