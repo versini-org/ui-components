@@ -38,6 +38,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.10.2](https://github.com/versini-org/ui-components/compare/ui-styles-v1.10.1...ui-styles-v1.10.2) (2024-09-26)
+
+
+### Bug Fixes
+
+* **TextInput:** misaligned label and helper text at different sizes ([#695](https://github.com/versini-org/ui-components/issues/695)) ([9ff6fa1](https://github.com/versini-org/ui-components/commit/9ff6fa1345f386dda77a955e4c0883186feb5350))
+
 ## [1.10.1](https://github.com/versini-org/ui-components/compare/ui-styles-v1.10.0...ui-styles-v1.10.1) (2024-09-24)
 
 

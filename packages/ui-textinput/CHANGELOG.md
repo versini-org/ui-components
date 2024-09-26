@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.1.0](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.0.3...ui-textinput-v1.1.0) (2024-09-26)
+
+
+### Features
+
+* **TextInput:** adding size prop ([#693](https://github.com/versini-org/ui-components/issues/693)) ([397d22f](https://github.com/versini-org/ui-components/commit/397d22ffecb10b2c17696efc7a78c284797fe73c))
+
+
+### Bug Fixes
+
+* **TextInput:** misaligned label and helper text at different sizes ([#695](https://github.com/versini-org/ui-components/issues/695)) ([9ff6fa1](https://github.com/versini-org/ui-components/commit/9ff6fa1345f386dda77a955e4c0883186feb5350))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.14
+  * devDependencies
+    * @versini/ui-button bumped to 1.1.5
+    * @versini/ui-icons bumped to 1.12.6
+    * @versini/ui-styles bumped to 1.10.2
+
 ## [1.0.3](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.0.2...ui-textinput-v1.0.3) (2024-09-24)
 
 
