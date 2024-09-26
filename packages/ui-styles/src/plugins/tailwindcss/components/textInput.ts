@@ -8,7 +8,7 @@ export default {
 	/* move the label above the field (on focus) */
 	[`.av-text-input:focus + label[aria-hidden="true"],
 	  .av-text-input:not(:placeholder-shown) + label[aria-hidden="true"]`]: {
-		transform: "translate(12px, var(--av-text-input-label, -37px)) scale(0.75)",
+		transform: "translate(12px, var(--av-text-input-label, -33px)) scale(0.75)",
 	},
 	/* move the helper text below the field */
 	".av-text-input-helper-text": {

@@ -35,11 +35,11 @@ describe("TextInput sizes", () => {
 		switch (size) {
 			case "xs":
 				heightClass = "h-8";
-				paddingClass = "px-2";
+				paddingClass = "px-4";
 				break;
 			case "sm":
 				heightClass = "h-10";
-				paddingClass = "px-3";
+				paddingClass = "px-4";
 				break;
 			case "md":
 				heightClass = "h-12";

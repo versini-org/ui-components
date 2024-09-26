@@ -1,6 +1,6 @@
 import { useResizeObserver, useUniqueId } from "@versini/ui-hooks";
 import { LiveRegion } from "@versini/ui-private";
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TEXT_INPUT_CLASSNAME } from "../../common/constants";
 import type { TextInputProps } from "./TextInputTypes";
@@ -40,6 +40,9 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		const [inputPaddingRight, setInputPaddingRight] = useState(0);
 		const inputId = useUniqueId({ id, prefix: `${TEXT_INPUT_CLASSNAME}-` });
 		const liveErrorMessage = `${name} error, ${helperText}`;
+		const labelRef = useRef<HTMLLabelElement>(null);
+		const helperTextRef = useRef<HTMLDivElement>(null);
+
 		const textInputClassName = getTextInputClasses({
 			className,
 			inputClassName,
@@ -68,6 +71,62 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		}, [rect]);
 		/* c8 ignore end */
 
+		useLayoutEffect(() => {
+			switch (size) {
+				case "xs":
+					labelRef?.current?.style.setProperty(
+						"--av-text-input-label",
+						"-25px",
+					);
+					helperTextRef?.current?.style.setProperty(
+						"--av-text-input-helper-text",
+						"29px",
+					);
+					break;
+				case "sm":
+					labelRef?.current?.style.setProperty(
+						"--av-text-input-label",
+						"-29px",
+					);
+					helperTextRef?.current?.style.setProperty(
+						"--av-text-input-helper-text",
+						"33px",
+					);
+					break;
+				case "lg":
+					labelRef?.current?.style.setProperty(
+						"--av-text-input-label",
+						"-15px",
+					);
+					helperTextRef?.current?.style.setProperty(
+						"--av-text-input-helper-text",
+						"22px",
+					);
+					break;
+				case "xl":
+					labelRef?.current?.style.setProperty(
+						"--av-text-input-label",
+						"-19px",
+					);
+					helperTextRef?.current?.style.setProperty(
+						"--av-text-input-helper-text",
+						"25px",
+					);
+					break;
+
+				default:
+					labelRef?.current?.style.setProperty(
+						"--av-text-input-label",
+						"-33px",
+					);
+					helperTextRef?.current?.style.setProperty(
+						"--av-text-input-helper-text",
+						"37px",
+					);
+					break;
+			}
+		}, [size]);
+
 		return (
 			<div className={textInputClassName.wrapper}>
 				<label
@@ -93,6 +152,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 				/>
 				{!raw && !labelHidden && (
 					<label
+						ref={labelRef}
 						aria-hidden={true}
 						htmlFor={inputId}
 						className={textInputClassName.visibleLabel}
@@ -103,6 +163,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 
 				{helperText && (
 					<div
+						ref={helperTextRef}
 						id={`${inputId}-helper`}
 						className={textInputClassName.helperText}
 					>

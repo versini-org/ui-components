@@ -164,23 +164,23 @@ export const getTextInputClasses = ({
 				getSpacing(spacing),
 			);
 
-	let sizeClass = "";
+	let heightClass = "";
 	switch (size) {
 		case "xs":
-			sizeClass = "h-8 px-2";
+			heightClass = "h-8";
 			break;
 		case "sm":
-			sizeClass = "h-10 px-3";
+			heightClass = "h-10";
 			break;
 		case "lg":
-			sizeClass = "h-14 px-4";
+			heightClass = "h-14";
 			break;
 		case "xl":
-			sizeClass = "h-16 px-4";
+			heightClass = "h-16";
 			break;
 
 		default:
-			sizeClass = "h-12 px-4";
+			heightClass = "h-12";
 			break;
 	}
 
@@ -189,8 +189,8 @@ export const getTextInputClasses = ({
 		: clsx(
 				TEXT_INPUT_CLASSNAME,
 				inputClassName,
-				sizeClass,
-				"rounded-md text-base",
+				heightClass,
+				"rounded-md text-base px-4",
 				getTextInputColorClasses({ mode }),
 				getTextInputFocusClasses({ focusMode }),
 				getTextInputBorderClasses({ noBorder, error }),
