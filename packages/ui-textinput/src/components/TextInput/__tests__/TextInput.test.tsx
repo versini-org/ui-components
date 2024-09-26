@@ -10,6 +10,74 @@ describe("TextInput (exceptions)", () => {
 	});
 });
 
+describe("TextInput sizes", () => {
+	it.each`
+		size    | description
+		${"xs"} | ${"extra small"}
+		${"sm"} | ${"small"}
+		${"md"} | ${"medium"}
+		${"lg"} | ${"large"}
+		${"xl"} | ${"extra large"}
+	`("should render a text input with size $description", async ({ size }) => {
+		render(<TextInput label="hello world" name="toto" size={size} />);
+		const label = await screen.findAllByText("hello world");
+		const input = await screen.findByRole("textbox");
+
+		expect(label[0]?.className).toContain("sr-only");
+		expectToHaveClasses(label[1], [
+			"absolute",
+			"cursor-text",
+			"font-medium",
+			"text-copy-dark",
+		]);
+		let heightClass = "",
+			paddingClass = "";
+		switch (size) {
+			case "xs":
+				heightClass = "h-8";
+				paddingClass = "px-2";
+				break;
+			case "sm":
+				heightClass = "h-10";
+				paddingClass = "px-3";
+				break;
+			case "md":
+				heightClass = "h-12";
+				paddingClass = "px-4";
+				break;
+			case "lg":
+				heightClass = "h-14";
+				paddingClass = "px-4";
+				break;
+			case "xl":
+				heightClass = "h-16";
+				paddingClass = "px-4";
+				break;
+
+			default:
+				heightClass = "h-12";
+				paddingClass = "px-4";
+				break;
+		}
+		expectToHaveClasses(input, [
+			TEXT_INPUT_CLASSNAME,
+			"bg-surface-lighter",
+			"border-2",
+			"border-border-dark",
+			"caret-copy-dark",
+			"focus:outline-2",
+			"focus:outline-focus-dark",
+			"focus:outline-offset-2",
+			"focus:outline",
+			heightClass,
+			paddingClass,
+			"rounded-md",
+			"text-base",
+			"text-copy-dark",
+		]);
+	});
+});
+
 describe("TextInput modifiers", () => {
 	it("should render a dark or light (system) text input", async () => {
 		render(<TextInput label="hello world" name="toto" />);
@@ -137,7 +205,6 @@ describe("TextInput modifiers", () => {
 			/>,
 		);
 		const label = await screen.findAllByText("hello world");
-		screen.debug(label);
 		expect(label.length).toBe(1);
 	});
 
