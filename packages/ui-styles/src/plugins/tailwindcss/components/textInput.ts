@@ -13,7 +13,7 @@ export default {
 	/* move the helper text below the field */
 	".av-text-input-helper-text": {
 		transform:
-			"translate(12px, var(--av-text-input-helper-text, 44px)) scale(0.75)",
+			"translate(12px, var(--av-text-input-helper-text, 38px)) scale(0.75)",
 		transformOrigin: "top left",
 	},
 };
