@@ -44,9 +44,9 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 		const helperTextRef = useRef<HTMLDivElement>(null);
 
 		const sizeStyles = {
-			xs: { label: "-25px", helperText: "29px" },
-			sm: { label: "-29px", helperText: "33px" },
-			md: { label: "-33px", helperText: "37px" },
+			xs: { label: "-25px", helperText: "30px" },
+			sm: { label: "-29px", helperText: "34px" },
+			md: { label: "-33px", helperText: "38px" },
 			lg: { label: "-15px", helperText: "22px" },
 			xl: { label: "-19px", helperText: "25px" },
 		};
