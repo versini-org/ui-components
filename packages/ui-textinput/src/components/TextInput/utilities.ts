@@ -7,6 +7,7 @@ import {
 	TEXT_INPUT_HELPER_TEXT_CLASSNAME,
 	TEXT_INPUT_WRAPPER_CLASSNAME,
 } from "../../common/constants";
+import type { Size } from "./TextInputTypes";
 
 type getTextInputClassesProps = {
 	disabled: boolean;
@@ -15,6 +16,7 @@ type getTextInputClassesProps = {
 	mode: "dark" | "light" | "system" | "alt-system";
 	noBorder: boolean;
 	raw: boolean;
+	size: Size;
 
 	className?: string;
 	inputClassName?: string;
@@ -151,6 +153,7 @@ export const getTextInputClasses = ({
 	spacing,
 	mode,
 	focusMode,
+	size,
 }: getTextInputClassesProps) => {
 	const wrapper = raw
 		? className
@@ -161,12 +164,33 @@ export const getTextInputClasses = ({
 				getSpacing(spacing),
 			);
 
+	let sizeClass = "";
+	switch (size) {
+		case "xs":
+			sizeClass = "h-8 px-2";
+			break;
+		case "sm":
+			sizeClass = "h-10 px-3";
+			break;
+		case "lg":
+			sizeClass = "h-14 px-4";
+			break;
+		case "xl":
+			sizeClass = "h-16 px-4";
+			break;
+
+		default:
+			sizeClass = "h-12 px-4";
+			break;
+	}
+
 	const input = raw
 		? clsx(inputClassName)
 		: clsx(
 				TEXT_INPUT_CLASSNAME,
 				inputClassName,
-				"h-12 rounded-md px-4 text-base",
+				sizeClass,
+				"rounded-md text-base",
 				getTextInputColorClasses({ mode }),
 				getTextInputFocusClasses({ focusMode }),
 				getTextInputBorderClasses({ noBorder, error }),

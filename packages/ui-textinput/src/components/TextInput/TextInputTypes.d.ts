@@ -1,5 +1,7 @@
 import type { SpacingProps } from "@versini/ui-private/dist/utilities";
 
+export type Size = "xs" | "sm" | "md" | "lg" | "xl";
+
 export type CommonTextInputProps = {
 	/**
 	 * The label of the TextInput.
@@ -49,8 +51,12 @@ export type CommonTextInputProps = {
 	 * @default false
 	 */
 	raw?: boolean;
+	/**
+	 * Controls input height and horizontal padding, 'md' by default
+	 */
+	size?: Size;
 } & SpacingProps &
-	React.InputHTMLAttributes<HTMLInputElement>;
+	Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">;
 
 export type TextInputProps = {
 	/**
@@ -59,8 +65,7 @@ export type TextInputProps = {
 	 * elements, such a Button.
 	 */
 	rightElement?: React.ReactElement;
-} & CommonTextInputProps &
-	React.InputHTMLAttributes<HTMLInputElement>;
+} & CommonTextInputProps;
 
 export type TextInputMaskProps = {
 	/**
@@ -78,5 +83,4 @@ export type TextInputMaskProps = {
 	 * Callback fired when the user blurs out of the TextInputMask.
 	 */
 	onTextInputMaskBlur?: () => void;
-} & CommonTextInputProps &
-	React.InputHTMLAttributes<HTMLInputElement>;
+} & CommonTextInputProps;

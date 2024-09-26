@@ -20,6 +20,7 @@ export default {
 		className: "",
 		mode: "system",
 		labelHidden: false,
+		size: "md",
 	},
 	argTypes: {
 		mode: {
@@ -28,6 +29,10 @@ export default {
 		},
 		focusMode: {
 			options: ["dark", "light", "system", "alt-system"],
+			control: { type: "radio" },
+		},
+		size: {
+			options: ["xs", "sm", "md", "lg", "xl"],
 			control: { type: "radio" },
 		},
 	},
