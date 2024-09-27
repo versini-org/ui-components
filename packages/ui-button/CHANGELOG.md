@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.7](https://github.com/versini-org/ui-components/compare/ui-button-v1.1.6...ui-button-v1.1.7) (2024-09-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.16
+  * devDependencies
+    * @versini/ui-icons bumped to 1.12.8
+
 ## [1.1.6](https://github.com/versini-org/ui-components/compare/ui-button-v1.1.5...ui-button-v1.1.6) (2024-09-27)
 
 
