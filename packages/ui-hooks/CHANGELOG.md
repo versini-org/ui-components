@@ -40,6 +40,13 @@ https://usehooks-ts.com/react-hook/use-local-storage
 
 # Changelog
 
+## [4.2.0](https://github.com/versini-org/ui-components/compare/ui-hooks-v4.1.3...ui-hooks-v4.2.0) (2024-09-27)
+
+
+### Features
+
+* **ui-hooks:** adding useHotkeys ([#696](https://github.com/versini-org/ui-components/issues/696)) ([2ba7a50](https://github.com/versini-org/ui-components/commit/2ba7a50b00bb2535166a1d9cbc97d32aef79d109))
+
 ## [4.1.3](https://github.com/versini-org/ui-components/compare/ui-hooks-v4.1.2...ui-hooks-v4.1.3) (2024-09-09)
 
 

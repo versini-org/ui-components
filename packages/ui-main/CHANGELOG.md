@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.6](https://github.com/versini-org/ui-components/compare/ui-main-v1.0.5...ui-main-v1.0.6) (2024-09-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.15
+
 ## [1.0.5](https://github.com/versini-org/ui-components/compare/ui-main-v1.0.4...ui-main-v1.0.5) (2024-09-26)
 
 
