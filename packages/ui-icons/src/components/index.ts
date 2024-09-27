@@ -21,6 +21,7 @@ import { IconPrevious } from "./Icons/IconPrevious";
 import { IconProfile } from "./Icons/IconProfile";
 import { IconRefresh } from "./Icons/IconRefresh";
 import { IconRestore } from "./Icons/IconRestore";
+import { IconSearch } from "./Icons/IconSearch";
 import { IconSettings } from "./Icons/IconSettings";
 import { IconShow } from "./Icons/IconShow";
 import { IconSort } from "./Icons/IconSort";
@@ -54,6 +55,7 @@ export {
 	IconProfile,
 	IconRefresh,
 	IconRestore,
+	IconSearch,
 	IconSettings,
 	IconShow,
 	IconSort,

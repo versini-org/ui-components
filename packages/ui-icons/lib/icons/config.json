@@ -139,5 +139,10 @@
 		"name": "IconPasskey",
 		"title": "Passkey",
 		"monotone": true
+	},
+	"magnifying-glass": {
+		"name": "IconSearch",
+		"title": "Search",
+		"monotone": true
 	}
 }

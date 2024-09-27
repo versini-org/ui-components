@@ -25,6 +25,7 @@ import {
 	IconProfile,
 	IconRefresh,
 	IconRestore,
+	IconSearch,
 	IconSettings,
 	IconShow,
 	IconSort,
@@ -289,6 +290,13 @@ describe("Generic Icons prop tests", () => {
 						viewBox={viewBox}
 						spacing={spacing}
 					/>
+					<IconSearch
+						data-testid="icon-search"
+						className={className}
+						fill={fill}
+						viewBox={viewBox}
+						spacing={spacing}
+					/>
 				</>,
 			);
 			[
@@ -322,6 +330,7 @@ describe("Generic Icons prop tests", () => {
 				"icon-locked",
 				"icon-key",
 				"icon-passkey",
+				"icon-search",
 			].forEach(async (dataTestId) => {
 				await renderExpected({
 					dataTestId,
