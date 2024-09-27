@@ -35,6 +35,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.13.0](https://github.com/versini-org/ui-components/compare/ui-icons-v1.12.8...ui-icons-v1.13.0) (2024-09-27)
+
+
+### Features
+
+* **ui-icons:** adding IconSearch ([#700](https://github.com/versini-org/ui-components/issues/700)) ([b5f6d58](https://github.com/versini-org/ui-components/commit/b5f6d58b43cc51095251d9e87e632f7ca7ad9833))
+
 ## [1.12.8](https://github.com/versini-org/ui-components/compare/ui-icons-v1.12.7...ui-icons-v1.12.8) (2024-09-27)
 
 

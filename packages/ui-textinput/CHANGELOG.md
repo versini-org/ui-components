@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.3](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.1.2...ui-textinput-v1.1.3) (2024-09-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @versini/ui-button bumped to 1.1.8
+    * @versini/ui-icons bumped to 1.13.0
+
 ## [1.1.2](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.1.1...ui-textinput-v1.1.2) (2024-09-27)
 
 
