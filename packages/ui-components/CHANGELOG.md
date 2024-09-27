@@ -192,6 +192,28 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.31.10](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.9...ui-components-v5.31.10) (2024-09-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-anchor bumped to 1.1.9
+    * @versini/ui-button bumped to 1.1.9
+    * @versini/ui-bubble bumped to 1.0.9
+    * @versini/ui-card bumped to 1.0.8
+    * @versini/ui-footer bumped to 1.0.8
+    * @versini/ui-header bumped to 1.0.8
+    * @versini/ui-icons bumped to 1.13.1
+    * @versini/ui-main bumped to 1.0.8
+    * @versini/ui-menu bumped to 1.0.9
+    * @versini/ui-panel bumped to 1.0.9
+    * @versini/ui-pill bumped to 1.0.8
+    * @versini/ui-private bumped to 1.4.17
+    * @versini/ui-spinner bumped to 1.0.8
+    * @versini/ui-table bumped to 1.0.9
+
 ## [5.31.9](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.8...ui-components-v5.31.9) (2024-09-27)
 
 
