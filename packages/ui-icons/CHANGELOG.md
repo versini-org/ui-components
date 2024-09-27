@@ -35,6 +35,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.12.7](https://github.com/versini-org/ui-components/compare/ui-icons-v1.12.6...ui-icons-v1.12.7) (2024-09-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.15
+  * devDependencies
+    * @versini/ui-private bumped to 1.4.15
+
 ## [1.12.6](https://github.com/versini-org/ui-components/compare/ui-icons-v1.12.5...ui-icons-v1.12.6) (2024-09-26)
 
 

@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.1](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.1.0...ui-textinput-v1.1.1) (2024-09-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-hooks bumped to 4.2.0
+    * @versini/ui-private bumped to 1.4.15
+  * devDependencies
+    * @versini/ui-button bumped to 1.1.6
+    * @versini/ui-icons bumped to 1.12.7
+
 ## [1.1.0](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.0.3...ui-textinput-v1.1.0) (2024-09-26)
 
 
