@@ -26,7 +26,7 @@ export const IconPasskey = ({
 	const opacity = monotone ? "1" : "0.4";
 	return (
 		<SvgIcon
-			defaultViewBox="0 0 216 216"
+			defaultViewBox="0 0 190 190"
 			defaultClassName="size-5"
 			viewBox={viewBox}
 			className={className}
