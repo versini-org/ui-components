@@ -40,6 +40,13 @@ https://usehooks-ts.com/react-hook/use-local-storage
 
 # Changelog
 
+## [4.2.1](https://github.com/versini-org/ui-components/compare/ui-hooks-v4.2.0...ui-hooks-v4.2.1) (2024-09-27)
+
+
+### Bug Fixes
+
+* **ui-hooks:** useHotkeys is not exported ([#698](https://github.com/versini-org/ui-components/issues/698)) ([463fc86](https://github.com/versini-org/ui-components/commit/463fc86b19cf743eb8636aceaa1cce1b209f0909))
+
 ## [4.2.0](https://github.com/versini-org/ui-components/compare/ui-hooks-v4.1.3...ui-hooks-v4.2.0) (2024-09-27)
 
 

@@ -33,6 +33,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.4.16](https://github.com/versini-org/ui-components/compare/ui-private-v1.4.15...ui-private-v1.4.16) (2024-09-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-hooks bumped to 4.2.1
+
 ## [1.4.15](https://github.com/versini-org/ui-components/compare/ui-private-v1.4.14...ui-private-v1.4.15) (2024-09-27)
 
 
