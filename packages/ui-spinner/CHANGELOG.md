@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.5](https://github.com/versini-org/ui-components/compare/ui-spinner-v1.0.4...ui-spinner-v1.0.5) (2024-09-26)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.14
+  * devDependencies
+    * @versini/ui-styles bumped to 1.10.2
+
 ## [1.0.4](https://github.com/versini-org/ui-components/compare/ui-spinner-v1.0.3...ui-spinner-v1.0.4) (2024-09-24)
 
 
