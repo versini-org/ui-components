@@ -4,8 +4,8 @@ import {
 	FloatingPortal,
 	useMergeRefs,
 } from "@floating-ui/react";
-import { useUniqueId } from "@versini/ui-hooks";
 import clsx from "clsx";
+import { useId } from "react";
 import * as React from "react";
 
 import { ModalContext } from "./ModalContext";
@@ -68,7 +68,7 @@ export const ModalHeading = React.forwardRef<
 	React.HTMLProps<HTMLHeadingElement>
 >(function ModalHeading({ children, ...props }, ref) {
 	const { setLabelId } = useModalContext();
-	const id = useUniqueId();
+	const id = useId();
 
 	// Only sets `aria-labelledby` on the Modal root element
 	// if this component is mounted inside it.
@@ -89,7 +89,7 @@ export const ModalDescription = React.forwardRef<
 	React.HTMLProps<HTMLParagraphElement>
 >(function ModalDescription({ children, ...props }, ref) {
 	const { setDescriptionId } = useModalContext();
-	const id = useUniqueId();
+	const id = useId();
 
 	// Only sets `aria-describedby` on the Modal root element
 	// if this component is mounted inside it.
