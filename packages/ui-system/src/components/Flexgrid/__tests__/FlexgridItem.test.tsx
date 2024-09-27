@@ -1,5 +1,4 @@
 import { render } from "@testing-library/react";
-import { Button } from "@versini/ui-button";
 
 import { Flexgrid, FlexgridItem } from "../..";
 import {
@@ -15,7 +14,7 @@ describe("FlexgridItem (exceptions)", () => {
 	it("should render default content even without a Flexgrid parent", () => {
 		const { getByTestId } = render(
 			<FlexgridItem data-testid="gridcell-1">
-				<Button>item 1</Button>
+				<button>item 1</button>
 			</FlexgridItem>,
 		);
 		const gridCellRoot = getByTestId("gridcell-1");
@@ -33,7 +32,7 @@ describe("FlexgridItem default rules", () => {
 		const { getByTestId } = render(
 			<Flexgrid>
 				<FlexgridItem data-testid="gridcell-1">
-					<Button>item 1</Button>
+					<button>item 1</button>
 				</FlexgridItem>
 			</Flexgrid>,
 		);
@@ -51,7 +50,7 @@ describe("FlexgridItem props", () => {
 		const { getByTestId } = render(
 			<Flexgrid>
 				<FlexgridItem data-testid="gridcell-1" span={4}>
-					<Button>item 1</Button>
+					<button>item 1</button>
 				</FlexgridItem>
 			</Flexgrid>,
 		);
@@ -67,7 +66,7 @@ describe("FlexgridItem props", () => {
 		const { getByTestId } = render(
 			<Flexgrid>
 				<FlexgridItem data-testid="gridcell-1" span="auto">
-					<Button>item 1</Button>
+					<button>item 1</button>
 				</FlexgridItem>
 			</Flexgrid>,
 		);
@@ -107,7 +106,7 @@ describe("FlexgridItem props", () => {
 			const { getByTestId } = render(
 				<Flexgrid>
 					<FlexgridItem data-testid="gridcell-1" span={{ [breakpoint]: span }}>
-						<Button>item 1</Button>
+						<button>item 1</button>
 					</FlexgridItem>
 				</Flexgrid>,
 			);
