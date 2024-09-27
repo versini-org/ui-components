@@ -33,6 +33,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.4.17](https://github.com/versini-org/ui-components/compare/ui-private-v1.4.16...ui-private-v1.4.17) (2024-09-27)
+
+
+### Bug Fixes
+
+* minor optimization regarding core dependencies ([#702](https://github.com/versini-org/ui-components/issues/702)) ([e2ad288](https://github.com/versini-org/ui-components/commit/e2ad2885adb594f22eee804498d17acfcc48d830))
+
 ## [1.4.16](https://github.com/versini-org/ui-components/compare/ui-private-v1.4.15...ui-private-v1.4.16) (2024-09-27)
 
 

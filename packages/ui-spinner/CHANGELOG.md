@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.8](https://github.com/versini-org/ui-components/compare/ui-spinner-v1.0.7...ui-spinner-v1.0.8) (2024-09-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.17
+
 ## [1.0.7](https://github.com/versini-org/ui-components/compare/ui-spinner-v1.0.6...ui-spinner-v1.0.7) (2024-09-27)
 
 
