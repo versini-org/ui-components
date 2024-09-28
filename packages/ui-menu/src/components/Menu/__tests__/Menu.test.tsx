@@ -1,7 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Button, ButtonIcon } from "@versini/ui-button";
-import { IconSettings } from "@versini/ui-icons";
 
 import { Menu, MenuItem, MenuSeparator } from "../..";
 
@@ -12,8 +10,18 @@ const THIRD_MENU_ITEM = "Menu 3";
 const FOURTH_MENU_ITEM = "Menu 4";
 const FIFTH_MENU_ITEM = "Menu 5";
 
+const ButtonIcon = ({
+	children,
+	noInternalClick,
+	focusMode,
+	mode,
+	spacing,
+	...props
+}: any) => <button {...props}>{children}</button>;
+ButtonIcon.displayName = "ButtonIcon";
+
 const SimpleMenu = ({ ...props }) => (
-	<Menu trigger={<Button>Click Me</Button>} {...props}>
+	<Menu trigger={<button>Click Me</button>} {...props}>
 		<MenuItem label={FIRST_MENU_ITEM} />
 		<MenuItem label={SECOND_MENU_ITEM} />
 		<MenuItem label={THIRD_MENU_ITEM} disabled />
@@ -27,7 +35,9 @@ const SimpleMenuIcon = ({ ...props }) => (
 	<Menu
 		trigger={
 			<ButtonIcon>
-				<IconSettings />
+				<svg>
+					<path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+				</svg>
 			</ButtonIcon>
 		}
 		{...props}
@@ -160,7 +170,7 @@ describe("Menu behaviors", () => {
 		const onOpenChange = vi.fn();
 		const { user } = renderWithUserEvent(
 			<Menu
-				trigger={<Button>Click Me</Button>}
+				trigger={<button>Click Me</button>}
 				label={MENU_TRIGGER_LABEL}
 				onOpenChange={onOpenChange}
 			>
@@ -189,7 +199,7 @@ describe("Menu behaviors", () => {
 	it("should trigger the MenuItem onClick callback when a menuitem is selected", async () => {
 		const onClick = vi.fn();
 		const { user } = renderWithUserEvent(
-			<Menu trigger={<Button>Click Me</Button>} label={MENU_TRIGGER_LABEL}>
+			<Menu trigger={<button>Click Me</button>} label={MENU_TRIGGER_LABEL}>
 				<MenuItem label={FIRST_MENU_ITEM} onClick={onClick} />
 				<MenuItem label={SECOND_MENU_ITEM} />
 				<MenuItem label={THIRD_MENU_ITEM} disabled />
@@ -212,7 +222,7 @@ describe("Menu behaviors", () => {
 	it("should trigger the MenuItem onFocus callback when a menuitem is selected", async () => {
 		const onFocus = vi.fn();
 		const { user } = renderWithUserEvent(
-			<Menu trigger={<Button>Click Me</Button>} label={MENU_TRIGGER_LABEL}>
+			<Menu trigger={<button>Click Me</button>} label={MENU_TRIGGER_LABEL}>
 				<MenuItem label={FIRST_MENU_ITEM} onFocus={onFocus} />
 				<MenuItem label={SECOND_MENU_ITEM} />
 				<MenuItem label={THIRD_MENU_ITEM} disabled />
