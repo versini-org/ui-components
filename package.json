@@ -2,10 +2,8 @@
 	"name": "root",
 	"private": true,
 	"scripts": {
-		"clean": "lerna run clean",
-		"build:core": "lerna run build --ignore @versini/ui-styles",
-		"build:styles": "lerna run build --scope @versini/ui-styles",
-		"build": "npm-run-all --serial clean build:styles build:core",
+		"prebuild": "lerna run build --scope=\"@versini/ui-styles\"",
+		"build": "lerna run build",
 		"lint": "lerna run lint",
 		"lint-staged": "lint-staged --config \"./configuration/lint-staged.config.cjs\"",
 		"prepare": "husky",

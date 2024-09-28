@@ -33,7 +33,7 @@ jobs:
         run: pnpm install
 
       - name: Build packages
-        run: npx lerna run build --ignore "@versini/example-*" --ignore @versini/documentation
+        run: npx lerna run build --ignore="@versini/example-*" --ignore="@versini/documentation"
 
       - name: Run Bundle Size
         run: |
@@ -77,9 +77,9 @@ jobs:
 
       - name: Run Lint and Coverage
         run: |
-          npx lerna run lint --ignore @versini/documentation
-          npx lerna run build --ignore @versini/documentation
-          npx lerna run test:coverage --ignore @versini/documentation
+          npx lerna run lint --ignore="@versini/documentation"
+          npx lerna run build --ignore="@versini/documentation"
+          npx lerna run test:coverage --ignore="@versini/documentation"
 
   release-bundlesize:
     if: github.head_ref == 'release-please--branches--main'
@@ -122,7 +122,7 @@ jobs:
 
       - name: Run Bundle Size For Release PR
         run: |
-          npx lerna run build --ignore "@versini/example-*" --ignore @versini/documentation
+          npx lerna run build --ignore="@versini/example-*" --ignore="@versini/documentation"
           npx lerna run stats:release
 
       - name: Commit Release Stats to Release PR
