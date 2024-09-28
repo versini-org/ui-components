@@ -44,8 +44,9 @@ jobs:
 
       - name: Build packages and documentation
         run: |
-          npx lerna run build --ignore "@versini/example-*" --ignore @versini/documentation --ignore @versini/bundlesize
-          npx lerna run build:ci --scope=@versini/documentation
+          npx lerna run build --scope="@versini/ui-styles"
+          npx lerna run build --ignore="@versini/example-*" --ignore="@versini/documentation" --ignore="@versini/bundlesize" --ignore="@versini/ui-styles"
+          npx lerna run build:ci --scope="@versini/documentation"
 
       - name: Setup Pages
         if: ${{ always() }}
