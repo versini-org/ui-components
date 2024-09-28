@@ -2,7 +2,6 @@
 	"name": "root",
 	"private": true,
 	"scripts": {
-		"prebuild": "lerna run build --scope=\"@versini/ui-styles\"",
 		"build": "lerna run build",
 		"lint": "lerna run lint",
 		"lint-staged": "lint-staged --config \"./configuration/lint-staged.config.cjs\"",
