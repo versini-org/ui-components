@@ -37,10 +37,6 @@
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1"
 	},
-	"devDependencies": {
-		"@versini/ui-button": "workspace:../ui-button",
-		"@versini/ui-icons": "workspace:../ui-icons"
-	},
 	"dependencies": {
 		"@floating-ui/react": "0.26.24",
 		"@tailwindcss/typography": "0.5.15",

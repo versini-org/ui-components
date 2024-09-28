@@ -1,10 +1,29 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { ButtonIcon } from "@versini/ui-button";
-import { IconHide } from "@versini/ui-icons";
 
 import { TextInputMask } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
+
+const MyButtonIcon = ({
+	children,
+	noInternalClick,
+	focusMode,
+	mode,
+	spacing,
+	label,
+	...props
+}: any) => (
+	<button aria-label={label} {...props}>
+		{children}
+	</button>
+);
+MyButtonIcon.displayName = "ButtonIcon";
+
+const MyIconHide = () => (
+	<svg>
+		<path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+	</svg>
+);
 
 function renderWithUserEvent(jsx: JSX.Element) {
 	return {
@@ -26,9 +45,9 @@ describe("TextInputMask modifiers", () => {
 				label="hello world"
 				name="toto"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -51,9 +70,9 @@ describe("TextInputMask modifiers", () => {
 				label="hello world"
 				name="toto"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -69,9 +88,9 @@ describe("TextInputMask modifiers", () => {
 				noBorder
 				data-testid="txtnpt-1"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -87,9 +106,9 @@ describe("TextInputMask modifiers", () => {
 				labelHidden
 				data-testid="txtnpt-1"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -106,9 +125,9 @@ describe("TextInputMask modifiers", () => {
 				raw
 				data-testid="txtnpt-1"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -124,9 +143,9 @@ describe("TextInputMask modifiers", () => {
 				className="toto"
 				data-testid="txtnpt-1"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -149,9 +168,9 @@ describe("TextInputMask modifiers", () => {
 				inputClassName="toto"
 				data-testid="txtnpt-1"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -167,9 +186,9 @@ describe("TextInputMask modifiers", () => {
 				label="hello world"
 				name="toto"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -204,9 +223,9 @@ describe("TextInputMask methods", () => {
 				name="toto"
 				data-testid="txtnpt-1"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -225,9 +244,9 @@ describe("TextInputMask methods", () => {
 				label="hello world"
 				onMaskChange={onMaskChangeHandler}
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -249,9 +268,9 @@ describe("TextInputMask methods", () => {
 				data-testid="txtnptmsk-1"
 				onTextInputMaskBlur={onTextInputMaskBlurMock}
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -277,9 +296,9 @@ describe("TextInputMask methods", () => {
 				data-testid="txtnptmsk-1"
 				onTextInputMaskBlur={onTextInputMaskBlurMock}
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -306,9 +325,9 @@ describe("TextInputMask methods", () => {
 				data-testid="txtnptmsk-1"
 				onTextInputMaskBlur={onTextInputMaskBlurMock}
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -333,9 +352,9 @@ describe("TextInputMask methods", () => {
 				data-testid="txtnptmsk-1"
 				onTextInputMaskBlur={onTextInputMaskBlurMock}
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -361,9 +380,9 @@ describe("TextInputMask methods", () => {
 				data-testid="txtnptmsk-1"
 				onBlur={onBlurMock}
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -384,9 +403,9 @@ describe("TextInputMask methods", () => {
 				data-testid="txtnptmsk-1"
 				onFocus={onFocusMock}
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -407,9 +426,9 @@ describe("TextInputMask accessibility", () => {
 				label="hello world"
 				name="toto"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -433,9 +452,9 @@ describe("TextInputMask accessibility", () => {
 				label="hello world"
 				name="toto"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -456,13 +475,14 @@ describe("TextInputMask show/hide button tests", () => {
 				name="hello"
 				label="hello world"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
 
+		screen.debug();
 		const buttonLabel = screen.getByLabelText("Show");
 		expect(buttonLabel).toBeInTheDocument();
 	});
@@ -473,9 +493,9 @@ describe("TextInputMask show/hide button tests", () => {
 				name="hello"
 				label="hello world"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -494,9 +514,9 @@ describe("TextInputMask show/hide button tests", () => {
 				name="hello"
 				label="hello world"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -515,9 +535,9 @@ describe("TextInputMask show/hide button tests", () => {
 				name="hello"
 				label="hello world"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -547,9 +567,9 @@ describe("TextInputMask timer tests", () => {
 				name="hello"
 				label="hello world"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -578,9 +598,9 @@ describe("TextInputMask timer tests", () => {
 				name="hello"
 				label="hello world"
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);
@@ -645,9 +665,9 @@ describe("TextInputMask timer tests", () => {
 				label="hello world"
 				onMaskChange={onMaskChangeHandler}
 				rightElement={
-					<ButtonIcon>
-						<IconHide />
-					</ButtonIcon>
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
 				}
 			/>,
 		);

@@ -102,11 +102,17 @@ export const MenuComponent = forwardRef<
 			getDisplayName(trigger) === "Button" ||
 			getDisplayName(trigger) === "ButtonIcon";
 
+		const uiButtonsExtraProps = noInternalClick
+			? {
+					noInternalClick,
+					focusMode,
+					mode,
+					spacing,
+				}
+			: {};
+
 		const triggerElement = React.cloneElement(trigger as React.ReactElement, {
-			mode,
-			focusMode,
-			spacing,
-			noInternalClick,
+			...uiButtonsExtraProps,
 			"aria-label": label,
 			"data-open": isOpen ? "" : undefined,
 			"data-focus-inside": hasFocusInside ? "" : undefined,

@@ -553,13 +553,6 @@ importers:
       tailwindcss:
         specifier: 3.4.13
         version: 3.4.13
-    devDependencies:
-      '@versini/ui-button':
-        specifier: workspace:../ui-button
-        version: link:../ui-button
-      '@versini/ui-icons':
-        specifier: workspace:../ui-icons
-        version: link:../ui-icons
 
   packages/ui-panel:
     dependencies:
@@ -746,13 +739,6 @@ importers:
       tailwindcss:
         specifier: 3.4.13
         version: 3.4.13
-    devDependencies:
-      '@versini/ui-button':
-        specifier: workspace:../ui-button
-        version: link:../ui-button
-      '@versini/ui-icons':
-        specifier: workspace:../ui-icons
-        version: link:../ui-icons
 
   packages/ui-toggle:
     dependencies:
