@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.6](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.1.5...ui-textinput-v1.1.6) (2024-09-28)
+
+
+### Bug Fixes
+
+* removing remaining redundant dev dependencies ([#707](https://github.com/versini-org/ui-components/issues/707)) ([9a344ae](https://github.com/versini-org/ui-components/commit/9a344ae949186817d92ee36d4d659ab5c2986af4))
+
 ## [1.1.5](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.1.4...ui-textinput-v1.1.5) (2024-09-28)
 
 
