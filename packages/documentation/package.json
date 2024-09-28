@@ -36,7 +36,6 @@
 		"@versini/ui-pill": "workspace:../ui-pill",
 		"@versini/ui-private": "workspace:../ui-private",
 		"@versini/ui-spinner": "workspace:../ui-spinner",
-		"@versini/ui-styles": "workspace:../ui-styles",
 		"@versini/ui-system": "workspace:../ui-system",
 		"@versini/ui-table": "workspace:../ui-table",
 		"@versini/ui-textarea": "workspace:../ui-textarea",
