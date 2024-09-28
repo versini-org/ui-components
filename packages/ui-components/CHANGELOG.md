@@ -192,6 +192,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.31.12](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.11...ui-components-v5.31.12) (2024-09-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-menu bumped to 1.0.11
+
 ## [5.31.11](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.10...ui-components-v5.31.11) (2024-09-28)
 
 
