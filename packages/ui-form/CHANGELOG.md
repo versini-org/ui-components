@@ -35,6 +35,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.6.10](https://github.com/versini-org/ui-components/compare/ui-form-v1.6.9...ui-form-v1.6.10) (2024-09-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-textinput bumped to 1.1.5
+
 ## [1.6.9](https://github.com/versini-org/ui-components/compare/ui-form-v1.6.8...ui-form-v1.6.9) (2024-09-27)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.10](https://github.com/versini-org/ui-components/compare/ui-button-v1.1.9...ui-button-v1.1.10) (2024-09-28)
+
+
+### Bug Fixes
+
+* **ui-button:** remove dev dependency on ui-icons ([#705](https://github.com/versini-org/ui-components/issues/705)) ([b05ab47](https://github.com/versini-org/ui-components/commit/b05ab473bfc7ef798d133e35fc2f0d960a4d949c))
+
 ## [1.1.9](https://github.com/versini-org/ui-components/compare/ui-button-v1.1.8...ui-button-v1.1.9) (2024-09-27)
 
 
