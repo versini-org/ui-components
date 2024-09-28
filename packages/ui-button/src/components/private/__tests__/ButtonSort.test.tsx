@@ -1,10 +1,33 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { IconSettings } from "@versini/ui-icons";
+import { SvgIcon } from "@versini/ui-private";
 
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { BUTTON_CLASSNAME } from "../../../common/constants";
 import { ButtonSort_private as ButtonSort } from "../ButtonSort";
+
+const IconSettings = ({
+	className,
+	viewBox,
+	spacing,
+	title,
+	monotone,
+	...rest
+}: any) => {
+	return (
+		<SvgIcon
+			defaultViewBox="0 0 448 512"
+			defaultClassName="size-5"
+			viewBox={viewBox}
+			className={className}
+			spacing={spacing}
+			title={title || "Settings"}
+			{...rest}
+		>
+			<path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+		</SvgIcon>
+	);
+};
 
 describe("ButtonSort (exceptions)", () => {
 	it("should be able to require/import from root", () => {
