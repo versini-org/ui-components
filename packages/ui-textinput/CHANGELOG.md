@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.1.6...ui-textinput-v1.2.0) (2024-09-30)
+
+
+### Features
+
+* **TextInput:** adding new prop: rightElementClassName ([#710](https://github.com/versini-org/ui-components/issues/710)) ([0374ebe](https://github.com/versini-org/ui-components/commit/0374ebe7bc477f949f3d652a78ee27a30299453f))
+
 ## [1.1.6](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.1.5...ui-textinput-v1.1.6) (2024-09-28)
 
 
