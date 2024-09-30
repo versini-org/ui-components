@@ -234,7 +234,7 @@ describe("TextInput modifiers", () => {
 		}
 	});
 
-	it("should render a text input with an input class", async () => {
+	it("should render a text input with a custom input class", async () => {
 		render(
 			<TextInput
 				label="toto"
@@ -258,6 +258,20 @@ describe("TextInput modifiers", () => {
 			/>,
 		);
 		await screen.findByText("right element");
+	});
+
+	it("should render a text input with a right element custom class", async () => {
+		render(
+			<TextInput
+				label="toto"
+				name="toto"
+				rightElementClassName="toto"
+				rightElement={<div data-testid="txtnpt-1">right element</div>}
+			/>,
+		);
+		const rightEl = (await screen.findByTestId("txtnpt-1")).parentElement;
+		expect(rightEl?.className).toContain("toto");
+		expect(rightEl?.className).toContain("absolute");
 	});
 
 	it("should render a disabled text input", async () => {

@@ -19,6 +19,7 @@ type getTextInputClassesProps = {
 	size: Size;
 
 	className?: string;
+	rightElementClassName?: string;
 	inputClassName?: string;
 } & SpacingProps;
 
@@ -154,6 +155,7 @@ export const getTextInputClasses = ({
 	mode,
 	focusMode,
 	size,
+	rightElementClassName,
 }: getTextInputClassesProps) => {
 	const wrapper = raw
 		? className
@@ -215,7 +217,9 @@ export const getTextInputClasses = ({
 		disabled,
 	});
 
-	const rightElement = raw ? undefined : "absolute right-3";
+	const rightElement = raw
+		? undefined
+		: clsx("absolute right-3", rightElementClassName);
 
 	return {
 		wrapper,
