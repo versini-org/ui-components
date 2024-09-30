@@ -65,6 +65,10 @@ export type TextInputProps = {
 	 * elements, such a Button.
 	 */
 	rightElement?: React.ReactElement;
+	/**
+	 * Extra classes to add to the right element container.
+	 */
+	rightElementClassName?: string;
 } & CommonTextInputProps;
 
 export type TextInputMaskProps = {

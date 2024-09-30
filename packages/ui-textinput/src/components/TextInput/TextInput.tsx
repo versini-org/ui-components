@@ -29,6 +29,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			helperText = "",
 
 			rightElement,
+			rightElementClassName,
 			spacing,
 			size = "md",
 
@@ -62,6 +63,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			spacing,
 			mode,
 			size,
+			rightElementClassName,
 		});
 
 		/* c8 ignore start - ResizeObserver is tough to test... */
