@@ -1,5 +1,6 @@
 import { IconAdd } from "./Icons/IconAdd";
 import { IconBack } from "./Icons/IconBack";
+import { IconBookmark } from "./Icons/IconBookmark";
 import { IconBrightness } from "./Icons/IconBrightness";
 import { IconChart } from "./Icons/IconChart";
 import { IconClose } from "./Icons/IconClose";
@@ -15,6 +16,7 @@ import { IconHistory } from "./Icons/IconHistory";
 import { IconInfo } from "./Icons/IconInfo";
 import { IconKey } from "./Icons/IconKey";
 import { IconLocked } from "./Icons/IconLocked";
+import { IconMessages } from "./Icons/IconMessages";
 import { IconNext } from "./Icons/IconNext";
 import { IconPasskey } from "./Icons/IconPasskey";
 import { IconPrevious } from "./Icons/IconPrevious";
@@ -34,6 +36,7 @@ import { IconUser } from "./Icons/IconUser";
 export {
 	IconAdd,
 	IconBack,
+	IconBookmark,
 	IconBrightness,
 	IconChart,
 	IconClose,
@@ -49,6 +52,7 @@ export {
 	IconInfo,
 	IconKey,
 	IconLocked,
+	IconMessages,
 	IconNext,
 	IconPasskey,
 	IconPrevious,
