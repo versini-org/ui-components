@@ -144,5 +144,15 @@
 		"name": "IconSearch",
 		"title": "Search",
 		"monotone": true
+	},
+	"messages": {
+		"name": "IconMessages",
+		"title": "Messages",
+		"monotone": true
+	},
+	"bookmark": {
+		"name": "IconBookmark",
+		"title": "Bookmark",
+		"monotone": true
 	}
 }
