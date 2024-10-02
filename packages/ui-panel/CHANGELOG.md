@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.12](https://github.com/versini-org/ui-components/compare/ui-panel-v1.0.11...ui-panel-v1.0.12) (2024-10-02)
+
+
+### Bug Fixes
+
+* **Panel:** better rendering when content is too long ([#714](https://github.com/versini-org/ui-components/issues/714)) ([04f08f1](https://github.com/versini-org/ui-components/commit/04f08f1d6848184a8ee791d1eee8cbb248e87bd7))
+
 ## [1.0.11](https://github.com/versini-org/ui-components/compare/ui-panel-v1.0.10...ui-panel-v1.0.11) (2024-10-02)
 
 
