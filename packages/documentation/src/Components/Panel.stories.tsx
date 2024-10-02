@@ -64,19 +64,6 @@ export const Basic: Story<any> = (args) => {
 					unordered lists, ordered lists, code blocks, block quotes,{" "}
 					<em>and even italics</em>.
 				</p>
-				<p>
-					It is important to cover all of these use cases for a few reasons:
-				</p>
-				<ol>
-					<li>We want everything to look good out of the box.</li>
-					<li>
-						Really just the first reason, that is the whole point of the plugin.
-					</li>
-					<li>
-						Here is a third pretend reason though a list with three items looks
-						more realistic than a list with two items.
-					</li>
-				</ol>
 			</Panel>
 		</>
 	);
@@ -136,7 +123,121 @@ export const CustomClassName: Story<any> = (args) => {
 		</>
 	);
 };
-
 CustomClassName.args = {
 	className: "w-[95%]",
+};
+
+export const LongContent: Story<any> = (args) => {
+	const [open, setOpen] = useState(false);
+	const onOpenChange = () => {
+		setOpen(!open);
+	};
+	return (
+		<>
+			<p>
+				To open or close the Panel, open the controls at the bottom of the
+				screen and select/deselect the open prop.
+			</p>
+			<Panel
+				open={open}
+				onOpenChange={onOpenChange}
+				footer={
+					<Flexgrid alignHorizontal="flex-end" columnGap={2}>
+						<FlexgridItem>
+							<Button mode="light" focusMode="light">
+								Cancel
+							</Button>
+						</FlexgridItem>
+						<FlexgridItem>
+							<Button mode="dark" focusMode="light" noBorder>
+								Log out
+							</Button>
+						</FlexgridItem>
+					</Flexgrid>
+				}
+				{...args}
+			>
+				<p>
+					What follows from here is just a bunch of absolute nonsense I have
+					written to dogfood the plugin itself. It includes every sensible
+					typographic element I could think of, like <strong>bold text</strong>,
+					unordered lists, ordered lists, code blocks, block quotes,{" "}
+					<em>and even italics</em>.
+				</p>
+				<p>
+					It is important to cover all of these use cases for a few reasons:
+				</p>
+				<ol>
+					<li>We want everything to look good out of the box.</li>
+					<li>
+						Really just the first reason, that is the whole point of the plugin.
+					</li>
+					<li>
+						Here is a third pretend reason though a list with three items looks
+						more realistic than a list with two items.
+					</li>
+				</ol>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					illum vitae blanditiis quo nobis ipsa saepe dolor fuga sint?
+					Laudantium ratione accusamus reiciendis iure nobis amet sed itaque
+					dolores ullam.
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					illum vitae blanditiis quo nobis ipsa saepe dolor fuga sint?
+					Laudantium ratione accusamus reiciendis iure nobis amet sed itaque
+					dolores ullam.
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					illum vitae blanditiis quo nobis ipsa saepe dolor fuga sint?
+					Laudantium ratione accusamus reiciendis iure nobis amet sed itaque
+					dolores ullam.
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					illum vitae blanditiis quo nobis ipsa saepe dolor fuga sint?
+					Laudantium ratione accusamus reiciendis iure nobis amet sed itaque
+					dolores ullam.
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					illum vitae blanditiis quo nobis ipsa saepe dolor fuga sint?
+					Laudantium ratione accusamus reiciendis iure nobis amet sed itaque
+					dolores ullam.
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					illum vitae blanditiis quo nobis ipsa saepe dolor fuga sint?
+					Laudantium ratione accusamus reiciendis iure nobis amet sed itaque
+					dolores ullam.
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					illum vitae blanditiis quo nobis ipsa saepe dolor fuga sint?
+					Laudantium ratione accusamus reiciendis iure nobis amet sed itaque
+					dolores ullam.
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					illum vitae blanditiis quo nobis ipsa saepe dolor fuga sint?
+					Laudantium ratione accusamus reiciendis iure nobis amet sed itaque
+					dolores ullam.
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					illum vitae blanditiis quo nobis ipsa saepe dolor fuga sint?
+					Laudantium ratione accusamus reiciendis iure nobis amet sed itaque
+					dolores ullam.
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					illum vitae blanditiis quo nobis ipsa saepe dolor fuga sint?
+					Laudantium ratione accusamus reiciendis iure nobis amet sed itaque
+					dolores ullam.
+				</p>
+			</Panel>
+		</>
+	);
 };

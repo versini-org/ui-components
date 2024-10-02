@@ -16,7 +16,7 @@ export const getPanelClassName = ({
 }) => {
 	return {
 		main: clsx("prose prose-lighter flex flex-col bg-surface-medium", {
-			[`${PANEL_CLASSNAME} h-full min-h-[95%] sm:h-auto sm:min-h-[10rem] sm:rounded-lg sm:border-2`]:
+			[`${PANEL_CLASSNAME} max-h-full sm:max-h-[95%] min-h-full sm:min-h-[10rem] sm:rounded-lg sm:border-2`]:
 				kind === TYPE_PANEL,
 			[`${PANEL_CLASSNAME} w-full sm:w-[95%] md:max-w-2xl`]:
 				kind === TYPE_PANEL && !className,
@@ -33,7 +33,7 @@ export const getPanelClassName = ({
 			"border-border-accent":
 				borderMode === "light" && kind === TYPE_MESSAGEBOX,
 		}),
-		content: "flex flex-grow flex-col py-2 sm:py-4 sm:px-4 px-2",
+		content: "flex flex-col py-2 sm:py-4 sm:px-4 px-2 overflow-y-auto",
 		footer: "flex flex-grow flex-col sm:p-4 p-2",
 		header: "sm:p-4 mb-0 p-2",
 		close: "sm:p-4 p-2",
