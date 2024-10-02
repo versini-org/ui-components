@@ -35,6 +35,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.14.0](https://github.com/versini-org/ui-components/compare/ui-icons-v1.13.1...ui-icons-v1.14.0) (2024-10-02)
+
+
+### Features
+
+* **ui-icons:** adding IconMessages and IconBookmark ([#712](https://github.com/versini-org/ui-components/issues/712)) ([acc06e1](https://github.com/versini-org/ui-components/commit/acc06e18c43e231c987bf2827c83aa1e4ba84fde))
+
 ## [1.13.1](https://github.com/versini-org/ui-components/compare/ui-icons-v1.13.0...ui-icons-v1.13.1) (2024-09-27)
 
 
