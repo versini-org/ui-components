@@ -17,10 +17,11 @@ export const ToggleGroup = ({
 	focusMode = "system",
 	size = "medium",
 	defaultValue,
+	spacing,
 
 	...otherProps
 }: ToggleGroupProps) => {
-	const toggleGroupClasses = getToggleGroupClasses({ mode });
+	const toggleGroupClasses = getToggleGroupClasses({ mode, spacing });
 	const contextValue = { size, focusMode, mode };
 	return (
 		<ToggleGroupContext.Provider value={contextValue}>
