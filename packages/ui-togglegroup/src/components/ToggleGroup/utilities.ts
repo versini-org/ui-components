@@ -1,4 +1,7 @@
+import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
+
 import { TOGGLEGROUP_CLASSNAME } from "../../common/constants";
 import type { Mode, Size } from "./ToggleGroupTypes";
 
@@ -53,13 +56,22 @@ export const getToggleGroupItemClasses = ({
 	);
 };
 
-export const getToggleGroupClasses = ({ mode }: { mode: Mode }) => {
-	return clsx(TOGGLEGROUP_CLASSNAME, "inline-flex p-1", "rounded-sm", {
-		"bg-surface-light text-copy-dark": mode === "light",
-		"bg-surface-darker text-copy-lighter": mode === "dark",
-		"bg-surface-light text-copy-dark dark:bg-surface-darker dark:text-copy-lighter":
-			mode === "system",
-		"bg-surface-darker text-copy-lighter dark:bg-surface-light dark:text-copy-dark":
-			mode === "alt-system",
-	});
+export const getToggleGroupClasses = ({
+	mode,
+	spacing,
+}: { mode: Mode } & SpacingProps) => {
+	return clsx(
+		TOGGLEGROUP_CLASSNAME,
+		getSpacing(spacing),
+		"inline-flex p-1",
+		"rounded-sm",
+		{
+			"bg-surface-light text-copy-dark": mode === "light",
+			"bg-surface-darker text-copy-lighter": mode === "dark",
+			"bg-surface-light text-copy-dark dark:bg-surface-darker dark:text-copy-lighter":
+				mode === "system",
+			"bg-surface-darker text-copy-lighter dark:bg-surface-light dark:text-copy-dark":
+				mode === "alt-system",
+		},
+	);
 };
