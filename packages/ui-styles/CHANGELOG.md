@@ -38,6 +38,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.11.0](https://github.com/versini-org/ui-components/compare/ui-styles-v1.10.2...ui-styles-v1.11.0) (2024-10-04)
+
+
+### Features
+
+* adding ToggleGroup component ([#716](https://github.com/versini-org/ui-components/issues/716)) ([a794f97](https://github.com/versini-org/ui-components/commit/a794f971b2597435e86222a2cfbd39306f4d49f5))
+
 ## [1.10.2](https://github.com/versini-org/ui-components/compare/ui-styles-v1.10.1...ui-styles-v1.10.2) (2024-09-26)
 
 
