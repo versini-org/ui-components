@@ -35,6 +35,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.7.0](https://github.com/versini-org/ui-components/compare/ui-form-v1.6.12...ui-form-v1.7.0) (2024-10-04)
+
+
+### Features
+
+* adding ToggleGroup component ([#716](https://github.com/versini-org/ui-components/issues/716)) ([a794f97](https://github.com/versini-org/ui-components/commit/a794f971b2597435e86222a2cfbd39306f4d49f5))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-togglegroup bumped to 1.0.0
+
 ## [1.6.12](https://github.com/versini-org/ui-components/compare/ui-form-v1.6.11...ui-form-v1.6.12) (2024-09-30)
 
 
