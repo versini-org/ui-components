@@ -23,6 +23,7 @@
 		"packages/ui-textarea": {},
 		"packages/ui-textinput": {},
 		"packages/ui-toggle": {},
+		"packages/ui-togglegroup": {},
 		"packages/ui-truncate": {}
 	},
 	"plugins": ["node-workspace"],

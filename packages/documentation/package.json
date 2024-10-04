@@ -41,6 +41,7 @@
 		"@versini/ui-textarea": "workspace:../ui-textarea",
 		"@versini/ui-textinput": "workspace:../ui-textinput",
 		"@versini/ui-toggle": "workspace:../ui-toggle",
+		"@versini/ui-togglegroup": "workspace:../ui-togglegroup",
 		"@versini/ui-truncate": "workspace:../ui-truncate",
 		"clsx": "2.1.1",
 		"prismjs": "1.29.0",

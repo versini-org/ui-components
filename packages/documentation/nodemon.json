@@ -28,6 +28,7 @@
 		"../ui-textarea/src/**/*.*",
 		"../ui-textinput/src/**/*.*",
 		"../ui-toggle/src/**/*.*",
+		"../ui-togglegroup/src/**/*.*",
 		"../ui-truncate/src/**/*.*"
 	]
 }

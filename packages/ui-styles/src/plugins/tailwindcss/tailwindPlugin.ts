@@ -40,6 +40,7 @@ export const customContentPath = [
 	"@versini/ui-textarea",
 	"@versini/ui-textinput",
 	"@versini/ui-toggle",
+	"@versini/ui-togglegroup",
 	"@versini/ui-truncate",
 
 	// the following are legacy packages and should eventually be removed
