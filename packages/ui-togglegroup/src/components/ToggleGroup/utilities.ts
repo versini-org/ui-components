@@ -2,7 +2,11 @@ import type { SpacingProps } from "@versini/ui-private/dist/utilities";
 import { getSpacing } from "@versini/ui-private/dist/utilities";
 import clsx from "clsx";
 
-import { TOGGLEGROUP_CLASSNAME } from "../../common/constants";
+import {
+	TOGGLEGROUP_CLASSNAME,
+	TOGGLEGROUP_ITEM_CLASSNAME,
+	TOGGLEGROUP_ITEM_WRAPPER_CLASSNAME,
+} from "../../common/constants";
 import type { Mode, Size } from "./ToggleGroupTypes";
 
 const getToggleGroupItemFocusClasses = ({ focusMode }: { focusMode: Mode }) => {
@@ -29,12 +33,30 @@ const getToggleGroupItemActiveClasses = ({ mode }: { mode: Mode }) => {
 	});
 };
 
-const getToggleItemGroupSizeClasses = ({ size }: { size: Size }) => {
-	return clsx("mx-1", "first:ml-0 last:mr-0", {
+const getToggleGroupItemSizeClasses = ({ size }: { size: Size }) => {
+	return clsx({
 		"h-5 px-2": size === "small",
 		"h-6 px-3": size === "medium",
 		"h-7 px-4": size === "large",
 	});
+};
+
+const getToggleGroupItemWrapperClasses = ({ mode }: { mode: Mode }) => {
+	return clsx(
+		TOGGLEGROUP_ITEM_WRAPPER_CLASSNAME,
+		"px-1",
+		"relative",
+		"border-r",
+		"last:border-transparent",
+		"has-[button[aria-checked='true']]:border-transparent",
+		"has-[+_*_button[aria-checked='false']]:border-border-medium",
+		{
+			"border-surface-light": mode === "light",
+			"border-surface-darker": mode === "dark",
+			"border-surface-light dark:border-surface-darker": mode === "system",
+			"border-surface-darker dark:border-surface-light": mode === "alt-system",
+		},
+	);
 };
 
 export const getToggleGroupItemClasses = ({
@@ -46,14 +68,20 @@ export const getToggleGroupItemClasses = ({
 	mode: Mode;
 	size: Size;
 }) => {
-	return clsx(
-		"flex items-center justify-center bg-transparent",
-		"rounded-sm",
-		"transition duration-200 ease",
-		getToggleItemGroupSizeClasses({ size }),
-		getToggleGroupItemFocusClasses({ focusMode }),
-		getToggleGroupItemActiveClasses({ mode }),
-	);
+	return {
+		wrapperClass: getToggleGroupItemWrapperClasses({ mode }),
+
+		itemClass: clsx(
+			TOGGLEGROUP_ITEM_CLASSNAME,
+			"flex items-center justify-center bg-transparent",
+			"rounded-sm",
+			"transition duration-200 ease",
+
+			getToggleGroupItemSizeClasses({ size }),
+			getToggleGroupItemFocusClasses({ focusMode }),
+			getToggleGroupItemActiveClasses({ mode }),
+		),
+	};
 };
 
 export const getToggleGroupClasses = ({

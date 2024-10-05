@@ -31,13 +31,21 @@ export default {
 
 export const Basic: Story<any> = (args) => {
 	return (
-		<div className="flex flex-wrap gap-2">
-			<ToggleGroup {...args} defaultValue="Anthropic">
-				<ToggleGroupItem value="OpenAI" />
-				<ToggleGroupItem value="Anthropic" />
-				<ToggleGroupItem value="Gemini" />
-			</ToggleGroup>
-		</div>
+		<>
+			<div className="flex flex-wrap gap-2">
+				<ToggleGroup {...args} defaultValue="Anthropic">
+					<ToggleGroupItem value="OpenAI" />
+					<ToggleGroupItem value="Anthropic" />
+					<ToggleGroupItem value="Gemini" />
+				</ToggleGroup>
+			</div>
+			<div className="flex flex-wrap gap-2">
+				<ToggleGroup {...args} defaultValue="Anthropic" spacing={{ t: 2 }}>
+					<ToggleGroupItem value="OpenAI" />
+					<ToggleGroupItem value="Anthropic" />
+				</ToggleGroup>
+			</div>
+		</>
 	);
 };
 
