@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.9](https://github.com/versini-org/ui-components/compare/ui-card-v1.0.8...ui-card-v1.0.9) (2024-10-05)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-hooks bumped to 4.2.2
+
 ## [1.0.8](https://github.com/versini-org/ui-components/compare/ui-card-v1.0.7...ui-card-v1.0.8) (2024-09-27)
 
 
