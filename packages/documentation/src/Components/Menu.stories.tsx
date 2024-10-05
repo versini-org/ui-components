@@ -10,6 +10,7 @@ import {
 } from "@versini/ui-icons";
 import { Menu, MenuItem, MenuSeparator } from "@versini/ui-menu";
 import { Panel } from "@versini/ui-panel";
+import { ToggleGroup, ToggleGroupItem } from "@versini/ui-togglegroup";
 import { useState } from "react";
 
 export default {
@@ -163,5 +164,51 @@ export const WithMessageBox: Story<any> = (args) => {
 				<Button size="small">Button</Button>
 			</div>
 		</>
+	);
+};
+
+export const RawItem: Story<any> = (args) => {
+	const [value, setValue] = useState("Anthropic");
+	return (
+		<div className="flex h-96 min-h-10 flex-wrap p-11">
+			<Button size="small" noBorder spacing={{ r: 2 }}>
+				Button
+			</Button>
+			<Menu
+				trigger={
+					<ButtonIcon>
+						<IconSettings />
+					</ButtonIcon>
+				}
+				spacing={{ r: 2 }}
+				{...args}
+			>
+				<MenuItem label="Profile" />
+				<MenuItem label="Statistics" />
+				<MenuItem label="History" />
+				<MenuSeparator />
+				<MenuItem raw ignoreClick>
+					<ToggleGroup
+						size="small"
+						mode="dark"
+						focusMode="light"
+						value={value}
+						onValueChange={(value: string) => {
+							if (value) {
+								setValue(value);
+							}
+						}}
+					>
+						<ToggleGroupItem value="OpenAI" />
+						<ToggleGroupItem value="Anthropic" />
+					</ToggleGroup>
+				</MenuItem>
+				<MenuSeparator />
+				<MenuItem label="About" />
+			</Menu>
+			<Button size="small" noBorder>
+				Button
+			</Button>
+		</div>
 	);
 };

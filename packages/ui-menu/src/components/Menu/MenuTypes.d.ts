@@ -40,7 +40,7 @@ export type MenuItemProps = {
 	/**
 	 * The label to use for the menu item.
 	 */
-	label: string;
+	label?: string;
 	/**
 	 * Whether or not the menu item is disabled.
 	 * @default false
@@ -50,6 +50,14 @@ export type MenuItemProps = {
 	 * A React component of type Icon to be placed on the left of the label.
 	 */
 	icon?: React.ReactNode;
+	/**
+	 * Disable internal menu item behavior (click, focus, etc.).
+	 */
+	raw?: boolean;
+	/**
+	 * Whether or not the menu should close when the menu item is selected.
+	 */
+	ignoreClick?: boolean;
 };
 
 export type MenuSeparatorProps = React.HTMLAttributes<HTMLDivElement>;

@@ -31,6 +31,20 @@ const SimpleMenu = ({ ...props }) => (
 	</Menu>
 );
 
+const SimpleMenuWithRawItem = ({ ...props }) => (
+	<Menu trigger={<button>Click Me</button>} {...props}>
+		<MenuItem label={FIRST_MENU_ITEM} />
+		<MenuItem label={SECOND_MENU_ITEM} />
+		<MenuItem label={THIRD_MENU_ITEM} disabled />
+		<MenuItem label={FOURTH_MENU_ITEM} />
+		<MenuSeparator data-testid="menu-separator" />
+		<MenuItem label={FIFTH_MENU_ITEM} />
+		<MenuItem raw>
+			<button>Raw Item</button>
+		</MenuItem>
+	</Menu>
+);
+
 const SimpleMenuIcon = ({ ...props }) => (
 	<Menu
 		trigger={
@@ -257,5 +271,45 @@ describe("Menu behaviors", () => {
 
 		const separator = screen.getByTestId("menu-separator");
 		expect(separator).toBeInTheDocument();
+	});
+
+	it("should have a raw menu item when menu is opened", async () => {
+		const { user } = renderWithUserEvent(
+			<SimpleMenuWithRawItem label={MENU_TRIGGER_LABEL} />,
+		);
+		const trigger = screen.getByLabelText(MENU_TRIGGER_LABEL);
+		await user.click(trigger);
+		const firstMenuItem = screen.getByRole("menuitem", {
+			name: FIRST_MENU_ITEM,
+		});
+
+		expect(firstMenuItem).toHaveFocus();
+		expect(document.activeElement).toBe(firstMenuItem);
+
+		const rawItem = screen.getByRole("menuitem", { name: "Raw Item" });
+		expect(rawItem).toBeInTheDocument();
+	});
+
+	it("should trigger the MenuItem onClick callback when a raw menuitem is selected", async () => {
+		const onClick = vi.fn();
+		const { user } = renderWithUserEvent(
+			<Menu trigger={<button>Click Me</button>} label={MENU_TRIGGER_LABEL}>
+				<MenuItem label={FIRST_MENU_ITEM} onClick={onClick} raw>
+					<button>Raw Item</button>
+				</MenuItem>
+				<MenuItem label={SECOND_MENU_ITEM} />
+				<MenuItem label={THIRD_MENU_ITEM} disabled />
+				<MenuItem label={FOURTH_MENU_ITEM} />
+			</Menu>,
+		);
+		const trigger = screen.getByLabelText(MENU_TRIGGER_LABEL);
+		await user.click(trigger);
+		const firstMenuItem = screen.getByRole("menuitem", {
+			name: "Raw Item",
+		});
+
+		await user.click(firstMenuItem);
+		expect(trigger).toHaveFocus();
+		expect(onClick).toHaveBeenCalled();
 	});
 });
