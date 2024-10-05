@@ -35,6 +35,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.7.1](https://github.com/versini-org/ui-components/compare/ui-form-v1.7.0...ui-form-v1.7.1) (2024-10-05)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-togglegroup bumped to 1.1.0
+
 ## [1.7.0](https://github.com/versini-org/ui-components/compare/ui-form-v1.6.12...ui-form-v1.7.0) (2024-10-04)
 
 
