@@ -6,7 +6,7 @@
 	"packages/ui-components": "5.31.14",
 	"packages/ui-fingerprint": "1.0.1",
 	"packages/ui-footer": "1.0.8",
-	"packages/ui-form": "1.7.0",
+	"packages/ui-form": "1.7.1",
 	"packages/ui-header": "1.0.8",
 	"packages/ui-hooks": "4.2.1",
 	"packages/ui-icons": "1.14.0",
@@ -22,6 +22,6 @@
 	"packages/ui-textarea": "1.0.7",
 	"packages/ui-textinput": "1.2.0",
 	"packages/ui-toggle": "1.0.7",
-	"packages/ui-togglegroup": "1.0.0",
+	"packages/ui-togglegroup": "1.1.0",
 	"packages/ui-truncate": "1.0.7"
 }
