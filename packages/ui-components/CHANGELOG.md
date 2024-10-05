@@ -192,6 +192,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.31.16](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.15...ui-components-v5.31.16) (2024-10-05)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-card bumped to 1.0.9
+    * @versini/ui-hooks bumped to 4.2.2
+
 ## [5.31.15](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.14...ui-components-v5.31.15) (2024-10-05)
 
 

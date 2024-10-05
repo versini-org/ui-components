@@ -35,6 +35,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.7.2](https://github.com/versini-org/ui-components/compare/ui-form-v1.7.1...ui-form-v1.7.2) (2024-10-05)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-hooks bumped to 4.2.2
+    * @versini/ui-textarea bumped to 1.0.8
+    * @versini/ui-textinput bumped to 1.2.1
+
 ## [1.7.1](https://github.com/versini-org/ui-components/compare/ui-form-v1.7.0...ui-form-v1.7.1) (2024-10-05)
 
 
