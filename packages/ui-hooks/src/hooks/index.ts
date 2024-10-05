@@ -1,4 +1,4 @@
-import { useHotkeys } from "./useHotkeys";
+import { getHotkeyHandler, useHotkeys } from "./useHotkeys";
 import { useIsMounted } from "./useIsMounted";
 import { useLocalStorage } from "./useLocalStorage";
 import { useMergeRefs } from "./useMergeRefs";
@@ -7,6 +7,7 @@ import { useUncontrolled } from "./useUncontrolled";
 import { useUniqueId } from "./useUniqueId";
 
 export {
+	getHotkeyHandler,
 	useHotkeys,
 	useIsMounted,
 	useLocalStorage,
