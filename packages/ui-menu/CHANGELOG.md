@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/versini-org/ui-components/compare/ui-menu-v1.0.11...ui-menu-v1.1.0) (2024-10-05)
+
+
+### Features
+
+* **MenuItem:** adding "raw" prop ([#721](https://github.com/versini-org/ui-components/issues/721)) ([d36b85f](https://github.com/versini-org/ui-components/commit/d36b85f38a53541311509c62b8b55be25fbd76f3))
+
 ## [1.0.11](https://github.com/versini-org/ui-components/compare/ui-menu-v1.0.10...ui-menu-v1.0.11) (2024-09-28)
 
 
