@@ -42,19 +42,21 @@ export const ToggleGroup = ({
 
 export const ToggleGroupItem = ({ value, disabled }: ToggleGroupItemProps) => {
 	const { size, focusMode, mode } = useContext(ToggleGroupContext);
-	const toggleGroupItemClasses = getToggleGroupItemClasses({
+	const { itemClass, wrapperClass } = getToggleGroupItemClasses({
 		focusMode,
 		mode,
 		size,
 	});
 
 	return (
-		<ToggleGroupRadix.Item
-			disabled={disabled}
-			className={toggleGroupItemClasses}
-			value={value}
-		>
-			{value}
-		</ToggleGroupRadix.Item>
+		<div className={wrapperClass}>
+			<ToggleGroupRadix.Item
+				disabled={disabled}
+				className={itemClass}
+				value={value}
+			>
+				{value}
+			</ToggleGroupRadix.Item>
+		</div>
 	);
 };
