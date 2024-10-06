@@ -154,5 +154,13 @@
 		"name": "IconBookmark",
 		"title": "Bookmark",
 		"monotone": true
+	},
+	"anthropic": {
+		"name": "IconAnthropic",
+		"title": "Anthropic"
+	},
+	"openai": {
+		"name": "IconOpenAI",
+		"title": "OpenAI"
 	}
 }

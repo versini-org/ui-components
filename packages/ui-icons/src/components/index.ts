@@ -1,4 +1,5 @@
 import { IconAdd } from "./Icons/IconAdd";
+import { IconAnthropic } from "./Icons/IconAnthropic";
 import { IconBack } from "./Icons/IconBack";
 import { IconBookmark } from "./Icons/IconBookmark";
 import { IconBrightness } from "./Icons/IconBrightness";
@@ -18,6 +19,7 @@ import { IconKey } from "./Icons/IconKey";
 import { IconLocked } from "./Icons/IconLocked";
 import { IconMessages } from "./Icons/IconMessages";
 import { IconNext } from "./Icons/IconNext";
+import { IconOpenAI } from "./Icons/IconOpenAI";
 import { IconPasskey } from "./Icons/IconPasskey";
 import { IconPrevious } from "./Icons/IconPrevious";
 import { IconProfile } from "./Icons/IconProfile";
@@ -35,6 +37,7 @@ import { IconUser } from "./Icons/IconUser";
 
 export {
 	IconAdd,
+	IconAnthropic,
 	IconBack,
 	IconBookmark,
 	IconBrightness,
@@ -52,6 +55,7 @@ export {
 	IconInfo,
 	IconKey,
 	IconLocked,
+	IconOpenAI,
 	IconMessages,
 	IconNext,
 	IconPasskey,
