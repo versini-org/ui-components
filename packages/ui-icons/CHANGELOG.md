@@ -35,6 +35,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.15.1](https://github.com/versini-org/ui-components/compare/ui-icons-v1.15.0...ui-icons-v1.15.1) (2024-10-06)
+
+
+### Bug Fixes
+
+* **ui-icons:** Anthropic icon is not visible in dark mode ([#727](https://github.com/versini-org/ui-components/issues/727)) ([b7aae05](https://github.com/versini-org/ui-components/commit/b7aae052531608ae22d1f2ff3e9d330d677b5614))
+
 ## [1.15.0](https://github.com/versini-org/ui-components/compare/ui-icons-v1.14.0...ui-icons-v1.15.0) (2024-10-06)
 
 

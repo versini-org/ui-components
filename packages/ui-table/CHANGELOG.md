@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.13](https://github.com/versini-org/ui-components/compare/ui-table-v1.0.12...ui-table-v1.0.13) (2024-10-06)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-icons bumped to 1.15.1
+
 ## [1.0.12](https://github.com/versini-org/ui-components/compare/ui-table-v1.0.11...ui-table-v1.0.12) (2024-10-06)
 
 
