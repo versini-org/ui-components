@@ -35,6 +35,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.15.0](https://github.com/versini-org/ui-components/compare/ui-icons-v1.14.0...ui-icons-v1.15.0) (2024-10-06)
+
+
+### Features
+
+* **ui-icons:** adding OpenAI and Anthropic icons ([#725](https://github.com/versini-org/ui-components/issues/725)) ([fa4ab12](https://github.com/versini-org/ui-components/commit/fa4ab12819b67bb5a691008b598ff2521a88e1b0))
+
 ## [1.14.0](https://github.com/versini-org/ui-components/compare/ui-icons-v1.13.1...ui-icons-v1.14.0) (2024-10-02)
 
 
