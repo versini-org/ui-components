@@ -141,6 +141,13 @@ try {
 							return "";
 						},
 					},
+					// discard warnings about "use client" in Radix components
+					onwarn(warning, warn) {
+						if (warning.code === "MODULE_LEVEL_DIRECTIVE") {
+							return;
+						}
+						warn(warning);
+					},
 				},
 			},
 			esbuild: {
