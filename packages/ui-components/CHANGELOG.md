@@ -192,6 +192,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.31.18](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.17...ui-components-v5.31.18) (2024-10-06)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-bubble bumped to 1.0.13
+    * @versini/ui-icons bumped to 1.15.1
+    * @versini/ui-panel bumped to 1.0.14
+    * @versini/ui-table bumped to 1.0.13
+
 ## [5.31.17](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.16...ui-components-v5.31.17) (2024-10-06)
 
 
