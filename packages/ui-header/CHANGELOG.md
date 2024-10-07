@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/versini-org/ui-components/compare/ui-header-v1.0.8...ui-header-v1.1.0) (2024-10-07)
+
+
+### Features
+
+* **Header:** adding prop "sticky" ([#730](https://github.com/versini-org/ui-components/issues/730)) ([627f7a6](https://github.com/versini-org/ui-components/commit/627f7a6e999aa5ccb4df355fea446f0ea200a83a))
+
 ## [1.0.8](https://github.com/versini-org/ui-components/compare/ui-header-v1.0.7...ui-header-v1.0.8) (2024-09-27)
 
 
