@@ -22,4 +22,8 @@ export type HeaderProps = {
 	 * @default false
 	 */
 	raw?: boolean;
+	/**
+	 * Whether or not to render the Header component with sticky behavior.
+	 */
+	sticky?: boolean;
 } & SpacingProps;

@@ -36,6 +36,7 @@ export default {
 		raw: false,
 		noColors: false,
 		mode: "system",
+		sticky: false,
 	},
 	argTypes: {
 		mode: {

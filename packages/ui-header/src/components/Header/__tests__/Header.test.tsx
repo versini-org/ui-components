@@ -112,4 +112,28 @@ describe("Header modifiers", () => {
 		expect(header.className).toContain(HEADER_CLASSNAME);
 		expect(header.className).not.toContain("mt-0");
 	});
+
+	it("should render a responsive header tag (system)", async () => {
+		render(<Header sticky>hello</Header>);
+		const header = await screen.findByRole("banner");
+		expectToHaveClasses(header, [
+			HEADER_CLASSNAME,
+			"border-border-medium",
+			"bg-surface-light",
+			"dark:border-border-accent",
+			"dark:bg-surface-dark",
+			"sticky",
+			"top-0",
+			"z-50",
+		]);
+		expectToHaveClasses(header.children[0], [
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+	});
 });
