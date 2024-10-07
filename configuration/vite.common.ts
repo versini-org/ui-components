@@ -1,5 +1,6 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import react from "@vitejs/plugin-react";
 
 import fs from "fs-extra";
 import { glob } from "glob";
@@ -141,13 +142,6 @@ try {
 							return "";
 						},
 					},
-					// discard warnings about "use client" in Radix components
-					onwarn(warning, warn) {
-						if (warning.code === "MODULE_LEVEL_DIRECTIVE") {
-							return;
-						}
-						warn(warning);
-					},
 				},
 			},
 			esbuild: {
@@ -155,7 +149,7 @@ try {
 					"top-level-await": true,
 				},
 			},
-			plugins: [],
+			plugins: [react()],
 		};
 	});
 };
