@@ -127,8 +127,8 @@ importers:
         specifier: 7.1.2
         version: 7.1.2(@rspack/core@1.0.7(@swc/helpers@0.5.13))(webpack@5.95.0)
       html-webpack-plugin:
-        specifier: 5.6.0
-        version: 5.6.0(@rspack/core@1.0.7(@swc/helpers@0.5.13))(webpack@5.95.0)
+        specifier: 5.6.3
+        version: 5.6.3(@rspack/core@1.0.7(@swc/helpers@0.5.13))(webpack@5.95.0)
       mini-css-extract-plugin:
         specifier: 2.9.1
         version: 2.9.1(webpack@5.95.0)
@@ -4167,8 +4167,8 @@ packages:
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
 
-  html-webpack-plugin@5.6.0:
-    resolution: {integrity: sha512-iwaY4wzbe48AfKLZ/Cc8k0L+FKG6oSNRaZ8x5A/T/IVDGyXcbHncM9TdDa93wn0FsSm82FhTKW7f3vS61thXAw==}
+  html-webpack-plugin@5.6.3:
+    resolution: {integrity: sha512-QSf1yjtSAsmf7rYBV7XX86uua4W/vkhIt0xNXKbsi2foEeW7vjJQz4bhnpL3xH+l1ryl1680uNv968Z+X6jSYg==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
@@ -11186,7 +11186,7 @@ snapshots:
 
   html-void-elements@3.0.0: {}
 
-  html-webpack-plugin@5.6.0(@rspack/core@1.0.7(@swc/helpers@0.5.13))(webpack@5.95.0):
+  html-webpack-plugin@5.6.3(@rspack/core@1.0.7(@swc/helpers@0.5.13))(webpack@5.95.0):
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
