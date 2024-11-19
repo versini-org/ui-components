@@ -17,6 +17,7 @@ import {
 	CELL_WRAPPER_HEAD,
 	TableCellSortDirections,
 	getTableCellClasses,
+	getTableCellSortButtonClasses,
 	getTableClasses,
 	getTableFooterClasses,
 	getTableHeadClasses,
@@ -153,6 +154,7 @@ export const TableCell = ({
 export const TableCellSort = ({
 	align,
 	children,
+	buttonClassName,
 	className,
 	component,
 	focusMode = "alt-system",
@@ -163,6 +165,7 @@ export const TableCellSort = ({
 	cellId,
 	...otherProps
 }: TableCellSortProps) => {
+	const buttonClass = getTableCellSortButtonClasses({ buttonClassName });
 	return (
 		<TableCell
 			component={component}
@@ -180,7 +183,7 @@ export const TableCellSort = ({
 		>
 			<ButtonSort_private
 				active={sortedCell === cellId}
-				className="rounded-none text-sm"
+				className={buttonClass}
 				onClick={onClick}
 				align={align}
 				noBorder

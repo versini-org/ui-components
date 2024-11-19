@@ -163,3 +163,11 @@ export const getTableCellClasses = ({
 		"px-4 py-1": compact,
 	});
 };
+
+export const getTableCellSortButtonClasses = ({
+	buttonClassName,
+}: {
+	buttonClassName?: string;
+}) => {
+	return clsx("rounded-none text-sm", buttonClassName);
+};
