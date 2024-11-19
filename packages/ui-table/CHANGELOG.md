@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.1.0](https://github.com/versini-org/ui-components/compare/ui-table-v1.0.13...ui-table-v1.1.0) (2024-11-19)
+
+
+### Features
+
+* **TableCellSort:** adding prop buttonClassName ([#741](https://github.com/versini-org/ui-components/issues/741)) ([bb448f1](https://github.com/versini-org/ui-components/commit/bb448f12bf27a7a0c70f172948f102b89b8cdbf9))
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#743](https://github.com/versini-org/ui-components/issues/743)) ([1438577](https://github.com/versini-org/ui-components/commit/1438577b4de57d063e84872ba8c4d5687b3def13))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 1.1.11
+    * @versini/ui-icons bumped to 1.15.2
+    * @versini/ui-private bumped to 1.4.18
+
 ## [1.0.13](https://github.com/versini-org/ui-components/compare/ui-table-v1.0.12...ui-table-v1.0.13) (2024-10-06)
 
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.2](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.2.1...ui-textinput-v1.2.2) (2024-11-19)
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#743](https://github.com/versini-org/ui-components/issues/743)) ([1438577](https://github.com/versini-org/ui-components/commit/1438577b4de57d063e84872ba8c4d5687b3def13))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.18
+
 ## [1.2.1](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.2.0...ui-textinput-v1.2.1) (2024-10-05)
 
 
