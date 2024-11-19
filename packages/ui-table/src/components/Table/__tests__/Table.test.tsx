@@ -541,6 +541,35 @@ describe("Table components", () => {
 		expect(tableCell.tagName).toBe("TD");
 	});
 
+	it("should render a sortable table cell with custom CSS for the button", async () => {
+		render(
+			<table>
+				<tbody>
+					<tr>
+						<TableCellSort
+							buttonClassName="toto"
+							cellId="cell-id"
+							sortDirection="asc"
+							sortedCell="cell-id"
+							onClick={() => {}}
+							data-testid="table-cell-sort"
+						>
+							hello
+						</TableCellSort>
+					</tr>
+				</tbody>
+			</table>,
+		);
+		const tableCell = await screen.findByTestId("table-cell-sort");
+		expect(tableCell).toBeInTheDocument();
+		expect(tableCell.tagName).toBe("TD");
+		expect(tableCell.querySelector("svg")).toBeInTheDocument();
+		expect(tableCell).toHaveAttribute("aria-sort", "ascending");
+
+		const button = await screen.findByRole("button");
+		expectToHaveClasses(button, ["toto", "rounded-none", "text-sm"]);
+	});
+
 	it("should render a sortable table cell with ASC icon", async () => {
 		render(
 			<table>

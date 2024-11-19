@@ -90,6 +90,10 @@ export type TableCellSortProps = {
 	 */
 	align?: "left" | "center" | "right";
 	/**
+	 * CSS class to apply to the button within the sort table cell.
+	 */
+	buttonClassName?: string;
+	/**
 	 * The type of cell.
 	 * @default "td"
 	 */
