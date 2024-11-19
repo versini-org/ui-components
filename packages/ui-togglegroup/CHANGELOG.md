@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.1](https://github.com/versini-org/ui-components/compare/ui-togglegroup-v1.1.0...ui-togglegroup-v1.1.1) (2024-11-19)
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#743](https://github.com/versini-org/ui-components/issues/743)) ([1438577](https://github.com/versini-org/ui-components/commit/1438577b4de57d063e84872ba8c4d5687b3def13))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.18
+
 ## [1.1.0](https://github.com/versini-org/ui-components/compare/ui-togglegroup-v1.0.0...ui-togglegroup-v1.1.0) (2024-10-05)
 
 

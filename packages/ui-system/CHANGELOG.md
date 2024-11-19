@@ -31,6 +31,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.4.20](https://github.com/versini-org/ui-components/compare/ui-system-v1.4.19...ui-system-v1.4.20) (2024-11-19)
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#743](https://github.com/versini-org/ui-components/issues/743)) ([1438577](https://github.com/versini-org/ui-components/commit/1438577b4de57d063e84872ba8c4d5687b3def13))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.18
+
 ## [1.4.19](https://github.com/versini-org/ui-components/compare/ui-system-v1.4.18...ui-system-v1.4.19) (2024-09-27)
 
 

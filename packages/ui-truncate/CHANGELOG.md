@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.8](https://github.com/versini-org/ui-components/compare/ui-truncate-v1.0.7...ui-truncate-v1.0.8) (2024-11-19)
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#743](https://github.com/versini-org/ui-components/issues/743)) ([1438577](https://github.com/versini-org/ui-components/commit/1438577b4de57d063e84872ba8c4d5687b3def13))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 1.1.11
+
 ## [1.0.7](https://github.com/versini-org/ui-components/compare/ui-truncate-v1.0.6...ui-truncate-v1.0.7) (2024-09-28)
 
 
