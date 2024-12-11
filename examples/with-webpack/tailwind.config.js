@@ -2,6 +2,6 @@
 
 import { twPlugin } from "@versini/ui-styles";
 
-module.exports = twPlugin.merge({
+export default twPlugin.merge({
 	content: ["./src/**/*.{js,ts,jsx,tsx}"],
 });
