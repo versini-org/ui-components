@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.2](https://github.com/versini-org/ui-components/compare/ui-header-v1.1.1...ui-header-v1.1.2) (2024-12-12)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.19
+
 ## [1.1.1](https://github.com/versini-org/ui-components/compare/ui-header-v1.1.0...ui-header-v1.1.1) (2024-11-19)
 
 

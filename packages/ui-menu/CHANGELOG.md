@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/versini-org/ui-components/compare/ui-menu-v1.1.1...ui-menu-v1.1.2) (2024-12-12)
+
+
+### Bug Fixes
+
+* getting ready for react 9.x ([#746](https://github.com/versini-org/ui-components/issues/746)) ([88e2f0d](https://github.com/versini-org/ui-components/commit/88e2f0db161c2233821855c28b99bb452756437c))
+
 ## [1.1.1](https://github.com/versini-org/ui-components/compare/ui-menu-v1.1.0...ui-menu-v1.1.1) (2024-11-19)
 
 

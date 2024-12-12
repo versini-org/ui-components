@@ -35,6 +35,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [1.7.4](https://github.com/versini-org/ui-components/compare/ui-form-v1.7.3...ui-form-v1.7.4) (2024-12-12)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-textarea bumped to 1.0.10
+    * @versini/ui-textinput bumped to 1.2.3
+    * @versini/ui-toggle bumped to 1.0.9
+    * @versini/ui-togglegroup bumped to 1.1.2
+    * @versini/ui-private bumped to 1.4.19
+
 ## [1.7.3](https://github.com/versini-org/ui-components/compare/ui-form-v1.7.2...ui-form-v1.7.3) (2024-11-19)
 
 
