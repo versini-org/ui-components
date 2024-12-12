@@ -34,9 +34,7 @@ export const announce = ({
 	onAnnouncementClear,
 	dispatch,
 }: announceProps) => {
-	if (clearAnnouncementTimeoutRef?.current !== null) {
-		clearTimeout(clearAnnouncementTimeoutRef.current as unknown as number);
-	}
+	clearTimeout(clearAnnouncementTimeoutRef.current as unknown as number);
 
 	if (children !== null) {
 		dispatch({
