@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.9](https://github.com/versini-org/ui-components/compare/ui-toggle-v1.0.8...ui-toggle-v1.0.9) (2024-12-12)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.19
+
 ## [1.0.8](https://github.com/versini-org/ui-components/compare/ui-toggle-v1.0.7...ui-toggle-v1.0.8) (2024-11-19)
 
 

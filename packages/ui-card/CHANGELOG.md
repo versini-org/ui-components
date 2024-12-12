@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.11](https://github.com/versini-org/ui-components/compare/ui-card-v1.0.10...ui-card-v1.0.11) (2024-12-12)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.4.19
+
 ## [1.0.10](https://github.com/versini-org/ui-components/compare/ui-card-v1.0.9...ui-card-v1.0.10) (2024-11-19)
 
 
