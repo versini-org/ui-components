@@ -4,6 +4,7 @@ import {
 	ROLES,
 } from "./constants";
 
+export type SetTimeoutResult = ReturnType<typeof setTimeout> | null;
 export type ActionProps =
 	| Record<string, never>
 	| {
@@ -26,22 +27,16 @@ export type ClearAnnouncementProps = {
 
 export type announceProps = {
 	children: React.ReactNode;
-	clearAnnouncementTimeoutRef: React.MutableRefObject<
-		NodeJS.Timeout | number | null | undefined
-	>;
+	clearAnnouncementTimeoutRef: React.MutableRefObject<SetTimeoutResult>;
 	dispatch: React.Dispatch<ActionProps>;
 	clearAnnouncementDelay?: number;
 	onAnnouncementClear?: () => void;
 };
 
 export type conditionallyDelayAnnouncementProps = {
-	announcementTimeoutRef: React.MutableRefObject<
-		NodeJS.Timeout | null | undefined
-	>;
+	announcementTimeoutRef: React.MutableRefObject<SetTimeoutResult>;
 	children: React.ReactNode;
-	clearAnnouncementTimeoutRef: React.MutableRefObject<
-		NodeJS.Timeout | number | null | undefined
-	>;
+	clearAnnouncementTimeoutRef: React.MutableRefObject<SetTimeoutResult>;
 	dispatch: React.Dispatch<ActionProps>;
 	announcementDelay?: number;
 	clearAnnouncementDelay?: number;

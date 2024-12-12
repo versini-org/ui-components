@@ -1,5 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import React from "react";
 
 import { Menu, MenuItem, MenuSeparator } from "../..";
 
@@ -65,7 +66,7 @@ const SimpleMenuIcon = ({ ...props }) => (
 	</Menu>
 );
 
-function renderWithUserEvent(jsx: JSX.Element) {
+function renderWithUserEvent(jsx: React.ReactElement) {
 	return {
 		user: userEvent.setup(),
 		...render(jsx),

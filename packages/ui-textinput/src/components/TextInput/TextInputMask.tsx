@@ -3,7 +3,7 @@ import { LiveRegion } from "@versini/ui-private";
 import React, { useEffect, useRef, useState } from "react";
 
 import { TextInput } from "./TextInput";
-import type { TextInputMaskProps } from "./TextInputTypes";
+import type { SetTimeoutResult, TextInputMaskProps } from "./TextInputTypes";
 
 const CLEAR_ANNOUNCEMENT_TIMEOUT = 500;
 const AUTO_HIDE_CLEAR_ANNOUNCEMENT_TIMEOUT = 5000;
@@ -47,16 +47,16 @@ export const TextInputMask = React.forwardRef<
 				politeness: null,
 			});
 		const isMaskedRef = useRef(true);
-		const automaskTimerRef = useRef<number>();
+		const automaskTimerRef = useRef<SetTimeoutResult>(null);
 		const inputRef = useRef<HTMLInputElement>(null);
 		const mergedInputRef = useMergeRefs([ref, inputRef]);
 
 		const buttonLabel = masked ? "Show" : "Hide";
 
 		const restartAutoMaskTimer = () => {
-			clearTimeout(automaskTimerRef.current);
+			automaskTimerRef.current && clearTimeout(automaskTimerRef.current);
 			if (!isMaskedRef.current) {
-				automaskTimerRef.current = window.setTimeout(() => {
+				automaskTimerRef.current = setTimeout(() => {
 					isMaskedRef.current = true;
 					setMasked(true);
 					setLiveRegionStatus({
@@ -134,7 +134,7 @@ export const TextInputMask = React.forwardRef<
 
 		useEffect(() => {
 			return () => {
-				clearTimeout(automaskTimerRef.current);
+				automaskTimerRef.current && clearTimeout(automaskTimerRef.current);
 			};
 		}, []);
 
@@ -177,7 +177,7 @@ export const TextInputMask = React.forwardRef<
 						onBlur: handleTextInputMaskBlur,
 
 						disabled: disabled,
-					})}
+					} as React.HTMLAttributes<HTMLElement>)}
 					{...otherProps}
 				/>
 
