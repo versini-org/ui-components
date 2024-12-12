@@ -111,18 +111,27 @@ export const MenuComponent = forwardRef<
 				}
 			: {};
 
-		const triggerElement = React.cloneElement(trigger as React.ReactElement, {
-			...uiButtonsExtraProps,
-			"aria-label": label,
-			"data-open": isOpen ? "" : undefined,
-			"data-focus-inside": hasFocusInside ? "" : undefined,
-			ref: useMergeRefs([refs.setReference, item.ref, userRef]),
-			...getReferenceProps(
-				parent.getItemProps({
-					...props,
-				}),
-			),
-		});
+		interface TriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
+			"aria-label"?: string;
+			"data-open"?: string;
+			"data-focus-inside"?: string;
+			ref: React.Ref<HTMLButtonElement>;
+		}
+		const triggerElement = React.cloneElement(
+			trigger as React.ReactElement<TriggerProps>,
+			{
+				...uiButtonsExtraProps,
+				"aria-label": label,
+				"data-open": isOpen ? "" : undefined,
+				"data-focus-inside": hasFocusInside ? "" : undefined,
+				ref: useMergeRefs([refs.setReference, item.ref, userRef]),
+				...getReferenceProps(
+					parent.getItemProps({
+						...props,
+					}),
+				),
+			},
+		);
 
 		// Event emitter allows you to communicate across tree components.
 		// This effect closes all menus when an item gets clicked anywhere

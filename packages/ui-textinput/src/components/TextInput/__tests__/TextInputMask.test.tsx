@@ -1,5 +1,6 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import React from "react";
 
 import { TextInputMask } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
@@ -25,7 +26,7 @@ const MyIconHide = () => (
 	</svg>
 );
 
-function renderWithUserEvent(jsx: JSX.Element) {
+function renderWithUserEvent(jsx: React.ReactElement) {
 	return {
 		user: userEvent.setup(),
 		...render(jsx),

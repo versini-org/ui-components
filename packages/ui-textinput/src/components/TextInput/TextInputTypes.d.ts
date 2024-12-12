@@ -1,7 +1,7 @@
 import type { SpacingProps } from "@versini/ui-private/dist/utilities";
 
 export type Size = "xs" | "sm" | "md" | "lg" | "xl";
-
+export type SetTimeoutResult = ReturnType<typeof setTimeout> | null;
 export type CommonTextInputProps = {
 	/**
 	 * The label of the TextInput.

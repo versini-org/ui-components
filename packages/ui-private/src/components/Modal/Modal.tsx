@@ -121,7 +121,7 @@ export const ModalClose = React.forwardRef<
 				ref,
 				onClick: handleClose,
 				...rest,
-			})}
+			} as React.HTMLAttributes<HTMLElement>)}
 		</div>
 	);
 });

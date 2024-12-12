@@ -4,6 +4,7 @@ import {
 	ROLES,
 } from "./constants";
 
+export type SetTimeoutResult = ReturnType<typeof setTimeout> | null;
 export type ActionProps =
 	| Record<string, never>
 	| {

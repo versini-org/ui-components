@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useEffect, useReducer, useRef } from "react";
 
-import type { LiveRegionProps } from "./LiveRegionTypes";
+import type { LiveRegionProps, SetTimeoutResult } from "./LiveRegionTypes";
 import { DEFAULT_POLITENESS_BY_ROLE } from "./constants";
 import { reducer } from "./reducer";
 import { conditionallyDelayAnnouncement } from "./utilities";
@@ -24,8 +24,8 @@ export function LiveRegion({
 
 	...otherProps
 }: LiveRegionProps) {
-	const announcementTimeoutRef = useRef();
-	const clearAnnouncementTimeoutRef = useRef();
+	const announcementTimeoutRef = useRef<SetTimeoutResult>(null);
+	const clearAnnouncementTimeoutRef = useRef<SetTimeoutResult>(null);
 
 	const [state, dispatch] = useReducer(reducer, {
 		announcement: null,
