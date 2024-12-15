@@ -8,7 +8,9 @@
 		"dev": "nodemon",
 		"build": "tsc && vite build",
 		"lint": "biome lint src",
-		"start": "vite"
+		"start": "vite",
+		"storybook": "storybook dev -p 6006 --no-open",
+		"build-storybook": "storybook build"
 	},
 	"dependencies": {
 		"@versini/ui-anchor": "workspace:../../packages/ui-anchor",
@@ -21,11 +23,23 @@
 		"@versini/ui-main": "workspace:../../packages/ui-main",
 		"@versini/ui-menu": "workspace:../../packages/ui-menu",
 		"@versini/ui-panel": "workspace:../../packages/ui-panel",
-		"@versini/ui-textinput": "workspace:../../packages/ui-textinput",
 		"@versini/ui-styles": "workspace:../../packages/ui-styles",
 		"@versini/ui-system": "workspace:../../packages/ui-system",
 		"@versini/ui-table": "workspace:../../packages/ui-table",
+		"@versini/ui-textinput": "workspace:../../packages/ui-textinput",
 		"react": "18.3.1",
 		"react-dom": "18.3.1"
+	},
+	"devDependencies": {
+		"@chromatic-com/storybook": "^3.2.2",
+		"@storybook/addon-essentials": "^8.4.7",
+		"@storybook/addon-interactions": "^8.4.7",
+		"@storybook/addon-onboarding": "^8.4.7",
+		"@storybook/blocks": "^8.4.7",
+		"@storybook/react": "^8.4.7",
+		"@storybook/react-vite": "^8.4.7",
+		"@storybook/test": "^8.4.7",
+		"prop-types": "^15.8.1",
+		"storybook": "^8.4.7"
 	}
 }
