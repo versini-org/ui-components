@@ -24,10 +24,16 @@ export const Basic = (args: any) => (
 export const Truncate = (args: any) => {
 	args.className = "w-44 sm:w-52";
 	return (
-		<div className="flex flex-wrap gap-2">
-			<Button {...args}>Button lorem ipsum</Button>
-			<Button {...args}>Button lorem ipsum dolor</Button>
-			<Button {...args}>Button lorem ipsum dolor sit amet</Button>
-		</div>
+		<>
+			<p>For text to truncate, you need to limit the width of the buttons.</p>
+			<p>This can be done by using Tailwind width classes, for example</p>
+			<code>className={args.className}</code>
+
+			<div className="flex flex-wrap gap-2">
+				<Button {...args}>Button lorem ipsum</Button>
+				<Button {...args}>Button lorem ipsum dolor</Button>
+				<Button {...args}>Button lorem ipsum dolor sit amet</Button>
+			</div>
+		</>
 	);
 };
