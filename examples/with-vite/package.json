@@ -9,8 +9,8 @@
 		"build": "tsc && vite build",
 		"lint": "biome lint src",
 		"start": "vite",
-		"storybook": "storybook dev -p 6006 --no-open",
-		"build-storybook": "storybook build"
+		"storybook": "storybook dev -p 6006 --no-open --disable-telemetry",
+		"build-storybook": "storybook build --disable-telemetry"
 	},
 	"dependencies": {
 		"@versini/ui-anchor": "workspace:../../packages/ui-anchor",
