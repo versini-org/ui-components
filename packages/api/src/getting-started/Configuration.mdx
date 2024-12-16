@@ -1,0 +1,40 @@
+import { Meta } from "@storybook/blocks";
+
+import Navigators from "./helpers/Navigators";
+import Highlight from "./helpers/Highlight";
+import codeBlocks from "./helpers/codeBlocks";
+
+<Meta title="Configuration" />
+
+  <div className="prose">
+    <h1>Configuration</h1>
+    <h2>JavaScript</h2>
+    <ul>
+      <li>
+        <p>UI Components come un-bundled, which means you need to use a bundler
+          such as Webpack, Vite or Rollup to bundle components into your
+          application. </p>
+      </li>
+      <li>
+        <p>UI Components are tree-shakeable, side-effect free and each component style is self-contained.</p>
+      </li>
+      <li>
+        <p>Please refer to each component API documentation (under the Components or Form components menu) to see how they should be imported, what their individual props are as well as many different examples. </p>
+      </li>
+    </ul>
+
+    <h2>CSS</h2>
+
+    <p>TailwindCSS is required to style the components within the{" "}
+      <strong>UI-Components</strong> library. Thanks to our TailwindCSS plugin,
+      you can take advantage of tree-shaking unused styles:</p>
+    <div>
+      <Highlight
+        codeBlock={codeBlocks.config.code}
+        language={codeBlocks.config.language}
+      />
+    </div>
+
+    <Navigators leftLink="Installation" rightLink="Usage" />
+
+  </div>

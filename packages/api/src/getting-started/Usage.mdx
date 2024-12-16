@@ -1,0 +1,35 @@
+import { Meta } from "@storybook/blocks";
+import { Button, ButtonIcon } from "@versini/ui-button";
+import { Card } from "@versini/ui-card";
+
+import Navigators from "./helpers/Navigators";
+import Highlight from "./helpers/Highlight";
+import codeBlocks from "./helpers/codeBlocks";
+
+<Meta title="Usage" />
+
+  <div className="prose">
+    <h1>Usage</h1>
+    <h2>Example</h2>
+    <Highlight
+      codeBlock={codeBlocks.usage.code}
+      language={codeBlocks.usage.language}
+    />
+    <p className="mb-4">
+      {"If everything works well, this is what you should see in your page:"}
+    </p>
+    <Card
+      mode="light"
+      header="Welcome to UI Components"
+      footer={
+        <Button mode="light" focusMode="dark" noBorder>
+          Hooray
+        </Button>
+      }
+    >
+      <p>Hello World</p>
+    </Card>
+
+      <Navigators leftLink="Configuration" rightLink="Release Tags" paddingTop />
+
+  </div>

@@ -1,0 +1,65 @@
+import { Meta } from "@storybook/blocks";
+import { linkTo } from "@storybook/addon-links";
+import { ButtonIcon } from "@versini/ui-button";
+import { IconNext, IconPrevious } from "@versini/ui-icons";
+import { Flexgrid, FlexgridItem } from "@versini/ui-system";
+
+import Highlight from "./helpers/Highlight";
+import Navigators from "./helpers/Navigators";
+import Table from "./helpers/Table";
+import codeBlocks from "./helpers/codeBlocks";
+import tableData from "./helpers/tableData";
+
+<Meta title="Installation" />
+
+  <div className="prose">
+
+    <h1>Installation</h1>
+    <p>
+    	The <strong>UI-Components</strong> library is available as multiple npm
+    	packages. The library has been split into multiple packages to make it
+    	easier to manage and to reduce the size of the final bundle. Most are
+    	individual components such as Button, Card, and Spinner. Other "specialty"
+    	packages have been created to handle styles, system and icons:
+    </p>
+    <div className="my-2 flex flex-wrap">
+    	<Table
+    		column1="Package name"
+    		column2="Description"
+    		data={tableData.installation.data}
+    	/>
+    </div>
+    <p>
+    <strong>NOTE</strong>: each package content is detailed in this
+    documentation. You can find them in the navigation bar.
+    </p>
+    <h2>Example</h2>
+    <p>
+    If you only need some core components such as Button and Card, and of
+    course the CSS styles associated<sup>1</sup>, use the following command:
+    </p>
+    <Highlight
+    	codeBlock={codeBlocks.install.code}
+    	language={codeBlocks.install.language}
+    />
+
+    	<p>
+    		You also need to install React and React-DOM (at least 18.0.0 or above).
+    	</p>
+    	<Highlight
+    		codeBlock={codeBlocks.installReact.code}
+    		language={codeBlocks.installReact.language}
+    	/>
+
+
+    	<p>
+    		<small>
+    			<sup>1</sup>
+    			For more information about how CSS styles are handled, please check the
+    			Styles section in the navigation bar.
+    		</small>
+    	</p>
+
+    <Navigators leftLink="Overview" rightLink="Configuration" />
+
+  </div>

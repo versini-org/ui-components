@@ -2,7 +2,6 @@
 	"watch": [
 		"tailwind.config.js",
 		".storybook/*.*",
-		"src/**/*.*",
 
 		"../ui-styles/src/**/*.*",
 		"../ui-fingerprint/src/**/*.*",

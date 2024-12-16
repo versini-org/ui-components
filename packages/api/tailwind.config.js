@@ -3,5 +3,5 @@
 import { twPlugin } from "@versini/ui-styles";
 
 export default twPlugin.merge({
-	content: ["./src/**/*.{js,ts,jsx,tsx}"],
+	content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
 });
