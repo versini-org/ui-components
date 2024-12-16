@@ -14,7 +14,7 @@ const meta: Meta<typeof ButtonIcon> = {
 };
 
 export default meta;
-export const Basic = (args: any) => (
+export const Basic = (args: React.ComponentProps<typeof ButtonIcon>) => (
 	<ButtonIcon {...args}>
 		<IconSettings />
 	</ButtonIcon>

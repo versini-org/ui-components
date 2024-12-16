@@ -13,7 +13,7 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-export const Basic = (args: any) => (
+export const Basic = (args: React.ComponentProps<typeof Button>) => (
 	<div className="flex flex-wrap gap-2">
 		<Button {...args}>Button lorem ipsum</Button>
 		<Button {...args}>Button lorem ipsum dolor</Button>
@@ -21,7 +21,7 @@ export const Basic = (args: any) => (
 	</div>
 );
 
-export const Truncate = (args: any) => {
+export const Truncate = (args: React.ComponentProps<typeof Button>) => {
 	args.className = "w-44 sm:w-52";
 	return (
 		<>
