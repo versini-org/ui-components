@@ -45,8 +45,8 @@ jobs:
       - name: Build packages and documentation
         run: |
           npx lerna run build --scope="@versini/ui-styles"
-          npx lerna run build --ignore="@versini/example-*" --ignore="@versini/documentation" --ignore="@versini/bundlesize" --ignore="@versini/ui-styles"
-          npx lerna run build:ci --scope="@versini/documentation"
+          npx lerna run build --ignore="@versini/example-*" --ignore="@versini/documentation" --ignore="@versini/api" --ignore="@versini/bundlesize" --ignore="@versini/ui-styles"
+          npx lerna run build:ci --scope="@versini/api"
 
       - name: Setup Pages
         if: ${{ always() }}
@@ -56,7 +56,7 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./packages/documentation/dist"
+          path: "./packages/api/dist"
 
       - name: Deploy to GitHub Pages
         if: ${{ always() }}
