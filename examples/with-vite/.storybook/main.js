@@ -2,13 +2,13 @@
 
 const config = {
 	stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-	addons: ["@storybook/addon-essentials", "@chromatic-com/storybook"],
+	addons: ["@storybook/addon-essentials"],
 	framework: {
 		name: "@storybook/react-vite",
 		options: {},
 	},
 	docs: {
-		autodocs: true,
+		// autodocs: true,
 	},
 	typescript: {
 		reactDocgen: "react-docgen-typescript",
