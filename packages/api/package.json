@@ -1,14 +1,14 @@
 {
-	"name": "@versini/example-with-vite",
+	"name": "@versini/api",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
 		"clean": "rimraf dist",
 		"dev": "nodemon",
-		"build": "tsc && vite build",
+		"build": "tsc && storybook build --disable-telemetry --output-dir dist",
 		"lint": "biome lint src",
-		"start": "vite"
+		"start": "storybook dev -p 6006 --no-open --disable-telemetry"
 	},
 	"dependencies": {
 		"@versini/ui-anchor": "workspace:../../packages/ui-anchor",
@@ -27,5 +27,14 @@
 		"@versini/ui-textinput": "workspace:../../packages/ui-textinput",
 		"react": "18.3.1",
 		"react-dom": "18.3.1"
+	},
+	"devDependencies": {
+		"@storybook/addon-essentials": "8.4.7",
+		"@storybook/blocks": "8.4.7",
+		"@storybook/react": "8.4.7",
+		"@storybook/react-vite": "8.4.7",
+		"@storybook/test": "8.4.7",
+		"prop-types": "15.8.1",
+		"storybook": "8.4.7"
 	}
 }

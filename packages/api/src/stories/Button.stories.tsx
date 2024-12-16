@@ -1,7 +1,7 @@
 import type { Meta } from "@storybook/react";
 import { fn } from "@storybook/test";
 
-import { Button } from "../../../../packages/ui-button/src/components";
+import { Button } from "@versini/ui-button/src/components";
 
 const meta: Meta<typeof Button> = {
 	parameters: {
