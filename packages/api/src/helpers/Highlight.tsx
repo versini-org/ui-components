@@ -7,7 +7,7 @@ await import("prismjs/components/prism-bash" as string);
 export default ({
 	codeBlock,
 	language = "jsx",
-}: { codeBlock: string; language: string }) => (
+}: { codeBlock: string; language?: string }) => (
 	<Unstyled>
 		<Highlight theme={themes.vsDark} code={codeBlock} language={language}>
 			{({ style, tokens, getLineProps, getTokenProps }) => (

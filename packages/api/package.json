@@ -4,6 +4,7 @@
 	"license": "MIT",
 	"author": "Arno Versini",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"clean": "rimraf dist",
 		"dev": "nodemon",
