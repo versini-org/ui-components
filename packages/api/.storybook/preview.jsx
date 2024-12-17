@@ -17,6 +17,7 @@ const preview = {
 				],
 			},
 		},
+
 		controls: {
 			// show description and default values in the individual stories (basic, etc.)
 			expanded: true,

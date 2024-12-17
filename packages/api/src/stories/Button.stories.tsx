@@ -1,39 +1,53 @@
-import type { Meta } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 import { Button } from "@versini/ui-button/src/components";
 
+type Story = StoryObj<typeof Button>;
+
 const meta: Meta<typeof Button> = {
 	parameters: {
 		layout: "centered",
+		docs: {
+			controls: { exclude: ["spacing"] },
+		},
 	},
 	title: "Components/Button",
+
 	component: Button,
-	args: { children: "Button", onClick: fn() },
+	args: { onClick: fn() },
 };
 
 export default meta;
-export const Basic = (args: React.ComponentProps<typeof Button>) => (
-	<div className="flex flex-wrap gap-2">
-		<Button {...args}>Button lorem ipsum</Button>
-		<Button {...args}>Button lorem ipsum dolor</Button>
-		<Button {...args}>Button lorem ipsum dolor sit amet</Button>
-	</div>
-);
 
-export const Truncate = (args: React.ComponentProps<typeof Button>) => {
-	args.className = "w-44 sm:w-52";
-	return (
-		<>
-			<p>For text to truncate, you need to limit the width of the buttons.</p>
-			<p>This can be done by using Tailwind width classes, for example</p>
-			<code>className={args.className}</code>
+export const Basic: Story = {
+	render: (args) => (
+		<div className="flex flex-wrap gap-2">
+			<Button {...args}>Button lorem ipsum</Button>
+			<Button {...args}>Button lorem ipsum dolor</Button>
+			<Button {...args}>Button lorem ipsum dolor sit amet</Button>
+		</div>
+	),
+};
 
-			<div className="flex flex-wrap gap-2">
-				<Button {...args}>Button lorem ipsum</Button>
-				<Button {...args}>Button lorem ipsum dolor</Button>
-				<Button {...args}>Button lorem ipsum dolor sit amet</Button>
-			</div>
-		</>
-	);
+export const Truncate: Story = {
+	args: { className: "w-44 sm:w-52" },
+	render: (args) => {
+		return (
+			<>
+				<div className="flex flex-wrap gap-2">
+					<Button {...args}>Button lorem ipsum</Button>
+					<Button {...args}>Button lorem ipsum dolor</Button>
+					<Button {...args}>Button lorem ipsum dolor sit amet</Button>
+				</div>
+				<div className="pt-4">
+					<p>
+						For text to truncate, you need to limit the width of the buttons.
+					</p>
+					<p>This can be done by using Tailwind width classes, for example</p>
+					<code>className={args.className}</code>
+				</div>
+			</>
+		);
+	},
 };
