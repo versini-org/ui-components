@@ -5,6 +5,14 @@ import "@versini/ui-pill/dist/style.css";
 
 const preview = {
 	parameters: {
+		backgrounds: {
+			values: [
+				{ name: "Dark", value: "rgb(100 116 139)" },
+				{ name: "Light", value: "#f0f0f0" },
+			],
+			default: "Light",
+		},
+
 		options: {
 			storySort: {
 				order: [
