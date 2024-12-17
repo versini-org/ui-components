@@ -35,7 +35,7 @@ jobs:
       - name: Build packages
         run: |
           npx lerna run build --scope="@versini/ui-styles"
-          npx lerna run build --ignore="@versini/example-*" --ignore="@versini/documentation" --ignore="@versini/ui-styles"
+          npx lerna run build --ignore="@versini/example-*" --ignore="@versini/documentation" --ignore="@versini/api" --ignore="@versini/ui-styles"
 
       - name: Run Bundle Size
         run: |
@@ -79,10 +79,10 @@ jobs:
 
       - name: Run Lint and Coverage
         run: |
-          npx lerna run lint --ignore="@versini/documentation"
+          npx lerna run lint --ignore="@versini/documentation" --ignore="@versini/api"
           npx lerna run build --scope="@versini/ui-styles"
-          npx lerna run build --ignore="@versini/documentation" --ignore="@versini/ui-styles"
-          npx lerna run test:coverage --ignore="@versini/documentation"
+          npx lerna run build --ignore="@versini/documentation" --ignore="@versini/api" --ignore="@versini/ui-styles"
+          npx lerna run test:coverage --ignore="@versini/documentation" --ignore="@versini/api"
 
   release-bundlesize:
     if: github.head_ref == 'release-please--branches--main'
@@ -126,7 +126,7 @@ jobs:
       - name: Run Bundle Size For Release PR
         run: |
           npx lerna run build --scope="@versini/ui-styles"
-          npx lerna run build --ignore="@versini/example-*" --ignore="@versini/documentation" --ignore="@versini/ui-styles"
+          npx lerna run build --ignore="@versini/example-*" --ignore="@versini/documentation" --ignore="@versini/api" --ignore="@versini/ui-styles"
           npx lerna run stats:release
 
       - name: Commit Release Stats to Release PR

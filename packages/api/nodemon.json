@@ -1,0 +1,33 @@
+{
+	"watch": [
+		"tailwind.config.js",
+		".storybook/*.*",
+
+		"../ui-styles/src/**/*.*",
+		"../ui-fingerprint/src/**/*.*",
+		"../ui-icons/src/**/*.*",
+		"../ui-system/src/**/*.*",
+
+		"../ui-anchor/src/**/*.*",
+		"../ui-bubble/src/**/*.*",
+		"../ui-button/src/**/*.*",
+		"../ui-card/src/**/*.*",
+		"../ui-footer/src/**/*.*",
+		"../ui-header/src/**/*.*",
+		"../ui-hooks/src/**/*.*",
+		"../ui-icons/src/**/*.*",
+		"../ui-main/src/**/*.*",
+		"../ui-menu/src/**/*.*",
+		"../ui-panel/src/**/*.*",
+		"../ui-pill/src/**/*.*",
+		"../ui-private/src/**/*.*",
+		"../ui-spinner/src/**/*.*",
+		"../ui-system/src/**/*.*",
+		"../ui-table/src/**/*.*",
+		"../ui-textarea/src/**/*.*",
+		"../ui-textinput/src/**/*.*",
+		"../ui-toggle/src/**/*.*",
+		"../ui-togglegroup/src/**/*.*",
+		"../ui-truncate/src/**/*.*"
+	]
+}

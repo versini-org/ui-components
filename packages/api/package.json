@@ -1,14 +1,15 @@
 {
-	"name": "@versini/example-with-vite",
-	"private": true,
+	"name": "@versini/api",
 	"version": "0.0.0",
-	"type": "module",
+	"license": "MIT",
+	"author": "Arno Versini",
+	"private": true,
 	"scripts": {
 		"clean": "rimraf dist",
 		"dev": "nodemon",
-		"build": "tsc && vite build",
+		"build": "tsc && storybook build --disable-telemetry --output-dir dist",
 		"lint": "biome lint src",
-		"start": "vite"
+		"start": "storybook dev -p 6006 --no-open --disable-telemetry"
 	},
 	"dependencies": {
 		"@versini/ui-anchor": "workspace:../../packages/ui-anchor",
@@ -20,6 +21,7 @@
 		"@versini/ui-icons": "workspace:../../packages/ui-icons",
 		"@versini/ui-main": "workspace:../../packages/ui-main",
 		"@versini/ui-menu": "workspace:../../packages/ui-menu",
+		"@versini/ui-pill": "workspace:../../packages/ui-pill",
 		"@versini/ui-panel": "workspace:../../packages/ui-panel",
 		"@versini/ui-styles": "workspace:../../packages/ui-styles",
 		"@versini/ui-system": "workspace:../../packages/ui-system",
@@ -27,5 +29,15 @@
 		"@versini/ui-textinput": "workspace:../../packages/ui-textinput",
 		"react": "18.3.1",
 		"react-dom": "18.3.1"
+	},
+	"devDependencies": {
+		"@storybook/addon-essentials": "8.4.7",
+		"@storybook/blocks": "8.4.7",
+		"@storybook/addon-links": "8.4.7",
+		"@storybook/react": "8.4.7",
+		"@storybook/react-vite": "8.4.7",
+		"@storybook/test": "8.4.7",
+		"prop-types": "15.8.1",
+		"storybook": "8.4.7"
 	}
 }
