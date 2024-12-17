@@ -2,8 +2,7 @@ import { Unstyled } from "@storybook/blocks";
 import { Highlight, Prism, themes } from "prism-react-renderer";
 
 (typeof global !== "undefined" ? global : window).Prism = Prism;
-// @ts-ignore
-await import("prismjs/components/prism-bash");
+await import("prismjs/components/prism-bash" as string);
 
 export default ({
 	codeBlock,
