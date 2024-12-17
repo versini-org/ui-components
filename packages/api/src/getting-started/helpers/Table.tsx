@@ -13,7 +13,7 @@ interface TableProps {
 }
 
 export default ({ column1, column2, data }: TableProps) => (
-	<Table>
+	<Table mode="light">
 		<TableHead className="uppercase">
 			<TableRow>
 				<TableCell scope="col">{column1}</TableCell>
