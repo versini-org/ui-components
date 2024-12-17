@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"license": "MIT",
 	"author": "Arno Versini",
+	"type": "module",
 	"private": true,
 	"scripts": {
 		"build:ci": "npm-run-all --serial clean build:docs:ci",
