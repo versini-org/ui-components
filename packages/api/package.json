@@ -1,8 +1,9 @@
 {
 	"name": "@versini/api",
-	"private": true,
 	"version": "0.0.0",
-	"type": "module",
+	"license": "MIT",
+	"author": "Arno Versini",
+	"private": true,
 	"scripts": {
 		"clean": "rimraf dist",
 		"dev": "nodemon",
