@@ -192,6 +192,9 @@ importers:
       '@versini/ui-panel':
         specifier: workspace:../../packages/ui-panel
         version: link:../ui-panel
+      '@versini/ui-pill':
+        specifier: workspace:../../packages/ui-pill
+        version: link:../ui-pill
       '@versini/ui-styles':
         specifier: workspace:../../packages/ui-styles
         version: link:../ui-styles

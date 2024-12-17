@@ -20,6 +20,7 @@
 		"@versini/ui-icons": "workspace:../../packages/ui-icons",
 		"@versini/ui-main": "workspace:../../packages/ui-main",
 		"@versini/ui-menu": "workspace:../../packages/ui-menu",
+		"@versini/ui-pill": "workspace:../../packages/ui-pill",
 		"@versini/ui-panel": "workspace:../../packages/ui-panel",
 		"@versini/ui-styles": "workspace:../../packages/ui-styles",
 		"@versini/ui-system": "workspace:../../packages/ui-system",
