@@ -16,11 +16,14 @@ const preview = {
 		options: {
 			storySort: {
 				order: [
-					"Overview",
-					"Installation",
-					"Configuration",
-					"Usage",
-					"Release Tags",
+					"Getting Started",
+					[
+						"Overview",
+						"Installation",
+						"Configuration",
+						"Usage",
+						"Release Tags",
+					],
 					"Components",
 				],
 			},
