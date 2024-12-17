@@ -1,15 +1,7 @@
-import { Meta, Primary, Controls, Unstyled } from "@storybook/blocks";
+import { Meta } from "@storybook/blocks";
 
-import * as ButtonIconStories from "./ButtonIcon.stories";
-import Usage from "../helpers/Usage";
-import Title from "../helpers/Title";
+import AutoDoc from "../helpers/AutoDoc";
+import * as Stories from "./ButtonIcon.stories";
 
-<Meta title="Components/ButtonIcon" of={ButtonIconStories} />
-
-<Title label="ButtonIcon" level="alpha" />
-
-<Usage codeBlock={`import { ButtonIcon } from "@versini/ui-button";`} />
-
-<Primary />
-
-<Controls />
+<Meta title="Components/ButtonIcon" of={Stories} />
+<AutoDoc importName="ButtonIcon" importPackage="ui-button" stage="stable" />
