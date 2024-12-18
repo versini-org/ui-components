@@ -39,7 +39,7 @@ import { Card } from "@versini/ui-card";
 function App() {
   return (
     <Card
-		 mode="light"
+      mode="light"
       header="Welcome to UI Components"
       footer={
         <Button mode="light" focusMode="dark" noBorder>
