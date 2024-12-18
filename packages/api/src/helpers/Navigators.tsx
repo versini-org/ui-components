@@ -28,6 +28,21 @@ export default ({
 		| "space-evenly"
 		| undefined = "flex-end";
 
+	/**
+	 * If the label is provided but the link is not, we generate the link from the label,
+	 * by replacing spaces with dashes and converting to lowercase, and adding "--docs" at the end,
+	 * and getting-started- at the beginning.
+	 * Example: "Release Tags" -> "getting-started-release-tags--docs"
+	 *
+	 * This is the default for the main "getting started" pages.
+	 */
+	if (leftLabel && !leftLink) {
+		leftLink = `getting-started-${leftLabel.replace(/\s+/g, "-").toLowerCase()}--docs`;
+	}
+	if (rightLabel && !rightLink) {
+		rightLink = `getting-started-${rightLabel.replace(/\s+/g, "-").toLowerCase()}--docs`;
+	}
+
 	if (leftLink && rightLink) {
 		mainAlign = "space-between";
 	} else if (leftLink) {
