@@ -10,24 +10,36 @@ import {
 	IconPrevious,
 	IconSettings,
 } from "@versini/ui-icons";
+import { commonControlsSetup } from "../helpers/constants";
 
 type Story = StoryObj<typeof ButtonIcon>;
 
 const meta: Meta<typeof ButtonIcon> = {
 	parameters: {
 		layout: "centered",
-		docs: {
-			controls: { exclude: ["spacing"] },
-		},
+		docs: { ...commonControlsSetup.parameters },
 	},
 	title: "Components/ButtonIcon",
 
 	component: ButtonIcon,
-	args: { onClick: fn() },
+	args: {
+		onClick: fn(),
+		align: "center",
+		disabled: false,
+		focusMode: "system",
+		mode: "system",
+		size: "medium",
+		noBorder: false,
+		raw: false,
+		fullWidth: false,
+		noInternalClick: false,
+		noBackground: false,
+	},
 };
 
 export default meta;
 export const Basic: Story = {
+	...commonControlsSetup,
 	render: (args) => (
 		<div className="flex flex-wrap gap-2">
 			<ButtonIcon {...args}>
@@ -47,6 +59,7 @@ export const Basic: Story = {
 };
 
 export const WithLabel: Story = {
+	...commonControlsSetup,
 	render: (args) => (
 		<>
 			<div className="flex flex-wrap gap-2">

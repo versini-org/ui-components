@@ -39,6 +39,7 @@ const preview = {
 		},
 
 		controls: {
+			disableSaveFromUI: true,
 			// show description and default values in the individual stories (basic, etc.)
 			expanded: true,
 			matchers: {
