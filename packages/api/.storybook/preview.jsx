@@ -25,7 +25,7 @@ const preview = {
 						"Release Tags",
 					],
 					"Components",
-					["Bubble", "Button", "ButtonIcon", "buttonLink"],
+					["Bubble", "Button", "ButtonIcon", "ButtonLink", "Card"],
 				],
 			},
 		},
