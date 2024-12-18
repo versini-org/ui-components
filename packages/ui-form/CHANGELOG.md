@@ -1,5 +1,24 @@
 # Change Log
 
+## [1.8.0](https://github.com/versini-org/ui-components/compare/ui-form-v1.7.4...ui-form-v1.8.0) (2024-12-18)
+
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-hooks bumped to 4.3.0
+    * @versini/ui-textarea bumped to 1.1.0
+    * @versini/ui-textinput bumped to 1.3.0
+    * @versini/ui-toggle bumped to 1.1.0
+    * @versini/ui-togglegroup bumped to 1.2.0
+    * @versini/ui-private bumped to 1.5.0
+
 ## [1.7.4](https://github.com/versini-org/ui-components/compare/ui-form-v1.7.3...ui-form-v1.7.4) (2024-12-12)
 
 

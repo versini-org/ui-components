@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.0](https://github.com/versini-org/ui-components/compare/ui-hooks-v4.2.2...ui-hooks-v4.3.0) (2024-12-18)
+
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+
 ## [4.2.2](https://github.com/versini-org/ui-components/compare/ui-hooks-v4.2.1...ui-hooks-v4.2.2) (2024-10-05)
 
 

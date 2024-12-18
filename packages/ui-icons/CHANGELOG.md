@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.16.0](https://github.com/versini-org/ui-components/compare/ui-icons-v1.15.3...ui-icons-v1.16.0) (2024-12-18)
+
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.5.0
+  * devDependencies
+    * @versini/ui-private bumped to 1.5.0
+
 ## [1.15.3](https://github.com/versini-org/ui-components/compare/ui-icons-v1.15.2...ui-icons-v1.15.3) (2024-12-12)
 
 

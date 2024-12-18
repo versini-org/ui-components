@@ -192,6 +192,34 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.32.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.21...ui-components-v5.32.0) (2024-12-18)
+
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-anchor bumped to 1.2.0
+    * @versini/ui-button bumped to 1.2.0
+    * @versini/ui-bubble bumped to 1.1.0
+    * @versini/ui-card bumped to 1.1.0
+    * @versini/ui-footer bumped to 1.1.0
+    * @versini/ui-header bumped to 1.2.0
+    * @versini/ui-hooks bumped to 4.3.0
+    * @versini/ui-icons bumped to 1.16.0
+    * @versini/ui-main bumped to 1.1.0
+    * @versini/ui-menu bumped to 1.2.0
+    * @versini/ui-panel bumped to 1.1.0
+    * @versini/ui-pill bumped to 1.1.0
+    * @versini/ui-private bumped to 1.5.0
+    * @versini/ui-spinner bumped to 1.1.0
+    * @versini/ui-table bumped to 1.2.0
+
 ## [5.31.21](https://github.com/versini-org/ui-components/compare/ui-components-v5.31.20...ui-components-v5.31.21) (2024-12-12)
 
 

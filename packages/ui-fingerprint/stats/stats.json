@@ -26,5 +26,19 @@
       "limit": "45 KB",
       "passed": true
     }
+  },
+  "1.1.0": {
+    "../bundlesize/dist/fingerprint/assets/index.js": {
+      "fileSize": 8852,
+      "fileSizeGzip": 4006,
+      "limit": "4 KB",
+      "passed": true
+    },
+    "../bundlesize/dist/fingerprint/assets/vendor.js": {
+      "fileSize": 184339,
+      "fileSizeGzip": 58016,
+      "limit": "57 KB",
+      "passed": true
+    }
   }
 }
