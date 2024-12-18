@@ -16,12 +16,14 @@ export default defineConfig(({ mode }) => {
 		(dependency) =>
 			dependency !== "react" &&
 			dependency !== "react-dom" &&
+			dependency !== "react-dom-client" &&
 			dependency !== "react/jsx-runtime" &&
 			dependency !== "react-dom/server" &&
 			dependency !== "tailwindcss",
 	);
 	prodDependencies.push(
 		"react-dom",
+		"react-dom/client",
 		"react-dom/server",
 		"react",
 		"react/jsx-runtime",
