@@ -1,24 +1,28 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Card } from "@versini/ui-card/src/components";
+import { commonControlsSetup } from "../helpers/constants";
 
 type Story = StoryObj<typeof Card>;
 
 const meta: Meta<typeof Card> = {
 	parameters: {
 		layout: "centered",
-		docs: {
-			controls: { exclude: ["spacing"] },
-		},
+		docs: { ...commonControlsSetup.parameters },
 	},
 	title: "Components/Card",
 
 	component: Card,
-	args: {},
+	args: {
+		compact: false,
+		mode: "system",
+		noBorder: false,
+	},
 };
 
 export default meta;
 
 export const Basic: Story = {
+	...commonControlsSetup,
 	args: {
 		header: "Dune",
 		footer: "Frank Herbert",
@@ -45,6 +49,7 @@ export const Basic: Story = {
 };
 
 export const Custom: Story = {
+	...commonControlsSetup,
 	args: {
 		header: <h2 className="text-red-500">Dune</h2>,
 		footer: <h4 className="text-xs text-slate-400">Frank Herbert</h4>,

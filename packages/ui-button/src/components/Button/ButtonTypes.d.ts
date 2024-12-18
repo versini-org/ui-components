@@ -42,7 +42,7 @@ export type CommonButtonProps = {
 
 export type ButtonProps = {
 	/**
-	 * The children to render.
+	 * The text to render in the button.
 	 */
 	children: React.ReactNode;
 	/**
@@ -76,12 +76,23 @@ export type ButtonLinkProps = {
 	 * @default false
 	 */
 	noNewWindowIcon?: boolean;
+	/**
+	 * A string that is the result of parsing the href HTML attribute
+	 * relative to the document, containing a valid URL of a linked resource.
+	 */
+	href?: string;
+	/**
+	 * A string that reflects the target HTML attribute, indicating where
+	 * to display the linked resource.
+	 * @default _self
+	 */
+	target?: "_blank" | "_self" | "_parent" | "_top";
 } & ButtonProps &
 	React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export type ButtonIconProps = {
 	/**
-	 * The children to render.
+	 * The icon to render in the button.
 	 */
 	children: React.ReactNode;
 	/**
@@ -90,7 +101,7 @@ export type ButtonIconProps = {
 	 */
 	align?: "left" | "right" | "center";
 	/**
-	 * The label to show next to the icon.
+	 * The label to use as aria-label.
 	 */
 	label?: string;
 	/**

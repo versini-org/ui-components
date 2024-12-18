@@ -2,25 +2,28 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import "@versini/ui-bubble/dist/style.css";
 import { Bubble } from "../../../ui-bubble/src/components";
+import { commonControlsSetup } from "../helpers/constants";
 
 type Story = StoryObj<typeof Bubble>;
 
 const meta: Meta<typeof Bubble> = {
 	parameters: {
 		layout: "centered",
-		docs: {
-			controls: { exclude: ["spacing"] },
-		},
+		docs: { ...commonControlsSetup.parameters },
 	},
 	title: "Components/Bubble",
 
 	component: Bubble,
-	args: {},
+	args: {
+		copyToClipboardFocusMode: "system",
+		copyToClipboardMode: "system",
+	},
 };
 
 export default meta;
 
 export const Basic: Story = {
+	...commonControlsSetup,
 	render: (args) => (
 		<div className="h-96 min-h-10 bg-slate-900 p-11 w-96">
 			<Bubble kind="right" spacing={{ b: 4 }} {...args}>
@@ -36,6 +39,7 @@ export const Basic: Story = {
 
 const string = "DOM element with string";
 export const Copy: Story = {
+	...commonControlsSetup,
 	render: (args) => (
 		<div className=" bg-slate-900 h-full min-h-10 p-11">
 			<Bubble kind="right" spacing={{ b: 4 }} copyToClipboard {...args}>
@@ -69,6 +73,7 @@ export const Copy: Story = {
 };
 
 export const LongText: Story = {
+	...commonControlsSetup,
 	render: (args) => (
 		<div className="h-full min-h-10 bg-slate-900 p-11">
 			<Bubble kind="right" spacing={{ b: 4 }} {...args}>
@@ -136,6 +141,7 @@ export const LongText: Story = {
 };
 
 export const WithFooter: Story = {
+	...commonControlsSetup,
 	render: (args) => (
 		<div className="h-96 min-h-10 bg-slate-900 p-11">
 			<Bubble

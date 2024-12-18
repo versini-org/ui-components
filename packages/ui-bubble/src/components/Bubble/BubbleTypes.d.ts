@@ -2,7 +2,7 @@ import type { SpacingProps } from "@versini/ui-private/dist/utilities";
 
 export type BubbleProps = {
 	/**
-	 * The children to render.
+	 * The text to render in the bubble.
 	 */
 	children: React.ReactNode;
 	/**
@@ -11,6 +11,9 @@ export type BubbleProps = {
 	className?: string;
 	/**
 	 * Whether or not to show a "copy/paste" icon next to the Bubble.
+	 * - If a function is passed, it will be called with the text to copy.
+	 * - If a string is passed, that string will be copied.
+	 * - If a boolean is passed, the children will be copied.
 	 */
 	copyToClipboard?: boolean | string | ((text: any) => void);
 	/**

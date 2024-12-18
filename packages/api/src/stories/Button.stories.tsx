@@ -3,25 +3,37 @@ import { fn } from "@storybook/test";
 
 import "@versini/ui-button/dist/style.css";
 import { Button } from "../../../ui-button/src/components";
+import { commonControlsSetup } from "../helpers/constants";
 
 type Story = StoryObj<typeof Button>;
 
 const meta: Meta<typeof Button> = {
 	parameters: {
 		layout: "centered",
-		docs: {
-			controls: { exclude: ["spacing"] },
-		},
+		docs: { ...commonControlsSetup.parameters },
 	},
 	title: "Components/Button",
 
 	component: Button,
-	args: { onClick: fn() },
+	args: {
+		onClick: fn(),
+		disabled: false,
+		noTruncate: false,
+		variant: "primary",
+		focusMode: "system",
+		mode: "system",
+		size: "medium",
+		noBorder: false,
+		raw: false,
+		fullWidth: false,
+		noInternalClick: false,
+	},
 };
 
 export default meta;
 
 export const Basic: Story = {
+	...commonControlsSetup,
 	render: (args) => (
 		<div className="flex flex-wrap gap-2">
 			<Button {...args}>Button lorem ipsum</Button>
@@ -32,6 +44,7 @@ export const Basic: Story = {
 };
 
 export const Truncate: Story = {
+	...commonControlsSetup,
 	args: { className: "w-44 sm:w-52" },
 	render: (args) => {
 		return (
@@ -41,12 +54,12 @@ export const Truncate: Story = {
 					<Button {...args}>Button lorem ipsum dolor</Button>
 					<Button {...args}>Button lorem ipsum dolor sit amet</Button>
 				</div>
-				<div className="pt-4">
+				<div className="pt-4 text-copy-dark">
 					<p>
 						For text to truncate, you need to limit the width of the buttons.
 					</p>
 					<p>This can be done by using Tailwind width classes, for example</p>
-					<code>className={args.className}</code>
+					<code className="prose-dark">className={args.className}</code>
 				</div>
 			</>
 		);
