@@ -1,7 +1,17 @@
 /** @type { import('@storybook/react').Preview } */
 import "./styles.css";
+import { Unstyled } from "@storybook/blocks";
 
 const preview = {
+	decorators: [
+		(Story) => (
+			<Unstyled>
+				<div className="prose prose-dark dark:prose-lighter">
+					<Story />
+				</div>
+			</Unstyled>
+		),
+	],
 	parameters: {
 		backgrounds: {
 			values: [
