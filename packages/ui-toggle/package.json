@@ -41,7 +41,7 @@
 		"@tailwindcss/typography": "0.5.15",
 		"@versini/ui-private": "workspace:../ui-private",
 		"clsx": "2.1.1",
-		"tailwindcss": "3.4.15"
+		"tailwindcss": "3.4.17"
 	},
 	"sideEffects": [
 		"**/*.css"
