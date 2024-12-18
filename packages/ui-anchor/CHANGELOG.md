@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.1](https://github.com/versini-org/ui-components/compare/ui-anchor-v1.2.0...ui-anchor-v1.2.1) (2024-12-18)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 1.2.1
+
 ## [1.2.0](https://github.com/versini-org/ui-components/compare/ui-anchor-v1.1.12...ui-anchor-v1.2.0) (2024-12-18)
 
 

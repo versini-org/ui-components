@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/versini-org/ui-components/compare/ui-menu-v1.2.0...ui-menu-v1.2.1) (2024-12-18)
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#771](https://github.com/versini-org/ui-components/issues/771)) ([11adf6b](https://github.com/versini-org/ui-components/commit/11adf6bdd4555f00c9494ea86dae8b99793c88b3))
+
 ## [1.2.0](https://github.com/versini-org/ui-components/compare/ui-menu-v1.1.2...ui-menu-v1.2.0) (2024-12-18)
 
 

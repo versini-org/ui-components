@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.1](https://github.com/versini-org/ui-components/compare/ui-system-v1.5.0...ui-system-v1.5.1) (2024-12-18)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.5.1
+
 ## [1.5.0](https://github.com/versini-org/ui-components/compare/ui-system-v1.4.21...ui-system-v1.5.0) (2024-12-18)
 
 
