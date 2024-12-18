@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.3.0](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.2.3...ui-textinput-v1.3.0) (2024-12-18)
+
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-hooks bumped to 4.3.0
+    * @versini/ui-private bumped to 1.5.0
+
 ## [1.2.3](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.2.2...ui-textinput-v1.2.3) (2024-12-12)
 
 

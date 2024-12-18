@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.0](https://github.com/versini-org/ui-components/compare/ui-bubble-v1.0.15...ui-bubble-v1.1.0) (2024-12-18)
+
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 1.2.0
+    * @versini/ui-icons bumped to 1.16.0
+    * @versini/ui-private bumped to 1.5.0
+
 ## [1.0.15](https://github.com/versini-org/ui-components/compare/ui-bubble-v1.0.14...ui-bubble-v1.0.15) (2024-12-12)
 
 

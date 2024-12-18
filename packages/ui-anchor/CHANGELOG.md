@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/versini-org/ui-components/compare/ui-anchor-v1.1.12...ui-anchor-v1.2.0) (2024-12-18)
+
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 1.2.0
+
 ## [1.1.12](https://github.com/versini-org/ui-components/compare/ui-anchor-v1.1.11...ui-anchor-v1.1.12) (2024-12-12)
 
 
