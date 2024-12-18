@@ -2,7 +2,7 @@ import { Meta, Markdown, Unstyled } from "@storybook/blocks";
 import { Card } from "@versini/ui-card";
 
 import Navigators from "../helpers/Navigators";
-import ComponentsChangelog from "../../../ui-components/CHANGELOG.md?raw";
+
 import StylesChangelog from "../../../ui-styles/CHANGELOG.md?raw";
 import FormComponentsChangelog from "../../../ui-form/CHANGELOG.md?raw";
 import IconsChangelog from "../../../ui-icons/CHANGELOG.md?raw";
@@ -16,13 +16,6 @@ import SystemChangelog from "../../../ui-system/CHANGELOG.md?raw";
 <Unstyled>
   <div className="mt-4" />
 </Unstyled>
-
-<details>
-  <summary>Components</summary>
-  <Card mode="light">
-    <Markdown>{ComponentsChangelog}</Markdown>
-  </Card>
-</details>
 
 <details>
   <summary>Styles</summary>

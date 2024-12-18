@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -34,8 +32,8 @@
 		"stats": "bundlesize -c bundlesize.config.js -p \"$npm_package_version\""
 	},
 	"peerDependencies": {
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1"
+		"react": "^18.3.1 || ^19.0.0",
+		"react-dom": "^18.3.1 || ^19.0.0"
 	},
 	"dependencies": {
 		"@versini/ui-hooks": "workspace:../ui-hooks",
@@ -46,7 +44,5 @@
 		"@versini/ui-private": "workspace:../ui-private",
 		"clsx": "2.1.1"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }
