@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
-import { ButtonLink } from "@versini/ui-button/src/components";
+import "@versini/ui-button/dist/style.css";
+import { ButtonLink } from "../../../ui-button/src/components";
 
 type Story = StoryObj<typeof ButtonLink>;
 

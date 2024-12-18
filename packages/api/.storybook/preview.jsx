@@ -1,7 +1,5 @@
 /** @type { import('@storybook/react').Preview } */
 import "./styles.css";
-import "@versini/ui-button/dist/style.css";
-import "@versini/ui-pill/dist/style.css";
 
 const preview = {
 	parameters: {
