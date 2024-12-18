@@ -28,8 +28,8 @@
 		"@versini/ui-system": "workspace:../../packages/ui-system",
 		"@versini/ui-table": "workspace:../../packages/ui-table",
 		"@versini/ui-textinput": "workspace:../../packages/ui-textinput",
-		"react": "18.3.1",
-		"react-dom": "18.3.1"
+		"react": "19.0.0",
+		"react-dom": "19.0.0"
 	},
 	"devDependencies": {
 		"@storybook/addon-essentials": "8.4.7",
