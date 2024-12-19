@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 import "@versini/ui-button/dist/style.css";
-import { ButtonIcon } from "../../../ui-button/src/components";
+import { ButtonIcon } from "@versini/ui-button/src/components";
 
 import {
 	IconEdit,
@@ -10,7 +10,7 @@ import {
 	IconPrevious,
 	IconSettings,
 } from "@versini/ui-icons";
-import { commonControlsSetup } from "../helpers/constants";
+import { commonControlsSetup } from "../../helpers/constants";
 
 type Story = StoryObj<typeof ButtonIcon>;
 

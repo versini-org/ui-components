@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Card } from "@versini/ui-card/src/components";
-import { commonControlsSetup } from "../helpers/constants";
+import { commonControlsSetup } from "../../helpers/constants";
 
 type Story = StoryObj<typeof Card>;
 

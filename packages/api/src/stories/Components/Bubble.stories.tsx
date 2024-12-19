@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import "@versini/ui-bubble/dist/style.css";
-import { Bubble } from "../../../ui-bubble/src/components";
-import { commonControlsSetup } from "../helpers/constants";
+import { Bubble } from "../../../../ui-bubble/src/components";
+import { commonControlsSetup } from "../../helpers/constants";
 
 type Story = StoryObj<typeof Bubble>;
 
