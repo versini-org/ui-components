@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 import "@versini/ui-button/dist/style.css";
-import { ButtonLink } from "@versini/ui-button/src/components";
+import { ButtonLink } from "../../../../ui-button/src/components";
 import { commonControlsSetup } from "../../helpers/constants";
 
 type Story = StoryObj<typeof ButtonLink>;
