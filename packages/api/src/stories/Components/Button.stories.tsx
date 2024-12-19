@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 import "@versini/ui-button/dist/style.css";
-import { Button } from "../../../ui-button/src/components";
-import { commonControlsSetup } from "../helpers/constants";
+import { Button } from "../../../../ui-button/src/components";
+import { commonControlsSetup } from "../../helpers/constants";
 
 type Story = StoryObj<typeof Button>;
 
