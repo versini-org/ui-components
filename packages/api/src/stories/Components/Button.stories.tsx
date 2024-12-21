@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 
 import "@versini/ui-button/dist/style.css";
 import { Button } from "../../../../ui-button/src/components";
@@ -15,18 +14,13 @@ const meta: Meta<typeof Button> = {
 	title: "Components/Button",
 
 	component: Button,
-	args: {
-		onClick: fn(),
-		disabled: false,
-		noTruncate: false,
-		variant: "primary",
-		focusMode: "system",
-		mode: "system",
-		size: "medium",
-		noBorder: false,
-		raw: false,
-		fullWidth: false,
-		noInternalClick: false,
+	argTypes: {
+		children: {
+			control: { disable: true },
+		},
+		onClick: {
+			control: { disable: true },
+		},
 	},
 };
 

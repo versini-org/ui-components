@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 
 import "@versini/ui-menu/dist/style.css";
 import { Button, ButtonIcon } from "@versini/ui-button";
@@ -24,12 +23,13 @@ const meta: Meta<typeof Menu> = {
 	title: "Components/Menu",
 
 	component: Menu,
-	args: {
-		onClick: fn(),
-		label: "Open menu",
-		defaultPlacement: "bottom-start",
-		mode: "system",
-		focusMode: "system",
+	argTypes: {
+		trigger: {
+			control: { disable: true },
+		},
+		children: {
+			control: { disable: true },
+		},
 	},
 };
 

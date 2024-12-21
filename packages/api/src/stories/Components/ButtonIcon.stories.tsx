@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 
 import "@versini/ui-button/dist/style.css";
 import { ButtonIcon } from "../../../../ui-button/src/components";
@@ -22,18 +21,13 @@ const meta: Meta<typeof ButtonIcon> = {
 	title: "Components/ButtonIcon",
 
 	component: ButtonIcon,
-	args: {
-		onClick: fn(),
-		align: "center",
-		disabled: false,
-		focusMode: "system",
-		mode: "system",
-		size: "medium",
-		noBorder: false,
-		raw: false,
-		fullWidth: false,
-		noInternalClick: false,
-		noBackground: false,
+	argTypes: {
+		children: {
+			control: { disable: true },
+		},
+		onClick: {
+			control: { disable: true },
+		},
 	},
 };
 

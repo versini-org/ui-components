@@ -12,10 +12,10 @@ const meta: Meta<typeof Card> = {
 	title: "Components/Card",
 
 	component: Card,
-	args: {
-		compact: false,
-		mode: "system",
-		noBorder: false,
+	argTypes: {
+		children: {
+			control: { disable: true },
+		},
 	},
 };
 
