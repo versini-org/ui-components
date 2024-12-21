@@ -26,7 +26,7 @@ export const Truncate = ({
 	};
 
 	return (
-		<span>
+		<span style={{ wordBreak: "break-word" }}>
 			{isExpanded ? children : string}
 			{isTruncated && (
 				<Button
