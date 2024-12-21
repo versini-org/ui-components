@@ -14,9 +14,19 @@ const meta: Meta<typeof Bubble> = {
 	title: "Components/Bubble",
 
 	component: Bubble,
-	args: {
-		copyToClipboardFocusMode: "system",
-		copyToClipboardMode: "system",
+	argTypes: {
+		children: {
+			control: { disable: true },
+		},
+		copyToClipboard: {
+			control: { disable: true },
+		},
+		footer: {
+			control: { disable: true },
+		},
+		rawFooter: {
+			control: { disable: true },
+		},
 	},
 };
 
