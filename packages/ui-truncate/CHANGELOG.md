@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/versini-org/ui-components/compare/ui-truncate-v1.1.1...ui-truncate-v1.1.2) (2024-12-21)
+
+
+### Bug Fixes
+
+* **Truncate:** force word break even if there is no truncation ([#777](https://github.com/versini-org/ui-components/issues/777)) ([3b9b79f](https://github.com/versini-org/ui-components/commit/3b9b79f0bff44a915e5eb1b40626c346c041b728))
+
 ## [1.1.1](https://github.com/versini-org/ui-components/compare/ui-truncate-v1.1.0...ui-truncate-v1.1.1) (2024-12-18)
 
 
