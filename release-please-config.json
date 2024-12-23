@@ -4,6 +4,7 @@
 		"packages/ui-bubble": {},
 		"packages/ui-button": {},
 		"packages/ui-card": {},
+		"packages/ui-types/ui-card-types": {},
 		"packages/ui-components": {},
 		"packages/ui-fingerprint": {},
 		"packages/ui-footer": {},
