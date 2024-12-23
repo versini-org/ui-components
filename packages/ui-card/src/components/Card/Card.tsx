@@ -1,4 +1,4 @@
-import type { CardHeaderProps, CardProps } from "@versini/ui-card-types";
+import type { CardTypes } from "@versini/ui-card-types";
 import { useUniqueId } from "@versini/ui-hooks";
 
 import { CARD_CLASSNAME } from "../../common/constants";
@@ -9,7 +9,7 @@ function CardHeader({
 	content,
 	userAriaLabelledby,
 	className,
-}: CardHeaderProps) {
+}: CardTypes.HeaderProps) {
 	if (typeof content === "string") {
 		return (
 			<h2 id={id} className={className}>
@@ -43,7 +43,7 @@ export const Card = ({
 	noBorder = false,
 
 	...otherProps
-}: CardProps) => {
+}: CardTypes.Props) => {
 	let headerId = null,
 		sectionAriaLabelledBy = null;
 
