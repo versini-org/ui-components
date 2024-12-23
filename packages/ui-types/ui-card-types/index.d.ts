@@ -1,4 +1,5 @@
 import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import React from "react";
 
 export type CardProps = {
 	/**
