@@ -1,7 +1,7 @@
+import type { CardHeaderProps, CardProps } from "@versini/ui-card-types";
 import { useUniqueId } from "@versini/ui-hooks";
 
 import { CARD_CLASSNAME } from "../../common/constants";
-import type { CardHeaderProps, CardProps } from "./CardTypes";
 import { getCardClasses } from "./utilities";
 
 function CardHeader({
