@@ -192,6 +192,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.32.2](https://github.com/versini-org/ui-components/compare/ui-components-v5.32.1...ui-components-v5.32.2) (2024-12-23)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-card bumped to 1.1.2
+
 ## [5.32.1](https://github.com/versini-org/ui-components/compare/ui-components-v5.32.0...ui-components-v5.32.1) (2024-12-18)
 
 
