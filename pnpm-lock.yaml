@@ -746,6 +746,9 @@ importers:
       '@floating-ui/react':
         specifier: 0.27.2
         version: 0.27.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@versini/ui-spacing':
+        specifier: workspace:../ui-spacing
+        version: link:../ui-spacing
       '@versini/ui-spacing-types':
         specifier: workspace:../ui-types/ui-spacing-types
         version: link:../ui-types/ui-spacing-types
@@ -995,9 +998,9 @@ importers:
 
   packages/ui-types/ui-card-types:
     dependencies:
-      '@versini/ui-private':
-        specifier: workspace:../../ui-private
-        version: link:../../ui-private
+      '@versini/ui-spacing-types':
+        specifier: workspace:../ui-spacing-types
+        version: link:../ui-spacing-types
 
   packages/ui-types/ui-spacing-types: {}
 

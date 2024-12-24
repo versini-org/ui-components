@@ -84,7 +84,6 @@ export default defineConfig(({ mode }) => {
 			rollupOptions: {
 				input: {
 					index: resolve(__dirname, "src/components/index.ts"),
-					utilities: resolve(__dirname, "src/utilities.ts"),
 					style: resolve(__dirname, "src/style.ts"),
 					...input,
 				},

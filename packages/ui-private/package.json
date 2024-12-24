@@ -37,6 +37,7 @@
 	},
 	"dependencies": {
 		"@floating-ui/react": "0.27.2",
+		"@versini/ui-spacing": "workspace:../ui-spacing",
 		"@versini/ui-spacing-types": "workspace:../ui-types/ui-spacing-types",
 		"clsx": "2.1.1"
 	},

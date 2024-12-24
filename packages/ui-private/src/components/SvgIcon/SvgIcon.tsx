@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import { getSpacing } from "../../common/utilities";
+import { getSpacing } from "@versini/ui-spacing";
 import type { SvgIconProps } from "./SvgIconTypes";
 
 export const SvgIcon = ({
