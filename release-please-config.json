@@ -28,7 +28,7 @@
 		"packages/ui-truncate": {},
 
 		"packages/ui-types/ui-card-types": {},
-		"packages/ui-types/ui-spacing": {}
+		"packages/ui-types/ui-spacing-types": {}
 	},
 	"plugins": ["node-workspace"],
 	"pull-request-header": ":rocket: Automated Release"
