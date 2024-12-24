@@ -1,5 +1,5 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
-import { getSpacing } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-spacing";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 import clsx from "clsx";
 
 export const CELL_WRAPPER_HEAD = "thead";
@@ -24,7 +24,7 @@ export const getTableClasses = ({
 	stickyFooter?: boolean;
 	stickyHeader?: boolean;
 	wrapperClassName?: string;
-} & SpacingProps) => {
+} & SpacingTypes.Props) => {
 	return {
 		wrapper: clsx(
 			"not-prose relative w-full rounded-lg shadow-md",

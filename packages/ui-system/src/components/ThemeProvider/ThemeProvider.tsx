@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { useEffect, useRef } from "react";
 
-import { getSpacing } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-spacing";
 import { THEMEPROVIDER_CLASSNAME } from "../../common/constants";
 import { ThemeProviderProps } from "./ThemeProviderTypes";
 

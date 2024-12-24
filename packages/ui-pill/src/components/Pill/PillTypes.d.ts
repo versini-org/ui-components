@@ -1,4 +1,4 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type PillProps = {
 	/**
@@ -20,4 +20,4 @@ export type PillProps = {
 	 * @default "information"
 	 */
 	variant?: "information" | "warning" | "error" | "success";
-} & SpacingProps;
+} & SpacingTypes.Props;

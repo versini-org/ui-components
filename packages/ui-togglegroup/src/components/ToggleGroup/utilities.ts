@@ -1,5 +1,5 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
-import { getSpacing } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-spacing";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 import clsx from "clsx";
 
 import {
@@ -87,7 +87,7 @@ export const getToggleGroupItemClasses = ({
 export const getToggleGroupClasses = ({
 	mode,
 	spacing,
-}: { mode: Mode } & SpacingProps) => {
+}: { mode: Mode } & SpacingTypes.Props) => {
 	return clsx(
 		TOGGLEGROUP_CLASSNAME,
 		getSpacing(spacing),

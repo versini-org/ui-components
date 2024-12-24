@@ -1,5 +1,5 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
-import { getSpacing } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-spacing";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 import clsx from "clsx";
 
 import { BUBBLE_CLASSNAME } from "../../common/constants";
@@ -38,7 +38,7 @@ export const getBubbleClasses = ({
 }: {
 	kind: string;
 	className?: string;
-} & SpacingProps) => {
+} & SpacingTypes.Props) => {
 	const wrapper = clsx(
 		className,
 		BUBBLE_CLASSNAME,

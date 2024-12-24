@@ -1,5 +1,5 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
-import { getSpacing } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-spacing";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 import clsx from "clsx";
 
 import { BUTTON_CLASSNAME } from "../../common/constants";
@@ -26,7 +26,7 @@ type getButtonClassesProps = {
 	noBackground?: boolean;
 	noTruncate?: boolean;
 	variant?: "primary" | "secondary" | "danger";
-} & SpacingProps;
+} & SpacingTypes.Props;
 
 const getButtonSizesClasses = ({
 	type,

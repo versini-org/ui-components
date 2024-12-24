@@ -1,5 +1,5 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
-import { getSpacing } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-spacing";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 import clsx from "clsx";
 
 import {
@@ -21,7 +21,7 @@ type getTextInputClassesProps = {
 	className?: string;
 	rightElementClassName?: string;
 	inputClassName?: string;
-} & SpacingProps;
+} & SpacingTypes.Props;
 
 const getTextInputColorClasses = ({
 	mode,

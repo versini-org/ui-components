@@ -1,4 +1,4 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type ToggleProps = {
 	/**
@@ -38,4 +38,4 @@ export type ToggleProps = {
 	 * @default false
 	 */
 	noBorder?: boolean;
-} & SpacingProps;
+} & SpacingTypes.Props;

@@ -1,4 +1,4 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type HeaderProps = {
 	/**
@@ -26,4 +26,4 @@ export type HeaderProps = {
 	 * Whether or not to render the Header component with sticky behavior.
 	 */
 	sticky?: boolean;
-} & SpacingProps;
+} & SpacingTypes.Props;

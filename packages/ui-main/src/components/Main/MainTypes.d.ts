@@ -1,4 +1,4 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type MainProps = {
 	/**
@@ -14,4 +14,4 @@ export type MainProps = {
 	 * @default false
 	 */
 	raw?: boolean;
-} & SpacingProps;
+} & SpacingTypes.Props;

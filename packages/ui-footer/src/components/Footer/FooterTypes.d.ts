@@ -1,4 +1,4 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type FooterProps = {
 	/**
@@ -27,4 +27,4 @@ export type FooterProps = {
 	 * The content to render in the second row.
 	 */
 	row2?: React.ReactNode;
-} & SpacingProps;
+} & SpacingTypes.Props;

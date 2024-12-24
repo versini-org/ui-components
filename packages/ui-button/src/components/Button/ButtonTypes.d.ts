@@ -1,4 +1,4 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type CommonButtonProps = {
 	/**
@@ -38,7 +38,7 @@ export type CommonButtonProps = {
 	 * The size of the Button.
 	 */
 	size?: "small" | "medium" | "large";
-} & SpacingProps;
+} & SpacingTypes.Props;
 
 export type ButtonProps = {
 	/**
