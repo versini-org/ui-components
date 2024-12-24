@@ -1,4 +1,4 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type SpinnerProps = {
 	/**
@@ -13,4 +13,4 @@ export type SpinnerProps = {
 	 * The type of spinner to render. This will change the layout of the spinner.
 	 */
 	type?: "circle" | "dots";
-} & SpacingProps;
+} & SpacingTypes.Props;

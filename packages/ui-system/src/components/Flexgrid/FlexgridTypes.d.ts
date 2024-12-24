@@ -1,4 +1,4 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type FlexgridProps = {
 	/**
@@ -72,7 +72,7 @@ export type FlexgridProps = {
 	 * It follows the [CSS width property](https://developer.mozilla.org/en-US/docs/Web/CSS/width).
 	 */
 	width?: string;
-} & SpacingProps;
+} & SpacingTypes.Props;
 
 export type FlexgridItemProps = {
 	/** Children of the FlexgridItem. */

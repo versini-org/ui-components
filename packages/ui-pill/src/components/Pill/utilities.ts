@@ -1,4 +1,4 @@
-import { getSpacing } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-spacing";
 import clsx from "clsx";
 
 import { PILL_CLASSNAME } from "../../common/constants";

@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -39,9 +37,9 @@
 	},
 	"dependencies": {
 		"@floating-ui/react": "0.27.2",
+		"@versini/ui-spacing": "workspace:../ui-spacing",
+		"@versini/ui-spacing-types": "workspace:../ui-types/ui-spacing-types",
 		"clsx": "2.1.1"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }

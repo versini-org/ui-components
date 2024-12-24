@@ -1,5 +1,5 @@
 import type { Placement } from "@floating-ui/react";
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 import React from "react";
 
 export type MenuProps = {
@@ -34,7 +34,7 @@ export type MenuProps = {
 	 * @param open whether or not the menu is open
 	 */
 	onOpenChange?: (open: boolean) => void;
-} & SpacingProps;
+} & SpacingTypes.Props;
 
 export type MenuItemProps = {
 	/**

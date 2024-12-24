@@ -1,26 +1,4 @@
-export type SpacingType =
-	| undefined
-	| string
-	| number
-	| {
-			b?: number;
-			l?: number;
-			r?: number;
-			t?: number;
-	  };
-
-/**
- * Custom spacing for a component.
- * @example
- * ```tsx
- * <Button spacing={{ b: 2, l: 1, r: 1, t: 2 }}>Hello World</Button>
- * <Button spacing="2">Hello World</Button>
- * <Button spacing={2}>Hello World</Button>
- * ```
- */
-export type SpacingProps = {
-	spacing?: SpacingType;
-};
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 /**
  * This method returns a string that can be used as a tailwind class relying
@@ -34,7 +12,7 @@ export type SpacingProps = {
  * { t: 4, r: 1, b: 3, l: 5} => "mt-4 mr-1 mb-3 ml-5"
  *
  */
-export const getSpacing = (spacing: SpacingType): string => {
+export const getSpacing = (spacing: SpacingTypes.Types): string => {
 	let spacingClass = "";
 	/**
 	 * In this case, spacing is a number or a string. For example:

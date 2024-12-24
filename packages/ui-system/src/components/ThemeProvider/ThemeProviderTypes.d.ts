@@ -1,4 +1,4 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type ThemeProviderProps = {
 	/**
@@ -26,4 +26,4 @@ export type ThemeProviderProps = {
 	 * @default false
 	 */
 	global?: boolean;
-} & SpacingProps;
+} & SpacingTypes.Props;

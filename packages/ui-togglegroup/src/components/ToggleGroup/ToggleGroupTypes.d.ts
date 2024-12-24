@@ -1,5 +1,5 @@
 import type * as ToggleGroupRadix from "@radix-ui/react-toggle-group";
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type Size = "small" | "medium" | "large";
 export type Mode = "dark" | "light" | "system" | "alt-system";
@@ -19,6 +19,6 @@ export type ToggleGroupProps = {
 	 */
 	size?: Size;
 } & Omit<ToggleGroupRadix.ToggleGroupSingleProps, "type", "defaultValue"> &
-	SpacingProps;
+	SpacingTypes.Props;
 
 export type ToggleGroupItemProps = ToggleGroupRadix.ToggleGroupItemProps;

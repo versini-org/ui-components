@@ -1,4 +1,4 @@
-import type { SpacingProps } from "../../common";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 export type SvgIconProps = {
 	/**
@@ -37,4 +37,4 @@ export type SvgIconProps = {
 	 * The viewBox to use. If not provided, the default viewBox will be used.
 	 */
 	viewBox?: string;
-} & SpacingProps;
+} & SpacingTypes.Props;

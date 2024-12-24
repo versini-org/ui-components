@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 
 import * as AllIcons from "../..";
 
@@ -16,7 +16,7 @@ const renderExpected = async ({
 	className?: string;
 	fill?: string;
 	viewBox?: string;
-} & SpacingProps) => {
+} & SpacingTypes.Props) => {
 	const svg = screen.getByTestId(dataTestId);
 	expect(svg.getAttribute("fill")).toBe(fill ? fill : "currentColor");
 	expect(svg.getAttribute("viewBox")).toContain(viewBox ? viewBox : "0 0 ");

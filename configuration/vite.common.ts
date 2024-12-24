@@ -21,6 +21,7 @@ interface CommonViteConfigForComponentOptions {
 	globalComponentName?: string;
 	globalLibraryName?: string;
 }
+
 export const commonViteConfigForComponent = ({
 	globalComponentName,
 	globalLibraryName,
@@ -113,6 +114,14 @@ try {
 						}),
 				);
 
+		const rollupInput: { [key: string]: string } = {};
+		if (fs.pathExistsSync(path.join(cwd, "src/components/index.ts"))) {
+			rollupInput.index = path.join(cwd, "src/components/index.ts");
+		}
+		if (fs.pathExistsSync(path.join(cwd, "src/style.ts"))) {
+			rollupInput.style = path.join(cwd, "src/style.ts");
+		}
+
 		return {
 			build: {
 				copyPublicDir: false,
@@ -123,8 +132,7 @@ try {
 				},
 				rollupOptions: {
 					input: {
-						index: path.join(cwd, "src/components/index.ts"),
-						style: path.join(cwd, "src/style.ts"),
+						...rollupInput,
 						...input,
 					},
 					treeshake: "smallest",

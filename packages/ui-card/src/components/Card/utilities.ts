@@ -1,5 +1,5 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
-import { getSpacing } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-spacing";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 import clsx from "clsx";
 
 import { CARD_CLASSNAME } from "../../common/constants";
@@ -12,7 +12,7 @@ type getCardClassesProps = {
 	headerClassName?: string;
 	mode?: "dark" | "light" | "system" | "alt-system" | "darker";
 	noBorder?: boolean;
-} & SpacingProps;
+} & SpacingTypes.Props;
 
 export const getCardClasses = ({
 	className,

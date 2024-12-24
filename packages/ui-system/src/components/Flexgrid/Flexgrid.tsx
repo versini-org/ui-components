@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import { getSpacing } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-spacing";
 import React from "react";
 import { FLEXGRID_CLASSNAME, FLEXGRID_GAP_RATIO } from "../../common/constants";
 import { FlexgridContext } from "./FlexgridContext";

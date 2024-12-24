@@ -1,4 +1,4 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 import React from "react";
 
 declare namespace CardTypes {
@@ -49,7 +49,7 @@ declare namespace CardTypes {
 		 * @default false
 		 */
 		noBorder?: boolean;
-	} & SpacingProps;
+	} & SpacingTypes.Props;
 
 	export type HeaderProps = {
 		className: string;
@@ -59,3 +59,5 @@ declare namespace CardTypes {
 		userAriaLabelledby?: string;
 	};
 }
+
+export { CardTypes };

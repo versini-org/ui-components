@@ -1,5 +1,5 @@
-import type { SpacingProps } from "@versini/ui-private/dist/utilities";
-import { getSpacing } from "@versini/ui-private/dist/utilities";
+import { getSpacing } from "@versini/ui-spacing";
+import type { SpacingTypes } from "@versini/ui-spacing-types";
 import clsx from "clsx";
 
 import {
@@ -19,7 +19,7 @@ type getTextAreaClassesProps = {
 
 	className?: string;
 	textAreaClassName?: string;
-} & SpacingProps;
+} & SpacingTypes.Props;
 
 const getTextAreaBaseClasses = () => {
 	/**
