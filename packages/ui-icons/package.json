@@ -1,6 +1,6 @@
 {
 	"name": "@versini/ui-icons",
-	"version": "1.16.1",
+	"version": "1.17.0",
 	"license": "MIT",
 	"author": "Arno Versini",
 	"publishConfig": {
@@ -14,7 +14,9 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build:check": "tsc",
 		"build:icons": "node lib/buildIcons.js",
@@ -40,5 +42,7 @@
 		"@versini/ui-private": "workspace:../ui-private",
 		"@versini/ui-spacing-types": "workspace:../ui-types/ui-spacing-types"
 	},
-	"sideEffects": ["**/*.css"]
+	"sideEffects": [
+		"**/*.css"
+	]
 }
