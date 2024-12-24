@@ -708,6 +708,12 @@ importers:
         specifier: ^18.3.1 || ^19.0.0
         version: 19.0.0(react@19.0.0)
 
+  packages/ui-spacing:
+    dependencies:
+      '@versini/ui-spacing-types':
+        specifier: workspace:../ui-types/ui-spacing-types
+        version: link:../ui-types/ui-spacing-types
+
   packages/ui-spinner:
     dependencies:
       '@tailwindcss/typography':
@@ -899,6 +905,8 @@ importers:
       '@versini/ui-private':
         specifier: workspace:../../ui-private
         version: link:../../ui-private
+
+  packages/ui-types/ui-spacing-types: {}
 
 packages:
 

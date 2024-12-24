@@ -59,3 +59,5 @@ declare namespace CardTypes {
 		userAriaLabelledby?: string;
 	};
 }
+
+export { CardTypes };
