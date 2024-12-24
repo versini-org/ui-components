@@ -51,7 +51,6 @@ jobs:
             packages/ui-components/tmp/pr-stats.md
             packages/ui-fingerprint/tmp/pr-stats.md
             packages/ui-form/tmp/pr-stats.md
-            packages/ui-system/tmp/pr-stats.md
 
   inspect:
     if: ${{ always() }}
