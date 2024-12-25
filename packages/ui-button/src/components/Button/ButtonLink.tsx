@@ -1,10 +1,13 @@
+import type { ButtonLinkTypes } from "@versini/ui-button-types";
 import clsx from "clsx";
 import React from "react";
 
-import type { ButtonLinkProps } from "./ButtonTypes";
 import { TYPE_LINK, getButtonClasses } from "./utilities";
 
-export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
+export const ButtonLink = React.forwardRef<
+	HTMLAnchorElement,
+	ButtonLinkTypes.Props
+>(
 	(
 		{
 			children,

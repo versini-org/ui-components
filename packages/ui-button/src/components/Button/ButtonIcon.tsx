@@ -1,11 +1,14 @@
+import type { ButtonIconTypes } from "@versini/ui-button-types";
 import clsx from "clsx";
 import React from "react";
 
 import { BaseButton_private as BaseButton } from "../private/BaseButton";
-import type { ButtonIconProps } from "./ButtonTypes";
 import { TYPE_ICON, getButtonClasses } from "./utilities";
 
-export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(
+export const ButtonIcon = React.forwardRef<
+	HTMLButtonElement,
+	ButtonIconTypes.Props
+>(
 	(
 		{
 			children,

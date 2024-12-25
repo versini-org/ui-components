@@ -1,10 +1,10 @@
+import type { ButtonTypes } from "@versini/ui-button-types";
 import React from "react";
 
 import { BaseButton_private as BaseButton } from "../private/BaseButton";
-import type { ButtonProps } from "./ButtonTypes";
 import { TYPE_BUTTON, getButtonClasses } from "./utilities";
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = React.forwardRef<HTMLButtonElement, ButtonTypes.Props>(
 	(
 		{
 			children,

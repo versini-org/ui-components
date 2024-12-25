@@ -29,6 +29,7 @@
 		"packages/ui-togglegroup": {},
 		"packages/ui-truncate": {},
 
+		"packages/ui-types/ui-button-types": {},
 		"packages/ui-types/ui-card-types": {},
 		"packages/ui-types/ui-liveregion-types": {},
 		"packages/ui-types/ui-modal-types": {},

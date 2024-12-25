@@ -1,13 +1,13 @@
+import type { ButtonSortTypes } from "@versini/ui-button-types";
 import clsx from "clsx";
 import React from "react";
 
 import { TYPE_ICON, getButtonClasses } from "../Button/utilities";
 import { BaseButton_private as BaseButton } from "./BaseButton";
-import type { ButtonSortProps } from "./ButtonSortTypes";
 
 export const ButtonSort_private = React.forwardRef<
 	HTMLButtonElement,
-	ButtonSortProps
+	ButtonSortTypes.Props
 >(
 	(
 		{
