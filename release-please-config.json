@@ -14,6 +14,7 @@
 		"packages/ui-liveregion": {},
 		"packages/ui-main": {},
 		"packages/ui-menu": {},
+		"packages/ui-modal": {},
 		"packages/ui-panel": {},
 		"packages/ui-pill": {},
 		"packages/ui-private": {},
@@ -31,6 +32,7 @@
 
 		"packages/ui-types/ui-card-types": {},
 		"packages/ui-types/ui-liveregion-types": {},
+		"packages/ui-types/ui-modal-types": {},
 		"packages/ui-types/ui-spacing-types": {},
 		"packages/ui-types/ui-svgicon-types": {}
 	},

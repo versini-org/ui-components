@@ -7,7 +7,7 @@ import { TYPE_PANEL, getPanelClassName } from "./utilities";
 
 const lazyLoad = (componentName: string) => {
 	return lazy(() =>
-		import("@versini/ui-private").then((module) => ({
+		import("@versini/ui-modal").then((module) => ({
 			default: module[componentName] as React.ComponentType<any>,
 		})),
 	);
