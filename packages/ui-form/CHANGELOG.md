@@ -1,5 +1,22 @@
 # Change Log
 
+## [1.9.0](https://github.com/versini-org/ui-components/compare/ui-form-v1.8.3...ui-form-v1.9.0) (2024-12-25)
+
+
+### Features
+
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-textarea bumped to 1.3.1
+    * @versini/ui-textinput bumped to 1.5.1
+    * @versini/ui-toggle bumped to 1.3.0
+    * @versini/ui-togglegroup bumped to 1.4.0
+
 ## [1.8.3](https://github.com/versini-org/ui-components/compare/ui-form-v1.8.2...ui-form-v1.8.3) (2024-12-25)
 
 

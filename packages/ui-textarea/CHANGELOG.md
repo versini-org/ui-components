@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.1](https://github.com/versini-org/ui-components/compare/ui-textarea-v1.3.0...ui-textarea-v1.3.1) (2024-12-25)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-liveregion bumped to 1.1.0
+
 ## [1.3.0](https://github.com/versini-org/ui-components/compare/ui-textarea-v1.2.0...ui-textarea-v1.3.0) (2024-12-25)
 
 

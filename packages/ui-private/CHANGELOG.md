@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/versini-org/ui-components/compare/ui-private-v1.7.0...ui-private-v1.8.0) (2024-12-25)
+
+
+### Features
+
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+
 ## [1.7.0](https://github.com/versini-org/ui-components/compare/ui-private-v1.6.0...ui-private-v1.7.0) (2024-12-25)
 
 
