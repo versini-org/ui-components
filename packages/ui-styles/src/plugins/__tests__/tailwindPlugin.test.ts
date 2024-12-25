@@ -33,7 +33,6 @@ describe("Non-DOM tests", () => {
 		expect(content).toContain("node_modules/@versini/ui-menu");
 		expect(content).toContain("node_modules/@versini/ui-panel");
 		expect(content).toContain("node_modules/@versini/ui-pill");
-		expect(content).toContain("node_modules/@versini/ui-private");
 		expect(content).toContain("node_modules/@versini/ui-spinner");
 		expect(content).toContain("node_modules/@versini/ui-system");
 		expect(content).toContain("node_modules/@versini/ui-table");
@@ -76,7 +75,6 @@ describe("Non-DOM tests", () => {
 		expect(content).toContain("node_modules/@versini/ui-menu");
 		expect(content).toContain("node_modules/@versini/ui-panel");
 		expect(content).toContain("node_modules/@versini/ui-pill");
-		expect(content).toContain("node_modules/@versini/ui-private");
 		expect(content).toContain("node_modules/@versini/ui-spinner");
 		expect(content).toContain("node_modules/@versini/ui-system");
 		expect(content).toContain("node_modules/@versini/ui-table");

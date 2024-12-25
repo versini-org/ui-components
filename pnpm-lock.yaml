@@ -672,6 +672,24 @@ importers:
         specifier: 3.4.17
         version: 3.4.17
 
+  packages/ui-modal:
+    dependencies:
+      '@floating-ui/react':
+        specifier: 0.27.2
+        version: 0.27.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@versini/ui-modal-types':
+        specifier: workspace:../ui-types/ui-modal-types
+        version: link:../ui-types/ui-modal-types
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^18.3.1 || ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^18.3.1 || ^19.0.0
+        version: 19.0.0(react@19.0.0)
+
   packages/ui-panel:
     dependencies:
       '@tailwindcss/typography':
@@ -683,9 +701,9 @@ importers:
       '@versini/ui-icons':
         specifier: workspace:../ui-icons
         version: link:../ui-icons
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
+      '@versini/ui-modal':
+        specifier: workspace:../ui-modal
+        version: link:../ui-modal
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -722,27 +740,6 @@ importers:
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
-
-  packages/ui-private:
-    dependencies:
-      '@floating-ui/react':
-        specifier: 0.27.2
-        version: 0.27.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@versini/ui-spacing':
-        specifier: workspace:../ui-spacing
-        version: link:../ui-spacing
-      '@versini/ui-spacing-types':
-        specifier: workspace:../ui-types/ui-spacing-types
-        version: link:../ui-types/ui-spacing-types
-      clsx:
-        specifier: 2.1.1
-        version: 2.1.1
-      react:
-        specifier: ^18.3.1 || ^19.0.0
-        version: 19.0.0
-      react-dom:
-        specifier: ^18.3.1 || ^19.0.0
-        version: 19.0.0(react@19.0.0)
 
   packages/ui-spacing:
     dependencies:
@@ -985,6 +982,8 @@ importers:
         version: link:../ui-spacing-types
 
   packages/ui-types/ui-liveregion-types: {}
+
+  packages/ui-types/ui-modal-types: {}
 
   packages/ui-types/ui-spacing-types: {}
 

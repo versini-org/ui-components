@@ -7,14 +7,14 @@ import {
 } from "@floating-ui/react";
 import * as React from "react";
 
+import type { ModalTypes } from "@versini/ui-modal-types";
 import { ModalContext } from "./ModalContext";
-import type { ModalOptions } from "./ModalTypes";
 
 export function useModal({
 	initialOpen = false,
 	open: controlledOpen,
 	onOpenChange: setControlledOpen,
-}: ModalOptions = {}) {
+}: ModalTypes.Options = {}) {
 	const [uncontrolledOpen, setUncontrolledOpen] = React.useState(initialOpen);
 	const [labelId, setLabelId] = React.useState<string | undefined>();
 	const [descriptionId, setDescriptionId] = React.useState<
