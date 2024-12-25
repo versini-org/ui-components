@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/versini-org/ui-components/compare/ui-styles-v1.13.0...ui-styles-v1.14.0) (2024-12-25)
+
+
+### Features
+
+* adding ui-modal and ui-modal-types ([#796](https://github.com/versini-org/ui-components/issues/796)) ([27e6ac4](https://github.com/versini-org/ui-components/commit/27e6ac450ada1a3a895076678a7dfe17e31331eb))
+
 ## [1.13.0](https://github.com/versini-org/ui-components/compare/ui-styles-v1.12.1...ui-styles-v1.13.0) (2024-12-25)
 
 
