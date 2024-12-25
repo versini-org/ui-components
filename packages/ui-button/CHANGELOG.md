@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.0](https://github.com/versini-org/ui-components/compare/ui-button-v1.3.1...ui-button-v1.4.0) (2024-12-25)
+
+
+### Features
+
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @versini/ui-svgicon bumped to 1.0.0
+
 ## [1.3.1](https://github.com/versini-org/ui-components/compare/ui-button-v1.3.0...ui-button-v1.3.1) (2024-12-25)
 
 

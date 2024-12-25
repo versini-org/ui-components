@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.1](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.5.0...ui-textinput-v1.5.1) (2024-12-25)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-liveregion bumped to 1.1.0
+
 ## [1.5.0](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.4.0...ui-textinput-v1.5.0) (2024-12-25)
 
 

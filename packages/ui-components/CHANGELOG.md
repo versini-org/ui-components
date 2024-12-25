@@ -192,6 +192,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.33.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.32.4...ui-components-v5.33.0) (2024-12-25)
+
+
+### Features
+
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-anchor bumped to 1.2.4
+    * @versini/ui-button bumped to 1.4.0
+    * @versini/ui-bubble bumped to 1.3.0
+    * @versini/ui-card bumped to 1.3.0
+    * @versini/ui-footer bumped to 1.3.0
+    * @versini/ui-header bumped to 1.4.0
+    * @versini/ui-icons bumped to 1.18.0
+    * @versini/ui-main bumped to 1.3.0
+    * @versini/ui-panel bumped to 1.1.4
+    * @versini/ui-pill bumped to 1.3.0
+    * @versini/ui-spinner bumped to 1.3.0
+    * @versini/ui-table bumped to 1.4.0
+
 ## [5.32.4](https://github.com/versini-org/ui-components/compare/ui-components-v5.32.3...ui-components-v5.32.4) (2024-12-25)
 
 
