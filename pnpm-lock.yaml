@@ -268,10 +268,6 @@ importers:
       react-dom:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
-    devDependencies:
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
 
   packages/documentation:
     dependencies:
@@ -317,9 +313,6 @@ importers:
       '@versini/ui-pill':
         specifier: workspace:../ui-pill
         version: link:../ui-pill
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spinner':
         specifier: workspace:../ui-spinner
         version: link:../ui-spinner
@@ -396,9 +389,6 @@ importers:
       '@versini/ui-icons':
         specifier: workspace:../ui-icons
         version: link:../ui-icons
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -457,9 +447,6 @@ importers:
       '@versini/ui-hooks':
         specifier: workspace:../ui-hooks
         version: link:../ui-hooks
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -517,9 +504,6 @@ importers:
       '@versini/ui-pill':
         specifier: workspace:../ui-pill
         version: link:../ui-pill
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spinner':
         specifier: workspace:../ui-spinner
         version: link:../ui-spinner
@@ -540,9 +524,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.17)
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -564,9 +545,6 @@ importers:
       '@versini/ui-hooks':
         specifier: workspace:../ui-hooks
         version: link:../ui-hooks
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-textarea':
         specifier: workspace:../ui-textarea
         version: link:../ui-textarea
@@ -594,9 +572,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.17)
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -657,9 +632,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.17)
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -732,9 +704,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.17)
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -786,9 +755,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.17)
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -834,9 +800,6 @@ importers:
 
   packages/ui-system:
     dependencies:
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -867,9 +830,6 @@ importers:
       '@versini/ui-icons':
         specifier: workspace:../ui-icons
         version: link:../ui-icons
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -954,9 +914,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.17)
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -984,9 +941,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.17)
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
