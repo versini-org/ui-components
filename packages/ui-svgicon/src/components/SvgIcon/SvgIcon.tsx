@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
 import { getSpacing } from "@versini/ui-spacing";
-import type { SvgIconProps } from "./SvgIconTypes";
+import type { SvgIconTypes } from "@versini/ui-svgicon-types";
 
 export const SvgIcon = ({
 	children,
@@ -14,7 +14,7 @@ export const SvgIcon = ({
 	title,
 	semantic = false,
 	...rest
-}: SvgIconProps) => {
+}: SvgIconTypes.Props) => {
 	const generatedSpacing = getSpacing(spacing);
 	const generatedClassName = clsx(
 		generatedSpacing,

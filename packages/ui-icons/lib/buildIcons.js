@@ -35,7 +35,7 @@ const iconTemplate = ({
  *
  */
 
-import { SvgIcon } from "@versini/ui-private";
+import { SvgIcon } from "@versini/ui-svgicon";
 
 import type { IconsProps } from "./IconsTypes";
 

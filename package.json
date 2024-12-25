@@ -4,6 +4,7 @@
 	"scripts": {
 		"prebuild": "lerna run build --scope=\"@versini/ui-styles\"",
 		"build": "lerna run build --ignore=\"@versini/ui-styles\"",
+		"clean": "lerna run clean",
 		"lint": "lerna run lint",
 		"lint-staged": "lint-staged --config \"./configuration/lint-staged.config.cjs\"",
 		"prepare": "husky",

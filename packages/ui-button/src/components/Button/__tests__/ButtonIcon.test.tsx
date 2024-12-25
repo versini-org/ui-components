@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { SvgIcon } from "@versini/ui-private";
+import { SvgIcon } from "@versini/ui-svgicon";
 
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import { BUTTON_CLASSNAME } from "../../../common/constants";

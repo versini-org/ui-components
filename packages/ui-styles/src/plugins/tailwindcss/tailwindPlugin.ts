@@ -36,6 +36,7 @@ export const customContentPath = [
 	"@versini/ui-pill",
 	"@versini/ui-private",
 	"@versini/ui-spinner",
+	"@versini/ui-svgicon",
 	"@versini/ui-system",
 	"@versini/ui-table",
 	"@versini/ui-textarea",

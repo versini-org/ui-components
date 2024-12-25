@@ -20,6 +20,7 @@
 		"packages/ui-spacing": {},
 		"packages/ui-spinner": {},
 		"packages/ui-styles": {},
+		"packages/ui-svgicon": {},
 		"packages/ui-system": {},
 		"packages/ui-table": {},
 		"packages/ui-textarea": {},
@@ -30,7 +31,8 @@
 
 		"packages/ui-types/ui-card-types": {},
 		"packages/ui-types/ui-liveregion-types": {},
-		"packages/ui-types/ui-spacing-types": {}
+		"packages/ui-types/ui-spacing-types": {},
+		"packages/ui-types/ui-svgicon-types": {}
 	},
 	"plugins": ["node-workspace"],
 	"pull-request-header": ":rocket: Automated Release"

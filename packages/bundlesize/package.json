@@ -15,8 +15,7 @@
 		"test:coverage": "echo \"WARNING: no test specified\" && exit 0"
 	},
 	"devDependencies": {
-		"@versini/ui-icons": "workspace:../ui-icons",
-		"@versini/ui-private": "workspace:../ui-private"
+		"@versini/ui-icons": "workspace:../ui-icons"
 	},
 	"dependencies": {
 		"@versini/ui-components": "workspace:../ui-components",

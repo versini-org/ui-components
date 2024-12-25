@@ -1,0 +1,43 @@
+{
+	"name": "@versini/ui-svgicon",
+	"version": "0.0.0",
+	"license": "MIT",
+	"author": "Arno Versini",
+	"publishConfig": {
+		"access": "public"
+	},
+	"homepage": "https://github.com/aversini/ui-components",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:aversini/ui-components.git"
+	},
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": ["dist"],
+	"scripts": {
+		"build:check": "tsc",
+		"build:js": "vite build",
+		"build:types": "tsup",
+		"build": "npm-run-all --serial clean build:check build:js build:types",
+		"clean": "rimraf dist tmp",
+		"dev:js": "vite build --watch --mode development",
+		"dev:types": "tsup --watch src",
+		"dev": "npm-run-all clean --parallel dev:js dev:types",
+		"lint": "biome lint src",
+		"start": "static-server dist --port 5173",
+		"test:coverage:ui": "vitest --coverage --ui",
+		"test:coverage": "vitest run --coverage",
+		"test:watch": "vitest",
+		"test": "vitest run"
+	},
+	"peerDependencies": {
+		"react": "^18.3.1 || ^19.0.0",
+		"react-dom": "^18.3.1 || ^19.0.0"
+	},
+	"dependencies": {
+		"@versini/ui-spacing": "workspace:../ui-spacing",
+		"@versini/ui-svgicon-types": "workspace:../ui-types/ui-svgicon-types"
+	},
+	"sideEffects": ["**/*.css"]
+}
