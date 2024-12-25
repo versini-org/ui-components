@@ -1,5 +1,5 @@
 import { useMergeRefs } from "@versini/ui-hooks";
-import { LiveRegion } from "@versini/ui-private";
+import { LiveRegion } from "@versini/ui-liveregion";
 import React, { useEffect, useRef, useState } from "react";
 
 import { TextInput } from "./TextInput";

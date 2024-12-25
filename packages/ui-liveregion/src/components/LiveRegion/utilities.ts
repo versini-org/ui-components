@@ -1,8 +1,4 @@
-import type {
-	ClearAnnouncementProps,
-	announceProps,
-	conditionallyDelayAnnouncementProps,
-} from "./LiveRegionTypes";
+import type { LiveRegionTypes } from "@versini/ui-liveregion-types";
 import {
 	ACTION_CLEAR_ANNOUNCEMENT,
 	ACTION_SET_ANNOUNCEMENT,
@@ -14,7 +10,7 @@ import {
 const clearAnnouncement = ({
 	onAnnouncementClear,
 	dispatch,
-}: ClearAnnouncementProps) => {
+}: LiveRegionTypes.ClearAnnouncementProps) => {
 	dispatch({
 		type: ACTION_CLEAR_ANNOUNCEMENT,
 	});
@@ -33,7 +29,7 @@ export const announce = ({
 	clearAnnouncementTimeoutRef,
 	onAnnouncementClear,
 	dispatch,
-}: announceProps) => {
+}: LiveRegionTypes.AnnounceProps) => {
 	clearTimeout(clearAnnouncementTimeoutRef.current as unknown as number);
 
 	if (children !== null) {
@@ -68,7 +64,7 @@ export const conditionallyDelayAnnouncement = ({
 	clearAnnouncementTimeoutRef,
 	onAnnouncementClear,
 	dispatch,
-}: conditionallyDelayAnnouncementProps) => {
+}: LiveRegionTypes.ConditionallyDelayAnnouncementProps) => {
 	clearTimeout(announcementTimeoutRef.current as unknown as number);
 
 	if (announcementDelay) {
