@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.17.1](https://github.com/versini-org/ui-components/compare/ui-icons-v1.17.0...ui-icons-v1.17.1) (2024-12-25)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-private bumped to 1.7.0
+
 ## [1.17.0](https://github.com/versini-org/ui-components/compare/ui-icons-v1.16.1...ui-icons-v1.17.0) (2024-12-24)
 
 

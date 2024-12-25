@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.5.0](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.4.0...ui-textinput-v1.5.0) (2024-12-25)
+
+
+### Features
+
+* adding ui-liveregion and ui-liveregion-types ([#789](https://github.com/versini-org/ui-components/issues/789)) ([5b3b875](https://github.com/versini-org/ui-components/commit/5b3b8757e7d07fa68aaf597b80d2bab151da2270))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-liveregion bumped to 1.0.0
+
 ## [1.4.0](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.3.1...ui-textinput-v1.4.0) (2024-12-24)
 
 
