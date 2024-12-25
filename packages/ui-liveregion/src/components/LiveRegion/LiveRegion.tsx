@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useEffect, useReducer, useRef } from "react";
 
-import type { LiveRegionProps, SetTimeoutResult } from "./LiveRegionTypes";
+import type { LiveRegionTypes } from "@versini/ui-liveregion-types";
 import { DEFAULT_POLITENESS_BY_ROLE } from "./constants";
 import { reducer } from "./reducer";
 import { conditionallyDelayAnnouncement } from "./utilities";
@@ -23,9 +23,10 @@ export function LiveRegion({
 	visible,
 
 	...otherProps
-}: LiveRegionProps) {
-	const announcementTimeoutRef = useRef<SetTimeoutResult>(null);
-	const clearAnnouncementTimeoutRef = useRef<SetTimeoutResult>(null);
+}: LiveRegionTypes.Props) {
+	const announcementTimeoutRef = useRef<LiveRegionTypes.SetTimeoutResult>(null);
+	const clearAnnouncementTimeoutRef =
+		useRef<LiveRegionTypes.SetTimeoutResult>(null);
 
 	const [state, dispatch] = useReducer(reducer, {
 		announcement: null,

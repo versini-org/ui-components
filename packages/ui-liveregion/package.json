@@ -1,6 +1,6 @@
 {
-	"name": "@versini/ui-textinput",
-	"version": "1.4.0",
+	"name": "@versini/ui-liveregion",
+	"version": "0.0.0",
 	"license": "MIT",
 	"author": "Arno Versini",
 	"publishConfig": {
@@ -36,13 +36,6 @@
 		"react-dom": "^18.3.1 || ^19.0.0"
 	},
 	"dependencies": {
-		"@tailwindcss/typography": "0.5.15",
-		"@versini/ui-hooks": "workspace:../ui-hooks",
-		"@versini/ui-liveregion": "workspace:../ui-liveregion",
-		"@versini/ui-spacing": "workspace:../ui-spacing",
-		"@versini/ui-spacing-types": "workspace:../ui-types/ui-spacing-types",
-		"clsx": "2.1.1",
-		"tailwindcss": "3.4.17"
-	},
-	"sideEffects": ["**/*.css"]
+		"@versini/ui-liveregion-types": "workspace:../ui-types/ui-liveregion-types"
+	}
 }

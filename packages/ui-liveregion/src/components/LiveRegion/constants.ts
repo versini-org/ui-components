@@ -1,4 +1,4 @@
-import { PolitenessByRole } from "./LiveRegionTypes";
+import type { LiveRegionTypes } from "@versini/ui-liveregion-types";
 
 export const ACTION_SET_ANNOUNCEMENT = "SET_ANNOUNCEMENT";
 export const ACTION_CLEAR_ANNOUNCEMENT = "CLEAR_ANNOUNCEMENT";
@@ -8,7 +8,7 @@ export const ACTION_CLEAR_ANNOUNCEMENT = "CLEAR_ANNOUNCEMENT";
  *
  * @enum {String}
  */
-export const DEFAULT_POLITENESS_BY_ROLE: PolitenessByRole = {
+export const DEFAULT_POLITENESS_BY_ROLE: LiveRegionTypes.PolitenessByRole = {
 	alert: null,
 	alertdialog: null,
 	log: "polite",
@@ -16,7 +16,7 @@ export const DEFAULT_POLITENESS_BY_ROLE: PolitenessByRole = {
 	progressbar: null,
 	status: "polite",
 	timer: "assertive",
-};
+} as const;
 
 /**
  * All supported `LiveRegion` roles.
@@ -112,4 +112,4 @@ export const ROLES = {
 	 * @see https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#timer
 	 */
 	TIMER: "timer",
-};
+} as const;

@@ -639,6 +639,18 @@ importers:
         specifier: ^18.3.1 || ^19.0.0
         version: 19.0.0(react@19.0.0)
 
+  packages/ui-liveregion:
+    dependencies:
+      '@versini/ui-liveregion-types':
+        specifier: workspace:../ui-types/ui-liveregion-types
+        version: link:../ui-types/ui-liveregion-types
+      react:
+        specifier: ^18.3.1 || ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^18.3.1 || ^19.0.0
+        version: 19.0.0(react@19.0.0)
+
   packages/ui-main:
     dependencies:
       '@tailwindcss/typography':
@@ -869,9 +881,9 @@ importers:
       '@versini/ui-hooks':
         specifier: workspace:../ui-hooks
         version: link:../ui-hooks
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
+      '@versini/ui-liveregion':
+        specifier: workspace:../ui-liveregion
+        version: link:../ui-liveregion
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -899,9 +911,9 @@ importers:
       '@versini/ui-hooks':
         specifier: workspace:../ui-hooks
         version: link:../ui-hooks
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
+      '@versini/ui-liveregion':
+        specifier: workspace:../ui-liveregion
+        version: link:../ui-liveregion
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -1001,6 +1013,8 @@ importers:
       '@versini/ui-spacing-types':
         specifier: workspace:../ui-spacing-types
         version: link:../ui-spacing-types
+
+  packages/ui-types/ui-liveregion-types: {}
 
   packages/ui-types/ui-spacing-types: {}
 

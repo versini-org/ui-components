@@ -1,4 +1,5 @@
 import { act, fireEvent, render } from "@testing-library/react";
+import type { LiveRegionTypes } from "@versini/ui-liveregion-types";
 import React from "react";
 
 import { LiveRegion } from "../LiveRegion";
@@ -30,12 +31,9 @@ const content2 = "Biz Buzz";
  * This allows us to simulate click events in order to cause re-renders with different prop values,
  * and test the behavior of the LiveRegion as it would be used in an application.
  */
-interface LiveRegionProps {
-	children?: React.ReactNode;
+interface LiveRegionProps extends LiveRegionTypes.Props {
 	children2?: React.ReactNode;
-	politeness?: "polite" | "assertive" | null | undefined;
 	politeness2?: "polite" | "assertive" | null | undefined;
-	role?: string;
 	toggleChildrenButtonLabel?: string;
 	togglePolitenessButtonLabel?: string;
 }
@@ -45,7 +43,7 @@ class LiveRegionPropChanger extends React.PureComponent<LiveRegionProps> {
 		togglePolitenessButtonLabel: "toggle politeness value",
 	};
 
-	state = {
+	override state = {
 		renderChildren2: false,
 		renderPoliteness2: false,
 	};
@@ -62,7 +60,7 @@ class LiveRegionPropChanger extends React.PureComponent<LiveRegionProps> {
 		}));
 	};
 
-	render() {
+	override render() {
 		const {
 			children,
 			children2,

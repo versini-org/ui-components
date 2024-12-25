@@ -4,7 +4,7 @@ import {
 	useUncontrolled,
 	useUniqueId,
 } from "@versini/ui-hooks";
-import { LiveRegion } from "@versini/ui-private";
+import { LiveRegion } from "@versini/ui-liveregion";
 import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TEXT_AREA_CLASSNAME } from "../../common/constants";
