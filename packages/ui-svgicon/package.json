@@ -38,5 +38,6 @@
 	"dependencies": {
 		"@versini/ui-spacing": "workspace:../ui-spacing",
 		"@versini/ui-svgicon-types": "workspace:../ui-types/ui-svgicon-types"
-	}
+	},
+	"sideEffects": ["**/*.css"]
 }
