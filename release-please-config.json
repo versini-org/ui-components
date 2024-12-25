@@ -11,6 +11,7 @@
 		"packages/ui-header": {},
 		"packages/ui-hooks": {},
 		"packages/ui-icons": {},
+		"packages/ui-liveregion": {},
 		"packages/ui-main": {},
 		"packages/ui-menu": {},
 		"packages/ui-panel": {},
