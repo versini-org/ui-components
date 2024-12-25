@@ -881,9 +881,9 @@ importers:
       '@versini/ui-hooks':
         specifier: workspace:../ui-hooks
         version: link:../ui-hooks
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
+      '@versini/ui-liveregion':
+        specifier: workspace:../ui-liveregion
+        version: link:../ui-liveregion
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
