@@ -423,9 +423,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.17)
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -444,6 +441,10 @@ importers:
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
+    devDependencies:
+      '@versini/ui-svgicon':
+        specifier: workspace:../ui-svgicon
+        version: link:../ui-svgicon
 
   packages/ui-card:
     dependencies:
@@ -626,12 +627,12 @@ importers:
 
   packages/ui-icons:
     dependencies:
-      '@versini/ui-private':
-        specifier: workspace:../ui-private
-        version: link:../ui-private
       '@versini/ui-spacing-types':
         specifier: workspace:../ui-types/ui-spacing-types
         version: link:../ui-types/ui-spacing-types
+      '@versini/ui-svgicon':
+        specifier: workspace:../ui-svgicon
+        version: link:../ui-svgicon
       react:
         specifier: ^18.3.1 || ^19.0.0
         version: 19.0.0
@@ -815,6 +816,21 @@ importers:
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
+
+  packages/ui-svgicon:
+    dependencies:
+      '@versini/ui-spacing':
+        specifier: workspace:../ui-spacing
+        version: link:../ui-spacing
+      '@versini/ui-svgicon-types':
+        specifier: workspace:../ui-types/ui-svgicon-types
+        version: link:../ui-types/ui-svgicon-types
+      react:
+        specifier: ^18.3.1 || ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^18.3.1 || ^19.0.0
+        version: 19.0.0(react@19.0.0)
 
   packages/ui-system:
     dependencies:
@@ -1017,6 +1033,8 @@ importers:
   packages/ui-types/ui-liveregion-types: {}
 
   packages/ui-types/ui-spacing-types: {}
+
+  packages/ui-types/ui-svgicon-types: {}
 
 packages:
 
