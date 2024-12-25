@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.5.0](https://github.com/versini-org/ui-components/compare/ui-button-v1.4.0...ui-button-v1.5.0) (2024-12-25)
+
+
+### Features
+
+* adding ui-button-types ([#799](https://github.com/versini-org/ui-components/issues/799)) ([c1b0f94](https://github.com/versini-org/ui-components/commit/c1b0f94aa52d65985d1a84bf2255b6462fc8e092))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button-types bumped to 1.0.0
+
 ## [1.4.0](https://github.com/versini-org/ui-components/compare/ui-button-v1.3.1...ui-button-v1.4.0) (2024-12-25)
 
 

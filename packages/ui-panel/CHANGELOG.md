@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.1](https://github.com/versini-org/ui-components/compare/ui-panel-v1.2.0...ui-panel-v1.2.1) (2024-12-25)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 1.5.0
+
 ## [1.2.0](https://github.com/versini-org/ui-components/compare/ui-panel-v1.1.4...ui-panel-v1.2.0) (2024-12-25)
 
 
