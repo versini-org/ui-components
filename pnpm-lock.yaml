@@ -413,6 +413,9 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.17)
+      '@versini/ui-button-types':
+        specifier: workspace:../ui-types/ui-button-types
+        version: link:../ui-types/ui-button-types
       '@versini/ui-spacing':
         specifier: workspace:../ui-spacing
         version: link:../ui-spacing
@@ -974,6 +977,12 @@ importers:
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
+
+  packages/ui-types/ui-button-types:
+    dependencies:
+      '@versini/ui-spacing-types':
+        specifier: workspace:../ui-spacing-types
+        version: link:../ui-spacing-types
 
   packages/ui-types/ui-card-types:
     dependencies:

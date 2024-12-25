@@ -1,5 +1,5 @@
+import type { ButtonTypes } from "@versini/ui-button-types";
 import React from "react";
-import type { ButtonProps } from "../Button/ButtonTypes";
 
 /**
  * Internal hack to handle Safari (iOS and desktop).
@@ -35,7 +35,7 @@ const internalClick = (
 
 export const BaseButton_private = React.forwardRef<
 	HTMLButtonElement,
-	ButtonProps
+	ButtonTypes.Props
 >((buttonProps: any, ref) => {
 	const { onClick, noInternalClick = false, ...otherProps } = buttonProps;
 	return (
