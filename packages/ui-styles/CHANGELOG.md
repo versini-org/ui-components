@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1](https://github.com/versini-org/ui-components/compare/ui-styles-v1.12.0...ui-styles-v1.12.1) (2024-12-25)
+
+
+### Bug Fixes
+
+* adding missing liveregion component to ui-styles ([#791](https://github.com/versini-org/ui-components/issues/791)) ([abdfa89](https://github.com/versini-org/ui-components/commit/abdfa89a0749d78f531d260c8c08e4b0da6bf34d))
+
 ## [1.12.0](https://github.com/versini-org/ui-components/compare/ui-styles-v1.11.1...ui-styles-v1.12.0) (2024-12-18)
 
 
