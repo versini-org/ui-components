@@ -7,7 +7,7 @@ import {
 } from "@floating-ui/react";
 import * as React from "react";
 
-import type { ModalTypes } from "@versini/ui-modal-types";
+import type { ModalTypes } from "@versini/ui-types";
 import { ModalContext } from "./ModalContext";
 
 export function useModal({

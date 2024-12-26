@@ -1,5 +1,5 @@
-import type { CardTypes } from "@versini/ui-card-types";
 import { useUniqueId } from "@versini/ui-hooks";
+import type { CardTypes } from "@versini/ui-types";
 
 import { CARD_CLASSNAME } from "../../common/constants";
 import { getCardClasses } from "./utilities";

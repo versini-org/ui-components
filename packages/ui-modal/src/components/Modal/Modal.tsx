@@ -8,7 +8,7 @@ import clsx from "clsx";
 import { useId } from "react";
 import * as React from "react";
 
-import type { ModalTypes } from "@versini/ui-modal-types";
+import type { ModalTypes } from "@versini/ui-types";
 import { ModalContext } from "./ModalContext";
 import { useModal, useModalContext } from "./ModalHooks";
 

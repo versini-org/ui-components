@@ -1,4 +1,4 @@
-import type { ButtonSortTypes } from "@versini/ui-button-types";
+import type { ButtonSortTypes } from "@versini/ui-types";
 import clsx from "clsx";
 import React from "react";
 

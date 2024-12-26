@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useEffect, useReducer, useRef } from "react";
 
-import type { LiveRegionTypes } from "@versini/ui-liveregion-types";
+import type { LiveRegionTypes } from "@versini/ui-types";
 import { DEFAULT_POLITENESS_BY_ROLE } from "./constants";
 import { reducer } from "./reducer";
 import { conditionallyDelayAnnouncement } from "./utilities";

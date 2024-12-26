@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:icons": "node lib/buildIcons.js",
@@ -40,9 +38,7 @@
 	},
 	"dependencies": {
 		"@versini/ui-svgicon": "workspace:../ui-svgicon",
-		"@versini/ui-spacing-types": "workspace:../ui-types/ui-spacing-types"
+		"@versini/ui-types": "workspace:../ui-types"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }

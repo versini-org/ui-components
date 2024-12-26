@@ -1,5 +1,5 @@
-import type { SpacingTypes } from "@versini/ui-spacing-types";
 import React from "react";
+import type { SpacingTypes } from "../ui-spacing-types";
 
 declare namespace CardTypes {
 	export type Props = {

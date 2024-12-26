@@ -1,4 +1,4 @@
-import type { SpacingTypes } from "@versini/ui-spacing-types";
+import type { SpacingTypes } from "@versini/ui-types";
 
 export type Size = "xs" | "sm" | "md" | "lg" | "xl";
 export type SetTimeoutResult = ReturnType<typeof setTimeout> | null;

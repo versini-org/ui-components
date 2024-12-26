@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import type { SpacingTypes } from "@versini/ui-spacing-types";
+import type { SpacingTypes } from "@versini/ui-types";
 
 import * as AllIcons from "../..";
 

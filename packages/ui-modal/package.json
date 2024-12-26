@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -35,10 +33,8 @@
 	},
 	"dependencies": {
 		"@floating-ui/react": "0.27.2",
-		"@versini/ui-modal-types": "workspace:../ui-types/ui-modal-types",
+		"@versini/ui-types": "workspace:../ui-types",
 		"clsx": "2.1.1"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }

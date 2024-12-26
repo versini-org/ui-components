@@ -1,4 +1,4 @@
-import type { SpacingTypes } from "@versini/ui-spacing-types";
+import type { SpacingTypes } from "@versini/ui-types";
 
 export interface IconsProps
 	extends Omit<React.SVGAttributes<SVGElement>, "spacing">,

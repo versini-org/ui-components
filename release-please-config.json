@@ -29,12 +29,7 @@
 		"packages/ui-togglegroup": {},
 		"packages/ui-truncate": {},
 
-		"packages/ui-types/ui-button-types": {},
-		"packages/ui-types/ui-card-types": {},
-		"packages/ui-types/ui-liveregion-types": {},
-		"packages/ui-types/ui-modal-types": {},
-		"packages/ui-types/ui-spacing-types": {},
-		"packages/ui-types/ui-svgicon-types": {}
+		"packages/ui-types": {}
 	},
 	"plugins": ["node-workspace"],
 	"pull-request-header": ":rocket: Automated Release"
