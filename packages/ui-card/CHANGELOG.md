@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.0](https://github.com/versini-org/ui-components/compare/ui-card-v1.3.0...ui-card-v1.4.0) (2024-12-26)
+
+
+### Features
+
+* introducing ui-types - for all types ([#802](https://github.com/versini-org/ui-components/issues/802)) ([950bccb](https://github.com/versini-org/ui-components/commit/950bccb37bca104487c597f8a043ca3382331105))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-spacing bumped to 1.1.0
+    * @versini/ui-types bumped to 1.0.0
+
 ## [1.3.0](https://github.com/versini-org/ui-components/compare/ui-card-v1.2.1...ui-card-v1.3.0) (2024-12-25)
 
 
