@@ -1,4 +1,4 @@
-import type { SpacingTypes } from "../ui-spacing-types";
+import type { SpacingTypes } from "./spacing";
 
 declare namespace SvgIconTypes {
 	export type Props = {
