@@ -29,7 +29,7 @@
 		"packages/ui-togglegroup": {},
 		"packages/ui-truncate": {},
 
-		"packages/ui-types/ui-types": {}
+		"packages/ui-types": {}
 	},
 	"plugins": ["node-workspace"],
 	"pull-request-header": ":rocket: Automated Release"
