@@ -1,4 +1,4 @@
-import type { ButtonTypes } from "@versini/ui-button-types";
+import type { ButtonTypes } from "@versini/ui-types";
 import React from "react";
 
 import { BaseButton_private as BaseButton } from "../private/BaseButton";

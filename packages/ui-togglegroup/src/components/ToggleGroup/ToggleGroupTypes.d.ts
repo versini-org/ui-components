@@ -1,5 +1,5 @@
 import type * as ToggleGroupRadix from "@radix-ui/react-toggle-group";
-import type { SpacingTypes } from "@versini/ui-spacing-types";
+import type { SpacingTypes } from "@versini/ui-types";
 
 export type Size = "small" | "medium" | "large";
 export type Mode = "dark" | "light" | "system" | "alt-system";

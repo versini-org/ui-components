@@ -1,4 +1,4 @@
-import type { ButtonLinkTypes } from "@versini/ui-button-types";
+import type { ButtonLinkTypes } from "@versini/ui-types";
 import clsx from "clsx";
 import React from "react";
 

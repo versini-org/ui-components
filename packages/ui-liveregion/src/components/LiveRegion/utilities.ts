@@ -1,4 +1,4 @@
-import type { LiveRegionTypes } from "@versini/ui-liveregion-types";
+import type { LiveRegionTypes } from "@versini/ui-types";
 import {
 	ACTION_CLEAR_ANNOUNCEMENT,
 	ACTION_SET_ANNOUNCEMENT,

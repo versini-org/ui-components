@@ -11,8 +11,5 @@
 		"type": "git",
 		"url": "git@github.com:aversini/ui-components.git"
 	},
-	"types": "index.d.ts",
-	"dependencies": {
-		"@versini/ui-spacing-types": "workspace:../ui-spacing-types"
-	}
+	"types": "index.d.ts"
 }

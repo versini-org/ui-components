@@ -1,5 +1,5 @@
 import { act, fireEvent, render } from "@testing-library/react";
-import type { LiveRegionTypes } from "@versini/ui-liveregion-types";
+import type { LiveRegionTypes } from "@versini/ui-types";
 import React from "react";
 
 import { LiveRegion } from "../LiveRegion";

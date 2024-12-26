@@ -1,5 +1,5 @@
 import { getSpacing } from "@versini/ui-spacing";
-import type { SpacingTypes } from "@versini/ui-spacing-types";
+import type { SpacingTypes } from "@versini/ui-types";
 import clsx from "clsx";
 
 import { BUBBLE_CLASSNAME } from "../../common/constants";

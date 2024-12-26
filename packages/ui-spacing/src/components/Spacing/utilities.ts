@@ -1,4 +1,4 @@
-import type { SpacingTypes } from "@versini/ui-spacing-types";
+import type { SpacingTypes } from "@versini/ui-types";
 
 /**
  * This method returns a string that can be used as a tailwind class relying

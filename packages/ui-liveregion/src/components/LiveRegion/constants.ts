@@ -1,4 +1,4 @@
-import type { LiveRegionTypes } from "@versini/ui-liveregion-types";
+import type { LiveRegionTypes } from "@versini/ui-types";
 
 export const ACTION_SET_ANNOUNCEMENT = "SET_ANNOUNCEMENT";
 export const ACTION_CLEAR_ANNOUNCEMENT = "CLEAR_ANNOUNCEMENT";
