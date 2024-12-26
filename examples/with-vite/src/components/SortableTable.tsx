@@ -128,7 +128,7 @@ export const SortableTable = () => {
 	return (
 		<Table
 			caption="Nutrition Facts"
-			maxHeight="400px"
+			maxHeight="300px"
 			stickyHeader
 			stickyFooter
 		>

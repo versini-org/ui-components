@@ -66,7 +66,7 @@ module.exports = {
 				<CustomForm />
 			</div>
 
-			<div className="my-2 flex flex-wrap">
+			<div className="my-6 flex flex-wrap">
 				<SortableTable />
 			</div>
 
