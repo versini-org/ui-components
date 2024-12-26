@@ -1,4 +1,4 @@
 {
 	"extends": "../../configuration/tsconfig.common.json",
-	"include": ["ui-*/*.ts"]
+	"include": ["src/*.ts"]
 }

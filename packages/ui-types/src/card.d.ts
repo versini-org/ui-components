@@ -1,5 +1,5 @@
 import React from "react";
-import type { SpacingTypes } from "../ui-spacing-types";
+import type { SpacingTypes } from "./spacing";
 
 declare namespace CardTypes {
 	export type Props = {
