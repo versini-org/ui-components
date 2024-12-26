@@ -27,5 +27,5 @@
 	"packages/ui-toggle": "1.3.0",
 	"packages/ui-togglegroup": "1.4.0",
 	"packages/ui-truncate": "1.1.6",
-	"packages/ui-types/ui-types": "0.0.0"
+	"packages/ui-types": "0.0.0"
 }
