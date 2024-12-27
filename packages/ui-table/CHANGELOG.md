@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/versini-org/ui-components/compare/ui-table-v1.5.0...ui-table-v1.5.1) (2024-12-27)
+
+
+### Bug Fixes
+
+* **Table:** slightly smaller compact mode ([#807](https://github.com/versini-org/ui-components/issues/807)) ([7b4b606](https://github.com/versini-org/ui-components/commit/7b4b606d8d339c1f199d0afba6d8674e94620a2e))
+
 ## [1.5.0](https://github.com/versini-org/ui-components/compare/ui-table-v1.4.1...ui-table-v1.5.0) (2024-12-26)
 
 
