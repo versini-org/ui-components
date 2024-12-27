@@ -230,10 +230,10 @@ describe("Table classes", () => {
 			]);
 		}
 		if (tableCellHead) {
-			expectToHaveClasses(tableCellHead, ["px-4", "py-1"]);
+			expectToHaveClasses(tableCellHead, ["px-2", "py-1.5"]);
 		}
 		if (tableCellBody) {
-			expectToHaveClasses(tableCellBody, ["px-4", "py-1"]);
+			expectToHaveClasses(tableCellBody, ["px-2", "py-1.5"]);
 		}
 	});
 
