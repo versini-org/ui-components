@@ -19,7 +19,10 @@
 		"build:check": "tsc",
 		"build:types": "tsup",
 		"build": "npm-run-all --serial clean build:check build:types",
-		"clean": "rimraf dist tmp"
+		"clean": "rimraf dist tmp",
+		"test:coverage": "vitest run --coverage",
+		"test:watch": "vitest",
+		"test": "vitest run"
 	},
 	"peerDependencies": {
 		"react": "^18.3.1 || ^19.0.0",
