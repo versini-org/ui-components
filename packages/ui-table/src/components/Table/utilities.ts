@@ -160,7 +160,7 @@ export const getTableCellClasses = ({
 			(cellWrapper === CELL_WRAPPER_HEAD ||
 				cellWrapper === CELL_WRAPPER_FOOTER),
 		"p-4": !compact && cellWrapper === CELL_WRAPPER_BODY,
-		"px-4 py-1": compact,
+		"px-2 py-1.5": compact,
 	});
 };
 
