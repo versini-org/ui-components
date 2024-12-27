@@ -77,3 +77,5 @@ types
 !.yarn/versions
 
 *storybook.log
+
+tsconfig.vitest-temp.json
