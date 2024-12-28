@@ -668,6 +668,10 @@ importers:
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
+    devDependencies:
+      '@versini/ui-icons':
+        specifier: workspace:../ui-icons
+        version: link:../ui-icons
 
   packages/ui-modal:
     dependencies:
