@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/versini-org/ui-components/compare/ui-panel-v1.2.2...ui-panel-v1.2.3) (2024-12-28)
+
+
+### Bug Fixes
+
+* **Panel:** remove lazy loading to improve performance ([#812](https://github.com/versini-org/ui-components/issues/812)) ([a6c6151](https://github.com/versini-org/ui-components/commit/a6c61511af31547e2aa877caf35213fb120efd24))
+
 ## [1.2.2](https://github.com/versini-org/ui-components/compare/ui-panel-v1.2.1...ui-panel-v1.2.2) (2024-12-26)
 
 

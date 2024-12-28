@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-menu-v1.4.0...ui-menu-v1.4.1) (2024-12-28)
+
+
+### Bug Fixes
+
+* slightly smaller menu item and removed extra unneeded space ([#810](https://github.com/versini-org/ui-components/issues/810)) ([13a8296](https://github.com/versini-org/ui-components/commit/13a8296a4012a810f74678fe513c0a89e320bbd1))
+
 ## [1.4.0](https://github.com/versini-org/ui-components/compare/ui-menu-v1.3.0...ui-menu-v1.4.0) (2024-12-26)
 
 
