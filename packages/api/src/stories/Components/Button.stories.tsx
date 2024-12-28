@@ -59,3 +59,17 @@ export const Truncate: Story = {
 		);
 	},
 };
+
+export const Square: Story = {
+	...commonControlsSetup,
+	args: { radius: "small" },
+	render: (args) => (
+		<div className="flex flex-wrap gap-2">
+			<Button {...args}>1</Button>
+			<Button {...args}>2</Button>
+			<Button {...args}>3</Button>
+			<Button {...args}>...</Button>
+			<Button {...args}>101</Button>
+		</div>
+	),
+};

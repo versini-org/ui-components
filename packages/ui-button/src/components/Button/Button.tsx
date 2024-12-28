@@ -19,6 +19,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonTypes.Props>(
 			spacing,
 			variant = "primary",
 			noTruncate = false,
+			radius = "large",
 
 			...otherProps
 		},
@@ -37,6 +38,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonTypes.Props>(
 			spacing,
 			variant,
 			noTruncate,
+			radius,
 		});
 
 		return (

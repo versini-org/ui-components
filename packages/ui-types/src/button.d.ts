@@ -38,6 +38,10 @@ type CommonButtonProps = {
 	 * The size of the Button.
 	 */
 	size?: "small" | "medium" | "large";
+	/**
+	 * The rounded style of the Button.
+	 */
+	radius?: "small" | "medium" | "large";
 } & SpacingTypes.Props;
 
 declare namespace ButtonTypes {

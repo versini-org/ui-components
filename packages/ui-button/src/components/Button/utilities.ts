@@ -26,6 +26,7 @@ type getButtonClassesProps = {
 	noBackground?: boolean;
 	noTruncate?: boolean;
 	variant?: "primary" | "secondary" | "danger";
+	radius?: "small" | "medium" | "large";
 } & SpacingTypes.Props;
 
 const getButtonSizesClasses = ({
@@ -83,18 +84,27 @@ const getButtonBaseClasses = ({
 	noBackground,
 	noTruncate,
 	variant,
+	radius,
 }: {
 	mode: "dark" | "light" | "system" | "alt-system";
 	variant: "primary" | "secondary" | "danger";
 	noBackground?: boolean;
 	noTruncate?: boolean;
+	radius?: "small" | "medium" | "large";
 }) => {
 	if (noBackground) {
-		return "not-prose rounded-full";
+		return clsx("not-prose", {
+			"rounded-full": radius === "large",
+			"rounded-md": radius === "medium",
+			"rounded-sm": radius === "small",
+		});
 	}
 
 	if (variant === "primary") {
-		return clsx("not-prose rounded-full", {
+		return clsx("not-prose", {
+			"rounded-full": radius === "large",
+			"rounded-md": radius === "medium",
+			"rounded-sm": radius === "small",
 			truncate: !noTruncate,
 			"bg-action-dark text-copy-light": mode === "dark",
 			"bg-action-light text-copy-lighter": mode === "light",
@@ -105,7 +115,10 @@ const getButtonBaseClasses = ({
 		});
 	}
 	if (variant === "secondary") {
-		return clsx("not-prose rounded-full", {
+		return clsx("not-prose", {
+			"rounded-full": radius === "large",
+			"rounded-md": radius === "medium",
+			"rounded-sm": radius === "small",
 			truncate: !noTruncate,
 			"bg-action-dark text-copy-light": mode === "light",
 			"bg-action-light text-copy-lighter": mode === "dark",
@@ -116,7 +129,10 @@ const getButtonBaseClasses = ({
 		});
 	}
 	if (variant === "danger") {
-		return clsx("not-prose rounded-full", {
+		return clsx("not-prose", {
+			"rounded-full": radius === "large",
+			"rounded-md": radius === "medium",
+			"rounded-sm": radius === "small",
 			truncate: !noTruncate,
 			"bg-action-danger-dark text-copy-light": mode === "dark",
 			"bg-action-danger-light text-copy-lighter": mode === "light",
@@ -286,6 +302,7 @@ export const getButtonClasses = ({
 	variant,
 	noTruncate,
 	align,
+	radius,
 }: getButtonClassesProps) => {
 	if (!variant) {
 		variant = "primary";
@@ -296,7 +313,13 @@ export const getButtonClasses = ({
 				BUTTON_CLASSNAME,
 				className,
 				getSpacing(spacing),
-				getButtonBaseClasses({ mode, variant, noBackground, noTruncate }),
+				getButtonBaseClasses({
+					mode,
+					variant,
+					noBackground,
+					noTruncate,
+					radius,
+				}),
 				getButtonSizesClasses({ type, size, labelRight, labelLeft, align }),
 				getButtonBorderClasses({ mode, variant, noBorder }),
 				getButtonFocusClasses({ focusMode }),

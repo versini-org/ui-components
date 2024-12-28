@@ -22,6 +22,7 @@ export const ButtonLink = React.forwardRef<
 			noTruncate = false,
 			noNewWindowIcon = false,
 			spacing,
+			radius = "large",
 
 			...otherProps
 		},
@@ -39,6 +40,7 @@ export const ButtonLink = React.forwardRef<
 			noBorder,
 			spacing,
 			noTruncate,
+			radius,
 		});
 
 		const newWindow = target === "_blank";
