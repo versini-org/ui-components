@@ -29,6 +29,7 @@ export const ButtonSort_private = React.forwardRef<
 			noBackground = false,
 			align = "center",
 			active = false,
+			radius = "large",
 
 			...otherProps
 		},
@@ -49,6 +50,7 @@ export const ButtonSort_private = React.forwardRef<
 			spacing,
 			noBackground,
 			align,
+			radius,
 		});
 		const iconClass = clsx({
 			"text-copy-accent-dark": mode === "light" && !raw,
