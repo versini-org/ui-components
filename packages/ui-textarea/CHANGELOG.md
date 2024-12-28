@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-textarea-v1.4.0...ui-textarea-v1.4.1) (2024-12-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-liveregion bumped to 1.2.1
+    * @versini/ui-spacing bumped to 1.1.1
+    * @versini/ui-types bumped to 1.1.0
+
 ## [1.4.0](https://github.com/versini-org/ui-components/compare/ui-textarea-v1.3.1...ui-textarea-v1.4.0) (2024-12-26)
 
 

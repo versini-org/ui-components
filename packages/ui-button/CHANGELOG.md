@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.7.0](https://github.com/versini-org/ui-components/compare/ui-button-v1.6.0...ui-button-v1.7.0) (2024-12-28)
+
+
+### Features
+
+* **Button:** adding support for radius prop ([#813](https://github.com/versini-org/ui-components/issues/813)) ([6a0719e](https://github.com/versini-org/ui-components/commit/6a0719e7a8fdd8fcaaa64b38e0c30d532acd8b73))
+* **Button:** adding variant "selected" ([#816](https://github.com/versini-org/ui-components/issues/816)) ([a394733](https://github.com/versini-org/ui-components/commit/a394733263422bdbe41df57b9391bfa781863252))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-spacing bumped to 1.1.1
+    * @versini/ui-types bumped to 1.1.0
+  * devDependencies
+    * @versini/ui-svgicon bumped to 1.1.1
+
 ## [1.6.0](https://github.com/versini-org/ui-components/compare/ui-button-v1.5.0...ui-button-v1.6.0) (2024-12-26)
 
 

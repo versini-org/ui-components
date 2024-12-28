@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.4.2](https://github.com/versini-org/ui-components/compare/ui-menu-v1.4.1...ui-menu-v1.4.2) (2024-12-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 1.1.0
+  * devDependencies
+    * @versini/ui-icons bumped to 1.19.1
+
 ## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-menu-v1.4.0...ui-menu-v1.4.1) (2024-12-28)
 
 

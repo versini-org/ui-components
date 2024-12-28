@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-bubble-v1.4.0...ui-bubble-v1.4.1) (2024-12-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 1.7.0
+    * @versini/ui-icons bumped to 1.19.1
+    * @versini/ui-spacing bumped to 1.1.1
+    * @versini/ui-types bumped to 1.1.0
+
 ## [1.4.0](https://github.com/versini-org/ui-components/compare/ui-bubble-v1.3.1...ui-bubble-v1.4.0) (2024-12-26)
 
 

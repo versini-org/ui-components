@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.8.1](https://github.com/versini-org/ui-components/compare/ui-system-v1.8.0...ui-system-v1.8.1) (2024-12-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-spacing bumped to 1.1.1
+    * @versini/ui-types bumped to 1.1.0
+
 ## [1.8.0](https://github.com/versini-org/ui-components/compare/ui-system-v1.7.0...ui-system-v1.8.0) (2024-12-26)
 
 

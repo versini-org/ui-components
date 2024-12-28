@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.19.1](https://github.com/versini-org/ui-components/compare/ui-icons-v1.19.0...ui-icons-v1.19.1) (2024-12-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-svgicon bumped to 1.1.1
+    * @versini/ui-types bumped to 1.1.0
+
 ## [1.19.0](https://github.com/versini-org/ui-components/compare/ui-icons-v1.18.0...ui-icons-v1.19.0) (2024-12-26)
 
 

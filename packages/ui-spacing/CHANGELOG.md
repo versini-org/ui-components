@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.1](https://github.com/versini-org/ui-components/compare/ui-spacing-v1.1.0...ui-spacing-v1.1.1) (2024-12-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 1.1.0
+
 ## [1.1.0](https://github.com/versini-org/ui-components/compare/ui-spacing-v1.0.0...ui-spacing-v1.1.0) (2024-12-26)
 
 

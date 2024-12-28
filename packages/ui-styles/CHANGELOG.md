@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/versini-org/ui-components/compare/ui-styles-v1.14.0...ui-styles-v1.15.0) (2024-12-28)
+
+
+### Features
+
+* **Button:** adding variant "selected" ([#816](https://github.com/versini-org/ui-components/issues/816)) ([a394733](https://github.com/versini-org/ui-components/commit/a394733263422bdbe41df57b9391bfa781863252))
+
 ## [1.14.0](https://github.com/versini-org/ui-components/compare/ui-styles-v1.13.0...ui-styles-v1.14.0) (2024-12-25)
 
 
