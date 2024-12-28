@@ -20,6 +20,8 @@
 		"build:types": "tsup",
 		"build": "npm-run-all --serial clean build:check build:types",
 		"clean": "rimraf dist tmp",
+		"dev:types": "tsup --watch src",
+		"dev": "npm-run-all clean --parallel dev:types",
 		"test:coverage": "vitest run --coverage",
 		"test:watch": "vitest",
 		"test": "vitest run"

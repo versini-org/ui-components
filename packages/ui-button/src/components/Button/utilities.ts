@@ -120,6 +120,20 @@ const getButtonBaseClasses = ({
 				mode === "alt-system",
 		});
 	}
+	if (variant === "selected") {
+		return clsx("not-prose", {
+			"rounded-full": radius === "large",
+			"rounded-md": radius === "medium",
+			"rounded-sm": radius === "small",
+			truncate: !noTruncate,
+			"bg-action-selected-dark text-copy-light": mode === "dark",
+			"bg-action-selected-light text-copy-lighter": mode === "light",
+			"bg-action-selected-dark text-copy-light dark:bg-action-selected-light dark:text-copy-lighter":
+				mode === "system",
+			"bg-action-selected-light text-copy-lighter dark:bg-action-selected-dark dark:text-copy-light":
+				mode === "alt-system",
+		});
+	}
 };
 
 const getButtonHoverClasses = ({
@@ -157,6 +171,16 @@ const getButtonHoverClasses = ({
 			"hover:bg-action-danger-dark-hover dark:hover:bg-action-danger-light-hover":
 				mode === "system",
 			"hover:bg-action-danger-light-hover dark:hover:bg-action-danger-dark-hover":
+				mode === "alt-system",
+		});
+	}
+	if (variant === "selected") {
+		return clsx("hover:text-copy-light-hover", {
+			"hover:bg-action-selected-dark-hover": mode === "dark",
+			"hover:bg-action-selected-light-hover": mode === "light",
+			"hover:bg-action-selected-dark-hover dark:hover:bg-action-selected-light-hover":
+				mode === "system",
+			"hover:bg-action-selected-light-hover dark:hover:bg-action-selected-dark-hover":
 				mode === "alt-system",
 		});
 	}
@@ -200,6 +224,16 @@ const getButtonActiveClasses = ({
 				mode === "alt-system",
 		});
 	}
+	if (variant === "selected") {
+		return clsx("active:text-copy-lighter-active", {
+			"active:bg-action-selected-dark-active": mode === "dark",
+			"active:bg-action-selected-light-active": mode === "light",
+			"active:bg-action-selected-dark-active dark:active:bg-action-selected-light-active":
+				mode === "system",
+			"active:bg-action-selected-light-active dark:active:bg-action-selected-dark-active":
+				mode === "alt-system",
+		});
+	}
 };
 
 const getButtonBorderClasses = ({
@@ -233,6 +267,16 @@ const getButtonBorderClasses = ({
 			"border-border-danger-dark dark:border-border-danger-medium":
 				mode === "system",
 			"border-border-danger-medium dark:border-border-danger-dark":
+				mode === "alt-system",
+		});
+	}
+	if (variant === "selected") {
+		return clsx("border", {
+			"border-border-selected-dark": mode === "dark",
+			"border-border-selected-medium": mode === "light",
+			"border-border-selected-dark dark:border-border-selected-medium":
+				mode === "system",
+			"border-border-selected-medium dark:border-border-selected-dark":
 				mode === "alt-system",
 		});
 	}

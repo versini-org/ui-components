@@ -70,7 +70,7 @@ declare namespace ButtonTypes {
 		/**
 		 * The variant style of the Button.
 		 */
-		variant?: "primary" | "secondary" | "danger";
+		variant?: "primary" | "secondary" | "danger" | "selected";
 	} & CommonButtonProps &
 		React.ButtonHTMLAttributes<HTMLButtonElement>;
 }
