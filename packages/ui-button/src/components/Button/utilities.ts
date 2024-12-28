@@ -1,5 +1,5 @@
 import { getSpacing } from "@versini/ui-spacing";
-import type { SpacingTypes } from "@versini/ui-types";
+import type { ButtonIconTypes, ButtonTypes } from "@versini/ui-types";
 import clsx from "clsx";
 
 import { BUTTON_CLASSNAME } from "../../common/constants";
@@ -8,26 +8,10 @@ export const TYPE_ICON = "icon";
 export const TYPE_BUTTON = "button";
 export const TYPE_LINK = "link";
 
-type getButtonClassesProps = {
-	disabled: boolean;
-	focusMode: "dark" | "light" | "system" | "alt-system";
-	fullWidth: boolean;
-	mode: "dark" | "light" | "system" | "alt-system";
-
-	noBorder: boolean;
-	raw: boolean;
-	size: string;
+type GetButtonClassesProps = {
 	type: typeof TYPE_BUTTON | typeof TYPE_ICON | typeof TYPE_LINK;
-
-	align?: "center" | "left" | "right";
-	className?: string;
-	labelLeft?: string;
-	labelRight?: string;
-	noBackground?: boolean;
-	noTruncate?: boolean;
-	variant?: "primary" | "secondary" | "danger";
-	radius?: "small" | "medium" | "large";
-} & SpacingTypes.Props;
+} & Omit<ButtonTypes.Props, "children" | "type"> &
+	Omit<ButtonIconTypes.Props, "children" | "type">;
 
 const getButtonSizesClasses = ({
 	type,
@@ -36,12 +20,11 @@ const getButtonSizesClasses = ({
 	labelLeft,
 	align,
 }: {
-	size: string;
 	type: typeof TYPE_BUTTON | typeof TYPE_ICON | typeof TYPE_LINK;
-	align?: "center" | "left" | "right";
-	labelLeft?: string;
-	labelRight?: string;
-}) => {
+} & Pick<
+	ButtonIconTypes.Props,
+	"align" | "size" | "labelLeft" | "labelRight"
+>) => {
 	const smallClasses = "text-sm font-medium max-h-8 py-0";
 	const mediumClasses = "text-base font-medium max-h-9 py-1";
 	const largeClasses = "text-lg font-medium max-h-12 py-2";
@@ -85,13 +68,8 @@ const getButtonBaseClasses = ({
 	noTruncate,
 	variant,
 	radius,
-}: {
-	mode: "dark" | "light" | "system" | "alt-system";
-	variant: "primary" | "secondary" | "danger";
-	noBackground?: boolean;
-	noTruncate?: boolean;
-	radius?: "small" | "medium" | "large";
-}) => {
+}: Pick<ButtonTypes.Props, "mode" | "variant" | "noTruncate" | "radius"> &
+	Pick<ButtonIconTypes.Props, "noBackground">) => {
 	if (noBackground) {
 		return clsx("not-prose", {
 			"rounded-full": radius === "large",
@@ -148,11 +126,7 @@ const getButtonHoverClasses = ({
 	mode,
 	disabled,
 	variant,
-}: {
-	disabled: boolean;
-	mode: "dark" | "light" | "system" | "alt-system";
-	variant: "primary" | "secondary" | "danger";
-}) => {
+}: Pick<ButtonTypes.Props, "disabled" | "mode" | "variant">) => {
 	if (disabled) {
 		return "";
 	}
@@ -192,11 +166,7 @@ const getButtonActiveClasses = ({
 	mode,
 	disabled,
 	variant,
-}: {
-	disabled: boolean;
-	mode: "dark" | "light" | "system" | "alt-system";
-	variant: "primary" | "secondary" | "danger";
-}) => {
+}: Pick<ButtonTypes.Props, "disabled" | "mode" | "variant">) => {
 	if (disabled) {
 		return "";
 	}
@@ -236,11 +206,7 @@ const getButtonBorderClasses = ({
 	mode,
 	noBorder,
 	variant,
-}: {
-	mode: "dark" | "light" | "system" | "alt-system";
-	noBorder: boolean;
-	variant: "primary" | "secondary" | "danger";
-}) => {
+}: Pick<ButtonTypes.Props, "mode" | "noBorder" | "variant">) => {
 	if (noBorder) {
 		return "border border-transparent";
 	}
@@ -272,7 +238,9 @@ const getButtonBorderClasses = ({
 	}
 };
 
-const getButtonFocusClasses = ({ focusMode }: { focusMode: string }) => {
+const getButtonFocusClasses = ({
+	focusMode,
+}: Pick<ButtonTypes.Props, "focusMode">) => {
 	return clsx("focus:outline", "focus:outline-2", "focus:outline-offset-2", {
 		"focus:outline-focus-dark": focusMode === "dark",
 		"focus:outline-focus-light": focusMode === "light",
@@ -303,7 +271,7 @@ export const getButtonClasses = ({
 	noTruncate,
 	align,
 	radius,
-}: getButtonClassesProps) => {
+}: GetButtonClassesProps) => {
 	if (!variant) {
 		variant = "primary";
 	}
