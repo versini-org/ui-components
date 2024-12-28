@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.1](https://github.com/versini-org/ui-components/compare/ui-svgicon-v1.1.0...ui-svgicon-v1.1.1) (2024-12-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-spacing bumped to 1.1.1
+    * @versini/ui-types bumped to 1.1.0
+
 ## [1.1.0](https://github.com/versini-org/ui-components/compare/ui-svgicon-v1.0.0...ui-svgicon-v1.1.0) (2024-12-26)
 
 

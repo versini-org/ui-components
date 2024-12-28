@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-footer-v1.4.0...ui-footer-v1.4.1) (2024-12-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-spacing bumped to 1.1.1
+    * @versini/ui-types bumped to 1.1.0
+
 ## [1.4.0](https://github.com/versini-org/ui-components/compare/ui-footer-v1.3.0...ui-footer-v1.4.0) (2024-12-26)
 
 
