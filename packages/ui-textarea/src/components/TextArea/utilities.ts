@@ -1,5 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
-import type { SpacingTypes } from "@versini/ui-types";
 import clsx from "clsx";
 
 import {
@@ -19,7 +17,7 @@ type getTextAreaClassesProps = {
 
 	className?: string;
 	textAreaClassName?: string;
-} & SpacingTypes.Props;
+};
 
 const getTextAreaBaseClasses = () => {
 	/**
@@ -157,7 +155,6 @@ export const getTextAreaClasses = ({
 	disabled,
 	noBorder,
 	error,
-	spacing,
 	mode,
 }: getTextAreaClassesProps) => {
 	const wrapper = raw
@@ -166,7 +163,6 @@ export const getTextAreaClasses = ({
 				"relative flex w-full flex-col justify-center",
 				TEXT_AREA_WRAPPER_CLASSNAME,
 				className,
-				getSpacing(spacing),
 			);
 
 	const textArea = raw

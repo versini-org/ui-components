@@ -14,6 +14,27 @@ describe("TextArea (exceptions)", () => {
 	});
 });
 
+describe("TextArea spacing", () => {
+	it("should render a button with a right margin spacing", async () => {
+		render(
+			<TextArea
+				label="toto"
+				name="toto"
+				className="mr-2"
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const input = await screen.findByTestId("txtnpt-1");
+		expect(input.className).not.toContain("mr-2");
+		if (input.parentElement) {
+			// not only it should be there, but it should be the last entry
+			expect(input.parentElement.className).toContain("mr-2");
+			expect(input.parentElement.className).toContain("relative");
+			expect(input.parentElement.className.slice(-4)).toBe("mr-2");
+		}
+	});
+});
+
 describe("TextArea modifiers", () => {
 	it("should render a dark or light (system) text area", async () => {
 		render(<TextArea label="hello world" name="toto" />);

@@ -95,6 +95,7 @@ const componentsWithNoSpacingProp = [
 	"ui-spinner",
 	"ui-svgicon",
 	"ui-table",
+	"ui-textarea",
 	"ui-truncate",
 ];
 
