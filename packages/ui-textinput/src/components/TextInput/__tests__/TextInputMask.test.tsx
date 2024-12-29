@@ -39,6 +39,32 @@ describe("TextInputMask (exceptions)", () => {
 	});
 });
 
+describe("TextInputMask spacing", () => {
+	it("should render a text input with a right margin spacing", async () => {
+		render(
+			<TextInputMask
+				label="toto"
+				name="toto"
+				className="mr-2"
+				data-testid="txtnpt-1"
+				rightElement={
+					<MyButtonIcon>
+						<MyIconHide />
+					</MyButtonIcon>
+				}
+			/>,
+		);
+		const input = await screen.findByTestId("txtnpt-1");
+		expect(input.className).not.toContain("mr-2");
+		if (input.parentElement) {
+			// not only it should be there, but it should be the last entry
+			expect(input.parentElement.className).toContain("mr-2");
+			expect(input.parentElement.className).toContain("relative");
+			expect(input.parentElement.className.slice(-4)).toBe("mr-2");
+		}
+	});
+});
+
 describe("TextInputMask modifiers", () => {
 	it("should render a dark or light (system) text input", async () => {
 		render(

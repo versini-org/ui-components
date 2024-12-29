@@ -1,5 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
-import type { SpacingTypes } from "@versini/ui-types";
 import clsx from "clsx";
 
 import {
@@ -21,7 +19,7 @@ type getTextInputClassesProps = {
 	className?: string;
 	rightElementClassName?: string;
 	inputClassName?: string;
-} & SpacingTypes.Props;
+};
 
 const getTextInputColorClasses = ({
 	mode,
@@ -151,7 +149,6 @@ export const getTextInputClasses = ({
 	disabled,
 	noBorder,
 	error,
-	spacing,
 	mode,
 	focusMode,
 	size,
@@ -163,7 +160,6 @@ export const getTextInputClasses = ({
 				"relative flex w-full flex-col justify-center",
 				TEXT_INPUT_WRAPPER_CLASSNAME,
 				className,
-				getSpacing(spacing),
 			);
 
 	let heightClass = "";
@@ -190,7 +186,7 @@ export const getTextInputClasses = ({
 		? clsx(inputClassName)
 		: clsx(
 				TEXT_INPUT_CLASSNAME,
-				inputClassName,
+
 				heightClass,
 				"rounded-md text-base px-4",
 				getTextInputColorClasses({ mode }),
@@ -199,6 +195,7 @@ export const getTextInputClasses = ({
 				{
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
 				},
+				inputClassName,
 			);
 
 	const accessibleLabel = raw ? undefined : "sr-only";

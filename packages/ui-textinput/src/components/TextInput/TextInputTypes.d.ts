@@ -1,5 +1,3 @@
-import type { SpacingTypes } from "@versini/ui-types";
-
 export type Size = "xs" | "sm" | "md" | "lg" | "xl";
 export type SetTimeoutResult = ReturnType<typeof setTimeout> | null;
 export type CommonTextInputProps = {
@@ -55,8 +53,7 @@ export type CommonTextInputProps = {
 	 * Controls input height and horizontal padding, 'md' by default
 	 */
 	size?: Size;
-} & SpacingTypes.Props &
-	Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">;
+} & Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">;
 
 export type TextInputProps = {
 	/**

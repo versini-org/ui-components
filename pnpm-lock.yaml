@@ -855,9 +855,6 @@ importers:
       '@versini/ui-liveregion':
         specifier: workspace:../ui-liveregion
         version: link:../ui-liveregion
-      '@versini/ui-spacing':
-        specifier: workspace:../ui-spacing
-        version: link:../ui-spacing
       '@versini/ui-types':
         specifier: workspace:../ui-types
         version: link:../ui-types
