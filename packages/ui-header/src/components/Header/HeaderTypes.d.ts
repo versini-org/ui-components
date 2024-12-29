@@ -1,5 +1,3 @@
-import type { SpacingTypes } from "@versini/ui-types";
-
 export type HeaderProps = {
 	/**
 	 * The children to render.
@@ -26,4 +24,4 @@ export type HeaderProps = {
 	 * Whether or not to render the Header component with sticky behavior.
 	 */
 	sticky?: boolean;
-} & SpacingTypes.Props;
+};
