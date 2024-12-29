@@ -10,6 +10,16 @@ describe("Header (exceptions)", () => {
 	});
 });
 
+describe("Header spacing", () => {
+	it("should render a header with a right margin spacing", async () => {
+		render(<Header className="mr-2">hello</Header>);
+		const header = await screen.findByRole("banner");
+		// not only it should be there, but it should be the last entry
+		expect(header.className).toContain("mr-2");
+		expect(header.className.slice(-4)).toBe("mr-2");
+	});
+});
+
 describe("Header modifiers", () => {
 	it("should render a responsive header tag (system)", async () => {
 		render(<Header>hello</Header>);
