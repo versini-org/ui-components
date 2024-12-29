@@ -96,7 +96,7 @@ describe("Non-DOM tests", () => {
 	it("should return a custom configuration for button", () => {
 		const config: any = {};
 
-		const mergedConfig = twPlugin.merge(config, "button");
+		const mergedConfig = twPlugin.merge(config, "ui-button");
 		const content = (mergedConfig.content as string[]).join(" ");
 
 		expect(content).not.toContain("./src/*.{js,ts,jsx,tsx}");

@@ -1,2 +1,2 @@
 import { commonTailwindConfigForComponent } from "../../configuration/tailwind.common";
-export default commonTailwindConfigForComponent("button");
+export default commonTailwindConfigForComponent("ui-button");

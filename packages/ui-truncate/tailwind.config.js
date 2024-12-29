@@ -1,2 +1,2 @@
 import { commonTailwindConfigForComponent } from "../../configuration/tailwind.common";
-export default commonTailwindConfigForComponent("truncate");
+export default commonTailwindConfigForComponent("ui-truncate");
