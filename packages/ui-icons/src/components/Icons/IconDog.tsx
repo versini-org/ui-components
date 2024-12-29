@@ -14,7 +14,6 @@ export const IconDog = ({
 			defaultClassName="w-full"
 			viewBox={viewBox}
 			className={className}
-			spacing={spacing}
 			title="Sassy Dog"
 			{...rest}
 		>

@@ -17,7 +17,6 @@ import type { IconsProps } from "./IconsTypes";
 export const IconAnthropic = ({
 	className,
 	viewBox,
-	spacing,
 	title,
 	monotone,
 	...rest
@@ -28,7 +27,6 @@ export const IconAnthropic = ({
 			defaultClassName="size-5"
 			viewBox={viewBox}
 			className={className}
-			spacing={spacing}
 			title={title || "Anthropic"}
 			{...rest}
 		>

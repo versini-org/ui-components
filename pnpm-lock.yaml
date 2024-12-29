@@ -768,9 +768,6 @@ importers:
 
   packages/ui-svgicon:
     dependencies:
-      '@versini/ui-spacing':
-        specifier: workspace:../ui-spacing
-        version: link:../ui-spacing
       '@versini/ui-types':
         specifier: workspace:../ui-types
         version: link:../ui-types

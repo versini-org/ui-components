@@ -1,5 +1,3 @@
-import type { SpacingTypes } from "./spacing";
-
 declare namespace SvgIconTypes {
 	export type Props = {
 		/**
@@ -38,7 +36,7 @@ declare namespace SvgIconTypes {
 		 * The viewBox to use. If not provided, the default viewBox will be used.
 		 */
 		viewBox?: string;
-	} & SpacingTypes.Props;
+	};
 }
 
 export { SvgIconTypes };

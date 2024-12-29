@@ -17,7 +17,6 @@ import type { IconsProps } from "./IconsTypes";
 export const IconMessages = ({
 	className,
 	viewBox,
-	spacing,
 	title,
 	monotone,
 	...rest
@@ -30,7 +29,6 @@ export const IconMessages = ({
 			defaultClassName="size-5"
 			viewBox={viewBox}
 			className={className}
-			spacing={spacing}
 			title={title || "Messages"}
 			{...rest}
 		>
