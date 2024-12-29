@@ -1,5 +1,3 @@
-import type { SpacingTypes } from "@versini/ui-types";
-
 export type ToggleProps = {
 	/**
 	 * The label to use for the component.
@@ -38,4 +36,8 @@ export type ToggleProps = {
 	 * @default false
 	 */
 	noBorder?: boolean;
-} & SpacingTypes.Props;
+	/**
+	 * The classes to apply to the component.
+	 */
+	className?: string;
+};

@@ -1,5 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
-import type { SpacingTypes } from "@versini/ui-types";
 import clsx from "clsx";
 
 import { TOGGLE_CLASSNAME } from "../../common/constants";
@@ -93,11 +91,11 @@ const getLabelClasses = ({
 			});
 };
 
-const getWrapperClasses = ({ spacing }: SpacingTypes.Props) => {
+const getWrapperClasses = ({ className }: { className?: string }) => {
 	return clsx(
 		TOGGLE_CLASSNAME,
 		"relative flex cursor-pointer items-center",
-		getSpacing(spacing),
+		className,
 	);
 };
 
@@ -105,14 +103,15 @@ export const getToggleClasses = ({
 	mode,
 	focusMode,
 	labelHidden,
-	spacing,
+	className,
 	noBorder,
 }: {
 	focusMode: "dark" | "light" | "system" | "alt-system";
 	labelHidden: boolean;
 	mode: "dark" | "light" | "system" | "alt-system";
 	noBorder: boolean;
-} & SpacingTypes.Props) => {
+	className?: string;
+}) => {
 	return {
 		toggle: clsx(
 			getToggleBaseClasses(),
@@ -123,6 +122,6 @@ export const getToggleClasses = ({
 		),
 		label: getLabelClasses({ mode, labelHidden }),
 		input: "peer sr-only",
-		wrapper: getWrapperClasses({ spacing }),
+		wrapper: getWrapperClasses({ className }),
 	};
 };

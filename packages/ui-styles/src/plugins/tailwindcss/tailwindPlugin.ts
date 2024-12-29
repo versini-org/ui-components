@@ -98,6 +98,7 @@ const componentsWithNoSpacingProp = [
 	"ui-textarea",
 	"ui-textinput",
 	"ui-truncate",
+	"ui-toggle",
 ];
 
 /**
