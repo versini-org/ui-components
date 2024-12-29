@@ -14,10 +14,9 @@ export const Bubble = ({
 	copyToClipboard,
 	copyToClipboardFocusMode = "system",
 	copyToClipboardMode = "system",
-	spacing,
 }: BubbleProps) => {
 	const [copied, setCopied] = useState(false);
-	const bubbleClasses = getBubbleClasses({ kind, className, spacing });
+	const bubbleClasses = getBubbleClasses({ kind, className });
 	const isCopyToClipboardEnabled =
 		Boolean(copyToClipboard) &&
 		(typeof copyToClipboard === "function" ||

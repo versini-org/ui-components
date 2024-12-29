@@ -36,7 +36,7 @@ export const Basic: Story = {
 	...commonControlsSetup,
 	render: (args) => (
 		<div className="h-96 min-h-10 bg-slate-900 p-11 w-96">
-			<Bubble kind="right" spacing={{ b: 4 }} {...args}>
+			<Bubble kind="right" className="mb-4" {...args}>
 				Right bubble...
 			</Bubble>
 
@@ -52,21 +52,21 @@ export const Copy: Story = {
 	...commonControlsSetup,
 	render: (args) => (
 		<div className=" bg-slate-900 h-full min-h-10 p-11">
-			<Bubble kind="right" spacing={{ b: 4 }} copyToClipboard {...args}>
+			<Bubble kind="right" className="mb-4" copyToClipboard {...args}>
 				Right bubble...
 			</Bubble>
 
-			<Bubble kind="left" spacing={{ b: 4 }} copyToClipboard {...args}>
+			<Bubble kind="left" className="mb-4" copyToClipboard {...args}>
 				Pure string with boolean
 			</Bubble>
 
-			<Bubble kind="left" spacing={{ b: 4 }} copyToClipboard {...args}>
+			<Bubble kind="left" className="mb-4" copyToClipboard {...args}>
 				<div>DOM element with boolean</div>
 			</Bubble>
 
 			<Bubble
 				kind="left"
-				spacing={{ b: 4 }}
+				className="mb-4"
 				copyToClipboard={() => {
 					navigator.clipboard.writeText("DOM element with function");
 				}}
@@ -86,7 +86,7 @@ export const LongText: Story = {
 	...commonControlsSetup,
 	render: (args) => (
 		<div className="h-full min-h-10 bg-slate-900 p-11">
-			<Bubble kind="right" spacing={{ b: 4 }} {...args}>
+			<Bubble kind="right" className="mb-4" {...args}>
 				I have Vodka, St Germain and Grapefruit Juice. Can you suggest a few
 				cocktails I can make with these ingredients?
 			</Bubble>
@@ -156,7 +156,7 @@ export const WithFooter: Story = {
 		<div className="h-96 min-h-10 bg-slate-900 p-11">
 			<Bubble
 				kind="right"
-				spacing={{ b: 4 }}
+				className="mb-4"
 				footer={{
 					Model: "gpt-4-1106-preview",
 				}}

@@ -1,5 +1,3 @@
-import type { SpacingTypes } from "@versini/ui-types";
-
 export type BubbleProps = {
 	/**
 	 * The text to render in the bubble.
@@ -50,4 +48,4 @@ export type BubbleProps = {
 	 * Same as "footer" but accepts raw JSX.
 	 */
 	rawFooter?: React.ReactNode;
-} & SpacingTypes.Props;
+};

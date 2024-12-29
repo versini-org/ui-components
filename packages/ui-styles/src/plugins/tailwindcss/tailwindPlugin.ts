@@ -81,7 +81,7 @@ const customPlugins = [
  * anymore. They are using the new TailwindCSS classes, and therefore
  * don't need to be added to the safelist.
  */
-const componentsWithNoSpacingProp = ["ui-button", "ui-truncate"];
+const componentsWithNoSpacingProp = ["ui-button", "ui-truncate", "ui-bubble"];
 
 /**
  * The plugin "merge" function is used to merge the custom configuration with
