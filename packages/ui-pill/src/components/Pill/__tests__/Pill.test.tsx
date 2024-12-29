@@ -8,6 +8,16 @@ describe("Pill (exceptions)", () => {
 	});
 });
 
+describe("Pill spacing", () => {
+	it("should render a pill with a right margin spacing", async () => {
+		render(<Pill className="mr-2" label="hello" />);
+		const pill = await screen.findByRole("text");
+		// not only it should be there, but it should be the last entry
+		expect(pill.className).toContain("mr-2");
+		expect(pill.className.slice(-4)).toBe("mr-2");
+	});
+});
+
 describe("Pill modifiers", () => {
 	it("should render a default pill", async () => {
 		render(<Pill label="hello" />);

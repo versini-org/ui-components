@@ -6,13 +6,11 @@ export const Pill = ({
 	className,
 	variant = "information",
 	description,
-	spacing,
 }: PillProps) => {
 	const pillClassName = getPillClasses({
 		label,
 		className,
 		variant,
-		spacing,
 	});
 	return (
 		<div role="text" className={pillClassName}>
