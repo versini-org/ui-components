@@ -10,6 +10,16 @@ describe("Footer (exceptions)", () => {
 	});
 });
 
+describe("Footer spacing", () => {
+	it("should render a footer with a right margin spacing", async () => {
+		render(<Footer className="mr-2" />);
+		const footer = await screen.findByRole("contentinfo");
+		// not only it should be there, but it should be the last entry
+		expect(footer.className).toContain("mr-2");
+		expect(footer.className.slice(-4)).toBe("mr-2");
+	});
+});
+
 describe("Footer modifiers", () => {
 	it("should render a default footer", async () => {
 		render(<Footer />);

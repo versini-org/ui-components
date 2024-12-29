@@ -86,6 +86,7 @@ const componentsWithNoSpacingProp = [
 	"ui-truncate",
 	"ui-bubble",
 	"ui-card",
+	"ui-footer",
 ];
 
 /**
