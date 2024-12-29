@@ -28,8 +28,9 @@ export default meta;
 
 export const Basic: Story = {
 	...commonControlsSetup,
+	args: { className: "mr-2" },
 	render: (args) => (
-		<div className="flex flex-wrap gap-2">
+		<div className="flex flex-wrap">
 			<Button {...args}>Button lorem ipsum</Button>
 			<Button {...args}>Button lorem ipsum dolor</Button>
 			<Button {...args}>Button lorem ipsum dolor sit amet</Button>

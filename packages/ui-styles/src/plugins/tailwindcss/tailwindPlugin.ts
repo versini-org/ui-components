@@ -89,10 +89,10 @@ const customPlugins = [
  * });
  */
 export const twPlugin = {
-	merge: (config: TailwindConfig) => {
+	merge: (config: TailwindConfig, componentName?: string) => {
 		const content = customContentPath;
 		const plugins = customPlugins;
-		const safelist = customSafelist;
+		const safelist = componentName === "button" ? [] : customSafelist;
 
 		config.safelist = [...(config.safelist || []), ...safelist];
 		config.content = [...(config.content || []), ...content];

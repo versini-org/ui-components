@@ -1,5 +1,3 @@
-import type { SpacingTypes } from "./spacing";
-
 type CommonButtonProps = {
 	/**
 	 * CSS class(es) to add to the main component wrapper.
@@ -42,7 +40,7 @@ type CommonButtonProps = {
 	 * The rounded style of the Button.
 	 */
 	radius?: "small" | "medium" | "large";
-} & SpacingTypes.Props;
+};
 
 declare namespace ButtonTypes {
 	export type Props = {

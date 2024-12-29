@@ -21,7 +21,6 @@ export const ButtonLink = React.forwardRef<
 			target,
 			noTruncate = false,
 			noNewWindowIcon = false,
-			spacing,
 			radius = "large",
 
 			...otherProps
@@ -38,7 +37,6 @@ export const ButtonLink = React.forwardRef<
 			className,
 			size,
 			noBorder,
-			spacing,
 			noTruncate,
 			radius,
 		});

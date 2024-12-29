@@ -1,4 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
 import type { ButtonIconTypes, ButtonTypes } from "@versini/ui-types";
 import clsx from "clsx";
 
@@ -309,7 +308,6 @@ export const getButtonClasses = ({
 	noBorder,
 	labelRight,
 	labelLeft,
-	spacing,
 	noBackground,
 	variant,
 	noTruncate,
@@ -323,8 +321,6 @@ export const getButtonClasses = ({
 		? clsx(BUTTON_CLASSNAME, className)
 		: clsx(
 				BUTTON_CLASSNAME,
-				className,
-				getSpacing(spacing),
 				getButtonBaseClasses({
 					mode,
 					variant,
@@ -341,5 +337,6 @@ export const getButtonClasses = ({
 					"w-full": fullWidth,
 					"disabled:cursor-not-allowed disabled:opacity-50": disabled,
 				},
+				className,
 			);
 };
