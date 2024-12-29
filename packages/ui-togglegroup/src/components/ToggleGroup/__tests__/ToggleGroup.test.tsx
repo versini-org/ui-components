@@ -10,6 +10,20 @@ describe("ToggleGroup (exceptions)", () => {
 	});
 });
 
+describe("ToggleGroup spacing", () => {
+	it("should render a toggle group with a right margin spacing", async () => {
+		render(
+			<ToggleGroup className="mr-2">
+				<ToggleGroupItem value="toto" />
+			</ToggleGroup>,
+		);
+		const group = screen.getByRole("group");
+		// not only it should be there, but it should be the last entry
+		expect(group.className).toContain("mr-2");
+		expect(group.className.slice(-4)).toBe("mr-2");
+	});
+});
+
 describe("ToggleGroup modifiers", () => {
 	it("should render a default ToggleGroup (light)", async () => {
 		render(

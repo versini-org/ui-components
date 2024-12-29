@@ -97,8 +97,9 @@ const componentsWithNoSpacingProp = [
 	"ui-table",
 	"ui-textarea",
 	"ui-textinput",
-	"ui-truncate",
 	"ui-toggle",
+	"ui-togglegroup",
+	"ui-truncate",
 ];
 
 /**
