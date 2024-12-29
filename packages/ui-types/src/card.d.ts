@@ -1,5 +1,4 @@
 import React from "react";
-import type { SpacingTypes } from "./spacing";
 
 declare namespace CardTypes {
 	export type Props = {
@@ -49,7 +48,7 @@ declare namespace CardTypes {
 		 * @default false
 		 */
 		noBorder?: boolean;
-	} & SpacingTypes.Props;
+	};
 
 	export type HeaderProps = {
 		className: string;
