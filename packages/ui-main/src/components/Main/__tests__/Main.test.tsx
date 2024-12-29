@@ -9,6 +9,16 @@ describe("Main (exceptions)", () => {
 	});
 });
 
+describe("Main spacing", () => {
+	it("should render a button with a right margin spacing", async () => {
+		render(<Main className="mr-2">hello</Main>);
+		const main = await screen.findByRole("main");
+		// not only it should be there, but it should be the last entry
+		expect(main.className).toContain("mr-2");
+		expect(main.className.slice(-4)).toBe("mr-2");
+	});
+});
+
 describe("Main modifiers", () => {
 	it("should render a responsive main tag", async () => {
 		render(<Main>hello</Main>);

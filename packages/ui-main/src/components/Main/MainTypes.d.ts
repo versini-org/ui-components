@@ -1,5 +1,3 @@
-import type { SpacingTypes } from "@versini/ui-types";
-
 export type MainProps = {
 	/**
 	 * The children to render.
@@ -14,4 +12,4 @@ export type MainProps = {
 	 * @default false
 	 */
 	raw?: boolean;
-} & SpacingTypes.Props;
+};
