@@ -23,31 +23,6 @@ describe("ThemeProvider props tests", () => {
 		const node = await screen.findByText("Hello World");
 		expectToHaveClasses(node, [THEMEPROVIDER_CLASSNAME, "contents", "toto"]);
 	});
-
-	it("should respect the spacing prop", async () => {
-		await act(async () => {
-			render(
-				<ThemeProvider className="toto" spacing={20}>
-					Hello World
-				</ThemeProvider>,
-			);
-		});
-		const node = await screen.findByText("Hello World");
-		expectToHaveClasses(node, [THEMEPROVIDER_CLASSNAME, "contents", "toto"]);
-		expect(node.parentElement).toHaveClass("m-20");
-	});
-
-	it("should respect the spacing prop even if global is true", async () => {
-		await act(async () => {
-			render(
-				<ThemeProvider className="toto" spacing={20} global>
-					Hello World
-				</ThemeProvider>,
-			);
-		});
-		const node = await screen.findByText("Hello World");
-		expect(node).toHaveClass("m-20");
-	});
 });
 
 describe("ThemeProvider injection tests", () => {

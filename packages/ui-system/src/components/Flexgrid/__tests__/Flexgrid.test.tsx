@@ -102,14 +102,16 @@ describe("Flexgrid props", () => {
 		expectToHaveStyles(gridRoot, { "align-items": "stretch" });
 	});
 
-	it("should respect the spacing prop", async () => {
+	it("should respect the spacing via className", async () => {
 		render(
-			<Flexgrid alignVertical="stretch" data-testid="grid-1" spacing={20}>
+			<Flexgrid alignVertical="stretch" data-testid="grid-1" className="mr-2">
 				hello
 			</Flexgrid>,
 		);
 		const gridRoot = await screen.findByTestId("grid-1");
 		expectToHaveStyles(gridRoot, { "align-items": "stretch" });
-		expect(gridRoot.parentElement).toHaveClass("m-20");
+		// not only it should be there, but it should be the last entry
+		expect(gridRoot).toHaveClass("mr-2");
+		expect(gridRoot.className.slice(-4)).toBe("mr-2");
 	});
 });

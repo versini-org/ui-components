@@ -94,6 +94,7 @@ const componentsWithNoSpacingProp = [
 	"ui-pill",
 	"ui-spinner",
 	"ui-svgicon",
+	"ui-system",
 	"ui-table",
 	"ui-textarea",
 	"ui-textinput",
