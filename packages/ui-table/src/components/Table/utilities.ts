@@ -1,5 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
-import type { SpacingTypes } from "@versini/ui-types";
 import clsx from "clsx";
 
 export const CELL_WRAPPER_HEAD = "thead";
@@ -17,18 +15,16 @@ export const getTableClasses = ({
 	wrapperClassName,
 	stickyHeader,
 	stickyFooter,
-	spacing,
 }: {
 	mode: string;
 	className?: string;
 	stickyFooter?: boolean;
 	stickyHeader?: boolean;
 	wrapperClassName?: string;
-} & SpacingTypes.Props) => {
+}) => {
 	return {
 		wrapper: clsx(
 			"not-prose relative w-full rounded-lg shadow-md",
-			getSpacing(spacing),
 			{
 				"overflow-x-auto": !stickyHeader && !stickyFooter,
 				"overflow-y-scroll": stickyHeader || stickyFooter,
@@ -65,17 +61,20 @@ export const getTableHeadClasses = ({
 	className?: string;
 	stickyHeader?: boolean;
 }) => {
-	return clsx(className, {
-		"sticky top-0 z-10": stickyHeader,
-		"shadow-[rgb(190_190_190_/20%)_0_0.5rem_1rem]":
-			stickyHeader && mode === "dark",
-		"shadow-[rgb(190_190_190_/20%)_0_0.5rem_1rem] dark:shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem]":
-			stickyHeader && mode === "system",
-		"shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem]":
-			stickyHeader && mode === "light",
-		"shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem] dark:shadow-[rgb(190_190_190_/20%)_0_0.5rem_1rem]":
-			stickyHeader && mode === "alt-system",
-	});
+	return clsx(
+		{
+			"sticky top-0 z-10": stickyHeader,
+			"shadow-[rgb(190_190_190_/20%)_0_0.5rem_1rem]":
+				stickyHeader && mode === "dark",
+			"shadow-[rgb(190_190_190_/20%)_0_0.5rem_1rem] dark:shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem]":
+				stickyHeader && mode === "system",
+			"shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem]":
+				stickyHeader && mode === "light",
+			"shadow-[rgb(65_65_65_/30%)_0_0.5rem_1rem] dark:shadow-[rgb(190_190_190_/20%)_0_0.5rem_1rem]":
+				stickyHeader && mode === "alt-system",
+		},
+		className,
+	);
 };
 
 export const getTableFooterClasses = ({
@@ -87,17 +86,20 @@ export const getTableFooterClasses = ({
 	className?: string;
 	stickyFooter?: boolean;
 }) => {
-	return clsx(className, {
-		"sticky bottom-0 z-10": stickyFooter,
-		"shadow-[rgb(190_190_190_/20%)_0_-0.5rem_1rem]":
-			stickyFooter && mode === "dark",
-		"shadow-[rgb(190_190_190_/20%)_0_-0.5rem_1rem] dark:shadow-[rgb(65_65_65_/30%)_0_-0.5rem_1rem]":
-			stickyFooter && mode === "system",
-		"shadow-[rgb(65_65_65_/30%)_0_-0.5rem_1rem]":
-			stickyFooter && mode === "light",
-		"shadow-[rgb(65_65_65_/30%)_-0_0.5rem_1rem] dark:shadow-[rgb(190_190_190_/20%)_0_-0.5rem_1rem]":
-			stickyFooter && mode === "alt-system",
-	});
+	return clsx(
+		{
+			"sticky bottom-0 z-10": stickyFooter,
+			"shadow-[rgb(190_190_190_/20%)_0_-0.5rem_1rem]":
+				stickyFooter && mode === "dark",
+			"shadow-[rgb(190_190_190_/20%)_0_-0.5rem_1rem] dark:shadow-[rgb(65_65_65_/30%)_0_-0.5rem_1rem]":
+				stickyFooter && mode === "system",
+			"shadow-[rgb(65_65_65_/30%)_0_-0.5rem_1rem]":
+				stickyFooter && mode === "light",
+			"shadow-[rgb(65_65_65_/30%)_-0_0.5rem_1rem] dark:shadow-[rgb(190_190_190_/20%)_0_-0.5rem_1rem]":
+				stickyFooter && mode === "alt-system",
+		},
+		className,
+	);
 };
 
 export const getTableRowClasses = ({
@@ -113,30 +115,37 @@ export const getTableRowClasses = ({
 		cellWrapper === CELL_WRAPPER_HEAD ||
 		cellWrapper === CELL_WRAPPER_FOOTER
 	) {
-		return clsx({
-			"bg-table-head-dark": mode === "dark",
-			"bg-table-head-light": mode === "light",
-			"bg-table-head-dark dark:bg-table-head-light": mode === "system",
-			"bg-table-head-light dark:bg-table-head-dark": mode === "alt-system",
-		});
+		return clsx(
+			{
+				"bg-table-head-dark": mode === "dark",
+				"bg-table-head-light": mode === "light",
+				"bg-table-head-dark dark:bg-table-head-light": mode === "system",
+				"bg-table-head-light dark:bg-table-head-dark": mode === "alt-system",
+			},
+			className,
+		);
 	}
-	return clsx("border-b last:border-0", className, {
-		"border-table-dark": mode === "dark",
-		"odd:bg-table-dark-odd even:bg-table-dark-even":
-			cellWrapper === CELL_WRAPPER_BODY && mode === "dark",
+	return clsx(
+		"border-b last:border-0",
+		{
+			"border-table-dark": mode === "dark",
+			"odd:bg-table-dark-odd even:bg-table-dark-even":
+				cellWrapper === CELL_WRAPPER_BODY && mode === "dark",
 
-		"border-table-light": mode === "light",
-		"odd:bg-table-light-odd even:bg-table-light-even":
-			cellWrapper === CELL_WRAPPER_BODY && mode === "light",
+			"border-table-light": mode === "light",
+			"odd:bg-table-light-odd even:bg-table-light-even":
+				cellWrapper === CELL_WRAPPER_BODY && mode === "light",
 
-		"border-table-dark dark:border-table-light": mode === "system",
-		"odd:bg-table-dark-odd even:bg-table-dark-even dark:odd:bg-table-light-odd dark:even:bg-table-light-even":
-			cellWrapper === CELL_WRAPPER_BODY && mode === "system",
+			"border-table-dark dark:border-table-light": mode === "system",
+			"odd:bg-table-dark-odd even:bg-table-dark-even dark:odd:bg-table-light-odd dark:even:bg-table-light-even":
+				cellWrapper === CELL_WRAPPER_BODY && mode === "system",
 
-		"border-table-light dark:border-table-dark": mode === "alt-system",
-		"odd:bg-table-light-odd even:bg-table-light-even dark:odd:bg-table-dark-odd dark:even:bg-table-dark-even":
-			cellWrapper === CELL_WRAPPER_BODY && mode === "alt-system",
-	});
+			"border-table-light dark:border-table-dark": mode === "alt-system",
+			"odd:bg-table-light-odd even:bg-table-light-even dark:odd:bg-table-dark-odd dark:even:bg-table-dark-even":
+				cellWrapper === CELL_WRAPPER_BODY && mode === "alt-system",
+		},
+		className,
+	);
 };
 
 export const getTableCellClasses = ({
@@ -150,18 +159,21 @@ export const getTableCellClasses = ({
 	className?: string;
 	compact?: boolean;
 }) => {
-	return clsx(className, {
-		"text-copy-light": mode === "dark",
-		"text-copy-dark": mode === "light",
-		"text-copy-light dark:text-copy-dark": mode === "system",
-		"text-copy-dark dark:text-copy-light": mode === "alt-system",
-		"px-4 py-3":
-			!compact &&
-			(cellWrapper === CELL_WRAPPER_HEAD ||
-				cellWrapper === CELL_WRAPPER_FOOTER),
-		"p-4": !compact && cellWrapper === CELL_WRAPPER_BODY,
-		"px-2 py-1.5": compact,
-	});
+	return clsx(
+		{
+			"text-copy-light": mode === "dark",
+			"text-copy-dark": mode === "light",
+			"text-copy-light dark:text-copy-dark": mode === "system",
+			"text-copy-dark dark:text-copy-light": mode === "alt-system",
+			"px-4 py-3":
+				!compact &&
+				(cellWrapper === CELL_WRAPPER_HEAD ||
+					cellWrapper === CELL_WRAPPER_FOOTER),
+			"p-4": !compact && cellWrapper === CELL_WRAPPER_BODY,
+			"px-2 py-1.5": compact,
+		},
+		className,
+	);
 };
 
 export const getTableCellSortButtonClasses = ({
