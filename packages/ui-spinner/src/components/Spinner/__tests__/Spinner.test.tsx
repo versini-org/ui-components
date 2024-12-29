@@ -10,6 +10,16 @@ describe("Spinner (exceptions)", () => {
 	});
 });
 
+describe("Spinner spacing", () => {
+	it("should render a spinner with a right margin spacing", async () => {
+		render(<Spinner className="mr-2" />);
+		const node = await screen.findByRole("status");
+		// not only it should be there, but it should be the last entry
+		expect(node.className).toContain("mr-2");
+		expect(node.className.slice(-4)).toBe("mr-2");
+	});
+});
+
 describe("Spinner modifiers", () => {
 	it("should render a default Spinner (dark)", async () => {
 		render(<Spinner />);

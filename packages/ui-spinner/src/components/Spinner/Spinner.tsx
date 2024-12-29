@@ -1,4 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
 import clsx from "clsx";
 
 import { SPINNER_CLASSNAME } from "../../common/constants";
@@ -8,13 +7,13 @@ export const Spinner = ({
 	spinnerRef,
 	mode = "system",
 	type = "circle",
-	spacing,
+	className,
 }: SpinnerProps) => {
 	const spinnerClassName =
 		type === "circle"
 			? clsx(
 					SPINNER_CLASSNAME,
-					getSpacing(spacing),
+
 					"h-8 w-8",
 					"align-[-0.125em]",
 					"border-4",
@@ -25,8 +24,9 @@ export const Spinner = ({
 						"text-copy-dark dark:text-copy-accent": mode === "system",
 						"text-copy-accent dark:text-copy-dark": mode === "alt-system",
 					},
+					className,
 				)
-			: clsx(SPINNER_CLASSNAME, getSpacing(spacing));
+			: clsx(SPINNER_CLASSNAME, className);
 
 	const dotClassName = clsx("av-spinner__dot", {
 		"fill-copy-dark": mode === "dark",

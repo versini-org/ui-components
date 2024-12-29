@@ -1,6 +1,8 @@
-import type { SpacingTypes } from "@versini/ui-types";
-
 export type SpinnerProps = {
+	/**
+	 * The class name to apply to the spinner.
+	 */
+	className?: string;
 	/**
 	 * The mode of spinner to render. This will change the color of the spinner.
 	 */
@@ -13,4 +15,4 @@ export type SpinnerProps = {
 	 * The type of spinner to render. This will change the layout of the spinner.
 	 */
 	type?: "circle" | "dots";
-} & SpacingTypes.Props;
+};
