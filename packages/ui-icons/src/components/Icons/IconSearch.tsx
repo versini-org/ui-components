@@ -17,7 +17,6 @@ import type { IconsProps } from "./IconsTypes";
 export const IconSearch = ({
 	className,
 	viewBox,
-	spacing,
 	title,
 	monotone,
 	...rest
@@ -30,7 +29,6 @@ export const IconSearch = ({
 			defaultClassName="size-5"
 			viewBox={viewBox}
 			className={className}
-			spacing={spacing}
 			title={title || "Search"}
 			{...rest}
 		>

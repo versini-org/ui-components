@@ -17,7 +17,6 @@ import type { IconsProps } from "./IconsTypes";
 export const IconSortUp = ({
 	className,
 	viewBox,
-	spacing,
 	title,
 	monotone,
 	...rest
@@ -30,7 +29,6 @@ export const IconSortUp = ({
 			defaultClassName="size-5"
 			viewBox={viewBox}
 			className={className}
-			spacing={spacing}
 			title={title || "Sort Up"}
 			{...rest}
 		>
