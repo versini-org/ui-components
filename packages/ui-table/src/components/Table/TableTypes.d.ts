@@ -1,4 +1,3 @@
-import type { SpacingTypes } from "@versini/ui-types";
 import React from "react";
 
 import { TableCellSortDirections } from "./utilities";
@@ -44,8 +43,7 @@ export type TableProps = {
 	 * CSS class to apply to the table wrapper.
 	 */
 	wrapperClassName?: string;
-} & SpacingTypes.Props &
-	React.HTMLAttributes<HTMLTableElement>;
+} & React.HTMLAttributes<HTMLTableElement>;
 
 export type TableRowProps = React.HTMLAttributes<HTMLTableRowElement>;
 export type TableBodyProps = React.HTMLAttributes<HTMLTableSectionElement>;

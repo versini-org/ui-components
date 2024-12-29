@@ -35,7 +35,6 @@ export const Table = ({
 	maxHeight,
 	stickyHeader,
 	stickyFooter,
-	spacing,
 	...otherProps
 }: TableProps) => {
 	const tableClass = getTableClasses({
@@ -44,7 +43,6 @@ export const Table = ({
 		wrapperClassName,
 		stickyHeader,
 		stickyFooter,
-		spacing,
 	});
 	return (
 		<TableContext.Provider

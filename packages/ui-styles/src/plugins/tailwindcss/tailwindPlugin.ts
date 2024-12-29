@@ -94,6 +94,7 @@ const componentsWithNoSpacingProp = [
 	"ui-pill",
 	"ui-spinner",
 	"ui-svgicon",
+	"ui-table",
 	"ui-truncate",
 ];
 
