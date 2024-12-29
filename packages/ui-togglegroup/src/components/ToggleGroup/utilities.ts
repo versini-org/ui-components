@@ -1,5 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
-import type { SpacingTypes } from "@versini/ui-types";
 import clsx from "clsx";
 
 import {
@@ -86,11 +84,10 @@ export const getToggleGroupItemClasses = ({
 
 export const getToggleGroupClasses = ({
 	mode,
-	spacing,
-}: { mode: Mode } & SpacingTypes.Props) => {
+	className,
+}: { mode: Mode; className: string }) => {
 	return clsx(
 		TOGGLEGROUP_CLASSNAME,
-		getSpacing(spacing),
 		"inline-flex p-1",
 		"rounded-sm",
 		{
@@ -101,5 +98,6 @@ export const getToggleGroupClasses = ({
 			"bg-surface-darker text-copy-lighter dark:bg-surface-light dark:text-copy-dark":
 				mode === "alt-system",
 		},
+		className,
 	);
 };
