@@ -96,6 +96,7 @@ const componentsWithNoSpacingProp = [
 	"ui-svgicon",
 	"ui-table",
 	"ui-textarea",
+	"ui-textinput",
 	"ui-truncate",
 ];
 

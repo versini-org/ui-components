@@ -34,8 +34,6 @@ export const TextInputMask = React.forwardRef<
 
 			rightElement,
 
-			spacing,
-
 			...otherProps
 		},
 		ref,
@@ -166,7 +164,6 @@ export const TextInputMask = React.forwardRef<
 					labelHidden={labelHidden}
 					type={masked ? "password" : "text"}
 					disabled={disabled}
-					spacing={spacing}
 					onBlur={handleFieldBlur}
 					onFocus={handleFieldFocus}
 					onChange={handleChange}

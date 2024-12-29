@@ -30,7 +30,6 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 
 			rightElement,
 			rightElementClassName,
-			spacing,
 			size = "md",
 
 			...extraProps
@@ -60,7 +59,6 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			focusMode,
 			disabled,
 			noBorder,
-			spacing,
 			mode,
 			size,
 			rightElementClassName,
