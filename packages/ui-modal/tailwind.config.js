@@ -1,2 +1,2 @@
 import { commonTailwindConfigForComponent } from "../../configuration/tailwind.common";
-export default commonTailwindConfigForComponent();
+export default commonTailwindConfigForComponent("ui-modal");
