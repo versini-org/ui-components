@@ -6,6 +6,7 @@ export const CustomForm = () => {
 		<form>
 			<div className="flex gap-2">
 				<TextInput
+					className="mt-4"
 					name="question"
 					label="Type your question here"
 					helperText="Powered by the sun"
