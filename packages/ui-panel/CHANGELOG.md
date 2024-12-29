@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.2.5](https://github.com/versini-org/ui-components/compare/ui-panel-v1.2.4...ui-panel-v1.2.5) (2024-12-29)
+
+
+### Bug Fixes
+
+* **Panel:** removing spacing build in favor of Tailwind classes ([#828](https://github.com/versini-org/ui-components/issues/828)) ([25dce37](https://github.com/versini-org/ui-components/commit/25dce3738d06199d3315c9137bd549d0018649e8))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 2.0.0
+    * @versini/ui-icons bumped to 2.0.0
+    * @versini/ui-modal bumped to 1.1.2
+
 ## [1.2.4](https://github.com/versini-org/ui-components/compare/ui-panel-v1.2.3...ui-panel-v1.2.4) (2024-12-28)
 
 

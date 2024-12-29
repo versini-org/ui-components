@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-header-v1.5.1...ui-header-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Header:** removing spacing prop in favor of Tailwind classes ([#823](https://github.com/versini-org/ui-components/issues/823))
+
+### Bug Fixes
+
+* **Header:** removing spacing prop in favor of Tailwind classes ([#823](https://github.com/versini-org/ui-components/issues/823)) ([2b9f640](https://github.com/versini-org/ui-components/commit/2b9f6408e4af290ec23dd9173092e03b60678568))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.5.1](https://github.com/versini-org/ui-components/compare/ui-header-v1.5.0...ui-header-v1.5.1) (2024-12-28)
 
 

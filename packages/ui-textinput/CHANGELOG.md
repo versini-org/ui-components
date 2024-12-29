@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.6.1...ui-textinput-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **TextInput:** removing spacing prop in favor of Tailwind classes ([#833](https://github.com/versini-org/ui-components/issues/833))
+
+### Bug Fixes
+
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+* **TextInput:** removing spacing prop in favor of Tailwind classes ([#833](https://github.com/versini-org/ui-components/issues/833)) ([6f28910](https://github.com/versini-org/ui-components/commit/6f2891013e1a81f7048a0a01a04be9409e07339c))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-liveregion bumped to 1.2.2
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.6.1](https://github.com/versini-org/ui-components/compare/ui-textinput-v1.6.0...ui-textinput-v1.6.1) (2024-12-28)
 
 

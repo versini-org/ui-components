@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-footer-v1.4.1...ui-footer-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Footer:** removing spacing prop in favor of Tailwind classes ([#822](https://github.com/versini-org/ui-components/issues/822))
+
+### Bug Fixes
+
+* **Footer:** removing spacing prop in favor of Tailwind classes ([#822](https://github.com/versini-org/ui-components/issues/822)) ([077c1fb](https://github.com/versini-org/ui-components/commit/077c1fb952ceba199ab8770700ffa2e3f6143d93))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-footer-v1.4.0...ui-footer-v1.4.1) (2024-12-28)
 
 

@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-toggle-v1.4.1...ui-toggle-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Toggle:** removing spacing prop in favor of Tailwind classes ([#834](https://github.com/versini-org/ui-components/issues/834))
+
+### Bug Fixes
+
+* **Toggle:** removing spacing prop in favor of Tailwind classes ([#834](https://github.com/versini-org/ui-components/issues/834)) ([d9a76f8](https://github.com/versini-org/ui-components/commit/d9a76f80e320880e51bee4c14e60135a97f44053))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-toggle-v1.4.0...ui-toggle-v1.4.1) (2024-12-28)
 
 

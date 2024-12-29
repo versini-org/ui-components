@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-icons-v1.19.1...ui-icons-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Icons:** removing spacing prop in favor of Tailwind classes ([#824](https://github.com/versini-org/ui-components/issues/824))
+
+### Bug Fixes
+
+* **Icons:** removing spacing prop in favor of Tailwind classes ([#824](https://github.com/versini-org/ui-components/issues/824)) ([2da2546](https://github.com/versini-org/ui-components/commit/2da2546d4e3c9e0bd61b9995ca9dc67d8aea18ca))
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-svgicon bumped to 2.0.0
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.19.1](https://github.com/versini-org/ui-components/compare/ui-icons-v1.19.0...ui-icons-v1.19.1) (2024-12-28)
 
 

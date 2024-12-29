@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-main-v1.4.1...ui-main-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Main:** removing spacing prop in favor of Tailwind classes ([#825](https://github.com/versini-org/ui-components/issues/825))
+
+### Bug Fixes
+
+* **Main:** removing spacing prop in favor of Tailwind classes ([#825](https://github.com/versini-org/ui-components/issues/825)) ([d6b8447](https://github.com/versini-org/ui-components/commit/d6b8447ea8f809849b0539f8fc76f23a3bf5475b))
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-main-v1.4.0...ui-main-v1.4.1) (2024-12-28)
 
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.2](https://github.com/versini-org/ui-components/compare/ui-modal-v1.1.1...ui-modal-v1.1.2) (2024-12-29)
+
+
+### Bug Fixes
+
+* **Modal:** removing spacing build in favor of Tailwind classes ([#827](https://github.com/versini-org/ui-components/issues/827)) ([8ee9c90](https://github.com/versini-org/ui-components/commit/8ee9c90eb576e37cfdcc698cc0684495711cbcce))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.1.1](https://github.com/versini-org/ui-components/compare/ui-modal-v1.1.0...ui-modal-v1.1.1) (2024-12-28)
 
 

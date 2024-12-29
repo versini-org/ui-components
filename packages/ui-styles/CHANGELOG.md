@@ -1,5 +1,47 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-styles-v1.15.0...ui-styles-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **System:** removing spacing prop in favor of Tailwind classes ([#836](https://github.com/versini-org/ui-components/issues/836))
+* **ToggleGroup:** removing spacing prop in favor of Tailwind classes ([#835](https://github.com/versini-org/ui-components/issues/835))
+* **Toggle:** removing spacing prop in favor of Tailwind classes ([#834](https://github.com/versini-org/ui-components/issues/834))
+* **TextInput:** removing spacing prop in favor of Tailwind classes ([#833](https://github.com/versini-org/ui-components/issues/833))
+* **TextArea:** removing spacing prop in favor of Tailwind classes ([#832](https://github.com/versini-org/ui-components/issues/832))
+* **Table:** removing spacing prop in favor of Tailwind classes ([#831](https://github.com/versini-org/ui-components/issues/831))
+* **Spinner:** removing spacing prop in favor of Tailwind classes ([#830](https://github.com/versini-org/ui-components/issues/830))
+* **Pill:** removing spacing prop in favor of Tailwind classes ([#829](https://github.com/versini-org/ui-components/issues/829))
+* **Menu:** removing spacing prop in favor of Tailwind classes ([#826](https://github.com/versini-org/ui-components/issues/826))
+* **Main:** removing spacing prop in favor of Tailwind classes ([#825](https://github.com/versini-org/ui-components/issues/825))
+* **Header:** removing spacing prop in favor of Tailwind classes ([#823](https://github.com/versini-org/ui-components/issues/823))
+* **Footer:** removing spacing prop in favor of Tailwind classes ([#822](https://github.com/versini-org/ui-components/issues/822))
+* **Card:** removing spacing prop in favor of Tailwind classes ([#821](https://github.com/versini-org/ui-components/issues/821))
+* **Bubble:** removing spacing prop in favor of Tailwind classes ([#820](https://github.com/versini-org/ui-components/issues/820))
+* **Button:** spacing prop is deprecated - use className and Tailwind margins instead.
+
+### Bug Fixes
+
+* **Bubble:** removing spacing prop in favor of Tailwind classes ([#820](https://github.com/versini-org/ui-components/issues/820)) ([e6ac6ec](https://github.com/versini-org/ui-components/commit/e6ac6ec0025f65c5e2ad44de3bece61fe18ea33f))
+* **Button:** first pass at removing spacing prop from all components ([#817](https://github.com/versini-org/ui-components/issues/817)) ([0d79337](https://github.com/versini-org/ui-components/commit/0d79337ead5a5e846b8d09130e5dc9de92bf8ef5))
+* **Card:** removing spacing prop in favor of Tailwind classes ([#821](https://github.com/versini-org/ui-components/issues/821)) ([e131469](https://github.com/versini-org/ui-components/commit/e131469e73232e980020805069b264fbcc325619))
+* **Footer:** removing spacing prop in favor of Tailwind classes ([#822](https://github.com/versini-org/ui-components/issues/822)) ([077c1fb](https://github.com/versini-org/ui-components/commit/077c1fb952ceba199ab8770700ffa2e3f6143d93))
+* **Header:** removing spacing prop in favor of Tailwind classes ([#823](https://github.com/versini-org/ui-components/issues/823)) ([2b9f640](https://github.com/versini-org/ui-components/commit/2b9f6408e4af290ec23dd9173092e03b60678568))
+* **Main:** removing spacing prop in favor of Tailwind classes ([#825](https://github.com/versini-org/ui-components/issues/825)) ([d6b8447](https://github.com/versini-org/ui-components/commit/d6b8447ea8f809849b0539f8fc76f23a3bf5475b))
+* **Menu:** removing spacing prop in favor of Tailwind classes ([#826](https://github.com/versini-org/ui-components/issues/826)) ([f6bb4bb](https://github.com/versini-org/ui-components/commit/f6bb4bb70bb34b65184be570b877db2f3dc5a616))
+* **Modal:** removing spacing build in favor of Tailwind classes ([#827](https://github.com/versini-org/ui-components/issues/827)) ([8ee9c90](https://github.com/versini-org/ui-components/commit/8ee9c90eb576e37cfdcc698cc0684495711cbcce))
+* **Panel:** removing spacing build in favor of Tailwind classes ([#828](https://github.com/versini-org/ui-components/issues/828)) ([25dce37](https://github.com/versini-org/ui-components/commit/25dce3738d06199d3315c9137bd549d0018649e8))
+* **Pill:** removing spacing prop in favor of Tailwind classes ([#829](https://github.com/versini-org/ui-components/issues/829)) ([df3ad6a](https://github.com/versini-org/ui-components/commit/df3ad6a92da93ef51ebddf6c9551548910577335))
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+* **Spinner:** removing spacing prop in favor of Tailwind classes ([#830](https://github.com/versini-org/ui-components/issues/830)) ([ffe1486](https://github.com/versini-org/ui-components/commit/ffe1486f0d8f8ec6d0e4a029402e2b3b1b88f404))
+* **System:** removing spacing prop in favor of Tailwind classes ([#836](https://github.com/versini-org/ui-components/issues/836)) ([0586551](https://github.com/versini-org/ui-components/commit/0586551250cebf0486a8f3b8cdf51d3a139d978d))
+* **Table:** removing spacing prop in favor of Tailwind classes ([#831](https://github.com/versini-org/ui-components/issues/831)) ([88ccc05](https://github.com/versini-org/ui-components/commit/88ccc05eecbdc564238982a0e1824b2560876f25))
+* **TextArea:** removing spacing prop in favor of Tailwind classes ([#832](https://github.com/versini-org/ui-components/issues/832)) ([ee99870](https://github.com/versini-org/ui-components/commit/ee9987040f28522fbd1dc13900eaa7ccd3459959))
+* **TextInput:** removing spacing prop in favor of Tailwind classes ([#833](https://github.com/versini-org/ui-components/issues/833)) ([6f28910](https://github.com/versini-org/ui-components/commit/6f2891013e1a81f7048a0a01a04be9409e07339c))
+* **ToggleGroup:** removing spacing prop in favor of Tailwind classes ([#835](https://github.com/versini-org/ui-components/issues/835)) ([4fb7406](https://github.com/versini-org/ui-components/commit/4fb74061afe9ea50832eba5820dd728339ebe031))
+* **Toggle:** removing spacing prop in favor of Tailwind classes ([#834](https://github.com/versini-org/ui-components/issues/834)) ([d9a76f8](https://github.com/versini-org/ui-components/commit/d9a76f80e320880e51bee4c14e60135a97f44053))
+
 ## [1.15.0](https://github.com/versini-org/ui-components/compare/ui-styles-v1.14.0...ui-styles-v1.15.0) (2024-12-28)
 
 

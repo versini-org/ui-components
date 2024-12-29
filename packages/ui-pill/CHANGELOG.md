@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-pill-v1.4.1...ui-pill-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Pill:** removing spacing prop in favor of Tailwind classes ([#829](https://github.com/versini-org/ui-components/issues/829))
+
+### Bug Fixes
+
+* **Pill:** removing spacing prop in favor of Tailwind classes ([#829](https://github.com/versini-org/ui-components/issues/829)) ([df3ad6a](https://github.com/versini-org/ui-components/commit/df3ad6a92da93ef51ebddf6c9551548910577335))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-pill-v1.4.0...ui-pill-v1.4.1) (2024-12-28)
 
 

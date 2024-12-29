@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-card-v1.4.1...ui-card-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Card:** removing spacing prop in favor of Tailwind classes ([#821](https://github.com/versini-org/ui-components/issues/821))
+
+### Bug Fixes
+
+* **Card:** removing spacing prop in favor of Tailwind classes ([#821](https://github.com/versini-org/ui-components/issues/821)) ([e131469](https://github.com/versini-org/ui-components/commit/e131469e73232e980020805069b264fbcc325619))
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-card-v1.4.0...ui-card-v1.4.1) (2024-12-28)
 
 

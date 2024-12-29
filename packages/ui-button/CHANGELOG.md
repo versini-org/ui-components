@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-button-v1.7.0...ui-button-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Bubble:** removing spacing prop in favor of Tailwind classes ([#820](https://github.com/versini-org/ui-components/issues/820))
+* **Button:** spacing prop is deprecated - use className and Tailwind margins instead.
+
+### Bug Fixes
+
+* **Bubble:** removing spacing prop in favor of Tailwind classes ([#820](https://github.com/versini-org/ui-components/issues/820)) ([e6ac6ec](https://github.com/versini-org/ui-components/commit/e6ac6ec0025f65c5e2ad44de3bece61fe18ea33f))
+* **Button:** first pass at removing spacing prop from all components ([#817](https://github.com/versini-org/ui-components/issues/817)) ([0d79337](https://github.com/versini-org/ui-components/commit/0d79337ead5a5e846b8d09130e5dc9de92bf8ef5))
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+  * devDependencies
+    * @versini/ui-svgicon bumped to 2.0.0
+
 ## [1.7.0](https://github.com/versini-org/ui-components/compare/ui-button-v1.6.0...ui-button-v1.7.0) (2024-12-28)
 
 
