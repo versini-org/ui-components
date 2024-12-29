@@ -52,7 +52,7 @@ export const Basic: Story = {
 			<Menu
 				{...args}
 				trigger={
-					<ButtonIcon>
+					<ButtonIcon className="mr-2">
 						<IconSettings />
 					</ButtonIcon>
 				}
@@ -79,7 +79,7 @@ export const WithIcons: Story = {
 			<Menu
 				{...args}
 				trigger={
-					<ButtonIcon>
+					<ButtonIcon className="mr-2">
 						<IconSettings />
 					</ButtonIcon>
 				}
@@ -134,7 +134,7 @@ export const WithMessageBox: Story = {
 					<Menu
 						{...args}
 						trigger={
-							<ButtonIcon>
+							<ButtonIcon className="mr-2">
 								<IconSettings />
 							</ButtonIcon>
 						}
