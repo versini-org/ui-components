@@ -56,7 +56,6 @@ export const Basic: Story = {
 						<IconSettings />
 					</ButtonIcon>
 				}
-				spacing={{ r: 2 }}
 			>
 				<MenuItem label="Profile" />
 				<MenuItem label="Statistics" />
@@ -84,7 +83,6 @@ export const WithIcons: Story = {
 						<IconSettings />
 					</ButtonIcon>
 				}
-				spacing={{ r: 2 }}
 			>
 				<MenuItem label="Profile" icon={<IconProfile />} />
 				<MenuItem label="Statistics" icon={<IconChart />} />
@@ -140,7 +138,6 @@ export const WithMessageBox: Story = {
 								<IconSettings />
 							</ButtonIcon>
 						}
-						spacing={{ r: 2 }}
 					>
 						<MenuItem label="Profile" icon={<IconProfile />} />
 						<MenuItem label="Statistics" icon={<IconChart />} />

@@ -88,6 +88,7 @@ const componentsWithNoSpacingProp = [
 	"ui-footer",
 	"ui-header",
 	"ui-main",
+	"ui-menu",
 	"ui-svgicon",
 	"ui-truncate",
 ];
