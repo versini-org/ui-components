@@ -52,11 +52,10 @@ export const Basic: Story = {
 			<Menu
 				{...args}
 				trigger={
-					<ButtonIcon>
+					<ButtonIcon className="mr-2">
 						<IconSettings />
 					</ButtonIcon>
 				}
-				spacing={{ r: 2 }}
 			>
 				<MenuItem label="Profile" />
 				<MenuItem label="Statistics" />
@@ -80,11 +79,10 @@ export const WithIcons: Story = {
 			<Menu
 				{...args}
 				trigger={
-					<ButtonIcon>
+					<ButtonIcon className="mr-2">
 						<IconSettings />
 					</ButtonIcon>
 				}
-				spacing={{ r: 2 }}
 			>
 				<MenuItem label="Profile" icon={<IconProfile />} />
 				<MenuItem label="Statistics" icon={<IconChart />} />
@@ -136,11 +134,10 @@ export const WithMessageBox: Story = {
 					<Menu
 						{...args}
 						trigger={
-							<ButtonIcon>
+							<ButtonIcon className="mr-2">
 								<IconSettings />
 							</ButtonIcon>
 						}
-						spacing={{ r: 2 }}
 					>
 						<MenuItem label="Profile" icon={<IconProfile />} />
 						<MenuItem label="Statistics" icon={<IconChart />} />

@@ -43,7 +43,6 @@ export const MenuComponent = forwardRef<
 			label = "Open menu",
 			defaultPlacement = "bottom-start",
 			onOpenChange,
-			spacing,
 			mode = "system",
 			focusMode = "system",
 			...props
@@ -107,7 +106,6 @@ export const MenuComponent = forwardRef<
 					noInternalClick,
 					focusMode,
 					mode,
-					spacing,
 				}
 			: {};
 
