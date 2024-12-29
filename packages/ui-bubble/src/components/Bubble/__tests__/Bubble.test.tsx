@@ -13,7 +13,7 @@ describe("Bubble (exceptions)", () => {
 });
 
 describe("Bubble spacing", () => {
-	it("should render a button with a right margin spacing", async () => {
+	it("should render a bubble with a right margin spacing", async () => {
 		render(<Bubble className="mr-2">hello</Bubble>);
 		const bubble = await screen.findByText("hello");
 		// not only it should be there, but it should be the last entry

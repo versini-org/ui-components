@@ -10,7 +10,7 @@ describe("Main (exceptions)", () => {
 });
 
 describe("Main spacing", () => {
-	it("should render a button with a right margin spacing", async () => {
+	it("should render a main tag with a right margin spacing", async () => {
 		render(<Main className="mr-2">hello</Main>);
 		const main = await screen.findByRole("main");
 		// not only it should be there, but it should be the last entry

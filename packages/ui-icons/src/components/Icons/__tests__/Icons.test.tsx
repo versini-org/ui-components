@@ -28,9 +28,6 @@ describe("Custom IconDog prop tests", () => {
 		fill         | viewBox          | className    | description
 		${"red"}     | ${"0 0 666 666"} | ${"toto"}    | ${"with fill, viewBox and className"}
 		${undefined} | ${undefined}     | ${undefined} | ${"with default fill, default viewBox and default className"}
-		${undefined} | ${undefined}     | ${undefined} | ${"with string spacing"}
-		${undefined} | ${undefined}     | ${undefined} | ${"with number spacing"}
-		${undefined} | ${undefined}     | ${undefined} | ${"with object spacing"}
 	`(
 		"should render IconDog $description",
 		async ({ fill, viewBox, className }) => {
@@ -58,9 +55,6 @@ describe("Generic Icons prop tests", () => {
 		fill         | viewBox          | className    | description
 		${"red"}     | ${"0 0 666 666"} | ${"toto"}    | ${"with fill, viewBox and className"}
 		${undefined} | ${undefined}     | ${undefined} | ${"with default fill, default viewBox and default className"}
-		${undefined} | ${undefined}     | ${undefined} | ${"with string spacing"}
-		${undefined} | ${undefined}     | ${undefined} | ${"with number spacing"}
-		${undefined} | ${undefined}     | ${undefined} | ${"with object spacing"}
 	`(
 		"should render Icons $description",
 		async ({ fill, viewBox, className }) => {

@@ -721,12 +721,6 @@ importers:
         specifier: 3.4.17
         version: 3.4.17
 
-  packages/ui-spacing:
-    dependencies:
-      '@versini/ui-types':
-        specifier: workspace:../ui-types
-        version: link:../ui-types
-
   packages/ui-spinner:
     dependencies:
       '@tailwindcss/typography':

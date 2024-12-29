@@ -91,7 +91,7 @@ export const Provider: GlobalProvider = ({
 							noBorder
 							size="small"
 							mode="system"
-							spacing={{ b: 2 }}
+							className="mb-2"
 							label="link to UI Components GitHub repository"
 							onClick={handleOnClickGitHub}
 						>

@@ -5,7 +5,6 @@ import type { Config, OptionalConfig } from "tailwindcss/types/config";
 import spinnerCSS from "./components/spinner";
 import textAreaCSS from "./components/textArea";
 import textInputCSS from "./components/textInput";
-import dynamicMargins from "./margins";
 import customTypography from "./typography";
 
 export type TailwindConfig = {
@@ -53,14 +52,6 @@ export const customContentPath = [
 );
 
 /**
- * Adding margins to the safelist.
- * They are usually added dynamically with the "spacing" prop, and
- * not present in the static code. It's a small price to pay (the
- * extra CSS size is negligible) to avoid purging them at build time.
- */
-const customSafelist = [...dynamicMargins];
-
-/**
  * Adding custom components CSS to the TailwindCSS build, as well as
  * the custom typography. The custom typography is passed as a second
  * parameter to the plugin function, which is then used to extend the
@@ -77,33 +68,6 @@ const customPlugins = [
 ];
 
 /**
- * List of components that are not relying on the legacy spacing prop
- * anymore. They are using the new TailwindCSS classes, and therefore
- * don't need to be added to the safelist.
- */
-const componentsWithNoSpacingProp = [
-	"ui-bubble",
-	"ui-button",
-	"ui-card",
-	"ui-footer",
-	"ui-header",
-	"ui-main",
-	"ui-menu",
-	"ui-modal",
-	"ui-panel",
-	"ui-pill",
-	"ui-spinner",
-	"ui-svgicon",
-	"ui-system",
-	"ui-table",
-	"ui-textarea",
-	"ui-textinput",
-	"ui-toggle",
-	"ui-togglegroup",
-	"ui-truncate",
-];
-
-/**
  * The plugin "merge" function is used to merge the custom configuration with
  * the default and user TailwindCSS configuration.
  * It's to be used in the "tailwind.config.js" configuration file.
@@ -116,14 +80,11 @@ const componentsWithNoSpacingProp = [
  * });
  */
 export const twPlugin = {
-	merge: (config: TailwindConfig, componentName = "") => {
+	merge: (config: TailwindConfig) => {
 		const content = customContentPath;
 		const plugins = customPlugins;
-		const safelist = componentsWithNoSpacingProp.includes(componentName)
-			? []
-			: customSafelist;
 
-		config.safelist = [...(config.safelist || []), ...safelist];
+		config.safelist = [...(config.safelist || [])];
 		config.content = [...(config.content || []), ...content];
 		config.plugins = [...(config.plugins || []), ...plugins];
 

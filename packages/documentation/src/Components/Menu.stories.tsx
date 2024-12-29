@@ -56,7 +56,7 @@ export default {
 
 export const Basic: Story<any> = (args) => (
 	<div className="flex h-96 min-h-10 flex-wrap p-11">
-		<Button size="small" noBorder spacing={{ r: 2 }}>
+		<Button size="small" noBorder className="mr-2">
 			Button
 		</Button>
 		<Menu
@@ -65,7 +65,7 @@ export const Basic: Story<any> = (args) => (
 					<IconSettings />
 				</ButtonIcon>
 			}
-			spacing={{ r: 2 }}
+			className="mr-2"
 			{...args}
 		>
 			<MenuItem label="Profile" />
@@ -81,7 +81,7 @@ export const Basic: Story<any> = (args) => (
 
 export const WithIcons: Story<any> = (args) => (
 	<div className="flex min-h-10 flex-wrap p-11">
-		<Button size="small" spacing={{ r: 2 }}>
+		<Button size="small" className="mr-2">
 			Button
 		</Button>
 		<Menu
@@ -90,7 +90,7 @@ export const WithIcons: Story<any> = (args) => (
 					<IconSettings />
 				</ButtonIcon>
 			}
-			spacing={{ r: 2 }}
+			className="mr-2"
 			{...args}
 		>
 			<MenuItem label="Profile" icon={<IconProfile />} />
@@ -134,7 +134,7 @@ export const WithMessageBox: Story<any> = (args) => {
 				<p>Are you sure you want to log out?</p>
 			</Panel>
 			<div className="flex min-h-10 flex-wrap p-11">
-				<Button size="small" spacing={{ r: 2 }}>
+				<Button size="small" className="mr-2">
 					Button
 				</Button>
 				<Menu
@@ -143,7 +143,7 @@ export const WithMessageBox: Story<any> = (args) => {
 							<IconSettings />
 						</ButtonIcon>
 					}
-					spacing={{ r: 2 }}
+					className="mr-2"
 					{...args}
 				>
 					<MenuItem label="Profile" icon={<IconProfile />} />
@@ -171,7 +171,7 @@ export const RawItem: Story<any> = (args) => {
 	const [value, setValue] = useState("Anthropic");
 	return (
 		<div className="flex h-96 min-h-10 flex-wrap p-11">
-			<Button size="small" noBorder spacing={{ r: 2 }}>
+			<Button size="small" noBorder className="mr-2">
 				Button
 			</Button>
 			<Menu
@@ -180,7 +180,7 @@ export const RawItem: Story<any> = (args) => {
 						<IconSettings />
 					</ButtonIcon>
 				}
-				spacing={{ r: 2 }}
+				className="mr-2"
 				{...args}
 			>
 				<MenuItem label="Profile" />

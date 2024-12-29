@@ -10,7 +10,6 @@ const MyButtonIcon = ({
 	noInternalClick,
 	focusMode,
 	mode,
-	spacing,
 	label,
 	...props
 }: any) => (

@@ -220,7 +220,7 @@ export const Responsive: Story<any> = (args) => {
 			<p className="text-copy-lighter">{example}</p>
 			<Flexgrid {...args}>
 				<FlexgridItem span={{ fallback: 12, sm: 6, md: 8 }}>
-					<Card spacing={{ t: 2 }}>
+					<Card className="mt-2">
 						<p className="text-center">Responsive Card</p>
 					</Card>
 				</FlexgridItem>

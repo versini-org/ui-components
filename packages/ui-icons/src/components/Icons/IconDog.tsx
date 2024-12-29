@@ -2,12 +2,7 @@ import { SvgIcon } from "@versini/ui-svgicon";
 
 import type { IconsProps } from "./IconsTypes";
 
-export const IconDog = ({
-	className,
-	viewBox,
-	spacing,
-	...rest
-}: IconsProps) => {
+export const IconDog = ({ className, viewBox, ...rest }: IconsProps) => {
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 1200 500"
