@@ -1,5 +1,3 @@
-import type { SpacingTypes } from "@versini/ui-types";
-
 export type ThemeProviderProps = {
 	/**
 	 * The children to render.
@@ -26,4 +24,4 @@ export type ThemeProviderProps = {
 	 * @default false
 	 */
 	global?: boolean;
-} & SpacingTypes.Props;
+};
