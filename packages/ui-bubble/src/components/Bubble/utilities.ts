@@ -1,5 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
-import type { SpacingTypes } from "@versini/ui-types";
 import clsx from "clsx";
 
 import { BUBBLE_CLASSNAME } from "../../common/constants";
@@ -34,19 +32,17 @@ const getBubbleBorderClasses = ({ kind }: { kind: string }) => {
 export const getBubbleClasses = ({
 	kind,
 	className,
-	spacing,
 }: {
 	kind: string;
 	className?: string;
-} & SpacingTypes.Props) => {
+}) => {
 	const wrapper = clsx(
-		className,
 		BUBBLE_CLASSNAME,
 		"flex items-start",
-		getSpacing(spacing),
 		{
 			"flex-row-reverse": kind === "right",
 		},
+		className,
 	);
 	const main = clsx(
 		"flex flex-col empty:hidden",

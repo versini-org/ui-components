@@ -12,6 +12,17 @@ describe("Bubble (exceptions)", () => {
 	});
 });
 
+describe("Bubble spacing", () => {
+	it("should render a button with a right margin spacing", async () => {
+		render(<Bubble className="mr-2">hello</Bubble>);
+		const bubble = await screen.findByText("hello");
+		// not only it should be there, but it should be the last entry
+		const classes = bubble.parentElement?.parentElement?.className;
+		expect(classes).toContain("mr-2");
+		expect(classes?.slice(-4)).toBe("mr-2");
+	});
+});
+
 describe("Bubble modifiers", () => {
 	it("should render a left bubble", async () => {
 		render(<Bubble kind="left">hello</Bubble>);
