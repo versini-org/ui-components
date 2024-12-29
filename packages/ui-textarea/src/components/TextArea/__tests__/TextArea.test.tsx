@@ -15,7 +15,7 @@ describe("TextArea (exceptions)", () => {
 });
 
 describe("TextArea spacing", () => {
-	it("should render a button with a right margin spacing", async () => {
+	it("should render a textarea with a right margin spacing", async () => {
 		render(
 			<TextArea
 				label="toto"

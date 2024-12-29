@@ -40,7 +40,7 @@ export const Basic: Story<any> = (args) => {
 				</ToggleGroup>
 			</div>
 			<div className="flex flex-wrap gap-2">
-				<ToggleGroup {...args} defaultValue="Anthropic" spacing={{ t: 2 }}>
+				<ToggleGroup {...args} defaultValue="Anthropic" className="mt-2">
 					<ToggleGroupItem value="OpenAI" />
 					<ToggleGroupItem value="Anthropic" />
 				</ToggleGroup>

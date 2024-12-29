@@ -1,8 +1,4 @@
-import type { SpacingTypes } from "@versini/ui-types";
-
-export interface IconsProps
-	extends Omit<React.SVGAttributes<SVGElement>, "spacing">,
-		SpacingTypes.Props {
+export interface IconsProps extends React.SVGAttributes<SVGElement> {
 	/**
 	 * Whether or not to render the icon in a single color
 	 * @default false

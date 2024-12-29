@@ -17,7 +17,6 @@ const ButtonIcon = ({
 	noInternalClick,
 	focusMode,
 	mode,
-	spacing,
 	...props
 }: any) => <button {...props}>{children}</button>;
 ButtonIcon.displayName = "ButtonIcon";

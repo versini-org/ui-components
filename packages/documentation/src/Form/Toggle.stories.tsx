@@ -50,7 +50,7 @@ export const Programmatically: Story<any> = (args) => {
 				{...args}
 				labelHidden
 			/>
-			<Button spacing={{ t: 5 }} onClick={() => setChecked(!checked)}>
+			<Button className="mt-5" onClick={() => setChecked(!checked)}>
 				Toggle
 			</Button>
 		</>

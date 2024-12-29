@@ -13,7 +13,7 @@ describe("Card (exceptions)", () => {
 });
 
 describe("Card spacing", () => {
-	it("should render a button with a right margin spacing", async () => {
+	it("should render a card with a right margin spacing", async () => {
 		const { container } = render(<Card className="mr-2">{cardContent}</Card>);
 		const card = container.children[0];
 		// not only it should be there, but it should be the last entry

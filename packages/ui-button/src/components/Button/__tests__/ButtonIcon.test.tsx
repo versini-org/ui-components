@@ -8,7 +8,6 @@ import { ButtonIcon } from "../ButtonIcon";
 const IconSettings = ({
 	className,
 	viewBox,
-	spacing,
 	title,
 	monotone,
 	...rest
@@ -19,7 +18,6 @@ const IconSettings = ({
 			defaultClassName="size-5"
 			viewBox={viewBox}
 			className={className}
-			spacing={spacing}
 			title={title || "Settings"}
 			{...rest}
 		>
