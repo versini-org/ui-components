@@ -1,4 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
 import clsx from "clsx";
 
 import { FOOTER_CLASSNAME } from "../../common/constants";
@@ -10,19 +9,23 @@ export const Footer = ({
 	row1,
 	row2,
 	noMargins = false,
-	spacing,
+
 	raw = false,
 }: FooterProps) => {
-	const footerClass = clsx(FOOTER_CLASSNAME, className, getSpacing(spacing), {
-		"text-copy-dark": !raw && mode === "dark",
-		"text-copy-lighter": !raw && mode === "light",
-		"text-copy-dark dark:text-copy-lighter": !raw && mode === "system",
-		"text-copy-lighter dark:text-copy-dark": !raw && mode === "alt-system",
+	const footerClass = clsx(
+		FOOTER_CLASSNAME,
+		{
+			"text-copy-dark": !raw && mode === "dark",
+			"text-copy-lighter": !raw && mode === "light",
+			"text-copy-dark dark:text-copy-lighter": !raw && mode === "system",
+			"text-copy-lighter dark:text-copy-dark": !raw && mode === "alt-system",
 
-		"mb-[100px]": !noMargins && !raw,
-		"mt-0 flex w-full flex-col p-2 text-center text-xs sm:mt-3 md:mx-auto md:max-w-4xl":
-			!raw,
-	});
+			"mb-[100px]": !noMargins && !raw,
+			"mt-0 flex w-full flex-col p-2 text-center text-xs sm:mt-3 md:mx-auto md:max-w-4xl":
+				!raw,
+		},
+		className,
+	);
 
 	return (
 		<footer className={footerClass}>
