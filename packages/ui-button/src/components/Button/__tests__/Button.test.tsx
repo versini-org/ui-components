@@ -11,6 +11,16 @@ describe("Button (exceptions)", () => {
 	});
 });
 
+describe("Button spacing", () => {
+	it("should render a button with a right margin spacing", async () => {
+		render(<Button className="mr-2">hello</Button>);
+		const button = await screen.findByRole("button");
+		// not only it should be there, but it should be the last entry
+		expect(button.className).toContain("mr-2");
+		expect(button.className.slice(-4)).toBe("mr-2");
+	});
+});
+
 describe("Button modifiers", () => {
 	it("should render a default button", async () => {
 		render(<Button>hello</Button>);
