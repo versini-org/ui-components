@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-table-v1.5.2...ui-table-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Table:** removing spacing prop in favor of Tailwind classes ([#831](https://github.com/versini-org/ui-components/issues/831))
+
+### Bug Fixes
+
+* **Table:** removing spacing prop in favor of Tailwind classes ([#831](https://github.com/versini-org/ui-components/issues/831)) ([88ccc05](https://github.com/versini-org/ui-components/commit/88ccc05eecbdc564238982a0e1824b2560876f25))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 2.0.0
+    * @versini/ui-icons bumped to 2.0.0
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.5.2](https://github.com/versini-org/ui-components/compare/ui-table-v1.5.1...ui-table-v1.5.2) (2024-12-28)
 
 

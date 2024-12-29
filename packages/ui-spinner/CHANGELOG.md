@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-spinner-v1.4.1...ui-spinner-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Spinner:** removing spacing prop in favor of Tailwind classes ([#830](https://github.com/versini-org/ui-components/issues/830))
+
+### Bug Fixes
+
+* **Spinner:** removing spacing prop in favor of Tailwind classes ([#830](https://github.com/versini-org/ui-components/issues/830)) ([ffe1486](https://github.com/versini-org/ui-components/commit/ffe1486f0d8f8ec6d0e4a029402e2b3b1b88f404))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-spinner-v1.4.0...ui-spinner-v1.4.1) (2024-12-28)
 
 

@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-types-v1.1.0...ui-types-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Icons:** removing spacing prop in favor of Tailwind classes ([#824](https://github.com/versini-org/ui-components/issues/824))
+* **Card:** removing spacing prop in favor of Tailwind classes ([#821](https://github.com/versini-org/ui-components/issues/821))
+* **Button:** spacing prop is deprecated - use className and Tailwind margins instead.
+
+### Bug Fixes
+
+* **Button:** first pass at removing spacing prop from all components ([#817](https://github.com/versini-org/ui-components/issues/817)) ([0d79337](https://github.com/versini-org/ui-components/commit/0d79337ead5a5e846b8d09130e5dc9de92bf8ef5))
+* **Card:** removing spacing prop in favor of Tailwind classes ([#821](https://github.com/versini-org/ui-components/issues/821)) ([e131469](https://github.com/versini-org/ui-components/commit/e131469e73232e980020805069b264fbcc325619))
+* **Icons:** removing spacing prop in favor of Tailwind classes ([#824](https://github.com/versini-org/ui-components/issues/824)) ([2da2546](https://github.com/versini-org/ui-components/commit/2da2546d4e3c9e0bd61b9995ca9dc67d8aea18ca))
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+
 ## [1.1.0](https://github.com/versini-org/ui-components/compare/ui-types-v1.0.0...ui-types-v1.1.0) (2024-12-28)
 
 

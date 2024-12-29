@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-togglegroup-v1.5.1...ui-togglegroup-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **ToggleGroup:** removing spacing prop in favor of Tailwind classes ([#835](https://github.com/versini-org/ui-components/issues/835))
+
+### Bug Fixes
+
+* **ToggleGroup:** removing spacing prop in favor of Tailwind classes ([#835](https://github.com/versini-org/ui-components/issues/835)) ([4fb7406](https://github.com/versini-org/ui-components/commit/4fb74061afe9ea50832eba5820dd728339ebe031))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.5.1](https://github.com/versini-org/ui-components/compare/ui-togglegroup-v1.5.0...ui-togglegroup-v1.5.1) (2024-12-28)
 
 

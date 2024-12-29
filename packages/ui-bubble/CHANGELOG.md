@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-bubble-v1.4.1...ui-bubble-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Bubble:** removing spacing prop in favor of Tailwind classes ([#820](https://github.com/versini-org/ui-components/issues/820))
+
+### Bug Fixes
+
+* **Bubble:** removing spacing prop in favor of Tailwind classes ([#820](https://github.com/versini-org/ui-components/issues/820)) ([e6ac6ec](https://github.com/versini-org/ui-components/commit/e6ac6ec0025f65c5e2ad44de3bece61fe18ea33f))
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 2.0.0
+    * @versini/ui-icons bumped to 2.0.0
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-bubble-v1.4.0...ui-bubble-v1.4.1) (2024-12-28)
 
 

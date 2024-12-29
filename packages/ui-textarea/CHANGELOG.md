@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-textarea-v1.4.1...ui-textarea-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **TextArea:** removing spacing prop in favor of Tailwind classes ([#832](https://github.com/versini-org/ui-components/issues/832))
+
+### Bug Fixes
+
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+* **TextArea:** removing spacing prop in favor of Tailwind classes ([#832](https://github.com/versini-org/ui-components/issues/832)) ([ee99870](https://github.com/versini-org/ui-components/commit/ee9987040f28522fbd1dc13900eaa7ccd3459959))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-liveregion bumped to 1.2.2
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.4.1](https://github.com/versini-org/ui-components/compare/ui-textarea-v1.4.0...ui-textarea-v1.4.1) (2024-12-28)
 
 

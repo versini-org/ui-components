@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.2](https://github.com/versini-org/ui-components/compare/ui-liveregion-v1.2.1...ui-liveregion-v1.2.2) (2024-12-29)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.0.0
+
 ## [1.2.1](https://github.com/versini-org/ui-components/compare/ui-liveregion-v1.2.0...ui-liveregion-v1.2.1) (2024-12-28)
 
 

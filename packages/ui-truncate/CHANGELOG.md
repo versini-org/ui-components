@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-truncate-v1.1.8...ui-truncate-v2.0.0) (2024-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Button:** spacing prop is deprecated - use className and Tailwind margins instead.
+
+### Bug Fixes
+
+* **Button:** first pass at removing spacing prop from all components ([#817](https://github.com/versini-org/ui-components/issues/817)) ([0d79337](https://github.com/versini-org/ui-components/commit/0d79337ead5a5e846b8d09130e5dc9de92bf8ef5))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 2.0.0
+
 ## [1.1.8](https://github.com/versini-org/ui-components/compare/ui-truncate-v1.1.7...ui-truncate-v1.1.8) (2024-12-28)
 
 
