@@ -77,6 +77,13 @@ const customPlugins = [
 ];
 
 /**
+ * List of components that are not relying on the legacy spacing prop
+ * anymore. They are using the new TailwindCSS classes, and therefore
+ * don't need to be added to the safelist.
+ */
+const componentsWithNoSpacingProp = ["ui-button", "ui-truncate"];
+
+/**
  * The plugin "merge" function is used to merge the custom configuration with
  * the default and user TailwindCSS configuration.
  * It's to be used in the "tailwind.config.js" configuration file.
@@ -89,10 +96,12 @@ const customPlugins = [
  * });
  */
 export const twPlugin = {
-	merge: (config: TailwindConfig) => {
+	merge: (config: TailwindConfig, componentName = "") => {
 		const content = customContentPath;
 		const plugins = customPlugins;
-		const safelist = customSafelist;
+		const safelist = componentsWithNoSpacingProp.includes(componentName)
+			? []
+			: customSafelist;
 
 		config.safelist = [...(config.safelist || []), ...safelist];
 		config.content = [...(config.content || []), ...content];

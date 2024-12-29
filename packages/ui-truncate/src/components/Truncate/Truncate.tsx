@@ -32,7 +32,7 @@ export const Truncate = ({
 				<Button
 					mode={mode}
 					focusMode={focusMode}
-					spacing={{ l: 2 }}
+					className="ml-2"
 					size="small"
 					onClick={handleToggleExpanded}
 				>
