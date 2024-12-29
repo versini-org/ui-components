@@ -82,12 +82,14 @@ const customPlugins = [
  * don't need to be added to the safelist.
  */
 const componentsWithNoSpacingProp = [
-	"ui-button",
-	"ui-truncate",
 	"ui-bubble",
+	"ui-button",
 	"ui-card",
 	"ui-footer",
 	"ui-header",
+	"ui-main",
+	"ui-svgicon",
+	"ui-truncate",
 ];
 
 /**
