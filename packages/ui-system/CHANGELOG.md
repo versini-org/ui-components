@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/versini-org/ui-components/compare/ui-system-v2.0.0...ui-system-v2.0.1) (2024-12-29)
+
+
+### Bug Fixes
+
+* **Flexgrid:** margins are not taken into account in className prop ([#838](https://github.com/versini-org/ui-components/issues/838)) ([9a5ab9a](https://github.com/versini-org/ui-components/commit/9a5ab9aace78a8efddcaea14ac048c57b06f3e48))
+
 ## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-system-v1.8.1...ui-system-v2.0.0) (2024-12-29)
 
 

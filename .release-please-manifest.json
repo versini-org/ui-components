@@ -19,7 +19,7 @@
 	"packages/ui-spinner": "2.0.0",
 	"packages/ui-styles": "2.0.0",
 	"packages/ui-svgicon": "2.0.0",
-	"packages/ui-system": "2.0.0",
+	"packages/ui-system": "2.0.1",
 	"packages/ui-table": "2.0.0",
 	"packages/ui-textarea": "2.0.0",
 	"packages/ui-textinput": "2.0.0",
