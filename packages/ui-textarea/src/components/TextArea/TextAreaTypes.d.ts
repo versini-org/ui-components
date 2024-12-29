@@ -1,5 +1,3 @@
-import type { SpacingTypes } from "@versini/ui-types";
-
 export type TextAreaProps = {
 	/**
 	 * The label of the TextArea.
@@ -56,5 +54,4 @@ export type TextAreaProps = {
 	 * CSS class(es) to add to the actual textarea element.
 	 */
 	textAreaClassName?: string;
-} & SpacingTypes.Props &
-	React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+} & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
