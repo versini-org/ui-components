@@ -36,12 +36,19 @@ export const Flexgrid = ({
 	const flexgridClassName = clsx(
 		FLEXGRID_CLASSNAME,
 		"box-border flex flex-wrap",
-		className,
 	);
 
 	const context = { columnGap, rowGap };
 
-	return (
+	return className ? (
+		<div className={className}>
+			<div className={flexgridClassName} style={cssRoot} {...otherProps}>
+				<FlexgridContext.Provider value={context}>
+					{children}
+				</FlexgridContext.Provider>
+			</div>
+		</div>
+	) : (
 		<div className={flexgridClassName} style={cssRoot} {...otherProps}>
 			<FlexgridContext.Provider value={context}>
 				{children}

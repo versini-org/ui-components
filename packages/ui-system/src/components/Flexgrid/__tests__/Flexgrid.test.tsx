@@ -111,7 +111,7 @@ describe("Flexgrid props", () => {
 		const gridRoot = await screen.findByTestId("grid-1");
 		expectToHaveStyles(gridRoot, { "align-items": "stretch" });
 		// not only it should be there, but it should be the last entry
-		expect(gridRoot).toHaveClass("mr-2");
-		expect(gridRoot.className.slice(-4)).toBe("mr-2");
+		expect(gridRoot.parentElement).toHaveClass("mr-2");
+		expect(gridRoot.parentElement?.className.slice(-4)).toBe("mr-2");
 	});
 });
