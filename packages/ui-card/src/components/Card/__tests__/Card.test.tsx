@@ -12,6 +12,16 @@ describe("Card (exceptions)", () => {
 	});
 });
 
+describe("Card spacing", () => {
+	it("should render a button with a right margin spacing", async () => {
+		const { container } = render(<Card className="mr-2">{cardContent}</Card>);
+		const card = container.children[0];
+		// not only it should be there, but it should be the last entry
+		expect(card?.className).toContain("mr-2");
+		expect(card?.className.slice(-4)).toBe("mr-2");
+	});
+});
+
 describe("Card modifiers", () => {
 	it("should render a dark or light (system) card", async () => {
 		const { container } = render(<Card>{cardContent}</Card>);

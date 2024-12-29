@@ -1,5 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
-import type { SpacingTypes } from "@versini/ui-types";
 import clsx from "clsx";
 
 import { CARD_CLASSNAME } from "../../common/constants";
@@ -12,23 +10,21 @@ type getCardClassesProps = {
 	headerClassName?: string;
 	mode?: "dark" | "light" | "system" | "alt-system" | "darker";
 	noBorder?: boolean;
-} & SpacingTypes.Props;
+};
 
 export const getCardClasses = ({
 	className,
 	headerClassName,
 	bodyClassName,
 	footerClassName,
-	spacing,
+
 	mode,
 	compact,
 	noBorder,
 }: getCardClassesProps) => {
 	const wrapper = clsx(
 		CARD_CLASSNAME,
-		className,
 		"rounded-md",
-		getSpacing(spacing),
 		{
 			"border-none": noBorder,
 			"border-2": !noBorder,
@@ -44,6 +40,7 @@ export const getCardClasses = ({
 			"border-border-accent bg-surface-dark text-copy-light dark:border-border-dark dark:bg-surface-lighter dark:text-copy-dark":
 				mode === "alt-system",
 		},
+		className,
 	);
 	const header = headerClassName
 		? headerClassName
