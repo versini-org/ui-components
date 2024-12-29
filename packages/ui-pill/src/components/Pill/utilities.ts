@@ -1,4 +1,3 @@
-import { getSpacing } from "@versini/ui-spacing";
 import clsx from "clsx";
 
 import { PILL_CLASSNAME } from "../../common/constants";
@@ -32,12 +31,11 @@ const getPillBackgroundClasses = ({ variant }: { variant?: string }) => {
 };
 
 export const getPillClasses = (props: PillProps) => {
-	const { className, spacing, variant } = props;
+	const { className, variant } = props;
 
 	return clsx(
 		PILL_CLASSNAME,
 		"px-2 py-0.5 text-xs",
-		getSpacing(spacing),
 		getPillBorderClasses({ variant }),
 		getPillCopyClasses({ variant }),
 		getPillBackgroundClasses(props),
