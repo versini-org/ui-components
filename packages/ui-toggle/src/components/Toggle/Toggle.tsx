@@ -9,14 +9,14 @@ export const Toggle = ({
 	name,
 	mode = "system",
 	focusMode = "system",
-	spacing,
+	className,
 	noBorder = false,
 }: ToggleProps) => {
 	const toggleClasses = getToggleClasses({
 		mode,
 		focusMode,
 		labelHidden,
-		spacing,
+		className,
 		noBorder,
 	});
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -10,6 +10,27 @@ describe("Toggle (exceptions)", () => {
 	});
 });
 
+describe("Toggle spacing", () => {
+	it("should render a toggle with a right margin spacing", async () => {
+		render(
+			<Toggle
+				mode="dark"
+				name="toto"
+				label="toto"
+				className="mr-2"
+				checked
+				onChange={() => {}}
+			/>,
+		);
+		const input = screen.getByText("toto");
+		if (input.parentElement) {
+			// not only it should be there, but it should be the last entry
+			expect(input.parentElement.className).toContain("mr-2");
+			expect(input.parentElement.className.slice(-4)).toBe("mr-2");
+		}
+	});
+});
+
 describe("Toggle modifiers", () => {
 	it("should render a default Toggle (dark)", async () => {
 		render(
