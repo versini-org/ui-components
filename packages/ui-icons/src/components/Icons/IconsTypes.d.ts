@@ -1,4 +1,6 @@
-export interface IconsProps extends React.SVGAttributes<SVGElement> {
+import type { SvgIconTypes } from "@versini/ui-types";
+
+export type IconsProps = {
 	/**
 	 * Whether or not to render the icon in a single color
 	 * @default false
@@ -9,10 +11,5 @@ export interface IconsProps extends React.SVGAttributes<SVGElement> {
 	 * but it can be overridden with this prop.
 	 */
 	title?: string;
-	/**
-	 * Whether or not the icon is semantic (visual and
-	 * announced to assistive technologies).
-	 * @default false
-	 */
-	semantic?: boolean;
-}
+} & Pick<SvgIconTypes.Props, "semantic" | "size" | "className" | "viewBox"> &
+	React.SVGAttributes<SVGElement>;

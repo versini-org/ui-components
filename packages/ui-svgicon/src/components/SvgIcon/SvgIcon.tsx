@@ -8,13 +8,13 @@ export const SvgIcon = ({
 	viewBox,
 	className,
 	defaultViewBox,
-	defaultClassName,
 
+	size,
 	title,
 	semantic = false,
 	...rest
 }: SvgIconTypes.Props) => {
-	const generatedClassName = clsx(defaultClassName, className);
+	const generatedClassName = clsx(size, className);
 	return (
 		<>
 			<svg

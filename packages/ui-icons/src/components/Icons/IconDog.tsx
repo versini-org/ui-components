@@ -6,9 +6,8 @@ export const IconDog = ({ className, viewBox, ...rest }: IconsProps) => {
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 1200 500"
-			defaultClassName="w-full"
 			viewBox={viewBox}
-			className={className}
+			className={`w-full ${className}`}
 			title="Sassy Dog"
 			{...rest}
 		>

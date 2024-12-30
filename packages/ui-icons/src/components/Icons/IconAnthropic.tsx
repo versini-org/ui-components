@@ -24,7 +24,7 @@ export const IconAnthropic = ({
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 256 176"
-			defaultClassName="size-5"
+			size="size-5"
 			viewBox={viewBox}
 			className={className}
 			title={title || "Anthropic"}

@@ -24,7 +24,7 @@ export const IconStarInCircle = ({
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 512 512"
-			defaultClassName="size-5"
+			size="size-5"
 			viewBox={viewBox}
 			className={className}
 			title={title || "Star in Circle"}

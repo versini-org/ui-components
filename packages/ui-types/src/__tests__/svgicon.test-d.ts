@@ -12,7 +12,7 @@ const allProps: SvgIconTypes.Props = {
 	defaultViewBox: "0 0 24 24",
 	title: "test",
 	className: "test",
-	defaultClassName: "test",
+	size: "size-1",
 	fill: "red",
 	semantic: true,
 	viewBox: "0 0 48 48",

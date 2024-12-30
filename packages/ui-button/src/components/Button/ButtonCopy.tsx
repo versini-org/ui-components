@@ -43,11 +43,7 @@ export const ButtonCopy = React.forwardRef<
 			onClick={handleCopyToClipboard}
 			disabled={copied}
 		>
-			{copied ? (
-				<IconCopied className="size-3" />
-			) : (
-				<IconCopy className="size-3" />
-			)}
+			{copied ? <IconCopied size="size-3" /> : <IconCopy size="size-3" />}
 		</ButtonIcon>
 	);
 });
