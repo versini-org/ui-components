@@ -48,6 +48,37 @@ describe("SvgIcon prop tests", () => {
 		expect(svg.getAttribute("class")).toBe("tutu");
 	});
 
+	it("should honor the prop `defaultClassName`", async () => {
+		render(
+			<SvgIcon
+				data-testid="svgicon-1"
+				defaultViewBox="0 0 448 512"
+				defaultClassName="tutu"
+				title="toto"
+			>
+				<path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+			</SvgIcon>,
+		);
+		const svg = await screen.findByTestId("svgicon-1");
+		expect(svg.getAttribute("class")).toBe("tutu");
+	});
+
+	it("should honor both props `defaultClassName` and `className`", async () => {
+		render(
+			<SvgIcon
+				data-testid="svgicon-1"
+				defaultViewBox="0 0 448 512"
+				defaultClassName="tutu"
+				className="tata"
+				title="toto"
+			>
+				<path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+			</SvgIcon>,
+		);
+		const svg = await screen.findByTestId("svgicon-1");
+		expect(svg.getAttribute("class")).toBe("tutu tata");
+	});
+
 	it("should render a decorative icon by default", async () => {
 		render(
 			<SvgIcon
