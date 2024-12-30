@@ -22,7 +22,19 @@ export default meta;
 export const Basic: Story = {
 	...commonControlsSetup,
 	args: {
-		copyToClipboard: "lorem ipsum",
+		copyToClipboard: "lorem ipsum string",
+	},
+	render: (args: ButtonCopyTypes.Props) => (
+		<div className="flex flex-wrap gap-2">
+			<ButtonCopy {...args} />
+		</div>
+	),
+};
+
+export const FunctionAsProp: Story = {
+	...commonControlsSetup,
+	args: {
+		copyToClipboard: () => "lorem ipsum function",
 	},
 	render: (args: ButtonCopyTypes.Props) => (
 		<div className="flex flex-wrap gap-2">

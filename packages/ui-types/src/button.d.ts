@@ -141,8 +141,9 @@ declare namespace ButtonCopyTypes {
 		/**
 		 * What kind of text to copy to the clipboard.
 		 * - If a string is passed, that string will be copied.
+		 * - If a function is passed, what is returned from running it will be copied.
 		 */
-		copyToClipboard: string;
+		copyToClipboard: string | (() => string);
 	} & Omit<
 		ButtonIconTypes.Props,
 		| "children"

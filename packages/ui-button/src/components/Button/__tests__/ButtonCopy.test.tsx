@@ -23,9 +23,24 @@ describe("Copy clipboard timer", () => {
 		vi.restoreAllMocks();
 		vi.clearAllTimers();
 	});
-	it("should revert to copy icon after 3 seconds", async () => {
+	it("should revert to copy icon after 3 seconds with a string", async () => {
 		vi.useFakeTimers();
 		render(<ButtonCopy copyToClipboard="lorem ipsum" />);
+		const button = screen.getByRole("button");
+		screen.getByLabelText("Copy to clipboard");
+		fireEvent.click(button);
+		screen.getByLabelText("Copied to clipboard");
+
+		act(() => {
+			vi.advanceTimersByTime(3000);
+		});
+
+		screen.getByLabelText("Copy to clipboard");
+	});
+
+	it("should revert to copy icon after 3 seconds with a function", async () => {
+		vi.useFakeTimers();
+		render(<ButtonCopy copyToClipboard={() => "lorem ipsum"} />);
 		const button = screen.getByRole("button");
 		screen.getByLabelText("Copy to clipboard");
 		fireEvent.click(button);
