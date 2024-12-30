@@ -11,9 +11,13 @@ export const ButtonCopy = React.forwardRef<
 	const [copied, setCopied] = useState(false);
 
 	const handleCopyToClipboard = () => {
-		setCopied(true);
 		if (typeof copyToClipboard === "string") {
 			navigator.clipboard.writeText(copyToClipboard);
+			setCopied(true);
+		}
+		if (typeof copyToClipboard === "function") {
+			navigator.clipboard.writeText(copyToClipboard());
+			setCopied(true);
 		}
 	};
 
