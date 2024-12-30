@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/versini-org/ui-components/compare/ui-types-v3.0.0...ui-types-v3.0.1) (2024-12-30)
+
+
+### Bug Fixes
+
+* **Icons:** size prop should support Tailwind media breakpoints ([#850](https://github.com/versini-org/ui-components/issues/850)) ([54cb421](https://github.com/versini-org/ui-components/commit/54cb421b32ac256f5cf477229610def6b25bea71))
+
 ## [3.0.0](https://github.com/versini-org/ui-components/compare/ui-types-v2.2.0...ui-types-v3.0.0) (2024-12-30)
 
 

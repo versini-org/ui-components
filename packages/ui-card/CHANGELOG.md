@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.4](https://github.com/versini-org/ui-components/compare/ui-card-v2.0.3...ui-card-v2.0.4) (2024-12-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 3.0.1
+
 ## [2.0.3](https://github.com/versini-org/ui-components/compare/ui-card-v2.0.2...ui-card-v2.0.3) (2024-12-30)
 
 

@@ -1,5 +1,17 @@
 # Change Log
 
+## [1.9.7](https://github.com/versini-org/ui-components/compare/ui-form-v1.9.6...ui-form-v1.9.7) (2024-12-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-textarea bumped to 2.0.4
+    * @versini/ui-textinput bumped to 2.0.4
+    * @versini/ui-toggle bumped to 2.0.4
+    * @versini/ui-togglegroup bumped to 2.0.4
+
 ## [1.9.6](https://github.com/versini-org/ui-components/compare/ui-form-v1.9.5...ui-form-v1.9.6) (2024-12-30)
 
 

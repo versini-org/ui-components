@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.6](https://github.com/versini-org/ui-components/compare/ui-modal-v1.1.5...ui-modal-v1.1.6) (2024-12-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 3.0.1
+
 ## [1.1.5](https://github.com/versini-org/ui-components/compare/ui-modal-v1.1.4...ui-modal-v1.1.5) (2024-12-30)
 
 
