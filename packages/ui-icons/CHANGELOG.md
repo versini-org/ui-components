@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.0.0](https://github.com/versini-org/ui-components/compare/ui-icons-v2.0.3...ui-icons-v3.0.0) (2024-12-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Icons:** replacing defaultClassName with size prop ([#846](https://github.com/versini-org/ui-components/issues/846))
+
+### Features
+
+* **Icons:** replacing defaultClassName with size prop ([#846](https://github.com/versini-org/ui-components/issues/846)) ([ecbf05c](https://github.com/versini-org/ui-components/commit/ecbf05c3e764ff5425f62b5a3ba96797ccbb1a1a))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-svgicon bumped to 3.0.0
+    * @versini/ui-types bumped to 3.0.0
+
 ## [2.0.3](https://github.com/versini-org/ui-components/compare/ui-icons-v2.0.2...ui-icons-v2.0.3) (2024-12-30)
 
 
