@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.8](https://github.com/versini-org/ui-components/compare/ui-bubble-v2.0.7...ui-bubble-v2.0.8) (2024-12-30)
+
+
+### Bug Fixes
+
+* **Bubble:** bubble max width too big at lower breakpoints ([#854](https://github.com/versini-org/ui-components/issues/854)) ([8dd8332](https://github.com/versini-org/ui-components/commit/8dd83326ffb7047a46eb5ade8f6153c2c52152b3))
+
 ## [2.0.7](https://github.com/versini-org/ui-components/compare/ui-bubble-v2.0.6...ui-bubble-v2.0.7) (2024-12-30)
 
 
