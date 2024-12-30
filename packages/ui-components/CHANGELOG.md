@@ -192,6 +192,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.33.12](https://github.com/versini-org/ui-components/compare/ui-components-v5.33.11...ui-components-v5.33.12) (2024-12-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-bubble bumped to 2.0.5
+
 ## [5.33.11](https://github.com/versini-org/ui-components/compare/ui-components-v5.33.10...ui-components-v5.33.11) (2024-12-30)
 
 
