@@ -30,18 +30,11 @@ declare namespace SvgIconTypes {
 		semantic?: boolean;
 		/**
 		 * The size of the icon. This will set the width and height of the icon.
+		 * It should be a valid Tailwind CSS size class, such as "size-6" or "size-px".
+		 * It can also include breakpoints, such as "sm:size-6" or "md:size-px".
+		 * @link https://tailwindcss.com/docs/size
 		 */
-		size?:
-			| "size-1"
-			| "size-2"
-			| "size-3"
-			| "size-4"
-			| "size-5"
-			| "size-6"
-			| "size-7"
-			| "size-8"
-			| "size-9"
-			| "size-10";
+		size?: string;
 		/**
 		 * The viewBox to use. If not provided, the default viewBox will be used.
 		 */
