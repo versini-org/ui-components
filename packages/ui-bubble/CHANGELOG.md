@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.7](https://github.com/versini-org/ui-components/compare/ui-bubble-v2.0.6...ui-bubble-v2.0.7) (2024-12-30)
+
+
+### Bug Fixes
+
+* **Bubble:** copy paste icon is too big ([#852](https://github.com/versini-org/ui-components/issues/852)) ([99e4cc3](https://github.com/versini-org/ui-components/commit/99e4cc3dcb0c903128c30429667ff2209aa5c861))
+
 ## [2.0.6](https://github.com/versini-org/ui-components/compare/ui-bubble-v2.0.5...ui-bubble-v2.0.6) (2024-12-30)
 
 

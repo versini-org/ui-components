@@ -1,9 +1,9 @@
 {
 	"packages/ui-anchor": "1.2.13",
-	"packages/ui-bubble": "2.0.6",
+	"packages/ui-bubble": "2.0.7",
 	"packages/ui-button": "3.0.1",
 	"packages/ui-card": "2.0.4",
-	"packages/ui-components": "5.33.13",
+	"packages/ui-components": "5.33.14",
 	"packages/ui-fingerprint": "1.1.0",
 	"packages/ui-footer": "2.0.4",
 	"packages/ui-form": "1.9.7",
