@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/versini-org/ui-components/compare/ui-types-v2.1.0...ui-types-v2.2.0) (2024-12-30)
+
+
+### Features
+
+* **ButtonCopy:** adding support for function for copyToClipboard prop ([#842](https://github.com/versini-org/ui-components/issues/842)) ([d1629c7](https://github.com/versini-org/ui-components/commit/d1629c77170d3a7ec9cf3e6275432bba02455014))
+
 ## [2.1.0](https://github.com/versini-org/ui-components/compare/ui-types-v2.0.0...ui-types-v2.1.0) (2024-12-30)
 
 
