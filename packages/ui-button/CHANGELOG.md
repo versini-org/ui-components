@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.1.0](https://github.com/versini-org/ui-components/compare/ui-button-v2.0.0...ui-button-v2.1.0) (2024-12-30)
+
+
+### Features
+
+* adding ButtonCopy component ([#840](https://github.com/versini-org/ui-components/issues/840)) ([54c6f8c](https://github.com/versini-org/ui-components/commit/54c6f8c61aac2a4440429f120a8148c938196388))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-icons bumped to 2.0.1
+    * @versini/ui-types bumped to 2.1.0
+  * devDependencies
+    * @versini/ui-svgicon bumped to 2.0.1
+
 ## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-button-v1.7.0...ui-button-v2.0.0) (2024-12-29)
 
 
