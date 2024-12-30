@@ -24,7 +24,7 @@ export const IconOpenAI = ({
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 24 24"
-			defaultClassName="size-5"
+			size="size-5"
 			viewBox={viewBox}
 			className={className}
 			title={title || "OpenAI"}

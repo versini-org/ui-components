@@ -26,7 +26,7 @@ export const IconSort = ({
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 576 512"
-			defaultClassName="size-5"
+			size="size-5"
 			viewBox={viewBox}
 			className={className}
 			title={title || "Sort"}

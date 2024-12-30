@@ -24,7 +24,7 @@ export const IconCopied = ({
 	return (
 		<SvgIcon
 			defaultViewBox="0 0 448 512"
-			defaultClassName="size-5"
+			size="size-5"
 			viewBox={viewBox}
 			className={className}
 			title={title || "Copied"}
