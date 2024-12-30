@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.2.1](https://github.com/versini-org/ui-components/compare/ui-button-v2.2.0...ui-button-v2.2.1) (2024-12-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-icons bumped to 2.0.3
+  * devDependencies
+    * @versini/ui-svgicon bumped to 2.0.3
+
 ## [2.2.0](https://github.com/versini-org/ui-components/compare/ui-button-v2.1.0...ui-button-v2.2.0) (2024-12-30)
 
 

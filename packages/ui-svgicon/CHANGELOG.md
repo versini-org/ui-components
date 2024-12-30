@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/versini-org/ui-components/compare/ui-svgicon-v2.0.2...ui-svgicon-v2.0.3) (2024-12-30)
+
+
+### Bug Fixes
+
+* **Icons:** className should combine not overwrite default class ([#844](https://github.com/versini-org/ui-components/issues/844)) ([95cfe1f](https://github.com/versini-org/ui-components/commit/95cfe1f85b09d2d79b0e52e489cf1c4429758d57))
+
 ## [2.0.2](https://github.com/versini-org/ui-components/compare/ui-svgicon-v2.0.1...ui-svgicon-v2.0.2) (2024-12-30)
 
 
