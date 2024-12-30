@@ -104,7 +104,7 @@ declare namespace ButtonIconTypes {
 		children: React.ReactNode;
 		/**
 		 * Cell content alignment.
-		 * @default "center"
+		 * @default center
 		 */
 		align?: "left" | "right" | "center";
 		/**
@@ -133,8 +133,32 @@ declare namespace ButtonSortTypes {
 		 * Prop to signal if the Button is active.
 		 */
 		active?: boolean;
-	} & ButtonIconTypes.Props &
-		React.ButtonHTMLAttributes<HTMLButtonElement>;
+	} & ButtonIconTypes.Props;
 }
 
-export { ButtonTypes, ButtonLinkTypes, ButtonIconTypes, ButtonSortTypes };
+declare namespace ButtonCopyTypes {
+	export type Props = {
+		/**
+		 * What kind of text to copy to the clipboard.
+		 * - If a string is passed, that string will be copied.
+		 */
+		copyToClipboard: string;
+	} & Omit<
+		ButtonIconTypes.Props,
+		| "children"
+		| "align"
+		| "label"
+		| "labelLeft"
+		| "labelRight"
+		| "fullWidth"
+		| "size"
+	>;
+}
+
+export {
+	ButtonCopyTypes,
+	ButtonIconTypes,
+	ButtonLinkTypes,
+	ButtonSortTypes,
+	ButtonTypes,
+};

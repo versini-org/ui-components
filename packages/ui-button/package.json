@@ -14,9 +14,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build:check": "tsc",
 		"build:js": "vite build",
@@ -42,11 +40,10 @@
 	},
 	"dependencies": {
 		"@tailwindcss/typography": "0.5.15",
+		"@versini/ui-icons": "workspace:../ui-icons",
 		"@versini/ui-types": "workspace:../ui-types",
 		"clsx": "2.1.1",
 		"tailwindcss": "3.4.17"
 	},
-	"sideEffects": [
-		"**/*.css"
-	]
+	"sideEffects": ["**/*.css"]
 }

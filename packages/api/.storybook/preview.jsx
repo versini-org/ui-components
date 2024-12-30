@@ -36,6 +36,7 @@ const preview = {
 					[
 						"Bubble",
 						"Button",
+						"ButtonCopy",
 						"ButtonIcon",
 						"ButtonLink",
 						"Card",
