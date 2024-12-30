@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.1](https://github.com/versini-org/ui-components/compare/ui-togglegroup-v2.0.0...ui-togglegroup-v2.0.1) (2024-12-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 2.1.0
+
 ## [2.0.0](https://github.com/versini-org/ui-components/compare/ui-togglegroup-v1.5.1...ui-togglegroup-v2.0.0) (2024-12-29)
 
 
