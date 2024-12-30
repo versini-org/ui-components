@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { BUBBLE_CLASSNAME } from "../../common/constants";
 
 const getBubbleSizesClasses = () => {
-	return "p-4 sm:max-w-md md:max-w-2xl";
+	return "p-4 max-w-md md:max-w-2xl";
 };
 
 const getBubbleColorClasses = ({ kind }: { kind: string }) => {
