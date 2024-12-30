@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.2.9](https://github.com/versini-org/ui-components/compare/ui-panel-v1.2.8...ui-panel-v1.2.9) (2024-12-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 3.0.0
+    * @versini/ui-icons bumped to 3.0.0
+    * @versini/ui-modal bumped to 1.1.5
+
 ## [1.2.8](https://github.com/versini-org/ui-components/compare/ui-panel-v1.2.7...ui-panel-v1.2.8) (2024-12-30)
 
 
