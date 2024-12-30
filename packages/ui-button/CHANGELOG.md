@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.0.1](https://github.com/versini-org/ui-components/compare/ui-button-v3.0.0...ui-button-v3.0.1) (2024-12-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-icons bumped to 3.0.1
+    * @versini/ui-types bumped to 3.0.1
+  * devDependencies
+    * @versini/ui-svgicon bumped to 3.0.1
+
 ## [3.0.0](https://github.com/versini-org/ui-components/compare/ui-button-v2.2.1...ui-button-v3.0.0) (2024-12-30)
 
 
