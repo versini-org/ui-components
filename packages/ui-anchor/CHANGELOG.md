@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://github.com/versini-org/ui-components/compare/ui-anchor-v1.2.15...ui-anchor-v1.3.0) (2024-12-31)
+
+
+### Features
+
+* **Button:** variable padding based on the size - take 2 ([#861](https://github.com/versini-org/ui-components/issues/861)) ([241f4dd](https://github.com/versini-org/ui-components/commit/241f4ddec7046c28ef7f00dbf7570be011fd20f3))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 3.2.0
+
 ## [1.2.15](https://github.com/versini-org/ui-components/compare/ui-anchor-v1.2.14...ui-anchor-v1.2.15) (2024-12-31)
 
 
