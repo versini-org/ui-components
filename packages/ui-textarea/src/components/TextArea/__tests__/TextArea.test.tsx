@@ -5,6 +5,7 @@ import { TextArea } from "../..";
 import { expectToHaveClasses } from "../../../../../../configuration/tests-helpers";
 import {
 	TEXT_AREA_CLASSNAME,
+	TEXT_AREA_CONTROL_LEFT_CLASSNAME,
 	TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
 } from "../../../common/constants";
 
@@ -213,6 +214,76 @@ describe("TextArea modifiers", () => {
 				rightElement={<div>right element</div>}
 				data-testid="txtnpt-1"
 			/>,
+		);
+		const rightElement = await screen.findByText("right element");
+		expect(rightElement?.parentElement?.className).toContain(
+			TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
+		);
+	});
+
+	it("should render a disabled text area with a right element", async () => {
+		render(
+			<TextArea
+				disabled
+				label="toto"
+				name="toto"
+				rightElement={<div>right element</div>}
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const rightElement = await screen.findByText("right element");
+		expect(rightElement?.parentElement?.className).toContain(
+			TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
+		);
+	});
+
+	it("should render a text area in error state with a right element", async () => {
+		render(
+			<TextArea
+				error
+				helperText="error message"
+				label="toto"
+				name="toto"
+				rightElement={<div>right element</div>}
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const rightElement = await screen.findByText("right element");
+		expect(rightElement?.parentElement?.className).toContain(
+			TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
+		);
+		const errorMessage = await screen.findByText("error message");
+		expect(errorMessage.className).toContain("text-copy-error-light");
+	});
+
+	it("should render a text area with a left element", async () => {
+		render(
+			<TextArea
+				label="toto"
+				name="toto"
+				leftElement={<div>left element</div>}
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const leftElement = await screen.findByText("left element");
+		expect(leftElement?.parentElement?.className).toContain(
+			TEXT_AREA_CONTROL_LEFT_CLASSNAME,
+		);
+	});
+
+	it("should render a text area with both left and right elements", async () => {
+		render(
+			<TextArea
+				label="toto"
+				name="toto"
+				leftElement={<div>left element</div>}
+				rightElement={<div>right element</div>}
+				data-testid="txtnpt-1"
+			/>,
+		);
+		const leftElement = await screen.findByText("left element");
+		expect(leftElement?.parentElement?.className).toContain(
+			TEXT_AREA_CONTROL_LEFT_CLASSNAME,
 		);
 		const rightElement = await screen.findByText("right element");
 		expect(rightElement?.parentElement?.className).toContain(

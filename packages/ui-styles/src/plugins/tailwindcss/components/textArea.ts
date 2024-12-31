@@ -1,7 +1,6 @@
 export default {
 	'.av-text-area-wrapper label[aria-hidden="true"]': {
 		/* move the label inline */
-		transform: "translate(12px, 0) scale(1)",
 		transformOrigin: "top left",
 		transition: "var(--av-text-area-wrapper-transition, all 0.2s ease-out)",
 	},
@@ -18,5 +17,8 @@ export default {
 	},
 	".av-text-area__control--right": {
 		right: "18px",
+	},
+	".av-text-area__control--left": {
+		left: "18px",
 	},
 };
