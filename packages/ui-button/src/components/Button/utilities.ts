@@ -24,13 +24,13 @@ const getButtonSizesClasses = ({
 	ButtonIconTypes.Props,
 	"align" | "size" | "labelLeft" | "labelRight"
 >) => {
-	const smallClasses = "text-sm font-medium max-h-8 py-0";
-	const mediumClasses = "text-base font-medium max-h-9 py-1";
-	const largeClasses = "text-lg font-medium max-h-12 py-2";
+	const smallClasses = "text-sm font-medium max-h-8 py-0 px-2";
+	const mediumClasses = "text-base font-medium max-h-9 py-1 px-3";
+	const largeClasses = "text-lg font-medium max-h-12 py-2 px-4";
 
 	switch (type) {
 		case TYPE_BUTTON:
-			return clsx("px-4", {
+			return clsx({
 				[smallClasses]: size === "small",
 				[mediumClasses]: size === "medium",
 				[largeClasses]: size === "large",
@@ -328,7 +328,13 @@ export const getButtonClasses = ({
 					noTruncate,
 					radius,
 				}),
-				getButtonSizesClasses({ type, size, labelRight, labelLeft, align }),
+				getButtonSizesClasses({
+					type,
+					size,
+					labelRight,
+					labelLeft,
+					align,
+				}),
 				getButtonBorderClasses({ mode, variant, noBorder }),
 				getButtonFocusClasses({ focusMode }),
 				getButtonHoverClasses({ mode, variant, disabled }),

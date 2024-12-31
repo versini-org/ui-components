@@ -73,6 +73,24 @@ export const Copy: Story = {
 				{...args}
 			>
 				<div>DOM element with function</div>
+				<p>
+					lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum
+					dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum
+					dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum
+					dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum
+					dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum
+					dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum
+					dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum
+					dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum
+					dolor sit amet lorem ipsum dolor sit amet
+				</p>
 			</Bubble>
 
 			<Bubble kind="left" copyToClipboard={string} {...args}>
