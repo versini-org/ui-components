@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.5](https://github.com/versini-org/ui-components/compare/ui-textinput-v2.0.4...ui-textinput-v2.0.5) (2024-12-31)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-liveregion bumped to 1.2.7
+    * @versini/ui-types bumped to 3.0.2
+
 ## [2.0.4](https://github.com/versini-org/ui-components/compare/ui-textinput-v2.0.3...ui-textinput-v2.0.4) (2024-12-30)
 
 

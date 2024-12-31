@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.0.2](https://github.com/versini-org/ui-components/compare/ui-icons-v3.0.1...ui-icons-v3.0.2) (2024-12-31)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-svgicon bumped to 3.0.2
+    * @versini/ui-types bumped to 3.0.2
+
 ## [3.0.1](https://github.com/versini-org/ui-components/compare/ui-icons-v3.0.0...ui-icons-v3.0.1) (2024-12-30)
 
 
