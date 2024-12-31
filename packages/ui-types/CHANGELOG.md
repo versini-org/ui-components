@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/versini-org/ui-components/compare/ui-types-v3.0.1...ui-types-v3.0.2) (2024-12-31)
+
+
+### Bug Fixes
+
+* **ButtonCopy:** allowing labelLeft and labelRight from ButtonIcon ([#857](https://github.com/versini-org/ui-components/issues/857)) ([b419886](https://github.com/versini-org/ui-components/commit/b419886df699fb35a2661d71f671e1dcde9e966f))
+
 ## [3.0.1](https://github.com/versini-org/ui-components/compare/ui-types-v3.0.0...ui-types-v3.0.1) (2024-12-30)
 
 

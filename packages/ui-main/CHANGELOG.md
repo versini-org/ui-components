@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.5](https://github.com/versini-org/ui-components/compare/ui-main-v2.0.4...ui-main-v2.0.5) (2024-12-31)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 3.0.2
+
 ## [2.0.4](https://github.com/versini-org/ui-components/compare/ui-main-v2.0.3...ui-main-v2.0.4) (2024-12-30)
 
 
