@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/versini-org/ui-components/compare/ui-textarea-v2.1.0...ui-textarea-v2.1.1) (2024-12-31)
+
+
+### Bug Fixes
+
+* **TextArea:** removing logs + minor extra 1px padding for leftElement ([#866](https://github.com/versini-org/ui-components/issues/866)) ([a9d7441](https://github.com/versini-org/ui-components/commit/a9d7441cfc11e03c123a36ee787fcadc24a21110))
+
 ## [2.1.0](https://github.com/versini-org/ui-components/compare/ui-textarea-v2.0.5...ui-textarea-v2.1.0) (2024-12-31)
 
 
