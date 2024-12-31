@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import "@versini/ui-button/dist/style.css";
-import { Button, ButtonCopy } from "../../../../ui-button/src/components";
+import { Button } from "../../../../ui-button/src/components";
 import { commonControlsSetup } from "../../helpers/constants";
 
 type Story = StoryObj<typeof Button>;
@@ -80,12 +80,6 @@ export const Sizes: Story = {
 	render: (args) => (
 		<>
 			<div className="flex flex-wrap gap-2">
-				<ButtonCopy
-					copyToClipboard={"copied"}
-					labelRight="copy code"
-					radius="small"
-					className="mb-2 px-1"
-				/>
 				<Button {...args} size="small" radius="small">
 					Button lorem ipsum
 				</Button>
