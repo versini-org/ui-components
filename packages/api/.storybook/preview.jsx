@@ -43,6 +43,8 @@ const preview = {
 						"Menu",
 						"Table",
 					],
+					"Form",
+					["TextArea", "TextInput"],
 				],
 			},
 		},
