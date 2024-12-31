@@ -42,3 +42,16 @@ export const FunctionAsProp: Story = {
 		</div>
 	),
 };
+
+export const WithLabel: Story = {
+	...commonControlsSetup,
+	args: {
+		copyToClipboard: "lorem ipsum string",
+	},
+	render: (args: ButtonCopyTypes.Props) => (
+		<div className="flex flex-wrap gap-2">
+			<ButtonCopy {...args} labelLeft="copy code" />
+			<ButtonCopy {...args} labelRight="copy code" />
+		</div>
+	),
+};
