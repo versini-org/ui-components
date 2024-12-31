@@ -146,13 +146,7 @@ declare namespace ButtonCopyTypes {
 		copyToClipboard: string | (() => string);
 	} & Omit<
 		ButtonIconTypes.Props,
-		| "children"
-		| "align"
-		| "label"
-		| "labelLeft"
-		| "labelRight"
-		| "fullWidth"
-		| "size"
+		"children" | "align" | "label" | "fullWidth" | "size"
 	>;
 }
 
