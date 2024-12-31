@@ -141,8 +141,6 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		/* c8 ignore start - ResizeObserver is tough to test... */
 		useLayoutEffect(() => {
 			if (lRect && lRect.width) {
-				console.info(`==> [${Date.now()}] left el width: `, lRect.width);
-
 				/**
 				 * - rect.width is the width of the right element (Button, Icon, etc.)
 				 * - The main input field has default left/right paddings of
@@ -246,7 +244,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		if (lRect.width > 0) {
 			labelRef?.current?.style.setProperty(
 				"--tw-translate-x",
-				`${12 + lRect.width + 4}px`,
+				`${12 + lRect.width + 5}px`,
 			);
 		}
 
