@@ -2,21 +2,26 @@ import clsx from "clsx";
 
 import {
 	TEXT_AREA_CLASSNAME,
+	TEXT_AREA_CONTROL_LEFT_CLASSNAME,
 	TEXT_AREA_CONTROL_RIGHT_CLASSNAME,
 	TEXT_AREA_HELPER_TEXT_CLASSNAME,
 	TEXT_AREA_WRAPPER_CLASSNAME,
 } from "../../common/constants";
+import type { TextAreaProps } from "./TextAreaTypes";
 
-type getTextAreaClassesProps = {
-	disabled: boolean;
-	error: boolean;
-	focusMode: "dark" | "light" | "system" | "alt-system";
-	mode: "dark" | "light" | "system" | "alt-system";
-	noBorder: boolean;
-	raw: boolean;
-
-	className?: string;
-	textAreaClassName?: string;
+type GetTextAreaClassesProps = Pick<
+	TextAreaProps,
+	| "mode"
+	| "focusMode"
+	| "error"
+	| "disabled"
+	| "noBorder"
+	| "raw"
+	| "className"
+	| "textAreaClassName"
+> & {
+	rightElement?: boolean;
+	leftElement?: boolean;
 };
 
 const getTextAreaBaseClasses = () => {
@@ -29,11 +34,7 @@ const getTextAreaBaseClasses = () => {
 	return "rounded-md text-base h-20 min-h-[80px] resize-none overflow-hidden px-4 py-7";
 };
 
-const getTextAreaColorClasses = ({
-	mode,
-}: {
-	mode: "dark" | "light" | "system" | "alt-system";
-}) => {
+const getTextAreaColorClasses = ({ mode }: Pick<TextAreaProps, "mode">) => {
 	return clsx({
 		"bg-surface-darker text-copy-lighter caret-copy-light": mode === "dark",
 		"bg-surface-lighter text-copy-dark caret-copy-dark": mode === "light",
@@ -46,9 +47,7 @@ const getTextAreaColorClasses = ({
 
 const getTextAreaFocusClasses = ({
 	focusMode,
-}: {
-	focusMode: "dark" | "light" | "system" | "alt-system";
-}) => {
+}: Pick<TextAreaProps, "focusMode">) => {
 	return clsx("focus:outline focus:outline-2 focus:outline-offset-2", {
 		"focus:outline-focus-dark": focusMode === "dark",
 		"focus:outline-focus-light": focusMode === "light",
@@ -62,10 +61,7 @@ const getTextAreaFocusClasses = ({
 const getTextAreaBorderClasses = ({
 	noBorder,
 	error,
-}: {
-	error: boolean;
-	noBorder: boolean;
-}) => {
+}: Pick<TextAreaProps, "error" | "noBorder">) => {
 	return clsx("border-2", {
 		"border-border-dark": !noBorder && !error,
 		"focus:border-border-dark": !noBorder && error,
@@ -79,33 +75,52 @@ const getTextAreaLabelClasses = ({
 	raw,
 	error,
 	mode,
-}: {
-	disabled: boolean;
-	error: boolean;
-	mode: "dark" | "light" | "system" | "alt-system";
-	raw: boolean;
+	leftElement,
+	rightElement,
+}: Pick<TextAreaProps, "mode" | "disabled" | "raw" | "error"> & {
+	leftElement?: boolean;
+	rightElement?: boolean;
 }) => {
 	if (raw) {
 		return "";
 	}
 	if (disabled) {
-		return clsx("absolute px-2 cursor-not-allowed opacity-50 font-medium");
+		return clsx(
+			"transform translate-y-0 scale-100 absolute px-2 cursor-not-allowed opacity-50 font-medium",
+			{
+				"translate-x-[12px]":
+					(rightElement === true && !leftElement) ||
+					(!rightElement && !leftElement),
+			},
+		);
 	}
 	if (!error) {
-		return clsx("absolute px-2 cursor-text font-medium", {
-			"text-copy-medium": mode === "dark",
-			"text-copy-dark": mode === "light",
-			"text-copy-dark dark:text-copy-medium": mode === "system",
-			"text-copy-medium dark:text-copy-dark": mode === "alt-system",
-		});
+		return clsx(
+			"absolute px-2 cursor-text font-medium transform translate-y-0 scale-100",
+			{
+				"translate-x-[12px]":
+					(rightElement === true && !leftElement) ||
+					(!rightElement && !leftElement),
+				"text-copy-medium": mode === "dark",
+				"text-copy-dark": mode === "light",
+				"text-copy-dark dark:text-copy-medium": mode === "system",
+				"text-copy-medium dark:text-copy-dark": mode === "alt-system",
+			},
+		);
 	}
 	if (error) {
-		return clsx("absolute px-2 cursor-text font-medium", {
-			"text-copy-medium": mode === "dark",
-			"text-copy-error-dark": mode === "light",
-			"text-copy-error-dark dark:text-copy-error-light": mode === "system",
-			"text-copy-medium dark:text-copy-error-dark": mode === "alt-system",
-		});
+		return clsx(
+			"absolute px-2 cursor-text font-medium transform translate-y-0 scale-100",
+			{
+				"translate-x-[12px]":
+					(rightElement === true && !leftElement) ||
+					(!rightElement && !leftElement),
+				"text-copy-medium": mode === "dark",
+				"text-copy-error-dark": mode === "light",
+				"text-copy-error-dark dark:text-copy-error-light": mode === "system",
+				"text-copy-medium dark:text-copy-error-dark": mode === "alt-system",
+			},
+		);
 	}
 };
 
@@ -114,12 +129,7 @@ const getTextAreaHelperTextClasses = ({
 	raw,
 	mode,
 	disabled,
-}: {
-	disabled: boolean;
-	error: boolean;
-	mode: "dark" | "light" | "system" | "alt-system";
-	raw: boolean;
-}) => {
+}: Pick<TextAreaProps, "mode" | "disabled" | "raw" | "error">) => {
 	if (raw) {
 		return "";
 	}
@@ -156,7 +166,9 @@ export const getTextAreaClasses = ({
 	noBorder,
 	error,
 	mode,
-}: getTextAreaClassesProps) => {
+	leftElement,
+	rightElement,
+}: GetTextAreaClassesProps) => {
 	const wrapper = raw
 		? className
 		: clsx(
@@ -189,6 +201,8 @@ export const getTextAreaClasses = ({
 		raw,
 		error,
 		mode,
+		rightElement,
+		leftElement,
 	});
 
 	const helperText = getTextAreaHelperTextClasses({
@@ -198,9 +212,13 @@ export const getTextAreaClasses = ({
 		disabled,
 	});
 
-	const rightElement = raw
+	const rightClasses = raw
 		? undefined
 		: clsx(TEXT_AREA_CONTROL_RIGHT_CLASSNAME, "absolute");
+
+	const leftClasses = raw
+		? undefined
+		: clsx(TEXT_AREA_CONTROL_LEFT_CLASSNAME, "absolute");
 
 	return {
 		wrapper,
@@ -208,7 +226,8 @@ export const getTextAreaClasses = ({
 		accessibleLabel,
 		visibleLabel,
 		helperText,
-		rightElement,
+		rightElement: rightClasses,
+		leftElement: leftClasses,
 	};
 };
 

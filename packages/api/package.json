@@ -38,6 +38,7 @@
 		"@storybook/react": "8.4.7",
 		"@storybook/react-vite": "8.4.7",
 		"@storybook/test": "8.4.7",
+		"@versini/ui-styles": "workspace:../../packages/ui-styles",
 		"prop-types": "15.8.1",
 		"storybook": "8.4.7"
 	}

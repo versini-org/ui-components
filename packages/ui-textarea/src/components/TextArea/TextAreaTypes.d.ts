@@ -51,6 +51,12 @@ export type TextAreaProps = {
 	 */
 	rightElement?: React.ReactElement;
 	/**
+	 * This prop allows you to pass in a React element to render on the left
+	 * side of the TextArea. This is useful for adding icons or actionable
+	 * elements, such a Button.
+	 */
+	leftElement?: React.ReactElement;
+	/**
 	 * CSS class(es) to add to the actual textarea element.
 	 */
 	textAreaClassName?: string;

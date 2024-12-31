@@ -35,6 +35,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			helperTextOnFocus = false,
 
 			rightElement,
+			leftElement,
 			onChange,
 			onFocus,
 			onBlur,
@@ -46,6 +47,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		const textAreaRef = useRef<HTMLTextAreaElement>(null);
 		const mergedTextAreaRef = useMergeRefs([ref, textAreaRef]);
 		const [rightElementRef, rect] = useResizeObserver<HTMLDivElement>();
+		const [leftElementRef, lRect] = useResizeObserver<HTMLDivElement>();
 		const textAreaHeightRef = useRef<number>(80);
 		const labelOffsetRef = useRef<number>(-25);
 		const labelRef = useRef<HTMLLabelElement>(null);
@@ -55,6 +57,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 		const textAreaId = useUniqueId({ id, prefix: `${TEXT_AREA_CLASSNAME}-` });
 
 		const [textAreaPaddingRight, setTextAreaPaddingRight] = useState(0);
+		const [textAreaPaddingLeft, setTextAreaPaddingLeft] = useState(0);
 		const [showHelperText, setShowHelperText] = useState(
 			Boolean(!helperTextOnFocus && helperText),
 		);
@@ -69,6 +72,8 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			disabled,
 			noBorder,
 			mode,
+			rightElement: Boolean(rightElement),
+			leftElement: Boolean(leftElement),
 		});
 
 		/**
@@ -109,7 +114,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
 		/**
 		 * This effect is used to add padding to the rightElement so
-		 * that the text in the textarea does not overlap with the
+		 * that the input text in the textarea does not overlap with the
 		 * rightElement.
 		 */
 		/* c8 ignore start - ResizeObserver is tough to test... */
@@ -122,9 +127,32 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 				 * - We add 10px to the right padding to give some space between the right
 				 *   element and the input field.
 				 */
+
 				setTextAreaPaddingRight(rect.width + 18 + 10);
 			}
 		}, [rect]);
+		/* c8 ignore end */
+
+		/**
+		 * This effect is used to add padding to the leftElement so
+		 * that the input text in the textarea does not overlap with the
+		 * leftElement.
+		 */
+		/* c8 ignore start - ResizeObserver is tough to test... */
+		useLayoutEffect(() => {
+			if (lRect && lRect.width) {
+				console.info(`==> [${Date.now()}] left el width: `, lRect.width);
+
+				/**
+				 * - rect.width is the width of the right element (Button, Icon, etc.)
+				 * - The main input field has default left/right paddings of
+				 *   16px (px-4) + 2px border (border-2) = 18px
+				 * - We add 10px to the left padding to give some space between the left
+				 *   element and the input field.
+				 */
+				setTextAreaPaddingLeft(lRect.width + 18 + 10);
+			}
+		}, [lRect]);
 		/* c8 ignore end */
 
 		/**
@@ -210,6 +238,18 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 			}
 		}, [userInput, raw]);
 
+		/**
+		 * If there is a left element, we need to translate the label on the x-axis
+		 * to the right so that it does not overlap with the left element.
+		 * NOTE: 12px is the default translate if there are no left elements.
+		 */
+		if (lRect.width > 0) {
+			labelRef?.current?.style.setProperty(
+				"--tw-translate-x",
+				`${12 + lRect.width + 4}px`,
+			);
+		}
+
 		return (
 			<div className={textTextAreaClassName.wrapper}>
 				<label
@@ -219,6 +259,14 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 				>
 					{label}
 				</label>
+				{leftElement && (
+					<div
+						ref={leftElementRef}
+						className={textTextAreaClassName.leftElement}
+					>
+						{leftElement}
+					</div>
+				)}
 				<textarea
 					ref={mergedTextAreaRef}
 					id={textAreaId}
@@ -230,19 +278,32 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
 					{...(helperText && { "aria-describedby": `${textAreaId}-helper` })}
 					{...(error && { "aria-invalid": "true" })}
 					{...(rightElement &&
+						!leftElement &&
 						!raw && { style: { paddingRight: textAreaPaddingRight } })}
+					{...(leftElement &&
+						!rightElement &&
+						!raw && { style: { paddingLeft: textAreaPaddingLeft } })}
+					{...(rightElement &&
+						leftElement &&
+						!raw && {
+							style: {
+								paddingRight: textAreaPaddingRight,
+								paddingLeft: textAreaPaddingLeft,
+							},
+						})}
 					value={userInput}
 					onChange={handleChange}
 					onFocus={handleFocus}
 					onBlur={handleBlur}
 					{...extraProps}
 				/>
+
 				{!raw && (
 					<label
 						ref={labelRef}
 						aria-hidden={true}
 						htmlFor={textAreaId}
-						className={textTextAreaClassName.visibleLabel}
+						className={`${textTextAreaClassName.visibleLabel}`}
 					>
 						{label}
 					</label>
