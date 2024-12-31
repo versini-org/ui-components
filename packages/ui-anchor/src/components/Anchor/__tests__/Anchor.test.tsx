@@ -23,7 +23,7 @@ describe("Anchor modifiers", () => {
 			</Anchor>,
 		);
 		const button = await screen.findByRole("link");
-		expectToHaveClasses(button, ["px-4", "py-0", "max-h-8"]);
+		expectToHaveClasses(button, ["px-2", "py-0", "max-h-8"]);
 	});
 
 	it("should render a size medium anchor", async () => {
@@ -33,7 +33,7 @@ describe("Anchor modifiers", () => {
 			</Anchor>,
 		);
 		const button = await screen.findByRole("link");
-		expectToHaveClasses(button, ["px-4", "py-1", "max-h-9"]);
+		expectToHaveClasses(button, ["px-3", "py-1", "max-h-9"]);
 	});
 
 	it("should render a size large anchor", async () => {
