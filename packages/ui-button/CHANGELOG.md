@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/versini-org/ui-components/compare/ui-button-v3.1.0...ui-button-v3.2.0) (2024-12-31)
+
+
+### Features
+
+* **Button:** variable padding based on the size - take 2 ([#861](https://github.com/versini-org/ui-components/issues/861)) ([241f4dd](https://github.com/versini-org/ui-components/commit/241f4ddec7046c28ef7f00dbf7570be011fd20f3))
+
 ## [3.1.0](https://github.com/versini-org/ui-components/compare/ui-button-v3.0.2...ui-button-v3.1.0) (2024-12-31)
 
 
