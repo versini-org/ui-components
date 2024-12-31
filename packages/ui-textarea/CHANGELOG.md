@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/versini-org/ui-components/compare/ui-textarea-v2.0.5...ui-textarea-v2.1.0) (2024-12-31)
+
+
+### Features
+
+* **TextArea:** adding support for leftElement ([#864](https://github.com/versini-org/ui-components/issues/864)) ([553af24](https://github.com/versini-org/ui-components/commit/553af2450f0f260f3238aa6064af2d45a6d91d6b))
+
 ## [2.0.5](https://github.com/versini-org/ui-components/compare/ui-textarea-v2.0.4...ui-textarea-v2.0.5) (2024-12-31)
 
 

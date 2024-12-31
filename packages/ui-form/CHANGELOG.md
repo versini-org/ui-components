@@ -1,5 +1,14 @@
 # Change Log
 
+## [1.9.9](https://github.com/versini-org/ui-components/compare/ui-form-v1.9.8...ui-form-v1.9.9) (2024-12-31)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-textarea bumped to 2.1.0
+
 ## [1.9.8](https://github.com/versini-org/ui-components/compare/ui-form-v1.9.7...ui-form-v1.9.8) (2024-12-31)
 
 
