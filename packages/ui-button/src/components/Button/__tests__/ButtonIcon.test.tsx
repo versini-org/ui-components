@@ -271,7 +271,7 @@ describe("ButtonIcon modifiers", () => {
 		const button = await screen.findByRole("button");
 		const label = await screen.findByText("Settings");
 		expect(label).toBeDefined();
-		expectToHaveClasses(button, ["h-6", "px-4", "text-sm", "font-medium"]);
+		expectToHaveClasses(button, ["h-6", "px-2", "text-sm", "font-medium"]);
 	});
 
 	it("should render a size small button icon with a label on the left", async () => {
@@ -283,7 +283,7 @@ describe("ButtonIcon modifiers", () => {
 		const button = await screen.findByRole("button");
 		const label = await screen.findByText("Settings");
 		expect(label).toBeDefined();
-		expectToHaveClasses(button, ["h-6", "px-4", "text-sm", "font-medium"]);
+		expectToHaveClasses(button, ["h-6", "px-2", "text-sm", "font-medium"]);
 	});
 
 	it("should render a size medium button icon", async () => {
@@ -305,7 +305,7 @@ describe("ButtonIcon modifiers", () => {
 		const button = await screen.findByRole("button");
 		const label = await screen.findByText("Settings");
 		expect(label).toBeDefined();
-		expectToHaveClasses(button, ["h-8", "px-4", "text-base", "font-medium"]);
+		expectToHaveClasses(button, ["h-8", "px-3", "text-base", "font-medium"]);
 	});
 
 	it("should render a size medium button icon with a label on the left", async () => {
@@ -317,7 +317,7 @@ describe("ButtonIcon modifiers", () => {
 		const button = await screen.findByRole("button");
 		const label = await screen.findByText("Settings");
 		expect(label).toBeDefined();
-		expectToHaveClasses(button, ["h-8", "px-4", "text-base", "font-medium"]);
+		expectToHaveClasses(button, ["h-8", "px-3", "text-base", "font-medium"]);
 	});
 
 	it("should render a size large button icon", async () => {

@@ -37,7 +37,7 @@ const getButtonSizesClasses = ({
 			});
 
 		case TYPE_LINK:
-			return clsx("px-4 text-center", {
+			return clsx("text-center", {
 				[smallClasses]: size === "small",
 				[mediumClasses]: size === "medium",
 				[largeClasses]: size === "large",
@@ -49,10 +49,10 @@ const getButtonSizesClasses = ({
 				"justify-start": align === "left",
 				"justify-end": align === "right",
 				"h-6 w-6 p-0": size === "small" && !(labelRight || labelLeft),
-				"h-6 px-4 text-sm font-medium":
+				"h-6 px-2 text-sm font-medium":
 					size === "small" && (labelRight || labelLeft),
 				"h-8 w-8 p-1": size === "medium" && !(labelRight || labelLeft),
-				"h-8 px-4 text-base font-medium":
+				"h-8 px-3 text-base font-medium":
 					size === "medium" && (labelRight || labelLeft),
 				"h-12 w-12 p-2": size === "large" && !(labelRight || labelLeft),
 				"h-12 px-4 text-lg font-medium":
