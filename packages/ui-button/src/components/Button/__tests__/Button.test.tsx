@@ -27,7 +27,7 @@ describe("Button modifiers", () => {
 		const button = await screen.findByRole("button");
 		expectToHaveClasses(button, [
 			BUTTON_CLASSNAME,
-			"px-4",
+			"px-3",
 			"py-1",
 			"max-h-9",
 			"text-base",
@@ -47,13 +47,13 @@ describe("Button modifiers", () => {
 	it("should render a size small button", async () => {
 		render(<Button size="small">hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["px-4", "py-0", "max-h-8"]);
+		expectToHaveClasses(button, ["px-2", "py-0", "max-h-8"]);
 	});
 
 	it("should render a size medium button", async () => {
 		render(<Button size="medium">hello</Button>);
 		const button = await screen.findByRole("button");
-		expectToHaveClasses(button, ["px-4", "py-1", "max-h-9"]);
+		expectToHaveClasses(button, ["px-3", "py-1", "max-h-9"]);
 	});
 
 	it("should render a size large button", async () => {
@@ -87,7 +87,7 @@ describe("Button modifiers", () => {
 			"hover:text-copy-light-hover",
 			"max-h-9",
 			"not-prose",
-			"px-4",
+			"px-3",
 			"py-1",
 			"rounded-full",
 			"text-base",
@@ -120,7 +120,7 @@ describe("Button modifiers", () => {
 			"hover:text-copy-light-hover",
 			"max-h-9",
 			"not-prose",
-			"px-4",
+			"px-3",
 			"py-1",
 			"rounded-full",
 			"text-base",
@@ -147,7 +147,7 @@ describe("Button modifiers", () => {
 			"hover:text-copy-light-hover",
 			"max-h-9",
 			"not-prose",
-			"px-4",
+			"px-3",
 			"py-1",
 			"rounded-full",
 			"text-base",
@@ -174,7 +174,7 @@ describe("Button modifiers", () => {
 			"hover:text-copy-light-hover",
 			"max-h-9",
 			"not-prose",
-			"px-4",
+			"px-3",
 			"py-1",
 			"rounded-full",
 			"text-base",
@@ -195,7 +195,7 @@ describe("Button modifiers", () => {
 			"rounded-full",
 			"bg-action-light",
 			"text-copy-lighter",
-			"px-4",
+			"px-3",
 			"text-base",
 			"font-medium",
 			"max-h-9",
@@ -227,7 +227,7 @@ describe("Button modifiers", () => {
 			"rounded-full",
 			"bg-action-dark",
 			"text-copy-light",
-			"px-4",
+			"px-3",
 			"text-base",
 			"font-medium",
 			"max-h-9",
@@ -259,7 +259,7 @@ describe("Button modifiers", () => {
 			"rounded-full",
 			"bg-action-danger-dark",
 			"text-copy-light",
-			"px-4",
+			"px-3",
 			"text-base",
 			"font-medium",
 			"max-h-9",
@@ -291,7 +291,7 @@ describe("Button modifiers", () => {
 			"rounded-full",
 			"bg-action-danger-light",
 			"text-copy-lighter",
-			"px-4",
+			"px-3",
 			"text-base",
 			"font-medium",
 			"max-h-9",
@@ -323,7 +323,7 @@ describe("Button modifiers", () => {
 			"rounded-full",
 			"bg-action-selected-dark",
 			"text-copy-light",
-			"px-4",
+			"px-3",
 			"text-base",
 			"font-medium",
 			"max-h-9",
@@ -355,7 +355,7 @@ describe("Button modifiers", () => {
 			"rounded-full",
 			"bg-action-selected-light",
 			"text-copy-lighter",
-			"px-4",
+			"px-3",
 			"text-base",
 			"font-medium",
 			"max-h-9",

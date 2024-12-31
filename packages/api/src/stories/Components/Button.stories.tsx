@@ -73,3 +73,45 @@ export const Square: Story = {
 		</div>
 	),
 };
+
+export const Sizes: Story = {
+	...commonControlsSetup,
+
+	render: (args) => (
+		<>
+			<div className="flex flex-wrap gap-2">
+				<Button {...args} size="small" radius="small">
+					Button lorem ipsum
+				</Button>
+				<Button {...args} size="medium" radius="small">
+					Button lorem ipsum dolor
+				</Button>
+				<Button {...args} size="large" radius="small" className="mb-2">
+					Button lorem ipsum dolor sit amet
+				</Button>
+			</div>
+			<div className="flex flex-wrap gap-2">
+				<Button {...args} size="small" radius="medium">
+					Button lorem ipsum
+				</Button>
+				<Button {...args} size="medium" radius="medium">
+					Button lorem ipsum dolor
+				</Button>
+				<Button {...args} size="large" radius="medium" className="mb-2">
+					Button lorem ipsum dolor sit amet
+				</Button>
+			</div>
+			<div className="flex flex-wrap gap-2">
+				<Button {...args} size="small" radius="large">
+					Button lorem ipsum
+				</Button>
+				<Button {...args} size="medium" radius="large">
+					Button lorem ipsum dolor
+				</Button>
+				<Button {...args} size="large" radius="large">
+					Button lorem ipsum dolor sit amet
+				</Button>
+			</div>
+		</>
+	),
+};
