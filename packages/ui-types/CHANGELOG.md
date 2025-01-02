@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/versini-org/ui-components/compare/ui-types-v3.0.2...ui-types-v3.0.3) (2025-01-02)
+
+
+### Bug Fixes
+
+* **ButtonIcon:** adding support for missing prop "variant" ([#876](https://github.com/versini-org/ui-components/issues/876)) ([654772c](https://github.com/versini-org/ui-components/commit/654772c69939387ab3d215a20202cc3fa5376913))
+
 ## [3.0.2](https://github.com/versini-org/ui-components/compare/ui-types-v3.0.1...ui-types-v3.0.2) (2024-12-31)
 
 

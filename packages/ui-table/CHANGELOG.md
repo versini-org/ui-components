@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.10](https://github.com/versini-org/ui-components/compare/ui-table-v2.0.9...ui-table-v2.0.10) (2025-01-02)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 3.2.2
+    * @versini/ui-icons bumped to 3.1.1
+    * @versini/ui-types bumped to 3.0.3
+
 ## [2.0.9](https://github.com/versini-org/ui-components/compare/ui-table-v2.0.8...ui-table-v2.0.9) (2025-01-02)
 
 
