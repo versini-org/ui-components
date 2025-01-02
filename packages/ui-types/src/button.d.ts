@@ -123,6 +123,10 @@ declare namespace ButtonIconTypes {
 		 * Option to make the Button transparent.
 		 */
 		noBackground?: boolean;
+		/**
+		 * The variant style of the Button.
+		 */
+		variant?: "primary" | "secondary" | "danger" | "selected";
 	} & CommonButtonProps &
 		React.ButtonHTMLAttributes<HTMLButtonElement>;
 }
