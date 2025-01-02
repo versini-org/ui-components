@@ -28,6 +28,7 @@ export const ButtonIcon = React.forwardRef<
 			noBackground = false,
 			align = "center",
 			radius = "large",
+			variant = "primary",
 
 			...otherProps
 		},
@@ -48,6 +49,7 @@ export const ButtonIcon = React.forwardRef<
 			noBackground,
 			align,
 			radius,
+			variant,
 		});
 		const iconClass = clsx({
 			"text-copy-accent-dark": mode === "light" && !raw,
