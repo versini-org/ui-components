@@ -28,6 +28,7 @@ import { IconRestore } from "./Icons/IconRestore";
 import { IconSearch } from "./Icons/IconSearch";
 import { IconSettings } from "./Icons/IconSettings";
 import { IconShow } from "./Icons/IconShow";
+import { IconSliders } from "./Icons/IconSliders";
 import { IconSort } from "./Icons/IconSort";
 import { IconSortDown } from "./Icons/IconSortDown";
 import { IconSortUp } from "./Icons/IconSortUp";
@@ -66,6 +67,7 @@ export {
 	IconSearch,
 	IconSettings,
 	IconShow,
+	IconSliders,
 	IconSort,
 	IconSortDown,
 	IconSortUp,

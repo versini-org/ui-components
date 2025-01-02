@@ -162,5 +162,10 @@
 	"openai": {
 		"name": "IconOpenAI",
 		"title": "OpenAI"
+	},
+	"sliders": {
+		"name": "IconSliders",
+		"title": "Sliders",
+		"monotone": true
 	}
 }
