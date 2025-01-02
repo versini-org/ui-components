@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/versini-org/ui-components/compare/ui-styles-v2.1.0...ui-styles-v2.1.1) (2025-01-02)
+
+
+### Bug Fixes
+
+* **Button:** lighter "selected" variant + minor refactor ([#874](https://github.com/versini-org/ui-components/issues/874)) ([c8ab416](https://github.com/versini-org/ui-components/commit/c8ab4169f067e65721ef68c42039951274bec114))
+
 ## [2.1.0](https://github.com/versini-org/ui-components/compare/ui-styles-v2.0.0...ui-styles-v2.1.0) (2024-12-31)
 
 

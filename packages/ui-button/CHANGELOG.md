@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.2.2](https://github.com/versini-org/ui-components/compare/ui-button-v3.2.1...ui-button-v3.2.2) (2025-01-02)
+
+
+### Bug Fixes
+
+* **ButtonIcon:** adding support for missing prop "variant" ([#876](https://github.com/versini-org/ui-components/issues/876)) ([654772c](https://github.com/versini-org/ui-components/commit/654772c69939387ab3d215a20202cc3fa5376913))
+* **Button:** lighter "selected" variant + minor refactor ([#874](https://github.com/versini-org/ui-components/issues/874)) ([c8ab416](https://github.com/versini-org/ui-components/commit/c8ab4169f067e65721ef68c42039951274bec114))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-icons bumped to 3.1.1
+    * @versini/ui-types bumped to 3.0.3
+  * devDependencies
+    * @versini/ui-svgicon bumped to 3.0.3
+
 ## [3.2.1](https://github.com/versini-org/ui-components/compare/ui-button-v3.2.0...ui-button-v3.2.1) (2025-01-02)
 
 

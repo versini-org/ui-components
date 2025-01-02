@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.13](https://github.com/versini-org/ui-components/compare/ui-bubble-v2.0.12...ui-bubble-v2.0.13) (2025-01-02)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 3.2.2
+    * @versini/ui-icons bumped to 3.1.1
+    * @versini/ui-types bumped to 3.0.3
+
 ## [2.0.12](https://github.com/versini-org/ui-components/compare/ui-bubble-v2.0.11...ui-bubble-v2.0.12) (2025-01-02)
 
 
