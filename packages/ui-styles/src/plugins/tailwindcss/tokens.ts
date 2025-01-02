@@ -23,13 +23,9 @@ export default {
 		"action-danger-light-hover": colors.red[700],
 		"action-danger-light-active": colors.red[800],
 
-		"action-selected-dark": colors.green[900],
-		"action-selected-dark-hover": colors.green[700],
-		"action-selected-dark-active": colors.green[600],
-
-		"action-selected-light": colors.green[600],
-		"action-selected-light-hover": colors.green[700],
-		"action-selected-light-active": colors.green[800],
+		"action-selected-dark": colors.green[700],
+		"action-selected-dark-hover": colors.green[600],
+		"action-selected-dark-active": colors.green[500],
 
 		/**
 		 * Surface tokens.
@@ -87,7 +83,7 @@ export default {
 		"border-danger-medium": colors.red[400],
 		"border-danger-light": colors.red[300],
 
-		"border-selected-dark": colors.green[900],
+		"border-selected-dark": colors.green[800],
 		"border-selected-medium": colors.green[400],
 		"border-selected-light": colors.green[300],
 

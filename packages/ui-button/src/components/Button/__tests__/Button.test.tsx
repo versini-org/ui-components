@@ -353,7 +353,7 @@ describe("Button modifiers", () => {
 			BUTTON_CLASSNAME,
 			"not-prose",
 			"rounded-full",
-			"bg-action-selected-light",
+			"bg-action-selected-dark",
 			"text-copy-lighter",
 			"px-3",
 			"text-base",
@@ -361,16 +361,16 @@ describe("Button modifiers", () => {
 			"max-h-9",
 			"py-1",
 			"border",
-			"border-border-selected-medium",
+			"border-border-selected-dark",
 			"focus:outline",
 			"focus:outline-2",
 			"focus:outline-offset-2",
 			"focus:outline-focus-dark",
 			"dark:focus:outline-focus-light",
 			"hover:text-copy-light-hover",
-			"hover:bg-action-selected-light-hover",
+			"hover:bg-action-selected-dark-hover",
 			"active:text-copy-lighter-active",
-			"active:bg-action-selected-light-active",
+			"active:bg-action-selected-dark-active",
 		]);
 	});
 

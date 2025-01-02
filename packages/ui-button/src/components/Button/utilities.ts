@@ -24,20 +24,14 @@ const getButtonSizesClasses = ({
 	ButtonIconTypes.Props,
 	"align" | "size" | "labelLeft" | "labelRight"
 >) => {
-	const smallClasses = "text-sm font-medium max-h-8 py-0 px-2";
-	const mediumClasses = "text-base font-medium max-h-9 py-1 px-3";
-	const largeClasses = "text-lg font-medium max-h-12 py-2 px-4";
+	const smallClasses = "max-h-8 py-0 px-2";
+	const mediumClasses = "max-h-9 py-1 px-3";
+	const largeClasses = "max-h-12 py-2 px-4";
 
 	switch (type) {
 		case TYPE_BUTTON:
-			return clsx({
-				[smallClasses]: size === "small",
-				[mediumClasses]: size === "medium",
-				[largeClasses]: size === "large",
-			});
-
 		case TYPE_LINK:
-			return clsx("text-center", {
+			return clsx({
 				[smallClasses]: size === "small",
 				[mediumClasses]: size === "medium",
 				[largeClasses]: size === "large",
@@ -49,90 +43,143 @@ const getButtonSizesClasses = ({
 				"justify-start": align === "left",
 				"justify-end": align === "right",
 				"h-6 w-6 p-0": size === "small" && !(labelRight || labelLeft),
-				"h-6 px-2 text-sm font-medium":
-					size === "small" && (labelRight || labelLeft),
+				"h-6 px-2": size === "small" && (labelRight || labelLeft),
 				"h-8 w-8 p-1": size === "medium" && !(labelRight || labelLeft),
-				"h-8 px-3 text-base font-medium":
-					size === "medium" && (labelRight || labelLeft),
+				"h-8 px-3": size === "medium" && (labelRight || labelLeft),
 				"h-12 w-12 p-2": size === "large" && !(labelRight || labelLeft),
-				"h-12 px-4 text-lg font-medium":
-					size === "large" && (labelRight || labelLeft),
+				"h-12 px-4": size === "large" && (labelRight || labelLeft),
 			});
 	}
 };
 
-const getButtonBaseClasses = ({
+const getButtonFontClasses = ({
+	type,
+	size,
+	labelRight,
+	labelLeft,
+}: {
+	type: typeof TYPE_BUTTON | typeof TYPE_ICON | typeof TYPE_LINK;
+} & Pick<ButtonIconTypes.Props, "size" | "labelLeft" | "labelRight">) => {
+	const smallClasses = "text-sm font-medium";
+	const mediumClasses = "text-base font-medium";
+	const largeClasses = "text-lg font-medium";
+
+	switch (type) {
+		case TYPE_BUTTON:
+		case TYPE_LINK:
+			return clsx({
+				"text-center": type === TYPE_LINK,
+				[smallClasses]: size === "small",
+				[mediumClasses]: size === "medium",
+				[largeClasses]: size === "large",
+			});
+
+		case TYPE_ICON:
+			return clsx({
+				[smallClasses]: size === "small" && (labelRight || labelLeft),
+				[mediumClasses]: size === "medium" && (labelRight || labelLeft),
+				[largeClasses]: size === "large" && (labelRight || labelLeft),
+			});
+	}
+};
+
+const getButtonTextCopyClasses = ({
 	mode,
 	noBackground,
 	noTruncate,
 	variant,
-	radius,
-}: Pick<ButtonTypes.Props, "mode" | "variant" | "noTruncate" | "radius"> &
+}: Pick<ButtonTypes.Props, "mode" | "variant" | "noTruncate"> &
 	Pick<ButtonIconTypes.Props, "noBackground">) => {
 	if (noBackground) {
-		return clsx("not-prose", {
-			"rounded-full": radius === "large",
-			"rounded-md": radius === "medium",
-			"rounded-sm": radius === "small",
-		});
+		return "not-prose";
 	}
 
 	if (variant === "primary") {
 		return clsx("not-prose", {
-			"rounded-full": radius === "large",
-			"rounded-md": radius === "medium",
-			"rounded-sm": radius === "small",
 			truncate: !noTruncate,
-			"bg-action-dark text-copy-light": mode === "dark",
-			"bg-action-light text-copy-lighter": mode === "light",
-			"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
-				mode === "system",
-			"bg-action-light text-copy-lighter dark:bg-action-dark dark:text-copy-light":
-				mode === "alt-system",
+			"text-copy-light": mode === "dark",
+			"text-copy-lighter": mode === "light",
+			"text-copy-light dark:text-copy-lighter": mode === "system",
+			"text-copy-lighter dark:text-copy-light": mode === "alt-system",
 		});
 	}
 	if (variant === "secondary") {
 		return clsx("not-prose", {
-			"rounded-full": radius === "large",
-			"rounded-md": radius === "medium",
-			"rounded-sm": radius === "small",
 			truncate: !noTruncate,
-			"bg-action-dark text-copy-light": mode === "light",
-			"bg-action-light text-copy-lighter": mode === "dark",
-			"bg-action-dark text-copy-light dark:bg-action-light dark:text-copy-lighter":
-				mode === "alt-system",
-			"bg-action-light text-copy-lighter dark:bg-action-dark dark:text-copy-light":
-				mode === "system",
+			"text-copy-light": mode === "light",
+			"text-copy-lighter": mode === "dark",
+			"text-copy-light dark:text-copy-lighter": mode === "alt-system",
+			"text-copy-lighter dark:text-copy-light": mode === "system",
 		});
 	}
 	if (variant === "danger") {
 		return clsx("not-prose", {
-			"rounded-full": radius === "large",
-			"rounded-md": radius === "medium",
-			"rounded-sm": radius === "small",
 			truncate: !noTruncate,
-			"bg-action-danger-dark text-copy-light": mode === "dark",
-			"bg-action-danger-light text-copy-lighter": mode === "light",
-			"bg-action-danger-dark text-copy-light dark:bg-action-danger-light dark:text-copy-lighter":
-				mode === "system",
-			"bg-action-danger-light text-copy-lighter dark:bg-action-danger-dark dark:text-copy-light":
-				mode === "alt-system",
+			"text-copy-light": mode === "dark",
+			"text-copy-lighter": mode === "light",
+			"text-copy-light dark:text-copy-lighter": mode === "system",
+			"text-copy-lighter dark:text-copy-light": mode === "alt-system",
 		});
 	}
 	if (variant === "selected") {
 		return clsx("not-prose", {
-			"rounded-full": radius === "large",
-			"rounded-md": radius === "medium",
-			"rounded-sm": radius === "small",
 			truncate: !noTruncate,
-			"bg-action-selected-dark text-copy-light": mode === "dark",
-			"bg-action-selected-light text-copy-lighter": mode === "light",
-			"bg-action-selected-dark text-copy-light dark:bg-action-selected-light dark:text-copy-lighter":
-				mode === "system",
-			"bg-action-selected-light text-copy-lighter dark:bg-action-selected-dark dark:text-copy-light":
+			"text-copy-light": mode === "dark",
+			"text-copy-lighter": mode === "light",
+			"text-copy-light dark:text-copy-lighter": mode === "system",
+			"text-copy-lighter dark:text-copy-light": mode === "alt-system",
+		});
+	}
+};
+
+const getButtonBackgroundClasses = ({
+	mode,
+	noBackground,
+	variant,
+}: Pick<ButtonTypes.Props, "mode" | "variant"> &
+	Pick<ButtonIconTypes.Props, "noBackground">) => {
+	if (noBackground) {
+		return;
+	}
+
+	if (variant === "primary") {
+		return clsx({
+			"bg-action-dark": mode === "dark",
+			"bg-action-light": mode === "light",
+			"bg-action-dark dark:bg-action-light": mode === "system",
+			"bg-action-light dark:bg-action-dark": mode === "alt-system",
+		});
+	}
+	if (variant === "secondary") {
+		return clsx({
+			"bg-action-dark": mode === "light",
+			"bg-action-light": mode === "dark",
+			"bg-action-dark dark:bg-action-light": mode === "alt-system",
+			"bg-action-light dark:bg-action-dark": mode === "system",
+		});
+	}
+	if (variant === "danger") {
+		return clsx({
+			"bg-action-danger-dark": mode === "dark",
+			"bg-action-danger-light": mode === "light",
+			"bg-action-danger-dark dark:bg-action-danger-light": mode === "system",
+			"bg-action-danger-light dark:bg-action-danger-dark":
 				mode === "alt-system",
 		});
 	}
+	if (variant === "selected") {
+		return "bg-action-selected-dark";
+	}
+};
+
+const getButtonRadiusClasses = ({
+	radius,
+}: Pick<ButtonTypes.Props, "radius">) => {
+	return clsx({
+		"rounded-full": radius === "large",
+		"rounded-md": radius === "medium",
+		"rounded-sm": radius === "small",
+	});
 };
 
 const getButtonHoverClasses = ({
@@ -174,14 +221,7 @@ const getButtonHoverClasses = ({
 		});
 	}
 	if (variant === "selected") {
-		return clsx("hover:text-copy-light-hover", {
-			"hover:bg-action-selected-dark-hover": mode === "dark",
-			"hover:bg-action-selected-light-hover": mode === "light",
-			"hover:bg-action-selected-dark-hover dark:hover:bg-action-selected-light-hover":
-				mode === "system",
-			"hover:bg-action-selected-light-hover dark:hover:bg-action-selected-dark-hover":
-				mode === "alt-system",
-		});
+		return "hover:text-copy-light-hover hover:bg-action-selected-dark-hover";
 	}
 };
 
@@ -224,14 +264,7 @@ const getButtonActiveClasses = ({
 		});
 	}
 	if (variant === "selected") {
-		return clsx("active:text-copy-lighter-active", {
-			"active:bg-action-selected-dark-active": mode === "dark",
-			"active:bg-action-selected-light-active": mode === "light",
-			"active:bg-action-selected-dark-active dark:active:bg-action-selected-light-active":
-				mode === "system",
-			"active:bg-action-selected-light-active dark:active:bg-action-selected-dark-active":
-				mode === "alt-system",
-		});
+		return "active:text-copy-lighter-active active:bg-action-selected-dark-active";
 	}
 };
 
@@ -270,14 +303,7 @@ const getButtonBorderClasses = ({
 		});
 	}
 	if (variant === "selected") {
-		return clsx("border", {
-			"border-border-selected-dark": mode === "dark",
-			"border-border-selected-medium": mode === "light",
-			"border-border-selected-dark dark:border-border-selected-medium":
-				mode === "system",
-			"border-border-selected-medium dark:border-border-selected-dark":
-				mode === "alt-system",
-		});
+		return "border border-border-selected-dark";
 	}
 };
 
@@ -321,13 +347,14 @@ export const getButtonClasses = ({
 		? clsx(BUTTON_CLASSNAME, className)
 		: clsx(
 				BUTTON_CLASSNAME,
-				getButtonBaseClasses({
+				getButtonTextCopyClasses({
 					mode,
 					variant,
 					noBackground,
 					noTruncate,
-					radius,
 				}),
+				getButtonBackgroundClasses({ mode, noBackground, variant }),
+				getButtonRadiusClasses({ radius }),
 				getButtonSizesClasses({
 					type,
 					size,
@@ -335,6 +362,7 @@ export const getButtonClasses = ({
 					labelLeft,
 					align,
 				}),
+				getButtonFontClasses({ type, size, labelRight, labelLeft }),
 				getButtonBorderClasses({ mode, variant, noBorder }),
 				getButtonFocusClasses({ focusMode }),
 				getButtonHoverClasses({ mode, variant, disabled }),
