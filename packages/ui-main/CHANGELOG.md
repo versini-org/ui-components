@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/versini-org/ui-components/compare/ui-main-v2.0.5...ui-main-v2.1.0) (2025-01-02)
+
+
+### Features
+
+* **Main:** adding noMargin and noPadding props ([#873](https://github.com/versini-org/ui-components/issues/873)) ([48d1d97](https://github.com/versini-org/ui-components/commit/48d1d976e06cc3e83eb678c28308364892a13bcc))
+
 ## [2.0.5](https://github.com/versini-org/ui-components/compare/ui-main-v2.0.4...ui-main-v2.0.5) (2024-12-31)
 
 

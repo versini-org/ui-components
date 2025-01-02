@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/versini-org/ui-components/compare/ui-header-v2.0.5...ui-header-v2.1.0) (2025-01-02)
+
+
+### Features
+
+* **Header:** adding noMargin, noPadding and noBorder props ([#871](https://github.com/versini-org/ui-components/issues/871)) ([be6cec5](https://github.com/versini-org/ui-components/commit/be6cec519ac182d515745b7480439c547cbe873a))
+
 ## [2.0.5](https://github.com/versini-org/ui-components/compare/ui-header-v2.0.4...ui-header-v2.0.5) (2024-12-31)
 
 

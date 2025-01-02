@@ -192,6 +192,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.33.20](https://github.com/versini-org/ui-components/compare/ui-components-v5.33.19...ui-components-v5.33.20) (2025-01-02)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-header bumped to 2.1.0
+    * @versini/ui-main bumped to 2.1.0
+
 ## [5.33.19](https://github.com/versini-org/ui-components/compare/ui-components-v5.33.18...ui-components-v5.33.19) (2025-01-02)
 
 
