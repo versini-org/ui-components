@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/versini-org/ui-components/compare/ui-icons-v3.0.2...ui-icons-v3.1.0) (2025-01-02)
+
+
+### Features
+
+* **Icons:** adding IconSliders ([#869](https://github.com/versini-org/ui-components/issues/869)) ([344c8a9](https://github.com/versini-org/ui-components/commit/344c8a91594939a322d98ce74d5cfb8c964258cd))
+
 ## [3.0.2](https://github.com/versini-org/ui-components/compare/ui-icons-v3.0.1...ui-icons-v3.0.2) (2024-12-31)
 
 

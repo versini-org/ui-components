@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.7](https://github.com/versini-org/ui-components/compare/ui-menu-v2.0.6...ui-menu-v2.0.7) (2025-01-02)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @versini/ui-icons bumped to 3.1.0
+
 ## [2.0.6](https://github.com/versini-org/ui-components/compare/ui-menu-v2.0.5...ui-menu-v2.0.6) (2024-12-31)
 
 
