@@ -13,6 +13,7 @@ export type HeaderProps = {
 	mode?: "dark" | "light" | "system" | "alt-system";
 	/**
 	 * Whether or not to render the Header component with colors.
+	 * @default false
 	 */
 	noColors?: boolean;
 	/**
@@ -22,6 +23,22 @@ export type HeaderProps = {
 	raw?: boolean;
 	/**
 	 * Whether or not to render the Header component with sticky behavior.
+	 * @default false
 	 */
 	sticky?: boolean;
+	/**
+	 * Whether or not to render the Header component with no border.
+	 * @default false
+	 */
+	noBorder?: boolean;
+	/**
+	 * Whether or not to render the Header component with no margin.
+	 * @default false
+	 */
+	noMargin?: boolean;
+	/**
+	 * Whether or not to render the Header component with no padding.
+	 * @default false
+	 */
+	noPadding?: boolean;
 };
