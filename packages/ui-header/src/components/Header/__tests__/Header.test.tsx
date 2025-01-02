@@ -30,6 +30,7 @@ describe("Header modifiers", () => {
 			"bg-surface-light",
 			"dark:border-border-accent",
 			"dark:bg-surface-dark",
+			"border-b-4",
 		]);
 		expectToHaveClasses(header.children[0], [
 			"mt-0",
@@ -51,6 +52,7 @@ describe("Header modifiers", () => {
 			"bg-surface-dark",
 			"dark:border-border-medium",
 			"dark:bg-surface-light",
+			"border-b-4",
 		]);
 		expectToHaveClasses(header.children[0], [
 			"mt-0",
@@ -70,6 +72,7 @@ describe("Header modifiers", () => {
 			HEADER_CLASSNAME,
 			"border-border-medium",
 			"bg-surface-light",
+			"border-b-4",
 		]);
 		expectToHaveClasses(header.children[0], [
 			"mt-0",
@@ -89,6 +92,7 @@ describe("Header modifiers", () => {
 			HEADER_CLASSNAME,
 			"border-border-accent",
 			"bg-surface-dark",
+			"border-b-4",
 		]);
 		expectToHaveClasses(header.children[0], [
 			"mt-0",
@@ -123,7 +127,7 @@ describe("Header modifiers", () => {
 		expect(header.className).not.toContain("mt-0");
 	});
 
-	it("should render a responsive header tag (system)", async () => {
+	it("should render a sticky responsive header tag (system)", async () => {
 		render(<Header sticky>hello</Header>);
 		const header = await screen.findByRole("banner");
 		expectToHaveClasses(header, [
@@ -135,6 +139,7 @@ describe("Header modifiers", () => {
 			"sticky",
 			"top-0",
 			"z-50",
+			"border-b-4",
 		]);
 		expectToHaveClasses(header.children[0], [
 			"mt-0",
@@ -142,6 +147,88 @@ describe("Header modifiers", () => {
 			"w-full",
 			"flex-col",
 			"p-2",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+	});
+
+	it("should render a responsive header tag (system) with no borders", async () => {
+		render(<Header noBorder>hello</Header>);
+		const header = await screen.findByRole("banner");
+		expectToHaveClasses(header, [
+			HEADER_CLASSNAME,
+			"bg-surface-light",
+			"dark:bg-surface-dark",
+		]);
+		expectToHaveClasses(header.children[0], [
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+	});
+
+	it("should render a responsive header tag (system) with no margins", async () => {
+		render(<Header noMargin>hello</Header>);
+		const header = await screen.findByRole("banner");
+		expectToHaveClasses(header, [
+			HEADER_CLASSNAME,
+			"border-border-medium",
+			"bg-surface-light",
+			"dark:border-border-accent",
+			"dark:bg-surface-dark",
+			"border-b-4",
+		]);
+		expectToHaveClasses(header.children[0], [
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+	});
+
+	it("should render a responsive header tag (system) with no paddings", async () => {
+		render(<Header noPadding>hello</Header>);
+		const header = await screen.findByRole("banner");
+		expectToHaveClasses(header, [
+			HEADER_CLASSNAME,
+			"border-border-medium",
+			"bg-surface-light",
+			"dark:border-border-accent",
+			"dark:bg-surface-dark",
+			"border-b-4",
+		]);
+		expectToHaveClasses(header.children[0], [
+			"mt-0",
+			"flex",
+			"w-full",
+			"flex-col",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+	});
+
+	it("should render a responsive header tag (system) with no paddings, margins or border", async () => {
+		render(
+			<Header noPadding noMargin noBorder>
+				hello
+			</Header>,
+		);
+		const header = await screen.findByRole("banner");
+		expectToHaveClasses(header, [
+			HEADER_CLASSNAME,
+			"bg-surface-light",
+			"dark:bg-surface-dark",
+		]);
+		expectToHaveClasses(header.children[0], [
+			"flex",
+			"w-full",
+			"flex-col",
 			"md:mx-auto",
 			"md:max-w-4xl",
 		]);
