@@ -12,4 +12,14 @@ export type MainProps = {
 	 * @default false
 	 */
 	raw?: boolean;
+	/**
+	 * Whether or not to render the Main component with no margin.
+	 * @default false
+	 */
+	noMargin?: boolean;
+	/**
+	 * Whether or not to render the Main component with no padding.
+	 * @default false
+	 */
+	noPadding?: boolean;
 };
