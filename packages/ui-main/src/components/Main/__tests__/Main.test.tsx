@@ -42,4 +42,50 @@ describe("Main modifiers", () => {
 		expect(main.className).toContain("av-main");
 		expect(main.className).not.toContain("mt-0");
 	});
+
+	it("should render a responsive main tag with no margins", async () => {
+		render(<Main noMargin>hello</Main>);
+		const main = await screen.findByRole("main");
+		expectToHaveClasses(main, [
+			"av-main",
+			"flex",
+			"w-full",
+			"flex-col",
+			"p-2",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+	});
+
+	it("should render a responsive main tag with no paddings", async () => {
+		render(<Main noPadding>hello</Main>);
+		const main = await screen.findByRole("main");
+		expectToHaveClasses(main, [
+			"av-main",
+			"mt-2",
+			"flex",
+			"w-full",
+			"flex-col",
+			"sm:mt-3",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+	});
+
+	it("should render a responsive main tag with no margins or paddings", async () => {
+		render(
+			<Main noMargin noPadding>
+				hello
+			</Main>,
+		);
+		const main = await screen.findByRole("main");
+		expectToHaveClasses(main, [
+			"av-main",
+			"flex",
+			"w-full",
+			"flex-col",
+			"md:mx-auto",
+			"md:max-w-4xl",
+		]);
+	});
 });
