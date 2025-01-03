@@ -131,6 +131,7 @@ export const TableCell = ({
 	children,
 	component,
 	className,
+	align,
 	...otherProps
 }: TableCellProps) => {
 	const context = useContext(TableContext);
@@ -141,6 +142,7 @@ export const TableCell = ({
 		className,
 		mode: context.mode,
 		compact: context.compact,
+		align,
 	});
 	return (
 		<Component className={cellClass} {...otherProps}>

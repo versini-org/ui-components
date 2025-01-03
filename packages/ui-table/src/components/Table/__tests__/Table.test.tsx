@@ -541,6 +541,60 @@ describe("Table components", () => {
 		expect(tableCell.tagName).toBe("TD");
 	});
 
+	it("should render a default table cell (td) aligned to the left", async () => {
+		render(
+			<table>
+				<tbody>
+					<tr>
+						<TableCell data-testid="table-cell" align="left">
+							hello
+						</TableCell>
+					</tr>
+				</tbody>
+			</table>,
+		);
+		const tableCell = await screen.findByTestId("table-cell");
+		expect(tableCell).toBeInTheDocument();
+		expect(tableCell.tagName).toBe("TD");
+		expect(tableCell.className).toContain("flex justify-start");
+	});
+
+	it("should render a default table cell (td) aligned to the right", async () => {
+		render(
+			<table>
+				<tbody>
+					<tr>
+						<TableCell data-testid="table-cell" align="right">
+							hello
+						</TableCell>
+					</tr>
+				</tbody>
+			</table>,
+		);
+		const tableCell = await screen.findByTestId("table-cell");
+		expect(tableCell).toBeInTheDocument();
+		expect(tableCell.tagName).toBe("TD");
+		expect(tableCell.className).toContain("flex justify-end");
+	});
+
+	it("should render a default table cell (td) center-aligned", async () => {
+		render(
+			<table>
+				<tbody>
+					<tr>
+						<TableCell data-testid="table-cell" align="center">
+							hello
+						</TableCell>
+					</tr>
+				</tbody>
+			</table>,
+		);
+		const tableCell = await screen.findByTestId("table-cell");
+		expect(tableCell).toBeInTheDocument();
+		expect(tableCell.tagName).toBe("TD");
+		expect(tableCell.className).toContain("flex justify-center");
+	});
+
 	it("should render a sortable table cell with custom CSS for the button", async () => {
 		render(
 			<table>
