@@ -28,12 +28,16 @@ export const getTableClasses = ({
 			{
 				"overflow-x-auto": !stickyHeader && !stickyFooter,
 				"overflow-y-scroll": stickyHeader || stickyFooter,
-				"bg-surface-darker text-copy-light": mode === "dark",
-				"bg-surface-light text-copy-dark": mode === "light",
-				"bg-surface-darker text-copy-light dark:bg-surface-light dark:text-copy-dark":
-					mode === "system",
-				"bg-surface-light text-copy-dark dark:bg-surface-darker dark:text-copy-light":
-					mode === "alt-system",
+
+				"bg-surface-darker": mode === "dark" || mode === "system",
+				"bg-surface-light": mode === "light" || mode === "alt-system",
+				"dark:bg-surface-light": mode === "system",
+				"dark:bg-surface-darker": mode === "alt-system",
+
+				"text-copy-light": mode === "dark",
+				"text-copy-dark": mode === "light",
+				"text-copy-light dark:text-copy-dark": mode === "system",
+				"text-copy-dark dark:text-copy-light": mode === "alt-system",
 			},
 			wrapperClassName,
 		),
@@ -117,10 +121,10 @@ export const getTableRowClasses = ({
 	) {
 		return clsx(
 			{
-				"bg-table-head-dark": mode === "dark",
-				"bg-table-head-light": mode === "light",
-				"bg-table-head-dark dark:bg-table-head-light": mode === "system",
-				"bg-table-head-light dark:bg-table-head-dark": mode === "alt-system",
+				"bg-table-head-dark": mode === "dark" || mode === "system",
+				"bg-table-head-light": mode === "light" || mode === "alt-system",
+				"dark:bg-table-head-light": mode === "system",
+				"dark:bg-table-head-dark": mode === "alt-system",
 			},
 			className,
 		);
@@ -128,19 +132,19 @@ export const getTableRowClasses = ({
 	return clsx(
 		"border-b last:border-0",
 		{
-			"border-table-dark": mode === "dark",
+			"border-table-dark": mode === "dark" || mode === "system",
 			"odd:bg-table-dark-odd even:bg-table-dark-even":
 				cellWrapper === CELL_WRAPPER_BODY && mode === "dark",
 
-			"border-table-light": mode === "light",
+			"border-table-light": mode === "light" || mode === "alt-system",
 			"odd:bg-table-light-odd even:bg-table-light-even":
 				cellWrapper === CELL_WRAPPER_BODY && mode === "light",
 
-			"border-table-dark dark:border-table-light": mode === "system",
+			"dark:border-table-light": mode === "system",
 			"odd:bg-table-dark-odd even:bg-table-dark-even dark:odd:bg-table-light-odd dark:even:bg-table-light-even":
 				cellWrapper === CELL_WRAPPER_BODY && mode === "system",
 
-			"border-table-light dark:border-table-dark": mode === "alt-system",
+			"dark:border-table-dark": mode === "alt-system",
 			"odd:bg-table-light-odd even:bg-table-light-even dark:odd:bg-table-dark-odd dark:even:bg-table-dark-even":
 				cellWrapper === CELL_WRAPPER_BODY && mode === "alt-system",
 		},
@@ -166,10 +170,11 @@ export const getTableCellClasses = ({
 			"flex justify-start": align === "left",
 			"flex justify-center": align === "center",
 			"flex justify-end": align === "right",
-			"text-copy-light": mode === "dark",
-			"text-copy-dark": mode === "light",
-			"text-copy-light dark:text-copy-dark": mode === "system",
-			"text-copy-dark dark:text-copy-light": mode === "alt-system",
+
+			"text-copy-light": mode === "dark" || mode === "system",
+			"text-copy-dark": mode === "light" || mode === "alt-system",
+			"dark:text-copy-dark": mode === "system",
+			"dark:text-copy-light": mode === "alt-system",
 			"px-4 py-3":
 				!compact &&
 				(cellWrapper === CELL_WRAPPER_HEAD ||
