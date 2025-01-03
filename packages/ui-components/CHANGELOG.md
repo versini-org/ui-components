@@ -192,6 +192,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.34.1](https://github.com/versini-org/ui-components/compare/ui-components-v5.34.0...ui-components-v5.34.1) (2025-01-03)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-table bumped to 3.0.1
+
 ## [5.34.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.33.21...ui-components-v5.34.0) (2025-01-03)
 
 

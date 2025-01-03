@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/versini-org/ui-components/compare/ui-table-v3.0.0...ui-table-v3.0.1) (2025-01-03)
+
+
+### Bug Fixes
+
+* **Table:** align prop should apply to extra node to prevent flex cla… ([#881](https://github.com/versini-org/ui-components/issues/881)) ([7c170b0](https://github.com/versini-org/ui-components/commit/7c170b07d9b27567aecd925cdd1d43cc078fb73a))
+
 ## [3.0.0](https://github.com/versini-org/ui-components/compare/ui-table-v2.0.10...ui-table-v3.0.0) (2025-01-03)
 
 
