@@ -165,25 +165,28 @@ export const getTableCellClasses = ({
 	compact?: boolean;
 	align?: "left" | "center" | "right";
 }) => {
-	return clsx(
-		{
-			"flex justify-start": align === "left",
-			"flex justify-center": align === "center",
-			"flex justify-end": align === "right",
-
-			"text-copy-light": mode === "dark" || mode === "system",
-			"text-copy-dark": mode === "light" || mode === "alt-system",
-			"dark:text-copy-dark": mode === "system",
-			"dark:text-copy-light": mode === "alt-system",
-			"px-4 py-3":
-				!compact &&
-				(cellWrapper === CELL_WRAPPER_HEAD ||
-					cellWrapper === CELL_WRAPPER_FOOTER),
-			"p-4": !compact && cellWrapper === CELL_WRAPPER_BODY,
-			"px-2 py-1.5": compact,
-		},
-		className,
-	);
+	return {
+		alignClasses: clsx({
+			"flex justify-start text-left": align === "left",
+			"flex justify-center text-center": align === "center",
+			"flex justify-end text-right": align === "right",
+		}),
+		mainClasses: clsx(
+			{
+				"text-copy-light": mode === "dark" || mode === "system",
+				"text-copy-dark": mode === "light" || mode === "alt-system",
+				"dark:text-copy-dark": mode === "system",
+				"dark:text-copy-light": mode === "alt-system",
+				"px-4 py-3":
+					!compact &&
+					(cellWrapper === CELL_WRAPPER_HEAD ||
+						cellWrapper === CELL_WRAPPER_FOOTER),
+				"p-4": !compact && cellWrapper === CELL_WRAPPER_BODY,
+				"px-2 py-1.5": compact,
+			},
+			className,
+		),
+	};
 };
 
 export const getTableCellSortButtonClasses = ({
