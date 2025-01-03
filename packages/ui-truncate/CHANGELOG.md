@@ -1,5 +1,34 @@
 # Changelog
 
+## [3.0.0](https://github.com/versini-org/ui-components/compare/ui-truncate-v2.0.10...ui-truncate-v3.0.0) (2025-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Button:** spacing prop is deprecated - use className and Tailwind margins instead.
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+* **Truncate:** adding Truncate component ([#687](https://github.com/versini-org/ui-components/issues/687)) ([882b63b](https://github.com/versini-org/ui-components/commit/882b63b27dba050b5dbac1d2d82c949acfa5b830))
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#692](https://github.com/versini-org/ui-components/issues/692)) ([2300b7c](https://github.com/versini-org/ui-components/commit/2300b7c563ce6d5ad704b93ea7cc63ba9b8c6993))
+* bump non-breaking dependencies to latest ([#743](https://github.com/versini-org/ui-components/issues/743)) ([1438577](https://github.com/versini-org/ui-components/commit/1438577b4de57d063e84872ba8c4d5687b3def13))
+* bump non-breaking dependencies to latest ([#771](https://github.com/versini-org/ui-components/issues/771)) ([11adf6b](https://github.com/versini-org/ui-components/commit/11adf6bdd4555f00c9494ea86dae8b99793c88b3))
+* **Button:** first pass at removing spacing prop from all components ([#817](https://github.com/versini-org/ui-components/issues/817)) ([0d79337](https://github.com/versini-org/ui-components/commit/0d79337ead5a5e846b8d09130e5dc9de92bf8ef5))
+* **Truncate:** force word break even if there is no truncation ([#777](https://github.com/versini-org/ui-components/issues/777)) ([3b9b79f](https://github.com/versini-org/ui-components/commit/3b9b79f0bff44a915e5eb1b40626c346c041b728))
+* **ui-truncate:** truncate should not split words appart ([#690](https://github.com/versini-org/ui-components/issues/690)) ([67b1686](https://github.com/versini-org/ui-components/commit/67b16866f4284dd405a9b1500a34d13521666528))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 4.0.0
+
 ## [2.0.10](https://github.com/versini-org/ui-components/compare/ui-truncate-v2.0.9...ui-truncate-v2.0.10) (2025-01-02)
 
 

@@ -1,5 +1,32 @@
 # Changelog
 
+## [4.0.0](https://github.com/versini-org/ui-components/compare/ui-svgicon-v3.0.3...ui-svgicon-v4.0.0) (2025-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Icons:** replacing defaultClassName with size prop ([#846](https://github.com/versini-org/ui-components/issues/846))
+* **Icons:** removing spacing prop in favor of Tailwind classes ([#824](https://github.com/versini-org/ui-components/issues/824))
+
+### Features
+
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+* **Icons:** replacing defaultClassName with size prop ([#846](https://github.com/versini-org/ui-components/issues/846)) ([ecbf05c](https://github.com/versini-org/ui-components/commit/ecbf05c3e764ff5425f62b5a3ba96797ccbb1a1a))
+* introducing ui-types - for all types ([#802](https://github.com/versini-org/ui-components/issues/802)) ([950bccb](https://github.com/versini-org/ui-components/commit/950bccb37bca104487c597f8a043ca3382331105))
+
+
+### Bug Fixes
+
+* **Icons:** className should combine not overwrite default class ([#844](https://github.com/versini-org/ui-components/issues/844)) ([95cfe1f](https://github.com/versini-org/ui-components/commit/95cfe1f85b09d2d79b0e52e489cf1c4429758d57))
+* **Icons:** removing spacing prop in favor of Tailwind classes ([#824](https://github.com/versini-org/ui-components/issues/824)) ([2da2546](https://github.com/versini-org/ui-components/commit/2da2546d4e3c9e0bd61b9995ca9dc67d8aea18ca))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 4.0.0
+
 ## [3.0.3](https://github.com/versini-org/ui-components/compare/ui-svgicon-v3.0.2...ui-svgicon-v3.0.3) (2025-01-02)
 
 

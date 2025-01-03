@@ -192,6 +192,104 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
+## [5.34.0](https://github.com/versini-org/ui-components/compare/ui-components-v5.33.21...ui-components-v5.34.0) (2025-01-03)
+
+
+### Features
+
+* adding mode prop to all components ([#374](https://github.com/versini-org/ui-components/issues/374)) ([71e06d8](https://github.com/versini-org/ui-components/commit/71e06d8c050be82f56f5b1f798502c9c9ddec9fd))
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+* applying global accent color in dark mode ([#472](https://github.com/versini-org/ui-components/issues/472)) ([4e3b13c](https://github.com/versini-org/ui-components/commit/4e3b13ca94a5df66ab66a7a6afd0ff7b550d75d3))
+* **Bubble:** adding modes for copy-to-clipboard button ([#416](https://github.com/versini-org/ui-components/issues/416)) ([9caf87c](https://github.com/versini-org/ui-components/commit/9caf87c5197844c8dc77c181cc78bc76d14df2e8))
+* **Bubble:** extracting Bubble as a standalone package ([#646](https://github.com/versini-org/ui-components/issues/646)) ([7eb19b7](https://github.com/versini-org/ui-components/commit/7eb19b791ba2d13c72d2b19bb0a01626f0ee3b97))
+* **Button:** adding prop variant to support different styles ([#424](https://github.com/versini-org/ui-components/issues/424)) ([49eaf4f](https://github.com/versini-org/ui-components/commit/49eaf4f6ca7c267a210d0ab1ef377366605e1e4c))
+* **Button:** extracting Button and peers as a standalone package ([#635](https://github.com/versini-org/ui-components/issues/635)) ([651f857](https://github.com/versini-org/ui-components/commit/651f85739ba644cfa6d208e9779c8ded178f157b))
+* **ButtonIcon:** adding support for prop "align" ([#498](https://github.com/versini-org/ui-components/issues/498)) ([3a96dbe](https://github.com/versini-org/ui-components/commit/3a96dbea52b48db73921618dd479091c038984c8))
+* **Card:** adding prop "compact" ([#463](https://github.com/versini-org/ui-components/issues/463)) ([1f65900](https://github.com/versini-org/ui-components/commit/1f659002660c24ae69bcf88f9179fb6af4ebac44))
+* **Card:** adding prop bodyClassName ([#403](https://github.com/versini-org/ui-components/issues/403)) ([4f896a5](https://github.com/versini-org/ui-components/commit/4f896a5ebf9bdef19735502fc14c42723b592608))
+* **Card:** adding support for darker mode and noBorder options ([#576](https://github.com/versini-org/ui-components/issues/576)) ([40c03e9](https://github.com/versini-org/ui-components/commit/40c03e9a79213d212023e6ec38fdfae8cef298c6))
+* **Card:** extracting Card as a standalone package ([#648](https://github.com/versini-org/ui-components/issues/648)) ([1a08557](https://github.com/versini-org/ui-components/commit/1a0855708584f41c825efe170da4aa13ff163453))
+* **Footer:** extracting Footer as a standalone package ([#655](https://github.com/versini-org/ui-components/issues/655)) ([8808a2a](https://github.com/versini-org/ui-components/commit/8808a2a3f0490894a072f8fe1f3e4bd8bf94ed6f))
+* **Header:** extracting Header as a standalone package ([#657](https://github.com/versini-org/ui-components/issues/657)) ([df9d2d9](https://github.com/versini-org/ui-components/commit/df9d2d9b52123e80929f46952078cf45ca52073f))
+* **Main:** extracting Main as a standalone package ([#659](https://github.com/versini-org/ui-components/issues/659)) ([5e9330b](https://github.com/versini-org/ui-components/commit/5e9330b3f2250b3d1d34fc56b2f6c975532c38d2))
+* **Menu:** extracting Menu as a standalone package ([#661](https://github.com/versini-org/ui-components/issues/661)) ([c1065c3](https://github.com/versini-org/ui-components/commit/c1065c3da576d28ccc484234bb03d0ad24c4d51a))
+* **Panel:** adding className prop to override default width ([#594](https://github.com/versini-org/ui-components/issues/594)) ([f878f15](https://github.com/versini-org/ui-components/commit/f878f15154f09f7ff557de76d4aa43ef2b63884f))
+* **Panel:** extracting Panel as a standalone package ([#663](https://github.com/versini-org/ui-components/issues/663)) ([3450a8f](https://github.com/versini-org/ui-components/commit/3450a8fd5e72d5a5cb6cccf0dc0836d810850cf2))
+* **Pill:** extracting Pill as a standalone package ([#665](https://github.com/versini-org/ui-components/issues/665)) ([0f13fae](https://github.com/versini-org/ui-components/commit/0f13faea848ff6dd561837ccc439cd0bde69c67d))
+* **Pill:** introducing Pill component ([#363](https://github.com/versini-org/ui-components/issues/363)) ([a6672c7](https://github.com/versini-org/ui-components/commit/a6672c755c17b7a97fc584e4dae158164e86899e))
+* refactor Menu to extract trigger prop ([#536](https://github.com/versini-org/ui-components/issues/536)) ([1818315](https://github.com/versini-org/ui-components/commit/181831560f8a8e2562b14fd438d98b065338d4a4))
+* **Spinner:** extracting Spinner as a standalone package ([#666](https://github.com/versini-org/ui-components/issues/666)) ([d607d22](https://github.com/versini-org/ui-components/commit/d607d224c302c544a873515a31e5a2c8a285ca03))
+* **Table:** adding TableCellSort to support sortable data ([#501](https://github.com/versini-org/ui-components/issues/501)) ([5115669](https://github.com/versini-org/ui-components/commit/511566909d7223f8a8057bf2256ef1da449aec1e))
+* **Table:** adding TableFooter and better sticky visual clues ([#437](https://github.com/versini-org/ui-components/issues/437)) ([33d73c6](https://github.com/versini-org/ui-components/commit/33d73c6dde1b414d6b1d01feb605e4ad0e110335))
+* **Table:** better sort indicator when a column is sorted ([#507](https://github.com/versini-org/ui-components/issues/507)) ([e52ca48](https://github.com/versini-org/ui-components/commit/e52ca48ff81ff84da926248df7d539b73bf2ea3e))
+* **Table:** extracting Table as a standalone package ([#668](https://github.com/versini-org/ui-components/issues/668)) ([d2ad0f5](https://github.com/versini-org/ui-components/commit/d2ad0f568557c3fb409caa048c1f7a9a105763b9))
+* **Table:** using the new sort icons ([#514](https://github.com/versini-org/ui-components/issues/514)) ([74ca7a9](https://github.com/versini-org/ui-components/commit/74ca7a901990ace2beeff956c54d04a26ffa250b))
+* **ui-components:** adding colors to Header component ([#468](https://github.com/versini-org/ui-components/issues/468)) ([23f978a](https://github.com/versini-org/ui-components/commit/23f978af7e147003d7daef0bb7e38d7d42255624))
+* **ui-components:** Adding support for compact Table ([#455](https://github.com/versini-org/ui-components/issues/455)) ([22d058a](https://github.com/versini-org/ui-components/commit/22d058a21874343671693c4a33c07a8d24817da5))
+* **ui-form:** moving form components to their own package ([#393](https://github.com/versini-org/ui-components/issues/393)) ([59a6f42](https://github.com/versini-org/ui-components/commit/59a6f42827a6a9b899c816f506a8d8174cf12a2b))
+* **ui-styles:** renaming ui-plugins package into ui-styles ([#397](https://github.com/versini-org/ui-components/issues/397)) ([90f0343](https://github.com/versini-org/ui-components/commit/90f0343fd8858a4a28a14b6b412ee48484c4ae14))
+
+
+### Bug Fixes
+
+* **Anchor:** [a11y] replace `div` with `span` as `div` cannot be placed in `p` ([#409](https://github.com/versini-org/ui-components/issues/409)) ([f789f0c](https://github.com/versini-org/ui-components/commit/f789f0c49cc4f3275e6abe17795de2384fd77ab0))
+* **Anchor:** replacing internal Anchor with individual in main lib ([#642](https://github.com/versini-org/ui-components/issues/642)) ([7afd5c9](https://github.com/versini-org/ui-components/commit/7afd5c94f3f922d901f95e661049ad4c73a927c4))
+* better color contrast for right Bubble ([#488](https://github.com/versini-org/ui-components/issues/488)) ([cccc4df](https://github.com/versini-org/ui-components/commit/cccc4dfe8b0e9e0299dc50a51ada02eb4a0e18b0))
+* **Bubble:** smaller and better copy-paste icon ([#552](https://github.com/versini-org/ui-components/issues/552)) ([44e4858](https://github.com/versini-org/ui-components/commit/44e4858eaaf78f1bc1c28c41a39f4ee45d382bf0))
+* bump @floating-ui/react to latest ([#490](https://github.com/versini-org/ui-components/issues/490)) ([67a84a5](https://github.com/versini-org/ui-components/commit/67a84a5556c9708ca1e9be2f902cf59a4088ffb0))
+* bump dependencies to latest - AGAIN ([#548](https://github.com/versini-org/ui-components/issues/548)) ([350d5de](https://github.com/versini-org/ui-components/commit/350d5dee4b982f79a54df42d7e73a2eb2ce83439))
+* bump dependencies to latest ([#575](https://github.com/versini-org/ui-components/issues/575)) ([90cf804](https://github.com/versini-org/ui-components/commit/90cf804bb4d9c384a15d4bb1bf6913d11a4338c8))
+* bump dependencies to latest ([#598](https://github.com/versini-org/ui-components/issues/598)) ([71c858d](https://github.com/versini-org/ui-components/commit/71c858df83cb67c22353ddb894546a725d71e382))
+* bump dependencies to latest ([#637](https://github.com/versini-org/ui-components/issues/637)) ([428b40e](https://github.com/versini-org/ui-components/commit/428b40e3d7d872b786cb5216bbade31dcc1c7d2b))
+* bump dependencies to latest ([#685](https://github.com/versini-org/ui-components/issues/685)) ([4f79647](https://github.com/versini-org/ui-components/commit/4f79647fea70398adf99653456af89e5175d7008))
+* bump non-breaking dependencies ([#539](https://github.com/versini-org/ui-components/issues/539)) ([2826c44](https://github.com/versini-org/ui-components/commit/2826c44c5a55bf45b97072a1865964c30d05a302))
+* bump non-breaking dependencies to latest ([#459](https://github.com/versini-org/ui-components/issues/459)) ([fffc085](https://github.com/versini-org/ui-components/commit/fffc085a69b9db94bca00aa5614b33e04b347f29))
+* bump non-breaking dependencies to latest ([#553](https://github.com/versini-org/ui-components/issues/553)) ([1f6a6e5](https://github.com/versini-org/ui-components/commit/1f6a6e5cceeb1ef3bf192c4b743d35bc37406357))
+* bump non-breaking dependencies to latest ([#606](https://github.com/versini-org/ui-components/issues/606)) ([0afdec5](https://github.com/versini-org/ui-components/commit/0afdec5518caf5b5f07845c9f916dc229d517018))
+* bump non-breaking dependencies to latest ([#615](https://github.com/versini-org/ui-components/issues/615)) ([57c9f00](https://github.com/versini-org/ui-components/commit/57c9f00a23e081196b4925b38bd0097c4ba6e093))
+* bump prod dependencies ([#546](https://github.com/versini-org/ui-components/issues/546)) ([ee97a88](https://github.com/versini-org/ui-components/commit/ee97a88eb225dc1547216c0694aff59924792ace))
+* bump tailwind dependencies to latest ([#454](https://github.com/versini-org/ui-components/issues/454)) ([8c06361](https://github.com/versini-org/ui-components/commit/8c0636164432be100410778d810ec6c3a6613c9b))
+* cleanup dependency graph a little ([#670](https://github.com/versini-org/ui-components/issues/670)) ([cb61411](https://github.com/versini-org/ui-components/commit/cb61411b986c03e050a8d5c36f51d2945d90dd9f))
+* ensure Button receives focus even in Safari ([#533](https://github.com/versini-org/ui-components/issues/533)) ([7af6083](https://github.com/versini-org/ui-components/commit/7af6083da983fbf847f23bc0f4acb92212847c3a))
+* **Menu:** no way to update focusMode ([#414](https://github.com/versini-org/ui-components/issues/414)) ([2535187](https://github.com/versini-org/ui-components/commit/2535187538dbe428a62addb89735d1572b9045c9))
+* **Menu:** return focus to trigger on close ([#538](https://github.com/versini-org/ui-components/issues/538)) ([9d229b0](https://github.com/versini-org/ui-components/commit/9d229b05b1872a5661b73db6493b316380006b4e))
+* **Panel:** slightly better sizing at lower breakpoints ([#626](https://github.com/versini-org/ui-components/issues/626)) ([8ac1264](https://github.com/versini-org/ui-components/commit/8ac12642728fccde7e520dfe24e278ae54a71c9f))
+* refactor Button and Anchor ([#492](https://github.com/versini-org/ui-components/issues/492)) ([58b2df0](https://github.com/versini-org/ui-components/commit/58b2df0ac748d7f9bd949c3309867d4ffc66786b))
+* refactor ButtonIcon to extract ButtonSort as a private component ([#508](https://github.com/versini-org/ui-components/issues/508)) ([dd96ec9](https://github.com/versini-org/ui-components/commit/dd96ec94abce7bc405e8516a7dee56e8a537d782))
+* **Table:** better header and footer contrast in dark mode - take 2 ([#441](https://github.com/versini-org/ui-components/issues/441)) ([8989649](https://github.com/versini-org/ui-components/commit/89896491ffff970c9fed467639363ba1c7c9cf52))
+* **TableCellSort:** better types and description for each ([#503](https://github.com/versini-org/ui-components/issues/503)) ([cf44672](https://github.com/versini-org/ui-components/commit/cf4467257a91e45ac28df1b187f4f9261cc84d4b))
+* **Table:** invalid sort indicator location when sticky is enabled ([#510](https://github.com/versini-org/ui-components/issues/510)) ([8408f69](https://github.com/versini-org/ui-components/commit/8408f696c74def74aaca12d9c498225d7e208800))
+* **Table:** slightly larger sort indicator icons ([#515](https://github.com/versini-org/ui-components/issues/515)) ([fed2541](https://github.com/versini-org/ui-components/commit/fed2541e2d321104bf73a70a9af150c654cc001e))
+* **ui-components:** better Header contrast in dark mode ([#470](https://github.com/versini-org/ui-components/issues/470)) ([ed2cd0d](https://github.com/versini-org/ui-components/commit/ed2cd0db8b508e422c07fc01ae9a4cd315e364a2))
+* **ui-components:** Card compact is not compact enough at lower bp ([#476](https://github.com/versini-org/ui-components/issues/476)) ([a30c555](https://github.com/versini-org/ui-components/commit/a30c55510685f601366eff11c4ae3d827f752802))
+* **ui-components:** Main is missing a top margin at lower breakpoints ([#474](https://github.com/versini-org/ui-components/issues/474)) ([dee8490](https://github.com/versini-org/ui-components/commit/dee849091f06cfc079d9e647f0ab3927ee97ef74))
+* **ui-components:** minor clean up - removing obsolete code ([#395](https://github.com/versini-org/ui-components/issues/395)) ([1d69969](https://github.com/versini-org/ui-components/commit/1d69969d6c85abfbd3ba1af302edc5bf44532386))
+
+
+### Performance Improvements
+
+* refactor Panel to lazy load heavy imports ([#535](https://github.com/versini-org/ui-components/issues/535)) ([840113b](https://github.com/versini-org/ui-components/commit/840113be1cde02e5aadf2a70fed3556dea1826d2))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-anchor bumped to 1.4.0
+    * @versini/ui-button bumped to 4.0.0
+    * @versini/ui-bubble bumped to 3.0.0
+    * @versini/ui-card bumped to 3.0.0
+    * @versini/ui-footer bumped to 3.0.0
+    * @versini/ui-header bumped to 3.0.0
+    * @versini/ui-icons bumped to 4.0.0
+    * @versini/ui-main bumped to 3.0.0
+    * @versini/ui-menu bumped to 3.0.0
+    * @versini/ui-panel bumped to 1.3.0
+    * @versini/ui-pill bumped to 3.0.0
+    * @versini/ui-spinner bumped to 3.0.0
+    * @versini/ui-table bumped to 3.0.0
+
 ## [5.33.21](https://github.com/versini-org/ui-components/compare/ui-components-v5.33.20...ui-components-v5.33.21) (2025-01-02)
 
 

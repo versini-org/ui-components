@@ -1,5 +1,56 @@
 # Changelog
 
+## [4.0.0](https://github.com/versini-org/ui-components/compare/ui-button-v3.2.2...ui-button-v4.0.0) (2025-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Icons:** replacing defaultClassName with size prop ([#846](https://github.com/versini-org/ui-components/issues/846))
+* **Bubble:** removing spacing prop in favor of Tailwind classes ([#820](https://github.com/versini-org/ui-components/issues/820))
+* **Button:** spacing prop is deprecated - use className and Tailwind margins instead.
+
+### Features
+
+* adding ButtonCopy component ([#840](https://github.com/versini-org/ui-components/issues/840)) ([54c6f8c](https://github.com/versini-org/ui-components/commit/54c6f8c61aac2a4440429f120a8148c938196388))
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+* adding ui-button-types ([#799](https://github.com/versini-org/ui-components/issues/799)) ([c1b0f94](https://github.com/versini-org/ui-components/commit/c1b0f94aa52d65985d1a84bf2255b6462fc8e092))
+* adding ui-spacing and ui-spacing-types ([#785](https://github.com/versini-org/ui-components/issues/785)) ([8a4c837](https://github.com/versini-org/ui-components/commit/8a4c83768c3dc86ec34dd846fc78023dc2a981d7))
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+* **Button:** adding support for radius prop ([#813](https://github.com/versini-org/ui-components/issues/813)) ([6a0719e](https://github.com/versini-org/ui-components/commit/6a0719e7a8fdd8fcaaa64b38e0c30d532acd8b73))
+* **Button:** adding variant "selected" ([#816](https://github.com/versini-org/ui-components/issues/816)) ([a394733](https://github.com/versini-org/ui-components/commit/a394733263422bdbe41df57b9391bfa781863252))
+* **ButtonCopy:** adding support for function for copyToClipboard prop ([#842](https://github.com/versini-org/ui-components/issues/842)) ([d1629c7](https://github.com/versini-org/ui-components/commit/d1629c77170d3a7ec9cf3e6275432bba02455014))
+* **Button:** extracting Button and peers as a standalone package ([#635](https://github.com/versini-org/ui-components/issues/635)) ([651f857](https://github.com/versini-org/ui-components/commit/651f85739ba644cfa6d208e9779c8ded178f157b))
+* **Button:** variable padding based on the size - take 2 ([#861](https://github.com/versini-org/ui-components/issues/861)) ([241f4dd](https://github.com/versini-org/ui-components/commit/241f4ddec7046c28ef7f00dbf7570be011fd20f3))
+* **Button:** variable padding based on the size ([#859](https://github.com/versini-org/ui-components/issues/859)) ([f4c70e5](https://github.com/versini-org/ui-components/commit/f4c70e51837f71d393ff999d571f8ceaedfb6f84))
+* **Icons:** replacing defaultClassName with size prop ([#846](https://github.com/versini-org/ui-components/issues/846)) ([ecbf05c](https://github.com/versini-org/ui-components/commit/ecbf05c3e764ff5425f62b5a3ba96797ccbb1a1a))
+* introducing ui-types - for all types ([#802](https://github.com/versini-org/ui-components/issues/802)) ([950bccb](https://github.com/versini-org/ui-components/commit/950bccb37bca104487c597f8a043ca3382331105))
+* simplification of the global name for individual components ([#652](https://github.com/versini-org/ui-components/issues/652)) ([91c6c85](https://github.com/versini-org/ui-components/commit/91c6c857e38f8368c509a04e63912a35e75c2053))
+
+
+### Bug Fixes
+
+* **Bubble:** removing spacing prop in favor of Tailwind classes ([#820](https://github.com/versini-org/ui-components/issues/820)) ([e6ac6ec](https://github.com/versini-org/ui-components/commit/e6ac6ec0025f65c5e2ad44de3bece61fe18ea33f))
+* bump non-breaking dependencies to latest ([#692](https://github.com/versini-org/ui-components/issues/692)) ([2300b7c](https://github.com/versini-org/ui-components/commit/2300b7c563ce6d5ad704b93ea7cc63ba9b8c6993))
+* bump non-breaking dependencies to latest ([#743](https://github.com/versini-org/ui-components/issues/743)) ([1438577](https://github.com/versini-org/ui-components/commit/1438577b4de57d063e84872ba8c4d5687b3def13))
+* bump non-breaking dependencies to latest ([#771](https://github.com/versini-org/ui-components/issues/771)) ([11adf6b](https://github.com/versini-org/ui-components/commit/11adf6bdd4555f00c9494ea86dae8b99793c88b3))
+* **Button:** better exports ([#645](https://github.com/versini-org/ui-components/issues/645)) ([2abb463](https://github.com/versini-org/ui-components/commit/2abb463cee00aeaa4fc1a3238605d89398a431f8))
+* **Button:** first pass at removing spacing prop from all components ([#817](https://github.com/versini-org/ui-components/issues/817)) ([0d79337](https://github.com/versini-org/ui-components/commit/0d79337ead5a5e846b8d09130e5dc9de92bf8ef5))
+* **ButtonIcon:** adding support for missing prop "variant" ([#876](https://github.com/versini-org/ui-components/issues/876)) ([654772c](https://github.com/versini-org/ui-components/commit/654772c69939387ab3d215a20202cc3fa5376913))
+* **Button:** lighter "selected" variant + minor refactor ([#874](https://github.com/versini-org/ui-components/issues/874)) ([c8ab416](https://github.com/versini-org/ui-components/commit/c8ab4169f067e65721ef68c42039951274bec114))
+* cleanup dependency graph a little ([#670](https://github.com/versini-org/ui-components/issues/670)) ([cb61411](https://github.com/versini-org/ui-components/commit/cb61411b986c03e050a8d5c36f51d2945d90dd9f))
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+* **ui-button:** remove dev dependency on ui-icons ([#705](https://github.com/versini-org/ui-components/issues/705)) ([b05ab47](https://github.com/versini-org/ui-components/commit/b05ab473bfc7ef798d133e35fc2f0d960a4d949c))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-icons bumped to 4.0.0
+    * @versini/ui-types bumped to 4.0.0
+  * devDependencies
+    * @versini/ui-svgicon bumped to 4.0.0
+
 ## [3.2.2](https://github.com/versini-org/ui-components/compare/ui-button-v3.2.1...ui-button-v3.2.2) (2025-01-02)
 
 
