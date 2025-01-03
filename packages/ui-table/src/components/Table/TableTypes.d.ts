@@ -55,6 +55,10 @@ export type TableCellProps = {
 	 * @default "td"
 	 */
 	component?: "td" | "th";
+	/**
+	 * Whether to align the cell content to the left, center, or right.
+	 */
+	align?: "left" | "center" | "right";
 } & React.ThHTMLAttributes<HTMLTableCellElement> &
 	React.TdHTMLAttributes<HTMLTableCellElement>;
 

@@ -153,14 +153,19 @@ export const getTableCellClasses = ({
 	className,
 	compact,
 	mode,
+	align,
 }: {
 	mode: string;
 	cellWrapper?: string;
 	className?: string;
 	compact?: boolean;
+	align?: "left" | "center" | "right";
 }) => {
 	return clsx(
 		{
+			"flex justify-start": align === "left",
+			"flex justify-center": align === "center",
+			"flex justify-end": align === "right",
 			"text-copy-light": mode === "dark",
 			"text-copy-dark": mode === "light",
 			"text-copy-light dark:text-copy-dark": mode === "system",
