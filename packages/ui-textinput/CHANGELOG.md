@@ -1,5 +1,42 @@
 # Changelog
 
+## [3.0.0](https://github.com/versini-org/ui-components/compare/ui-textinput-v2.0.6...ui-textinput-v3.0.0) (2025-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **TextInput:** removing spacing prop in favor of Tailwind classes ([#833](https://github.com/versini-org/ui-components/issues/833))
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+* adding ui-liveregion and ui-liveregion-types ([#789](https://github.com/versini-org/ui-components/issues/789)) ([5b3b875](https://github.com/versini-org/ui-components/commit/5b3b8757e7d07fa68aaf597b80d2bab151da2270))
+* adding ui-spacing and ui-spacing-types ([#785](https://github.com/versini-org/ui-components/issues/785)) ([8a4c837](https://github.com/versini-org/ui-components/commit/8a4c83768c3dc86ec34dd846fc78023dc2a981d7))
+* introducing ui-types - for all types ([#802](https://github.com/versini-org/ui-components/issues/802)) ([950bccb](https://github.com/versini-org/ui-components/commit/950bccb37bca104487c597f8a043ca3382331105))
+* **TextInput:** adding new prop: rightElementClassName ([#710](https://github.com/versini-org/ui-components/issues/710)) ([0374ebe](https://github.com/versini-org/ui-components/commit/0374ebe7bc477f949f3d652a78ee27a30299453f))
+* **TextInput:** adding size prop ([#693](https://github.com/versini-org/ui-components/issues/693)) ([397d22f](https://github.com/versini-org/ui-components/commit/397d22ffecb10b2c17696efc7a78c284797fe73c))
+* **TextInput:** extracting TextInput as a standalone package ([#674](https://github.com/versini-org/ui-components/issues/674)) ([34c0cf3](https://github.com/versini-org/ui-components/commit/34c0cf3254dc18a88bcab992a066c53e59f80e3f))
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#692](https://github.com/versini-org/ui-components/issues/692)) ([2300b7c](https://github.com/versini-org/ui-components/commit/2300b7c563ce6d5ad704b93ea7cc63ba9b8c6993))
+* bump non-breaking dependencies to latest ([#743](https://github.com/versini-org/ui-components/issues/743)) ([1438577](https://github.com/versini-org/ui-components/commit/1438577b4de57d063e84872ba8c4d5687b3def13))
+* bump non-breaking dependencies to latest ([#771](https://github.com/versini-org/ui-components/issues/771)) ([11adf6b](https://github.com/versini-org/ui-components/commit/11adf6bdd4555f00c9494ea86dae8b99793c88b3))
+* getting ready for react 9.x ([#746](https://github.com/versini-org/ui-components/issues/746)) ([88e2f0d](https://github.com/versini-org/ui-components/commit/88e2f0db161c2233821855c28b99bb452756437c))
+* removing remaining redundant dev dependencies ([#707](https://github.com/versini-org/ui-components/issues/707)) ([9a344ae](https://github.com/versini-org/ui-components/commit/9a344ae949186817d92ee36d4d659ab5c2986af4))
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+* **TextInput:** misaligned label and helper text at different sizes ([#695](https://github.com/versini-org/ui-components/issues/695)) ([9ff6fa1](https://github.com/versini-org/ui-components/commit/9ff6fa1345f386dda77a955e4c0883186feb5350))
+* **TextInput:** removing spacing prop in favor of Tailwind classes ([#833](https://github.com/versini-org/ui-components/issues/833)) ([6f28910](https://github.com/versini-org/ui-components/commit/6f2891013e1a81f7048a0a01a04be9409e07339c))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-liveregion bumped to 1.3.0
+    * @versini/ui-types bumped to 4.0.0
+
 ## [2.0.6](https://github.com/versini-org/ui-components/compare/ui-textinput-v2.0.5...ui-textinput-v2.0.6) (2025-01-02)
 
 

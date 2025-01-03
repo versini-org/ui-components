@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.3.0](https://github.com/versini-org/ui-components/compare/ui-liveregion-v1.2.8...ui-liveregion-v1.3.0) (2025-01-03)
+
+
+### Features
+
+* adding ui-liveregion and ui-liveregion-types ([#789](https://github.com/versini-org/ui-components/issues/789)) ([5b3b875](https://github.com/versini-org/ui-components/commit/5b3b8757e7d07fa68aaf597b80d2bab151da2270))
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+* introducing ui-types - for all types ([#802](https://github.com/versini-org/ui-components/issues/802)) ([950bccb](https://github.com/versini-org/ui-components/commit/950bccb37bca104487c597f8a043ca3382331105))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 4.0.0
+
 ## [1.2.8](https://github.com/versini-org/ui-components/compare/ui-liveregion-v1.2.7...ui-liveregion-v1.2.8) (2025-01-02)
 
 

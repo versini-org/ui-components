@@ -1,5 +1,56 @@
 # Changelog
 
+## [4.0.0](https://github.com/versini-org/ui-components/compare/ui-icons-v3.1.1...ui-icons-v4.0.0) (2025-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Icons:** replacing defaultClassName with size prop ([#846](https://github.com/versini-org/ui-components/issues/846))
+* **Icons:** removing spacing prop in favor of Tailwind classes ([#824](https://github.com/versini-org/ui-components/issues/824))
+
+### Features
+
+* adding IconLocked ([#573](https://github.com/versini-org/ui-components/issues/573)) ([27a9bf7](https://github.com/versini-org/ui-components/commit/27a9bf7f4b40cf34e48729762501f14722ca21fd))
+* adding IconRefresh ([#556](https://github.com/versini-org/ui-components/issues/556)) ([8e18bbe](https://github.com/versini-org/ui-components/commit/8e18bbe7dc29937c66db75021c907a4d5e3fa258))
+* adding IconSort ([#500](https://github.com/versini-org/ui-components/issues/500)) ([9f8b17b](https://github.com/versini-org/ui-components/commit/9f8b17bbcfe63183717079fc374699547f3f6c25))
+* adding IconSortUp and IconSortDown ([#512](https://github.com/versini-org/ui-components/issues/512)) ([85649fe](https://github.com/versini-org/ui-components/commit/85649fe3dd1434e49dfd0afcfce0adf015fef170))
+* adding mode prop to all components ([#374](https://github.com/versini-org/ui-components/issues/374)) ([71e06d8](https://github.com/versini-org/ui-components/commit/71e06d8c050be82f56f5b1f798502c9c9ddec9fd))
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+* adding ui-spacing and ui-spacing-types ([#785](https://github.com/versini-org/ui-components/issues/785)) ([8a4c837](https://github.com/versini-org/ui-components/commit/8a4c83768c3dc86ec34dd846fc78023dc2a981d7))
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+* **IconKey:** adding IconKey to library ([#584](https://github.com/versini-org/ui-components/issues/584)) ([3589daf](https://github.com/versini-org/ui-components/commit/3589daf4c373ad138b4534c021e664407c51931d))
+* **Icons:** adding IconBrightness ([#367](https://github.com/versini-org/ui-components/issues/367)) ([68afee2](https://github.com/versini-org/ui-components/commit/68afee290cc97e42d0031b9ad0e5754576227ca1))
+* **icons:** adding IconPasskey ([#612](https://github.com/versini-org/ui-components/issues/612)) ([4de4c61](https://github.com/versini-org/ui-components/commit/4de4c61831d7f4f7ee7088f4cdc2b935438ee281))
+* **Icons:** adding IconSliders ([#869](https://github.com/versini-org/ui-components/issues/869)) ([344c8a9](https://github.com/versini-org/ui-components/commit/344c8a91594939a322d98ce74d5cfb8c964258cd))
+* **Icons:** icons should be decorative by default ([b5d9295](https://github.com/versini-org/ui-components/commit/b5d92954fd09fad744c896ea95d4a4242a0a88f2))
+* **Icons:** replacing defaultClassName with size prop ([#846](https://github.com/versini-org/ui-components/issues/846)) ([ecbf05c](https://github.com/versini-org/ui-components/commit/ecbf05c3e764ff5425f62b5a3ba96797ccbb1a1a))
+* introducing ui-types - for all types ([#802](https://github.com/versini-org/ui-components/issues/802)) ([950bccb](https://github.com/versini-org/ui-components/commit/950bccb37bca104487c597f8a043ca3382331105))
+* refactoring all icons to use the size- Tailwind shortcut ([#505](https://github.com/versini-org/ui-components/issues/505)) ([ebac848](https://github.com/versini-org/ui-components/commit/ebac848cf929ddf395bacb35913177489f4d1040))
+* **ui-icons:** adding IconAdd ([#452](https://github.com/versini-org/ui-components/issues/452)) ([6b42e1d](https://github.com/versini-org/ui-components/commit/6b42e1d49cac9be31205c1e1d4120df5890a37e8))
+* **ui-icons:** adding IconMessages and IconBookmark ([#712](https://github.com/versini-org/ui-components/issues/712)) ([acc06e1](https://github.com/versini-org/ui-components/commit/acc06e18c43e231c987bf2827c83aa1e4ba84fde))
+* **ui-icons:** adding IconSearch ([#700](https://github.com/versini-org/ui-components/issues/700)) ([b5f6d58](https://github.com/versini-org/ui-components/commit/b5f6d58b43cc51095251d9e87e632f7ca7ad9833))
+* **ui-icons:** adding IconStarInCircle ([#478](https://github.com/versini-org/ui-components/issues/478)) ([d0fbc93](https://github.com/versini-org/ui-components/commit/d0fbc936d0c0137a4310d537d664a7eaf5164f21))
+* **ui-icons:** adding IconUp and IconDown ([#450](https://github.com/versini-org/ui-components/issues/450)) ([b61c9d2](https://github.com/versini-org/ui-components/commit/b61c9d20bbce329f2c4e4abd0a815d8969c81fd5))
+* **ui-icons:** adding OpenAI and Anthropic icons ([#725](https://github.com/versini-org/ui-components/issues/725)) ([fa4ab12](https://github.com/versini-org/ui-components/commit/fa4ab12819b67bb5a691008b598ff2521a88e1b0))
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies ([#539](https://github.com/versini-org/ui-components/issues/539)) ([2826c44](https://github.com/versini-org/ui-components/commit/2826c44c5a55bf45b97072a1865964c30d05a302))
+* **Icons:** removing spacing prop in favor of Tailwind classes ([#824](https://github.com/versini-org/ui-components/issues/824)) ([2da2546](https://github.com/versini-org/ui-components/commit/2da2546d4e3c9e0bd61b9995ca9dc67d8aea18ca))
+* removing spacing component ([#837](https://github.com/versini-org/ui-components/issues/837)) ([db2636f](https://github.com/versini-org/ui-components/commit/db2636f9cb2a000341ce04856f311f59110c7ea8))
+* simpler iconCopy ([#550](https://github.com/versini-org/ui-components/issues/550)) ([acbb143](https://github.com/versini-org/ui-components/commit/acbb14306fd0830b1b123e9f6bee5b5009802df8))
+* **ui-icons:** Anthropic icon is not visible in dark mode ([#727](https://github.com/versini-org/ui-components/issues/727)) ([b7aae05](https://github.com/versini-org/ui-components/commit/b7aae052531608ae22d1f2ff3e9d330d677b5614))
+* **ui-icons:** removing redundant dependencies and adding them to the plugin ([#392](https://github.com/versini-org/ui-components/issues/392)) ([142b064](https://github.com/versini-org/ui-components/commit/142b0641451bf73fc2f982f70c18cbff240deaad))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-svgicon bumped to 4.0.0
+    * @versini/ui-types bumped to 4.0.0
+
 ## [3.1.1](https://github.com/versini-org/ui-components/compare/ui-icons-v3.1.0...ui-icons-v3.1.1) (2025-01-02)
 
 

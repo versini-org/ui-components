@@ -1,5 +1,48 @@
 # Change Log
 
+## [1.10.0](https://github.com/versini-org/ui-components/compare/ui-form-v1.9.11...ui-form-v1.10.0) (2025-01-03)
+
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+* adding ToggleGroup component ([#716](https://github.com/versini-org/ui-components/issues/716)) ([a794f97](https://github.com/versini-org/ui-components/commit/a794f971b2597435e86222a2cfbd39306f4d49f5))
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+* **TextArea:** extracting TextArea as a standalone package ([#678](https://github.com/versini-org/ui-components/issues/678)) ([cfa6472](https://github.com/versini-org/ui-components/commit/cfa6472810a5979b082e4e77c8d6898693b190dc))
+* **TextInput:** extracting TextInput as a standalone package ([#674](https://github.com/versini-org/ui-components/issues/674)) ([34c0cf3](https://github.com/versini-org/ui-components/commit/34c0cf3254dc18a88bcab992a066c53e59f80e3f))
+* **Toggle:** adding support for noBorder ([#496](https://github.com/versini-org/ui-components/issues/496)) ([90e0f3e](https://github.com/versini-org/ui-components/commit/90e0f3e8259c3e9258bb52a318f2dd108d249eb2))
+* **Toggle:** extracting Toggle as a standalone package ([#672](https://github.com/versini-org/ui-components/issues/672)) ([1a215b5](https://github.com/versini-org/ui-components/commit/1a215b52aa70c6662bf5b12eddeb0d8adfd411fd))
+* **ui-form:** adding support for labelHidden prop ([#457](https://github.com/versini-org/ui-components/issues/457)) ([cb58eac](https://github.com/versini-org/ui-components/commit/cb58eace8967372697b7e0456598afd780b886ae))
+* **ui-form:** moving form components to their own package ([#393](https://github.com/versini-org/ui-components/issues/393)) ([59a6f42](https://github.com/versini-org/ui-components/commit/59a6f42827a6a9b899c816f506a8d8174cf12a2b))
+* **ui-styles:** renaming ui-plugins package into ui-styles ([#397](https://github.com/versini-org/ui-components/issues/397)) ([90f0343](https://github.com/versini-org/ui-components/commit/90f0343fd8858a4a28a14b6b412ee48484c4ae14))
+
+
+### Bug Fixes
+
+* better error styles for TextInput and TextArea ([#527](https://github.com/versini-org/ui-components/issues/527)) ([d0952ab](https://github.com/versini-org/ui-components/commit/d0952ab8de74f63adb2d4e67d5d123789788d67a))
+* bump dependencies to latest ([#685](https://github.com/versini-org/ui-components/issues/685)) ([4f79647](https://github.com/versini-org/ui-components/commit/4f79647fea70398adf99653456af89e5175d7008))
+* bump non-breaking dependencies ([#539](https://github.com/versini-org/ui-components/issues/539)) ([2826c44](https://github.com/versini-org/ui-components/commit/2826c44c5a55bf45b97072a1865964c30d05a302))
+* **TextArea:** adding small delay when first setting controlled value ([#620](https://github.com/versini-org/ui-components/issues/620)) ([4721b20](https://github.com/versini-org/ui-components/commit/4721b20bb3435343ccd5337dc32eeec50060bd2f))
+* **TextArea:** darker label and hint text in dark mode ([#578](https://github.com/versini-org/ui-components/issues/578)) ([c4ca807](https://github.com/versini-org/ui-components/commit/c4ca807ef9810d71a98dd40cda22961f42f20254))
+* **TextArea:** field does not grow anymore with extra lines ([#523](https://github.com/versini-org/ui-components/issues/523)) ([659d1e9](https://github.com/versini-org/ui-components/commit/659d1e9c95ee19c8f1c443b0147522b019406271))
+* **TextArea:** first render is sometimes leaking out of the page ([#618](https://github.com/versini-org/ui-components/issues/618)) ([745f37c](https://github.com/versini-org/ui-components/commit/745f37c90b88bab28e01df55cf3b2f540b5e3e79))
+* **TextArea:** reducing initial controlled render delay ([#624](https://github.com/versini-org/ui-components/issues/624)) ([0b42446](https://github.com/versini-org/ui-components/commit/0b424460b1d07ca87121cd345f27c94635401bdc))
+* **TextArea:** right element padding is sometimes missing ([#541](https://github.com/versini-org/ui-components/issues/541)) ([3625872](https://github.com/versini-org/ui-components/commit/362587224993964f1f8e7a14fce57cdef4659374))
+* **TextInput:** first render is sometimes leaking out of the page ([#602](https://github.com/versini-org/ui-components/issues/602)) ([594655c](https://github.com/versini-org/ui-components/commit/594655c8dd4d13130e4012ba04a5027423390091))
+* **Toggle:** a bit more unique color / style ([#494](https://github.com/versini-org/ui-components/issues/494)) ([1ff0727](https://github.com/versini-org/ui-components/commit/1ff0727fcb929ca3e74a90a59d4d405eae5857cb))
+* **Toggle:** better dark and light modes ([#418](https://github.com/versini-org/ui-components/issues/418)) ([e3231cf](https://github.com/versini-org/ui-components/commit/e3231cf7234c9f4a6454cd77108d01c74ba936b7))
+* **Toggle:** cannot toggle programmatically ([#569](https://github.com/versini-org/ui-components/issues/569)) ([9a6b39b](https://github.com/versini-org/ui-components/commit/9a6b39b0c726178bf2d1ec4dab271b5485799a2b))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-textarea bumped to 3.0.0
+    * @versini/ui-textinput bumped to 3.0.0
+    * @versini/ui-toggle bumped to 3.0.0
+    * @versini/ui-togglegroup bumped to 3.0.0
+
 ## [1.9.11](https://github.com/versini-org/ui-components/compare/ui-form-v1.9.10...ui-form-v1.9.11) (2025-01-02)
 
 

@@ -1,5 +1,47 @@
 # Changelog
 
+## [3.0.0](https://github.com/versini-org/ui-components/compare/ui-system-v2.0.7...ui-system-v3.0.0) (2025-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **System:** removing spacing prop in favor of Tailwind classes ([#836](https://github.com/versini-org/ui-components/issues/836))
+
+### Features
+
+* adding mode prop to all components ([#374](https://github.com/versini-org/ui-components/issues/374)) ([71e06d8](https://github.com/versini-org/ui-components/commit/71e06d8c050be82f56f5b1f798502c9c9ddec9fd))
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+* adding support for spacing prop for Flexgrid and ThemeProvider ([#530](https://github.com/versini-org/ui-components/issues/530)) ([9822ede](https://github.com/versini-org/ui-components/commit/9822ede6f387450c345bf6d94b566b65739f916a))
+* adding ui-spacing and ui-spacing-types ([#785](https://github.com/versini-org/ui-components/issues/785)) ([8a4c837](https://github.com/versini-org/ui-components/commit/8a4c83768c3dc86ec34dd846fc78023dc2a981d7))
+* adding ui-svgicon and ui-svgicon-types ([#794](https://github.com/versini-org/ui-components/issues/794)) ([d920ae5](https://github.com/versini-org/ui-components/commit/d920ae5900798f67f7acc14bd135195cca63e29a))
+* introducing ui-types - for all types ([#802](https://github.com/versini-org/ui-components/issues/802)) ([950bccb](https://github.com/versini-org/ui-components/commit/950bccb37bca104487c597f8a043ca3382331105))
+* **ui-styles:** renaming ui-plugins package into ui-styles ([#397](https://github.com/versini-org/ui-components/issues/397)) ([90f0343](https://github.com/versini-org/ui-components/commit/90f0343fd8858a4a28a14b6b412ee48484c4ae14))
+* **ui-system:** adding prop "className" to ThemeProvider ([#465](https://github.com/versini-org/ui-components/issues/465)) ([095531d](https://github.com/versini-org/ui-components/commit/095531d8879659f38c9e43f226d3336310277c02))
+
+
+### Bug Fixes
+
+* bump dependencies to latest ([#575](https://github.com/versini-org/ui-components/issues/575)) ([90cf804](https://github.com/versini-org/ui-components/commit/90cf804bb4d9c384a15d4bb1bf6913d11a4338c8))
+* bump dependencies to latest ([#598](https://github.com/versini-org/ui-components/issues/598)) ([71c858d](https://github.com/versini-org/ui-components/commit/71c858df83cb67c22353ddb894546a725d71e382))
+* bump dependencies to latest ([#637](https://github.com/versini-org/ui-components/issues/637)) ([428b40e](https://github.com/versini-org/ui-components/commit/428b40e3d7d872b786cb5216bbade31dcc1c7d2b))
+* bump non-breaking dependencies ([#539](https://github.com/versini-org/ui-components/issues/539)) ([2826c44](https://github.com/versini-org/ui-components/commit/2826c44c5a55bf45b97072a1865964c30d05a302))
+* bump non-breaking dependencies to latest ([#606](https://github.com/versini-org/ui-components/issues/606)) ([0afdec5](https://github.com/versini-org/ui-components/commit/0afdec5518caf5b5f07845c9f916dc229d517018))
+* bump non-breaking dependencies to latest ([#692](https://github.com/versini-org/ui-components/issues/692)) ([2300b7c](https://github.com/versini-org/ui-components/commit/2300b7c563ce6d5ad704b93ea7cc63ba9b8c6993))
+* bump non-breaking dependencies to latest ([#743](https://github.com/versini-org/ui-components/issues/743)) ([1438577](https://github.com/versini-org/ui-components/commit/1438577b4de57d063e84872ba8c4d5687b3def13))
+* bump tailwind dependencies to latest ([#454](https://github.com/versini-org/ui-components/issues/454)) ([8c06361](https://github.com/versini-org/ui-components/commit/8c0636164432be100410778d810ec6c3a6613c9b))
+* cleanup dependency graph a little ([#670](https://github.com/versini-org/ui-components/issues/670)) ([cb61411](https://github.com/versini-org/ui-components/commit/cb61411b986c03e050a8d5c36f51d2945d90dd9f))
+* **Flexgrid:** margins are not taken into account in className prop ([#838](https://github.com/versini-org/ui-components/issues/838)) ([9a5ab9a](https://github.com/versini-org/ui-components/commit/9a5ab9aace78a8efddcaea14ac048c57b06f3e48))
+* minor optimization regarding core dependencies ([#702](https://github.com/versini-org/ui-components/issues/702)) ([e2ad288](https://github.com/versini-org/ui-components/commit/e2ad2885adb594f22eee804498d17acfcc48d830))
+* **System:** removing spacing prop in favor of Tailwind classes ([#836](https://github.com/versini-org/ui-components/issues/836)) ([0586551](https://github.com/versini-org/ui-components/commit/0586551250cebf0486a8f3b8cdf51d3a139d978d))
+* **ui-system:** remove obsolete prod dependencies ([#387](https://github.com/versini-org/ui-components/issues/387)) ([9d13728](https://github.com/versini-org/ui-components/commit/9d13728a7e5a341ecaa16854f6d0f9953cfae2f6))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-types bumped to 4.0.0
+
 ## [2.0.7](https://github.com/versini-org/ui-components/compare/ui-system-v2.0.6...ui-system-v2.0.7) (2025-01-02)
 
 

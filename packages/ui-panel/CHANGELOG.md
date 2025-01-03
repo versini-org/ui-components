@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.3.0](https://github.com/versini-org/ui-components/compare/ui-panel-v1.2.15...ui-panel-v1.3.0) (2025-01-03)
+
+
+### Features
+
+* adding support for React 19.x ([#768](https://github.com/versini-org/ui-components/issues/768)) ([7a64fd7](https://github.com/versini-org/ui-components/commit/7a64fd7e2b7e0875a2b0f86753c3bef9af9d961d))
+* adding ui-modal and ui-modal-types ([#796](https://github.com/versini-org/ui-components/issues/796)) ([27e6ac4](https://github.com/versini-org/ui-components/commit/27e6ac450ada1a3a895076678a7dfe17e31331eb))
+* **Panel:** extracting Panel as a standalone package ([#663](https://github.com/versini-org/ui-components/issues/663)) ([3450a8f](https://github.com/versini-org/ui-components/commit/3450a8fd5e72d5a5cb6cccf0dc0836d810850cf2))
+
+
+### Bug Fixes
+
+* bump non-breaking dependencies to latest ([#692](https://github.com/versini-org/ui-components/issues/692)) ([2300b7c](https://github.com/versini-org/ui-components/commit/2300b7c563ce6d5ad704b93ea7cc63ba9b8c6993))
+* bump non-breaking dependencies to latest ([#743](https://github.com/versini-org/ui-components/issues/743)) ([1438577](https://github.com/versini-org/ui-components/commit/1438577b4de57d063e84872ba8c4d5687b3def13))
+* bump non-breaking dependencies to latest ([#771](https://github.com/versini-org/ui-components/issues/771)) ([11adf6b](https://github.com/versini-org/ui-components/commit/11adf6bdd4555f00c9494ea86dae8b99793c88b3))
+* cleanup dependency graph a little ([#670](https://github.com/versini-org/ui-components/issues/670)) ([cb61411](https://github.com/versini-org/ui-components/commit/cb61411b986c03e050a8d5c36f51d2945d90dd9f))
+* **Panel:** better rendering when content is too long ([#714](https://github.com/versini-org/ui-components/issues/714)) ([04f08f1](https://github.com/versini-org/ui-components/commit/04f08f1d6848184a8ee791d1eee8cbb248e87bd7))
+* **Panel:** remove lazy loading to improve performance ([#812](https://github.com/versini-org/ui-components/issues/812)) ([a6c6151](https://github.com/versini-org/ui-components/commit/a6c61511af31547e2aa877caf35213fb120efd24))
+* **Panel:** removing spacing build in favor of Tailwind classes ([#828](https://github.com/versini-org/ui-components/issues/828)) ([25dce37](https://github.com/versini-org/ui-components/commit/25dce3738d06199d3315c9137bd549d0018649e8))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @versini/ui-button bumped to 4.0.0
+    * @versini/ui-icons bumped to 4.0.0
+    * @versini/ui-modal bumped to 1.2.0
+
 ## [1.2.15](https://github.com/versini-org/ui-components/compare/ui-panel-v1.2.14...ui-panel-v1.2.15) (2025-01-02)
 
 
