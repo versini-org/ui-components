@@ -137,15 +137,19 @@ export const TableCell = ({
 	const context = useContext(TableContext);
 	const Component =
 		component || (context.cellWrapper === CELL_WRAPPER_HEAD ? "th" : "td");
-	const cellClass = getTableCellClasses({
+	const { mainClasses, alignClasses } = getTableCellClasses({
 		cellWrapper: context.cellWrapper,
 		className,
 		mode: context.mode,
 		compact: context.compact,
 		align,
 	});
-	return (
-		<Component className={cellClass} {...otherProps}>
+	return align ? (
+		<Component className={mainClasses} {...otherProps}>
+			<div className={alignClasses}>{children}</div>
+		</Component>
+	) : (
+		<Component className={mainClasses} {...otherProps}>
 			{children}
 		</Component>
 	);
